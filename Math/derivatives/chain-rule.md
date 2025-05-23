@@ -1,21 +1,9 @@
-## Math Mode
+# Chain Rule
 
-Inline math: $E = mc^2$
+Let $f(x) = \sin(3x^2)$, then $f'(x) = 6x \cos(3x^2)$.
 
-Displayed math:
+{{plot: Math.sin(3 * x * x) }}
 
-$$
-\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
-$$
+Here’s another:
 
-**Theorem.** For all $a, b \in \mathbb{R}$, if $a = b$, then $a + c = b + c$ for any $c \in \mathbb{R}$.
-
-**Proof.** Assume $a = b$. Then:
-
-$$
-a + c = b + c \quad \text{(by substitution)}
-$$
-
-## Sine Wave
-
-{{plot: y = \sin(x) }}
+{{plot: Math.cos(2 * x) * x }}
