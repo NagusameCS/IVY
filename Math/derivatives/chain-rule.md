@@ -15,3 +15,7 @@ $$
 $$
 a + c = b + c \quad \text{(by substitution)}
 $$
+
+## Sine Wave
+
+{{plot: y = \sin(x) }}
