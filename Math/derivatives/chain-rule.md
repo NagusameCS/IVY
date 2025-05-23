@@ -1,4 +1,3 @@
-# Chain Rule
 
 The **chain rule** is used when differentiating a function of a function.
 
