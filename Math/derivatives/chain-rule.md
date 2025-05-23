@@ -21,7 +21,7 @@ $$
 f'(x) = \cos(3x^2) \cdot 6x = 6x \cos(3x^2)
 $$
 
-{{plot: Math.sin(3 * x * x) }}
+
 
 ---
 
@@ -39,7 +39,7 @@ $$
 h'(x) = \frac{1}{x^2 + 1} \cdot 2x = \frac{2x}{x^2 + 1}
 $$
 
-{{plot: Math.log(x * x + 1) }}
+
 
 ---
 
