@@ -65,6 +65,6 @@ _Last updated: 2025-05-22_
 
   - If you have any questions or concerns about this Privacy Policy, please visit the **Contact** section at the bottom of the main page.
 
-$$
-Thanks for trusting IVY.
-$$
+
+**Thanks for trusting IVY.**
+
