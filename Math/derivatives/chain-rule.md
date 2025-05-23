@@ -1,40 +1,57 @@
-<pre><code>```graph
-# Set the bounding box and axis ticks
-bbox: [-10, 10, 10, -10]
-ticks: { x: 2, y: 2 }
-grid: true
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphicx}
 
-# Define functions
-function: f(x) = x^2 - 4x + 3 [domain: -2..6] color=#007acc width=2
-function: g(x) = -x + 5 [domain: -2..6] color=orange dashed
+\title{LaTeX Interpreter Test File}
+\author{Test Author}
+\date{\today}
 
-# Points
-point: A = (1, f(1)) label="$A(1,\ f(1))$" color=blue size=3
-point: B = (4, g(4)) label="$B(4,\ g(4))$" color=red size=3
-point: C = intersection(f, g) label="$C$" color=green size=4
+\begin{document}
 
-# Line through points
-line: A-B color=gray width=1
+\maketitle
 
-# Segment and distance
-segment: A-C color=purple label="dist(A, C)" showLabel=true
+\section*{Basic Text and Formatting}
+This is a test of \textbf{bold}, \textit{italic}, and \underline{underlined} text.
+Also testing special characters: \%, \$, \#, \&, \_, \{, \}, \~{}, \^{}.
 
-# Arrows and annotations
-arrow: (2, f(2)) -> (2, g(2)) color=black label="Gap" head=full
+\section*{Lists}
+\subsection*{Itemize}
+\begin{itemize}
+  \item First item
+  \item Second item
+\end{itemize}
 
-# Text box with LaTeX
-text: (5, 8) "$f(x)$ and $g(x)$ intersect at C" size=2
+\subsection*{Enumerate}
+\begin{enumerate}
+  \item First point
+  \item Second point
+\end{enumerate}
 
-# Highlight region between two curves
-area: f(x) to g(x) [domain: 1..4] color=rgba(0,128,0,0.2)
+\section*{Math Mode}
 
-# Sliders (dynamic parameters)
-slider: a = 1 [range: -5..5] label="Slope a" position=(6, -8)
-function: h(x) = a * x [domain: -6..6] color=magenta
+Inline math: \( E = mc^2 \)
 
-# Parametric curve
-parametric: (cos(t), sin(t)) [t: 0..2π] color=teal width=1
+Displayed math:
+\[
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+\]
 
-# Polar curve
-polar: r = 2 * sin(4θ) [θ: 0..2π] color=violet
-```</code></pre>
+Equations:
+\begin{align}
+  a^2 + b^2 &= c^2 \\
+  \nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0}
+\end{align}
+
+\section*{Theorem and Proof}
+
+\textbf{Theorem.} For all \( a, b \in \mathbb{R} \), if \( a = b \), then \( a + c = b + c \) for any \( c \in \mathbb{R} \).
+
+\textbf{Proof.} Assume \( a = b \). Then:
+\[
+a + c = b + c \quad \text{(by substitution)}
+\]
+\hfill\qedsymbol
+
+\section*{Graphics (if supported)}
+\includegraphics[width=0.3\textwidth]{example-image}
+
+\end{document}
