@@ -49,9 +49,7 @@ Equations:
 \[
 a + c = b + c \quad \text{(by substitution)}
 \]
-\hfill\qedsymbol
 
-\section*{Graphics (if supported)}
-\includegraphics[width=0.3\textwidth]{example-image}
+
 
 \end{document}
