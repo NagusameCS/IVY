@@ -11,13 +11,11 @@ The **chain rule** is used when differentiating a function of a function.
 
 We identify an outer function $f(u) = \sin(u)$ and an inner function $u = 3x^2$.
 
-- Outer derivative: $f'(u) = \cos(u)$
-- Inner derivative: $u' = 6x$
-
-∴
+$f'(u) = \cos(u)$
+$u' = 6x$
 
 $$
-f'(x) = \cos(3x^2) \cdot 6x = 6x \cos(3x^2)
+∴ f'(x) = \cos(3x^2) \cdot 6x = 6x \cos(3x^2)
 $$
 
 
