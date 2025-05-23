@@ -21,9 +21,9 @@ Welcome to **IVY**, a free educational resource developed by students as part of
   - We do not require you to create an account or provide personal information.
   
   - We do **not**:
-    - ・ Collect email addresses or names
-    - ・ Log IP addresses
-    - ・ Use cookies for analytics or tracking
+    -  Collect email addresses or names
+    -  Log IP addresses
+    -  Use cookies for analytics or tracking
     
   - Your use of IVY is entirely anonymous.
 
@@ -33,12 +33,12 @@ Welcome to **IVY**, a free educational resource developed by students as part of
   - All content on IVY is original work by the IVY team, although some materials were inspired by existing educational sources.
 
   - **You may:**
-    - ・ Download or reuse materials for personal or educational use (e.g. in class, tutoring, studying).
+    -  Download or reuse materials for personal or educational use (e.g. in class, tutoring, studying).
   
   - **You may not:**
-    - ・ Repost or distribute materials for commercial use.
-    - ・ Train or fine-tune AI models using content from IVY or its [GitHub repository](https://github.com/NagusameCS/IVY).
-    - ・ Scrape or mine any content from the site or its repository for any automated use, especially related to machine learning or data collection.
+    -  Repost or distribute materials for commercial use.
+    -  Train or fine-tune AI models using content from IVY or its [GitHub repository](https://github.com/NagusameCS/IVY).
+    -  Scrape or mine any content from the site or its repository for any automated use, especially related to machine learning or data collection.
 
 ---
 
@@ -51,8 +51,8 @@ Welcome to **IVY**, a free educational resource developed by students as part of
 - **6. Third-Party Services**
 
   - IVY uses third-party services solely to host and deliver its content. These services may include:
-    - ・ GitHub Pages (for static site hosting)
-    - ・ CDNs or script libraries for interactive content
+    -  GitHub Pages (for static site hosting)
+    -  CDNs or script libraries for interactive content
   - We do not control or collect any personal data through these services.
   
 ---
