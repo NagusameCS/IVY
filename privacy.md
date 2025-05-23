@@ -5,12 +5,12 @@ _Last updated: 2025-05-22_
 ---
 - **1. No Personal Data Collection**
   - We do not ask for, store, or process any of the following:
-    - ・ Names
-    - ・ Email addresses
-    - ・ School or location
-    - ・ User accounts or login information
-    - ・ IP addresses
-    - ・ Device or browser information
+    -  Names
+    -  Email addresses
+    -  School or location
+    -  User accounts or login information
+    -  IP addresses
+    -  Device or browser information
   - You can use the entire site anonymously. We do not use any analytics or tracking technologies.
 
 ---
