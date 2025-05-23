@@ -1,4 +1,4 @@
-_Last updated: 2025-05-22_  \n <br>
+_Last updated: 2025-05-22_
 
 
 Welcome to **IVY**, a free educational resource developed by students as part of a school project. By accessing or using the IVY website (“Site”), you agree to these Terms & Conditions (“Terms”). If you do not agree with these Terms, please do not use the Site.
@@ -70,6 +70,10 @@ IVY is a student-made supplement and **not** a replacement for accredited school
 We may update these Terms in the future. When we do, the “Last updated” date at the top of this page will reflect the change. Continued use of the site indicates your acceptance of any revised Terms.
 
 ---
+
+test \n <br> test
+\n <br> 
+test
 
 ## 9. Contact
 
