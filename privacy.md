@@ -1,6 +1,4 @@
-# Privacy Policy
-
-_Last updated: 2025-05-22_
+_Last updated: 2025-05-22_  
 
 IVY (“we,” “our,” or “us”) is a free educational resource created by students for the benefit of other students. This Privacy Policy outlines how we handle data when you use the IVY website (“Site”).
 
