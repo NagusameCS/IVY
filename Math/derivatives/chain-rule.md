@@ -1,65 +1,39 @@
 # Chain Rule
 
-The **chain rule** is used when differentiating a function of a function.
+The chain rule is used to differentiate compositions of functions.
 
-> If $y = f(g(x))$, then:
->
-> $$\frac{dy}{dx} = f'(g(x)) \cdot g'(x)$$
+## Statement
 
----
+If \( y = f(g(x)) \), then:
 
-## 1. Example: $f(x) = \sin(3x^2)$
+\[
+\frac{dy}{dx} = f'(g(x)) \cdot g'(x)
+\]
 
-We identify an outer function $f(u) = \sin(u)$ and an inner function $u = 3x^2$.
+## Example
 
-- Outer derivative: $f'(u) = \cos(u)$
-- Inner derivative: $u' = 6x$
+Let \( y = \sin(x^2) \).  
+Then:
 
-Therefore:
+\[
+\frac{dy}{dx} = \cos(x^2) \cdot 2x
+\]
 
-$$
-f'(x) = \cos(3x^2) \cdot 6x = 6x \cos(3x^2)
-$$
+## Graph
 
-{{plot: Math.sin(3 * x * x) }}
-
----
-
-## 2. Example: $h(x) = \ln(x^2 + 1)$
-
-Outer: $\ln(u)$  
-Inner: $u = x^2 + 1$
-
-- Outer derivative: $\frac{1}{u}$
-- Inner derivative: $2x$
-
-So:
-
-$$
-h'(x) = \frac{1}{x^2 + 1} \cdot 2x = \frac{2x}{x^2 + 1}
-$$
-
-{{plot: Math.log(x * x + 1) }}
-
----
-
-## 3. Graphical Intuition
-
-The chain rule describes how small changes in $x$ affect $y$ through both layers of the function. If the inner function grows quickly, the whole function responds more rapidly.
-
-Try to spot inflection points, slopes, and concavity:
-
-- $\sin(3x^2)$ oscillates faster than $\sin(x)$.
-- $\ln(x^2 + 1)$ grows slowly and levels off.
-
----
-
-## 4. Challenge
-
-Differentiate and sketch:
-
-$$
-f(x) = e^{\cos(x)}
-$$
-
-(Hint: outer is $e^u$, inner is $\cos(x)$)
+```plotly
+{
+  "data": [
+    {
+      "x": [-3, -2, -1, 0, 1, 2, 3],
+      "y": [0.1411, -0.9093, -0.8415, 0, 0.8415, 0.9093, -0.1411],
+      "type": "scatter",
+      "name": "sin(x²)"
+    }
+  ],
+  "layout": {
+    "title": "Graph of y = sin(x²)",
+    "xaxis": { "title": "x" },
+    "yaxis": { "title": "y" }
+  }
+}
