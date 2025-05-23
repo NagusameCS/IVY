@@ -13,8 +13,8 @@ We identify an outer function $f(u) = \sin(u)$ and an inner function $u = 3x^2$.
 
 $$f'(u) = \cos(u)$$
 $$u' = 6x$$
-
-∴ $$
+$$∴ $$
+$$
   f'(x) = \cos(3x^2) \cdot 6x = 6x \cos(3x^2)
 $$
 
