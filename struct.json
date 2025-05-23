@@ -1,23 +1,81 @@
-{
-  "subject": "Math",
-  "tooltip": "Mathematics",
-  "sections": [
-    {
-      "title": "Derivatives",
-      "path": "derivatives",
-      "lessons": [
-        { "title": "Intro to Derivatives", "file": "intro.md" },
-        { "title": "Product Rule", "file": "product-rule.md" },
-        { "title": "Chain Rule", "file": "chain-rule.md" }
-      ]
-    },
-    {
-      "title": "Integrals",
-      "path": "integrals",
-      "lessons": [
-        { "title": "Intro to Integrals", "file": "intro.md" },
-        { "title": "Integration by Parts", "file": "by-parts.md" }
-      ]
-    }
-  ]
-}
+[
+  {
+    "subject": "Math",
+    "tooltip": "Mathematics",
+    "sections": [
+      {
+        "title": "Derivatives",
+        "path": "derivatives",
+        "lessons": [
+          {
+            "title": "Intro to Derivatives",
+            "file": "intro.md",
+            "topic": "M1.1",
+            "time_estimate": 15,
+            "timestamp": "2024/10/01"
+          },
+          {
+            "title": "Product Rule",
+            "file": "product-rule.md",
+            "topic": "M1.2",
+            "time_estimate": 20,
+            "timestamp": "2024/10/03"
+          },
+          {
+            "title": "Chain Rule",
+            "file": "chain-rule.md",
+            "topic": "M1.3",
+            "time_estimate": 20,
+            "timestamp": "2024/10/05"
+          }
+        ]
+      },
+      {
+        "title": "Integrals",
+        "path": "integrals",
+        "lessons": [
+          {
+            "title": "Intro to Integrals",
+            "file": "intro.md",
+            "topic": "M9.1",
+            "time_estimate": 15,
+            "timestamp": "2024/11/01"
+          },
+          {
+            "title": "Integration by Parts",
+            "file": "by-parts.md",
+            "topic": "M9.4",
+            "time_estimate": 25,
+            "timestamp": "2024/11/04"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "Biology",
+    "tooltip": "Biological Systems",
+    "sections": [
+      {
+        "title": "Cell Biology",
+        "path": "cells",
+        "lessons": [
+          {
+            "title": "Cell Structure",
+            "file": "cell-structure.md",
+            "topic": "B1.1",
+            "time_estimate": 20,
+            "timestamp": "2024/09/20"
+          },
+          {
+            "title": "Membrane Transport",
+            "file": "membrane-transport.md",
+            "topic": "B1.3",
+            "time_estimate": 15,
+            "timestamp": "2024/09/22"
+          }
+        ]
+      }
+    ]
+  }
+]
