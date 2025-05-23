@@ -66,7 +66,7 @@ Welcome to **IVY**, a free educational resource developed by students as part of
 - **8. Changes to These Terms**
 -
 - We may update these Terms in the future. When we do, the “Last updated” date at the top of this page will reflect the change. Continued use of the site indicates your acceptance of any revised Terms.
-_
+-
 ---
 -
 - **9. Contact**
