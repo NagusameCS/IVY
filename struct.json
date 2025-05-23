@@ -1,0 +1,23 @@
+{
+  "subject": "Math",
+  "tooltip": "Mathematics",
+  "sections": [
+    {
+      "title": "Derivatives",
+      "path": "derivatives",
+      "lessons": [
+        { "title": "Intro to Derivatives", "file": "intro.md" },
+        { "title": "Product Rule", "file": "product-rule.md" },
+        { "title": "Chain Rule", "file": "chain-rule.md" }
+      ]
+    },
+    {
+      "title": "Integrals",
+      "path": "integrals",
+      "lessons": [
+        { "title": "Intro to Integrals", "file": "intro.md" },
+        { "title": "Integration by Parts", "file": "by-parts.md" }
+      ]
+    }
+  ]
+}
