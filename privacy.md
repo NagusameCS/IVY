@@ -9,12 +9,12 @@ Spoiler: we don’t collect anything. But here are the details anyway.
 ## 1. No Personal Data Collection
 
 We do not ask for, store, or process any of the following:
-- Names
-- Email addresses
-- School or location
-- User accounts or login information
-- IP addresses
-- Device or browser information
+・ Names
+・ Email addresses
+・ School or location
+・ User accounts or login information
+・ IP addresses
+・ Device or browser information
 
 You can use the entire site anonymously. We do not use any analytics or tracking technologies.
 
@@ -44,7 +44,7 @@ You cannot upload files, post comments, or submit any form of user-generated con
 
 ## 5. GitHub Repository
 
-Our educational content is also available on our public GitHub repository: [https://github.com/NagusameCS/IVY](https://github.com/NagusameCS/IVY). GitHub may log basic technical metadata such as visit timestamps and IP addresses according to their own privacy policy. IVY has no access to or control over that data.
+Our educational content is also available on our public GitHub repository: _[https://github.com/NagusameCS/IVY](https://github.com/NagusameCS/IVY)_. GitHub may log basic technical metadata such as visit timestamps and IP addresses according to their own privacy policy. IVY has no access to or control over that data.
 
 ---
 
