@@ -1,10 +1,8 @@
-# Contact
-
 Have a suggestion, found a mistake, or want to request a correction?
 
 We welcome feedback through our public GitHub Issues page. You can open a new issue here:
 
-[Open a GitHub Issue](https://github.com/NagusameCS/IVY/issues/new?title=Feedback%20on%20IVY%20site)
+_[Open a GitHub Issue](https://github.com/NagusameCS/IVY/issues/new?title=Feedback%20on%20IVY%20site)_
 
 This allows us to keep all feedback transparent, track changes publicly, and respond faster.
 
