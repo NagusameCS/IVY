@@ -77,5 +77,31 @@
         ]
       }
     ]
+  },
+    {
+    "subject": "Physics",
+    "tooltip": "Describing the world",
+    "sections": [
+      {
+        "title": "Kinematics",
+        "path": "kinematics",
+        "lessons": [
+          {
+            "title": "Intro to Velocity",
+            "file": "velocity.md",
+            "topic": "P1.1",
+            "time_estimate": 20,
+            "timestamp": "2024/09/20"
+          },
+          {
+            "title": "Special Relativity",
+            "file": "SRelativity.md",
+            "topic": "P1.3",
+            "time_estimate": 15,
+            "timestamp": "2024/09/22"
+          }
+        ]
+      }
+    ]
   }
 ]
