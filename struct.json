@@ -4,101 +4,76 @@
     "tooltip": "Mathematics",
     "sections": [
       {
-        "title": "Derivatives",
-        "path": "derivatives",
+        "title": "Core Topics",
+        "path": "core",
         "lessons": [
           {
-            "title": "Intro to Derivatives",
-            "file": "intro.md",
+            "title": "Arithmetic and Geometric Sequences",
+            "file": "sequences.md",
             "topic": "M1.1",
-            "time_estimate": 15,
-            "timestamp": "2024/10/01"
+            "time_estimate": 20,
+            "timestamp": "2025/01/01",
+            "categories": ["Math AA", "Math AI"]
           },
           {
-            "title": "Product Rule",
-            "file": "product-rule.md",
+            "title": "Exponents and Logarithms",
+            "file": "exponents-logarithms.md",
             "topic": "M1.2",
-            "time_estimate": 20,
-            "timestamp": "2024/10/03"
+            "time_estimate": 25,
+            "timestamp": "2025/01/03",
+            "categories": ["Math AA", "Math AI"]
           },
           {
-            "title": "Chain Rule",
-            "file": "chain-rule.md",
+            "title": "Financial Mathematics",
+            "file": "financial-math.md",
             "topic": "M1.3",
-            "time_estimate": 20,
-            "timestamp": "2024/10/05"
+            "time_estimate": 30,
+            "timestamp": "2025/01/05",
+            "categories": ["Math AA", "Math AI"]
           }
         ]
       },
       {
-        "title": "Integrals",
-        "path": "integrals",
+        "title": "AA-Specific Topics",
+        "path": "aa-specific",
         "lessons": [
           {
-            "title": "Intro to Integrals",
-            "file": "intro.md",
-            "topic": "M9.1",
-            "time_estimate": 15,
-            "timestamp": "2024/11/01"
+            "title": "Limits and Continuity",
+            "file": "limits-continuity.md",
+            "topic": "AA1.1",
+            "time_estimate": 30,
+            "timestamp": "2025/02/01",
+            "categories": ["Math AA"]
           },
           {
-            "title": "Integration by Parts",
-            "file": "by-parts.md",
-            "topic": "M9.4",
+            "title": "Rules of Differentiation",
+            "file": "differentiation-rules.md",
+            "topic": "AA1.2",
+            "time_estimate": 40,
+            "timestamp": "2025/02/03",
+            "categories": ["Math AA"]
+          }
+        ]
+      },
+      {
+        "title": "AI-Specific Topics",
+        "path": "ai-specific",
+        "lessons": [
+          {
+            "title": "Regression Models",
+            "file": "regression-models.md",
+            "topic": "AI1.1",
+            "time_estimate": 35,
+            "timestamp": "2025/03/01",
+            "categories": ["Math AI"]
+          },
+          {
+            "title": "Descriptive Statistics",
+            "file": "descriptive-statistics.md",
+            "topic": "AI1.2",
             "time_estimate": 25,
-            "timestamp": "2024/11/04"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "subject": "Biology",
-    "tooltip": "Biological Systems",
-    "sections": [
-      {
-        "title": "Cell Biology",
-        "path": "cells",
-        "lessons": [
-          {
-            "title": "Cell Structure",
-            "file": "cell-structure.md",
-            "topic": "B1.1",
-            "time_estimate": 20,
-            "timestamp": "2024/09/20"
-          },
-          {
-            "title": "Membrane Transport",
-            "file": "membrane-transport.md",
-            "topic": "B1.3",
-            "time_estimate": 15,
-            "timestamp": "2024/09/22"
-          }
-        ]
-      }
-    ]
-  },
-    {
-    "subject": "Physics",
-    "tooltip": "Describing the world",
-    "sections": [
-      {
-        "title": "Kinematics",
-        "path": "kinematics",
-        "lessons": [
-          {
-            "title": "Intro to Velocity",
-            "file": "velocity.md",
-            "topic": "P1.1",
-            "time_estimate": 20,
-            "timestamp": "2024/09/20"
-          },
-          {
-            "title": "Special Relativity",
-            "file": "srelativity.md",
-            "topic": "P1.3",
-            "time_estimate": 15,
-            "timestamp": "2024/09/22"
+            "timestamp": "2025/03/03",
+            "categories": ["Math AI"]
           }
         ]
       }
