@@ -100,7 +100,8 @@
                 "time_estimate": 15,
                 "timestamp": "2025/02/01",
                 "categories": ["Biology"],
-                "tags": ["cells", "structure", "biology"]
+                "tags": ["cells", "structure", "biology"],
+                "level": "SL"
               }
             ]
           }
