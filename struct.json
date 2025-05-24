@@ -80,5 +80,32 @@
         ]
       }
     ]
+  },
+  {
+    "subject": "Biology",
+    "tooltip": "Biological Sciences",
+    "sections": [
+      {
+        "title": "Cell Biology",
+        "path": "cell-biology",
+        "subsections": [
+          {
+            "title": "Cell Structure",
+            "path": "cell-structure",
+            "lessons": [
+              {
+                "title": "Introduction to Cells",
+                "file": "intro-cells.md",
+                "topic": "B1.1",
+                "time_estimate": 15,
+                "timestamp": "2025/02/01",
+                "categories": ["Biology"],
+                "tags": ["cells", "structure", "biology"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
