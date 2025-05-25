@@ -70,6 +70,18 @@ f(x) = \sin(3x^2 + 2x)
 $$
 
 ---
+# Markscheme use showcase
+---
+
+
+A function is defined as:
+
+$$
+f(x) = \sin(3x^2 + 2x)
+$$
+
+This function models the vertical position of a point on a vibrating string at time \( x \).  
+Find the rate of change of the vertical position with respect to time at any point \( x \).
 
 <details>
 <summary>Markscheme</summary>
@@ -82,18 +94,27 @@ This is a composition:
 **Step 2:** Differentiate each part  
 - Derivative of outer: $$\frac{d}{du}[\sin(u)] = \cos(u)$$  
 - Derivative of inner:  
-  $$
-  frac{d}{dx}[3x^2 + 2x] = 6x + 2
-  $$
+  $$\frac{d}{dx}[3x^2 + 2x] = 6x + 2$$
 
 **Step 3:** Apply the chain rule  
-$$
-f'(x) = \cos(3x^2 + 2x) \cdot (6x + 2)
-$$
+$$f'(x) = \cos(3x^2 + 2x) \cdot (6x + 2)$$
 
 **Final Answer:**  
-$$
-f'(x) = (6x + 2)\cos(3x^2 + 2x)
-$$
+$$f'(x) = (6x + 2)\cos(3x^2 + 2x)$$
 
 </details>
+
+
+---
+# Future Quiz Syntax (β&!Implimented)
+---
+
+:::quiz
+vars {
+    a: int = [2..5],
+    b: = {a*3},
+    c: float = [1.5..4.5] !{c > a}
+}
+question: Find derivative of f(x) = {a}x³ + {b}x² + {c}
+answer: derivative({a}x^3 + {b}x^2 + {c})
+:::
