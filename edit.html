@@ -3,24 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing Page</title>
+    <title>Game Start</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        button { padding: 10px 20px; font-size: 16px; }
+        body {
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        #startScreen {
+            padding-top: 20%;
+        }
+        #gameButton {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #ff6600;
+            border: none;
+            color: white;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Basic Testing Page</h1>
-    <p>This is a simple HTML page to test basic functionality.</p>
-    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    <script>
+
+    <!-- Fake Start Screen -->
+    <div id="startScreen">
+        <h1>Welcome to the Ultimate Game!</h1>
+        <p>Press "Enter" to Begin</p>
+        <button id="gameButton" onclick="startGame()">Enter Game</button>
+    </div>
+
+    <!-- Rickroll Video (Hidden Initially) -->
+    <div id="rickroll" style="display: none;">
+        <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+    </div>
+
     <script>
-    document.addEventListener('click', function() {
-        let iframe = document.getElementById("video");
-        let src = iframe.src;
-        
-        // Remove mute parameter and reload the iframe
-        iframe.src = src.replace("&mute=1", "");
-    });
+        function startGame() {
+            document.getElementById('startScreen').style.display = 'none';  // Hide fake game start screen
+            document.getElementById('rickroll').style.display = 'block';   // Show Rickroll video
+        }
     </script>
+
 </body>
 </html>
