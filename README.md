@@ -7,19 +7,21 @@ Welcome to **IVYSTUDY**, a dynamic and interactive study platform designed to pr
 
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Features](#features)
-3. [File Structure](#file-structure)
-4. [HTML Structure](#html-structure)
-5. [CSS Styling](#css-styling)
-6. [JavaScript Functionality](#javascript-functionality)
-7. [Meta Tags and SEO](#meta-tags-and-seo)
-8. [Dark Mode](#dark-mode)
-9. [Dynamic Content Loading](#dynamic-content-loading)
-10. [Search Functionality](#search-functionality)
-11. [Lesson Modal](#lesson-modal)
-12. [Social Banner](#social-banner)
-13. [License](#license)
+| #  | Section                     | Description                                                                 |
+|----|-----------------------------|-----------------------------------------------------------------------------|
+| 1  | [Overview](#overview)       | Introduction to IVYSTUDY's structure, goals, and design principles.         |
+| 2  | [Features](#features)       | Highlights of responsive design, dark mode, search, and interactivity.      |
+| 3  | [File Structure](#file-structure) | Overview of the single-file layout and reliance on external libraries.      |
+| 4  | [HTML Structure](#html-structure) | Breakdown of `<head>` and `<body>` elements and their roles.               |
+| 5  | [CSS Styling](#css-styling) | Description of theming, responsiveness, animations, and dark mode styling. |
+| 6  | [JavaScript Functionality](#javascript-functionality) | Handles dynamic loading, modal display, search, and dark mode toggle.       |
+| 7  | [Meta Tags and SEO](#meta-tags-and-seo) | Details Open Graph tags for better social sharing and SEO visibility.      |
+| 8  | [Dark Mode](#dark-mode)     | Explanation of how dark mode is implemented and stored using localStorage.  |
+| 9  | [Dynamic Content Loading](#dynamic-content-loading) | Lessons are fetched and rendered based on filters and search.              |
+| 10 | [Search Functionality](#search-functionality) | Real-time suggestions, filtering, and term highlighting.                   |
+| 11 | [Lesson Modal](#lesson-modal) | Displays lessons with Markdown + LaTeX support and navigation controls.    |
+| 12 | [Social Banner](#social-banner) | Banner image appears when the site is shared via social media platforms.   |
+| 13 | [License](#license)         | Licensing terms for using and distributing the project.                     |
 
 ---
 
