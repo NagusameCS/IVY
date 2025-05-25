@@ -24,7 +24,7 @@ $$
 
 ## 2. Example: $h(x) = \ln(x^2 + 1)$
 
-Outer: $\ln(u)$  
+Outer: $ln(u)$  
 Inner: $u = x^2 + 1$
 
 - Outer derivative: $\frac{1}{u}$
@@ -33,7 +33,7 @@ Inner: $u = x^2 + 1$
 So:
 
 $$
-h'(x) = \frac{1}{x^2 + 1} \cdot 2x = \frac{2x}{x^2 + 1}
+h'(x) = \frac{1}{x^2 + 1} cdot 2x = frac{2x}{x^2 + 1}
 $$
 
 
