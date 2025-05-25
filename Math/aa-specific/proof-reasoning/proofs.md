@@ -62,15 +62,3 @@ $$
 (Hint: outer is $e^u$, inner is $\cos(x)$)
 
 
-# Calculus Quiz
-
-:::quiz
-vars {
-    a: int = [2..5],
-    b: = {a*3},
-    c: float = [1.5..4.5] !{c > a}
-}
-question: Find derivative of f(x) = {a}x³ + {b}x² + {c}
-answer: derivative({a}x^3 + {b}x^2 + {c})
-:::
-
