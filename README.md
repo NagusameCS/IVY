@@ -310,7 +310,7 @@ The social banner is dynamically loaded and displayed when the page is shared. T
 ---
 
 ## License
-
-This project is licensed under the terms specified in the `LICENSE` file. Please refer to it for more details.
+- **Code License:** MIT License (see `LICENSE`)
+- **Content License:** CC BY-NC-SA 4.0 (see `LICENSE-CONTENT`)
 
 ---
