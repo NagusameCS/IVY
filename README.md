@@ -129,28 +129,34 @@ The platform includes custom styles for rendering Markdown content beautifully:
 
 1. **Headings**:
    - `h1`, `h2`, `h3`: Styled with bold fonts, custom colors, and spacing for
-
+   - Common Github MD Syntax
+     
 2. **Paragraphs**:
    - Line height and spacing are optimized for readability.
-
+   - Common Github MD Syntax
+     
 3. **Blockquotes**:
    - Styled with a left border and background color for emphasis.
-
+   - Common Github MD Syntax
+     
 4. **Lists**:
    - Custom bullet and number styles with proper indentation.
-
+   - Common Github MD Syntax
+     
 5. **Code Blocks**:
    - Syntax highlighting using Highlight.js.
    - Styled with a light background, rounded corners, and padding.
-
+   - Common Github MD Syntax
+     
 6. **Tables**:
    - Borders, padding, and alternating row colors for better visibility.
-
+   - Common Github MD Syntax
+     
 7. **Images**:
    - Responsive with rounded corners and spacing.
+   - Common Github MD Syntax
 
 8. **Markschemes**:
-   - Responsive and quick
    - Done via the following syntax
 
    ```MD
@@ -161,7 +167,9 @@ The platform includes custom styles for rendering Markdown content beautifully:
    
    </details>
    ```
+   
 9. LaTeX Adjacent MD Math
+    - Done via the following syntax
 
    ```MD
    (Normal)
