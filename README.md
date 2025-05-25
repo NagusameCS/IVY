@@ -149,6 +149,29 @@ The platform includes custom styles for rendering Markdown content beautifully:
 7. **Images**:
    - Responsive with rounded corners and spacing.
 
+8. **Markschemes**:
+   - Responsive and quick
+   - Done via the following syntax
+
+   ```MD
+   <details>
+   <summary>Markscheme</summary>
+   
+   CONTENT IN HERE
+   
+   </details>
+   ```
+9. LaTeX Adjacent MD Math
+
+   ```MD
+   (Normal)
+   $$
+   Content
+   $$
+   
+   (For Inline)
+   $$ Content $$
+   ```
 ---
 
 ## JavaScript Functionality
