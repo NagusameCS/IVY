@@ -61,4 +61,13 @@ $$
 
 (Hint: outer is $e^u$, inner is $\cos(x)$)
 
+<details>
+  <summary>Click to expand</summary>
+  
+  ## Hidden Content
+  - This section starts collapsed.
+  - Click the summary to reveal it.
+  
+  ```python
+  print("Hello, Markdown!")
 
