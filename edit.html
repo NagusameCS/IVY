@@ -1,2 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        button { padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Basic Testing Page</h1>
+    <p>This is a simple HTML page to test basic functionality.</p>
 
-TESTING TESTING
+    <button onclick="testFunction()">Click Me</button>
+    <p id="message"></p>
+
+    <script>
+        function testFunction() {
+            document.getElementById("message").textContent = "Button clicked!";
+        }
+    </script>
+</body>
+</html>
