@@ -121,6 +121,36 @@ The `<body>` section is divided into the following components:
 
 ---
 
+## Advanced CSS Styling
+
+### Enhanced Markdown Styling
+
+The platform includes custom styles for rendering Markdown content beautifully:
+
+1. **Headings**:
+   - `h1`, `h2`, `h3`: Styled with bold fonts, custom colors, and spacing for
+
+2. **Paragraphs**:
+   - Line height and spacing are optimized for readability.
+
+3. **Blockquotes**:
+   - Styled with a left border and background color for emphasis.
+
+4. **Lists**:
+   - Custom bullet and number styles with proper indentation.
+
+5. **Code Blocks**:
+   - Syntax highlighting using Highlight.js.
+   - Styled with a light background, rounded corners, and padding.
+
+6. **Tables**:
+   - Borders, padding, and alternating row colors for better visibility.
+
+7. **Images**:
+   - Responsive with rounded corners and spacing.
+
+---
+
 ## JavaScript Functionality
 
 ### Key Features
@@ -143,6 +173,73 @@ The `<body>` section is divided into the following components:
 
 5. **Social Banner**:
    - Displays a banner image when the page is shared on social media.
+
+---
+
+## JavaScript Functionality (Detailed)
+
+### Dynamic Content Loading
+
+The platform dynamically fetches and renders lessons from a remote JSON file. The process involves:
+
+1. **Fetching Data**:
+   - Uses the `fetch` API to retrieve lesson data.
+
+2. **Processing Data**:
+   - Parses the JSON response and flattens it into a list of lessons.
+
+3. **Rendering Content**:
+   - Filters lessons based on user input and displays them dynamically.
+
+### Search Functionality
+
+The search bar provides real-time suggestions and results:
+
+1. **Debounce Mechanism**:
+   - Prevents excessive API calls by delaying the search execution.
+
+2. **Highlighting Matches**:
+   - Highlights matching terms in the search results for better visibility.
+
+3. **Filtering**:
+   - Filters lessons based on the search query and selected categories.
+
+### Lesson Modal
+
+The lesson modal displays detailed content for each lesson:
+
+1. **Markdown Rendering**:
+   - Converts Markdown to HTML using Markdown-it.
+   - Supports GitHub Flavored Markdown (GFM) features.
+
+2. **LaTeX Rendering**:
+   - Renders mathematical equations using KaTeX.
+
+3. **Navigation**:
+   - Includes "Previous" and "Next" buttons for navigating between lessons.
+
+### Dark Mode
+
+Dark mode is implemented using a combination of CSS and JavaScript:
+
+1. **CSS**:
+   - Defines dark mode styles using the `.dark-mode` class.
+   - Overrides light mode colors for better readability.
+
+2. **JavaScript**:
+   - Toggles the `.dark-mode` class on the `<body>` element.
+   - Saves the user's preference in `localStorage`.
+
+### Social Banner
+
+The social banner is dynamically loaded and displayed when the page is shared:
+
+1. **Open Graph Meta Tags**:
+   - `og:image`: Specifies the banner image URL.
+   - `og:title`, `og:description`: Provide context for the shared link.
+
+2. **Dynamic Loading**:
+   - The banner image is fetched and displayed based on the sharing platform.
 
 ---
 
