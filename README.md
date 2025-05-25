@@ -1,5 +1,5 @@
 ![SocialBanner](https://github.com/user-attachments/assets/ca667a8a-068a-4045-b40b-5143cf29b10f)
-# IVYSTUDY
+# 
 
 Welcome to **IVYSTUDY**, a dynamic and interactive study platform designed to provide free access to lessons and study materials. This documentation explains the structure and functionality of IVYSTUDY.
 
