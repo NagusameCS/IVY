@@ -83,7 +83,7 @@ This is a composition:
 - Derivative of outer: $$\frac{d}{du}[\sin(u)] = \cos(u)$$  
 - Derivative of inner:  
   $$
-  \frac{d}{dx}[3x^2 + 2x] = 6x + 2
+  frac{d}{dx}[3x^2 + 2x] = 6x + 2
   $$
 
 **Step 3:** Apply the chain rule  
