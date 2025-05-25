@@ -61,13 +61,39 @@ $$
 
 (Hint: outer is $e^u$, inner is $\cos(x)$)
 
-<details>
-  <summary>Click to expand</summary>
-  
-  ## Hidden Content
-  - This section starts collapsed.
-  - Click the summary to reveal it.
-  
-  ```python
-  print("Hello, Markdown!")
+### Problem: Chain Rule Application
 
+Differentiate the following function:
+
+$$
+f(x) = \sin(3x^2 + 2x)
+$$
+
+---
+
+<details>
+<summary>Markscheme</summary>
+
+**Step 1:** Recognize the chain rule structure  
+This is a composition:  
+- Outer function: $$\sin(u)$$  
+- Inner function: $$u = 3x^2 + 2x$$
+
+**Step 2:** Differentiate each part  
+- Derivative of outer: $$\frac{d}{du}[\sin(u)] = \cos(u)$$  
+- Derivative of inner:  
+  $$
+  \frac{d}{dx}[3x^2 + 2x] = 6x + 2
+  $$
+
+**Step 3:** Apply the chain rule  
+$$
+f'(x) = \cos(3x^2 + 2x) \cdot (6x + 2)
+$$
+
+**Final Answer:**  
+$$
+f'(x) = (6x + 2)\cos(3x^2 + 2x)
+$$
+
+</details>
