@@ -108,35 +108,5 @@
         ]
       }
     ]
-  },
-  {
-    "subject": "Chemistry",
-    "tooltip": "Chemistry",
-    "sections": [{}]
-  },
-  {
-    "subject": "Economics",
-    "tooltip": "Economics",
-    "sections": [{}]
-  },
-  {
-    "subject": "Physics",
-    "tooltip": "Physics",
-    "sections": [{}]
-  },
-  {
-    "subject": "Buisness",
-    "tooltip": "Buisness",
-    "sections": [{}]
-  },
-  {
-    "subject": "Design Tech",
-    "tooltip": "Design Tech",
-    "sections": [{}]
-  },
-  {
-    "subject": "Computer Science",
-    "tooltip": "Computer Science",
-    "sections": [{}]
   }
 ]
