@@ -41,7 +41,7 @@ Welcome to **IVY**, a free educational resource developed by students as part of
     -  Scrape or mine any content from the site or its repository for any automated use, especially related to machine learning or data collection.
       
   -  The **written content** of this site—including lessons, problems, and explanations—is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License**.
-    - You are free to share and adapt the materials for non-commercial purposes, provided you give appropriate credit and distribute any derivative works under the same license.
+  	-  You are free to share and adapt the materials for non-commercial purposes, provided you give appropriate credit and distribute any derivative works under the same license.
   - The **source code** used to build and operate IVY is licensed under the **MIT License**.
 	  -	This means you are free to use, modify, and distribute the code for any purpose, including commercial use, as long as the original license and copyright notice are included.
 ---
