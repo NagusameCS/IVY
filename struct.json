@@ -82,7 +82,7 @@
     ]
   },
   {
-    "subject": "Biology",
+    "subject": "Bio",
     "tooltip": "Biological Sciences",
     "sections": [
       {
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "subject": "Chemistry",
+    "subject": "Chem",
     "tooltip": "Chemistry",
     "sections": [
       {
@@ -121,7 +121,7 @@
     ]
   },
   {
-    "subject": "Economics",
+    "subject": "Econ",
     "tooltip": "Economics",
     "sections": [
       {
