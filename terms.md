@@ -30,7 +30,7 @@ Welcome to **IVY**, a free educational resource developed by students as part of
 ---
 - **4. Content Ownership and Reuse**
 
-  - All content on IVY is original work by the IVY team, although some materials were inspired by existing educational sources.
+  - While some materials may appear similar to copyrighted resources, all content on IVY is the original work of our team. Any resemblance is coincidental and arises naturally from covering the same academic topics and structure required by the IB curriculum.
 
   - **You may:**
     -  Download or reuse materials for personal or educational use (e.g. in class, tutoring, studying).
@@ -39,7 +39,11 @@ Welcome to **IVY**, a free educational resource developed by students as part of
     -  Repost or distribute materials for commercial use.
     -  Train or fine-tune AI models using content from IVY or its [GitHub repository](https://github.com/NagusameCS/IVY).
     -  Scrape or mine any content from the site or its repository for any automated use, especially related to machine learning or data collection.
-
+      
+  -  The **written content** of this site—including lessons, problems, and explanations—is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License**.
+    - You are free to share and adapt the materials for non-commercial purposes, provided you give appropriate credit and distribute any derivative works under the same license.
+  - The **source code** used to build and operate IVY is licensed under the **MIT License**.
+	  -	This means you are free to use, modify, and distribute the code for any purpose, including commercial use, as long as the original license and copyright notice are included.
 ---
 
 - **5. No User Submissions**
