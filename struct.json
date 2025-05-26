@@ -108,5 +108,71 @@
         ]
       }
     ]
+  },
+  {
+    "subject": "Chemistry",
+    "tooltip": "Chemistry",
+    "sections": [
+      {
+        "title": "Introduction to Chemistry",
+        "path": "intro-to-chemistry",
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "subject": "Economics",
+    "tooltip": "Economics",
+    "sections": [
+      {
+        "title": "Basic Economics",
+        "path": "basic-economics",
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "subject": "Physics",
+    "tooltip": "Physics",
+    "sections": [
+      {
+        "title": "Fundamentals of Physics",
+        "path": "fundamentals-of-physics",
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "subject": "Business",
+    "tooltip": "Business",
+    "sections": [
+      {
+        "title": "Business Basics",
+        "path": "business-basics",
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "subject": "Design Tech",
+    "tooltip": "Design Tech",
+    "sections": [
+      {
+        "title": "Introduction to Design",
+        "path": "intro-to-design",
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "tooltip": "Computer Science",
+    "sections": [
+      {
+        "title": "Programming Basics",
+        "path": "programming-basics",
+        "lessons": []
+      }
+    ]
   }
 ]
