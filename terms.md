@@ -28,7 +28,7 @@ Welcome to **IVY**, a free educational resource developed by students as part of
   - Your use of IVY is entirely anonymous.
 
 ---
--**4. Content Ownership and Reuse**
+- **4. Content Ownership and Reuse**
 
   - All content on IVY is original work by the IVY team, although some materials were inspired by existing educational sources.
 
