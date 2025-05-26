@@ -6,6 +6,6 @@ _[Open a GitHub Issue](https://github.com/NagusameCS/IVY/issues/new?title=Feedba
 
 This allows us to keep all feedback transparent, track changes publicly, and respond faster.
 
-Please do not include any personal or sensitive information. IVY is a fully anonymous, student-made resource — we do not collect or store any data.
+Please do not include any personal or sensitive information. IVY is a fully anonymous, student-made resource. We do not collect any personal data — the only information we store is a total view count, updated anonymously to help us track general site usage.
 
 Thank you for helping improve IVY!
