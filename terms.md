@@ -51,9 +51,9 @@ Welcome to **IVY**, a free educational resource developed by students as part of
 - **6. Third-Party Services**
 
   - IVY uses third-party services solely to host and deliver its content. These services may include:
-    -  GitHub Pages (for static site hosting)
+    -  GitHub (for transparent file hosting)
     -  CDNs or script libraries for interactive content
-  - We do not control or collect any personal data through these services.
+  - We do not control or collect any personal data through these services nor they, as detailed in the privacy policy.
   
 ---
 
