@@ -11,7 +11,9 @@ _Last updated: 2025-05-22_
     -  User accounts or login information
     -  IP addresses
     -  Device or browser information
-  - You can use the entire site anonymously. We do not use any analytics or tracking technologies.
+  - You can use the entire site anonymously.
+  - We do employ anonymous viewer tracking of total site access.
+    -  This is done via contacting a third party "counter" rest API upon a view to the site, it only increments a number and no other data is stored or transmitted.
 
 ---
 
@@ -24,8 +26,11 @@ _Last updated: 2025-05-22_
 - **3. No Third-Party Analytics**
 
   - We do not use Google Analytics, Matomo, or any other analytics platform.
-  
-  - We do not monitor page views, click events, or time spent on pages. What you do on IVY stays on IVY.
+    
+  - We do employ anonymous viewer tracking of total site access. 
+    -  This is done via contacting a third party counter API upon a view to the site, it only increments a number and no other data is stored or transmitted.
+   
+  -  What you do on IVY stays on IVY. No personally identifying information will ever leave the site.
 
 ---
 
