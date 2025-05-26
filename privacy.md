@@ -1,7 +1,7 @@
 _Last updated: 2025-05-22_  
 
 - IVY (“we,” “our,” or “us”) is a free educational resource created by students for the benefit of other students. This Privacy Policy outlines how we handle data when you use the IVY website (“Site”).
-- Spoiler: we don’t collect anything. But here are the details anyway.
+
 ---
 - **1. No Personal Data Collection**
   - We do not ask for, store, or process any of the following:
@@ -13,7 +13,7 @@ _Last updated: 2025-05-22_
     -  Device or browser information
   - You can use the entire site anonymously.
   - We do employ anonymous viewer tracking of total site access.
-    -  This is done via contacting a third party "counter" rest API upon a view to the site, it only increments a number and no other data is stored or transmitted.
+    -  This is done via contacting a ["counter" rest API](https://ivystudy.org/api) upon a view to the site, it only increments a number and no other data is stored or transmitted. This is all done in house and is a simple fetch() command.
 
 ---
 
@@ -28,19 +28,18 @@ _Last updated: 2025-05-22_
   - We do not use Google Analytics, Matomo, or any other analytics platform.
     
   - We do employ anonymous viewer tracking of total site access. 
-    -  This is done via contacting a third party counter API upon a view to the site, it only increments a number and no other data is stored or transmitted.
-   
+    -  We do not use Google Analytics, Matomo, or any analytics platform. As noted in Section 1, we only record a total anonymous view count using an in-house API.
   -  What you do on IVY stays on IVY. No personally identifying information will ever leave the site.
 
 ---
 
-- **4. No User Submissions**
+- **4. No User Input or Uploads**
 
   - You cannot upload files, post comments, or submit any form of user-generated content. There is no input collection anywhere on the site.
 
 ---
 
-- **5. GitHub Repository**
+- **5. GitHub Hosting Notice**
 
   - Our educational content is also available on our public GitHub repository: _[https://github.com/NagusameCS/IVY](https://github.com/NagusameCS/IVY)_. GitHub may log basic technical metadata such as visit timestamps and IP addresses according to their own privacy policy. IVY has no access to or control over that data.
 
