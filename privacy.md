@@ -13,7 +13,7 @@ _Last updated: 2025-05-22_
     -  Device or browser information
   - You can use the entire site anonymously.
   - We do employ anonymous viewer tracking of total site access.
-    -  This is done via contacting a ["counter" rest API](https://ivystudy.org/api) upon a view to the site, it only increments a number and no other data is stored or transmitted. This is all done in house and is a simple fetch() command.
+    -  This is done via contacting a ['counter' rest API](https://ivystudy.org/api) upon a view to the site, it only increments a number and no other data is stored or transmitted. This is all done in house and is a simple fetch() command.
 
 ---
 
