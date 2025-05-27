@@ -99,7 +99,7 @@
             "topic": "C1.1",
             "time_estimate": 15,
             "timestamp": "2025/02/01",
-            "categories": ["Chemistry"],
+            "categories": ["Chemistry", "Chem"],
             "tags": ["atoms", "structure", "protons", "neutrons", "electrons"],
             "level": "SL"
           }
@@ -187,7 +187,7 @@
             "topic": "DT1.1",
             "time_estimate": 15,
             "timestamp": "2025/02/01",
-            "categories": ["Design Technology"],
+            "categories": ["Design Technology", "design-tech", "DT"],
             "tags": ["design cycle", "ideation", "development", "evaluation"],
             "level": "SL"
           }
@@ -209,7 +209,7 @@
             "topic": "CS1.1",
             "time_estimate": 15,
             "timestamp": "2025/02/01",
-            "categories": ["Computer Science"],
+            "categories": ["Computer Science", "CompSci", "Computer-Science"],
             "tags": ["hardware", "software", "systems", "input", "output"],
             "level": "SL"
           }
