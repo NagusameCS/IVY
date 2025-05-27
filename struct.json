@@ -147,7 +147,7 @@
               "topic": "E1.1",
               "time_estimate": 15,
               "timestamp": "2025/02/01",
-              "categories": ["Economics"],
+              "categories": ["Economics", "Econ"],
               "tags": ["economics", "scarcity", "choice", "basic concepts"],
               "level": "SL"
             }
