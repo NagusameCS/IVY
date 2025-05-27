@@ -1,6 +1,6 @@
 [
   {
-    "subject": "Math",
+    "subject": "Mathematics",
     "tooltip": "Mathematics",
     "sections": [
       {
@@ -64,7 +64,7 @@
     ]
   },
   {
-    "subject": "Bio",
+    "subject": "Biology",
     "tooltip": "Biological Sciences",
     "sections": [
       {
@@ -86,7 +86,7 @@
     ]
   },
   {
-    "subject": "Chem",
+    "subject": "Chemistry",
     "tooltip": "Chemistry",
     "sections": [
       {
@@ -108,8 +108,8 @@
     ]
   },
   {
-    "subject": "Econ",
-    "tooltip": "Econ",
+    "subject": "Economics",
+    "tooltip": "Economics",
     "sections": [
       {
         "title": "Basic Economics",
@@ -174,7 +174,7 @@
     ]
   },
   {
-    "subject": "Design-Tech",
+    "subject": "Design Tech",
     "tooltip": "Design Tech",
     "sections": [
       {
@@ -196,7 +196,7 @@
     ]
   },
   {
-    "subject": "CompSci",
+    "subject": "Computer Science",
     "tooltip": "Computer Science",
     "sections": [
       {
