@@ -99,7 +99,7 @@
                 "topic": "B1.1",
                 "time_estimate": 15,
                 "timestamp": "2025/02/01",
-                "categories": ["Biology"],
+                "categories": ["Biology", "Bio"],
                 "tags": ["cells", "structure", "biology"],
                 "level": "SL"
               }
