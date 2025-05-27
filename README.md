@@ -8,7 +8,8 @@ Welcome to **IVYSTUDY**, a dynamic and interactive study platform designed to pr
 
 | #  | Section                     | Description                                                                 |
 |----|-----------------------------|-----------------------------------------------------------------------------|
-| 1  | [Page Backups and HTML] (https://github.com/NagusameCS/Backups/tree/main)       | The Repo were the HTML for the page will be stored and backed up         |
+| 1  | [IVYSTUDY.org](ivystudy.org)       | The main page/search feature         |
+| 1  | [Page Backups and HTML](https://github.com/NagusameCS/Backups/tree/main)       | The Repo were the HTML for the page will be stored and backed up         |
 
 
 
