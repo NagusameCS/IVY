@@ -116,7 +116,23 @@
       {
         "title": "Introduction to Chemistry",
         "path": "intro-to-chemistry",
+<<<<<<< HEAD
         "lessons": []
+=======
+        "lessons": [
+          {
+            "title": "Atomic Structure",
+            "file": "atomic-structure.md",
+            "topic": "C1.1",
+            "time_estimate": 15,
+            "timestamp": "2025/02/01",
+            "categories": ["Chemistry"],
+            "tags": ["atoms", "structure", "protons", "neutrons", "electrons"],
+            "level": "SL"
+          }
+
+        ]
+>>>>>>> 924ceaa (Updated IVY repository files)
       }
     ]
   },
@@ -127,7 +143,24 @@
       {
         "title": "Basic Economics",
         "path": "basic-economics",
+<<<<<<< HEAD
         "lessons": []
+=======
+        "lessons": [
+
+            {
+              "title": "Introduction to Economics",
+              "file": "intro-economics.md",
+              "topic": "E1.1",
+              "time_estimate": 15,
+              "timestamp": "2025/02/01",
+              "categories": ["Economics"],
+              "tags": ["economics", "scarcity", "choice", "basic concepts"],
+              "level": "SL"
+            }
+
+        ]
+>>>>>>> 924ceaa (Updated IVY repository files)
       }
     ]
   },
@@ -138,7 +171,23 @@
       {
         "title": "Fundamentals of Physics",
         "path": "fundamentals-of-physics",
+<<<<<<< HEAD
         "lessons": []
+=======
+        "lessons": [
+
+          {
+            "title": "Kinematics: Describing Motion",
+            "file": "kinematics-intro.md",
+            "topic": "P1.1",
+            "time_estimate": 15,
+            "timestamp": "2025/02/01",
+            "categories": ["Physics"],
+            "tags": ["motion", "displacement", "velocity", "acceleration"],
+            "level": "SL"
+          }
+        ]
+>>>>>>> 924ceaa (Updated IVY repository files)
       }
     ]
   },
@@ -149,7 +198,23 @@
       {
         "title": "Business Basics",
         "path": "business-basics",
+<<<<<<< HEAD
         "lessons": []
+=======
+        "lessons": [
+            {
+              "title": "Introduction to Business Organization",
+              "file": "intro-business-org.md",
+              "topic": "BM1.1",
+              "time_estimate": 15,
+              "timestamp": "2025/02/01",
+              "categories": ["Business"],
+              "tags": ["business", "organization", "ownership", "objectives"],
+              "level": "SL"
+            }
+
+        ]
+>>>>>>> 924ceaa (Updated IVY repository files)
       }
     ]
   },
@@ -160,7 +225,23 @@
       {
         "title": "Introduction to Design",
         "path": "intro-to-design",
+<<<<<<< HEAD
         "lessons": []
+=======
+        "lessons": [
+
+          {
+            "title": "Design Cycle Overview",
+            "file": "design-cycle.md",
+            "topic": "DT1.1",
+            "time_estimate": 15,
+            "timestamp": "2025/02/01",
+            "categories": ["Design Technology"],
+            "tags": ["design cycle", "ideation", "development", "evaluation"],
+            "level": "SL"
+          }
+        ]
+>>>>>>> 924ceaa (Updated IVY repository files)
       }
     ]
   },
@@ -171,7 +252,24 @@
       {
         "title": "Programming Basics",
         "path": "programming-basics",
+<<<<<<< HEAD
         "lessons": []
+=======
+        "lessons": [
+
+          {
+            "title": "Introduction to Computer Systems",
+            "file": "intro-computer-systems.md",
+            "topic": "CS1.1",
+            "time_estimate": 15,
+            "timestamp": "2025/02/01",
+            "categories": ["Computer Science"],
+            "tags": ["hardware", "software", "systems", "input", "output"],
+            "level": "SL"
+          }
+
+        ]
+>>>>>>> 924ceaa (Updated IVY repository files)
       }
     ]
   }
