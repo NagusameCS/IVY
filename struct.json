@@ -116,9 +116,6 @@
       {
         "title": "Introduction to Chemistry",
         "path": "intro-to-chemistry",
-<<<<<<< HEAD
-        "lessons": []
-=======
         "lessons": [
           {
             "title": "Atomic Structure",
@@ -132,7 +129,6 @@
           }
 
         ]
->>>>>>> 924ceaa (Updated IVY repository files)
       }
     ]
   },
@@ -143,9 +139,6 @@
       {
         "title": "Basic Economics",
         "path": "basic-economics",
-<<<<<<< HEAD
-        "lessons": []
-=======
         "lessons": [
 
             {
@@ -160,7 +153,6 @@
             }
 
         ]
->>>>>>> 924ceaa (Updated IVY repository files)
       }
     ]
   },
@@ -171,9 +163,6 @@
       {
         "title": "Fundamentals of Physics",
         "path": "fundamentals-of-physics",
-<<<<<<< HEAD
-        "lessons": []
-=======
         "lessons": [
 
           {
@@ -187,7 +176,6 @@
             "level": "SL"
           }
         ]
->>>>>>> 924ceaa (Updated IVY repository files)
       }
     ]
   },
@@ -198,9 +186,9 @@
       {
         "title": "Business Basics",
         "path": "business-basics",
-<<<<<<< HEAD
-        "lessons": []
-=======
+
+        
+
         "lessons": [
             {
               "title": "Introduction to Business Organization",
@@ -214,7 +202,7 @@
             }
 
         ]
->>>>>>> 924ceaa (Updated IVY repository files)
+
       }
     ]
   },
@@ -225,9 +213,9 @@
       {
         "title": "Introduction to Design",
         "path": "intro-to-design",
-<<<<<<< HEAD
-        "lessons": []
-=======
+
+        
+
         "lessons": [
 
           {
@@ -241,7 +229,7 @@
             "level": "SL"
           }
         ]
->>>>>>> 924ceaa (Updated IVY repository files)
+
       }
     ]
   },
@@ -252,9 +240,9 @@
       {
         "title": "Programming Basics",
         "path": "programming-basics",
-<<<<<<< HEAD
-        "lessons": []
-=======
+
+        
+
         "lessons": [
 
           {
@@ -269,7 +257,7 @@
           }
 
         ]
->>>>>>> 924ceaa (Updated IVY repository files)
+
       }
     ]
   }
