@@ -1,81 +1,63 @@
 [
   {
     "subject": "Math",
-    "tooltip": "Mathematics",
+    "tooltip": "Math",
     "sections": [
       {
-        "title": "Core Topics",
-        "path": "core",
-        "subsections": [
+        "title": "Number and Algebra",
+        "path": "number-algebra",
+        "lessons": [
           {
-            "title": "Number and Algebra",
-            "path": "number-algebra",
-            "lessons": [
-              {
-                "title": "Arithmetic and Geometric Sequences",
-                "file": "sequences.md",
-                "topic": "M1.1",
-                "time_estimate": 20,
-                "timestamp": "2025/01/01",
-                "categories": ["Math AA", "Math AI"],
-                "tags": ["sequences", "arithmetic", "geometric", "series"],
-                "level": "SL"
-              },
-              {
-                "title": "Exponents and Logarithms",
-                "file": "exponents-logarithms.md",
-                "topic": "M1.2",
-                "time_estimate": 25,
-                "timestamp": "2025/01/03",
-                "categories": ["Math AA", "Math AI"],
-                "tags": ["exponents", "logarithms", "algebra"],
-                "level": "HL"
-              }
-            ]
+            "title": "Arithmetic and Geometric Sequences",
+            "file": "sequences.md",
+            "topic": "M1.1",
+            "time_estimate": 20,
+            "timestamp": "2025/01/01",
+            "categories": ["Math AA", "Math AI"],
+            "tags": ["sequences", "arithmetic", "geometric", "series"],
+            "level": "SL"
+          },
+          {
+            "title": "Exponents and Logarithms",
+            "file": "exponents-logarithms.md",
+            "topic": "M1.2",
+            "time_estimate": 25,
+            "timestamp": "2025/01/03",
+            "categories": ["Math AA", "Math AI"],
+            "tags": ["exponents", "logarithms", "algebra"],
+            "level": "HL"
           }
         ]
       },
       {
-        "title": "AA-Specific Topics",
-        "path": "aa-specific",
-        "subsections": [
+        "title": "Proof and Formal Reasoning",
+        "path": "proof-reasoning",
+        "lessons": [
           {
-            "title": "Proof and Formal Reasoning",
-            "path": "proof-reasoning",
-            "lessons": [
-              {
-                "title": "Introduction to Proofs",
-                "file": "proofs.md",
-                "topic": "AA1.1",
-                "time_estimate": 30,
-                "timestamp": "2025/02/01",
-                "categories": ["Math AA"],
-                "tags": ["proofs", "formal reasoning"],
-                "level": "HL"
-              }
-            ]
+            "title": "Introduction to Proofs",
+            "file": "proofs.md",
+            "topic": "AA1.1",
+            "time_estimate": 30,
+            "timestamp": "2025/02/01",
+            "categories": ["Math AA"],
+            "tags": ["proofs", "formal reasoning"],
+            "level": "HL"
           }
         ]
       },
       {
-        "title": "AI-Specific Topics",
-        "path": "ai-specific",
-        "subsections": [
+        "title": "Modeling with Functions",
+        "path": "modeling-functions",
+        "lessons": [
           {
-            "title": "Modeling with Functions",
-            "path": "modeling-functions",
-            "lessons": [
-              {
-                "title": "Regression Models",
-                "file": "regression-models.md",
-                "topic": "AI1.1",
-                "time_estimate": 35,
-                "timestamp": "2025/03/01",
-                "categories": ["Math AI"],
-                "tags": ["regression", "modeling", "functions"],
-                "level": "SL"
-              }
-            ]
+            "title": "Regression Models",
+            "file": "regression-models.md",
+            "topic": "AI1.1",
+            "time_estimate": 35,
+            "timestamp": "2025/03/01",
+            "categories": ["Math AI"],
+            "tags": ["regression", "modeling", "functions"],
+            "level": "SL"
           }
         ]
       }
@@ -83,27 +65,21 @@
   },
   {
     "subject": "Bio",
-    "tooltip": "Biological Sciences",
+    "tooltip": "Bio",
     "sections": [
       {
-        "title": "Cell Biology",
-        "path": "cell-biology",
-        "subsections": [
+        "title": "Cell Structure",
+        "path": "cell-structure",
+        "lessons": [
           {
-            "title": "Cell Structure",
-            "path": "cell-structure",
-            "lessons": [
-              {
-                "title": "Introduction to Cells",
-                "file": "intro-cells.md",
-                "topic": "B1.1",
-                "time_estimate": 15,
-                "timestamp": "2025/02/01",
-                "categories": ["Biology"],
-                "tags": ["cells", "structure", "biology"],
-                "level": "SL"
-              }
-            ]
+            "title": "Introduction to Cells",
+            "file": "intro-cells.md",
+            "topic": "B1.1",
+            "time_estimate": 15,
+            "timestamp": "2025/02/01",
+            "categories": ["Biology", "Bio"],
+            "tags": ["cells", "structure", "biology"],
+            "level": "SL"
           }
         ]
       }
@@ -111,11 +87,11 @@
   },
   {
     "subject": "Chem",
-    "tooltip": "Chemistry",
+    "tooltip": "Chem",
     "sections": [
       {
-        "title": "Introduction to Chemistry",
-        "path": "intro-to-chemistry",
+        "title": "Atomic Structure",
+        "path": "atomic-structure",
         "lessons": [
           {
             "title": "Atomic Structure",
@@ -123,35 +99,32 @@
             "topic": "C1.1",
             "time_estimate": 15,
             "timestamp": "2025/02/01",
-            "categories": ["Chemistry"],
+            "categories": ["Chemistry", "Chem"],
             "tags": ["atoms", "structure", "protons", "neutrons", "electrons"],
             "level": "SL"
           }
-
         ]
       }
     ]
   },
   {
     "subject": "Econ",
-    "tooltip": "Economics",
+    "tooltip": "Econ",
     "sections": [
       {
         "title": "Basic Economics",
         "path": "basic-economics",
         "lessons": [
-
-            {
-              "title": "Introduction to Economics",
-              "file": "intro-economics.md",
-              "topic": "E1.1",
-              "time_estimate": 15,
-              "timestamp": "2025/02/01",
-              "categories": ["Economics"],
-              "tags": ["economics", "scarcity", "choice", "basic concepts"],
-              "level": "SL"
-            }
-
+          {
+            "title": "Introduction to Economics",
+            "file": "intro-economics.md",
+            "topic": "E1.1",
+            "time_estimate": 15,
+            "timestamp": "2025/02/01",
+            "categories": ["Economics", "Econ"],
+            "tags": ["economics", "scarcity", "choice", "basic concepts"],
+            "level": "SL"
+          }
         ]
       }
     ]
@@ -161,10 +134,9 @@
     "tooltip": "Physics",
     "sections": [
       {
-        "title": "Fundamentals of Physics",
-        "path": "fundamentals-of-physics",
+        "title": "Kinematics",
+        "path": "kinematics",
         "lessons": [
-
           {
             "title": "Kinematics: Describing Motion",
             "file": "kinematics-intro.md",
@@ -184,80 +156,64 @@
     "tooltip": "Business",
     "sections": [
       {
-        "title": "Business Basics",
-        "path": "business-basics",
-
-        
-
+        "title": "Business Organization",
+        "path": "business-organization",
         "lessons": [
-            {
-              "title": "Introduction to Business Organization",
-              "file": "intro-business-org.md",
-              "topic": "BM1.1",
-              "time_estimate": 15,
-              "timestamp": "2025/02/01",
-              "categories": ["Business"],
-              "tags": ["business", "organization", "ownership", "objectives"],
-              "level": "SL"
-            }
-
+          {
+            "title": "Introduction to Business Organization",
+            "file": "intro-business-org.md",
+            "topic": "BM1.1",
+            "time_estimate": 15,
+            "timestamp": "2025/02/01",
+            "categories": ["Business"],
+            "tags": ["business", "organization", "ownership", "objectives"],
+            "level": "SL"
+          }
         ]
-
       }
     ]
   },
   {
-    "subject": "Design Tech",
-    "tooltip": "Design Tech",
+    "subject": "DesignTech",
+    "tooltip": "DesignTech",
     "sections": [
       {
-        "title": "Introduction to Design",
-        "path": "intro-to-design",
-
-        
-
+        "title": "Design Cycle",
+        "path": "design-cycle",
         "lessons": [
-
           {
             "title": "Design Cycle Overview",
             "file": "design-cycle.md",
             "topic": "DT1.1",
             "time_estimate": 15,
             "timestamp": "2025/02/01",
-            "categories": ["Design Technology"],
+            "categories": ["Design Technology", "design-tech", "DT"],
             "tags": ["design cycle", "ideation", "development", "evaluation"],
             "level": "SL"
           }
         ]
-
       }
     ]
   },
   {
-    "subject": "CompSci",
-    "tooltip": "Computer Science",
+    "subject": "Compsci",
+    "tooltip": "Compsci",
     "sections": [
       {
-        "title": "Programming Basics",
-        "path": "programming-basics",
-
-        
-
+        "title": "Computer Systems",
+        "path": "computer-systems",
         "lessons": [
-
           {
             "title": "Introduction to Computer Systems",
             "file": "intro-computer-systems.md",
             "topic": "CS1.1",
             "time_estimate": 15,
             "timestamp": "2025/02/01",
-            "categories": ["Computer Science"],
+            "categories": ["Computer Science", "CompSci", "Computer-Science"],
             "tags": ["hardware", "software", "systems", "input", "output"],
             "level": "SL"
           }
-
         ]
-
       }
     ]
   }
