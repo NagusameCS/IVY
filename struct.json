@@ -1,7 +1,7 @@
 [
   {
-    "subject": "Mathematics",
-    "tooltip": "Mathematics",
+    "subject": "mathematics",
+    "tooltip": "mathematics",
     "sections": [
       {
         "title": "Number and Algebra",
@@ -13,7 +13,7 @@
             "topic": "M1.1",
             "time_estimate": 20,
             "timestamp": "2025/01/01",
-            "categories": ["Math AA", "Math AI"],
+            "categories": ["math AA", "math AI"],
             "tags": ["sequences", "arithmetic", "geometric", "series"],
             "level": "SL"
           },
@@ -64,8 +64,8 @@
     ]
   },
   {
-    "subject": "Biology",
-    "tooltip": "Biological Sciences",
+    "subject": "biology",
+    "tooltip": "biology",
     "sections": [
       {
         "title": "Cell Structure",
@@ -86,8 +86,8 @@
     ]
   },
   {
-    "subject": "Chemistry",
-    "tooltip": "Chemistry",
+    "subject": "chemistry",
+    "tooltip": "chemistry",
     "sections": [
       {
         "title": "Atomic Structure",
@@ -108,8 +108,8 @@
     ]
   },
   {
-    "subject": "Economics",
-    "tooltip": "Economics",
+    "subject": "economics",
+    "tooltip": "economics",
     "sections": [
       {
         "title": "Basic Economics",
@@ -130,8 +130,8 @@
     ]
   },
   {
-    "subject": "Physics",
-    "tooltip": "Physics",
+    "subject": "physics",
+    "tooltip": "physics",
     "sections": [
       {
         "title": "Kinematics",
@@ -152,8 +152,8 @@
     ]
   },
   {
-    "subject": "Business",
-    "tooltip": "Business",
+    "subject": "business",
+    "tooltip": "business",
     "sections": [
       {
         "title": "Business Organization",
@@ -174,8 +174,8 @@
     ]
   },
   {
-    "subject": "Design-Tech",
-    "tooltip": "Design-Tech",
+    "subject": "designtech",
+    "tooltip": "designtech",
     "sections": [
       {
         "title": "Design Cycle",
@@ -196,8 +196,8 @@
     ]
   },
   {
-    "subject": "Computer-Science",
-    "tooltip": "Computer-Science",
+    "subject": "compsci",
+    "tooltip": "compsci",
     "sections": [
       {
         "title": "Computer Systems",
