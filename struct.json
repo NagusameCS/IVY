@@ -1,7 +1,7 @@
 [
   {
-    "subject": "mathematics",
-    "tooltip": "mathematics",
+    "subject": "Math",
+    "tooltip": "Math",
     "sections": [
       {
         "title": "Number and Algebra",
@@ -13,7 +13,7 @@
             "topic": "M1.1",
             "time_estimate": 20,
             "timestamp": "2025/01/01",
-            "categories": ["math AA", "math AI"],
+            "categories": ["Math AA", "Math AI"],
             "tags": ["sequences", "arithmetic", "geometric", "series"],
             "level": "SL"
           },
@@ -64,8 +64,8 @@
     ]
   },
   {
-    "subject": "biology",
-    "tooltip": "biology",
+    "subject": "Biology",
+    "tooltip": "Biology",
     "sections": [
       {
         "title": "Cell Structure",
@@ -86,8 +86,8 @@
     ]
   },
   {
-    "subject": "chemistry",
-    "tooltip": "chemistry",
+    "subject": "Chem",
+    "tooltip": "Chem",
     "sections": [
       {
         "title": "Atomic Structure",
@@ -108,8 +108,8 @@
     ]
   },
   {
-    "subject": "economics",
-    "tooltip": "economics",
+    "subject": "Econ",
+    "tooltip": "Econ",
     "sections": [
       {
         "title": "Basic Economics",
@@ -130,8 +130,8 @@
     ]
   },
   {
-    "subject": "physics",
-    "tooltip": "physics",
+    "subject": "Physics",
+    "tooltip": "Physics",
     "sections": [
       {
         "title": "Kinematics",
@@ -152,8 +152,8 @@
     ]
   },
   {
-    "subject": "business",
-    "tooltip": "business",
+    "subject": "Business",
+    "tooltip": "Business",
     "sections": [
       {
         "title": "Business Organization",
@@ -174,8 +174,8 @@
     ]
   },
   {
-    "subject": "designtech",
-    "tooltip": "designtech",
+    "subject": "DesignTech",
+    "tooltip": "DesignTech",
     "sections": [
       {
         "title": "Design Cycle",
@@ -196,8 +196,8 @@
     ]
   },
   {
-    "subject": "compsci",
-    "tooltip": "compsci",
+    "subject": "Compsci",
+    "tooltip": "Compsci",
     "sections": [
       {
         "title": "Computer Systems",
