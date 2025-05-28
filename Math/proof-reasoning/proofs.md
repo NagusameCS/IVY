@@ -105,16 +105,3 @@ $$f'(x) = (6x + 2)\cos(3x^2 + 2x)$$
 </details>
 
 
----
-# Future Quiz Syntax (β&!Implimented)
----
-
-:::quiz
-vars {
-    a: int = [2..5],
-    b: = {a*3},
-    c: float = [1.5..4.5] !{c > a}
-}
-question: Find derivative of f(x) = {a}x³ + {b}x² + {c}
-answer: derivative({a}x^3 + {b}x^2 + {c})
-:::
