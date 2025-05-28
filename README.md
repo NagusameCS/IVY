@@ -3,7 +3,7 @@
 
 Welcome to **IVYSTUDY**, a dynamic and interactive study platform designed to provide free access to lessons and study materials. This documentation explains the structure and functionality of IVYSTUDY.
 
-Security protects your users. Transparency helps them trust and understand you. Never sacrifice the former for the latter—but maximize the latter within the safety bounds of the former.
+"Security protects your users. Transparency helps them trust and understand you. Never sacrifice the former for the latter—but maximize the latter within the safety bounds of the former."
 
 ---
 ## Navigation Links
