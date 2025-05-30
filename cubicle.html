@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cubicle</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'EB Garamond', serif;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    .cubicle-btn {
+      min-width: 3rem;
+      background-color: #15803d; /* Tailwind green-700 */
+      color: #fff;
+      transition: background 0.2s;
+    }
+    .cubicle-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .cubicle-btn.cubicle-clear {
+      background-color: #b91c1c; /* Tailwind red-700 */
+    }
+    .cubicle-btn:hover:not(:disabled) {
+      filter: brightness(1.1);
+    }
+    .cubicle-hint-spacer {
+      height: 3.5rem;
+    }
+  </style>
+</head>
+<body class="bg-zinc-900 text-zinc-100 min-h-screen flex flex-col items-center p-6">
+  <header class="text-center mb-6">
+    <div class="text-4xl font-bold tracking-wide">CUBICLE</div>
+    <div class="text-zinc-400 mt-1 italic">A daily polynomial deduction game</div>
+    <div class="text-zinc-300 mt-3 text-base max-w-xl mx-auto px-2">
+      Guess the four integer coefficients of today's cubic polynomial. Each guess gives you feedback on each coefficient: green for correct, yellow for correct but in the wrong place, and gray for incorrect. After each guess, you'll get an additional mathematical hint. You have 5 tries. Good luck!
+    </div>
+  </header>
+
+  <!-- Column Labels -->
+  <section class="flex justify-center gap-2 mb-1 font-semibold text-zinc-300">
+    <div class="w-12 text-center">x³</div>
+    <div class="w-12 text-center">x²</div>
+    <div class="w-12 text-center">x</div>
+    <div class="w-12 text-center">1</div>
+  </section>
+
+  <section id="grid" class="space-y-2 mb-6"></section>
+  <section id="input-form" class="flex flex-col items-center w-full">
+    <form id="cubicle-form" onsubmit="submitGuess(event)" class="flex gap-2 justify-center mb-2" autocomplete="off">
+      <input class="box" id="c3" type="number" min="-9" max="9" required title="x³ coefficient" placeholder="x³" autocomplete="off" />
+      <input class="box" id="c2" type="number" min="-9" max="9" required title="x² coefficient" placeholder="x²" autocomplete="off" />
+      <input class="box" id="c1" type="number" min="-9" max="9" required title="x coefficient" placeholder="x" autocomplete="off" />
+      <input class="box" id="c0" type="number" min="-9" max="9" required title="constant term" placeholder="1" autocomplete="off" />
+    </form>
+    <div class="flex gap-4 mt-1">
+      <button type="submit" form="cubicle-form" class="cubicle-btn font-semibold tracking-wide px-7 py-2.5 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400">Submit</button>
+      <button type="button" onclick="clearInputs()" class="cubicle-btn cubicle-clear font-semibold tracking-wide px-7 py-2.5 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-red-400">Clear</button>
+    </div>
+  </section>
+  <section id="hint-stack" class="flex flex-col items-center w-full mb-2"></section>
+  <div class="cubicle-hint-spacer"></div>
+
+  <script>
+    const maxGuesses = 5;
+    const seed = new Date().toISOString().slice(0, 10);
+    const hashCode = s => s.split('').reduce((a, b) => b.charCodeAt(0) + ((a << 5) - a), 0);
+    const seededRand = (seed => {
+      let h = hashCode(seed);
+      return () => {
+        h += 1;
+        return (Math.sin(h) * 10000) % 1;
+      };
+    })(seed);
+
+    const getRandInt = (min, max) => Math.floor(seededRand() * (max - min + 1)) + min;
+
+    // Generate a unique, interesting answer each day
+    function generateInterestingAnswer() {
+      // Ensure at least 3 nonzero coefficients, at least one positive and one negative, and leading coefficient is ±2..9
+      let coeffs;
+      let tries = 0;
+      do {
+        tries++;
+        coeffs = [
+          getRandInt(2, 9) * (getRandInt(0, 1) ? 1 : -1), // c3: always ±2..9
+          getRandInt(-9, 9),
+          getRandInt(-9, 9),
+          getRandInt(-9, 9)
+        ];
+      } while (
+        coeffs.filter(c => c !== 0).length < 3 ||
+        !(coeffs.some(c => c > 0) && coeffs.some(c => c < 0)) ||
+        tries < 100 && new Set(coeffs).size < 3 // avoid boring repeats
+      );
+      return coeffs;
+    }
+    const answer = generateInterestingAnswer();
+    // Align guess columns with results columns
+    const grid = document.getElementById("grid");
+    grid.className = "space-y-2 mb-6 flex flex-col items-center";
+
+    const allHints = [
+      `As x → ∞, f(x) → ${answer[0] > 0 ? '∞ (rises to the right)' : '-∞ (falls to the right)'}.`,
+      (() => {
+        const signChanges = answer.reduce((acc, c, i, arr) => {
+          if (i === 0) return acc;
+          if (c !== 0 && arr[i-1] !== 0 && Math.sign(c) !== Math.sign(arr[i-1])) return acc + 1;
+          return acc;
+        }, 0);
+        return `There ${signChanges === 1 ? 'is' : 'are'} <b>${signChanges}</b> sign change${signChanges === 1 ? '' : 's'} in the coefficients.`;
+      })(),
+      (() => {
+        const sum = answer.reduce((a, b) => a + b, 0);
+        return `The sum of all coefficients is <b>${sum % 2 === 0 ? 'even' : 'odd'}</b>.`;
+      })(),
+      `f(0) is <b>${answer[3] > 0 ? 'positive' : answer[3] < 0 ? 'negative' : 'zero'}</b>.`,
+      (() => {
+        const nonzeroProduct = answer.filter(c => c !== 0).reduce((a, b) => a * b, 1);
+        return `The product of all nonzero coefficients is <b>${nonzeroProduct > 0 ? 'positive' : 'negative'}</b>.`;
+      })()
+    ];
+    let revealedHints = 1;
+
+    function renderHints() {
+      const hintStack = document.getElementById('hint-stack');
+      hintStack.innerHTML = '';
+      hintStack.style.marginTop = '2.5rem';
+      for (let i = 0; i < revealedHints; ++i) {
+        const hintDiv = document.createElement('div');
+        hintDiv.className = 'w-full max-w-md bg-zinc-800/80 border border-zinc-700 rounded px-4 py-2 shadow-sm mb-1 text-zinc-200 text-base text-center';
+        hintDiv.innerHTML = allHints[i];
+        hintStack.appendChild(hintDiv);
+      }
+    }
+
+    let guessCount = 0;
+    let gameOver = false;
+    let allGuesses = [];
+    let allFeedback = [];
+
+    function submitGuess(event) {
+      if (event) event.preventDefault();
+      if (guessCount >= maxGuesses || gameOver) return;
+      guessCount++;
+
+      const guess = ["c3", "c2", "c1", "c0"].map(id => {
+        const val = parseInt(document.getElementById(id).value);
+        return Math.min(9, Math.max(-9, isNaN(val) ? 0 : val));
+      });
+
+      const feedback = Array(4).fill("red");
+      const answerCopy = [...answer];
+      const used = Array(4).fill(false);
+
+      // First pass: green
+      for (let i = 0; i < 4; i++) {
+        if (guess[i] === answer[i]) {
+          feedback[i] = "green";
+          used[i] = true;
+        }
+      }
+
+      // Second pass: yellow
+      for (let i = 0; i < 4; i++) {
+        if (feedback[i] === "red") {
+          for (let j = 0; j < 4; j++) {
+            if (!used[j] && guess[i] === answer[j]) {
+              feedback[i] = "yellow";
+              used[j] = true;
+              break;
+            }
+          }
+        }
+      }
+
+      const row = document.createElement("div");
+      row.className = "flex justify-center gap-2";
+      guess.forEach((num, i) => {
+        const box = document.createElement("div");
+        box.className = `w-12 h-12 flex items-center justify-center text-xl font-semibold rounded ${
+          feedback[i] === "green"
+            ? "bg-green-600"
+            : feedback[i] === "yellow"
+            ? "bg-yellow-300 text-black"
+            : "bg-zinc-700"
+        }`;
+        box.textContent = num;
+        row.appendChild(box);
+      });
+      document.getElementById("grid").appendChild(row);
+
+      allGuesses.push([...guess]);
+      allFeedback.push([...feedback]);
+
+      if (feedback.every(c => c === "green")) {
+        showWinMessage();
+        gameOver = true;
+        disableForm();
+      } else if (guessCount >= maxGuesses) {
+        showLoseMessage();
+        gameOver = true;
+        disableForm();
+      }
+
+      clearInputs();
+      if (revealedHints < allHints.length) revealedHints++;
+      renderHints();
+    }
+
+    function disableForm() {
+      document.getElementById('cubicle-form').querySelectorAll('input,button').forEach(el => el.disabled = true);
+    }
+
+    function showPopup(message, color) {
+      let popup = document.getElementById('cubicle-popup');
+      if (!popup) {
+        popup = document.createElement('div');
+        popup.id = 'cubicle-popup';
+        popup.className = 'fixed inset-0 flex items-center justify-center z-50';
+        popup.innerHTML = `
+          <div id="cubicle-popup-overlay" class="absolute inset-0 bg-black opacity-60"></div>
+          <div id="cubicle-popup-inner" class="relative bg-zinc-900 border-2 rounded-xl shadow-2xl px-8 py-6 text-2xl font-semibold text-center" style="min-width:260px;"></div>
+        `;
+        document.body.appendChild(popup);
+      }
+      const inner = document.getElementById('cubicle-popup-inner');
+      inner.textContent = message;
+      inner.style.borderColor = color;
+      inner.style.color = color;
+      popup.style.display = 'flex';
+      setTimeout(() => { popup.style.display = 'none'; }, 2500);
+    }
+
+    function showWinMessage() {
+      showPopup('You solved the Cubicle!', '#22c55e'); // Tailwind green-500
+    }
+
+    function showLoseMessage() {
+      showPopup(`Out of guesses! The answer was: [${answer.join(", ")}].`, '#ef4444'); // Tailwind red-500
+    }
+
+    function clearInputs() {
+      if (guessCount >= maxGuesses || gameOver) return;
+      ["c3", "c2", "c1", "c0"].forEach(id => {
+        document.getElementById(id).value = "";
+      });
+      document.getElementById("c3").focus();
+    }
+
+    // Input navigation and bounds
+    const boxes = ["c3", "c2", "c1", "c0"].map(id => document.getElementById(id));
+    boxes.forEach((input, index) => {
+      input.className += " bg-zinc-800 border border-zinc-700 text-center w-12 h-12 text-xl rounded";
+      input.style.background = "none";
+      
+      // Allow negative sign as first character, and only one digit after
+      input.addEventListener("input", () => {
+        let val = input.value;
+        // Only allow: "-", "d", or "-d" (where d is a digit)
+        if (!/^(-?\d{0,1})$/.test(val)) {
+          // If minus is not at the start, remove it
+          val = val.replace(/(?!^)-/g, '');
+          // Remove all non-digit and non-initial-minus, and only keep first digit after optional minus
+          if (val.startsWith('-')) {
+            input.value = '-' + val.replace(/[^\d]/g, '').slice(0, 1);
+          } else {
+            input.value = val.replace(/[^\d]/g, '').slice(0, 1);
+          }
+        }
+        // If minus is not at the start, remove it (handles case like '5-')
+        if (input.value.length > 1 && input.value[0] !== '-' && input.value.includes('-')) {
+          input.value = input.value.replace(/-/g, '');
+        }
+        // Only move focus if a digit is entered (not just "-")
+        if (/^-?\d$/.test(input.value) && index < boxes.length - 1) {
+          boxes[index + 1].focus();
+        }
+      });
+
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Backspace" && !input.value && index > 0) {
+          boxes[index - 1].focus();
+        }
+        if (e.key === "Enter") {
+          document.getElementById('cubicle-form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));
+        }
+      });
+    });
+
+    // Always update hints after each guess
+    window.addEventListener('DOMContentLoaded', renderHints);
+  </script>
+</body>
+</html>
