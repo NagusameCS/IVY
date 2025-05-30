@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='75' font-size='75' font-family='Times New Roman, serif' text-anchor='middle'>3</text></svg>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cubicle</title>
+  <title>Cubicle³</title>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -18,33 +19,76 @@
     input[type=number] {
       -moz-appearance: textfield;
     }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.8) opacity(0.6);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator:hover {
+      filter: invert(0.8) opacity(1);
+      transform: scale(1.1);
+    }
     .cubicle-btn {
       min-width: 3rem;
-      background-color: #15803d; /* Tailwind green-700 */
+      background-color: #201f1f;
       color: #fff;
-      transition: background 0.2s;
+      border: 2px solid #15803c5e; /* Tailwind green-700 */
+      transition: all 0.2s;
     }
     .cubicle-btn:disabled {
       opacity: 0.6;
       cursor: not-allowed;
+      border-color: rgba(21, 128, 60, 0.399);
     }
     .cubicle-btn.cubicle-clear {
-      background-color: #b91c1c; /* Tailwind red-700 */
+      border-color: #b91c1c78; /* Tailwind red-700 */
     }
     .cubicle-btn:hover:not(:disabled) {
-      filter: brightness(1.1);
+      background-color: #15803c32;
+      border-color: transparent;
+    }
+    .cubicle-btn.cubicle-clear:hover:not(:disabled) {
+      background-color: #b91c1c4f;
+      border-color: transparent;
     }
     .cubicle-hint-spacer {
       height: 3.5rem;
     }
+    @keyframes cubicle-shake {
+      10%, 90% { transform: translateX(-2px); }
+      20%, 80% { transform: translateX(4px); }
+      30%, 50%, 70% { transform: translateX(-8px); }
+      40%, 60% { transform: translateX(8px); }
+    }
+    @keyframes cubicle-bounce {
+      0% { transform: scale(1); }
+      30% { transform: scale(1.25); }
+      60% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+    @keyframes cubicle-fade {
+      0% { opacity: 1; }
+      100% { opacity: 0.4; }
+    }
+    .cubicle-hint-animate {
+      animation: cubicle-bounce 0.7s;
+    }
   </style>
 </head>
 <body class="bg-zinc-900 text-zinc-100 min-h-screen flex flex-col items-center p-6">
-  <header class="text-center mb-6">
-    <div class="text-4xl font-bold tracking-wide">CUBICLE</div>
+  <header class="relative text-center mb-6">
+    <div class="hidden md:block absolute top-0 right-0 mt-2 mr-2">
+      <label for="dateSelector" class="sr-only">Select Date</label>
+      <input type="date" id="dateSelector" title="Select date to play a different day's puzzle" 
+        class="bg-zinc-800/50 border border-zinc-700/50 rounded-lg px-2 py-1 text-zinc-200 text-sm font-medium tracking-wide cursor-pointer
+        hover:border-zinc-500 hover:bg-zinc-800/80 transition-all duration-200
+        focus:outline-none focus:border-green-500/50 focus:ring-1 focus:ring-green-500/30" 
+        onchange="changeDate(this.value)">
+    </div>
+    <a href="/" class="text-4xl font-bold tracking-wide hover:text-zinc-300 transition-colors">CUBICLE</a>
     <div class="text-zinc-400 mt-1 italic">A daily polynomial deduction game</div>
     <div class="text-zinc-300 mt-3 text-base max-w-xl mx-auto px-2">
-      Guess the four integer coefficients of today's cubic polynomial. Each guess gives you feedback on each coefficient: green for correct, yellow for correct but in the wrong place, and gray for incorrect. After each guess, you'll get an additional mathematical hint. You have 5 tries. Good luck!
+      Guess the four integer coefficients of today's cubic polynomial (Between -9 to 9). Each guess gives you feedback on each coefficient: green for correct, yellow for correct but in the wrong place, and gray for incorrect. After each guess, you'll get an additional mathematical hint. You have 5 tries. Good luck!
     </div>
   </header>
 
@@ -58,11 +102,11 @@
 
   <section id="grid" class="space-y-2 mb-6"></section>
   <section id="input-form" class="flex flex-col items-center w-full">
-    <form id="cubicle-form" onsubmit="submitGuess(event)" class="flex gap-2 justify-center mb-2" autocomplete="off">
-      <input class="box" id="c3" type="number" min="-9" max="9" required title="x³ coefficient" placeholder="x³" autocomplete="off" />
-      <input class="box" id="c2" type="number" min="-9" max="9" required title="x² coefficient" placeholder="x²" autocomplete="off" />
-      <input class="box" id="c1" type="number" min="-9" max="9" required title="x coefficient" placeholder="x" autocomplete="off" />
-      <input class="box" id="c0" type="number" min="-9" max="9" required title="constant term" placeholder="1" autocomplete="off" />
+    <form id="cubicle-form" onsubmit="submitGuess(event)" class="flex gap-2 justify-center mb-2" autocomplete="off" novalidate>
+      <input class="box" id="c3" type="number" min="-9" max="9" title="x³ coefficient" placeholder="x³" autocomplete="off" />
+      <input class="box" id="c2" type="number" min="-9" max="9" title="x² coefficient" placeholder="x²" autocomplete="off" />
+      <input class="box" id="c1" type="number" min="-9" max="9" title="x coefficient" placeholder="x" autocomplete="off" />
+      <input class="box" id="c0" type="number" min="-9" max="9" title="constant term" placeholder="1" autocomplete="off" />
     </form>
     <div class="flex gap-4 mt-1">
       <button type="submit" form="cubicle-form" class="cubicle-btn font-semibold tracking-wide px-7 py-2.5 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400">Submit</button>
@@ -72,9 +116,46 @@
   <section id="hint-stack" class="flex flex-col items-center w-full mb-2"></section>
   <div class="cubicle-hint-spacer"></div>
 
+  <footer class="border-t border-zinc-800 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center py-3">
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-zinc-500 hover:text-zinc-300 transition-colors text-sm">
+          IVYSTUDY Content © 2025 is licensed under CC BY-NC-SA 4.0
+        </a>
+      </div>
+      <div class="py-3 flex justify-center">
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="#terms" class="text-zinc-500 hover:text-zinc-300 transition-colors">Terms</a>
+          <a href="#privacy" class="text-zinc-500 hover:text-zinc-300 transition-colors">Privacy</a>
+          <a href="#contact" class="text-zinc-500 hover:text-zinc-300 transition-colors">Contact</a>
+          <a href="https://github.com/NagusameCS/IVY/tree/main" target="_blank" rel="noopener noreferrer"
+            class="flex items-center gap-1 text-zinc-500 hover:text-zinc-300 transition-colors group">
+            <svg class="w-5 h-5 group-hover:text-zinc-300 transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.933 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 013.003-.403c1.02.005 2.045.137 3.003.403 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.21 0 1.595-.015 2.88-.015 3.27 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            <span class="group-hover:text-zinc-300 transition-colors">GitHub</span>
+          </a>
+
+          <a href="/info" id="viewer-count" class="group flex items-center gap-1 text-zinc-500 hover:text-zinc-300 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
+              stroke="currentColor" class="w-5 h-5 group-hover:text-zinc-300 transition-colors">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 12s3.75-6.75 9.75-6.75S21.75 12 21.75 12s-3.75 6.75-9.75 6.75S2.25 12 2.25 12z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span id="viewer-count-text" class="group-hover:text-zinc-300 transition-colors">Loading...</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script>
     const maxGuesses = 5;
-    const seed = new Date().toISOString().slice(0, 10);
+    const urlParams = new URLSearchParams(window.location.search);
+    const seed = urlParams.get('date') || new Date().toISOString().slice(0, 10);
     const hashCode = s => s.split('').reduce((a, b) => b.charCodeAt(0) + ((a << 5) - a), 0);
     const seededRand = (seed => {
       let h = hashCode(seed);
@@ -88,16 +169,17 @@
 
     // Generate a unique, interesting answer each day
     function generateInterestingAnswer() {
-      // Ensure at least 3 nonzero coefficients, at least one positive and one negative, and leading coefficient is ±2..9
+      // Ensure coefficients are within -9 to 9 range (except c3 which is ±2..9),
+      // at least 3 nonzero coefficients, and at least one positive and one negative
       let coeffs;
       let tries = 0;
       do {
         tries++;
         coeffs = [
           getRandInt(2, 9) * (getRandInt(0, 1) ? 1 : -1), // c3: always ±2..9
-          getRandInt(-9, 9),
-          getRandInt(-9, 9),
-          getRandInt(-9, 9)
+          Math.min(9, Math.max(-9, getRandInt(-9, 9))), // Ensure within bounds
+          Math.min(9, Math.max(-9, getRandInt(-9, 9))),
+          Math.min(9, Math.max(-9, getRandInt(-9, 9)))
         ];
       } while (
         coeffs.filter(c => c !== 0).length < 3 ||
@@ -137,6 +219,11 @@
       const hintStack = document.getElementById('hint-stack');
       hintStack.innerHTML = '';
       hintStack.style.marginTop = '2.5rem';
+      // Add label
+      const label = document.createElement('div');
+      label.textContent = 'Clues';
+      label.className = 'text-lg font-bold text-white mb-2 tracking-wide'; // changed to white
+      hintStack.appendChild(label);
       for (let i = 0; i < revealedHints; ++i) {
         const hintDiv = document.createElement('div');
         hintDiv.className = 'w-full max-w-md bg-zinc-800/80 border border-zinc-700 rounded px-4 py-2 shadow-sm mb-1 text-zinc-200 text-base text-center';
@@ -149,10 +236,29 @@
     let gameOver = false;
     let allGuesses = [];
     let allFeedback = [];
+    let submitCooldown = false;
 
     function submitGuess(event) {
       if (event) event.preventDefault();
       if (guessCount >= maxGuesses || gameOver) return;
+      
+      // Check for cooldown
+      if (submitCooldown) {
+        // Shake the form to indicate cooldown
+        const form = document.getElementById('cubicle-form');
+        form.style.animation = 'cubicle-shake 0.4s';
+        form.addEventListener('animationend', () => {
+          form.style.animation = '';
+        }, { once: true });
+        return;
+      }
+
+      // Enable cooldown
+      submitCooldown = true;
+      setTimeout(() => {
+        submitCooldown = false;
+      }, 500);
+
       guessCount++;
 
       const guess = ["c3", "c2", "c1", "c0"].map(id => {
@@ -244,11 +350,14 @@
     }
 
     function showWinMessage() {
-      showPopup('You solved the Cubicle!', '#22c55e'); // Tailwind green-500
+      animateWin();
+      launchConfetti(); // confetti on win
+      // showPopup('You solved the Cubicle!', '#22c55e'); // Tailwind green-500
     }
 
     function showLoseMessage() {
-      showPopup(`Out of guesses! The answer was: [${answer.join(", ")}].`, '#ef4444'); // Tailwind red-500
+      animateLose();
+      // showPopup(`Out of guesses! The answer was: [${answer.join(", ")}].`, '#ef4444'); // Tailwind red-500
     }
 
     function clearInputs() {
@@ -261,46 +370,236 @@
 
     // Input navigation and bounds
     const boxes = ["c3", "c2", "c1", "c0"].map(id => document.getElementById(id));
-    boxes.forEach((input, index) => {
-      input.className += " bg-zinc-800 border border-zinc-700 text-center w-12 h-12 text-xl rounded";
-      input.style.background = "none";
-      
-      // Allow negative sign as first character, and only one digit after
-      input.addEventListener("input", () => {
-        let val = input.value;
-        // Only allow: "-", "d", or "-d" (where d is a digit)
-        if (!/^(-?\d{0,1})$/.test(val)) {
-          // If minus is not at the start, remove it
-          val = val.replace(/(?!^)-/g, '');
-          // Remove all non-digit and non-initial-minus, and only keep first digit after optional minus
-          if (val.startsWith('-')) {
-            input.value = '-' + val.replace(/[^\d]/g, '').slice(0, 1);
-          } else {
-            input.value = val.replace(/[^\d]/g, '').slice(0, 1);
-          }
-        }
-        // If minus is not at the start, remove it (handles case like '5-')
-        if (input.value.length > 1 && input.value[0] !== '-' && input.value.includes('-')) {
-          input.value = input.value.replace(/-/g, '');
-        }
-        // Only move focus if a digit is entered (not just "-")
-        if (/^-?\d$/.test(input.value) && index < boxes.length - 1) {
-          boxes[index + 1].focus();
-        }
-      });
+// Get the input boxes (assuming they exist in your document with ids "c3", "c2", "c1", "c0")
 
-      input.addEventListener("keydown", (e) => {
-        if (e.key === "Backspace" && !input.value && index > 0) {
-          boxes[index - 1].focus();
-        }
-        if (e.key === "Enter") {
-          document.getElementById('cubicle-form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));
-        }
-      });
+  boxes.forEach((input, index) => {
+    // Change type to "text" so that maxlength works across browsers.
+    // We allow two characters (i.e. a minus sign and a digit or a digit alone).
+    input.setAttribute("type", "text");
+    input.setAttribute("maxlength", "2");
+    input.className += " bg-zinc-800 border border-zinc-700 text-center w-12 h-12 text-xl rounded";
+    input.style.background = "none";
+
+    input.addEventListener("input", () => {
+      let val = input.value;
+
+      // If the value starts with a minus, allow one digit to follow.
+      if (val.startsWith('-')) {
+        let digitPart = val.slice(1).replace(/\D/g, '').slice(0, 1);
+        input.value = '-' + digitPart;
+      } else {
+        // Otherwise, remove stray minus signs and any non-digit characters.
+        input.value = val.replace(/-/g, '').replace(/\D/g, '').slice(0, 1);
+      }
+
+      // Auto-move to the next input if the value is valid.
+      // The regex checks for either a one-digit number or a properly formed negative number.
+      if (/^-?\d$/.test(input.value) && index < boxes.length - 1) {
+        boxes[index + 1].focus();
+      }
     });
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace") {
+        // If the current input is already empty, move focus to the previous box.
+        if (input.value === "") {
+          if (index > 0) {
+            e.preventDefault();
+            // Use a slight delay to allow proper focus setting.
+            setTimeout(() => {
+              boxes[index - 1].value = "";
+              boxes[index - 1].focus();
+            }, 0);
+          }
+        } else {
+          // If the current box has a value, clear it and do not move focus.
+          input.value = "";
+          e.preventDefault();
+        }
+      }
+      if (e.key === "Enter") {
+        document.getElementById("cubicle-form").dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
+      }
+    });
+  });
+
+
+
 
     // Always update hints after each guess
     window.addEventListener('DOMContentLoaded', renderHints);
+
+    // --- Animations and Flourishes ---
+    const animateRowReveal = (row) => {
+      row.childNodes.forEach((box, i) => {
+        box.style.transform = 'scale(1.2)';
+        box.style.transition = 'transform 0.18s cubic-bezier(.68,-0.55,.27,1.55), background 0.3s';
+        setTimeout(() => {
+          box.style.transform = 'scale(1)';
+        }, 180 + i * 60);
+      });
+    };
+
+    const animateShake = (row) => {
+      row.style.animation = 'cubicle-shake 0.4s';
+      row.addEventListener('animationend', () => {
+        row.style.animation = '';
+      }, { once: true });
+    };
+
+    const animateWin = () => {
+      const gridRows = document.querySelectorAll('#grid > div');
+      gridRows[gridRows.length - 1].childNodes.forEach((box, i) => {
+        setTimeout(() => {
+          box.style.animation = 'cubicle-bounce 0.5s';
+        }, i * 120);
+        box.addEventListener('animationend', () => {
+          box.style.animation = '';
+        }, { once: true });
+      });
+    };
+
+    const animateLose = () => {
+      const gridRows = document.querySelectorAll('#grid > div');
+      gridRows[gridRows.length - 1].childNodes.forEach((box, i) => {
+        setTimeout(() => {
+          box.style.animation = 'cubicle-fade 0.7s';
+        }, i * 80);
+        box.addEventListener('animationend', () => {
+          box.style.animation = '';
+        }, { once: true });
+      });
+    };
+
+    // --- Enhance submitGuess for Animations ---
+    const origSubmitGuess = submitGuess;
+    window.submitGuess = function(event) {
+      if (event) event.preventDefault();
+      if (guessCount >= maxGuesses || gameOver) return;
+      const prevGuessCount = guessCount;
+      origSubmitGuess(event);
+      // Animate the last row
+      const gridRows = document.querySelectorAll('#grid > div');
+      if (gridRows.length > 0) {
+        animateRowReveal(gridRows[gridRows.length - 1]);
+        // If all red, shake
+        const lastFeedback = allFeedback[allFeedback.length - 1];
+        if (lastFeedback && lastFeedback.every(f => f === 'red')) {
+          setTimeout(() => animateShake(gridRows[gridRows.length - 1]), 350);
+        }
+      }
+      // Animate hints
+      const hintStack = document.getElementById('hint-stack');
+      if (hintStack && hintStack.lastChild) {
+        hintStack.lastChild.classList.add('cubicle-hint-animate');
+        setTimeout(() => hintStack.lastChild.classList.remove('cubicle-hint-animate'), 700);
+      }
+    };
+
+    // --- Confetti on Win ---
+    function launchConfetti() {
+      // Simple confetti using canvas-confetti CDN
+      if (!window.confettiScriptLoaded) {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js';
+        script.onload = () => { window.confettiScriptLoaded = true; launchConfetti(); };
+        document.head.appendChild(script);
+        return;
+      }
+      if (window.confetti) {
+        window.confetti({
+          particleCount: 120,
+          spread: 80,
+          origin: { y: 0.6 },
+          zIndex: 9999
+        });
+        setTimeout(() => {
+          window.confetti({
+            particleCount: 80,
+            spread: 120,
+            origin: { y: 0.4 },
+            zIndex: 9999
+          });
+        }, 350);
+      }
+    }
+
+    // --- Enhance showWinMessage and showLoseMessage ---
+    const origShowWinMessage = showWinMessage;
+    window.showWinMessage = function() {
+      animateWin();
+      launchConfetti(); // confetti on win
+      origShowWinMessage();
+    };
+    const origShowLoseMessage = showLoseMessage;
+    window.showLoseMessage = function() {
+      animateLose();
+      origShowLoseMessage();
+    };
+
+    // --- Add subtle background animation ---
+    const bgAnim = document.createElement('div');
+    bgAnim.style.position = 'fixed';
+    bgAnim.style.inset = 0;
+    bgAnim.style.zIndex = 0;
+    bgAnim.style.pointerEvents = 'none';
+    bgAnim.style.background = `
+      radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.03), transparent 60%),
+      radial-gradient(circle at 80% 70%, rgba(34, 197, 94, 0.03), transparent 60%)
+    `;
+    document.body.prepend(bgAnim);
+    document.head.appendChild(bgStyle);
+
+    // --- Date handling ---
+    function initDateSelector() {
+      const dateSelector = document.getElementById('dateSelector');
+      const today = new Date().toISOString().slice(0, 10);
+      dateSelector.value = today;
+      // Allow selecting dates from 2024-01-01 to today plus one year
+      dateSelector.min = '2024-01-01';
+      dateSelector.max = new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().slice(0, 10);
+    }
+
+    function changeDate(newDate) {
+      if (guessCount > 0) {
+        if (!confirm('Changing the date will start a new game. Continue?')) {
+          document.getElementById('dateSelector').value = seed;
+          return;
+        }
+      }
+      location.href = location.pathname + '?date=' + newDate;
+    }
+
+    // Initialize date selector and handle URL parameters
+    window.addEventListener('DOMContentLoaded', () => {
+      initDateSelector();
+      const urlParams = new URLSearchParams(window.location.search);
+      const dateParam = urlParams.get('date');
+      if (dateParam) {
+        const dateSelector = document.getElementById('dateSelector');
+        dateSelector.value = dateParam;
+      }
+    });
+  </script>
+
+  <script>
+    function formatCount(n) {
+      if (n < 1000) return n.toString();
+      if (n < 10000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+      if (n < 1_000_000) return Math.floor(n / 1000) + 'k';
+      return (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+    }
+
+    fetch('/api/')
+      .then(res => res.text())
+      .then(text => {
+        const count = parseInt(text, 10);
+        document.getElementById('viewer-count-text').textContent = formatCount(count);
+      })
+      .catch(() => {
+        document.getElementById('viewer-count-text').textContent = '–';
+      });
   </script>
 </body>
+
 </html>
