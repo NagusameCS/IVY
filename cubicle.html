@@ -7,6 +7,7 @@
   <title>Cubicle³</title>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <style>
     body {
       font-family: 'EB Garamond', serif;
@@ -17,7 +18,9 @@
       margin: 0;
     }
     input[type=number] {
+      -webkit-appearance: textfield;
       -moz-appearance: textfield;
+      appearance: textfield;
     }
     input[type="date"]::-webkit-calendar-picker-indicator {
       filter: invert(0.8) opacity(0.6);
@@ -60,18 +63,119 @@
       30%, 50%, 70% { transform: translateX(-8px); }
       40%, 60% { transform: translateX(8px); }
     }
-    @keyframes cubicle-bounce {
-      0% { transform: scale(1); }
-      30% { transform: scale(1.25); }
-      60% { transform: scale(0.95); }
-      100% { transform: scale(1); }
+
+    @keyframes victory-rise {
+      0% {
+        transform: translate(-50%, -45%);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
     }
-    @keyframes cubicle-fade {
-      0% { opacity: 1; }
-      100% { opacity: 0.4; }
+
+    @keyframes cubicle-column-collapse {
+      0% { 
+        transform: translateY(0) rotate(0deg); 
+        opacity: 1;
+      }
+      30% { 
+        transform: translateY(15vh) rotate(-2deg);
+        opacity: 0.6;
+      }
+      100% { 
+        transform: translateY(100vh) rotate(5deg);
+        opacity: 0;
+      }
     }
-    .cubicle-hint-animate {
-      animation: cubicle-bounce 0.7s;
+
+    @keyframes overlay-fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.8;
+      }
+    }
+
+    @keyframes defeat-fade {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .smoke-particle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(169, 169, 169, 0.2);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    @keyframes smoke-rise {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+      }
+      100% {
+        transform: translate(var(--wind-offset), -40px) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    .answer-reveal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(39, 39, 42, 0.95);
+      border: 2px solid;
+      padding: 1.5rem 2.5rem;
+      border-radius: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      z-index: 100;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .answer-reveal.success {
+      border-color: #22c55e;
+      color: #22c55e;
+      animation: victory-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .answer-reveal.failure {
+      border-color: #ef4444;
+      color: #ef4444;
+      animation: defeat-fade 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .game-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.75) 33%,
+        rgba(0, 0, 0, 1) 66.67%);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      opacity: 0;
+      transition: opacity 1.5s ease-in;
     }
   </style>
 </head>
@@ -88,7 +192,7 @@
     <a href="/" class="text-4xl font-bold tracking-wide hover:text-zinc-300 transition-colors">CUBICLE</a>
     <div class="text-zinc-400 mt-1 italic">A daily polynomial deduction game</div>
     <div class="text-zinc-300 mt-3 text-base max-w-xl mx-auto px-2">
-      Guess the four integer coefficients of today's cubic polynomial (Between -9 to 9). Each guess gives you feedback on each coefficient: green for correct, yellow for correct but in the wrong place, and gray for incorrect. After each guess, you'll get an additional mathematical hint. You have 5 tries. Good luck!
+      Guess the four integer coefficients of today's cubic polynomial (Between -9 to 9). Each guess gives you feedback on each coefficient: green for correct, yellow for correct but in the wrong place, and gray for incorrect. After each guess, you'll get an additional mathematical hint. You have 6 tries. Good luck!
     </div>
   </header>
 
@@ -153,7 +257,7 @@
   </footer>
 
   <script>
-    const maxGuesses = 5;
+    const maxGuesses = 6;
     const urlParams = new URLSearchParams(window.location.search);
     const seed = urlParams.get('date') || new Date().toISOString().slice(0, 10);
     const hashCode = s => s.split('').reduce((a, b) => b.charCodeAt(0) + ((a << 5) - a), 0);
@@ -189,6 +293,10 @@
       return coeffs;
     }
     const answer = generateInterestingAnswer();
+    // Create the polynomial function for display
+    window.__correctFunction = function(x) {
+      return `${answer[0]}x³ ${answer[1] >= 0 ? '+' : ''}${answer[1]}x² ${answer[2] >= 0 ? '+' : ''}${answer[2]}x ${answer[3] >= 0 ? '+' : ''}${answer[3]}`;
+    };
     // Align guess columns with results columns
     const grid = document.getElementById("grid");
     grid.className = "space-y-2 mb-6 flex flex-col items-center";
@@ -295,7 +403,7 @@
       row.className = "flex justify-center gap-2";
       guess.forEach((num, i) => {
         const box = document.createElement("div");
-        box.className = `w-12 h-12 flex items-center justify-center text-xl font-semibold rounded ${
+        box.className = `w-12 h-12 flex items-center justify-center text-xl font-semibold rounded cubicle-column ${
           feedback[i] === "green"
             ? "bg-green-600"
             : feedback[i] === "yellow"
@@ -349,15 +457,185 @@
       setTimeout(() => { popup.style.display = 'none'; }, 2500);
     }
 
-    function showWinMessage() {
-      animateWin();
-      launchConfetti(); // confetti on win
-      // showPopup('You solved the Cubicle!', '#22c55e'); // Tailwind green-500
+    async function showWinMessage() {
+      // Get the polynomial string
+      const correctAnswer = window.__correctFunction();
+
+      // Create overlay with fade effect
+      const overlay = document.createElement('div');
+      overlay.className = 'game-overlay';
+      overlay.style.opacity = '0';
+      document.body.appendChild(overlay);
+
+      requestAnimationFrame(() => {
+        overlay.style.transition = 'opacity 1.5s ease-in';
+        overlay.style.opacity = '0.8';
+      });
+
+      // Create triumphant victory effects
+      confetti({
+        particleCount: 150,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#22c55e', '#4ade80', '#86efac', '#ffffff'],
+        zIndex: 101
+      });
+
+      setTimeout(() => {
+        confetti({
+          particleCount: 100,
+          spread: 120,
+          origin: { y: 0.7 },
+          colors: ['#22c55e', '#4ade80', '#86efac', '#ffffff'],
+          zIndex: 101
+        });
+      }, 400);
+
+      // Show victory message with the answer
+      const answerReveal = document.createElement('div');
+      answerReveal.className = 'answer-reveal success';
+      answerReveal.innerHTML = `
+        <div style="color: #22c55e; font-size: 1.2em; margin-bottom: 1rem;">𝗩𝗜𝗖𝗧𝗢𝗥𝗬</div>
+        <div>Congratulations! You found:</div>
+        <pre><code>f(x) = ${correctAnswer}</code></pre>
+      `;
+      document.body.appendChild(answerReveal);
+
+      // Add additional victory confetti after a delay
+      setTimeout(() => {
+        confetti({
+          particleCount: 80,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: ['#22c55e', '#4ade80', '#86efac', '#ffffff'],
+          zIndex: 101
+        });
+        confetti({
+          particleCount: 80,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: ['#22c55e', '#4ade80', '#86efac', '#ffffff'],
+          zIndex: 101
+        });
+      }, 800);
+
+      // Add click handler to restart the game
+      const handleRestart = () => {
+        const currentDate = new Date(seed);
+        const previousDay = new Date(currentDate);
+        previousDay.setDate(previousDay.getDate() - 1);
+        const dateString = previousDay.toISOString().slice(0, 10);
+        window.location.href = location.pathname + '?date=' + dateString;
+      };
+
+      // Add click listeners to both overlay and answer reveal
+      overlay.addEventListener('click', handleRestart);
+      answerReveal.addEventListener('click', handleRestart);
+
+      // Add visual hover effect
+      overlay.style.cursor = 'pointer';
+      answerReveal.style.cursor = 'pointer';
+      
+      // Add hint text
+      const hintText = document.createElement('div');
+      hintText.style.position = 'fixed';
+      hintText.style.bottom = '2rem';
+      hintText.style.left = '50%';
+      hintText.style.transform = 'translateX(-50%)';
+      hintText.style.color = '#ffffff80';
+      hintText.style.fontSize = '0.9rem';
+      hintText.style.zIndex = '102';
+      hintText.textContent = 'Click anywhere to try yesterday\'s puzzle';
+      document.body.appendChild(hintText);
     }
 
-    function showLoseMessage() {
-      animateLose();
-      // showPopup(`Out of guesses! The answer was: [${answer.join(", ")}].`, '#ef4444'); // Tailwind red-500
+    async function showLoseMessage() {
+      const columns = document.querySelectorAll('.cubicle-column');
+      const correctAnswer = window.__correctFunction();
+      const grid = document.getElementById('grid');
+
+      // Add a quick shake effect before collapse
+      grid.style.animation = 'cubicle-shake 0.3s';
+      await new Promise(resolve => setTimeout(resolve, 300));
+
+      // Start column collapse animation without overlay
+      for (let i = 0; i < columns.length; i++) {
+        setTimeout(() => {
+          columns[i].style.animation = 'cubicle-column-collapse 0.6s forwards';
+          
+          // Create smoke particles for each column
+          for (let j = 0; j < 4; j++) {
+            const smoke = document.createElement('div');
+            smoke.className = 'smoke-particle';
+            smoke.style.left = `${columns[i].offsetLeft + (Math.random() * columns[i].offsetWidth)}px`;
+            smoke.style.top = `${columns[i].offsetTop + columns[i].offsetHeight}px`;
+            smoke.style.setProperty('--wind-offset', `${(Math.random() * 40) - 20}px`);
+            smoke.style.animation = `smoke-rise ${0.4 + Math.random() * 0.2}s forwards`;
+            smoke.style.zIndex = '101';
+            document.body.appendChild(smoke);
+            
+            // Remove smoke particles after animation
+            smoke.addEventListener('animationend', () => smoke.remove());
+          }
+        }, i * 50);
+      }
+
+      // Wait for animations to complete
+      await new Promise(resolve => setTimeout(resolve, columns.length * 50 + 600));
+
+      // Create overlay after columns have collapsed
+      const overlay = document.createElement('div');
+      overlay.className = 'game-overlay';
+      overlay.style.opacity = '0';
+      document.body.appendChild(overlay);
+
+      // Add overlay fade-in effect
+      requestAnimationFrame(() => {
+        overlay.style.transition = 'opacity 1.5s ease-in';
+        overlay.style.opacity = '0.8';
+      });
+
+      // Show defeat message with the answer after a small delay
+      await new Promise(resolve => setTimeout(resolve, 200));
+      const answerReveal = document.createElement('div');
+      answerReveal.className = 'answer-reveal failure';
+      answerReveal.innerHTML = `
+        <div style="color: #ef4444; font-size: 1.2em; margin-bottom: 1rem;">𝗗𝗘𝗙𝗘𝗔𝗧</div>
+        <div>The correct answer was:</div>
+        <pre><code>f(x) = ${correctAnswer}</code></pre>
+      `;
+      document.body.appendChild(answerReveal);
+
+      // Add click handler to restart the game
+      const handleRestart = () => {
+        const currentDate = new Date(seed);
+        const previousDay = new Date(currentDate);
+        previousDay.setDate(previousDay.getDate() - 1);
+        const dateString = previousDay.toISOString().slice(0, 10);
+        window.location.href = location.pathname + '?date=' + dateString;
+      };
+
+      // Add click listeners to both overlay and answer reveal
+      overlay.addEventListener('click', handleRestart);
+      answerReveal.addEventListener('click', handleRestart);
+
+      // Add visual hover effect
+      overlay.style.cursor = 'pointer';
+      answerReveal.style.cursor = 'pointer';
+      
+      // Add hint text
+      const hintText = document.createElement('div');
+      hintText.style.position = 'fixed';
+      hintText.style.bottom = '2rem';
+      hintText.style.left = '50%';
+      hintText.style.transform = 'translateX(-50%)';
+      hintText.style.color = '#ffffff80';
+      hintText.style.fontSize = '0.9rem';
+      hintText.style.zIndex = '102';
+      hintText.textContent = 'Click anywhere to try yesterday\'s puzzle';
+      document.body.appendChild(hintText);
     }
 
     function clearInputs() {
