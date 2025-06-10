@@ -1,18 +1,32 @@
-# Exponents and Logarithms
+hi!### woah
 
-## Topic: M1.2
+~~ffff
+~~fffff
 
-### Time Estimate: 25 minutes
+$f$​
 
-#### Categories:
-- Math AA
-- Math AI
+```f
+Enter code here...
+```
 
-#### Tags:
-- exponents
-- logarithms
-- algebra
+```f
+<html>
+```
 
-#### Level: HL
 
-Content for Exponents and Logarithms.
+---
+
+<details>
+<summary>Markscheme</summary>
+Enter markscheme details here...
+$f$​
+```f
+Enter code here...f
+```
+| Header | Header | 
+| --- | --- | 
+|  |  | 
+|  |  | 
+|  |  | 
+|  | fff |
+</details>
