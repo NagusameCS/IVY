@@ -69,6 +69,11 @@ $$
 f(x) = \sin(3x^2 + 2x)
 $$
 
+| Left-aligned | Center-aligned | Right-aligned |
+|:-------------|:-------------:|-------------:|
+| Left         | Center        | Right        |
+| Left         | Center        | Right        |
+
 ---
 # Markscheme use showcase
 ---
@@ -101,6 +106,11 @@ $$f'(x) = \cos(3x^2 + 2x) \cdot (6x + 2)$$
 
 **Final Answer:**  
 $$f'(x) = (6x + 2)\cos(3x^2 + 2x)$$
+
+| Left-aligned | Center-aligned | Right-aligned |
+|:-------------|:-------------:|-------------:|
+| Left         | Center        | Right        |
+| Left         | Center        | Right        |
 
 </details>
 
