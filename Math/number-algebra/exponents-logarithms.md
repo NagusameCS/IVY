@@ -1,3 +1,5 @@
+#hi
+
 | Header | Header | Header | 
 | --- | --- | --- | 
 |  | asds |  | 
@@ -6,7 +8,8 @@
 
 Start writing your document here...
 
-hi!### woah
+hi!
+### woah
 
 ~~ffff
 ~~fffff
