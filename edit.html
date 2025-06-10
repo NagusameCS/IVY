@@ -1,194 +1,1071 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivy Editors View</title>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor View</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- jQuery UI for drag/resize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- MathQuill CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js"></script>
     <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background-color: white;
-            color: black;
-            font-family: 'Alexandria', sans-serif;
-            text-align: center;
-        }
-
-        /* INTRO SCREEN */
-        #intro {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: white;
-        }
-
-        #logo-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #logo {
-            width: 500px;
-            opacity: 1;
-        }
-
-        .light-swipe {
-            position: absolute;
-            top: 0;
-            left: -150%;
-            width: 150%;
-            height: 100%;
-            background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.9) 50%, transparent 100%);
-        }
-
-        /* MAIN CONTENT */
-        #main-content {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 1;
-            transition: opacity 0.7s ease-in-out;
-        }
-
-        #title {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-
-        #subtitle {
-            font-size: 1rem;
-            margin-top: 10px;
-        }
-
-        /* Button Styling */
-        #proceed-btn {
-            margin-top: 20px;
-            padding: 12px 24px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            border: none;
-            background: black;
-            color: white;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        #proceed-btn::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.4) 10%, transparent 50%);
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        #proceed-btn:hover::before {
-            opacity: 1;
-        }
-
-        #proceed-btn:hover {
-            background: grey;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-            transform: scale(1.05);
-        }
-
-        #proceed-btn:active {
-            transform: scale(0.95);
-        }
-
-        /* ANIMATIONS */
-        @keyframes zoomFadeOut {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(3.5); opacity: 0; }
-        }
-
-        @keyframes zoomOutContent {
-            0% { transform: scale(1.3); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        @keyframes swipeLight {
-            0% { left: -150%; }
-            100% { left: 150%; }
-        }
-
-        @keyframes reverseZoomFadeOut {
-            0% { transform: scale(3.5); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        @keyframes reverseContentFade {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-
+      /* Global Styles */
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #89f7fe, #66a6ff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      #container {
+        width: 90%;
+        max-width: 1000px;
+        animation: fadeIn 0.5s ease-in-out;
+        position: relative;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      /* Custom Selection Styles */
+      ::selection, ::-moz-selection { background-color: rgba(173, 216, 230, 0.4); }
+      /* Editor Container */
+      #editor-container {
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: box-shadow 0.3s;
+      }
+      #editor-container:hover { box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); }
+      /* Toolbar */
+      #toolbar {
+        background: #f8f8f8;
+        padding: 10px;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      #toolbar button,
+      #toolbar select {
+        background: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 10px;
+        margin: 4px;
+        border-radius: 8px;
+        transition: background-color 0.3s, border-color 0.3s;
+      }
+      #toolbar button:hover,
+      #toolbar select:hover {
+        background-color: #e0e0e0;
+        border-color: #ccc;
+      }
+      #toolbar button.active { background-color: #d0d0d0; }
+      /* Combined Image Dropdown Styles */
+      #imageDropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        white-space: nowrap;
+      }
+      #imageDropdown div {
+        display: inline-block;
+        padding: 4px 8px;
+        cursor: pointer;
+      }
+      #imageDropdown div:hover {
+        background-color: #e0e0e0;
+      }
+      /* Editor Area */
+      #editor {
+        padding: 20px;
+        min-height: 300px;
+        outline: none;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      /* Blockquote */
+      blockquote {
+        border-left: 4px solid #ccc;
+        padding-left: 12px;
+        margin: 8px 0;
+      }
+      /* Code Block Styling */
+      pre {
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 4px;
+        font-family: monospace;
+        overflow: auto;
+      }
+      code {
+        font-family: monospace;
+        white-space: pre-wrap; /* newlines and <br> elements will be rendered */
+      }
+      /* Markscheme Styling */
+      details.markscheme {
+        border: 1px dashed #aaa;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      details.markscheme summary {
+        background-color: #f0f0f0;
+        padding: 5px;
+        cursor: pointer;
+        border-bottom: 1px solid #aaa;
+      }
+      details.markscheme summary.markscheme-title,
+      details.markscheme p.markscheme-body {
+        outline: none;
+      }
+      /* Table Styling */
+      table {
+        border-collapse: collapse;
+        margin: 10px 0;
+      }
+      table, th, td { border: 1px solid #ccc; }
+      th, td { 
+        padding: 6px; 
+        min-width: 50px;
+        min-height: 40px; /* increased for comfort even when empty */
+        vertical-align: middle;
+      }
+      th { 
+        background-color: #f0f0f0;
+        font-weight: bold;
+      }
+      /* Image Container */
+      .img-container img { width: 100%; height: auto; }
+      .img-container {
+        display: inline-block;
+        position: relative;
+        border: 1px solid #ccc;
+        margin: 0 2px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      /* Export Container */
+      #export-container {
+        margin-top: 20px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      #export-header {
+        background: #f8f8f8;
+        padding: 10px;
+        border-bottom: 1px solid #e0e0e0;
+        cursor: pointer;
+        text-align: center;
+        font-weight: 500;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        transition: background 0.3s;
+      }
+      #export-header:hover { background: #e0e0e0; }
+      #exportArea {
+        padding: 20px;
+        white-space: pre-wrap;
+        font-family: monospace;
+        background: #fafafa;
+        font-size: 14px;
+        max-height: 300px;
+        overflow: auto;
+        opacity: 1;
+        transition: max-height 0.3s, opacity 0.3s;
+      }
+      #export-container.collapsed #exportArea {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+      }
+      /* Table Picker Overlay */
+      #tablePicker {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      }
+      /* Table Context Menu */
+      #tableContextMenu {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 5px;
+      }
+      #tableContextMenu .menu-item {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      #tableContextMenu .menu-item:hover { background-color: #eee; }
+      /* Math Container */
+      .math-container {
+         display: inline-block;
+         margin: 0 2px;
+         position: relative;
+      }
+      .math-container::before, 
+      .math-container::after {
+         content: "";
+         display: inline-block;
+         width: 2px;
+         height: 1.2em;
+         background-color: rgba(0,0,0,0.1);
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+      }
+      .math-container::before { left: -4px; }
+      .math-container::after { right: -4px; }
     </style>
-</head>
-<body>
-    <div id="intro">
-        <div id="logo-container">
-            <img src="https://i.imgur.com/wAi2MSD.png" alt="Logo" id="logo">
-            <div class="light-swipe"></div>
+  </head>
+  <body>
+    <div id="container">
+      <!-- Main Editor Box -->
+      <div id="editor-container">
+        <div id="toolbar">
+          <!-- Formatting Buttons -->
+          <button data-cmd="bold" onclick="execCmd('bold'); updateToolbar()">
+            <i class="fa-solid fa-bold"></i>
+          </button>
+          <button data-cmd="italic" onclick="execCmd('italic'); updateToolbar()">
+            <i class="fa-solid fa-italic"></i>
+          </button>
+          <button data-cmd="underline" onclick="execCmd('underline'); updateToolbar()">
+            <i class="fa-solid fa-underline"></i>
+          </button>
+          <button data-cmd="strikeThrough" onclick="execCmd('strikeThrough'); updateToolbar()">
+            <i class="fa-solid fa-strikethrough"></i>
+          </button>
+          <!-- Header dropdown -->
+          <select id="headerSelect" onchange="applyHeader(this.value)">
+            <option value="P">Paragraph</option>
+            <option value="H1">Title (#)</option>
+            <option value="H2">Header 1 (##)</option>
+            <option value="H3">Header 2 (###)</option>
+          </select>
+          <button onclick="execCmd('insertUnorderedList')">
+            <i class="fa-solid fa-list-ul"></i>
+          </button>
+          <button onclick="execCmd('insertOrderedList')">
+            <i class="fa-solid fa-list-ol"></i>
+          </button>
+          <!-- Combined Image Button with Dropdown -->
+          <button id="imageDropdownBtn" onclick="toggleImageDropdown(event)">
+            <i class="fa-solid fa-image"></i>
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <!-- Dropdown for image options -->
+          <div id="imageDropdown">
+            <div onclick="insertImage(); closeImageDropdown();">
+              Insert via URL
+            </div>
+            <div onclick="insertUploadedFileImage(); closeImageDropdown();">
+              Upload Image
+            </div>
+          </div>
+          <button onclick="insertMath()">
+            <i class="fa-solid fa-square-root-variable"></i>
+          </button>
+          <button onclick="insertQuote()">
+            <i class="fa-solid fa-quote-left"></i>
+          </button>
+          <button onclick="insertMarkscheme()">
+            M
+          </button>
+          <button onclick="insertDivider()">
+            <i class="fa-solid fa-grip-lines"></i>
+          </button>
+          <button onclick="insertLink()">
+            <i class="fa-solid fa-link"></i>
+          </button>
+          <button onclick="insertCodeBlock()">
+            <i class="fa-solid fa-code"></i>
+          </button>
+          <button onclick="showTablePicker(event)">
+            <i class="fa-solid fa-table"></i>
+          </button>
+          <!-- Download Markdown -->
+          <button onclick="downloadMarkdown()">
+            <i class="fa-solid fa-file-export"></i>
+          </button>
         </div>
+        <!-- Hidden File Input for Uploads -->
+        <input
+          type="file"
+          id="imageUploader"
+          accept="image/*"
+          style="display:none;"
+          onchange="handleImageUpload(event)"
+        />
+        <div id="editor" contenteditable="true">
+          <p>Start writing your document here...</p>
+        </div>
+      </div>
+      <!-- Export Panel -->
+      <div id="export-container">
+        <div id="export-header">
+          <i class="fa-solid fa-chevron-up"></i> Collapse Output
+        </div>
+        <div id="exportArea"></div>
+      </div>
+      <!-- Table Picker Overlay -->
+      <div id="tablePicker"></div>
+      <!-- Advanced Table Context Menu -->
+      <div id="tableContextMenu">
+        <div class="menu-item" onclick="insertRowAbove()">Insert Row Above</div>
+        <div class="menu-item" onclick="insertRowBelow()">Insert Row Below</div>
+        <div class="menu-item" onclick="insertColumnLeft()">Insert Column Left</div>
+        <div class="menu-item" onclick="insertColumnRight()">Insert Column Right</div>
+        <div class="menu-item" onclick="deleteRowFromTable()">Delete Row</div>
+        <div class="menu-item" onclick="deleteColFromTable()">Delete Column</div>
+      </div>
     </div>
-
-    <div id="main-content">
-        <h1 id="title">Ivy Editors View</h1>
-        <p id="subtitle">Only authorized editors may proceed.</p>
-        <button id="proceed-btn">Proceed</button>
-    </div>
-
     <script>
-        setTimeout(() => {
-            document.querySelector(".light-swipe").style.animation = "swipeLight 1.4s ease-in-out forwards";
+      /* Global Variables */
+      var currentTable = null;
+      var currentTableCell = null;
+      const editor = document.getElementById("editor");
 
-            setTimeout(() => {
-                document.getElementById("logo").style.animation = "zoomFadeOut 0.7s ease-in-out forwards";
+      /* Auto-export on input/keyup */
+      editor.addEventListener("input", exportMarkdown);
+      editor.addEventListener("keyup", exportMarkdown);
 
-                setTimeout(() => {
-                    document.getElementById("main-content").style.display = "flex";
-                    document.getElementById("main-content").style.animation = "zoomOutContent 0.7s cubic-bezier(0.6, 0.05, 0.1, 1) forwards";
+      /* Toggle Export Panel and update icon */
+      const exportHeader = document.getElementById("export-header");
+      const exportContainer = document.getElementById("export-container");
+      exportHeader.addEventListener("click", () => {
+        exportContainer.classList.toggle("collapsed");
+        updateCollapseIcon();
+      });
+      function updateCollapseIcon() {
+        if (exportContainer.classList.contains("collapsed")) {
+          exportHeader.innerHTML =
+            '<i class="fa-solid fa-chevron-down"></i> Expand Output';
+        } else {
+          exportHeader.innerHTML =
+            '<i class="fa-solid fa-chevron-up"></i> Collapse Output';
+        }
+      }
 
-                    setTimeout(() => {
-                        document.getElementById("intro").style.display = "none";
-                    }, 700);
-                }, 100);
-            }, 500);
-        }, 500);
-
-        document.getElementById("proceed-btn").addEventListener("click", function() {
-            document.getElementById("main-content").style.animation = "reverseContentFade 0.7s ease-in-out forwards";
-            document.getElementById("logo").style.animation = "reverseZoomFadeOut 0.7s ease-in-out forwards";
-
-            setTimeout(() => {
-                document.getElementById("main-content").style.display = "none";
-                document.getElementById("intro").style.display = "flex";
-
-                setTimeout(() => {
-                    document.querySelector(".light-swipe").style.animation = "swipeLight 0.7s ease-in-out forwards";
-
-                    setTimeout(() => {
-                        document.body.innerHTML = '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" title="Rick Astley - Never Gonna Give You Up (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;"></iframe>';
-                    }, 500);
-                }, 500);
-            }, 700);
+      /* Update Toolbar state */
+      function updateToolbar() {
+        const cmds = ["bold", "italic", "underline", "strikeThrough"];
+        cmds.forEach(cmd => {
+          const btn = document.querySelector(`button[data-cmd="${cmd}"]`);
+          if (document.queryCommandState(cmd)) btn.classList.add("active");
+          else btn.classList.remove("active");
         });
+      }
+      document.addEventListener("selectionchange", updateToolbar);
+
+      /* Initialize MathQuill */
+      var MQ = MathQuill.getInterface(2);
+      window.mathFieldCount = 0;
+      window.mathFieldInstances = {};
+
+      /* execCmd helper */
+      function execCmd(command, value = null) {
+        document.execCommand(command, false, value);
+      }
+
+      /* Apply header formatting from dropdown */
+      function applyHeader(tag) {
+        if (tag === "P") execCmd("formatBlock", "P");
+        else execCmd("formatBlock", tag);
+      }
+
+      /* --- Combined Image Dropdown Functions --- */
+      function toggleImageDropdown(event) {
+        event.stopPropagation();
+        let dropdown = document.getElementById("imageDropdown");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+      }
+      function closeImageDropdown() {
+        document.getElementById("imageDropdown").style.display = "none";
+      }
+      document.addEventListener("click", function(e) {
+        closeImageDropdown();
+      });
+
+      /* Insert an image via URL */
+      function insertImage() {
+        let imageUrl = prompt("Enter image URL:");
+        if (imageUrl) {
+          let img = document.createElement("img");
+          img.src = imageUrl;
+          let container = document.createElement("div");
+          container.className = "img-container";
+          container.appendChild(img);
+          insertNodeAtCursor(container);
+          $(container)
+            .draggable({ containment: "#editor", scroll: false, stop: exportMarkdown })
+            .resizable({
+              aspectRatio: true,
+              handles: "n, e, s, w, ne, se, sw, nw",
+              stop: exportMarkdown
+            });
+          exportMarkdown();
+        }
+      }
+
+      /* Insert an uploaded image file */
+      function insertUploadedFileImage() {
+        document.getElementById("imageUploader").click();
+      }
+      function handleImageUpload(event) {
+        let file = event.target.files[0];
+        if (file) {
+          let reader = new FileReader();
+          reader.onload = function(e) {
+            let img = document.createElement("img");
+            img.src = e.target.result;
+            let container = document.createElement("div");
+            container.className = "img-container";
+            container.appendChild(img);
+            insertNodeAtCursor(container);
+            $(container)
+              .draggable({ containment: "#editor", scroll: false, stop: exportMarkdown })
+              .resizable({
+                aspectRatio: true,
+                handles: "n, e, s, w, ne, se, sw, nw",
+                stop: exportMarkdown
+              });
+            exportMarkdown();
+          }
+          reader.readAsDataURL(file);
+        }
+        event.target.value = "";
+      }
+
+      /* --- Insert a code block with proper newline support --- */
+      function insertCodeBlock() {
+        let language = prompt("Enter the language (optional):", "");
+        let pre = document.createElement("pre");
+        let code = document.createElement("code");
+        code.setAttribute("contenteditable", "true");
+        code.setAttribute("data-language", language);
+        code.textContent = "Enter code here...";
+        pre.appendChild(code);
+        insertNodeAtCursor(pre);
+        exportMarkdown();
+        // Override the default Enter behavior within the code block.
+        code.addEventListener("keydown", function(e) {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            let sel = window.getSelection();
+            if(sel.rangeCount > 0){
+              let range = sel.getRangeAt(0);
+              range.deleteContents();
+              let newline = document.createTextNode("\n");
+              range.insertNode(newline);
+              // Move the caret after the newline.
+              range.setStartAfter(newline);
+              range.collapse(true);
+              sel.removeAllRanges();
+              sel.addRange(range);
+            }
+          }
+        });
+      }
+
+      /* --- Insert a math (equation) block --- */
+      function insertMath() {
+        window.mathFieldCount++;
+        let mathId = "math-field-" + window.mathFieldCount;
+        let mathContainer = document.createElement("span");
+        mathContainer.className = "math-container";
+        mathContainer.contentEditable = "true";
+        mathContainer.setAttribute("data-math-id", mathId);
+        let mathSpan = document.createElement("span");
+        mathSpan.id = mathId;
+        mathSpan.contentEditable = "true";
+        mathContainer.appendChild(mathSpan);
+        insertNodeAtCursor(mathContainer);
+        insertNodeAtCursor(document.createTextNode('\u200b'));
+        let mathField = MQ.MathField(mathSpan, { spaceBehavesLikeTab: true });
+        window.mathFieldInstances[mathId] = mathField;
+        mathField.focus();
+        mathContainer.addEventListener("click", function (e) {
+          if (mathContainer.contentEditable === "false") {
+            mathContainer.contentEditable = "true";
+            const id = mathContainer.getAttribute("data-math-id");
+            const mf = window.mathFieldInstances[id];
+            if (mf) mf.focus();
+            e.preventDefault();
+          }
+        });
+        mathContainer.addEventListener("mousedown", function(e) {
+            let rect = mathContainer.getBoundingClientRect();
+            let threshold = Math.min(20, rect.width / 3);
+            if (e.clientX < rect.left + threshold) {
+                e.preventDefault();
+                let sel = window.getSelection();
+                let range = document.createRange();
+                range.setStartBefore(mathContainer);
+                range.collapse(true);
+                sel.removeAllRanges();
+                sel.addRange(range);
+            } else if (e.clientX > rect.right - threshold) {
+                e.preventDefault();
+                let sel = window.getSelection();
+                let range = document.createRange();
+                range.setStartAfter(mathContainer);
+                range.collapse(true);
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }
+        });
+      }
+
+      /* Insert a blockquote */
+      function insertQuote() {
+        let blockquote = document.createElement("blockquote");
+        blockquote.textContent = "Enter quoted text...";
+        insertNodeAtCursor(blockquote);
+        exportMarkdown();
+      }
+
+      /* Insert a collapsible markscheme */
+      function insertMarkscheme() {
+        let details = document.createElement("details");
+        details.className = "markscheme";
+        details.setAttribute("open", "open");
+        let summary = document.createElement("summary");
+        summary.className = "markscheme-title";
+        summary.setAttribute("contenteditable", "true");
+        summary.textContent = "Markscheme";
+        details.appendChild(summary);
+        let p = document.createElement("p");
+        p.className = "markscheme-body";
+        p.setAttribute("contenteditable", "true");
+        p.textContent = "Enter markscheme details here...";
+        details.appendChild(p);
+        insertNodeAtCursor(details);
+        exportMarkdown();
+        details.addEventListener("mousedown", function(e) {
+          let rect = details.getBoundingClientRect();
+          if (e.clientY > rect.bottom - 5) {
+            e.preventDefault();
+            let sel = window.getSelection();
+            let range = document.createRange();
+            range.setStartAfter(details);
+            range.collapse(true);
+            sel.removeAllRanges();
+            sel.addRange(range);
+          }
+        });
+      }
+
+      /* Insert a divider */
+      function insertDivider() {
+        let hr = document.createElement("hr");
+        insertNodeAtCursor(hr);
+        exportMarkdown();
+      }
+
+      /* Insert a link (markdown style) */
+      function insertLink() {
+        let url = prompt("Enter the URL:");
+        let text = prompt("Enter the display text:");
+        if (url && text) {
+          let a = document.createElement("a");
+          a.href = url;
+          a.textContent = text;
+          insertNodeAtCursor(a);
+          exportMarkdown();
+        }
+      }
+
+      /* --- TABLE PICKER OVERLAY --- */
+      function showTablePicker(event) {
+        event.preventDefault();
+        let picker = document.getElementById("tablePicker");
+        const maxRows = 6, maxCols = 6;
+        picker.innerHTML = "";
+        let grid = document.createElement("div");
+        grid.style.display = "grid";
+        grid.style.gridTemplateRows = `repeat(${maxRows}, 20px)`;
+        grid.style.gridTemplateColumns = `repeat(${maxCols}, 20px)`;
+        grid.style.gap = "2px";
+        for (let r = 1; r <= maxRows; r++) {
+          for (let c = 1; c <= maxCols; c++) {
+            let cell = document.createElement("div");
+            cell.style.width = "20px";
+            cell.style.height = "20px";
+            cell.style.border = "1px solid #ddd";
+            cell.dataset.row = r;
+            cell.dataset.col = c;
+            cell.addEventListener("mouseover", function () {
+              highlightTablePicker(r, c);
+            });
+            cell.addEventListener("click", function (e) {
+              e.stopPropagation();
+              hideTablePicker();
+              insertTableByDimensions(r, c);
+            });
+            grid.appendChild(cell);
+          }
+        }
+        picker.appendChild(grid);
+        let info = document.createElement("div");
+        info.id = "tablePickerInfo";
+        info.style.marginTop = "5px";
+        info.textContent = "0 x 0";
+        picker.appendChild(info);
+        let pickerWidth = maxCols * 20 + (maxCols - 1) * 2;
+        picker.style.left = (event.clientX - pickerWidth) + "px";
+        picker.style.top = event.clientY + "px";
+        picker.style.display = "block";
+      }
+      function highlightTablePicker(rows, cols) {
+        let picker = document.getElementById("tablePicker");
+        let cells = picker.querySelectorAll("div[style*='width: 20px']");
+        cells.forEach(cell => {
+          let r = parseInt(cell.dataset.row);
+          let c = parseInt(cell.dataset.col);
+          cell.style.backgroundColor = (r <= rows && c <= cols) ? "#b3d4fc" : "";
+        });
+        let info = document.getElementById("tablePickerInfo");
+        info.textContent = rows + " x " + cols;
+      }
+      function hideTablePicker() {
+        document.getElementById("tablePicker").style.display = "none";
+      }
+      
+      /* --- Inserting a Table With Headers --- */
+      function insertTableByDimensions(rows, cols) {
+        editor.focus();
+        let table = document.createElement("table");
+        let thead = document.createElement("thead");
+        let headerRow = document.createElement("tr");
+        for (let c = 0; c < cols; c++) {
+          let th = document.createElement("th");
+          th.textContent = "Header";
+          th.setAttribute("contenteditable", "true");
+          headerRow.appendChild(th);
+        }
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+        let tbody = document.createElement("tbody");
+        for (let r = 1; r < rows; r++) {
+          let tr = document.createElement("tr");
+          for (let c = 0; c < cols; c++) {
+            let td = document.createElement("td");
+            td.textContent = " ";
+            td.setAttribute("contenteditable", "true");
+            tr.appendChild(td);
+          }
+          tbody.appendChild(tr);
+        }
+        table.appendChild(tbody);
+        insertNodeAtCursor(table);
+        exportMarkdown();
+      }
+
+      /* --- Advanced Table Context Menu --- */
+      editor.addEventListener("contextmenu", function (e) {
+        let target = e.target;
+        let cell = getClosestByTagName(target, "TD") || getClosestByTagName(target, "TH");
+        let table = getClosestByTagName(target, "TABLE");
+        if (cell && table) {
+          e.preventDefault();
+          currentTable = table;
+          currentTableCell = cell;
+          let menu = document.getElementById("tableContextMenu");
+          menu.style.top = e.clientY + "px";
+          menu.style.left = e.clientX + "px";
+          menu.style.display = "block";
+        } else {
+          document.getElementById("tableContextMenu").style.display = "none";
+        }
+      });
+      document.addEventListener("click", function () {
+        document.getElementById("tableContextMenu").style.display = "none";
+      });
+
+      function insertRowAbove() {
+        if (!currentTable || !currentTableCell) return;
+        let row = currentTableCell.parentElement;
+        if (row.rowIndex === 0) {
+          alert("Cannot insert row above the header row.");
+          return;
+        }
+        let newRow = document.createElement("tr");
+        let numCells = row.children.length;
+        for (let i = 0; i < numCells; i++) {
+          let cell = document.createElement("td");
+          cell.textContent = " ";
+          cell.setAttribute("contenteditable", "true");
+          newRow.appendChild(cell);
+        }
+        row.parentNode.insertBefore(newRow, row);
+        exportMarkdown();
+      }
+
+      function insertRowBelow() {
+        if (!currentTable || !currentTableCell) return;
+        let row = currentTableCell.parentElement;
+        let newRow = document.createElement("tr");
+        let numCells = row.children.length;
+        for (let i = 0; i < numCells; i++) {
+          let cell = document.createElement("td");
+          cell.textContent = " ";
+          cell.setAttribute("contenteditable", "true");
+          newRow.appendChild(cell);
+        }
+        row.parentNode.insertBefore(newRow, row.nextSibling);
+        exportMarkdown();
+      }
+
+      function insertColumnLeft() {
+        if (!currentTable || !currentTableCell) return;
+        let colIndex = currentTableCell.cellIndex;
+        currentTable.querySelectorAll("tr").forEach(function (row) {
+          let newCell;
+          if (row.rowIndex === 0) {
+            newCell = document.createElement("th");
+            newCell.textContent = "Header";
+          } else {
+            newCell = document.createElement("td");
+            newCell.textContent = " ";
+          }
+          newCell.setAttribute("contenteditable", "true");
+          row.insertBefore(newCell, row.cells[colIndex]);
+        });
+        exportMarkdown();
+      }
+
+      function insertColumnRight() {
+        if (!currentTable || !currentTableCell) return;
+        let colIndex = currentTableCell.cellIndex;
+        currentTable.querySelectorAll("tr").forEach(function (row) {
+          let newCell;
+          if (row.rowIndex === 0) {
+            newCell = document.createElement("th");
+            newCell.textContent = "Header";
+          } else {
+            newCell = document.createElement("td");
+            newCell.textContent = " ";
+          }
+          newCell.setAttribute("contenteditable", "true");
+          if (row.cells.length > colIndex + 1)
+            row.insertBefore(newCell, row.cells[colIndex + 1]);
+          else
+            row.appendChild(newCell);
+        });
+        exportMarkdown();
+      }
+
+      function deleteRowFromTable() {
+        if (!currentTable || !currentTableCell) return;
+        let row = currentTableCell.parentElement;
+        if (row.rowIndex === 0) {
+          alert("Cannot delete the header row.");
+          return;
+        }
+        row.parentNode.removeChild(row);
+        exportMarkdown();
+      }
+
+      function deleteColFromTable() {
+        if (!currentTable || !currentTableCell) return;
+        let colIndex = currentTableCell.cellIndex;
+        currentTable.querySelectorAll("tr").forEach((row) => {
+          if (row.cells.length > 1) {
+            row.removeChild(row.cells[colIndex]);
+          }
+        });
+        exportMarkdown();
+      }
+
+      /* Insert a node at the caret position */
+      function insertNodeAtCursor(node) {
+        let sel, range;
+        if (window.getSelection) {
+          sel = window.getSelection();
+          if (sel.getRangeAt && sel.rangeCount) {
+            range = sel.getRangeAt(0);
+            range.deleteContents();
+            range.insertNode(node);
+            range.setStartAfter(node);
+            range.collapse(true);
+            sel.removeAllRanges();
+            sel.addRange(range);
+          }
+        } else if (document.selection && document.selection.createRange) {
+          range = document.selection.createRange();
+          range.pasteHTML(node.outerHTML);
+        }
+      }
+
+      /* Helper: Get closest parent by tag name */
+      function getClosestByTagName(node, tagName) {
+        tagName = tagName.toUpperCase();
+        while (node) {
+          if (node.nodeType === 1 && node.tagName === tagName) return node;
+          node = node.parentNode;
+        }
+        return null;
+      }
+
+      /* Helper: Unwrap an element */
+      function unwrapElement(element) {
+        let parent = element.parentNode;
+        while (element.firstChild) { parent.insertBefore(element.firstChild, element); }
+        parent.removeChild(element);
+      }
+
+      /* Global keydown handler for deletion and unwrapping empty blocks */
+      editor.addEventListener("keydown", function (e) {
+        let sel = window.getSelection();
+        if (!sel.rangeCount) return;
+        let range = sel.getRangeAt(0);
+        let container = sel.anchorNode;
+        if (e.key === "Backspace") {
+          if (container.nodeType === Node.TEXT_NODE && range.startOffset === 0) {
+            let prev = container.previousSibling || container.parentNode.previousSibling;
+            if (
+              prev && prev.nodeType === Node.ELEMENT_NODE &&
+              (prev.classList.contains("math-container") || prev.classList.contains("img-container"))
+            ) {
+              prev.remove();
+              e.preventDefault();
+              return;
+            }
+          }
+          if (container.nodeType === Node.ELEMENT_NODE && range.startOffset > 0) {
+            let nodeAtLeft = container.childNodes[range.startOffset - 1];
+            if (
+              nodeAtLeft && nodeAtLeft.nodeType === Node.ELEMENT_NODE &&
+              (nodeAtLeft.classList.contains("math-container") || nodeAtLeft.classList.contains("img-container"))
+            ) {
+              nodeAtLeft.remove();
+              e.preventDefault();
+              return;
+            }
+          }
+          let bq = getClosestByTagName(container, "BLOCKQUOTE");
+          if (bq && bq.textContent.trim() === "") {
+            unwrapElement(bq);
+            e.preventDefault();
+            return;
+          }
+          let pre = getClosestByTagName(container, "PRE");
+          if (pre && pre.textContent.trim() === "") {
+            unwrapElement(pre);
+            e.preventDefault();
+            return;
+          }
+        }
+        if (e.key === "Delete") {
+          if (container.nodeType === Node.TEXT_NODE && range.startOffset === container.nodeValue.length) {
+            let next = container.nextSibling || container.parentNode.nextSibling;
+            if (
+              next && next.nodeType === Node.ELEMENT_NODE &&
+              (next.classList.contains("math-container") || next.classList.contains("img-container"))
+            ) {
+              next.remove();
+              e.preventDefault();
+              return;
+            }
+          }
+          if (container.nodeType === Node.ELEMENT_NODE && range.startOffset < container.childNodes.length) {
+            let nodeAtRight = container.childNodes[range.startOffset];
+            if (
+              nodeAtRight && nodeAtRight.nodeType === Node.ELEMENT_NODE &&
+              (nodeAtRight.classList.contains("math-container") || nodeAtRight.classList.contains("img-container"))
+            ) {
+              nodeAtRight.remove();
+              e.preventDefault();
+              return;
+            }
+          }
+        }
+      });
+
+      /* --- Markdown Conversion --- */
+      Node.prototype.childNodesToMarkdown = function () {
+        let md = "";
+        Array.from(this.childNodes).forEach(child => { md += convertNodeToMarkdown(child); });
+        return md;
+      };
+      function convertNodeToMarkdown(node) {
+        if (node.nodeType === Node.TEXT_NODE) return node.textContent;
+        let md = "";
+        if (node.nodeType === Node.ELEMENT_NODE) {
+          if (node.tagName.toUpperCase() === "BR") {
+            return "\n";
+          }
+          if (node.classList.contains("math-container")) {
+            let mathId = node.getAttribute("data-math-id");
+            let mf = window.mathFieldInstances[mathId];
+            if (mf) return "$" + mf.latex() + "$";
+            return "";
+          }
+          if (node.classList.contains("img-container")) {
+            let img = node.querySelector("img");
+            if (img) {
+              let style = window.getComputedStyle(node);
+              let widthPx = parseFloat(style.width);
+              let widthPt = (widthPx * 0.75).toFixed(1);
+              return `![Image](${img.src}){width=${widthPt}pt}`;
+            }
+            return "";
+          }
+          switch (node.tagName) {
+            case "B":
+            case "STRONG":
+              md += "**" + node.childNodesToMarkdown() + "**";
+              break;
+            case "I":
+            case "EM":
+              md += "*" + node.childNodesToMarkdown() + "*";
+              break;
+            case "U":
+              md += "<u>" + node.childNodesToMarkdown() + "</u>";
+              break;
+            case "S":
+            case "DEL":
+            case "STRIKE":
+              md += "~~" + node.childNodesToMarkdown() + "~~";
+              break;
+            case "H1":
+              md += "# " + node.childNodesToMarkdown() + "\n\n";
+              break;
+            case "H2":
+              md += "## " + node.childNodesToMarkdown() + "\n\n";
+              break;
+            case "H3":
+              md += "### " + node.childNodesToMarkdown() + "\n\n";
+              break;
+            case "BLOCKQUOTE":
+              md += "> " + node.childNodesToMarkdown().trim() + "\n\n";
+              break;
+            case "P":
+              let content = node.childNodesToMarkdown().trim();
+              if (node.parentElement && node.parentElement.tagName === "DETAILS" && node.parentElement.classList.contains("markscheme"))
+                md += content + "\n";
+              else
+                md += content + "\n\n";
+              break;
+            case "UL":
+              md += node.childNodesToMarkdown() + "\n";
+              break;
+            case "OL":
+              md += node.childNodesToMarkdown() + "\n";
+              break;
+            case "LI":
+              if (node.parentElement && node.parentElement.tagName === "OL")
+                md += "1. " + node.childNodesToMarkdown() + "\n";
+              else
+                md += "- " + node.childNodesToMarkdown() + "\n";
+              break;
+            case "IMG":
+              md += `![Image](${node.getAttribute("src")})`;
+              break;
+            case "DETAILS":
+              let summaryElem = node.querySelector("summary.markscheme-title");
+              let summaryText = summaryElem ? summaryElem.childNodesToMarkdown() : "Markscheme";
+              let detailsContent = "";
+              Array.from(node.childNodes).forEach(child => {
+                if (child !== summaryElem) detailsContent += convertNodeToMarkdown(child);
+              });
+              md += "<details>\n<summary>" + summaryText + "</summary>\n" + detailsContent.trim() + "\n</details>\n\n";
+              break;
+            case "HR":
+              md += "\n---\n\n";
+              break;
+            case "A":
+              md += "_[" + node.childNodesToMarkdown() + "](" + node.getAttribute("href") + ")_";
+              break;
+            case "PRE":
+              if (node.querySelector("code")) {
+                let codeElem = node.querySelector("code");
+                let lang = codeElem.getAttribute("data-language") || "";
+                md += "```" + lang + "\n" + codeElem.textContent + "\n```\n\n";
+              } else {
+                md += "```\n" + node.textContent + "\n```\n\n";
+              }
+              break;
+            case "TABLE":
+              let rows = node.querySelectorAll("tr");
+              let tableMd = "";
+              rows.forEach((row, index) => {
+                let cells = row.querySelectorAll("th, td");
+                let line = "| ";
+                cells.forEach(cell => { line += cell.textContent.trim() + " | "; });
+                tableMd += line + "\n";
+                if (index === 0) {
+                  let sep = "| ";
+                  cells.forEach(cell => { sep += "--- | "; });
+                  tableMd += sep + "\n";
+                }
+              });
+              md += tableMd + "\n";
+              break;
+            default:
+              md += node.childNodesToMarkdown();
+          }
+        }
+        return md;
+      }
+      function exportMarkdown() {
+        let md = convertNodeToMarkdown(editor);
+        document.getElementById("exportArea").textContent = md.trim();
+      }
+      function downloadMarkdown() {
+        let text = document.getElementById("exportArea").textContent;
+        let blob = new Blob([text], { type: "text/plain" });
+        let url = window.URL.createObjectURL(blob);
+        let a = document.createElement("a");
+        a.href = url;
+        a.download = "output.md";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      }
     </script>
-</body>
+  </body>
 </html>
