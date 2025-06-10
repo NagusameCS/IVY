@@ -86,11 +86,12 @@ f(x) = \sin(3x^2 + 2x)
 $$
 
 This function models the vertical position of a point on a vibrating string at time \( x \).  
+
 Find the rate of change of the vertical position with respect to time at any point \( x \).
 
 <details>
 <summary>Markscheme</summary>
-
+---
 **Step 1:** Recognize the chain rule structure  
 This is a composition:  
 - Outer function: $$\sin(u)$$  
