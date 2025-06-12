@@ -59,6 +59,7 @@ graph TD;
 ```
 ```desmos
 y = x^2
+y = x^2a
 y = \sin(x)
 ```
 ---
