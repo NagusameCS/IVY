@@ -57,7 +57,10 @@ graph TD;
     C --> E[End];
     D --> E[End];
 ```
-
+```desmos
+y = x^2
+y = \sin(x)
+```
 ---
 
 ## LaTeX Math Rendering
