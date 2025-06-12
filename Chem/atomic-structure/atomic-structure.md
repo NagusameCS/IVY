@@ -1,52 +1,153 @@
-# Mathcha Markdown Example
+# Renderer Showcase
+This document demonstrates all supported rendering features.
 
-This document demonstrates the use of **Mathcha** for rendering inline and block math expressions.
+## Basic Markdown
+**Bold text**, *italic text*, and `inline code`
 
-## Inline Math Example
+### Lists
+1. Ordered list
+2. With numbers
+   * Unordered sublist
+   * With bullets
 
-Here is an example of inline math using Mathcha syntax:  
-[[math]]E = mc^2[[/math]]
+### Task Lists
+- [x] Completed task
+- [ ] Pending task
 
-You can also mix inline math with text, like this:  
-The equation [[math]]a^2 + b^2 = c^2[[/math]] is known as the Pythagorean theorem.
+### Tables
+| Feature | Support | Notes |
+|---------|---------|-------|
+| Mermaid | ✅ | Diagrams |
+| Chart.js | ✅ | Graphs |
+| LaTeX | ✅ | Math |
 
-## Block Math Example
+## Extended Features
 
-Below is an example of a block math expression:
+### Mermaid Diagrams
+```mermaid
+graph TD
+    A[Start] --> B{Decision}
+    B -- Yes --> C[Process 1]
+    B -- No --> D[Process 2]
+    C --> E[End]
+    D --> E
+```
 
-[[math-block]]
-\int_a^b f(x) dx = F(b) - F(a)
-[[/math-block]]
+### Chart.js Graphs
+```chart
+{
+    type: 'bar',
+    data: {
+        labels: ['A', 'B', 'C'],
+        datasets: [{
+            label: 'Sample Data',
+            data: [10, 20, 30],
+            backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe']
+        }]
+    }
+}
+```
 
-Another example of a block equation:
+### Mathematical Equations (LaTeX)
+Inline math: $E = mc^2$
 
-[[math-block]]
-\frac{d}{dx}\left( x^n \right) = n x^{n-1}
-[[/math-block]]
+Display math:
+$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$
 
-## Combining Mathcha and LaTeX
+### PGFPlots
+```pgfplots
+\begin{axis}[
+    xlabel=$x$,
+    ylabel=$y$
+]
+\addplot[color=blue]{x^2};
+\addplot[color=red]{x^3};
+\end{axis}
+```
 
-You can also use LaTeX syntax alongside Mathcha. For example:
+### TikZ Diagrams
+```tikz
+\draw[thick,rounded corners=8pt] (0,0) -- (0,2) -- (1,3.25) -- (2,2) -- (2,0) -- (0,2) -- (2,2) -- (0,0) -- (2,0);
+```
 
-- Inline LaTeX: $E = mc^2$
-- Block LaTeX:
-  $$
-  \int_a^b f(x) dx = F(b) - F(a)
-  $$
+### Asymptote Graphics
+```asy
+size(200,200);
+path unitcircle = Circle((0,0),1);
+fill(unitcircle,pink);
+draw(unitcircle);
+dot((0,0));
+```
 
-## Complex Math Example
+### MATLAB Plots
+```matlab
+x = linspace(0,2*pi,100);
+y = sin(x);
+plot(x,y,'LineWidth',2);
+xlabel('x');
+ylabel('sin(x)');
+title('Sine Wave');
+grid on;
+```
 
-Here’s a more complex example using Mathcha:
+### Interactive Elements
+[reveal]
+This is hidden content that can be revealed by clicking!
+[/reveal]
 
-[[math-block]]
+### Custom Containers
+::: info
+This is an info box
+:::
+
+::: warning
+This is a warning box
+:::
+
+::: success
+This is a success box
+:::
+
+### Code Highlighting
+```python
+def hello_world():
+    print("Hello, world!")
+    return True
+```
+
+### Advanced LaTeX Examples
+Maxwell's Equations:
+$$
 \begin{aligned}
-    \nabla \cdot \vec{E} &= \frac{\rho}{\epsilon_0} \\
-    \nabla \cdot \vec{B} &= 0 \\
-    \nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \\
-    \nabla \times \vec{B} &= \mu_0 \vec{J} + \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t}
+\nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
+\nabla \cdot \mathbf{B} &= 0 \\
+\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+\nabla \times \mathbf{B} &= \mu_0\left(\mathbf{J} + \varepsilon_0\frac{\partial \mathbf{E}}{\partial t}\right)
 \end{aligned}
-[[/math-block]]
+$$
 
-## Conclusion
+### Combined Example
+Here's a mathematical model with visualization:
 
-This Markdown file demonstrates how to use Mathcha for both inline and block math expressions. You can mix Mathcha with LaTeX to achieve the best of both worlds.
+$$
+f(x) = \sin(x) \cdot e^{-x/10}
+$$
+
+```chart
+{
+    type: 'line',
+    data: {
+        labels: ['0','π/2','π','3π/2','2π'],
+        datasets: [{
+            label: 'Damped Sine Wave',
+            data: [0, 0.59, 0.27, 0.08, 0.02],
+            borderColor: '#36a2eb'
+        }]
+    }
+}
+```
+
+### Dark Mode Compatible
+All diagrams and charts automatically adjust to dark mode when enabled.
