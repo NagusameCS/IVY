@@ -1,7 +1,5 @@
 # IVYSTUDY Renderer Showcase 
 
-Welcome to the **IVYSTUDY Renderer Showcase**! This document demonstrates the full range of features supported by the renderer, including **Markdown rendering**, **Mermaid diagrams**, **Chart.js graphs**, **LaTeX math**, and more. Let's explore!
-
 ---
 
 ## Chart.js Example
