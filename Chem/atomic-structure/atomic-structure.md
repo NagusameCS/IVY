@@ -67,7 +67,6 @@ graph TD;
 y = \sin(x)
 y = x^2a
 a = 0
-https://www.desmos.com/calculator/neixtafybo
 ```
 ---
 
