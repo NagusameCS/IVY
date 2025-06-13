@@ -6,13 +6,10 @@ Welcome to **IVYSTUDY**, a dynamic and interactive study platform designed to pr
 "Security protects your users. Transparency helps them trust and understand you. Never sacrifice the former for the latter—but maximize the latter within the safety bounds of the former."
 
 ---
-## Navigation Links
-
-| #  | Hyperlink                     | Description                                                                 |
-|----|-----------------------------|-----------------------------------------------------------------------------|
-| 1  | [Main Page](www.ivystudy.org)       | The main resource page/search feature         |
-| 2  | [Statistics](www.ivystudy.org/info)       | The statistics page         |
-| 3  | [Page Backups and HTML](https://github.com/NagusameCS/Backups/tree/main)       | The Repo were the HTML for the page will be stored and backed up         |
+[![Page](https://img.shields.io/badge/Main_Page-www.ivystudy.org-23352D)](https://www.ivystudy.org)
+[![Main Repo](https://img.shields.io/badge/Main_Repo-GitHub-blue?logo=github)](https://github.com/NagusameCS/IVY)
+[![Backups](https://img.shields.io/badge/Backups-Repo-lightgrey?logo=github)](https://github.com/NagusameCS/Backups)
+[![Exemplars](https://img.shields.io/badge/Exemplars-Repo-lightgrey?logo=github)](https://github.com/NagusameCS/Exemplars)
 
 ## Table of Contents
 
