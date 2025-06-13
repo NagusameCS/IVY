@@ -40,6 +40,8 @@ Welcome to **IVYSTUDY**, a dynamic and interactive study platform designed to pr
 
 The IVYSTUDY platform is built on a single html file. It includes a responsive design, dynamic content loading, and interactive features to enhance the user experience. The file integrates various libraries and frameworks to provide a seamless and modern interface.
 
+Its still a bit messy as we are currently in early production
+
 ---
 
 ## Features
@@ -48,15 +50,22 @@ The IVYSTUDY platform is built on a single html file. It includes a responsive d
 - **Dark Mode**: Toggle between light and dark themes.
 - **Dynamic Content Loading**: Fetches lessons and resources from a remote repository.
 - **Search Functionality**: Real-time search with suggestions and filtering.
-- **Lesson Modal**: Displays lesson content in a modal with support for Markdown and LaTeX.
+- **Lesson Modal**: Displays lesson content in a modal with support for:
+   - Standard MD
+   - LaTeX
+   - Charts
+   - Diagrams
+   - Desmos Integration - Currently pending approval
+   - Markscheme
 - **Social Banner**: Automatically displays a banner when the page is shared.
 - **Interactive Elements**: Includes animations, dropdowns, and hover effects.
+- **Continuity**: Dark mode / Light mode sync across subpages without user data
 
 ---
 
 ## File Structure
 
-The `index.html` file is self-contained and relies on external libraries for styling and functionality.
+The `index.html` file is self-contained and relies on external libraries for styling and functionality, as are the adjacent subpages, our development cycle is currently too quick to continuously update this section however upon completion a full tree will be uploaded.
 
 ---
 
