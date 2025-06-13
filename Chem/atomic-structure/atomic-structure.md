@@ -4,7 +4,7 @@
 
 ## Chart.js Example
 
-Here is a bar chart created using **Chart.js**:
+Here is a _bar_ *chart* created using **Chart.js**:
 
 ```chart
 {
