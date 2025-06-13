@@ -10,11 +10,9 @@ Welcome to **IVYSTUDY**, a dynamic and interactive study platform designed to pr
 
 | #  | Hyperlink                     | Description                                                                 |
 |----|-----------------------------|-----------------------------------------------------------------------------|
-| 1  | [Search](www.ivystudy.org)       | The main resource page/search feature         |
+| 1  | [Main Page](www.ivystudy.org)       | The main resource page/search feature         |
 | 2  | [Statistics](www.ivystudy.org/info)       | The statistics page         |
 | 3  | [Page Backups and HTML](https://github.com/NagusameCS/Backups/tree/main)       | The Repo were the HTML for the page will be stored and backed up         |
-
-
 
 ## Table of Contents
 
