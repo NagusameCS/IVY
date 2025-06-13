@@ -58,10 +58,10 @@ graph TD;
     D --> E[End];
 ```
 ```desmos
-y = x^2
+y = \sin(x)
 y = x^2a
 a = 0
-y = \sin(x)
+
 ```
 ---
 
