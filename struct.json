@@ -20,7 +20,7 @@
       },
       {
         "title": "Functions & Equations (Topic 2)",
-        "path": "functions-equations",
+        "path": "Functions-equations",
         "lessons": [
           {"title": "2.1 Concept of Function", "file": "2.1-concept-of-function.md", "topic": "M2.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["function","domain","inverse"], "level": "SL/HL"},
             {"title": "2.2 Graph Features", "file": "2.2-graph-features.md", "topic": "M2.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["graphs","asymptotes","symmetry"], "level": "SL/HL"},
