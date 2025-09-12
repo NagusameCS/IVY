@@ -20,7 +20,7 @@
       },
       {
         "title": "Functions & Equations (Topic 2)",
-        "path": "Functions-equations",
+        "path": "Functions-Equations",
         "lessons": [
           {"title": "2.1 Concept of Function", "file": "2.1-concept-of-function.md", "topic": "M2.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["function","domain","inverse"], "level": "SL/HL"},
             {"title": "2.2 Graph Features", "file": "2.2-graph-features.md", "topic": "M2.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["graphs","asymptotes","symmetry"], "level": "SL/HL"},
@@ -33,7 +33,7 @@
       },
       {
         "title": "Circular Functions & Trigonometry (Topic 3)",
-        "path": "Circular-trigonometry",
+        "path": "Circular-Functions-Trigonometry",
         "lessons": [
           {"title": "3.1 Radian Measure, Arc & Sector", "file": "3.1-radian-measure-arc-sector.md", "topic": "M3.1", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["radians","arc length"], "level": "SL/HL"},
           {"title": "3.2 Unit Circle & Basic Identities", "file": "3.2-trig-unit-circle-identities.md", "topic": "M3.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["trigonometry","identities"], "level": "SL/HL"},
@@ -46,7 +46,7 @@
       },
       {
         "title": "Vectors (Topic 4)",
-        "path": "vectors",
+        "path": "Vectors",
         "lessons": [
           {"title": "4.1 Vector Basics", "file": "4.1-vector-basics.md", "topic": "M4.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["vectors","components"], "level": "SL/HL"},
           {"title": "4.2 Scalar (Dot) Product", "file": "4.2-scalar-product.md", "topic": "M4.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["dot product","angle"], "level": "SL/HL"},
@@ -59,7 +59,7 @@
       },
       {
         "title": "Statistics & Probability (Core Topic 5)",
-        "path": "statistics-probability",
+        "path": "Statistics-Probability",
         "lessons": [
           {"title": "5.1 Data Concepts & Descriptive Stats", "file": "5.1-data-concepts.md", "topic": "M5.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["data","variance"], "level": "SL/HL"},
           {"title": "5.2 Basic Probability", "file": "5.2-basic-probability.md", "topic": "M5.2", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["probability","sample space"], "level": "SL/HL"},
@@ -85,7 +85,7 @@
       },
       {
         "title": "Option: Statistics & Probability (Topic 7)",
-        "path": "option-statistics-probability",
+        "path": "Statistics-Probability",
         "lessons": [
           {"title": "7.1 CDFs, Geometric, Neg Binomial, PGFs", "file": "7.1-cdf-geometric-negative-binomial-pgf.md", "topic": "M7.1", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["cdf","geometric","pgf"], "level": "HL"},
           {"title": "7.2 Linear Combinations of RVs", "file": "7.2-linear-combinations-rv.md", "topic": "M7.2", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["expectation","variance"], "level": "HL"},
@@ -98,7 +98,7 @@
       },
       {
         "title": "Option: Sets, Relations & Groups (Topic 8)",
-        "path": "sets-relations-groups",
+        "path": "Sets-Relations-Groups",
         "lessons": [
           {"title": "8.1 Set Operations & Laws", "file": "8.1-set-operations-laws.md", "topic": "M8.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["sets","de morgan"], "level": "HL"},
           {"title": "8.2 Relations & Equivalence", "file": "8.2-relations-equivalence.md", "topic": "M8.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["relations","equivalence"], "level": "HL"},
@@ -116,7 +116,7 @@
       },
       {
         "title": "Option: Calculus (Topic 9)",
-        "path": "option-calculus",
+        "path": "Option-Calculus",
         "lessons": [
           {"title": "9.1 Infinite Sequences", "file": "9.1-infinite-sequences.md", "topic": "M9.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["sequences","convergence"], "level": "HL"},
           {"title": "9.2 Infinite Series & Tests", "file": "9.2-infinite-series-convergence-tests.md", "topic": "M9.2", "time_estimate": 35, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["series","convergence tests"], "level": "HL"},
@@ -129,7 +129,7 @@
       },
       {
         "title": "Option: Discrete Mathematics (Topic 10)",
-        "path": "discrete-mathematics",
+        "path": "Discrete-Mathematics",
         "lessons": [
           {"title": "10.1 Strong Induction & Pigeonhole", "file": "10.1-strong-induction-pigeonhole.md", "topic": "M10.1", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["induction","pigeonhole"], "level": "HL"},
           {"title": "10.2 Divisibility, GCD, LCM & Primes", "file": "10.2-divisibility-gcd-lcm-primes.md", "topic": "M10.2", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["gcd","primes"], "level": "HL"},
