@@ -5,7 +5,7 @@
     "sections": [
       {
         "title": "Algebra (Topic 1)",
-        "path": "algebra",
+        "path": "Algebra",
         "lessons": [
           {"title": "1.1 Arithmetic & Geometric Series", "file": "1.1-arithmetic-geometric-series.md", "topic": "M1.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["sequences","series","sigma"], "level": "SL/HL"},
           {"title": "1.2 Exponents & Logarithms", "file": "1.2-exponents-logarithms.md", "topic": "M1.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["exponents","logarithms"], "level": "SL/HL"},
@@ -33,7 +33,7 @@
       },
       {
         "title": "Circular Functions & Trigonometry (Topic 3)",
-        "path": "circular-trigonometry",
+        "path": "Circular-trigonometry",
         "lessons": [
           {"title": "3.1 Radian Measure, Arc & Sector", "file": "3.1-radian-measure-arc-sector.md", "topic": "M3.1", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["radians","arc length"], "level": "SL/HL"},
           {"title": "3.2 Unit Circle & Basic Identities", "file": "3.2-trig-unit-circle-identities.md", "topic": "M3.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["trigonometry","identities"], "level": "SL/HL"},
@@ -72,7 +72,7 @@
       },
       {
         "title": "Calculus (Core Topic 6)",
-        "path": "calculus",
+        "path": "Calculus",
         "lessons": [
           {"title": "6.1 Limits & Derivative Basics", "file": "6.1-limits-derivative-basics.md", "topic": "M6.1", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["limits","derivative"], "level": "SL/HL"},
           {"title": "6.2 Differentiation Rules", "file": "6.2-differentiation-rules.md", "topic": "M6.2", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["product rule","chain rule"], "level": "SL/HL"},
