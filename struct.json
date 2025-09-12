@@ -153,22 +153,16 @@
       {
         "title": "Cell Biology",
         "path": "cell-biology",
-        "subsections": [
+        "lessons": [
           {
-            "title": "Cell Structure",
-            "path": "cell-structure",
-            "lessons": [
-              {
-                "title": "Introduction to Cells",
-                "file": "intro-cells.md",
-                "topic": "B1.1",
-                "time_estimate": 15,
-                "timestamp": "2025/02/01",
-                "categories": ["Biology"],
-                "tags": ["cells", "structure", "biology"],
-                "level": "SL"
-              }
-            ]
+            "title": "Introduction to Cells",
+            "file": "cell-structure/intro-cells.md",
+            "topic": "B1.1",
+            "time_estimate": 15,
+            "timestamp": "2025/02/01",
+            "categories": ["Biology"],
+            "tags": ["cells", "structure", "biology"],
+            "level": "SL"
           }
         ]
       }
