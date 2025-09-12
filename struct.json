@@ -7,141 +7,141 @@
         "title": "Algebra (Topic 1)",
         "path": "algebra",
         "lessons": [
-          {"title": "1.1 Arithmetic & Geometric Series", "file": "Algebra/1.1-arithmetic-geometric-series.md", "topic": "M1.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["sequences","series","sigma"], "level": "SL/HL"},
-          {"title": "1.2 Exponents & Logarithms", "file": "Algebra/1.2-exponents-logarithms.md", "topic": "M1.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["exponents","logarithms"], "level": "SL/HL"},
-          {"title": "1.3 Counting & Binomial Theorem", "file": "Algebra/1.3-counting-binomials.md", "topic": "M1.3", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["counting","permutations","combinations","binomial"], "level": "SL/HL"},
-          {"title": "1.4 Proof by Induction", "file": "Algebra/1.4-mathematical-induction.md", "topic": "M1.4", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["proof","induction"], "level": "HL"},
-          {"title": "1.5 Complex Numbers Basics", "file": "Algebra/1.5-complex-numbers-basics.md", "topic": "M1.5", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["complex","conjugate","modulus"], "level": "HL"},
-          {"title": "1.6 Polar Form of Complex Numbers", "file": "Algebra/1.6-complex-polar-form.md", "topic": "M1.6", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["complex","polar","cis"], "level": "HL"},
-          {"title": "1.7 Powers & Roots (De Moivre)", "file": "Algebra/1.7-complex-powers-roots.md", "topic": "M1.7", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["complex","roots","de moivre"], "level": "HL"},
-          {"title": "1.8 Conjugate Roots of Polynomials", "file": "Algebra/1.8-conjugate-roots-polynomials.md", "topic": "M1.8", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["polynomials","complex"], "level": "HL"},
-          {"title": "1.9 Systems of Linear Equations", "file": "Algebra/1.9-systems-linear-equations.md", "topic": "M1.9", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["linear systems","elimination"], "level": "SL/HL"}
+          {"title": "1.1 Arithmetic & Geometric Series", "file": "1.1-arithmetic-geometric-series.md", "topic": "M1.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["sequences","series","sigma"], "level": "SL/HL"},
+          {"title": "1.2 Exponents & Logarithms", "file": "1.2-exponents-logarithms.md", "topic": "M1.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["exponents","logarithms"], "level": "SL/HL"},
+          {"title": "1.3 Counting & Binomial Theorem", "file": "1.3-counting-binomials.md", "topic": "M1.3", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["counting","permutations","combinations","binomial"], "level": "SL/HL"},
+          {"title": "1.4 Proof by Induction", "file": "1.4-mathematical-induction.md", "topic": "M1.4", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["proof","induction"], "level": "HL"},
+          {"title": "1.5 Complex Numbers Basics", "file": "1.5-complex-numbers-basics.md", "topic": "M1.5", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["complex","conjugate","modulus"], "level": "HL"},
+          {"title": "1.6 Polar Form of Complex Numbers", "file": "1.6-complex-polar-form.md", "topic": "M1.6", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["complex","polar","cis"], "level": "HL"},
+          {"title": "1.7 Powers & Roots (De Moivre)", "file": "1.7-complex-powers-roots.md", "topic": "M1.7", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["complex","roots","de moivre"], "level": "HL"},
+          {"title": "1.8 Conjugate Roots of Polynomials", "file": "1.8-conjugate-roots-polynomials.md", "topic": "M1.8", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["polynomials","complex"], "level": "HL"},
+          {"title": "1.9 Systems of Linear Equations", "file": "1.9-systems-linear-equations.md", "topic": "M1.9", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["linear systems","elimination"], "level": "SL/HL"}
         ]
       },
       {
         "title": "Functions & Equations (Topic 2)",
         "path": "functions-equations",
         "lessons": [
-          {"title": "2.1 Concept of Function", "file": "Functions and Equations/2.1-concept-of-function.md", "topic": "M2.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["function","domain","inverse"], "level": "SL/HL"},
-            {"title": "2.2 Graph Features", "file": "Functions and Equations/2.2-graph-features.md", "topic": "M2.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["graphs","asymptotes","symmetry"], "level": "SL/HL"},
-            {"title": "2.3 Graph Transformations", "file": "Functions and Equations/2.3-graph-transformations.md", "topic": "M2.3", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["transformations","reflections"], "level": "SL/HL"},
-            {"title": "2.4 Basic Function Families", "file": "Functions and Equations/2.4-basic-function-families.md", "topic": "M2.4", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["rational","exponential","logarithmic"], "level": "SL/HL"},
-            {"title": "2.5 Polynomial Functions", "file": "Functions and Equations/2.5-polynomial-functions.md", "topic": "M2.5", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["polynomials","factor theorem"], "level": "SL/HL"},
-            {"title": "2.6 Solving Equations", "file": "Functions and Equations/2.6-solving-equations.md", "topic": "M2.6", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["quadratic","discriminant"], "level": "SL/HL"},
-            {"title": "2.7 Inequalities", "file": "Functions and Equations/2.7-inequalities.md", "topic": "M2.7", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["inequalities","sign chart"], "level": "SL/HL"}
+          {"title": "2.1 Concept of Function", "file": "2.1-concept-of-function.md", "topic": "M2.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["function","domain","inverse"], "level": "SL/HL"},
+            {"title": "2.2 Graph Features", "file": "2.2-graph-features.md", "topic": "M2.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["graphs","asymptotes","symmetry"], "level": "SL/HL"},
+            {"title": "2.3 Graph Transformations", "file": "2.3-graph-transformations.md", "topic": "M2.3", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["transformations","reflections"], "level": "SL/HL"},
+            {"title": "2.4 Basic Function Families", "file": "2.4-basic-function-families.md", "topic": "M2.4", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["rational","exponential","logarithmic"], "level": "SL/HL"},
+            {"title": "2.5 Polynomial Functions", "file": "2.5-polynomial-functions.md", "topic": "M2.5", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["polynomials","factor theorem"], "level": "SL/HL"},
+            {"title": "2.6 Solving Equations", "file": "2.6-solving-equations.md", "topic": "M2.6", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["quadratic","discriminant"], "level": "SL/HL"},
+            {"title": "2.7 Inequalities", "file": "2.7-inequalities.md", "topic": "M2.7", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["inequalities","sign chart"], "level": "SL/HL"}
         ]
       },
       {
         "title": "Circular Functions & Trigonometry (Topic 3)",
         "path": "circular-trigonometry",
         "lessons": [
-          {"title": "3.1 Radian Measure, Arc & Sector", "file": "Circular Functions and Trigonometry/3.1-radian-measure-arc-sector.md", "topic": "M3.1", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["radians","arc length"], "level": "SL/HL"},
-          {"title": "3.2 Unit Circle & Basic Identities", "file": "Circular Functions and Trigonometry/3.2-trig-unit-circle-identities.md", "topic": "M3.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["trigonometry","identities"], "level": "SL/HL"},
-          {"title": "3.3 Compound & Double Angles", "file": "Circular Functions and Trigonometry/3.3-compound-double-angle.md", "topic": "M3.3", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["trigonometry","double angle"], "level": "HL"},
-          {"title": "3.4 Sinusoidal Models", "file": "Circular Functions and Trigonometry/3.4-sinusoidal-models.md", "topic": "M3.4", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["sinusoidal","modeling"], "level": "SL/HL"},
-          {"title": "3.5 Inverse Trig Functions", "file": "Circular Functions and Trigonometry/3.5-inverse-trig-functions.md", "topic": "M3.5", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["inverse trig","arcsin"], "level": "SL/HL"},
-          {"title": "3.6 Solving Trig Equations", "file": "Circular Functions and Trigonometry/3.6-solving-trig-equations.md", "topic": "M3.6", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["trig equations","identities"], "level": "SL/HL"},
-          {"title": "3.7 Triangle Rules & Applications", "file": "Circular Functions and Trigonometry/3.7-triangle-rules.md", "topic": "M3.7", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["sine rule","cosine rule"], "level": "SL/HL"}
+          {"title": "3.1 Radian Measure, Arc & Sector", "file": "3.1-radian-measure-arc-sector.md", "topic": "M3.1", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["radians","arc length"], "level": "SL/HL"},
+          {"title": "3.2 Unit Circle & Basic Identities", "file": "3.2-trig-unit-circle-identities.md", "topic": "M3.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["trigonometry","identities"], "level": "SL/HL"},
+          {"title": "3.3 Compound & Double Angles", "file": "3.3-compound-double-angle.md", "topic": "M3.3", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["trigonometry","double angle"], "level": "HL"},
+          {"title": "3.4 Sinusoidal Models", "file": "3.4-sinusoidal-models.md", "topic": "M3.4", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["sinusoidal","modeling"], "level": "SL/HL"},
+          {"title": "3.5 Inverse Trig Functions", "file": "3.5-inverse-trig-functions.md", "topic": "M3.5", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["inverse trig","arcsin"], "level": "SL/HL"},
+          {"title": "3.6 Solving Trig Equations", "file": "3.6-solving-trig-equations.md", "topic": "M3.6", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["trig equations","identities"], "level": "SL/HL"},
+          {"title": "3.7 Triangle Rules & Applications", "file": "3.7-triangle-rules.md", "topic": "M3.7", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["sine rule","cosine rule"], "level": "SL/HL"}
         ]
       },
       {
         "title": "Vectors (Topic 4)",
         "path": "vectors",
         "lessons": [
-          {"title": "4.1 Vector Basics", "file": "Vectors/4.1-vector-basics.md", "topic": "M4.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["vectors","components"], "level": "SL/HL"},
-          {"title": "4.2 Scalar (Dot) Product", "file": "Vectors/4.2-scalar-product.md", "topic": "M4.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["dot product","angle"], "level": "SL/HL"},
-          {"title": "4.3 Vector Equation of a Line", "file": "Vectors/4.3-vector-equation-line.md", "topic": "M4.3", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["line","parametric"], "level": "SL/HL"},
-          {"title": "4.4 Line Relationships", "file": "Vectors/4.4-line-relationships.md", "topic": "M4.4", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["lines","skew"], "level": "HL"},
-          {"title": "4.5 Vector (Cross) Product", "file": "Vectors/4.5-vector-product.md", "topic": "M4.5", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["cross product","area"], "level": "HL"},
-          {"title": "4.6 Planes in 3D", "file": "Vectors/4.6-planes.md", "topic": "M4.6", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["planes","normal"], "level": "HL"},
-          {"title": "4.7 Intersections & Angles", "file": "Vectors/4.7-intersections-angles.md", "topic": "M4.7", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["intersection","angle"], "level": "HL"}
+          {"title": "4.1 Vector Basics", "file": "4.1-vector-basics.md", "topic": "M4.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["vectors","components"], "level": "SL/HL"},
+          {"title": "4.2 Scalar (Dot) Product", "file": "4.2-scalar-product.md", "topic": "M4.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["dot product","angle"], "level": "SL/HL"},
+          {"title": "4.3 Vector Equation of a Line", "file": "4.3-vector-equation-line.md", "topic": "M4.3", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["line","parametric"], "level": "SL/HL"},
+          {"title": "4.4 Line Relationships", "file": "4.4-line-relationships.md", "topic": "M4.4", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["lines","skew"], "level": "HL"},
+          {"title": "4.5 Vector (Cross) Product", "file": "4.5-vector-product.md", "topic": "M4.5", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["cross product","area"], "level": "HL"},
+          {"title": "4.6 Planes in 3D", "file": "4.6-planes.md", "topic": "M4.6", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["planes","normal"], "level": "HL"},
+          {"title": "4.7 Intersections & Angles", "file": "4.7-intersections-angles.md", "topic": "M4.7", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["intersection","angle"], "level": "HL"}
         ]
       },
       {
         "title": "Statistics & Probability (Core Topic 5)",
         "path": "statistics-probability",
         "lessons": [
-          {"title": "5.1 Data Concepts & Descriptive Stats", "file": "Statistics and Probability/5.1-data-concepts.md", "topic": "M5.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["data","variance"], "level": "SL/HL"},
-          {"title": "5.2 Basic Probability", "file": "Statistics and Probability/5.2-basic-probability.md", "topic": "M5.2", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["probability","sample space"], "level": "SL/HL"},
-          {"title": "5.3 Combined Events", "file": "Statistics and Probability/5.3-combined-events.md", "topic": "M5.3", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["union","intersection"], "level": "SL/HL"},
-          {"title": "5.4 Conditional Probability & Bayes", "file": "Statistics and Probability/5.4-conditional-probability-bayes.md", "topic": "M5.4", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["conditional","bayes"], "level": "SL/HL"},
-          {"title": "5.5 Random Variables & Distributions", "file": "Statistics and Probability/5.5-random-variables.md", "topic": "M5.5", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["random variable","expectation"], "level": "SL/HL"},
-          {"title": "5.6 Binomial & Poisson", "file": "Statistics and Probability/5.6-binomial-poisson.md", "topic": "M5.6", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["binomial","poisson"], "level": "SL/HL"},
-          {"title": "5.7 Normal Distribution", "file": "Statistics and Probability/5.7-normal-distribution.md", "topic": "M5.7", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["normal","standardization"], "level": "SL/HL"}
+          {"title": "5.1 Data Concepts & Descriptive Stats", "file": "5.1-data-concepts.md", "topic": "M5.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["data","variance"], "level": "SL/HL"},
+          {"title": "5.2 Basic Probability", "file": "5.2-basic-probability.md", "topic": "M5.2", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["probability","sample space"], "level": "SL/HL"},
+          {"title": "5.3 Combined Events", "file": "5.3-combined-events.md", "topic": "M5.3", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["union","intersection"], "level": "SL/HL"},
+          {"title": "5.4 Conditional Probability & Bayes", "file": "5.4-conditional-probability-bayes.md", "topic": "M5.4", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["conditional","bayes"], "level": "SL/HL"},
+          {"title": "5.5 Random Variables & Distributions", "file": "5.5-random-variables.md", "topic": "M5.5", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["random variable","expectation"], "level": "SL/HL"},
+          {"title": "5.6 Binomial & Poisson", "file": "5.6-binomial-poisson.md", "topic": "M5.6", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["binomial","poisson"], "level": "SL/HL"},
+          {"title": "5.7 Normal Distribution", "file": "5.7-normal-distribution.md", "topic": "M5.7", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["normal","standardization"], "level": "SL/HL"}
         ]
       },
       {
         "title": "Calculus (Core Topic 6)",
         "path": "calculus",
         "lessons": [
-          {"title": "6.1 Limits & Derivative Basics", "file": "Calculus/6.1-limits-derivative-basics.md", "topic": "M6.1", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["limits","derivative"], "level": "SL/HL"},
-          {"title": "6.2 Differentiation Rules", "file": "Calculus/6.2-differentiation-rules.md", "topic": "M6.2", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["product rule","chain rule"], "level": "SL/HL"},
-          {"title": "6.3 Extrema & Graph Behaviour", "file": "Calculus/6.3-extrema-graph-behaviour.md", "topic": "M6.3", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["extrema","optimization"], "level": "SL/HL"},
-          {"title": "6.4 Indefinite Integration Basics", "file": "Calculus/6.4-indefinite-integration.md", "topic": "M6.4", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["integration","antiderivative"], "level": "SL/HL"},
-          {"title": "6.5 Definite Integrals, Area & Volume", "file": "Calculus/6.5-definite-integrals-area-volume.md", "topic": "M6.5", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["area","volume"], "level": "SL/HL"},
-          {"title": "6.6 Kinematics & Total Distance", "file": "Calculus/6.6-kinematics-integration.md", "topic": "M6.6", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["kinematics","velocity"], "level": "SL/HL"},
-          {"title": "6.7 Integration Techniques", "file": "Calculus/6.7-integration-techniques.md", "topic": "M6.7", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["substitution","parts"], "level": "HL"}
+          {"title": "6.1 Limits & Derivative Basics", "file": "6.1-limits-derivative-basics.md", "topic": "M6.1", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["limits","derivative"], "level": "SL/HL"},
+          {"title": "6.2 Differentiation Rules", "file": "6.2-differentiation-rules.md", "topic": "M6.2", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["product rule","chain rule"], "level": "SL/HL"},
+          {"title": "6.3 Extrema & Graph Behaviour", "file": "6.3-extrema-graph-behaviour.md", "topic": "M6.3", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["extrema","optimization"], "level": "SL/HL"},
+          {"title": "6.4 Indefinite Integration Basics", "file": "6.4-indefinite-integration.md", "topic": "M6.4", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["integration","antiderivative"], "level": "SL/HL"},
+          {"title": "6.5 Definite Integrals, Area & Volume", "file": "6.5-definite-integrals-area-volume.md", "topic": "M6.5", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["area","volume"], "level": "SL/HL"},
+          {"title": "6.6 Kinematics & Total Distance", "file": "6.6-kinematics-integration.md", "topic": "M6.6", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["kinematics","velocity"], "level": "SL/HL"},
+          {"title": "6.7 Integration Techniques", "file": "6.7-integration-techniques.md", "topic": "M6.7", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["substitution","parts"], "level": "HL"}
         ]
       },
       {
         "title": "Option: Statistics & Probability (Topic 7)",
         "path": "option-statistics-probability",
         "lessons": [
-          {"title": "7.1 CDFs, Geometric, Neg Binomial, PGFs", "file": "Statistics and Probability/7.1-cdf-geometric-negative-binomial-pgf.md", "topic": "M7.1", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["cdf","geometric","pgf"], "level": "HL"},
-          {"title": "7.2 Linear Combinations of RVs", "file": "Statistics and Probability/7.2-linear-combinations-rv.md", "topic": "M7.2", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["expectation","variance"], "level": "HL"},
-          {"title": "7.3 Unbiased Estimators", "file": "Statistics and Probability/7.3-unbiased-estimators.md", "topic": "M7.3", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["estimation","unbiased"], "level": "HL"},
-          {"title": "7.4 Normal Combinations & CLT", "file": "Statistics and Probability/7.4-clt-normal-combinations.md", "topic": "M7.4", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["normal","clt"], "level": "HL"},
-          {"title": "7.5 Confidence Intervals (Mean)", "file": "Statistics and Probability/7.5-confidence-intervals.md", "topic": "M7.5", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["confidence interval"], "level": "HL"},
-          {"title": "7.6 Hypothesis Testing (Mean)", "file": "Statistics and Probability/7.6-hypothesis-testing.md", "topic": "M7.6", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["hypothesis test","p-value"], "level": "HL"},
-          {"title": "7.7 Bivariate Correlation & Regression", "file": "Statistics and Probability/7.7-bivariate-correlation-regression.md", "topic": "M7.7", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["correlation","regression"], "level": "HL"}
+          {"title": "7.1 CDFs, Geometric, Neg Binomial, PGFs", "file": "7.1-cdf-geometric-negative-binomial-pgf.md", "topic": "M7.1", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["cdf","geometric","pgf"], "level": "HL"},
+          {"title": "7.2 Linear Combinations of RVs", "file": "7.2-linear-combinations-rv.md", "topic": "M7.2", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["expectation","variance"], "level": "HL"},
+          {"title": "7.3 Unbiased Estimators", "file": "7.3-unbiased-estimators.md", "topic": "M7.3", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["estimation","unbiased"], "level": "HL"},
+          {"title": "7.4 Normal Combinations & CLT", "file": "7.4-clt-normal-combinations.md", "topic": "M7.4", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["normal","clt"], "level": "HL"},
+          {"title": "7.5 Confidence Intervals (Mean)", "file": "7.5-confidence-intervals.md", "topic": "M7.5", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["confidence interval"], "level": "HL"},
+          {"title": "7.6 Hypothesis Testing (Mean)", "file": "7.6-hypothesis-testing.md", "topic": "M7.6", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["hypothesis test","p-value"], "level": "HL"},
+          {"title": "7.7 Bivariate Correlation & Regression", "file": "7.7-bivariate-correlation-regression.md", "topic": "M7.7", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA","Math AI"], "tags": ["correlation","regression"], "level": "HL"}
         ]
       },
       {
         "title": "Option: Sets, Relations & Groups (Topic 8)",
         "path": "sets-relations-groups",
         "lessons": [
-          {"title": "8.1 Set Operations & Laws", "file": "Sets, Relations and Groups/8.1-set-operations-laws.md", "topic": "M8.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["sets","de morgan"], "level": "HL"},
-          {"title": "8.2 Relations & Equivalence", "file": "Sets, Relations and Groups/8.2-relations-equivalence.md", "topic": "M8.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["relations","equivalence"], "level": "HL"},
-          {"title": "8.3 Injections, Surjections, Bijections", "file": "Sets, Relations and Groups/8.3-functions-bijections.md", "topic": "M8.3", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["functions","bijection"], "level": "HL"},
-          {"title": "8.4 Binary Operations", "file": "Sets, Relations and Groups/8.4-binary-operations.md", "topic": "M8.4", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["binary operation","cayley"], "level": "HL"},
-          {"title": "8.5 Operation Properties", "file": "Sets, Relations and Groups/8.5-operation-properties.md", "topic": "M8.5", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["associative","commutative"], "level": "HL"},
-          {"title": "8.6 Identity & Inverses", "file": "Sets, Relations and Groups/8.6-identity-inverses-uniqueness.md", "topic": "M8.6", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["identity","inverse"], "level": "HL"},
-          {"title": "8.7 Definition of a Group", "file": "Sets, Relations and Groups/8.7-definition-of-group.md", "topic": "M8.7", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["group","abelian"], "level": "HL"},
-          {"title": "8.8 Group Examples", "file": "Sets, Relations and Groups/8.8-group-examples.md", "topic": "M8.8", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["modular","symmetry"], "level": "HL"},
-          {"title": "8.9 Cyclic Groups & Generators", "file": "Sets, Relations and Groups/8.9-cyclic-groups.md", "topic": "M8.9", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["cyclic","generator"], "level": "HL"},
-          {"title": "8.10 Permutations & Cycles", "file": "Sets, Relations and Groups/8.10-permutations-cycles.md", "topic": "M8.10", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["permutation","cycle"], "level": "HL"},
-          {"title": "8.11 Subgroups, Cosets & Lagrange", "file": "Sets, Relations and Groups/8.11-subgroups-cosets-lagrange.md", "topic": "M8.11", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["subgroup","coset","lagrange"], "level": "HL"},
-          {"title": "8.12 Homomorphisms & Isomorphisms", "file": "Sets, Relations and Groups/8.12-homomorphisms-isomorphisms.md", "topic": "M8.12", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["homomorphism","isomorphism"], "level": "HL"}
+          {"title": "8.1 Set Operations & Laws", "file": "8.1-set-operations-laws.md", "topic": "M8.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["sets","de morgan"], "level": "HL"},
+          {"title": "8.2 Relations & Equivalence", "file": "8.2-relations-equivalence.md", "topic": "M8.2", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["relations","equivalence"], "level": "HL"},
+          {"title": "8.3 Injections, Surjections, Bijections", "file": "8.3-functions-bijections.md", "topic": "M8.3", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["functions","bijection"], "level": "HL"},
+          {"title": "8.4 Binary Operations", "file": "8.4-binary-operations.md", "topic": "M8.4", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["binary operation","cayley"], "level": "HL"},
+          {"title": "8.5 Operation Properties", "file": "8.5-operation-properties.md", "topic": "M8.5", "time_estimate": 15, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["associative","commutative"], "level": "HL"},
+          {"title": "8.6 Identity & Inverses", "file": "8.6-identity-inverses-uniqueness.md", "topic": "M8.6", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["identity","inverse"], "level": "HL"},
+          {"title": "8.7 Definition of a Group", "file": "8.7-definition-of-group.md", "topic": "M8.7", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["group","abelian"], "level": "HL"},
+          {"title": "8.8 Group Examples", "file": "8.8-group-examples.md", "topic": "M8.8", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["modular","symmetry"], "level": "HL"},
+          {"title": "8.9 Cyclic Groups & Generators", "file": "8.9-cyclic-groups.md", "topic": "M8.9", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["cyclic","generator"], "level": "HL"},
+          {"title": "8.10 Permutations & Cycles", "file": "8.10-permutations-cycles.md", "topic": "M8.10", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["permutation","cycle"], "level": "HL"},
+          {"title": "8.11 Subgroups, Cosets & Lagrange", "file": "8.11-subgroups-cosets-lagrange.md", "topic": "M8.11", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["subgroup","coset","lagrange"], "level": "HL"},
+          {"title": "8.12 Homomorphisms & Isomorphisms", "file": "8.12-homomorphisms-isomorphisms.md", "topic": "M8.12", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["homomorphism","isomorphism"], "level": "HL"}
         ]
       },
       {
         "title": "Option: Calculus (Topic 9)",
         "path": "option-calculus",
         "lessons": [
-          {"title": "9.1 Infinite Sequences", "file": "Option Calculus/9.1-infinite-sequences.md", "topic": "M9.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["sequences","convergence"], "level": "HL"},
-          {"title": "9.2 Infinite Series & Tests", "file": "Option Calculus/9.2-infinite-series-convergence-tests.md", "topic": "M9.2", "time_estimate": 35, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["series","convergence tests"], "level": "HL"},
-          {"title": "9.3 Continuity & Differentiability", "file": "Option Calculus/9.3-continuity-differentiability.md", "topic": "M9.3", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["continuity","differentiability"], "level": "HL"},
-          {"title": "9.4 Riemann Sums & Improper Integrals", "file": "Option Calculus/9.4-riemann-integral-improper.md", "topic": "M9.4", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["riemann","improper integrals"], "level": "HL"},
-          {"title": "9.5 First-Order Differential Equations", "file": "Option Calculus/9.5-first-order-differential-equations.md", "topic": "M9.5", "time_estimate": 35, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["differential equations","euler"], "level": "HL"},
-          {"title": "9.6 Taylor & Maclaurin Series", "file": "Option Calculus/9.6-taylor-maclaurin-series.md", "topic": "M9.6", "time_estimate": 35, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["taylor","maclaurin"], "level": "HL"},
-          {"title": "9.7 Limit Evaluation (l'Hôpital & Series)", "file": "Option Calculus/9.7-limit-evaluation-lhopital-taylor.md", "topic": "M9.7", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["limits","l'hopital"], "level": "HL"}
+          {"title": "9.1 Infinite Sequences", "file": "9.1-infinite-sequences.md", "topic": "M9.1", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["sequences","convergence"], "level": "HL"},
+          {"title": "9.2 Infinite Series & Tests", "file": "9.2-infinite-series-convergence-tests.md", "topic": "M9.2", "time_estimate": 35, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["series","convergence tests"], "level": "HL"},
+          {"title": "9.3 Continuity & Differentiability", "file": "9.3-continuity-differentiability.md", "topic": "M9.3", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["continuity","differentiability"], "level": "HL"},
+          {"title": "9.4 Riemann Sums & Improper Integrals", "file": "9.4-riemann-integral-improper.md", "topic": "M9.4", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["riemann","improper integrals"], "level": "HL"},
+          {"title": "9.5 First-Order Differential Equations", "file": "9.5-first-order-differential-equations.md", "topic": "M9.5", "time_estimate": 35, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["differential equations","euler"], "level": "HL"},
+          {"title": "9.6 Taylor & Maclaurin Series", "file": "9.6-taylor-maclaurin-series.md", "topic": "M9.6", "time_estimate": 35, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["taylor","maclaurin"], "level": "HL"},
+          {"title": "9.7 Limit Evaluation (l'Hôpital & Series)", "file": "9.7-limit-evaluation-lhopital-taylor.md", "topic": "M9.7", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["limits","l'hopital"], "level": "HL"}
         ]
       },
       {
         "title": "Option: Discrete Mathematics (Topic 10)",
         "path": "discrete-mathematics",
         "lessons": [
-          {"title": "10.1 Strong Induction & Pigeonhole", "file": "Discrete Mathematics/10.1-strong-induction-pigeonhole.md", "topic": "M10.1", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["induction","pigeonhole"], "level": "HL"},
-          {"title": "10.2 Divisibility, GCD, LCM & Primes", "file": "Discrete Mathematics/10.2-divisibility-gcd-lcm-primes.md", "topic": "M10.2", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["gcd","primes"], "level": "HL"},
-          {"title": "10.3 Linear Diophantine Equations", "file": "Discrete Mathematics/10.3-linear-diophantine.md", "topic": "M10.3", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["diophantine"], "level": "HL"},
-          {"title": "10.4 Modular Arithmetic & CRT", "file": "Discrete Mathematics/10.4-modular-arithmetic.md", "topic": "M10.4", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["modular","crt"], "level": "HL"},
-          {"title": "10.5 Integer Bases", "file": "Discrete Mathematics/10.5-integer-bases.md", "topic": "M10.5", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["bases","representation"], "level": "HL"},
-          {"title": "10.6 Fermat's Little Theorem", "file": "Discrete Mathematics/10.6-fermats-little-theorem.md", "topic": "M10.6", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["fermat"], "level": "HL"},
-          {"title": "10.7 Graph Theory Basics", "file": "Discrete Mathematics/10.7-graph-theory-basics.md", "topic": "M10.7", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["graphs","planarity"], "level": "HL"},
-          {"title": "10.8 Walks, Trails & Cycles", "file": "Discrete Mathematics/10.8-eulerian-hamiltonian.md", "topic": "M10.8", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["eulerian","hamiltonian"], "level": "HL"},
-          {"title": "10.9 Graph Algorithms (Kruskal & Dijkstra)", "file": "Discrete Mathematics/10.9-graph-algorithms.md", "topic": "M10.9", "time_estimate": 35, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["mst","shortest path"], "level": "HL"},
-          {"title": "10.10 Chinese Postman & TSP", "file": "Discrete Mathematics/10.10-postman-tsp-heuristics.md", "topic": "M10.10", "time_estimate": 35, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["tsp","heuristics"], "level": "HL"},
-          {"title": "10.11 Recurrence Relations", "file": "Discrete Mathematics/10.11-recurrence-relations.md", "topic": "M10.11", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["recurrence","characteristic"], "level": "HL"}
+          {"title": "10.1 Strong Induction & Pigeonhole", "file": "10.1-strong-induction-pigeonhole.md", "topic": "M10.1", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["induction","pigeonhole"], "level": "HL"},
+          {"title": "10.2 Divisibility, GCD, LCM & Primes", "file": "10.2-divisibility-gcd-lcm-primes.md", "topic": "M10.2", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["gcd","primes"], "level": "HL"},
+          {"title": "10.3 Linear Diophantine Equations", "file": "10.3-linear-diophantine.md", "topic": "M10.3", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["diophantine"], "level": "HL"},
+          {"title": "10.4 Modular Arithmetic & CRT", "file": "10.4-modular-arithmetic.md", "topic": "M10.4", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["modular","crt"], "level": "HL"},
+          {"title": "10.5 Integer Bases", "file": "10.5-integer-bases.md", "topic": "M10.5", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["bases","representation"], "level": "HL"},
+          {"title": "10.6 Fermat's Little Theorem", "file": "10.6-fermats-little-theorem.md", "topic": "M10.6", "time_estimate": 20, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["fermat"], "level": "HL"},
+          {"title": "10.7 Graph Theory Basics", "file": "10.7-graph-theory-basics.md", "topic": "M10.7", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["graphs","planarity"], "level": "HL"},
+          {"title": "10.8 Walks, Trails & Cycles", "file": "10.8-eulerian-hamiltonian.md", "topic": "M10.8", "time_estimate": 25, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["eulerian","hamiltonian"], "level": "HL"},
+          {"title": "10.9 Graph Algorithms (Kruskal & Dijkstra)", "file": "10.9-graph-algorithms.md", "topic": "M10.9", "time_estimate": 35, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["mst","shortest path"], "level": "HL"},
+          {"title": "10.10 Chinese Postman & TSP", "file": "10.10-postman-tsp-heuristics.md", "topic": "M10.10", "time_estimate": 35, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["tsp","heuristics"], "level": "HL"},
+          {"title": "10.11 Recurrence Relations", "file": "10.11-recurrence-relations.md", "topic": "M10.11", "time_estimate": 30, "timestamp": "2025/09/12", "categories": ["Math AA"], "tags": ["recurrence","characteristic"], "level": "HL"}
         ]
       }
     ]
