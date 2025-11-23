@@ -3,192 +3,949 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivy Editors View</title>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&display=swap" rel="stylesheet">
+    <title>Modified Markdown Editor</title>
+    
+    <!-- MathLive Library -->
+    <script src="https://unpkg.com/mathlive"></script>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            --blur: blur(12px);
+            
+            --primary: #007AFF; /*  Blue */
+            --primary-glow: rgba(0, 122, 255, 0.3);
+            --chem: #34C759; /*  Green */
+            --danger: #FF3B30; /*  Red */
+            --text: #1d1d1f;
+            --bg-app: #f5f5f7;
+            
+            --radius-lg: 18px;
+            --radius-sm: 10px;
+            
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
         body {
+            background-color: var(--bg-app);
+            background-image: radial-gradient(circle at 50% -20%, #e0e7ff 0%, #f5f5f7 40%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            overflow: hidden;
-            background-color: white;
-            color: black;
-            font-family: 'Alexandria', sans-serif;
-            text-align: center;
-        }
-
-        /* INTRO SCREEN */
-        #intro {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
+            padding: 0;
+            color: var(--text);
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: white;
-        }
-
-        #logo-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #logo {
-            width: 500px;
-            opacity: 1;
-        }
-
-        .light-swipe {
-            position: absolute;
-            top: 0;
-            left: -150%;
-            width: 150%;
-            height: 100%;
-            background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.9) 50%, transparent 100%);
-        }
-
-        /* MAIN CONTENT */
-        #main-content {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            display: none;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            opacity: 1;
-            transition: opacity 0.7s ease-in-out;
+            min-height: 100vh;
+            overflow-y: scroll; 
         }
 
-        #title {
-            font-size: 2.5rem;
-            font-weight: bold;
+        /* --- Global Keyboard Tweaks --- */
+        math-virtual-keyboard {
+            --keyboard-padding-bottom: 50px;
+            --keyboard-zindex: 3000;
         }
+        
+        /* Make the delete button red */
+        .action.warning { color: var(--danger) !important; }
 
-        #subtitle {
-            font-size: 1rem;
-            margin-top: 10px;
-        }
+        /* Force upright font for Chem */
+        math-field.chem-field { --math-font-style: normal; }
 
-        /* Button Styling */
-        #proceed-btn {
+        /* --- Floating Glass Toolbar --- */
+        .toolbar-container {
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            margin-bottom: 10px;
             margin-top: 20px;
-            padding: 12px 24px;
-            font-size: 1.2rem;
-            cursor: pointer;
+            width: fit-content;
+        }
+
+        .toolbar {
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            padding: 10px 14px;
+            border-radius: 50px;
+            box-shadow: var(--glass-shadow);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            user-select: none;
+            transition: var(--transition);
+        }
+
+        .toolbar:hover {
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* --- Animated Buttons --- */
+        .tool-btn {
+            background: transparent;
             border: none;
-            background: black;
-            color: white;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            color: #555;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
             position: relative;
-            overflow: hidden;
+        }
+        
+        .tool-btn:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: var(--text);
+            transform: scale(1.1);
         }
 
-        #proceed-btn::before {
-            content: "";
+        .tool-btn:active { transform: scale(0.95); }
+
+        /* Active State (Selection) */
+        .tool-btn.active-state {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px var(--primary-glow);
+        }
+
+        /* Specific Button Colors */
+        .btn-math:hover { color: var(--primary); }
+        .btn-chem:hover { color: var(--chem); }
+
+        /* Tooltip */
+        .tool-btn[title]:hover::after {
+            content: attr(title);
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.4) 10%, transparent 50%);
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(4px);
+            color: white;
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 4000;
             opacity: 0;
-            transition: opacity 0.3s ease-in-out;
+            animation: fadeIn 0.2s forwards;
         }
 
-        #proceed-btn:hover::before {
+        @keyframes fadeIn { to { opacity: 1; transform: translateX(-50%) translateY(-5px); } }
+
+        .divider { width: 1px; height: 24px; background: rgba(0,0,0,0.1); margin: 0 6px; }
+
+        /* --- Custom Animated Dropdown --- */
+        .custom-select-wrapper {
+            position: relative;
+            min-width: 130px;
+        }
+        .custom-select-trigger {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.5);
+            border: 1px solid transparent;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        .custom-select-trigger:hover { background: rgba(255,255,255,0.8); }
+        .custom-select-trigger::after {
+            content: '▼'; font-size: 0.6em; margin-left: 10px; color: #888;
+        }
+        .custom-options {
+            position: absolute;
+            top: 120%; left: 0; right: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 1px solid rgba(255,255,255,0.2);
+            overflow: hidden;
+            opacity: 0; visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition);
+            z-index: 2000;
+        }
+        .custom-select-wrapper.open .custom-options {
+            opacity: 1; visibility: visible; transform: translateY(0);
+        }
+        .custom-option {
+            padding: 10px 16px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.9rem;
+        }
+        .custom-option:hover { background: var(--primary); color: white; }
+        .custom-option.selected { background: rgba(0,0,0,0.05); font-weight: 600; }
+
+        /* --- Document Title Input --- */
+        #docTitle {
+            background: transparent;
+            border: none;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text);
+            text-align: center;
+            width: 100%;
+            max-width: 850px;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            outline: none;
+            opacity: 0.5;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        #docTitle:hover, #docTitle:focus {
             opacity: 1;
         }
-
-        #proceed-btn:hover {
-            background: grey;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-            transform: scale(1.05);
+        #docTitle::placeholder {
+            color: #aaa;
+            font-weight: 500;
         }
 
-        #proceed-btn:active {
-            transform: scale(0.95);
+        /* --- Editor Page --- */
+        #editor {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            max-width: 850px; 
+            min-height: 1000px; 
+            border-radius: 4px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 80px; 
+            box-sizing: border-box;
+            outline: none;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 50px;
+            transition: box-shadow 0.3s;
+        }
+        #editor:focus { box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+
+        #editor h1 { font-size: 2.2em; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 0.3em; }
+        #editor h2 { font-size: 1.6em; color: #333; margin-top: 1.5em; }
+        
+        #editor img {
+            max-width: 100%; border-radius: 8px; cursor: move;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        #editor img:hover { transform: scale(1.01); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }
+        #editor img::selection { background: transparent; }
+
+        /* --- Math/Chem Fields --- */
+        math-field {
+            background: rgba(0,0,0,0.04);
+            border-radius: 6px;
+            padding: 2px 8px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            min-width: 30px;
+        }
+        math-field:focus-within {
+            background: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+            transform: scale(1.02);
+            z-index: 10;
+        }
+        
+        math-field.chem-field {
+            background: rgba(52, 199, 89, 0.1);
+            color: #0c501e;
+            font-style: normal !important;
+        }
+        math-field.chem-field:focus-within {
+            box-shadow: 0 4px 12px rgba(52, 199, 89, 0.25);
         }
 
-        /* ANIMATIONS */
-        @keyframes zoomFadeOut {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(3.5); opacity: 0; }
+        /* WRAPPER for Inline Math: Critical for 'Type After' functionality */
+        .math-wrapper {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 2px;
         }
 
-        @keyframes zoomOutContent {
-            0% { transform: scale(1.3); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
+        .block-container math-field {
+            padding: 15px 25px;
+            font-size: 1.3em;
+            background: white;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 12px;
+            display: block;
         }
 
-        @keyframes swipeLight {
-            0% { left: -150%; }
-            100% { left: 150%; }
+        /* --- Markscheme --- */
+        details.markscheme {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            margin: 20px 0;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        details.markscheme summary {
+            background: rgba(245, 245, 247, 0.8);
+            padding: 12px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        details.markscheme summary:hover { background: #f0f0f2; }
+        .markscheme-content { padding: 20px; }
+
+        /* --- Buttons --- */
+        .btn-download {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+        .btn-download:hover {
+            box-shadow: 0 4px 15px var(--primary-glow);
+            transform: translateY(-1px);
         }
 
-        @keyframes reverseZoomFadeOut {
-            0% { transform: scale(3.5); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
+        /* --- Modal (Glass) --- */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(5px);
+            z-index: 5000;
+            display: flex; justify-content: center; align-items: center;
+            opacity: 0; pointer-events: none; transition: 0.3s;
+        }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        
+        .modal {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: 24px;
+            width: 420px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.4);
+            display: flex; flex-direction: column; gap: 15px;
+            transform: scale(0.9); transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .modal-overlay.active .modal { transform: scale(1); }
+        
+        .modal h3 { margin: 0; font-size: 1.2rem; text-align: center; color: #333; }
+        
+        .glass-input {
+            padding: 12px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.5);
+            font-size: 1rem;
+            outline: none;
+            transition: 0.2s;
+        }
+        .glass-input:focus { background: white; border-color: var(--primary); }
+
+        .or-divider { text-align: center; color: #888; font-size: 0.85rem; font-weight: 500; }
+
+        .file-upload-wrapper {
+            position: relative; overflow: hidden; display: inline-block;
+        }
+        .btn-file-choice {
+            border: 2px dashed rgba(0,0,0,0.1);
+            border-radius: 12px;
+            background: rgba(255,255,255,0.4);
+            color: #555;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+            font-weight: 500;
+            display: flex; flex-direction: column; align-items: center; gap: 5px;
+        }
+        .btn-file-choice:hover { border-color: var(--primary); color: var(--primary); background: rgba(0,122,255,0.05); }
+        .btn-file-choice i { font-size: 1.5rem; }
+        #imgFileInput {
+            position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer;
         }
 
-        @keyframes reverseContentFade {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
+        .modal-actions { display: flex; justify-content: space-between; margin-top: 10px; }
+        .btn-glass {
+            padding: 10px 20px; border-radius: 12px; font-weight: 600; cursor: pointer; border: none; transition: 0.2s;
         }
+        .btn-glass-cancel { background: rgba(0,0,0,0.05); color: #555; }
+        .btn-glass-cancel:hover { background: rgba(0,0,0,0.1); }
+        .btn-glass-insert { background: var(--primary); color: white; opacity: 0.5; pointer-events: none; }
+        .btn-glass-insert.active { opacity: 1; pointer-events: auto; box-shadow: 0 4px 15px var(--primary-glow); }
 
     </style>
 </head>
 <body>
-    <div id="intro">
-        <div id="logo-container">
-            <img src="https://i.imgur.com/wAi2MSD.png" alt="Logo" id="logo">
-            <div class="light-swipe"></div>
+
+    <div class="toolbar-container">
+        <div class="toolbar">
+            <!-- Custom Dropdown -->
+            <div class="custom-select-wrapper" id="styleDropdown">
+                <div class="custom-select-trigger" onclick="toggleDropdown()">Normal</div>
+                <div class="custom-options">
+                    <div class="custom-option selected" onclick="selectStyle('p', 'Normal')">Normal</div>
+                    <div class="custom-option" onclick="selectStyle('h1', 'Heading 1')">Heading 1</div>
+                    <div class="custom-option" onclick="selectStyle('h2', 'Heading 2')">Heading 2</div>
+                    <div class="custom-option" onclick="selectStyle('h3', 'Heading 3')">Heading 3</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <button class="tool-btn" id="btnBold" onclick="toggleFormat('bold')" title="Bold"><i class="ph ph-text-b"></i></button>
+            <button class="tool-btn" id="btnItalic" onclick="toggleFormat('italic')" title="Italic"><i class="ph ph-text-italic"></i></button>
+            <button class="tool-btn" id="btnUnderline" onclick="toggleFormat('underline')" title="Underline"><i class="ph ph-text-underline"></i></button>
+            
+            <div class="divider"></div>
+
+            <button class="tool-btn btn-math" onclick="insertMath('inline')" title="Inline Math"><i class="ph ph-sigma"></i></button>
+            <button class="tool-btn btn-math" onclick="insertMath('block')" title="Block Math"><i class="ph ph-sigma" style="font-weight:bold; border: 2px solid currentColor; border-radius: 4px; padding: 2px; font-size: 0.8rem;"></i></button>
+
+            <div class="divider"></div>
+
+            <button class="tool-btn btn-chem" onclick="insertChem('inline')" title="Inline Chem"><i class="ph ph-flask"></i></button>
+            <button class="tool-btn btn-chem" onclick="insertChem('block')" title="Block Chem"><i class="ph ph-flask" style="font-weight:bold; border: 2px solid currentColor; border-radius: 4px; padding: 2px; font-size: 0.8rem;"></i></button>
+
+            <div class="divider"></div>
+
+            <button class="tool-btn" onclick="openImageModal()" title="Insert Image"><i class="ph ph-image"></i></button>
+            <button class="tool-btn" onclick="insertMarkscheme()" title="Markscheme"><i class="ph ph-list-checks"></i></button>
+
+            <div class="divider"></div>
+
+            <button class="tool-btn btn-download" onclick="downloadMarkdown()">Download</button>
         </div>
     </div>
 
-    <div id="main-content">
-        <h1 id="title">Ivy Editors View</h1>
-        <p id="subtitle">Only authorized editors may proceed.</p>
-        <button id="proceed-btn">Proceed</button>
+    <!-- Title Input -->
+    <input type="text" id="docTitle" placeholder="Untitled Note" spellcheck="false" autocomplete="off">
+
+    <!-- The Paper -->
+    <div id="editor" contenteditable="true" spellcheck="false">
+        <h1>Markdown Creator</h1>
+        <p>Start typing here... Use "del" before inline equations to delete equations.</p>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imgModal" class="modal-overlay">
+        <div class="modal">
+            <h3>Add Media</h3>
+            
+            <input type="text" class="glass-input" id="imgUrlInput" placeholder="Paste image URL here..." oninput="checkImgInput()">
+            
+            <div class="or-divider">OR</div>
+            
+            <div class="file-upload-wrapper">
+                <div class="btn-file-choice">
+                    <i class="ph ph-upload-simple"></i>
+                    <span id="fileNameDisplay">Click to upload from device</span>
+                </div>
+                <input type="file" id="imgFileInput" accept="image/*" onchange="handleFileSelect()">
+            </div>
+            
+            <div class="modal-actions">
+                <button class="btn-glass btn-glass-cancel" onclick="closeImageModal()">Cancel</button>
+                <button id="btnInsertImg" class="btn-glass btn-glass-insert" onclick="confirmInsertImage()">Insert Image</button>
+            </div>
+        </div>
     </div>
 
     <script>
-        setTimeout(() => {
-            document.querySelector(".light-swipe").style.animation = "swipeLight 1.4s ease-in-out forwards";
+        const editor = document.getElementById('editor');
+        const imgModal = document.getElementById('imgModal');
+        const imgUrlInput = document.getElementById('imgUrlInput');
+        const imgFileInput = document.getElementById('imgFileInput');
+        const btnInsertImg = document.getElementById('btnInsertImg');
+        const docTitle = document.getElementById('docTitle');
+        
+        let savedRange = null;
 
-            setTimeout(() => {
-                document.getElementById("logo").style.animation = "zoomFadeOut 0.7s ease-in-out forwards";
+        // --- 1. Custom Dropdown Logic ---
+        const dropdownWrapper = document.getElementById('styleDropdown');
+        const dropdownTrigger = dropdownWrapper.querySelector('.custom-select-trigger');
+        const options = dropdownWrapper.querySelectorAll('.custom-option');
 
-                setTimeout(() => {
-                    document.getElementById("main-content").style.display = "flex";
-                    document.getElementById("main-content").style.animation = "zoomOutContent 0.7s cubic-bezier(0.6, 0.05, 0.1, 1) forwards";
-
-                    setTimeout(() => {
-                        document.getElementById("intro").style.display = "none";
-                    }, 700);
-                }, 100);
-            }, 500);
-        }, 500);
-
-        document.getElementById("proceed-btn").addEventListener("click", function() {
-            document.getElementById("main-content").style.animation = "reverseContentFade 0.7s ease-in-out forwards";
-            document.getElementById("logo").style.animation = "reverseZoomFadeOut 0.7s ease-in-out forwards";
-
-            setTimeout(() => {
-                document.getElementById("main-content").style.display = "none";
-                document.getElementById("intro").style.display = "flex";
-
-                setTimeout(() => {
-                    document.querySelector(".light-swipe").style.animation = "swipeLight 0.7s ease-in-out forwards";
-
-                    setTimeout(() => {
-                        document.body.innerHTML = '<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" title="Rick Astley - Never Gonna Give You Up (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;"></iframe>';
-                    }, 500);
-                }, 500);
-            }, 700);
+        function toggleDropdown() { dropdownWrapper.classList.toggle('open'); }
+        function selectStyle(tag, label) {
+            document.execCommand('formatBlock', false, tag);
+            dropdownTrigger.childNodes[0].nodeValue = label; 
+            options.forEach(opt => opt.classList.remove('selected'));
+            event.target.classList.add('selected');
+            dropdownWrapper.classList.remove('open');
+            editor.focus();
+        }
+        window.addEventListener('click', (e) => {
+            if (!dropdownWrapper.contains(e.target)) dropdownWrapper.classList.remove('open');
         });
+
+        // --- 2. Active Button States ---
+        function toggleFormat(cmd) { document.execCommand(cmd, false, null); editor.focus(); checkFormatState(); }
+        function checkFormatState() {
+            const isBold = document.queryCommandState('bold');
+            const isItalic = document.queryCommandState('italic');
+            const isUnderline = document.queryCommandState('underline');
+            document.getElementById('btnBold').classList.toggle('active-state', isBold);
+            document.getElementById('btnItalic').classList.toggle('active-state', isItalic);
+            document.getElementById('btnUnderline').classList.toggle('active-state', isUnderline);
+            
+            const sel = window.getSelection();
+            if (sel.rangeCount && editor.contains(sel.anchorNode)) {
+                let node = sel.anchorNode;
+                if (node.nodeType === 3) node = node.parentElement;
+                while (node && node.id !== 'editor') {
+                    const tag = node.tagName.toLowerCase();
+                    if (['h1', 'h2', 'h3', 'p'].includes(tag)) {
+                        let label = "Normal";
+                        if (tag === 'h1') label = "Heading 1";
+                        if (tag === 'h2') label = "Heading 2";
+                        if (tag === 'h3') label = "Heading 3";
+                        dropdownTrigger.childNodes[0].nodeValue = label;
+                        break;
+                    }
+                    node = node.parentElement;
+                }
+            }
+        }
+        document.addEventListener('selectionchange', () => {
+             if (document.activeElement === editor || editor.contains(document.activeElement)) checkFormatState();
+        });
+
+
+        // --- 3. Keyboard & MathLive Logic (UPDATED) ---
+
+        // Register custom Delete Command
+        MathfieldElement.commands.deleteEquation = (mf) => {
+            const parent = mf.parentElement;
+            if (parent) {
+                setTimeout(() => {
+                    // If inline wrapper, remove the wrapper
+                    if(parent.classList.contains('math-wrapper')) parent.remove();
+                    // If block container, remove that
+                    else if(parent.classList.contains('block-container')) parent.remove();
+                    // Fallback
+                    else mf.remove();
+                    
+                    editor.focus();
+                }, 10);
+            }
+            return true;
+        };
+
+        const MATH_LAYOUT = {
+            label: "Math",
+            rows: [
+                [
+                    { label: "7", key: "7" }, { label: "8", key: "8" }, { label: "9", key: "9" }, { label: "÷", key: "/" }, { label: "Separator", class:"separator w5" },
+                    { label: "x", key: "x" }, { label: "y", key: "y" }, { label: "z", key: "z" }
+                ],
+                [
+                    { label: "4", key: "4" }, { label: "5", key: "5" }, { label: "6", key: "6" }, { label: "×", key: "*" }, { label: "Separator", class:"separator w5" },
+                    { label: "<", key: "<" }, { label: ">", key: ">" }, { label: "=", key: "=" }
+                ],
+                [
+                    { label: "1", key: "1" }, { label: "2", key: "2" }, { label: "3", key: "3" }, { label: "−", key: "-" }, { label: "Separator", class:"separator w5" },
+                    { label: "(", key: "(" }, { label: ")", key: ")" }, { label: "√", latex: "\\sqrt{#?}" }
+                ],
+                [
+                    { label: "0", key: "0" }, { label: ".", key: "." }, { label: "π", key: "pi" }, { label: "+", key: "+" }, { label: "Separator", class:"separator w5" },
+                    { class: "action", label: "⌫", command: ["performWithFeedback", "deleteBackward"] },
+                    // CUSTOM DELETE BUTTON
+                    { class: "action warning", label: "🗑", command: "deleteEquation" }
+                ]
+            ]
+        };
+
+        const CHEM_LAYOUT = {
+            label: "Chem",
+            tooltip: "Chemistry",
+            rows: [
+                [
+                    { label: "1", key: "1" }, { label: "2", key: "2" }, { label: "3", key: "3" }, { label: "4", key: "4" }, { label: "5", key: "5" },
+                    { label: "+", key: "+" }, { label: "−", key: "-" }, { label: "=", key: "=" },
+                    { label: "⟶", latex: "\\longrightarrow" }, 
+                    { label: "⇌", latex: "\\rightleftharpoons" }
+                ],
+                [
+                    { label: "6", key: "6" }, { label: "7", key: "7" }, { label: "8", key: "8" }, { label: "9", key: "9" }, { label: "0", key: "0" },
+                    { label: "(", key: "(" }, { label: ")", key: ")" },
+                    { label: "<span>◻</span><sup><span>◻</span></sup>", latex: "^{#?}" },
+                    { label: "<span>◻</span><sub><span>◻</span></sub>", latex: "_{#?}" },
+                    { label: "Sup/Sub", latex: "_{#?}^{#?}" }
+                ],
+                [
+                    { label: "e⁻", latex: "e^-" },
+                    { label: "H⁺", latex: "H^+" },
+                    { label: "Δ", latex: "\\Delta" },
+                    { label: "mol", latex: "\\text{mol}" },
+                    { label: "(s)", latex: "_{(s)}" },
+                    { label: "(l)", latex: "_{(l)}" },
+                    { label: "(g)", latex: "_{(g)}" },
+                    { label: "(aq)", latex: "_{(aq)}" },
+                    { class: "action", label: "⌫", command: ["performWithFeedback", "deleteBackward"] },
+                    // CUSTOM DELETE BUTTON
+                    { class: "action warning", label: "🗑", command: "deleteEquation" }
+                ]
+            ]
+        };
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (window.mathVirtualKeyboard) window.mathVirtualKeyboard.hide();
+                closeImageModal();
+            }
+        });
+
+        // Close Menu when clicking off logic
+        document.addEventListener('click', (e) => {
+            const isMath = e.target.closest('math-field');
+            const isKeyboard = e.target.closest('math-virtual-keyboard');
+            const isToolbar = e.target.closest('.toolbar'); 
+            
+            // If click is NOT on math field, NOT on keyboard, NOT on toolbar
+            if (!isMath && !isKeyboard && !isToolbar) {
+                if (window.mathVirtualKeyboard) {
+                    window.mathVirtualKeyboard.hide();
+                }
+            }
+        });
+
+        function updateKeyboardLayout(target) {
+            if (target.tagName.toLowerCase() === 'math-field') {
+                if (target.classList.contains('chem-field')) {
+                    window.mathVirtualKeyboard.layouts = [CHEM_LAYOUT];
+                } else {
+                    window.mathVirtualKeyboard.layouts = [MATH_LAYOUT];
+                }
+            }
+        }
+        
+        document.addEventListener('focusin', (e) => {
+            const target = e.target;
+            if (target.tagName.toLowerCase() === 'math-field') updateKeyboardLayout(target);
+        });
+
+        document.execCommand('defaultParagraphSeparator', false, 'p');
+
+
+        // --- 4. Math & Chem Insert (UPDATED Navigation) ---
+        function createField(type) {
+            const mf = new MathfieldElement();
+            mf.mathVirtualKeyboardPolicy = "manual"; 
+            
+            // Navigation Logic: Right arrow at end exits to text
+            mf.addEventListener('focus-out', (ev) => {
+                if (ev.detail.direction === 'forward') {
+                    const wrapper = mf.parentElement;
+                    // If we have a wrapper and a sibling (the ZWSP we insert)
+                    if (wrapper && wrapper.classList.contains('math-wrapper') && wrapper.nextSibling) {
+                        const range = document.createRange();
+                        range.setStart(wrapper.nextSibling, 0); 
+                        range.collapse(true);
+                        const sel = window.getSelection();
+                        sel.removeAllRanges();
+                        sel.addRange(range);
+                    }
+                }
+            });
+
+            if (type === 'chem') {
+                mf.classList.add('chem-field');
+                mf.setAttribute('letter-shape-style', 'upright'); 
+            } else {
+                mf.classList.add('math-field');
+            }
+            return mf;
+        }
+
+        function insertMath(mode) { insertField('math', mode); }
+        function insertChem(mode) { insertField('chem', mode); }
+
+        function insertField(type, mode) {
+            const mf = createField(type);
+            mf.value = type === 'chem' ? "" : "x";
+
+            if (mode === 'inline') {
+                const wrapper = document.createElement('span');
+                wrapper.className = 'math-wrapper';
+                wrapper.contentEditable = "false";
+                wrapper.appendChild(mf);
+                
+                // Add Zero Width Space (\u200B) AFTER the wrapper to allow clicking "after" it
+                const zwsp = document.createTextNode('\u200B');
+                
+                const sel = window.getSelection();
+                if (sel.rangeCount) {
+                    const range = sel.getRangeAt(0);
+                    range.deleteContents();
+                    range.insertNode(zwsp);
+                    range.insertNode(wrapper);
+                    
+                    // Focus logic
+                    setTimeout(() => { 
+                        mf.focus(); 
+                        updateKeyboardLayout(mf);
+                        window.mathVirtualKeyboard.show();
+                    }, 50);
+                }
+            } else {
+                const container = document.createElement('div');
+                container.className = 'block-container';
+                container.contentEditable = "false";
+                container.appendChild(mf);
+                insertNodeAtCursor(container);
+                const p = document.createElement('p');
+                p.innerHTML = "<br>";
+                container.after(p);
+                setTimeout(() => { 
+                    mf.focus(); 
+                    updateKeyboardLayout(mf); 
+                    window.mathVirtualKeyboard.show();
+                }, 50);
+            }
+        }
+
+
+        // --- 5. Image Modal Logic (RESTORED) ---
+        function saveSelection() {
+            const sel = window.getSelection();
+            if (sel.getRangeAt && sel.rangeCount) {
+                if (editor.contains(sel.anchorNode)) {
+                    savedRange = sel.getRangeAt(0);
+                } else {
+                    savedRange = null;
+                }
+            }
+        }
+
+        function restoreSelection() {
+            if (savedRange) {
+                const sel = window.getSelection();
+                sel.removeAllRanges();
+                sel.addRange(savedRange);
+            } else {
+                editor.focus();
+                const range = document.createRange();
+                range.selectNodeContents(editor);
+                range.collapse(false);
+                const sel = window.getSelection();
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }
+        }
+
+        function openImageModal() {
+            saveSelection(); 
+            imgModal.classList.add('active');
+            imgUrlInput.focus();
+            checkImgInput();
+        }
+
+        function closeImageModal() {
+            imgModal.classList.remove('active');
+            imgUrlInput.value = "";
+            imgFileInput.value = "";
+            document.getElementById('fileNameDisplay').innerText = "Click to upload from device";
+            checkImgInput();
+        }
+
+        function handleFileSelect() {
+            if(imgFileInput.files.length > 0) {
+                document.getElementById('fileNameDisplay').innerText = imgFileInput.files[0].name;
+            }
+            checkImgInput();
+        }
+
+        function checkImgInput() {
+            const hasUrl = imgUrlInput.value.trim().length > 0;
+            const hasFile = imgFileInput.files.length > 0;
+            if (hasUrl || hasFile) btnInsertImg.classList.add('active');
+            else btnInsertImg.classList.remove('active');
+        }
+
+        function confirmInsertImage() {
+            restoreSelection();
+            if (imgFileInput.files.length > 0) {
+                const file = imgFileInput.files[0];
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    insertImageTag(e.target.result);
+                };
+                reader.readAsDataURL(file);
+            } else if (imgUrlInput.value.trim()) {
+                insertImageTag(imgUrlInput.value.trim());
+            }
+            closeImageModal();
+        }
+
+        function insertImageTag(src) {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = "Inserted Image";
+            insertNodeAtCursor(img);
+            const br = document.createElement('br');
+            img.after(br);
+            
+            const range = document.createRange();
+            range.setStartAfter(br);
+            range.collapse(true);
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+
+        // --- 6. Helper & Export ---
+        function insertNodeAtCursor(node) {
+            const sel = window.getSelection();
+            if (!sel.rangeCount) return;
+            const range = sel.getRangeAt(0);
+            range.deleteContents();
+            range.insertNode(node);
+            range.setStartAfter(node);
+            range.setEndAfter(node);
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+
+        editor.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace') {
+                const sel = window.getSelection();
+                if (!sel.rangeCount || !sel.isCollapsed) return;
+                let block = sel.anchorNode;
+                while (block && block.parentElement && block.parentElement !== editor) { 
+                    block = block.parentElement; 
+                }
+                if (block && sel.anchorOffset === 0) {
+                    const prev = block.previousElementSibling;
+                    if (prev && (prev.classList.contains('markscheme') || prev.classList.contains('block-container') || prev.classList.contains('math-wrapper') || prev.tagName === 'IMG')) {
+                        e.preventDefault();
+                        prev.remove();
+                    }
+                }
+            }
+        });
+
+        function insertMarkscheme() {
+            const details = document.createElement('details');
+            details.className = 'markscheme';
+            details.open = true;
+            details.contentEditable = "false";
+            const summary = document.createElement('summary');
+            const titleSpan = document.createElement('span');
+            titleSpan.className = 'summary-title';
+            titleSpan.contentEditable = "true"; 
+            titleSpan.innerText = "Markscheme";
+            summary.appendChild(titleSpan);
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'markscheme-content';
+            contentDiv.contentEditable = "true";
+            contentDiv.innerHTML = "<p>Answer...</p>";
+            details.appendChild(summary);
+            details.appendChild(contentDiv);
+            insertNodeAtCursor(details);
+            const p = document.createElement('p');
+            p.innerHTML = "<br>";
+            details.after(p);
+            setTimeout(() => titleSpan.focus(), 10);
+        }
+
+        function downloadMarkdown() {
+            let title = docTitle.value.trim();
+            if (!title) title = "Untitled Note";
+            const filename = title.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '.md';
+
+            const markdown = parseToMarkdown(editor);
+            const blob = new Blob([markdown], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+        }
+
+        // --- UPDATED EXPORT ENGINE (Escaping + HTML Tags) ---
+        function parseToMarkdown(element) {
+            let md = "";
+            element.childNodes.forEach(node => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    // Escape special Markdown chars in plain text
+                    let text = node.textContent;
+                    text = text.replace(/([\\*_{}[\]()#+\-.!])/g, '\\$1');
+                    md += text;
+                } else if (node.nodeType === Node.ELEMENT_NODE) {
+                    const tag = node.tagName.toLowerCase();
+                    const style = window.getComputedStyle(node);
+                    
+                    let prefix = "";
+                    let suffix = "";
+                    
+                    // Check Bold
+                    if (tag === 'b' || tag === 'strong' || (parseInt(style.fontWeight) > 600)) {
+                        prefix += "<b>"; suffix = "</b>" + suffix;
+                    }
+                    // Check Italic
+                    if (tag === 'i' || tag === 'em' || (style.fontStyle === 'italic')) {
+                        prefix += "<i>"; suffix = "</i>" + suffix;
+                    }
+                    // Check Underline
+                    if (tag === 'u' || style.textDecorationLine.includes('underline')) {
+                        prefix += "<u>"; suffix = "</u>" + suffix;
+                    }
+
+                    // Block Elements & Custom Widgets
+                    if (tag === 'h1') md += `\n# ${node.textContent}\n`;
+                    else if (tag === 'h2') md += `\n## ${node.textContent}\n`;
+                    else if (tag === 'h3') md += `\n### ${node.textContent}\n`;
+                    else if (tag === 'img') md += `\n![Image](${node.src})\n`;
+                    else if (tag === 'math-field') {
+                        const latex = node.value;
+                        const isChem = node.classList.contains('chem-field');
+                        const isBlock = node.parentElement.classList.contains('block-container');
+                        const content = isChem ? `\\ce{${latex}}` : latex;
+                        if (isBlock) md += `\n$$\n${content}\n$$\n`;
+                        else md += `$${content}$`;
+                    }
+                    else if (node.classList.contains('math-wrapper')) {
+                         md += parseToMarkdown(node);
+                    }
+                    else if (tag === 'details') {
+                        const title = node.querySelector('.summary-title').innerText || 'Markscheme';
+                        const content = parseToMarkdown(node.querySelector('.markscheme-content'));
+                        md += `\n<details>\n<summary>${title}</summary>\n\n${content}\n</details>\n`;
+                    }
+                    else if (tag === 'p' || tag === 'div') {
+                        if (node.classList.contains('block-container')) md += parseToMarkdown(node);
+                        else md += `\n${parseToMarkdown(node)}\n`;
+                    }
+                    else if (tag === 'br') {
+                        md += "\n";
+                    }
+                    else {
+                        md += prefix + parseToMarkdown(node) + suffix;
+                    }
+                }
+            });
+            return md;
+        }
     </script>
 </body>
 </html>
