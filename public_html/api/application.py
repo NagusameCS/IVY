@@ -30,6 +30,7 @@ def atomic_write(filepath, content):
     try:
         with os.fdopen(fd, 'w') as f:
             f.write(content)
+        os.chmod(tmp, 0o644)
         os.replace(tmp, filepath)
     except Exception:
         try:
