@@ -1,0 +1,1950 @@
+{
+  "files": {
+    "public_html/ib-practice-platform/generate.py": {
+      "hash": "7089a3a90551520971b0884d4a522c45cdb59c0c82487d204760ff4b30c0e5d6",
+      "size": 16977,
+      "mtime_ns": 1774634450734404400
+    },
+    "public_html/ib-practice-platform/index.html": {
+      "hash": "158d6ec4d3f3d893952c5e4e42e569178753a6eeefb678901eb3b0cafeb464a0",
+      "size": 170486,
+      "mtime_ns": 1774634097763655800
+    },
+    "public_html/ib-practice-platform/OPTIMIZATION.md": {
+      "hash": "0cd018b661be31071a05cb146592363db1ef6762cb51f48358a5c6d27bd821a3",
+      "size": 8309,
+      "mtime_ns": 1774588148107300200
+    },
+    "public_html/ib-practice-platform/PERFORMANCE_OPTIMIZATION_SUMMARY.txt": {
+      "hash": "2a760c8bac5d2b09ef596ffa9a12f14ebc5f59cf9a13fd59b74e54515575969e",
+      "size": 7352,
+      "mtime_ns": 1774588148107300200
+    },
+    "public_html/ib-practice-platform/question-chunker.js": {
+      "hash": "a0b092b55beb44ca43024b9e2713f595a9523f33db11c6b8a33100c6c799dbff",
+      "size": 2043,
+      "mtime_ns": 1774588148107300200
+    },
+    "public_html/ib-practice-platform/questions.json": {
+      "hash": "9a4e8baa355e4f8fb1116d469b992d1d1e84d1223a2b5199413b6a5e7a2a160a",
+      "size": 123577299,
+      "mtime_ns": 1774623812711148100
+    },
+    "public_html/ib-practice-platform/README.md": {
+      "hash": "7691bfc8b0dd309d5197abf2f7bac4494a28123c71b138939f7e35e2a845fc28",
+      "size": 3064,
+      "mtime_ns": 1774576680219290200
+    },
+    "public_html/ib-practice-platform/VERIFICATION_GUIDE.md": {
+      "hash": "1311fbceecfc9c91fbcf281e82868f11d7735b18e54c260cd7d7752faf3b8855",
+      "size": 8207,
+      "mtime_ns": 1774588148107300200
+    },
+    "public_html/ib-practice-platform/bots/generated_biology.json": {
+      "hash": "b9608ba335efdbbbf9207981219f6f40686257aa0f0862d133945163763032fb",
+      "size": 13102842,
+      "mtime_ns": 1774623208820014400
+    },
+    "public_html/ib-practice-platform/bots/generated_business.json": {
+      "hash": "2c038ac0b14637e801c07aeac821a54e4799e33ff09c846f6c8c46376d62b399",
+      "size": 31180730,
+      "mtime_ns": 1774623665601668600
+    },
+    "public_html/ib-practice-platform/bots/generated_chemistry.json": {
+      "hash": "2580cd45282aeb782a8aeff8de90a2de2f272b0b7a378d77a2863fe8a5e2b15c",
+      "size": 12577407,
+      "mtime_ns": 1774623092476654700
+    },
+    "public_html/ib-practice-platform/bots/generated_computer_science.json": {
+      "hash": "931cdc71d95fbf4d6d54bfe68af040683a5cdcf302fb27534e3890d97c079a80",
+      "size": 12995811,
+      "mtime_ns": 1774623809144999300
+    },
+    "public_html/ib-practice-platform/bots/generated_economics.json": {
+      "hash": "6c08b93618feff7bbac81abbbe61f7ee7ce78cadc36f514899297cd5603c029b",
+      "size": 13785120,
+      "mtime_ns": 1774623329827319000
+    },
+    "public_html/ib-practice-platform/bots/generated_math_aa.json": {
+      "hash": "fa768c992d9559f074f0bc6e13dad6d8b5aaa06a913c2a7051577417e21cd75b",
+      "size": 13142018,
+      "mtime_ns": 1774622715308463600
+    },
+    "public_html/ib-practice-platform/bots/generated_math_ai.json": {
+      "hash": "7bc4f9720454e512dfba48fa1fbc05205b46f0b6f2a868e23dcdcdae44feb607",
+      "size": 13142358,
+      "mtime_ns": 1774622851906123800
+    },
+    "public_html/ib-practice-platform/bots/generated_physics.json": {
+      "hash": "83ab9f24477638991080d621be99de9cf835b6d21c93c01bba0cde86b3cbb056",
+      "size": 12142153,
+      "mtime_ns": 1774622968847790800
+    },
+    "public_html/ib-practice-platform/bots/plan_biology.json": {
+      "hash": "b6010dc8da34c9af4fa7219c598b47177dd36349c29df3a7f854b254ddd65712",
+      "size": 5409,
+      "mtime_ns": 1774623938482214700
+    },
+    "public_html/ib-practice-platform/bots/plan_business.json": {
+      "hash": "2b3a80b70cf25e8aac899015e5127f6c61382d780a6a9b5416831d87a6548513",
+      "size": 9169,
+      "mtime_ns": 1774623938482214700
+    },
+    "public_html/ib-practice-platform/bots/plan_chemistry.json": {
+      "hash": "6f436b85b2514fc2c783b62efd86efe5d65bea931a96f8906aa0c998a4c35ebd",
+      "size": 8669,
+      "mtime_ns": 1774623938482214700
+    },
+    "public_html/ib-practice-platform/bots/plan_computer_science.json": {
+      "hash": "e94f1f0e9844374302531ccc61ffee356f47e85027d16e08db02c760526e2669",
+      "size": 3766,
+      "mtime_ns": 1774623938482214700
+    },
+    "public_html/ib-practice-platform/bots/plan_economics.json": {
+      "hash": "3c45bfdbd880661ba4f9dd0637424d347f34c66af6e8c98959c5d4133972abd8",
+      "size": 7460,
+      "mtime_ns": 1774623938482214700
+    },
+    "public_html/ib-practice-platform/bots/plan_math_aa.json": {
+      "hash": "bc6d81c77f3c3349804bffe652775adc8ee5bdfe1208703900eb743e6515bcc0",
+      "size": 27024,
+      "mtime_ns": 1774623938471343200
+    },
+    "public_html/ib-practice-platform/bots/plan_math_ai.json": {
+      "hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size": 2,
+      "mtime_ns": 1774623938479827200
+    },
+    "public_html/ib-practice-platform/bots/plan_missing_biology.json": {
+      "hash": "b6d4ddf7b5b3288071045e8475d7c27da323a86fccd2d119b0b4c15d2c4b33b8",
+      "size": 902,
+      "mtime_ns": 1774623938519115800
+    },
+    "public_html/ib-practice-platform/bots/plan_missing_business.json": {
+      "hash": "dd4de59ad9915bff062d7ef2f0770202d2112193eab17d890a7c4f4fbfba9b03",
+      "size": 969,
+      "mtime_ns": 1774623938527335500
+    },
+    "public_html/ib-practice-platform/bots/plan_missing_chemistry.json": {
+      "hash": "3c22572e8bc28b86d6502b091c1229dedb94ff0ac6e4a25b76c0e3a1fdec4ea4",
+      "size": 943,
+      "mtime_ns": 1774623938510823700
+    },
+    "public_html/ib-practice-platform/bots/plan_missing_computer_science.json": {
+      "hash": "3bd2f5822eed37f19eae8c6d1db3d7468d7d5e183520946ff149b73af5b06819",
+      "size": 982,
+      "mtime_ns": 1774623938533400400
+    },
+    "public_html/ib-practice-platform/bots/plan_missing_economics.json": {
+      "hash": "80681fc8188bcae8aae28eb4b19c68c0bda7ae8728a2bea4bf787d6ea50cad59",
+      "size": 935,
+      "mtime_ns": 1774623938520823900
+    },
+    "public_html/ib-practice-platform/bots/plan_missing_math_aa.json": {
+      "hash": "c19ad29bdd07d9bf2a82e7cceea03c8f1a63ed00ac166967cb5fea12e7860e5f",
+      "size": 75227,
+      "mtime_ns": 1774623938503219400
+    },
+    "public_html/ib-practice-platform/bots/plan_missing_math_ai.json": {
+      "hash": "f48e36645e3fcb7ea861c07ffbca03b957ad05393e818294a3686607b8bf9073",
+      "size": 75227,
+      "mtime_ns": 1774623938503219400
+    },
+    "public_html/ib-practice-platform/bots/plan_missing_physics.json": {
+      "hash": "9bea225f003deb1ea80a2ba7bbf304e6d0b88ada96da845329a3435508dd36ef",
+      "size": 962,
+      "mtime_ns": 1774623938509730700
+    },
+    "public_html/ib-practice-platform/bots/plan_physics.json": {
+      "hash": "8c33ac6f6813a5cfcbe21c9f9732bf4a02404059485cf705ff63965da40ad526",
+      "size": 8070,
+      "mtime_ns": 1774623938479827200
+    },
+    "public_html/ib-practice-platform/bots/queue.db": "486d55e5c7a33ab3cebd83b42b0ced66bd3f8901c382c1b3a8be5d28d06db91c",
+    "public_html/ib-practice-platform/bots/queue.py": {
+      "hash": "f7f9a2b4aa8280614f15570ef7d81c798ffaf3a06194348ccfd3bb67752504d3",
+      "size": 25479,
+      "mtime_ns": 1774634791449849900
+    },
+    "public_html/ib-practice-platform/bots/start_queue.bat": {
+      "hash": "78cced212f78eeec3f6db4a4367f35360602b0a846cdc0ee1c087f11754e9011",
+      "size": 117,
+      "mtime_ns": 1774584199072848000
+    },
+    "public_html/ib-practice-platform/bots/web_struct_cache.json": "22eaf447cf1d27c3584ae835360e8dfb331891ac77cda87a028fe9840306a1fd",
+    "public_html/ib-practice-platform/data/curriculum.json": {
+      "hash": "49f81a112ff171e9b7ef45078316c4a9d7a28801f1a107683b4dd05ed8dd0685",
+      "size": 33057,
+      "mtime_ns": 1774576680268419900
+    },
+    "public_html/ib-practice-platform/docs/BOT_INSTRUCTIONS.md": {
+      "hash": "a3e3e17369a8067f8c95df1523c426f5b72885eed1a59c5e82efcaf995c3be42",
+      "size": 8423,
+      "mtime_ns": 1774576680354011500
+    },
+    "public_html/ib-practice-platform/docs/QUESTION_TYPES.md": {
+      "hash": "2bb95df76fbc6c2d5be415a0b39ba644192984b1d2f90b2abc2bea8d2309e1ae",
+      "size": 6296,
+      "mtime_ns": 1774576680362709300
+    },
+    "public_html/ib-practice-platform/docs/TEMPLATE_SYSTEM.md": {
+      "hash": "82a81bedf975422e77f710125141b9fa9ddc4221fad608352b99f2f794d5a41f",
+      "size": 13246,
+      "mtime_ns": 1774576680348677700
+    },
+    "public_html/ib-practice-platform/js/cdn-router.js": {
+      "hash": "14bb77f14942b1488c33679ff82353d71741662c9c05eb9b5cf46ad859dbedbd",
+      "size": 7115,
+      "mtime_ns": 1774621862461157500
+    },
+    "public_html/ib-practice-platform/js/optimization-adapter.js": {
+      "hash": "f8b151af05aa398ddabad36d281e191769fda1c8d7b1e382416337e50e37251d",
+      "size": 6283,
+      "mtime_ns": 1774634567321982600
+    },
+    "public_html/ib-practice-platform/js/performance-profiler.js": {
+      "hash": "5c37bb6e45bee5ac51ac5e219d9f1f86664620b5ac010d50c16f7ab144222e84",
+      "size": 5786,
+      "mtime_ns": 1774588148107300200
+    },
+    "public_html/ib-practice-platform/js/question-loader.js": {
+      "hash": "1fa75b235dd89ae8db51be0e689ce643df0f39d6f7068976e3e8e89fa13a6893",
+      "size": 6487,
+      "mtime_ns": 1774634585398666900
+    },
+    "public_html/ib-practice-platform/data/elements/periodic-table.json": {
+      "hash": "8408508f8ee5534c6c250a02ee36df85206f61a70887cae24608379c62d81a80",
+      "size": 29222,
+      "mtime_ns": 1774576680340073800
+    },
+    "public_html/ib-practice-platform/data/templates/biology.json": {
+      "hash": "1c1cb4cc8c28cd097b575a7acb832b0c43b33043b59b868764d892525758b8ff",
+      "size": 94473,
+      "mtime_ns": 1774623748033889300
+    },
+    "public_html/ib-practice-platform/data/templates/business.json": {
+      "hash": "6a5eb3846b0a8fa7c7fc8b96a6b5114cb506d4b1eabab57c562daf18e8930318",
+      "size": 185754,
+      "mtime_ns": 1774623748050501700
+    },
+    "public_html/ib-practice-platform/data/templates/chemistry.json": {
+      "hash": "e481b09f8981692e6f6d8505bd11ec0b29b6257a4c74539ee36d4a2ba72dbec1",
+      "size": 125320,
+      "mtime_ns": 1774623748033889300
+    },
+    "public_html/ib-practice-platform/data/templates/computer_science.json": {
+      "hash": "b2ee7c7731e8b2516be1bd3c57aee835a83ec3b1041e322dbd33a279944b02e4",
+      "size": 75013,
+      "mtime_ns": 1774623748052509000
+    },
+    "public_html/ib-practice-platform/data/templates/economics.json": {
+      "hash": "0b2b4f3f04431ceec5b1ad4f2bacb7cf087b69ae17837de8e66101a821eb5906",
+      "size": 142476,
+      "mtime_ns": 1774623748043657600
+    },
+    "public_html/ib-practice-platform/data/templates/math_aa_core.json": {
+      "hash": "0ca602bbcefd819dbc544a41f2c380f59bc4bbd862dad1e076f470bfa7e9e0ab",
+      "size": 271045,
+      "mtime_ns": 1774623748006025900
+    },
+    "public_html/ib-practice-platform/data/templates/math_aa_hl.json": {
+      "hash": "deb76cfc84a7652476a16dbe453b77b25aa0a892c67dfa44e6f2cf3f4a60e96a",
+      "size": 200265,
+      "mtime_ns": 1774623748016250400
+    },
+    "public_html/ib-practice-platform/data/templates/math_ai.json": {
+      "hash": "4c49cf8db6fb691009f48eccbf125979444b2a0a936398747b20faf546221e83",
+      "size": 461768,
+      "mtime_ns": 1774623748017755500
+    },
+    "public_html/ib-practice-platform/data/templates/physics.json": {
+      "hash": "9b47b098459406a436b12b38ac5c0b71c4f4e53c54a4635dfb6d71e2837f291c",
+      "size": 141405,
+      "mtime_ns": 1774623748039564800
+    },
+    "public_html/.htaccess": {
+      "hash": "c313e5e5e5c36d391b77636596bdd9e11308d6b17025e6593d56270ea2284de4",
+      "size": 2587,
+      "mtime_ns": 1774576879645065200
+    },
+    "public_html/400.shtml": {
+      "hash": "f37827cbe9427267132716e4f3b384212fbf346d74acc099f93e74ca4677cb3f",
+      "size": 3327,
+      "mtime_ns": 1774576879385331800
+    },
+    "public_html/401.shtml": {
+      "hash": "2d80dae559fc1d2645ffc8cf6a12cd476ba8dba235303aae36962cdabc0e44f8",
+      "size": 3247,
+      "mtime_ns": 1774576879712777400
+    },
+    "public_html/402.shtml": {
+      "hash": "7945646f7f3c8abc9866bc560cff3d50db628a349da90ef1df327996f2659a3e",
+      "size": 3311,
+      "mtime_ns": 1774576879592546700
+    },
+    "public_html/403.shtml": {
+      "hash": "45b260d07ff04f1dd3ff4fb08114ee2e8be3b38efba0cb03e9b07caa30124d1f",
+      "size": 3307,
+      "mtime_ns": 1774576879726442300
+    },
+    "public_html/404.shtml": {
+      "hash": "777c6492f915860385ade35c2768e5def443ef43fb09248f39bae7155d4cb2f0",
+      "size": 3391,
+      "mtime_ns": 1774576879447286300
+    },
+    "public_html/405.shtml": {
+      "hash": "b30486a3e30613b637973c8a90e0c7499efce6fd1f268fd0d3657df8f4f5e727",
+      "size": 3328,
+      "mtime_ns": 1774576879564972900
+    },
+    "public_html/406.shtml": {
+      "hash": "af32dff24d821e269d0a6477687fc3179520d5f563a18a1453e63f7fca74beac",
+      "size": 3344,
+      "mtime_ns": 1774576879741286600
+    },
+    "public_html/407.shtml": {
+      "hash": "5e73ee0c09cedd373712b8c66ba3e930a61a7a6f6bbc1fc2b7f7f0136aef0b69",
+      "size": 3369,
+      "mtime_ns": 1774576879797315400
+    },
+    "public_html/408.shtml": {
+      "hash": "328729171d5871cf7553a79fe3c7f8f7c1b703c9d424b0ecc6cdc3236305cc45",
+      "size": 3313,
+      "mtime_ns": 1774576879719916800
+    },
+    "public_html/409.shtml": {
+      "hash": "bbd813796a06d6812d93a851f82270a6fd03ba5cc1f913048a4843be3171885d",
+      "size": 3365,
+      "mtime_ns": 1774576879547887700
+    },
+    "public_html/410.shtml": {
+      "hash": "9ad23510d5adc4b104a6302edc051d915f693583ceb85710d015fa966a8809b1",
+      "size": 3308,
+      "mtime_ns": 1774576879611657800
+    },
+    "public_html/411.shtml": {
+      "hash": "47b0ad9d459fff99feeeef50eff6a9e87eac705e7eb689bf5250c6bdfed23ae9",
+      "size": 3323,
+      "mtime_ns": 1774576879618764400
+    },
+    "public_html/412.shtml": {
+      "hash": "1dbe36889841ebbf208382624c2c7a9d9eb6c40da0792265c2d501a581647e37",
+      "size": 3323,
+      "mtime_ns": 1774576879749749100
+    },
+    "public_html/413.shtml": {
+      "hash": "263af57282bdb0e25bda678bda968bc7cdf1a0560be20786bfa8c3cc0aed8f1a",
+      "size": 3345,
+      "mtime_ns": 1774576879391798900
+    },
+    "public_html/414.shtml": {
+      "hash": "1c11c862100d9c5234dc1a530fb745d79a36450d9c7adc4332baf034ef575fbd",
+      "size": 3336,
+      "mtime_ns": 1774576879354754100
+    },
+    "public_html/415.shtml": {
+      "hash": "74884906da09b4db5e8c7e1c83307b450caae7ae3cc6af2e35314f60f3c5c32a",
+      "size": 3343,
+      "mtime_ns": 1774576879573679500
+    },
+    "public_html/416.shtml": {
+      "hash": "4e68999c48700d48da7802249f664c83e106e71713a70f9ff8f9d012b47c0467",
+      "size": 3359,
+      "mtime_ns": 1774576879530457900
+    },
+    "public_html/417.shtml": {
+      "hash": "eb22dab82f51f6d4cbbae5d51940472a383720f9d2781d2631a59f926d42b039",
+      "size": 3352,
+      "mtime_ns": 1774576879694432200
+    },
+    "public_html/422.shtml": {
+      "hash": "20f2834b5abfba02996b42696221397ee73235da4b32fe840eefb6967c51e358",
+      "size": 3371,
+      "mtime_ns": 1774576879790049700
+    },
+    "public_html/423.shtml": {
+      "hash": "9b43fe129925699222d40c835b47f1aaf8bd94e630c30d6f1807487a7194413b",
+      "size": 3293,
+      "mtime_ns": 1774576879626000400
+    },
+    "public_html/424.shtml": {
+      "hash": "ecc5b6ce85e2cb6ca38ec2d8f866974e8efd4e4dc88fc268b3d220c4f84a996c",
+      "size": 3344,
+      "mtime_ns": 1774576879512889500
+    },
+    "public_html/500.shtml": {
+      "hash": "34baaa2b9600544b08ecab23a564d1ef561cc065962a246a8fe0b1f5fc35fb8e",
+      "size": 3373,
+      "mtime_ns": 1774576879539957400
+    },
+    "public_html/501.shtml": {
+      "hash": "deb8905e0e5e986c25f2e536345cc8bc16217e678666552170e13fc8b9127c3c",
+      "size": 3346,
+      "mtime_ns": 1774576879454327700
+    },
+    "public_html/502.shtml": {
+      "hash": "cca78b557fceb49ab87d4d0f69ee47239e7b6908a9da1148c01f9431d54759d0",
+      "size": 3324,
+      "mtime_ns": 1774576879766654500
+    },
+    "public_html/503.shtml": {
+      "hash": "8c54786861529ff5a752d0ae9c541f9c4289f57e151cdf036101656101473abd",
+      "size": 3336,
+      "mtime_ns": 1774576879521125200
+    },
+    "public_html/504.shtml": {
+      "hash": "a85b03d6d6566fecdc269e17f0e736e72efa703929a288b3fa56ed8e3a6c4f1c",
+      "size": 3337,
+      "mtime_ns": 1774576879375772700
+    },
+    "public_html/505.shtml": {
+      "hash": "e14ad2928b7f638894bf67fa1f75a0de5ebb555d1c2512323b7347292c4199ac",
+      "size": 3364,
+      "mtime_ns": 1774576879775269700
+    },
+    "public_html/506.shtml": {
+      "hash": "82fd2de597c8f19d9937e3974f483fd641e07ad3643fea583ba1b7b8c7b65df0",
+      "size": 3392,
+      "mtime_ns": 1774576879638359700
+    },
+    "public_html/507.shtml": {
+      "hash": "42f3062863a38567f7fb31f5904bbb4cfed4562d7f44d403e837175abdd38d58",
+      "size": 3358,
+      "mtime_ns": 1774576879687626800
+    },
+    "public_html/510.shtml": {
+      "hash": "ee8f36552f2b687d507b9ca4e57c49662f31df33700c4d31eea31d7ccd2a030c",
+      "size": 3338,
+      "mtime_ns": 1774576879505355000
+    },
+    "public_html/background1.jpg": {
+      "hash": "0dd114d9800383923b8a25f584d4a95a306a1acf9672bd6649e7ec5d6325935e",
+      "size": 800226,
+      "mtime_ns": 1774576879472691400
+    },
+    "public_html/background2.jpg": {
+      "hash": "52cff534a84a96d014452f12156e67ffa475a73c92d3509a58f78cde030f15ce",
+      "size": 1666353,
+      "mtime_ns": 1774576879667271100
+    },
+    "public_html/background3.jpg": {
+      "hash": "76c860e7faf78ab9342eb6094f87958c17cd005a41ccc025ced0fa556837db34",
+      "size": 1559534,
+      "mtime_ns": 1774576879409976000
+    },
+    "public_html/background4.jpg": {
+      "hash": "334710f023e198e35c1d9347a21eeb294b51979191a66772948027cd305817a4",
+      "size": 660212,
+      "mtime_ns": 1774576879605484800
+    },
+    "public_html/cloudflare-worker.js": {
+      "hash": "22f75596df0b8e899504a323804fcda4d41cd608ee253d054d39c9e3403fc690",
+      "size": 6649,
+      "mtime_ns": 1774576879417322600
+    },
+    "public_html/CLOUDFLARE_SETUP.md": {
+      "hash": "bdf39b7cbaa2c0d39266494de0505fce25ad396933b9d0815a1d0552e7470f74",
+      "size": 2165,
+      "mtime_ns": 1774576879678313400
+    },
+    "public_html/COMPONENT_SYSTEM.md": {
+      "hash": "f4cbb916f45c425f130c84ced0029c1b79a76529bd23ac59a8afea8288019b95",
+      "size": 4154,
+      "mtime_ns": 1774576879631299900
+    },
+    "public_html/cubicleBanner.png": {
+      "hash": "15b1c4749553acaa55ea59d225cfc5da801cef9c3f35bb88b4e8f219edb00297",
+      "size": 23174,
+      "mtime_ns": 1774576879440476200
+    },
+    "public_html/deploy.sh": {
+      "hash": "59555145a23cd3b69023dbf108fc9a177550a520604556c2c9ba224e7a3088e3",
+      "size": 1987,
+      "mtime_ns": 1774634534680281200
+    },
+    "public_html/dev_server.py": {
+      "hash": "f439685c742da8d7a2e48b9c325481dbb2b5f8a2a8ea14e92186012551dd7cde",
+      "size": 6821,
+      "mtime_ns": 1774634755308558000
+    },
+    "public_html/error_log": "83bf1afd15c82d4ef8889d99cd7a17447cdf18e5c410b9c6fa0320183a38e226",
+    "public_html/favicon.ico": {
+      "hash": "f7f56d3ec86c5ddaef88410c85ac931b2fcae2af81a6af0cb99ed84ce9dcff17",
+      "size": 41662,
+      "mtime_ns": 1774576879428990300
+    },
+    "public_html/favicon.png": {
+      "hash": "1193e7c3fc2f5f31d266d785e4dced1e78be5e23040a195bd97905636fb5e139",
+      "size": 172735,
+      "mtime_ns": 1774581507601367100
+    },
+    "public_html/home.shtml": {
+      "hash": "ce70d361dfc8c9e4d61b19ec2fb6dda15fa499002a5c4e9b78e1b549e89b5ada",
+      "size": 9319,
+      "mtime_ns": 1774584106313667200
+    },
+    "public_html/index.html": {
+      "hash": "765d508333f18b60eef3c34dd115ffd3dcf4596f8f18c6b1f007394b5ad29f53",
+      "size": 136203,
+      "mtime_ns": 1774633345035839500
+    },
+    "public_html/manifest.json": {
+      "hash": "171337adee027db64690d82560b196c4f6254b4f6c289429ad1998259dd1f689",
+      "size": 1678,
+      "mtime_ns": 1774576879733546800
+    },
+    "public_html/README_LOCALHOST.md": {
+      "hash": "5f0f69a792978ce6ec050670d6a9f1d7c650fab92ef9c96b8cb5d7e45c8b79e7",
+      "size": 1932,
+      "mtime_ns": 1774576879334211800
+    },
+    "public_html/sitemap.xml": {
+      "hash": "5ae54a266e27d45cc9e035e8e5762fcb98b3b7c49b76f319b1a88ddc25f298d9",
+      "size": 1372,
+      "mtime_ns": 1774576879701234000
+    },
+    "public_html/SocialBanner.png": {
+      "hash": "3f30b4a25703991900a3673378e7904b045b9c5468e1a8eb4a423512056af314",
+      "size": 192613,
+      "mtime_ns": 1774576879557182300
+    },
+    "public_html/start_server.bat": {
+      "hash": "996449c260de6c98420bfcfe8df19e93d4785c52dd444647d9aed175b28f63c0",
+      "size": 668,
+      "mtime_ns": 1774576879364420700
+    },
+    "public_html/start_server.sh": {
+      "hash": "47bf10231ca008c082df25856931826722ac2124d762495f468cfc5355432b0a",
+      "size": 785,
+      "mtime_ns": 1774634534680281200
+    },
+    "public_html/sw.js": {
+      "hash": "e63b30098abb084b1034ea1ae42183a0ce27a7d1a0b0157335d68e703e193ab8",
+      "size": 4215,
+      "mtime_ns": 1774634658066115000
+    },
+    "public_html/api/.htaccess": {
+      "hash": "95cf7346f5e4ebdccdac817e11056ad4e904481cadc5625e94d541d3f7cbe320",
+      "size": 429,
+      "mtime_ns": 1774576879830570000
+    },
+    "public_html/api/application.py": {
+      "hash": "4d7be683bba6de1181605864d1923acfa636345c416f59959329189988d098ab",
+      "size": 4245,
+      "mtime_ns": 1774634509419675800
+    },
+    "public_html/api/index.html": {
+      "hash": "f04bb97a8530b9ee9273d23745f211a5eec9ab3e756c8305a78269bb8d4614c7",
+      "size": 1232,
+      "mtime_ns": 1774576879854577400
+    },
+    "public_html/api/passenger_wsgi.py": {
+      "hash": "20e30edcdb344d67e23087463cbdabd1b10262e110e0f240d5bd79576beff754",
+      "size": 161,
+      "mtime_ns": 1774576879847785300
+    },
+    "public_html/api/rate_limits.json": {
+      "hash": "0f9ca242641e820ed45b13557438cefe2b76fafc08a5efe41977660e58d9b81a",
+      "size": 168,
+      "mtime_ns": 1774576879823514800
+    },
+    "public_html/api/stderr.log": "e30d9ecf483cbbf4350ffdaedd893ac8b52e51e3422369fe023320a6a6efa074",
+    "public_html/api/v.txt": {
+      "hash": "9c82f5ed0f6c778dc403b187c8cdf1c30eed471f5363ce0fa2e40373091c988f",
+      "size": 305,
+      "mtime_ns": 1774580201025598300
+    },
+    "public_html/components/footer.html": {
+      "hash": "47b15e450a1b7ddbbd7c2bee1efd076b728b7dcfab0490af16879b851da1b6d8",
+      "size": 3785,
+      "mtime_ns": 1774576879916951200
+    },
+    "public_html/components/head.html": {
+      "hash": "7c6170832a7556e707b3a13760d389d5deb4aecc8ad0f91025a5f8fd4fe433d3",
+      "size": 1451,
+      "mtime_ns": 1774588148117359000
+    },
+    "public_html/components/navigation.html": {
+      "hash": "5e2b06ab8800482c3659cda345aadd753f26cdf473ec52ddadacc2f63ca619ac",
+      "size": 3344,
+      "mtime_ns": 1774584169464534100
+    },
+    "public_html/components/scripts.html": {
+      "hash": "178265a2b9793be8a1437cff3ce99d29b27e11d1c750b64abdd3946167a09f32",
+      "size": 1641,
+      "mtime_ns": 1774576879932506800
+    },
+    "public_html/components/styles.html": {
+      "hash": "ac0c9f69c1d28c560c65c6689522f35bd186dfafefe1c95211c236e1933e4095",
+      "size": 5173,
+      "mtime_ns": 1774576879909500800
+    },
+    "public_html/cubicle/index.html": {
+      "hash": "bd9528ffbb8e6c9ae459dbccf2ab58452e65eebf31bc036b401e918aafe657bd",
+      "size": 33354,
+      "mtime_ns": 1774576880484407600
+    },
+    "public_html/exemplars/index.html": {
+      "hash": "9af9150d9074af42874b811a9c3d1bd65a770c34b7769d272ec87f636ac2efda",
+      "size": 45540,
+      "mtime_ns": 1774632904094954900
+    },
+    "public_html/exemplars/struct.json": {
+      "hash": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "size": 4,
+      "mtime_ns": 1774589072212211700
+    },
+    "public_html/home/index.html": {
+      "hash": "e335fabeea8225f34de139029ba2d59401af4d626fe58362a277bd51b1acd84e",
+      "size": 22650,
+      "mtime_ns": 1774589072203723400
+    },
+    "public_html/home/index.shtml": {
+      "hash": "c3d7c4cbe797193b2f3b1e6ae1c60afd3fba0f855ad4c5a30ec33b71689517cc",
+      "size": 8051,
+      "mtime_ns": 1774576879953594200
+    },
+    "public_html/info/index.html": {
+      "hash": "dc1e9a87cd93ea7cea18391fb7be4cb4d490c2097591868124cab8aec6a39f92",
+      "size": 54184,
+      "mtime_ns": 1774632904186336900
+    },
+    "public_html/js/cdn-router.js": {
+      "hash": "14bb77f14942b1488c33679ff82353d71741662c9c05eb9b5cf46ad859dbedbd",
+      "size": 7115,
+      "mtime_ns": 1774621862461157500
+    },
+    "public_html/js/componentLoader.js": {
+      "hash": "2df4c2526ce0bd4c34a07bb562283d1163ad378e78ca4f17edd75ae79ab95376",
+      "size": 2761,
+      "mtime_ns": 1774634605957071200
+    },
+    "public_html/js/themeManager.js": {
+      "hash": "01d08b740af9839c2d862a0c4029d27e9c7a18062e5c2bb4b366475c0291c099",
+      "size": 2436,
+      "mtime_ns": 1774584106313667200
+    },
+    "public_html/teachers/index.html": {
+      "hash": "6d3e9b214f16f8b920d6f492f06142f66061867813cb877eaf91d4e6bc7210fd",
+      "size": 20525,
+      "mtime_ns": 1774633508387996400
+    },
+    "public_html/teachers/index.shtml": {
+      "hash": "6bafd5637a51fe4a3efcacb0a5ac5d2848ac10005f1173506e5bf16d5a36029a",
+      "size": 9375,
+      "mtime_ns": 1774576880450144200
+    },
+    "public_html/timer/index.html": {
+      "hash": "24161d0bc434f6a6065f6a841a59ac2eaece60ab3b2bc2c3197243014f11a6f6",
+      "size": 43076,
+      "mtime_ns": 1774633074443124400
+    },
+    "public_html/.ssl-manager/logs/debug.log": "a95d23f895e24bd97b152b0c709e16bc7d96df5de50d0158f8cfb4d726e0c151",
+    "public_html/.well-known/pki-validation/0FCC3234B711069485B916DE0BCCB404.txt": {
+      "hash": "b55f32070810b85a1ecefd7e9e262082dd5bc93b9335c8de14b4fc22d3d9b73a",
+      "size": 98,
+      "mtime_ns": 1774576880472507600
+    },
+    "public_html/api/detailed/index.html": {
+      "hash": "e0ed12376c53c48d3aeeec78658cbb448c371a25a19a8251231820c6e93a40c0",
+      "size": 1847,
+      "mtime_ns": 1774576879892647000
+    },
+    "public_html/api/tmp/restart.txt": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "mtime_ns": 1774576879880425100
+    },
+    "public_html/api/__pycache__/application.cpython-36.pyc": "87539f85d5d8ddb3a3f7b4f03cf271950fbf11770458428d0478f3d288a8f6c2",
+    "public_html/nc_assets/css/style.css": {
+      "hash": "ede99ca57e4552323876f953247da7b7d9f3e95034d47e70d46d49bdf5daed44",
+      "size": 11123,
+      "mtime_ns": 1774576880436452800
+    },
+    "public_html/nc_assets/fonts/museo-sans-300-italic-webfont.eot": {
+      "hash": "4a800b8a21b7250a2352a34a9773932c8c248ee8cc406f53b23ab227808bc74c",
+      "size": 33789,
+      "mtime_ns": 1774576880287045800
+    },
+    "public_html/nc_assets/fonts/museo-sans-300-italic-webfont.svg": {
+      "hash": "23068e0f6da15b44bc5781bf53d3e1eeebcd8f521c77b14dc14948c39c698b3a",
+      "size": 109487,
+      "mtime_ns": 1774576880215150100
+    },
+    "public_html/nc_assets/fonts/museo-sans-300-italic-webfont.ttf": {
+      "hash": "97f96983e5c1cd2347b3d7ca6054aa66c0975970115170a687e971891140ab67",
+      "size": 73336,
+      "mtime_ns": 1774576880203745800
+    },
+    "public_html/nc_assets/fonts/museo-sans-300-italic-webfont.woff": {
+      "hash": "e02a6905cc7f96e588007fdc8b0fe9d0a320ba243017c2c6ce99ff29202e3d7d",
+      "size": 39606,
+      "mtime_ns": 1774576880387452800
+    },
+    "public_html/nc_assets/fonts/museo-sans-300-webfont.eot": {
+      "hash": "a49fb3c7cc65a2a24919c115d79bb8d49c64f1a112dacf29b86835cc2e8093a7",
+      "size": 30083,
+      "mtime_ns": 1774576880257951100
+    },
+    "public_html/nc_assets/fonts/museo-sans-300-webfont.svg": {
+      "hash": "c14f561e3ef2e8420d37f1c7d2c2690228a580ad1d69da84bfd446c63fea7947",
+      "size": 101778,
+      "mtime_ns": 1774576880420795700
+    },
+    "public_html/nc_assets/fonts/museo-sans-300-webfont.ttf": {
+      "hash": "64dee7e12dd29565c4f21a724225880207bec6a370e7e7b7e13cade48aa91eb5",
+      "size": 63016,
+      "mtime_ns": 1774576880181520200
+    },
+    "public_html/nc_assets/fonts/museo-sans-300-webfont.woff": {
+      "hash": "6a382a283c77b7e93e7bb5b0b1902242082a4800dac20da3334d641093b33005",
+      "size": 35241,
+      "mtime_ns": 1774576880337798100
+    },
+    "public_html/nc_assets/fonts/museo-sans-500-italic-webfont.eot": {
+      "hash": "c7ade1c43737580bee73a65592a606713e965163c573e518dfd26a71ffb2f5c7",
+      "size": 33186,
+      "mtime_ns": 1774576880225567700
+    },
+    "public_html/nc_assets/fonts/museo-sans-500-italic-webfont.svg": {
+      "hash": "901954934ff606a7173748a78a599473d100af756cb32f3ae9741708ebb3e4bc",
+      "size": 108770,
+      "mtime_ns": 1774576880353304300
+    },
+    "public_html/nc_assets/fonts/museo-sans-500-italic-webfont.ttf": {
+      "hash": "8b6f201ef4fdd4f9d2ab7ca1cdda7bedf18521b435ce2fdf82f5c5cd8b9b22d3",
+      "size": 71088,
+      "mtime_ns": 1774576880303352700
+    },
+    "public_html/nc_assets/fonts/museo-sans-500-italic-webfont.woff": {
+      "hash": "f57d28b759db7ec74053a8d16f4b01702637c756f7d48428fb6235c745f0254a",
+      "size": 38690,
+      "mtime_ns": 1774576880379561900
+    },
+    "public_html/nc_assets/fonts/museo-sans-500-webfont.eot": {
+      "hash": "fdb64f075b7850c8e86919ab8608152d86bdbf480dacd0d99005299e6aff0326",
+      "size": 29177,
+      "mtime_ns": 1774576880295035400
+    },
+    "public_html/nc_assets/fonts/museo-sans-500-webfont.svg": {
+      "hash": "7e9dd3a7f4860a4ba60e1048d9ca0539332d8271a9073dbd6ba0a6b4f9d04a5b",
+      "size": 101484,
+      "mtime_ns": 1774576880363514600
+    },
+    "public_html/nc_assets/fonts/museo-sans-500-webfont.ttf": {
+      "hash": "2b0f86a8ab5e19ebc93190d58702ed131973d47768d6c9c8fb8255a783edf227",
+      "size": 60856,
+      "mtime_ns": 1774576880312459400
+    },
+    "public_html/nc_assets/fonts/museo-sans-500-webfont.woff": {
+      "hash": "eec3d530f15eb5488a9788092b3e623f2a48f0b3e6d6a4023ae98832f22e1b37",
+      "size": 34573,
+      "mtime_ns": 1774576880236328800
+    },
+    "public_html/nc_assets/fonts/museo-sans-700-italic-webfont.eot": {
+      "hash": "d524673353e1bf58cd1494e17ba70354ad177d0fcba6d058d8176d950ce1b962",
+      "size": 32341,
+      "mtime_ns": 1774576880189937800
+    },
+    "public_html/nc_assets/fonts/museo-sans-700-italic-webfont.svg": {
+      "hash": "c8f7ee030984ae26b2fc147b2d3574b9e7b737a75887737591523167f72b87d4",
+      "size": 109549,
+      "mtime_ns": 1774576880276332200
+    },
+    "public_html/nc_assets/fonts/museo-sans-700-italic-webfont.ttf": {
+      "hash": "4dec2247bb6058b163b7887ec28fb38e1bccd1ebecda0095a8ea00f3624c6cb4",
+      "size": 68544,
+      "mtime_ns": 1774576880404506300
+    },
+    "public_html/nc_assets/fonts/museo-sans-700-italic-webfont.woff": {
+      "hash": "7a9d72abce9a1f581c7e895ac4949a019129593311d9c8285cec7b5e11128e50",
+      "size": 37730,
+      "mtime_ns": 1774576880411878300
+    },
+    "public_html/nc_assets/fonts/museo-sans-700-webfont.eot": {
+      "hash": "80fb8efc88f9ef95c0bec31fbc2a7b84f337b5f3d2656413c9eaeaadc3f1595f",
+      "size": 28356,
+      "mtime_ns": 1774576880394673700
+    },
+    "public_html/nc_assets/fonts/museo-sans-700-webfont.svg": {
+      "hash": "ec3fddf59b1400b18a831e2f64b2106dbf06f25f90a2b992231668dffc733094",
+      "size": 102802,
+      "mtime_ns": 1774576880248812200
+    },
+    "public_html/nc_assets/fonts/museo-sans-700-webfont.ttf": {
+      "hash": "3af5ac7edbe460377cd6daaaa675875145b8b1dddde3113702f1b8b493acde24",
+      "size": 59776,
+      "mtime_ns": 1774576880267123100
+    },
+    "public_html/nc_assets/fonts/museo-sans-700-webfont.woff": {
+      "hash": "3675ed57fbe359962a7a4a6c67096a2e59a4e3930a0ffb8550414e03a0c89dc2",
+      "size": 33342,
+      "mtime_ns": 1774576880371833600
+    },
+    "public_html/nc_assets/img/icons/checkmark-hd.png": {
+      "hash": "9ab168a8e3425866b0d1e27ea336d9272b2f5a8f6e2e51aaeba1a7bdd9c6fd90",
+      "size": 346,
+      "mtime_ns": 1774576880171436500
+    },
+    "public_html/nc_assets/img/icons/icon-info-hd.png": {
+      "hash": "57a5d0d853ef2725585594583c5fe4d6684c6f28ec69d38281df0b8f7aef5978",
+      "size": 2186,
+      "mtime_ns": 1774576880163988100
+    },
+    "public_html/nc_assets/img/logos/namecheap-hd.png": {
+      "hash": "418f8a9cc1efbb9ca54b425f0c6e6ae2aca5fa09880bbd722a4d872e77321560",
+      "size": 10161,
+      "mtime_ns": 1774576880028648800
+    },
+    "public_html/nc_assets/img/nc-icon/favicon.ico": {
+      "hash": "8625166490607fd513aef4a7b29927f616b8537d2602cb6b4aa00935cd5639f6",
+      "size": 8348,
+      "mtime_ns": 1774576880112767700
+    },
+    "public_html/nc_assets/img/nc-icon/namecheap-icon-114x114.png": {
+      "hash": "bcee10d81f76135eea86b58d71e84b6aa8d547d0b30603637ea5ad28bf2878cd",
+      "size": 1058,
+      "mtime_ns": 1774576880133323300
+    },
+    "public_html/nc_assets/img/nc-icon/namecheap-icon-120x120.png": {
+      "hash": "6f2774d4205918b7db8c18470c80a41dbde4b3c14932f863f8a6c3670df86d8d",
+      "size": 1088,
+      "mtime_ns": 1774576880118939400
+    },
+    "public_html/nc_assets/img/nc-icon/namecheap-icon-144x144.png": {
+      "hash": "5b62f18c94554e4e6617c5d063efd98a61877a8692fcafe25acd044db6099efe",
+      "size": 1341,
+      "mtime_ns": 1774576880125738600
+    },
+    "public_html/nc_assets/img/nc-icon/namecheap-icon-152x152.png": {
+      "hash": "4726e0f27c721746a7df69c04f9643540a640fb8509e2f55ab209d6f4a90a134",
+      "size": 1438,
+      "mtime_ns": 1774576880146300300
+    },
+    "public_html/nc_assets/img/nc-icon/namecheap-icon-57x57.png": {
+      "hash": "4c5741e0218b28773d22de6af893b14113e8e1007b17a3e635c8524f4cc50a9b",
+      "size": 546,
+      "mtime_ns": 1774576880154325700
+    },
+    "public_html/nc_assets/img/nc-icon/namecheap-icon-72x72.png": {
+      "hash": "68f9564e1feb254a9943201545e84cc9f3c5f39ed05bfdf58bca6afb8fe33004",
+      "size": 670,
+      "mtime_ns": 1774576880139867900
+    },
+    "public_html/nc_assets/img/nc-icon/namecheap-icon-76x76.png": {
+      "hash": "5aaf650cee2b9ada7faa75f5e8e045c9322a46bad70e7fb12b413d66d3ae2903",
+      "size": 725,
+      "mtime_ns": 1774576880105423100
+    },
+    "public_html/nc_assets/img/featured/600/ready-to-go.png": {
+      "hash": "118acd4a0707d22f8489d582e676fe2f70f3a63f0166d9ed6c7b8620a0452fa6",
+      "size": 12490,
+      "mtime_ns": 1774576880042608700
+    },
+    "public_html/nc_assets/img/pictograms/150/browser-red.png": {
+      "hash": "7a00685f1c83a20080201328794de221208a9dc1958c0c6273c9608e87e8f45c",
+      "size": 479,
+      "mtime_ns": 1774576880095132100
+    },
+    "public_html/nc_assets/img/pictograms/150/email-red.png": {
+      "hash": "3ef74ff7cfa63af2e826f21a681b109dabe798931b2b7c0e8e303d71c2f4820c",
+      "size": 484,
+      "mtime_ns": 1774576880086202400
+    },
+    "public_html/nc_assets/img/pictograms/150/news-red.png": {
+      "hash": "8297bee96e77450a10d8081475ea0833e320a0f3f04e76bfba5cbd5afbde6289",
+      "size": 1017,
+      "mtime_ns": 1774576880063353200
+    },
+    "public_html/nc_assets/img/pictograms/150/server-red.png": {
+      "hash": "a3dacb2a8ae94142a84171834a6be51871d4ab5f86d5bbe322cb764f30226820",
+      "size": 16346,
+      "mtime_ns": 1774576880057325700
+    },
+    "public_html/nc_assets/img/pictograms/150/support-red.png": {
+      "hash": "b90df34f1ef8e96adb610dda783030c8c109ab97491c4730936e7fe441676dba",
+      "size": 1877,
+      "mtime_ns": 1774576880069991500
+    },
+    "public_html/nc_assets/img/pictograms/150/tools-red.png": {
+      "hash": "9a8802e055ceb129eb01139ea3720543272d2799f2c9073c6dfc84a6bc01464f",
+      "size": 17060,
+      "mtime_ns": 1774576880077527500
+    },
+    "public_html/ib-practice-platform/bots/queue.db-shm": {
+      "hash": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "size": 32768,
+      "mtime_ns": 1774591021293485700
+    },
+    "public_html/ib-practice-platform/bots/queue.db-wal": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "mtime_ns": 1774591021293485700
+    },
+    "public_html/ib-practice-platform/add_templates.py": {
+      "hash": "6dbfcce33d853b243e88af977a13bebf2f41e5b1df874c12d5cbc47b67a74188",
+      "size": 53374,
+      "mtime_ns": 1774625967562470000
+    },
+    "public_html/ib-practice-platform/lesson_generation_watch.py": {
+      "hash": "d3671db362dc791c8310e888ad115cdc1c9c53eb6399258cf3b31b022ebd88c1",
+      "size": 1531,
+      "mtime_ns": 1774634773703557200
+    },
+    "public_html/ib-practice-platform/lesson_generator.py": {
+      "hash": "6b12616c1f340f3c09ff3e0b7cdfa8712ab8488c365623fbe88dfb93ac3dbee6",
+      "size": 19291,
+      "mtime_ns": 1774634773706557300
+    },
+    "public_html/ib-practice-platform/lesson_quality_check.py": {
+      "hash": "ddb5955dd813d24eeffbcfdc3b6e3df2ed70c73e057c25d04995d299e0e9b3f0",
+      "size": 12662,
+      "mtime_ns": 1774634773706557300
+    },
+    "public_html/ib-practice-platform/bots/LESSON_GENERATOR_README.md": {
+      "hash": "1dd4e753a9fcf2ea7e385c88171dda4d135b5be9d20693637dbfa038ed5369d2",
+      "size": 7585,
+      "mtime_ns": 1774625967562470000
+    },
+    "public_html/ib-practice-platform/data/lesson_quality_report.json": {
+      "hash": "909cdb2ed5c5be27e37005e3e5246b2c5959b81d278337d703024703c4afc7b3",
+      "size": 162298,
+      "mtime_ns": 1774631534804862900
+    },
+    "public_html/ib-practice-platform/data/lesson_quality_report.md": {
+      "hash": "8b2e51a53c3f3824efe1d47f62608f1b925b4d87be90604ed2552ae9ebd0e7d9",
+      "size": 13753,
+      "mtime_ns": 1774631534804862900
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/A.A.1_water.md": {
+      "hash": "c4d6dc134aa6dc9e866c7982f64649482aec8fcd59f386820d5567e760d249b5",
+      "size": 8074,
+      "mtime_ns": 1774631366450121600
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/A.A.2_nucleic_acids.md": {
+      "hash": "00e11a4609268d592818576631f7ad618edd4fa579ae83c1683ecf8fad299dd7",
+      "size": 6824,
+      "mtime_ns": 1774631366450121600
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/A.A.3_origins_of_cells.md": {
+      "hash": "585583c08912d724bede1d9d604bc6f3615fbf3466364bc6bd7be0e23ec3c93f",
+      "size": 8164,
+      "mtime_ns": 1774631366451121600
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/A.A.4_cell_biology.md": {
+      "hash": "d95c75d66108e4007d3184bb96420d45689a8478fc69a9c7d7178cf20b449c39",
+      "size": 6776,
+      "mtime_ns": 1774631366451121600
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/B.B.1_carbohydrates_and_lipids.md": {
+      "hash": "9e33f492d7073f47607cb6ee22fb2df2360a15defa6fbc240d5fc6033834b78d",
+      "size": 7866,
+      "mtime_ns": 1774631366452128100
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/B.B.2_proteins.md": {
+      "hash": "2692f44f30d70261d2d4f74facc8f57b34a26637946940d8935e7b11503317b7",
+      "size": 6665,
+      "mtime_ns": 1774631366452128100
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/B.B.3_cell_specialization.md": {
+      "hash": "5dd6064a4c124620294590627abcc259bfa46e094e265f14ef757ded37b19f19",
+      "size": 7005,
+      "mtime_ns": 1774631366453407300
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/B.B.4_gas_exchange.md": {
+      "hash": "8240787d714ce1a2593717af99cdabd667485d686837b7b6c2a7f12b987bb22f",
+      "size": 6984,
+      "mtime_ns": 1774631366453407300
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/C.C.1_enzymes_and_metabolism.md": {
+      "hash": "008854e6f2f9ac38038692c01342922ac13973d05bc0c9e1438d199fb2b9e1e9",
+      "size": 6694,
+      "mtime_ns": 1774631366453407300
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/C.C.2_cell_respiration.md": {
+      "hash": "a136b89c2e0e62df6fd019a19efee90de61329be2bd160c644fde7a63297e6c3",
+      "size": 6392,
+      "mtime_ns": 1774631366454645200
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/C.C.3_photosynthesis.md": {
+      "hash": "6ebcc93aba682ffa711860ab248b462bdd7deb7146c9be4ed6e9032eff7b4ec1",
+      "size": 8593,
+      "mtime_ns": 1774624910749034900
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/C.C.4_ecology.md": {
+      "hash": "1eb0ce3d787660f5382ca0f690cbd9bfba87c7fbdeb21652f31562a75905323d",
+      "size": 8012,
+      "mtime_ns": 1774631366455777100
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/D.D.1_cell_and_nuclear_division.md": {
+      "hash": "1fafa2f17675d31e5dad3b0942fa72ffd03d981235733bc5376a995ec2a77eea",
+      "size": 7104,
+      "mtime_ns": 1774624953484413000
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/D.D.2_gene_expression.md": {
+      "hash": "a6b44259ef58d5f58ee63a0593dc67f8f87d31582b7521ecfc09d5f6b04c2a10",
+      "size": 6980,
+      "mtime_ns": 1774631366455777100
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/D.D.3_inheritance.md": {
+      "hash": "d9b682a79f53574e2595a43d5e72a3d1bc2348a88b405f33ac23b35ed74677dd",
+      "size": 7273,
+      "mtime_ns": 1774631366456784400
+    },
+    "public_html/ib-practice-platform/data/lessons/biology/D.D.4_natural_selection.md": {
+      "hash": "f1260add49737a039b46cc52531bdfbf5f73ed6a95544dbb6f1caba7e28cb4a9",
+      "size": 8208,
+      "mtime_ns": 1774625016478558400
+    },
+    "public_html/ib-practice-platform/data/lessons/business/1.1.1_what_is_a_business.md": {
+      "hash": "098c5d00e3eed9ccf3b137f1187b47b64965d267aba0ed9e0d0394baf7383767",
+      "size": 7865,
+      "mtime_ns": 1774631366457786200
+    },
+    "public_html/ib-practice-platform/data/lessons/business/1.1.2_types_of_business_entities.md": {
+      "hash": "b29cbd5625a241fbcacdef7e6e8ae2b64ba8dd7e58ea816196ced79d768d1cd6",
+      "size": 6962,
+      "mtime_ns": 1774631366457786200
+    },
+    "public_html/ib-practice-platform/data/lessons/business/1.1.3_business_objectives.md": {
+      "hash": "f4bda8e285653411852492bd458b086ebd8d41947076914be5c443f72635c451",
+      "size": 6896,
+      "mtime_ns": 1774625074416783000
+    },
+    "public_html/ib-practice-platform/data/lessons/business/1.1.4_stakeholders.md": {
+      "hash": "d1853a22c76278cca2d51c69e03fcd878b7960d963761e20507cbc8e3c004d8f",
+      "size": 8260,
+      "mtime_ns": 1774625095887419300
+    },
+    "public_html/ib-practice-platform/data/lessons/business/1.1.5_growth_and_evolution.md": {
+      "hash": "1ab2d1abc4679efa0b05b26b68797d03631adc847210d0050d6ab68d488684ad",
+      "size": 7489,
+      "mtime_ns": 1774625115169500400
+    },
+    "public_html/ib-practice-platform/data/lessons/business/1.1.6_multinational_companies.md": {
+      "hash": "ef78fefccf2d5d80e1bd22aaf233614c2f10c1021f51dec28e943ffcc0c4a48d",
+      "size": 9116,
+      "mtime_ns": 1774625139105145800
+    },
+    "public_html/ib-practice-platform/data/lessons/business/2.2.1_introduction_to_hrm.md": {
+      "hash": "0f55fb4103f4a889ba99cfa3dba747997cef8266acd658903e9b1a567e648589",
+      "size": 7889,
+      "mtime_ns": 1774631366459784400
+    },
+    "public_html/ib-practice-platform/data/lessons/business/2.2.2_organizational_structure.md": {
+      "hash": "83c9644cb89175a5d50c524f0e91d661d315a9578e81aa9ed44eaffed8497a70",
+      "size": 9972,
+      "mtime_ns": 1774625184109472300
+    },
+    "public_html/ib-practice-platform/data/lessons/business/2.2.3_leadership_and_management.md": {
+      "hash": "6ef0c6530cae47254aed20fdb3b7e99d0d40cec3a9446e1f3c7d858f5fb5f455",
+      "size": 7625,
+      "mtime_ns": 1774625204135924900
+    },
+    "public_html/ib-practice-platform/data/lessons/business/2.2.4_motivation.md": {
+      "hash": "927c5539226beeb4af130b75e6560d721b562abf824cb63dfb3188351c4289a7",
+      "size": 6723,
+      "mtime_ns": 1774631366460288800
+    },
+    "public_html/ib-practice-platform/data/lessons/business/3.3.1_sources_of_finance.md": {
+      "hash": "1427e891b99753ce2eec4ae191f86edc30d47bd4d8b3494215a5aed9c9e83bb4",
+      "size": 6553,
+      "mtime_ns": 1774625240206675900
+    },
+    "public_html/ib-practice-platform/data/lessons/business/3.3.2_costs_and_revenues.md": {
+      "hash": "3a496ef7bc19e870d7294f5070fcdf8cb8e781c5179573ff1e436fb76d96cfb9",
+      "size": 8271,
+      "mtime_ns": 1774625265317496200
+    },
+    "public_html/ib-practice-platform/data/lessons/business/3.3.3_break-even_analysis.md": {
+      "hash": "d5d4200a0e4f1d07fe0df5d0ac06f4e5ee3e7d75830f8cb3680da3c01e297fe2",
+      "size": 7860,
+      "mtime_ns": 1774625290940374200
+    },
+    "public_html/ib-practice-platform/data/lessons/business/3.3.4_final_accounts.md": {
+      "hash": "c4c34a1af34ca354f2fb332827b62c268a955be2d430522386b10fad313115d5",
+      "size": 7444,
+      "mtime_ns": 1774625314335451900
+    },
+    "public_html/ib-practice-platform/data/lessons/business/3.3.5_profitability_and_liquidity_ratios.md": {
+      "hash": "d8a57b5459cbc675a59b5428fe0bea0c7b5868167e239435505e93d2847e6114",
+      "size": 6081,
+      "mtime_ns": 1774631366462480100
+    },
+    "public_html/ib-practice-platform/data/lessons/business/3.3.6_efficiency_and_gearing_ratios.md": {
+      "hash": "7e2ffc2afdaac1b66cb49c32fbdf5299aa4fe19a81bb9fd68c6b8c3b30a2cb87",
+      "size": 8328,
+      "mtime_ns": 1774625361930721000
+    },
+    "public_html/ib-practice-platform/data/lessons/business/3.3.7_cash_flow.md": {
+      "hash": "deb52cf3f1b511b4cbf55c355cac4376f2ec1fe3fa128cdee12c5447c4e359f1",
+      "size": 7941,
+      "mtime_ns": 1774625384695121800
+    },
+    "public_html/ib-practice-platform/data/lessons/business/3.3.8_investment_appraisal.md": {
+      "hash": "e1b2eb77329966b5d17b75eae551598219aed1c30abadabb1975a1f63352aca2",
+      "size": 6420,
+      "mtime_ns": 1774631366463493000
+    },
+    "public_html/ib-practice-platform/data/lessons/business/4.4.1_the_role_of_marketing.md": {
+      "hash": "06ba497632911b7555638f76925a2baaffaa2706ddfe8cbec98c9f6b48af0ac3",
+      "size": 7055,
+      "mtime_ns": 1774631366464488300
+    },
+    "public_html/ib-practice-platform/data/lessons/business/4.4.2_marketing_planning.md": {
+      "hash": "71638a7a66a3f0e82f764972ccc3aa4c78166e962ef2d6ae5590ba919f4b0de7",
+      "size": 9570,
+      "mtime_ns": 1774631366464488300
+    },
+    "public_html/ib-practice-platform/data/lessons/business/4.4.3_sales_forecasting.md": {
+      "hash": "f723e25340cd6795c37d43b0fafb2d323750d7925ca515e628d0c0b07de8312c",
+      "size": 9982,
+      "mtime_ns": 1774625486923482800
+    },
+    "public_html/ib-practice-platform/data/lessons/business/4.4.4_the_4_ps.md": {
+      "hash": "d5020df918a2a97667b13be39131318ae0f6f743b7d77cfc59a1ad04336be476",
+      "size": 8627,
+      "mtime_ns": 1774631366465765600
+    },
+    "public_html/ib-practice-platform/data/lessons/business/4.4.5_the_extended_marketing_mix.md": {
+      "hash": "6c583309c1afe48c3876f5419c60328f53d5a46d2a46cd9bd3a878191a9f7413",
+      "size": 8258,
+      "mtime_ns": 1774631366465765600
+    },
+    "public_html/ib-practice-platform/data/lessons/business/5.5.1_the_role_of_operations.md": {
+      "hash": "a5560aeb0282400c7b5de1a40524ad74d953cc6ce17b69d2d8ba973ec74dae23",
+      "size": 7733,
+      "mtime_ns": 1774625550489591100
+    },
+    "public_html/ib-practice-platform/data/lessons/business/5.5.2_production_methods.md": {
+      "hash": "f036c50d3d409f1e2c96d0a41c017038095616e06350464d7ff56facc2f9dc51",
+      "size": 8075,
+      "mtime_ns": 1774631366466771600
+    },
+    "public_html/ib-practice-platform/data/lessons/business/5.5.3_lean_production_and_qm.md": {
+      "hash": "e498cfd9b4f72f7094f75589397a1b6aed90026619f4a6dfac4ff6940d17c36c",
+      "size": 6947,
+      "mtime_ns": 1774631366467771500
+    },
+    "public_html/ib-practice-platform/data/lessons/business/5.5.4_location.md": {
+      "hash": "7d596fc7c92c3af2cd1fb08e8870d1c547d06f0013ecc869b34ee828fb574415",
+      "size": 7936,
+      "mtime_ns": 1774631366467771500
+    },
+    "public_html/ib-practice-platform/data/lessons/business/5.5.5_break-even_analysis_operations.md": {
+      "hash": "c68d13ef190357c86e360be5e461b920f04ddf2b759f306c5efb85ad7ee9747b",
+      "size": 7047,
+      "mtime_ns": 1774631366468772000
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R1.R1.1_measuring_enthalpy_changes.md": {
+      "hash": "fc99a6dc59c40b1b3b388e8e8b429b0b28b05d5ea9dba85f74923b9310c16e46",
+      "size": 6052,
+      "mtime_ns": 1774631366468772000
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R1.R1.2_energy_cycles_in_reactions.md": {
+      "hash": "47ee1b87e91519df402e74bcacc0292ed8622cc75bcf910f18713a89574cb786",
+      "size": 6240,
+      "mtime_ns": 1774631366469895500
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R1.R1.3_energy_from_fuels.md": {
+      "hash": "e85136e70fe3d534521b9b9abdb5676e50c79aa841f460e0832b7777227c203e",
+      "size": 6778,
+      "mtime_ns": 1774631366471059900
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R1.R1.4_entropy_and_spontaneity.md": {
+      "hash": "d58358fb5c93fb3c4b4f9f8f69ea9213b82d3ed8493ab6bbf666a968eada2a4f",
+      "size": 6709,
+      "mtime_ns": 1774631366471059900
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R2.R2.1_how_much_the_amount_of_chemical_change.md": {
+      "hash": "7112cd2c704b6053444dde692dd6d59d308b3034925124b2899798b79bc2ce0b",
+      "size": 6687,
+      "mtime_ns": 1774631366471059900
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R2.R2.2_how_fast_the_rate_of_chemical_change.md": {
+      "hash": "d3d0425016fe5660448e39a8deba3894ef27682363f27c496aeea4eadd495237",
+      "size": 6593,
+      "mtime_ns": 1774631366472497200
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R2.R2.3_how_far_the_extent_of_chemical_change.md": {
+      "hash": "aec3b8288106113ef3b79a997268182c18764d433a7e4835d08870ec57b0f513",
+      "size": 7903,
+      "mtime_ns": 1774631366472497200
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R2.R2.4_rate_expressions_and_mechanisms.md": {
+      "hash": "d0a2dd583d3fb0968dd645465df16e16aac960673239c29513ae689534e5ffbc",
+      "size": 6787,
+      "mtime_ns": 1774631366473506800
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R3.R3.1_proton_transfer_reactions.md": {
+      "hash": "b6caf9431de7565410d6a7a04a1c1dfe78971bc9af06f88168dc7745efc4b250",
+      "size": 6756,
+      "mtime_ns": 1774631366473506800
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R3.R3.2_electron_transfer_reactions.md": {
+      "hash": "9bde4b12775d3288723d51d1b38802d1ff65e0a55179546dcf379fb41b575b63",
+      "size": 6974,
+      "mtime_ns": 1774631366474577300
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R3.R3.3_electron_sharing_reactions.md": {
+      "hash": "d17b1cb6206a3ac17fde888369644d2adc731706892ce2212c2def16a6ca71fe",
+      "size": 6381,
+      "mtime_ns": 1774626200936176800
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/R3.R3.4_electron_pair_sharing_reactions.md": {
+      "hash": "4a76d0abe74abc843a344fb69f71d7e9041f4464df773a8d29723480c60fc0aa",
+      "size": 7493,
+      "mtime_ns": 1774626224422300400
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/S1.S1.1_introduction_to_the_particulate_nature_of_matter.md": {
+      "hash": "d1fc472bdd5e45c2d792b8bc12b0dff84e4782dda83f47721a9bfece2c722633",
+      "size": 8902,
+      "mtime_ns": 1774631366475586400
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/S1.S1.2_the_nuclear_atom.md": {
+      "hash": "9cae07cec90a880ec47a5f4af4fbffd41ad977e9da2db79629136f9c32b89be4",
+      "size": 6075,
+      "mtime_ns": 1774631366476592200
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/S1.S1.3_electron_configurations.md": {
+      "hash": "99ef60efe030eadcde9278c7fa4563d488d45246087c3911694cd69255303767",
+      "size": 6704,
+      "mtime_ns": 1774631366476592200
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/S1.S1.4_counting_particles_by_mass.md": {
+      "hash": "04dca05753cad0715a252f03dcc6b1982c5e5686101c142db007bc57af70b9ec",
+      "size": 5235,
+      "mtime_ns": 1774631366476592200
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/S1.S1.5_ideal_gases.md": {
+      "hash": "4a938ace01404571b7bde533a7fcb688bd671532b5916837bcc3403f2f3d9b80",
+      "size": 6306,
+      "mtime_ns": 1774631366477830800
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/S2.S2.1_the_ionic_model.md": {
+      "hash": "1cc00d96ae4ae8529d76acb84e78a1e3794586b880a757e1119585043e53f541",
+      "size": 7867,
+      "mtime_ns": 1774631366477830800
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/S2.S2.2_the_covalent_model.md": {
+      "hash": "5209710b5fe8cbe4dcd7e39098711e77550d22f0d5cda4b4dc5e85bd1cadeb49",
+      "size": 7055,
+      "mtime_ns": 1774631366478839600
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/S2.S2.3_the_metallic_model.md": {
+      "hash": "c43ef7924794898a496caa87e789005625c3f0396cb018c60f85153cfbcc9cc0",
+      "size": 6909,
+      "mtime_ns": 1774631366478839600
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/S2.S2.4_from_molecules_to_materials.md": {
+      "hash": "303584fefbb66fbd32687d9aa7f76d3d45ada407794f121401bf0562ec2ae139",
+      "size": 8489,
+      "mtime_ns": 1774631366480023300
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/S3.S3.1_the_periodic_table.md": {
+      "hash": "428d8d7676f167ca70f0d2c326c0a4db84a626c0c02b7dd3db003dcc659e4256",
+      "size": 6264,
+      "mtime_ns": 1774631366481029500
+    },
+    "public_html/ib-practice-platform/data/lessons/chemistry/S3.S3.2_functional_groups__nomenclature.md": {
+      "hash": "0eb4f69f64d3644cffb60ab9cd893b8ab4be946f4df742c5caa61fb430d8487a",
+      "size": 6913,
+      "mtime_ns": 1774631366481029500
+    },
+    "public_html/ib-practice-platform/data/lessons/computer_science/1.1.1_systems_in_organizations.md": {
+      "hash": "92c5c4438f885a0da0b886f95d93ec4b9e50c7ff07739186a2f7e209d9ed0971",
+      "size": 8243,
+      "mtime_ns": 1774631366482029600
+    },
+    "public_html/ib-practice-platform/data/lessons/computer_science/1.1.2_system_design_basics.md": {
+      "hash": "f03442e2affd802317cdbdc5f018a977e645fe75a2c40f6341579c631972554c",
+      "size": 7752,
+      "mtime_ns": 1774631366482029600
+    },
+    "public_html/ib-practice-platform/data/lessons/computer_science/2.2.1_computer_architecture.md": {
+      "hash": "d92e316d18102f74213c532e3cd4c59fd57b0cec7f77ef993889445e688bd26a",
+      "size": 7558,
+      "mtime_ns": 1774626290302244300
+    },
+    "public_html/ib-practice-platform/data/lessons/computer_science/2.2.2_secondary_memory.md": {
+      "hash": "2eaa11c4c0b538a15c1e0f09484881a3cbe530ed8dca9c3cfe311ec1f0cd1390",
+      "size": 7209,
+      "mtime_ns": 1774626312058222200
+    },
+    "public_html/ib-practice-platform/data/lessons/computer_science/3.3.1_network_fundamentals.md": {
+      "hash": "909f1d421041525185e71e13514851fda118fb7ba7c421762ba006d62aa5f464",
+      "size": 6315,
+      "mtime_ns": 1774626330182382100
+    },
+    "public_html/ib-practice-platform/data/lessons/computer_science/3.3.2_data_transmission.md": {
+      "hash": "c4435e9c068d4a05ceef2136fdb4c40d6ac5389ab44dcd283854b4239771c60c",
+      "size": 7325,
+      "mtime_ns": 1774626351804759900
+    },
+    "public_html/ib-practice-platform/data/lessons/computer_science/4.4.1_general_principles.md": {
+      "hash": "d0aa16447756b632913e3d1e3991bf5dfb8eb6f6ddb189b388ae972c954ab1d4",
+      "size": 9178,
+      "mtime_ns": 1774626380435443700
+    },
+    "public_html/ib-practice-platform/data/lessons/computer_science/4.4.2_connecting_computational_thinking_and_program_design.md": {
+      "hash": "f034b927b26cde382c24a54da0a2ea5b5dcdadb6ffbb11a4c543d241978eb5e9",
+      "size": 7129,
+      "mtime_ns": 1774631366484293800
+    },
+    "public_html/ib-practice-platform/data/lessons/computer_science/4.4.3_introduction_to_programming.md": {
+      "hash": "da66b5414685d56bcb0336c4dcdf6807f85447f7f9af82b7855c03bf36e0f4a8",
+      "size": 6350,
+      "mtime_ns": 1774631366484293800
+    },
+    "public_html/ib-practice-platform/data/lessons/computer_science/5.5.1_abstract_data_structures.md": {
+      "hash": "3d69755cd3ed7b1e037b08a8ccce81a8dec9f1628d62eea1fd1b391705965e86",
+      "size": 9031,
+      "mtime_ns": 1774626449133876100
+    },
+    "public_html/ib-practice-platform/data/lessons/computer_science/5.5.2_recursion.md": {
+      "hash": "27a7448698022efc4ad9c3944a30a80115ecbd7cd287d411c028fe0a782b1e56",
+      "size": 7108,
+      "mtime_ns": 1774626473167168000
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/1.1.1_what_is_economics.md": {
+      "hash": "76e577b17c04915153a069a21e7e83ca1a081893a3bd7b4e271ccb386cef72e1",
+      "size": 6905,
+      "mtime_ns": 1774626492244138800
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/1.1.2_how_do_economists_approach_the_world.md": {
+      "hash": "b781d167de6178b6ce462992f43745d6560804418516ea83c0293216db8e6631",
+      "size": 7525,
+      "mtime_ns": 1774626514508485800
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/2.2.1_demand.md": {
+      "hash": "7a994079b37c4793c8ad9295bfe21afc0b8f97b0e918403022924a64a3e8243b",
+      "size": 7548,
+      "mtime_ns": 1774626536698924000
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/2.2.2_supply.md": {
+      "hash": "c341dc658d633e5dc67a38a4e90f551bfc90c66b3cbe3acf01332f03af9480e3",
+      "size": 6837,
+      "mtime_ns": 1774631366486501600
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/2.2.3_competitive_market_equilibrium.md": {
+      "hash": "612e66223888d3a7d1886020923cb81d039860e827bedadd7b1d1efcae00e5c5",
+      "size": 7738,
+      "mtime_ns": 1774626579834317900
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/2.2.4_critique_of_maximizing_behaviour.md": {
+      "hash": "54b37d5ffc853b55abcf4dde243bc30f5630637781bd59e94869466002f6d665",
+      "size": 7681,
+      "mtime_ns": 1774626600945556300
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/2.2.5_elasticity_of_demand.md": {
+      "hash": "21a43083b89621892724dab62779b87de8a01ab5a3e6c47b427147deeaad2014",
+      "size": 7519,
+      "mtime_ns": 1774631366487508000
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/2.2.6_elasticity_of_supply.md": {
+      "hash": "e85a8746f4f7e194229d73fc900a5887ed7599a3a1c3915333158d1b51493f97",
+      "size": 8372,
+      "mtime_ns": 1774631366488507700
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/2.2.7_the_role_of_government.md": {
+      "hash": "d0992d241237caefd6fe8b73e07db9ac3822fc99e021fc2d2a73982f5f881ae6",
+      "size": 7704,
+      "mtime_ns": 1774631366489507800
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/2.2.8_market_failure.md": {
+      "hash": "997437ee25e99b13f6492248d87e95aec09114867ee4751b8f43e90704071997",
+      "size": 7840,
+      "mtime_ns": 1774631366489507800
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/3.3.1_measuring_economic_activity.md": {
+      "hash": "0ad2b72e9f0c30c69ce16182cf95c795779f86431b8b662fbea9a92a41d3e009",
+      "size": 5661,
+      "mtime_ns": 1774631366490508100
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/3.3.2_variations_in_economic_activity.md": {
+      "hash": "4dbd28177c2be0361fd02c07042dc7f7731d46c45a0c0bcab8eb0d09d431fc45",
+      "size": 9246,
+      "mtime_ns": 1774626733805725700
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/3.3.3_aggregate_demand_and_supply.md": {
+      "hash": "debee971ed8690948a2ea34169d35183b59b0f0403ceb58fc44bd848bccb6624",
+      "size": 6700,
+      "mtime_ns": 1774631366491507800
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/3.3.4_macroeconomic_objectives.md": {
+      "hash": "a5d96abc2011d7504d8540e1b2c27494add5f90e31ea58196bb6bc1b70e17b95",
+      "size": 7373,
+      "mtime_ns": 1774631366491507800
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/3.3.5_fiscal_policy.md": {
+      "hash": "8e24e0561131b74119138589f02d5db5a7b49b75412228ae07b02fe84e16e5c2",
+      "size": 8030,
+      "mtime_ns": 1774626793304727600
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/3.3.6_monetary_policy.md": {
+      "hash": "278447b17d86dc6ec7fdb936a5d98daf7398a8a4a40a9ee4be60f51ddbe806a7",
+      "size": 8050,
+      "mtime_ns": 1774631366492618500
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/3.3.7_supply-side_policies.md": {
+      "hash": "3b3fd5d0b4197d66114e1da112252f3b1c2aed57da0a5a84484da868ec0879b1",
+      "size": 7130,
+      "mtime_ns": 1774631366492618500
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/4.4.1_benefits_of_international_trade.md": {
+      "hash": "996b9ffa38a85d7c955d5fe7ff13230f3d4845ba11d4b3598750e3cdb2246f3b",
+      "size": 8439,
+      "mtime_ns": 1774626857771835400
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/4.4.2_types_of_trade_protection.md": {
+      "hash": "29a21059e7d36d114d25d10bb59976aef067dcbced1ff6c20ac4a57972be9b28",
+      "size": 7046,
+      "mtime_ns": 1774631366493617900
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/4.4.3_economic_integration.md": {
+      "hash": "4b987bbd8cc32afdac7b38865faa996d44fe5791b333e314dff1a768e9968d88",
+      "size": 8801,
+      "mtime_ns": 1774626899666741200
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/4.4.4_exchange_rates.md": {
+      "hash": "25173dc989b7076aef179c38334c51e65b8f9a6f0aa4f311f13289890d74f137",
+      "size": 7049,
+      "mtime_ns": 1774631366494619000
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/4.4.5_balance_of_payments.md": {
+      "hash": "addaaac59b072f7a5b25391bd000f936f31e4037253dfb88a2028ec9ab298b3d",
+      "size": 7060,
+      "mtime_ns": 1774631366495619300
+    },
+    "public_html/ib-practice-platform/data/lessons/economics/4.4.6_sustainable_development.md": {
+      "hash": "4f0a80e06ce035ab23d86cda645c0c893d4e5402c86c054824f8e88f7ddffc16",
+      "size": 9336,
+      "mtime_ns": 1774631366495967700
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/1.1.1_arithmetic__geometric_series.md": {
+      "hash": "d783577bda630f54c52a4912ab01d44b02dfc58f5f54a970241e1ed1dd2747f0",
+      "size": 5343,
+      "mtime_ns": 1774631366496625800
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/1.1.2_exponents__logarithms.md": {
+      "hash": "d802d7d295e3391285ebfe183c73a4be0a29c3be05345e1beac35a244f4d996b",
+      "size": 5370,
+      "mtime_ns": 1774631366497626400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/1.1.3_counting__binomial_theorem.md": {
+      "hash": "58993a25b31083ff1c910be0ac9746395619ca166f53171f0eb2aecbae294321",
+      "size": 5841,
+      "mtime_ns": 1774631366497626400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/1.1.4_proof_by_induction.md": {
+      "hash": "505b5575a37aa103e03cc2994c321e1655a38d63067b7df80dd4440c773c2413",
+      "size": 5992,
+      "mtime_ns": 1774631366498626100
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/1.1.5_complex_numbers_basics.md": {
+      "hash": "a83b50fd8643971728744a354fd4741ddb26b6fee5c0eef39d229b5c44778dff",
+      "size": 4743,
+      "mtime_ns": 1774631366498626100
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/1.1.6_polar_form_of_complex_numbers.md": {
+      "hash": "b1733893d85d8f33b557a0f629bdcc459c44121786ede00278405acb0e5c9fc0",
+      "size": 5375,
+      "mtime_ns": 1774627090821817900
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/1.1.7_powers__roots_de_moivre.md": {
+      "hash": "2fe01c9777c64d416d3f44f62aee5a34504e97762996cba488b747a4c91fe38c",
+      "size": 5646,
+      "mtime_ns": 1774631366499627900
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/1.1.8_conjugate_roots_of_polynomials.md": {
+      "hash": "a131d282c9e83616939672d98f4754db0331a8be59d3610c413cbf3481dee42e",
+      "size": 4699,
+      "mtime_ns": 1774631366499627900
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/1.1.9_systems_of_linear_equations.md": {
+      "hash": "d07a17bb125d331f25a1e69c4cc1307882cd135544905581faabcba2946a469b",
+      "size": 8130,
+      "mtime_ns": 1774631366500958200
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/10.10.10_chinese_postman__tsp.md": {
+      "hash": "a1a018c32e6e28b4330db52ed283c694439d25d09c6e0e8d72272e3690b87104",
+      "size": 7087,
+      "mtime_ns": 1774628343727376500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/10.10.11_recurrence_relations.md": {
+      "hash": "051b5187b6e147990a387d65bd51adb10a32c030df25c157733d86b98b197812",
+      "size": 2071,
+      "mtime_ns": 1774628344954580800
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/10.10.1_strong_induction__pigeonhole.md": {
+      "hash": "636edb826dcd75e97093597e2fb37c8d06b898fa6bf5acb05192ebc84bcdeb4f",
+      "size": 3526,
+      "mtime_ns": 1774628239684094400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/10.10.2_divisibility_gcd_lcm__primes.md": {
+      "hash": "080f20a1b291465eb4d806e76f3f2f282fbfdad8c58a908720bc55edd29edd8b",
+      "size": 2019,
+      "mtime_ns": 1774628240709121600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/10.10.3_linear_diophantine_equations.md": {
+      "hash": "ccfb052450a7691ab34d296ccb77172cafff559bea59ac2327251cbfe0717e65",
+      "size": 2987,
+      "mtime_ns": 1774628241982192500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/10.10.4_modular_arithmetic__crt.md": {
+      "hash": "a661d6c618b929c822c56ffb88b3390d001db8631a573a238d6bdc3232138b47",
+      "size": 389,
+      "mtime_ns": 1774628242191522200
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/10.10.5_integer_bases.md": {
+      "hash": "61405368f0b444b42042da6b6424b5a56758fd569fa8c106239a2abbc5bb501b",
+      "size": 2360,
+      "mtime_ns": 1774628243460166200
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/10.10.6_fermats_little_theorem.md": {
+      "hash": "03d6d9c4bd85ed11386877621e3b8418f858d64868598cea5c8b358a0258b529",
+      "size": 1475,
+      "mtime_ns": 1774628244204794300
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/10.10.7_graph_theory_basics.md": {
+      "hash": "eb548749f6a173f31bc6de6389178d7c410cc0533fb1b10412a7fa13a3064966",
+      "size": 3227,
+      "mtime_ns": 1774628245665304000
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/10.10.8_walks_trails__cycles.md": {
+      "hash": "c605a99447037eca00779039889522ec9e5186766727cdcda2efda07ed2f3a5a",
+      "size": 1774,
+      "mtime_ns": 1774628246512413100
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/10.10.9_graph_algorithms_kruskal__dijkstra.md": {
+      "hash": "f3fe641f023918af40efd31099d4fa2435d5a599e2d0cc1a3bf5952a212fdcc2",
+      "size": 117139,
+      "mtime_ns": 1774628339902158100
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/2.2.1_concept_of_function.md": {
+      "hash": "2287be8d79bade21176a6bd440804d4d5d8d7d368e6a0bcffc4d2b005f883e4b",
+      "size": 5744,
+      "mtime_ns": 1774631366504510300
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/2.2.2_graph_features.md": {
+      "hash": "48e7225c3d979fb6aa1fba23dc6e48f4cb7342219240122024e7e54f441117aa",
+      "size": 6686,
+      "mtime_ns": 1774627218595829400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/2.2.3_graph_transformations.md": {
+      "hash": "94375e33a9a89473451b0c731dd9439ef525b8a6b10d282533ed6c1c53c836e0",
+      "size": 5307,
+      "mtime_ns": 1774627237237690000
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/2.2.4_basic_function_families.md": {
+      "hash": "09fafc41c29ecef2671a38e8f8a95fe0d88b5ca82381f90e5841d2c7de6cb596",
+      "size": 5103,
+      "mtime_ns": 1774631366506023000
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/2.2.5_polynomial_functions.md": {
+      "hash": "c6a55ec85cc0ac824049401720f69bfbee66159b9162377129f1c73b043bebaa",
+      "size": 6051,
+      "mtime_ns": 1774631366507473900
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/2.2.6_solving_equations.md": {
+      "hash": "a7f3a7c3ee77080da77f75efdc47bc639f54a7a3b36c1fe36c1a30d178845f82",
+      "size": 5071,
+      "mtime_ns": 1774631366507473900
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/2.2.7_inequalities.md": {
+      "hash": "470cdaac99668817bc3f05dd6ae076fa7b5916a920db9ef9ceead778dffce18e",
+      "size": 6958,
+      "mtime_ns": 1774627324449041600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/3.3.1_radian_measure_arc__sector.md": {
+      "hash": "e043a9e49b12bc001dad46c2c9d7815cb45d4c0be62aee9253c5230d1148799d",
+      "size": 4127,
+      "mtime_ns": 1774631366508965600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/3.3.2_unit_circle__basic_identities.md": {
+      "hash": "b9c373da57df594922dfe1ef47dcdd112583ab4aad0ca6332043c6f3d0382bff",
+      "size": 6363,
+      "mtime_ns": 1774631366509967000
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/3.3.3_compound__double_angles.md": {
+      "hash": "b3970cbac3faba10066b635745d687ceb60ade57618472cbc5c5040051b6f5a3",
+      "size": 6989,
+      "mtime_ns": 1774631366510965800
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/3.3.4_sinusoidal_models.md": {
+      "hash": "744be82f121abd30148e6d986278bc99fc5d803bf41cb3fdd1b22d66429f58bf",
+      "size": 6003,
+      "mtime_ns": 1774631366510965800
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/3.3.5_inverse_trig_functions.md": {
+      "hash": "c5badb24f6b85173d0fc66feb45f821cd7a647372e0533b9bfebc7bfcc6cf16c",
+      "size": 5099,
+      "mtime_ns": 1774631366512290700
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/3.3.6_solving_trig_equations.md": {
+      "hash": "735639369d1e3e1d241212bf6979c9c025592e8826f645e9b2e99d2c8ece8796",
+      "size": 5778,
+      "mtime_ns": 1774631366513287500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/3.3.7_triangle_rules__applications.md": {
+      "hash": "ea21172775882131ae2a23b13e12bd2f6e18bc15ec8562dc41839c6155689e5e",
+      "size": 6647,
+      "mtime_ns": 1774631366513287500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/4.4.1_vector_basics.md": {
+      "hash": "6069b7d34a8600a80f5a107b47d561db618efec3c7d2f89da3d3f696b7a0ffcc",
+      "size": 6263,
+      "mtime_ns": 1774631366514591400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/4.4.2_scalar_dot_product.md": {
+      "hash": "0779665340d8ba65e9da4841894a7bacf52e5223017f5bf7f63868993a3051b2",
+      "size": 5732,
+      "mtime_ns": 1774631366514591400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/4.4.3_vector_equation_of_a_line.md": {
+      "hash": "e51954d2a7feb468cc77c7e3495317cefe21f64154a17b9cd1bce8cd418aab05",
+      "size": 6862,
+      "mtime_ns": 1774627554807556400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/4.4.4_line_relationships.md": {
+      "hash": "9949d2051c3434aa6a2602a68f6dbd62755fda94c263f3effad6c0a5b4df8cbd",
+      "size": 6130,
+      "mtime_ns": 1774631366516373800
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/4.4.5_vector_cross_product.md": {
+      "hash": "a80ea4bb76637acc46aff56a44f4d791559a1f27f1e3ee36833439b391cd6096",
+      "size": 6081,
+      "mtime_ns": 1774631366517380600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/4.4.6_planes_in_3d.md": {
+      "hash": "79d61e544239e71a4ea6960929dba5b37c732c1dbf3f7f4cc318d685c6f44f3f",
+      "size": 7268,
+      "mtime_ns": 1774631366517380600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/4.4.7_intersections__angles.md": {
+      "hash": "16743561242a1c1609357c836d19bd21d7c935e3e5849e9731fe8dcc82f12258",
+      "size": 5400,
+      "mtime_ns": 1774631366518573500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/5.5.1_data_concepts__descriptive_stats.md": {
+      "hash": "8b6d5c7cfd3896941a439854d0dddf8434dd781069b6a9693c33d45f75b58e26",
+      "size": 8287,
+      "mtime_ns": 1774631366518573500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/5.5.2_basic_probability.md": {
+      "hash": "31947b527cae6249655d026f060cd9fcfe7867b76774cef7c0f26c302dd7a774",
+      "size": 7717,
+      "mtime_ns": 1774631485590582400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/5.5.3_combined_events.md": {
+      "hash": "22269bcec25fe1edd62dd8385b6727f5421d1ea140cdd4f57f9b42fff0a5d8ae",
+      "size": 3583,
+      "mtime_ns": 1774627707523281500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/5.5.4_conditional_probability__bayes.md": {
+      "hash": "96550260cdd773cc53116a5c933d8b5027bc9fa1d7db5a8bbfe548ed0472718d",
+      "size": 3460,
+      "mtime_ns": 1774627709437863600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/5.5.5_random_variables__distributions.md": {
+      "hash": "b78ec4351ea3aada8c81798c086a777d1a6f157e3e9282a99564cd8ad8ffa145",
+      "size": 2808,
+      "mtime_ns": 1774627710666238600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/5.5.6_binomial__poisson.md": {
+      "hash": "fc0603180a578b298f2f59c10cf2c364e41c1f305f449a9404c7342122038688",
+      "size": 1404,
+      "mtime_ns": 1774627711414722000
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/5.5.7_normal_distribution.md": {
+      "hash": "2be8c406170f22428d13c17a52fadb7a9a25c542f0d3568f85017b2795c54fe8",
+      "size": 1418,
+      "mtime_ns": 1774627712104092700
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/6.6.1_limits__derivative_basics.md": {
+      "hash": "fcea0bec64677afd3b7fde3797268bc415c5e3669104c8e80b83c370e1cb1bd1",
+      "size": 607,
+      "mtime_ns": 1774627712398872400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/6.6.2_differentiation_rules.md": {
+      "hash": "b1f65917acac9d291032dc7c2cbd3e530fa33d9468e965cf16bc58cb50a3a3f5",
+      "size": 576,
+      "mtime_ns": 1774627712684003600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/6.6.3_extrema__graph_behaviour.md": {
+      "hash": "fdc06985c877506b428c1ca360a83d279943e439ce5cb9c6acf5bcc796c5ad76",
+      "size": 598,
+      "mtime_ns": 1774627713038527600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/6.6.4_indefinite_integration_basics.md": {
+      "hash": "6ef9e244e9a5a7cf66a3a4e6eb9141c2baf49d168b5d55b737e87c7031be4410",
+      "size": 2834,
+      "mtime_ns": 1774627714442117500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/6.6.5_definite_integrals_area__volume.md": {
+      "hash": "3829c9d1b4826fdfb02795b3fff7af51398fe12f98df126ac4a54ebbfaf9e69c",
+      "size": 1822,
+      "mtime_ns": 1774627715354791600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/6.6.6_kinematics__total_distance.md": {
+      "hash": "25f3f32682a6a80a2ad6c9f767a9b5136ce09eb0cd3d3ff1bc1149a4a000b721",
+      "size": 1927,
+      "mtime_ns": 1774627716322106800
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/6.6.7_integration_techniques.md": {
+      "hash": "7dfb64b7e2b3dba94a7ad1704a6703416a3ccf7620126d2a6e1cf45890e77087",
+      "size": 3226,
+      "mtime_ns": 1774627717939478600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/7.7.1_cdfs_geometric_neg_binomial_pgfs.md": {
+      "hash": "2baa17fb2a559b66eb422a19a98f60a2e603513aee7c58277743fa9488ea4dc7",
+      "size": 5321,
+      "mtime_ns": 1774627720448413700
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/7.7.2_linear_combinations_of_rvs.md": {
+      "hash": "335a73a4c850aff688b9de0365da3b18a100631ba8956da93982632c2c954018",
+      "size": 1197,
+      "mtime_ns": 1774627721157097600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/7.7.3_unbiased_estimators.md": {
+      "hash": "dd21c66cf51ccc68984f98271a682e7eb3b0cc35d030b7f02415a2400f809c90",
+      "size": 2228,
+      "mtime_ns": 1774627722378819400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/7.7.4_normal_combinations__clt.md": {
+      "hash": "0cba92f95aacbfd4fa6eef631247a2fee97257250dca96e89d86c10dafd78f65",
+      "size": 2113,
+      "mtime_ns": 1774627723391677400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/7.7.5_confidence_intervals_mean.md": {
+      "hash": "a7b3fd29d583b3952737bf639f9cfd3e88e80f3c3595ee35d79d18ad945310ab",
+      "size": 4273,
+      "mtime_ns": 1774627725519580800
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/7.7.6_hypothesis_testing_mean.md": {
+      "hash": "50cf6550383695fd9fcdf959f3015c061ee30d3d7d678d051010eee3ded91494",
+      "size": 665,
+      "mtime_ns": 1774627725874504300
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/7.7.7_bivariate_correlation__regression.md": {
+      "hash": "867536273aa3d67e103fcac064b24cc99950e9763a2fa86f99c8079f8d4d4d3b",
+      "size": 2845,
+      "mtime_ns": 1774627727061305500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.10_permutations__cycles.md": {
+      "hash": "f555b32778b7b6d87fccc89ec051aa0b99231ef9ca72d491506aa329bbdace0f",
+      "size": 381,
+      "mtime_ns": 1774627996210631700
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.11_subgroups_cosets__lagrange.md": {
+      "hash": "a1506a2266945fb991215e6a984ac149c1bc4949619b513fbf8667bbae060fb8",
+      "size": 3121,
+      "mtime_ns": 1774631366522958900
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.12_homomorphisms__isomorphisms.md": {
+      "hash": "c16f4ddf3a6ab043d5ac91f02acc74fca9df08829e26e5e193bb498d2b852c35",
+      "size": 2026,
+      "mtime_ns": 1774627998942676600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.1_set_operations__laws.md": {
+      "hash": "9e886826cca88f384b00c8e2a21f68d67065132f28e56f1d70d1425a61f6bca0",
+      "size": 32748,
+      "mtime_ns": 1774627749253304400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.2_relations__equivalence.md": {
+      "hash": "199f030d03230d591922aa8c146134352c39cacea7c9a0cc01c31dae17a89c0f",
+      "size": 657,
+      "mtime_ns": 1774627749565037000
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.3_injections_surjections_bijections.md": {
+      "hash": "0432288b4975a350bcfdbc653eeb79045b3cc55525923680eecfc7db7fc9e487",
+      "size": 4184,
+      "mtime_ns": 1774627751761475500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.4_binary_operations.md": {
+      "hash": "618217dde27376206199d0287f386aaa9381ed41d0f5ff9c79861d4dcb015cc4",
+      "size": 3960,
+      "mtime_ns": 1774627753540154900
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.5_operation_properties.md": {
+      "hash": "01d549cc5e4245d90ddce42a0adf0a54aa802d2c0767691ff887c7a7ff4d04d4",
+      "size": 465,
+      "mtime_ns": 1774627753777807400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.6_identity__inverses.md": {
+      "hash": "7258f197a7b0c95a9ae1ee92126009d33479ce321626bf3c008857325c805a73",
+      "size": 291755,
+      "mtime_ns": 1774627992519426300
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.7_definition_of_a_group.md": {
+      "hash": "24a0a9f780e4f47e7e51a328ca3d060930de8491b4e1e1345f650ff59cc763e6",
+      "size": 1261,
+      "mtime_ns": 1774627993173739400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.8_group_examples.md": {
+      "hash": "d1b53a943bd1b4d6e0f2da12e395465d22171170e461468c38550557043cb300",
+      "size": 1458,
+      "mtime_ns": 1774631366529800700
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/8.8.9_cyclic_groups__generators.md": {
+      "hash": "f04e613a50877be77e6c255782a5351fea80622ab01a6ee48ccc374492d9a880",
+      "size": 3472,
+      "mtime_ns": 1774627996012171400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/9.9.1_infinite_sequences.md": {
+      "hash": "25f1d726867753866a0862534c2b3bda7d4ab870d841f9c139b33fdfb175755b",
+      "size": 4276,
+      "mtime_ns": 1774628001323675500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/9.9.2_infinite_series__tests.md": {
+      "hash": "f8870761518ced30fd9c5e0ff8438460befc385ceb938fdd8c38cc396cf2b503",
+      "size": 967,
+      "mtime_ns": 1774628001841273900
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/9.9.3_continuity__differentiability.md": {
+      "hash": "68cf506a4d855bff5a42d3d7371b1b29d5cc4e2a11747e90100a16fcbca50c34",
+      "size": 2747,
+      "mtime_ns": 1774628003219020400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/9.9.4_riemann_sums__improper_integrals.md": {
+      "hash": "bda52e913526f85d94fcc20e39f590ab029975555da3f9624c705a9ca149f274",
+      "size": 1126,
+      "mtime_ns": 1774628003874495600
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/9.9.5_first-order_differential_equations.md": {
+      "hash": "5b9f5f17e7b27c9ffabbee014674492335eaf0e32cad6e5d3924d4e94e835962",
+      "size": 385363,
+      "mtime_ns": 1774628235900002400
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/9.9.6_taylor__maclaurin_series.md": {
+      "hash": "fa289ea3284b79e51c7593c4b7ba710a309c1da62c0863db96d794ec885ea05a",
+      "size": 1137,
+      "mtime_ns": 1774628236455555500
+    },
+    "public_html/ib-practice-platform/data/lessons/math_aa/9.9.7_limit_evaluation_lhopital__series.md": {
+      "hash": "85d4d12b1455bbb1f97ae3ff557cfc6d1284e57c0724ad42c8351545f6be732d",
+      "size": 1769,
+      "mtime_ns": 1774628238051615800
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/A.A.1_kinematics.md": {
+      "hash": "9fb33b947c5885b2d60503126a0b53486d7a45a6ca384b147b306ef03c833d20",
+      "size": 1335,
+      "mtime_ns": 1774628345567322400
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/A.A.2_forces_and_momentum.md": {
+      "hash": "09c4fb9ea416a8572d784694f9990d56a4998d62bb0c7c16e177baa5ba431988",
+      "size": 2242,
+      "mtime_ns": 1774628346508577600
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/A.A.3_work_energy_and_power.md": {
+      "hash": "e81a52f79a582d5fbcae70b4c4db9fbaf822842973d3243a4fc0fc4cc3258042",
+      "size": 1415,
+      "mtime_ns": 1774628347196854300
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/A.A.4_rigid_body_mechanics.md": {
+      "hash": "4b7098aa7b677292f36d390154b08df88e54852d28a39169081c133809465e0a",
+      "size": 2267,
+      "mtime_ns": 1774628348207884100
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/A.A.5_galilean_and_special_relativity.md": {
+      "hash": "3c112607e267d35934d6b17d7b1de1a782c5d84b5d81034bb98c4278721bf014",
+      "size": 2892,
+      "mtime_ns": 1774628349688167100
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/B.B.1_thermal_energy_transfers.md": {
+      "hash": "71b9e3b7193c0918dd2ec55cc75e8689435e1c23c5c20e5b645824760bca4b22",
+      "size": 1817,
+      "mtime_ns": 1774628350415752900
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/B.B.2_greenhouse_effect.md": {
+      "hash": "5375b0ebc25bef3aa7c424ecd3f07968701339604da919cfb4711c734b127278",
+      "size": 796,
+      "mtime_ns": 1774628350808117800
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/B.B.3_gas_laws.md": {
+      "hash": "a33b24270abb73c0a82885e78e0b7c414c0c5fd732d2bb24489aa5c44f09654d",
+      "size": 309611,
+      "mtime_ns": 1774628581643817200
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/B.B.4_thermodynamics.md": {
+      "hash": "15d5887c73a50fe8c44a4ac63d1b9da6a92d25a42881814ad4896ac43cca0f69",
+      "size": 614,
+      "mtime_ns": 1774628581925352500
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/B.B.5_current_and_circuits.md": {
+      "hash": "6ded373250c69cc04e3914cb1663713d466456d1fe1f9dfdfec5677dd69fb347",
+      "size": 3403,
+      "mtime_ns": 1774628583384768400
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/C.C.1_simple_harmonic_motion.md": {
+      "hash": "6d825b5279c5754da808ce139ce90e99a41de34e8ca179df7dd4624690bca80e",
+      "size": 3498,
+      "mtime_ns": 1774628585068103300
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/C.C.2_wave_model.md": {
+      "hash": "3dba7c848da53feee3550b811eeb9783f41ec2f31912ea3c83860ee971661080",
+      "size": 2585,
+      "mtime_ns": 1774628586379017500
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/C.C.3_wave_phenomena.md": {
+      "hash": "c3e2907965fa831de2651a36851ba3bae2c587d485a02c46757b300747f858e0",
+      "size": 445602,
+      "mtime_ns": 1774628818143217200
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/C.C.4_standing_waves_and_resonance.md": {
+      "hash": "afcee5d232375cb70e3799c382575e204aa2d318459da38b613e202dec921e92",
+      "size": 569,
+      "mtime_ns": 1774628818426137600
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/C.C.5_doppler_effect.md": {
+      "hash": "2f9ffee22a1648e822460dca103884d31a1162e3560cad1f96ce8d4270920e14",
+      "size": 1034,
+      "mtime_ns": 1774628818985801800
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/D.D.1_gravitational_fields.md": {
+      "hash": "206738a1e10ca99f71b99a5771b807accf64f5065856f27e65542690eab29338",
+      "size": 2010,
+      "mtime_ns": 1774628819948231700
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/D.D.2_electric_and_magnetic_fields.md": {
+      "hash": "3057ee2a2b2f39a5c08cdc025b4bacd703c00410e1192dccf4bbb211a39109a0",
+      "size": 2059,
+      "mtime_ns": 1774628820827576600
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/D.D.3_motion_in_em_fields.md": {
+      "hash": "751777304e4a114fcb25f788e22dd9dc5e325f048876f688082af796ec9ed5c4",
+      "size": 7553,
+      "mtime_ns": 1774628824001927400
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/D.D.4_induction.md": {
+      "hash": "c4b1a9fca7a8707ca192da8a16267f3ad11469038be41b03fa26d07787f2810e",
+      "size": 2299,
+      "mtime_ns": 1774628824983172700
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/E.E.1_structure_of_the_atom.md": {
+      "hash": "819f58ec38a299475153d398d5a46434477df5fb83fc320f55aee2e42e0857e1",
+      "size": 2752,
+      "mtime_ns": 1774628826397987500
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/E.E.2_quantum_physics.md": {
+      "hash": "eb6b93a787f221d95c2510e8fa722813d5f83c472885b6b3076f249f85b3b9a1",
+      "size": 2254,
+      "mtime_ns": 1774628827434888600
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/E.E.3_radioactive_decay.md": {
+      "hash": "28d52b97a8adf7d4a27feac79c0d59100aa3afcb0e1c49d32ec21ed6efb0cc22",
+      "size": 3601,
+      "mtime_ns": 1774628829045796600
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/E.E.4_fission.md": {
+      "hash": "e49247f527603f8e611cb533712019ed4d0782c450484242cfdc0497177aed1f",
+      "size": 3462,
+      "mtime_ns": 1774628830541881200
+    },
+    "public_html/ib-practice-platform/data/lessons/physics/E.E.5_fusion_and_stars.md": {
+      "hash": "b1201ab267ba524b1a633699ef78fc0a75dd2cbadf1bbb8d123b7cb477acf49d",
+      "size": 49602,
+      "mtime_ns": 1774631366556818900
+    }
+  }
+}

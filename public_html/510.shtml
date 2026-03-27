@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>510 - Not Extended</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
+  <style>
+    :root {
+      --primary-light: #181818;
+      --primary-dark: #f8fafc;
+      --accent-light: #E4EEE9;
+      --accent-dark: #2D3748;
+      --pillbg-light: #B7D2C0;
+      --pillbg-dark: #4A5568;
+      --pillhover-light: #9fc2ad;
+      --pillhover-dark: #718096;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: var(--primary-dark);
+        --accent: var(--accent-dark);
+        --pillbg: var(--pillbg-dark);
+        --pillhover: var(--pillhover-dark);
+      }
+
+      body {
+        background-color: #181818;
+        color: var(--primary);
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --primary: var(--primary-light);
+        --accent: var(--accent-light);
+        --pillbg: var(--pillbg-light);
+        --pillhover: var(--pillhover-light);
+      }
+
+      body {
+        background-color: #f8fafc;
+        color: var(--primary);
+      }
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .error-container {
+      text-align: center;
+    }
+
+    .error-title {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .error-message {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: transparent; /* Background removed */
+      color: var(--primary);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.2s ease;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      background-color: transparent; /* No hover background */
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const title = document.querySelector(".error-title");
+    const text = title.getAttribute("data-text");
+    let i = 0;
+
+    function type() {
+      if (i <= text.length) {
+        title.textContent = text.slice(0, i++);
+        setTimeout(type, 100); // Slower typing speed
+      }
+    }
+
+    type();
+  });
+</script>
+
+<body>
+  <div class="error-container">
+    <h1 class="error-title" data-text="510 - Not Extended"></h1>
+    <p class="error-message">Further extensions to the request are required for the server to fulfill it.</p>
+    <a href="/" class="back-link">
+      <span class="material-symbols-outlined">arrow_back</span>
+      <span>Take me back!</span>
+    </a>
+  </div>
+</body>
+</html>

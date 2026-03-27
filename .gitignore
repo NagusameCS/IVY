@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Database
+*.db
+*.db-wal
+*.db-shm
+
+# Logs
+*.log
+
+# Generated question banks (too large for GitHub)
+ib-practice-platform/questions.json
+ib-practice-platform/bots/generated_*.json
+
+# SSL manager logs
+public_html/.ssl-manager/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~

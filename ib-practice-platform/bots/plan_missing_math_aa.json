@@ -1,0 +1,1711 @@
+[
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Algebra (Topic 1)",
+    "source_section_path": "Algebra",
+    "topic_code": "M1.1",
+    "lesson_title": "1.1 Arithmetic & Geometric Series",
+    "lesson_file": "1.1-arithmetic-geometric-series.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "sequences",
+      "series",
+      "sigma"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 1.1 Arithmetic & Geometric Series\\n\\nTopic: M1.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Algebra (Topic 1)",
+    "source_section_path": "Algebra",
+    "topic_code": "M1.2",
+    "lesson_title": "1.2 Exponents & Logarithms",
+    "lesson_file": "1.2-exponents-logarithms.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "exponents",
+      "logarithms"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 1.2 Exponents & Logarithms\\n\\nTopic: M1.2\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Algebra (Topic 1)",
+    "source_section_path": "Algebra",
+    "topic_code": "M1.3",
+    "lesson_title": "1.3 Counting & Binomial Theorem",
+    "lesson_file": "1.3-counting-binomials.md",
+    "level": "SL/HL",
+    "time_estimate": 25,
+    "tags": [
+      "counting",
+      "permutations",
+      "combinations",
+      "binomial"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 1.3 Counting & Binomial Theorem\\n\\nTopic: M1.3\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Algebra (Topic 1)",
+    "source_section_path": "Algebra",
+    "topic_code": "M1.4",
+    "lesson_title": "1.4 Proof by Induction",
+    "lesson_file": "1.4-mathematical-induction.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "proof",
+      "induction"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 1.4 Proof by Induction\\n\\nTopic: M1.4\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Algebra (Topic 1)",
+    "source_section_path": "Algebra",
+    "topic_code": "M1.5",
+    "lesson_title": "1.5 Complex Numbers Basics",
+    "lesson_file": "1.5-complex-numbers-basics.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "complex",
+      "conjugate",
+      "modulus"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 1.5 Complex Numbers Basics\\n\\nTopic: M1.5\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Algebra (Topic 1)",
+    "source_section_path": "Algebra",
+    "topic_code": "M1.6",
+    "lesson_title": "1.6 Polar Form of Complex Numbers",
+    "lesson_file": "1.6-complex-polar-form.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "complex",
+      "polar",
+      "cis"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 1.6 Polar Form of Complex Numbers\\n\\nTopic: M1.6\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Algebra (Topic 1)",
+    "source_section_path": "Algebra",
+    "topic_code": "M1.7",
+    "lesson_title": "1.7 Powers & Roots (De Moivre)",
+    "lesson_file": "1.7-complex-powers-roots.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "complex",
+      "roots",
+      "de moivre"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 1.7 Powers & Roots (De Moivre)\\n\\nTopic: M1.7\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Algebra (Topic 1)",
+    "source_section_path": "Algebra",
+    "topic_code": "M1.8",
+    "lesson_title": "1.8 Conjugate Roots of Polynomials",
+    "lesson_file": "1.8-conjugate-roots-polynomials.md",
+    "level": "HL",
+    "time_estimate": 15,
+    "tags": [
+      "polynomials",
+      "complex"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 1.8 Conjugate Roots of Polynomials\\n\\nTopic: M1.8\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Algebra (Topic 1)",
+    "source_section_path": "Algebra",
+    "topic_code": "M1.9",
+    "lesson_title": "1.9 Systems of Linear Equations",
+    "lesson_file": "1.9-systems-linear-equations.md",
+    "level": "SL/HL",
+    "time_estimate": 25,
+    "tags": [
+      "linear systems",
+      "elimination"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 1.9 Systems of Linear Equations\\n\\nTopic: M1.9\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Functions & Equations (Topic 2)",
+    "source_section_path": "Functions-Equations",
+    "topic_code": "M2.1",
+    "lesson_title": "2.1 Concept of Function",
+    "lesson_file": "2.1-concept-of-function.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "function",
+      "domain",
+      "inverse"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 2.1 Concept of Function\\n\\nTopic: M2.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Functions & Equations (Topic 2)",
+    "source_section_path": "Functions-Equations",
+    "topic_code": "M2.2",
+    "lesson_title": "2.2 Graph Features",
+    "lesson_file": "2.2-graph-features.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "graphs",
+      "asymptotes",
+      "symmetry"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 2.2 Graph Features\\n\\nTopic: M2.2\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Functions & Equations (Topic 2)",
+    "source_section_path": "Functions-Equations",
+    "topic_code": "M2.3",
+    "lesson_title": "2.3 Graph Transformations",
+    "lesson_file": "2.3-graph-transformations.md",
+    "level": "SL/HL",
+    "time_estimate": 15,
+    "tags": [
+      "transformations",
+      "reflections"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 2.3 Graph Transformations\\n\\nTopic: M2.3\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Functions & Equations (Topic 2)",
+    "source_section_path": "Functions-Equations",
+    "topic_code": "M2.4",
+    "lesson_title": "2.4 Basic Function Families",
+    "lesson_file": "2.4-basic-function-families.md",
+    "level": "SL/HL",
+    "time_estimate": 25,
+    "tags": [
+      "rational",
+      "exponential",
+      "logarithmic"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 2.4 Basic Function Families\\n\\nTopic: M2.4\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Functions & Equations (Topic 2)",
+    "source_section_path": "Functions-Equations",
+    "topic_code": "M2.5",
+    "lesson_title": "2.5 Polynomial Functions",
+    "lesson_file": "2.5-polynomial-functions.md",
+    "level": "SL/HL",
+    "time_estimate": 25,
+    "tags": [
+      "polynomials",
+      "factor theorem"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 2.5 Polynomial Functions\\n\\nTopic: M2.5\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Functions & Equations (Topic 2)",
+    "source_section_path": "Functions-Equations",
+    "topic_code": "M2.6",
+    "lesson_title": "2.6 Solving Equations",
+    "lesson_file": "2.6-solving-equations.md",
+    "level": "SL/HL",
+    "time_estimate": 30,
+    "tags": [
+      "quadratic",
+      "discriminant"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 2.6 Solving Equations\\n\\nTopic: M2.6\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Functions & Equations (Topic 2)",
+    "source_section_path": "Functions-Equations",
+    "topic_code": "M2.7",
+    "lesson_title": "2.7 Inequalities",
+    "lesson_file": "2.7-inequalities.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "inequalities",
+      "sign chart"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 2.7 Inequalities\\n\\nTopic: M2.7\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Circular Functions & Trigonometry (Topic 3)",
+    "source_section_path": "Circular-Functions-Trigonometry",
+    "topic_code": "M3.1",
+    "lesson_title": "3.1 Radian Measure, Arc & Sector",
+    "lesson_file": "3.1-radian-measure-arc-sector.md",
+    "level": "SL/HL",
+    "time_estimate": 15,
+    "tags": [
+      "radians",
+      "arc length"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 3.1 Radian Measure, Arc & Sector\\n\\nTopic: M3.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Circular Functions & Trigonometry (Topic 3)",
+    "source_section_path": "Circular-Functions-Trigonometry",
+    "topic_code": "M3.2",
+    "lesson_title": "3.2 Unit Circle & Basic Identities",
+    "lesson_file": "3.2-trig-unit-circle-identities.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "trigonometry",
+      "identities"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 3.2 Unit Circle & Basic Identities\\n\\nTopic: M3.2\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Circular Functions & Trigonometry (Topic 3)",
+    "source_section_path": "Circular-Functions-Trigonometry",
+    "topic_code": "M3.3",
+    "lesson_title": "3.3 Compound & Double Angles",
+    "lesson_file": "3.3-compound-double-angle.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "trigonometry",
+      "double angle"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 3.3 Compound & Double Angles\\n\\nTopic: M3.3\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Circular Functions & Trigonometry (Topic 3)",
+    "source_section_path": "Circular-Functions-Trigonometry",
+    "topic_code": "M3.4",
+    "lesson_title": "3.4 Sinusoidal Models",
+    "lesson_file": "3.4-sinusoidal-models.md",
+    "level": "SL/HL",
+    "time_estimate": 25,
+    "tags": [
+      "sinusoidal",
+      "modeling"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 3.4 Sinusoidal Models\\n\\nTopic: M3.4\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Circular Functions & Trigonometry (Topic 3)",
+    "source_section_path": "Circular-Functions-Trigonometry",
+    "topic_code": "M3.5",
+    "lesson_title": "3.5 Inverse Trig Functions",
+    "lesson_file": "3.5-inverse-trig-functions.md",
+    "level": "SL/HL",
+    "time_estimate": 15,
+    "tags": [
+      "inverse trig",
+      "arcsin"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 3.5 Inverse Trig Functions\\n\\nTopic: M3.5\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Circular Functions & Trigonometry (Topic 3)",
+    "source_section_path": "Circular-Functions-Trigonometry",
+    "topic_code": "M3.6",
+    "lesson_title": "3.6 Solving Trig Equations",
+    "lesson_file": "3.6-solving-trig-equations.md",
+    "level": "SL/HL",
+    "time_estimate": 25,
+    "tags": [
+      "trig equations",
+      "identities"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 3.6 Solving Trig Equations\\n\\nTopic: M3.6\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Circular Functions & Trigonometry (Topic 3)",
+    "source_section_path": "Circular-Functions-Trigonometry",
+    "topic_code": "M3.7",
+    "lesson_title": "3.7 Triangle Rules & Applications",
+    "lesson_file": "3.7-triangle-rules.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "sine rule",
+      "cosine rule"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 3.7 Triangle Rules & Applications\\n\\nTopic: M3.7\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Vectors (Topic 4)",
+    "source_section_path": "Vectors",
+    "topic_code": "M4.1",
+    "lesson_title": "4.1 Vector Basics",
+    "lesson_file": "4.1-vector-basics.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "vectors",
+      "components"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 4.1 Vector Basics\\n\\nTopic: M4.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Vectors (Topic 4)",
+    "source_section_path": "Vectors",
+    "topic_code": "M4.2",
+    "lesson_title": "4.2 Scalar (Dot) Product",
+    "lesson_file": "4.2-scalar-product.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "dot product",
+      "angle"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 4.2 Scalar (Dot) Product\\n\\nTopic: M4.2\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Vectors (Topic 4)",
+    "source_section_path": "Vectors",
+    "topic_code": "M4.3",
+    "lesson_title": "4.3 Vector Equation of a Line",
+    "lesson_file": "4.3-vector-equation-line.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "line",
+      "parametric"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 4.3 Vector Equation of a Line\\n\\nTopic: M4.3\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Vectors (Topic 4)",
+    "source_section_path": "Vectors",
+    "topic_code": "M4.4",
+    "lesson_title": "4.4 Line Relationships",
+    "lesson_file": "4.4-line-relationships.md",
+    "level": "HL",
+    "time_estimate": 15,
+    "tags": [
+      "lines",
+      "skew"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 4.4 Line Relationships\\n\\nTopic: M4.4\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Vectors (Topic 4)",
+    "source_section_path": "Vectors",
+    "topic_code": "M4.5",
+    "lesson_title": "4.5 Vector (Cross) Product",
+    "lesson_file": "4.5-vector-product.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "cross product",
+      "area"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 4.5 Vector (Cross) Product\\n\\nTopic: M4.5\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Vectors (Topic 4)",
+    "source_section_path": "Vectors",
+    "topic_code": "M4.6",
+    "lesson_title": "4.6 Planes in 3D",
+    "lesson_file": "4.6-planes.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "planes",
+      "normal"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 4.6 Planes in 3D\\n\\nTopic: M4.6\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Vectors (Topic 4)",
+    "source_section_path": "Vectors",
+    "topic_code": "M4.7",
+    "lesson_title": "4.7 Intersections & Angles",
+    "lesson_file": "4.7-intersections-angles.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "intersection",
+      "angle"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 4.7 Intersections & Angles\\n\\nTopic: M4.7\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Statistics & Probability (Core Topic 5)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M5.1",
+    "lesson_title": "5.1 Data Concepts & Descriptive Stats",
+    "lesson_file": "5.1-data-concepts.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "data",
+      "variance"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 5.1 Data Concepts & Descriptive Stats\\n\\nTopic: M5.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Statistics & Probability (Core Topic 5)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M5.2",
+    "lesson_title": "5.2 Basic Probability",
+    "lesson_file": "5.2-basic-probability.md",
+    "level": "SL/HL",
+    "time_estimate": 15,
+    "tags": [
+      "probability",
+      "sample space"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 5.2 Basic Probability\\n\\nTopic: M5.2\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Statistics & Probability (Core Topic 5)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M5.3",
+    "lesson_title": "5.3 Combined Events",
+    "lesson_file": "5.3-combined-events.md",
+    "level": "SL/HL",
+    "time_estimate": 15,
+    "tags": [
+      "union",
+      "intersection"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 5.3 Combined Events\\n\\nTopic: M5.3\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Statistics & Probability (Core Topic 5)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M5.4",
+    "lesson_title": "5.4 Conditional Probability & Bayes",
+    "lesson_file": "5.4-conditional-probability-bayes.md",
+    "level": "SL/HL",
+    "time_estimate": 25,
+    "tags": [
+      "conditional",
+      "bayes"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 5.4 Conditional Probability & Bayes\\n\\nTopic: M5.4\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Statistics & Probability (Core Topic 5)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M5.5",
+    "lesson_title": "5.5 Random Variables & Distributions",
+    "lesson_file": "5.5-random-variables.md",
+    "level": "SL/HL",
+    "time_estimate": 25,
+    "tags": [
+      "random variable",
+      "expectation"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 5.5 Random Variables & Distributions\\n\\nTopic: M5.5\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Statistics & Probability (Core Topic 5)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M5.6",
+    "lesson_title": "5.6 Binomial & Poisson",
+    "lesson_file": "5.6-binomial-poisson.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "binomial",
+      "poisson"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 5.6 Binomial & Poisson\\n\\nTopic: M5.6\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Statistics & Probability (Core Topic 5)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M5.7",
+    "lesson_title": "5.7 Normal Distribution",
+    "lesson_file": "5.7-normal-distribution.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "normal",
+      "standardization"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 5.7 Normal Distribution\\n\\nTopic: M5.7\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Calculus (Core Topic 6)",
+    "source_section_path": "Calculus",
+    "topic_code": "M6.1",
+    "lesson_title": "6.1 Limits & Derivative Basics",
+    "lesson_file": "6.1-limits-derivative-basics.md",
+    "level": "SL/HL",
+    "time_estimate": 25,
+    "tags": [
+      "limits",
+      "derivative"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 6.1 Limits & Derivative Basics\\n\\nTopic: M6.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Calculus (Core Topic 6)",
+    "source_section_path": "Calculus",
+    "topic_code": "M6.2",
+    "lesson_title": "6.2 Differentiation Rules",
+    "lesson_file": "6.2-differentiation-rules.md",
+    "level": "SL/HL",
+    "time_estimate": 30,
+    "tags": [
+      "product rule",
+      "chain rule"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 6.2 Differentiation Rules\\n\\nTopic: M6.2\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Calculus (Core Topic 6)",
+    "source_section_path": "Calculus",
+    "topic_code": "M6.3",
+    "lesson_title": "6.3 Extrema & Graph Behaviour",
+    "lesson_file": "6.3-extrema-graph-behaviour.md",
+    "level": "SL/HL",
+    "time_estimate": 25,
+    "tags": [
+      "extrema",
+      "optimization"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 6.3 Extrema & Graph Behaviour\\n\\nTopic: M6.3\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Calculus (Core Topic 6)",
+    "source_section_path": "Calculus",
+    "topic_code": "M6.4",
+    "lesson_title": "6.4 Indefinite Integration Basics",
+    "lesson_file": "6.4-indefinite-integration.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "integration",
+      "antiderivative"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 6.4 Indefinite Integration Basics\\n\\nTopic: M6.4\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Calculus (Core Topic 6)",
+    "source_section_path": "Calculus",
+    "topic_code": "M6.5",
+    "lesson_title": "6.5 Definite Integrals, Area & Volume",
+    "lesson_file": "6.5-definite-integrals-area-volume.md",
+    "level": "SL/HL",
+    "time_estimate": 30,
+    "tags": [
+      "area",
+      "volume"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 6.5 Definite Integrals, Area & Volume\\n\\nTopic: M6.5\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Calculus (Core Topic 6)",
+    "source_section_path": "Calculus",
+    "topic_code": "M6.6",
+    "lesson_title": "6.6 Kinematics & Total Distance",
+    "lesson_file": "6.6-kinematics-integration.md",
+    "level": "SL/HL",
+    "time_estimate": 20,
+    "tags": [
+      "kinematics",
+      "velocity"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 6.6 Kinematics & Total Distance\\n\\nTopic: M6.6\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Calculus (Core Topic 6)",
+    "source_section_path": "Calculus",
+    "topic_code": "M6.7",
+    "lesson_title": "6.7 Integration Techniques",
+    "lesson_file": "6.7-integration-techniques.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "substitution",
+      "parts"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 6.7 Integration Techniques\\n\\nTopic: M6.7\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Statistics & Probability (Topic 7)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M7.1",
+    "lesson_title": "7.1 CDFs, Geometric, Neg Binomial, PGFs",
+    "lesson_file": "7.1-cdf-geometric-negative-binomial-pgf.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "cdf",
+      "geometric",
+      "pgf"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 7.1 CDFs, Geometric, Neg Binomial, PGFs\\n\\nTopic: M7.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Statistics & Probability (Topic 7)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M7.2",
+    "lesson_title": "7.2 Linear Combinations of RVs",
+    "lesson_file": "7.2-linear-combinations-rv.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "expectation",
+      "variance"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 7.2 Linear Combinations of RVs\\n\\nTopic: M7.2\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Statistics & Probability (Topic 7)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M7.3",
+    "lesson_title": "7.3 Unbiased Estimators",
+    "lesson_file": "7.3-unbiased-estimators.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "estimation",
+      "unbiased"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 7.3 Unbiased Estimators\\n\\nTopic: M7.3\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Statistics & Probability (Topic 7)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M7.4",
+    "lesson_title": "7.4 Normal Combinations & CLT",
+    "lesson_file": "7.4-clt-normal-combinations.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "normal",
+      "clt"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 7.4 Normal Combinations & CLT\\n\\nTopic: M7.4\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Statistics & Probability (Topic 7)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M7.5",
+    "lesson_title": "7.5 Confidence Intervals (Mean)",
+    "lesson_file": "7.5-confidence-intervals.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "confidence interval"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 7.5 Confidence Intervals (Mean)\\n\\nTopic: M7.5\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Statistics & Probability (Topic 7)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M7.6",
+    "lesson_title": "7.6 Hypothesis Testing (Mean)",
+    "lesson_file": "7.6-hypothesis-testing.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "hypothesis test",
+      "p-value"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 7.6 Hypothesis Testing (Mean)\\n\\nTopic: M7.6\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Statistics & Probability (Topic 7)",
+    "source_section_path": "Statistics-Probability",
+    "topic_code": "M7.7",
+    "lesson_title": "7.7 Bivariate Correlation & Regression",
+    "lesson_file": "7.7-bivariate-correlation-regression.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "correlation",
+      "regression"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 7.7 Bivariate Correlation & Regression\\n\\nTopic: M7.7\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.1",
+    "lesson_title": "8.1 Set Operations & Laws",
+    "lesson_file": "8.1-set-operations-laws.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "sets",
+      "de morgan"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.1 Set Operations & Laws\\n\\nTopic: M8.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.2",
+    "lesson_title": "8.2 Relations & Equivalence",
+    "lesson_file": "8.2-relations-equivalence.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "relations",
+      "equivalence"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.2 Relations & Equivalence\\n\\nTopic: M8.2\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.3",
+    "lesson_title": "8.3 Injections, Surjections, Bijections",
+    "lesson_file": "8.3-functions-bijections.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "functions",
+      "bijection"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.3 Injections, Surjections, Bijections\\n\\nTopic: M8.3\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.4",
+    "lesson_title": "8.4 Binary Operations",
+    "lesson_file": "8.4-binary-operations.md",
+    "level": "HL",
+    "time_estimate": 15,
+    "tags": [
+      "binary operation",
+      "cayley"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.4 Binary Operations\\n\\nTopic: M8.4\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.5",
+    "lesson_title": "8.5 Operation Properties",
+    "lesson_file": "8.5-operation-properties.md",
+    "level": "HL",
+    "time_estimate": 15,
+    "tags": [
+      "associative",
+      "commutative"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.5 Operation Properties\\n\\nTopic: M8.5\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.6",
+    "lesson_title": "8.6 Identity & Inverses",
+    "lesson_file": "8.6-identity-inverses-uniqueness.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "identity",
+      "inverse"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.6 Identity & Inverses\\n\\nTopic: M8.6\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.7",
+    "lesson_title": "8.7 Definition of a Group",
+    "lesson_file": "8.7-definition-of-group.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "group",
+      "abelian"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.7 Definition of a Group\\n\\nTopic: M8.7\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.8",
+    "lesson_title": "8.8 Group Examples",
+    "lesson_file": "8.8-group-examples.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "modular",
+      "symmetry"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.8 Group Examples\\n\\nTopic: M8.8\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.9",
+    "lesson_title": "8.9 Cyclic Groups & Generators",
+    "lesson_file": "8.9-cyclic-groups.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "cyclic",
+      "generator"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.9 Cyclic Groups & Generators\\n\\nTopic: M8.9\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.10",
+    "lesson_title": "8.10 Permutations & Cycles",
+    "lesson_file": "8.10-permutations-cycles.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "permutation",
+      "cycle"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.10 Permutations & Cycles\\n\\nTopic: M8.10\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.11",
+    "lesson_title": "8.11 Subgroups, Cosets & Lagrange",
+    "lesson_file": "8.11-subgroups-cosets-lagrange.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "subgroup",
+      "coset",
+      "lagrange"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.11 Subgroups, Cosets & Lagrange\\n\\nTopic: M8.11\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Sets, Relations & Groups (Topic 8)",
+    "source_section_path": "Sets-Relations-Groups",
+    "topic_code": "M8.12",
+    "lesson_title": "8.12 Homomorphisms & Isomorphisms",
+    "lesson_file": "8.12-homomorphisms-isomorphisms.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "homomorphism",
+      "isomorphism"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 8.12 Homomorphisms & Isomorphisms\\n\\nTopic: M8.12\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Calculus (Topic 9)",
+    "source_section_path": "Option-Calculus",
+    "topic_code": "M9.1",
+    "lesson_title": "9.1 Infinite Sequences",
+    "lesson_file": "9.1-infinite-sequences.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "sequences",
+      "convergence"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 9.1 Infinite Sequences\\n\\nTopic: M9.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Calculus (Topic 9)",
+    "source_section_path": "Option-Calculus",
+    "topic_code": "M9.2",
+    "lesson_title": "9.2 Infinite Series & Tests",
+    "lesson_file": "9.2-infinite-series-convergence-tests.md",
+    "level": "HL",
+    "time_estimate": 35,
+    "tags": [
+      "series",
+      "convergence tests"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 9.2 Infinite Series & Tests\\n\\nTopic: M9.2\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Calculus (Topic 9)",
+    "source_section_path": "Option-Calculus",
+    "topic_code": "M9.3",
+    "lesson_title": "9.3 Continuity & Differentiability",
+    "lesson_file": "9.3-continuity-differentiability.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "continuity",
+      "differentiability"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 9.3 Continuity & Differentiability\\n\\nTopic: M9.3\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Calculus (Topic 9)",
+    "source_section_path": "Option-Calculus",
+    "topic_code": "M9.4",
+    "lesson_title": "9.4 Riemann Sums & Improper Integrals",
+    "lesson_file": "9.4-riemann-integral-improper.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "riemann",
+      "improper integrals"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 9.4 Riemann Sums & Improper Integrals\\n\\nTopic: M9.4\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Calculus (Topic 9)",
+    "source_section_path": "Option-Calculus",
+    "topic_code": "M9.5",
+    "lesson_title": "9.5 First-Order Differential Equations",
+    "lesson_file": "9.5-first-order-differential-equations.md",
+    "level": "HL",
+    "time_estimate": 35,
+    "tags": [
+      "differential equations",
+      "euler"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 9.5 First-Order Differential Equations\\n\\nTopic: M9.5\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Calculus (Topic 9)",
+    "source_section_path": "Option-Calculus",
+    "topic_code": "M9.6",
+    "lesson_title": "9.6 Taylor & Maclaurin Series",
+    "lesson_file": "9.6-taylor-maclaurin-series.md",
+    "level": "HL",
+    "time_estimate": 35,
+    "tags": [
+      "taylor",
+      "maclaurin"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 9.6 Taylor & Maclaurin Series\\n\\nTopic: M9.6\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Calculus (Topic 9)",
+    "source_section_path": "Option-Calculus",
+    "topic_code": "M9.7",
+    "lesson_title": "9.7 Limit Evaluation (l'H\u00f4pital & Series)",
+    "lesson_file": "9.7-limit-evaluation-lhopital-taylor.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "limits",
+      "l'hopital"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 9.7 Limit Evaluation (l'H\u00f4pital & Series)\\n\\nTopic: M9.7\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Discrete Mathematics (Topic 10)",
+    "source_section_path": "Discrete-Mathematics",
+    "topic_code": "M10.1",
+    "lesson_title": "10.1 Strong Induction & Pigeonhole",
+    "lesson_file": "10.1-strong-induction-pigeonhole.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "induction",
+      "pigeonhole"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 10.1 Strong Induction & Pigeonhole\\n\\nTopic: M10.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Discrete Mathematics (Topic 10)",
+    "source_section_path": "Discrete-Mathematics",
+    "topic_code": "M10.2",
+    "lesson_title": "10.2 Divisibility, GCD, LCM & Primes",
+    "lesson_file": "10.2-divisibility-gcd-lcm-primes.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "gcd",
+      "primes"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 10.2 Divisibility, GCD, LCM & Primes\\n\\nTopic: M10.2\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Discrete Mathematics (Topic 10)",
+    "source_section_path": "Discrete-Mathematics",
+    "topic_code": "M10.3",
+    "lesson_title": "10.3 Linear Diophantine Equations",
+    "lesson_file": "10.3-linear-diophantine.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "diophantine"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 10.3 Linear Diophantine Equations\\n\\nTopic: M10.3\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Discrete Mathematics (Topic 10)",
+    "source_section_path": "Discrete-Mathematics",
+    "topic_code": "M10.4",
+    "lesson_title": "10.4 Modular Arithmetic & CRT",
+    "lesson_file": "10.4-modular-arithmetic.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "modular",
+      "crt"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 10.4 Modular Arithmetic & CRT\\n\\nTopic: M10.4\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Discrete Mathematics (Topic 10)",
+    "source_section_path": "Discrete-Mathematics",
+    "topic_code": "M10.5",
+    "lesson_title": "10.5 Integer Bases",
+    "lesson_file": "10.5-integer-bases.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "bases",
+      "representation"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 10.5 Integer Bases\\n\\nTopic: M10.5\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Discrete Mathematics (Topic 10)",
+    "source_section_path": "Discrete-Mathematics",
+    "topic_code": "M10.6",
+    "lesson_title": "10.6 Fermat's Little Theorem",
+    "lesson_file": "10.6-fermats-little-theorem.md",
+    "level": "HL",
+    "time_estimate": 20,
+    "tags": [
+      "fermat"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 10.6 Fermat's Little Theorem\\n\\nTopic: M10.6\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Discrete Mathematics (Topic 10)",
+    "source_section_path": "Discrete-Mathematics",
+    "topic_code": "M10.7",
+    "lesson_title": "10.7 Graph Theory Basics",
+    "lesson_file": "10.7-graph-theory-basics.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "graphs",
+      "planarity"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 10.7 Graph Theory Basics\\n\\nTopic: M10.7\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Discrete Mathematics (Topic 10)",
+    "source_section_path": "Discrete-Mathematics",
+    "topic_code": "M10.8",
+    "lesson_title": "10.8 Walks, Trails & Cycles",
+    "lesson_file": "10.8-eulerian-hamiltonian.md",
+    "level": "HL",
+    "time_estimate": 25,
+    "tags": [
+      "eulerian",
+      "hamiltonian"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 10.8 Walks, Trails & Cycles\\n\\nTopic: M10.8\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Discrete Mathematics (Topic 10)",
+    "source_section_path": "Discrete-Mathematics",
+    "topic_code": "M10.9",
+    "lesson_title": "10.9 Graph Algorithms (Kruskal & Dijkstra)",
+    "lesson_file": "10.9-graph-algorithms.md",
+    "level": "HL",
+    "time_estimate": 35,
+    "tags": [
+      "mst",
+      "shortest path"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 10.9 Graph Algorithms (Kruskal & Dijkstra)\\n\\nTopic: M10.9\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Discrete Mathematics (Topic 10)",
+    "source_section_path": "Discrete-Mathematics",
+    "topic_code": "M10.10",
+    "lesson_title": "10.10 Chinese Postman & TSP",
+    "lesson_file": "10.10-postman-tsp-heuristics.md",
+    "level": "HL",
+    "time_estimate": 35,
+    "tags": [
+      "tsp",
+      "heuristics"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 10.10 Chinese Postman & TSP\\n\\nTopic: M10.10\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  },
+  {
+    "subject_key": "math_aa",
+    "source_subject": "Math",
+    "source_section": "Option: Discrete Mathematics (Topic 10)",
+    "source_section_path": "Discrete-Mathematics",
+    "topic_code": "M10.11",
+    "lesson_title": "10.11 Recurrence Relations",
+    "lesson_file": "10.11-recurrence-relations.md",
+    "level": "HL",
+    "time_estimate": 30,
+    "tags": [
+      "recurrence",
+      "characteristic"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# 10.11 Recurrence Relations\\n\\nTopic: M10.11\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  }
+]

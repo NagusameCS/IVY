@@ -1,0 +1,1960 @@
+[
+  {
+    "id": "cs_1_1_mcq_001",
+    "subject": "computer_science",
+    "topic": "1",
+    "subtopic": "1.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "System Change Management",
+    "tags": [
+      "system-planning",
+      "change-management"
+    ],
+    "stem_template": "An organisation is replacing its legacy {{system}} with a new cloud-based solution. Which implementation strategy installs the new system alongside the old one, running them simultaneously for a period?",
+    "params": {
+      "system": {
+        "type": "choice",
+        "values": [
+          "payroll system",
+          "inventory management system",
+          "customer database",
+          "accounting software"
+        ]
+      }
+    },
+    "answer_template": "Parallel running — both old and new systems operate simultaneously; outputs are compared to verify the new system; safest approach but most expensive and resource-intensive.",
+    "distractor_templates": [
+      "Direct changeover (big bang) — immediately switching off the old system and activating the new one on a set date.",
+      "Pilot changeover — implementing the new system in one department/location first before rolling out company-wide.",
+      "Phased changeover — gradually replacing modules of the old system one at a time over time."
+    ],
+    "options_template": [
+      {
+        "text": "Parallel running — both systems run simultaneously for comparison and verification.",
+        "correct": true
+      },
+      {
+        "text": "Direct changeover — immediate switch from old to new on a set date.",
+        "correct": false
+      },
+      {
+        "text": "Pilot changeover — new system tested in one department first.",
+        "correct": false
+      },
+      {
+        "text": "Phased changeover — old system replaced module by module over time.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for parallel running + simultaneous operation + comparison of outputs.",
+    "hints": [
+      "Parallel running is the safest but most costly method.",
+      "Direct changeover is riskiest — if the new system fails, there is no fallback."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_1_1_mcq_002",
+    "subject": "computer_science",
+    "topic": "1",
+    "subtopic": "1.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "User Training for New Systems",
+    "tags": [
+      "system-planning",
+      "change-management"
+    ],
+    "stem_template": "When introducing a new {{system}} to {{n_users}} users, which approach to training is most effective for reducing resistance to change?",
+    "params": {
+      "system": {
+        "type": "choice",
+        "values": [
+          "ERP system",
+          "customer relationship management (CRM) tool",
+          "new operating system",
+          "project management software"
+        ]
+      },
+      "n_users": {
+        "type": "int",
+        "min": 50,
+        "max": 5000
+      }
+    },
+    "answer_template": "A combination of hands-on training, clear documentation, and involving key users ('champions') early in the process helps reduce resistance; involving end-users in system design and testing (user acceptance testing) builds ownership and reduces anxiety.",
+    "distractor_templates": [
+      "Forcing all users to use the new system immediately with no training minimises transition costs.",
+      "Only training the IT department is sufficient — they can help other users on an ad-hoc basis.",
+      "Training is unnecessary if the new system is sufficiently intuitive."
+    ],
+    "options_template": [
+      {
+        "text": "Hands-on training, documentation, early user involvement (champions), and user acceptance testing.",
+        "correct": true
+      },
+      {
+        "text": "Force immediate adoption with no training to minimise transition costs.",
+        "correct": false
+      },
+      {
+        "text": "Train only the IT department; they support others ad-hoc.",
+        "correct": false
+      },
+      {
+        "text": "No training needed if system is sufficiently intuitive.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for any two valid training/change management strategies with correct reasoning.",
+    "hints": [
+      "User involvement reduces resistance to change (change management theory).",
+      "Documentation, tutorials, and 'super users' are all valid strategies."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_1_1_ordering_001",
+    "subject": "computer_science",
+    "topic": "1",
+    "subtopic": "1.1",
+    "type": "ordering",
+    "difficulty": "core",
+    "title": "System Development Life Cycle (SDLC) Phases",
+    "tags": [
+      "system-planning",
+      "change-management"
+    ],
+    "stem_template": "Arrange the following phases of the System Development Life Cycle (SDLC) in the correct order.",
+    "params": {},
+    "answer_template": "1. Feasibility Study — assess technical, financial, and legal viability. 2. Requirements Analysis — gather and define user/system requirements. 3. System Design — design architecture, interfaces, and data structures. 4. Development (Coding) — build the system according to design specifications. 5. Testing — verify the system meets requirements (unit, integration, acceptance testing). 6. Implementation — deploy the system (parallel/pilot/phased/direct changeover). 7. Maintenance and Review — ongoing support, bug fixes, and updates.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correctly placed adjacent phase (max 6).",
+    "hints": [
+      "The SDLC is iterative in modern development (Agile) but sequential in waterfall.",
+      "Feasibility always comes first; maintenance is the ongoing final phase."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "cs_1_1_worked_001",
+    "subject": "computer_science",
+    "topic": "1",
+    "subtopic": "1.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Impact of a New System on an Organisation",
+    "tags": [
+      "system-planning",
+      "change-management"
+    ],
+    "stem_template": "A school is replacing its manual attendance tracking system with an automated {{system}}. Analyse the impact on three stakeholder groups and identify two potential risks of the implementation.",
+    "params": {
+      "system": {
+        "type": "choice",
+        "values": [
+          "biometric scanning system",
+          "RFID card system",
+          "mobile app-based system",
+          "cloud-based portal"
+        ]
+      }
+    },
+    "answer_template": "Stakeholders: (1) Students — faster check-in, but privacy concerns about biometric/location data. (2) Teachers — reduced administrative burden; require training on new system. (3) IT staff — responsible for maintenance and security; increased workload initially. Risks: (1) Data security/privacy breach (personal data of students stored digitally — GDPR compliance). (2) Technical failure during implementation (system downtime disrupts attendance tracking). Mitigation: pilot testing, data encryption, staff training, backup procedures.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per stakeholder impact (max 3); 1 mark per risk with explanation (max 2); 1 mark mitigation. Max 6.",
+    "hints": [
+      "Consider privacy (GDPR), training, and technical reliability.",
+      "Stakeholder analysis: who gains, who is inconvenienced, who bears risk?"
+    ],
+    "marks": 6
+  },
+  {
+    "id": "cs_1_2_mcq_001",
+    "subject": "computer_science",
+    "topic": "1",
+    "subtopic": "1.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "System Inputs, Processes, and Outputs",
+    "tags": [
+      "inputs",
+      "outputs",
+      "processes",
+      "feedback"
+    ],
+    "stem_template": "In an automated {{system}}, the {{input}} is the system input, the {{process}} is the processing step, and the {{output}} is the output. Which additional element creates a closed-loop control system?",
+    "params": {
+      "system": {
+        "type": "choice",
+        "values": [
+          "thermostat",
+          "traffic light controller",
+          "online shopping recommendation engine",
+          "hospital patient monitoring system"
+        ]
+      },
+      "input": {
+        "type": "choice",
+        "values": [
+          "temperature sensor reading",
+          "vehicle count",
+          "purchase history",
+          "heart rate data"
+        ]
+      },
+      "process": {
+        "type": "choice",
+        "values": [
+          "comparison with target temperature",
+          "traffic flow calculation",
+          "collaborative filtering algorithm",
+          "vital sign analysis"
+        ]
+      },
+      "output": {
+        "type": "choice",
+        "values": [
+          "heater on/off signal",
+          "traffic light timing",
+          "product recommendations",
+          "medical alert"
+        ]
+      }
+    },
+    "answer_template": "Feedback — the output is fed back into the system as a new input, allowing the system to self-regulate and adjust behaviour to maintain desired conditions (e.g. thermostat measures actual temperature again after heater activates).",
+    "distractor_templates": [
+      "Storage — data is stored for future reference but does not affect system behaviour.",
+      "Interface — the user interface through which inputs are entered manually.",
+      "Control — a human operator who monitors outputs and manually adjusts inputs."
+    ],
+    "options_template": [
+      {
+        "text": "Feedback — output becomes input; system self-regulates to maintain target state.",
+        "correct": true
+      },
+      {
+        "text": "Storage — data stored for future reference; doesn't affect behaviour.",
+        "correct": false
+      },
+      {
+        "text": "Interface — user enters inputs manually.",
+        "correct": false
+      },
+      {
+        "text": "Control — human operator adjusts inputs based on outputs.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for feedback + self-regulation/closed-loop description.",
+    "hints": [
+      "Closed-loop system: feedback loop allows automatic correction.",
+      "Open-loop system: no feedback; output does not influence input."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_1_2_mcq_002",
+    "subject": "computer_science",
+    "topic": "1",
+    "subtopic": "1.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Data Flow Diagrams",
+    "tags": [
+      "inputs",
+      "outputs",
+      "processes",
+      "feedback"
+    ],
+    "stem_template": "In a Data Flow Diagram (DFD), which symbol represents an external entity (source or destination of data outside the system)?",
+    "params": {},
+    "answer_template": "A rectangle (square) — represents external entities such as customers, suppliers, or other systems that interact with the system but are outside its boundary.",
+    "distractor_templates": [
+      "A circle or rounded rectangle — this represents a process (transformation of data).",
+      "An open rectangle (two parallel lines) — this represents a data store.",
+      "An arrow — this represents data flow between components."
+    ],
+    "options_template": [
+      {
+        "text": "Rectangle — external entity outside system boundary.",
+        "correct": true
+      },
+      {
+        "text": "Circle/rounded rectangle — process (data transformation).",
+        "correct": false
+      },
+      {
+        "text": "Open rectangle (two parallel lines) — data store.",
+        "correct": false
+      },
+      {
+        "text": "Arrow — data flow direction.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for rectangle + external entity definition.",
+    "hints": [
+      "DFD symbols: Rectangle = external entity; Circle = process; Open rectangle = data store; Arrow = data flow.",
+      "External entities are outside the system boundary."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_1_2_worked_001",
+    "subject": "computer_science",
+    "topic": "1",
+    "subtopic": "1.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "System Design — Inputs, Processes, Outputs, Feedback",
+    "tags": [
+      "inputs",
+      "outputs",
+      "processes",
+      "feedback"
+    ],
+    "stem_template": "Design the IPO (Input-Process-Output) model for a {{system}}. Include at least two inputs, two processes, two outputs, and describe the feedback mechanism.",
+    "params": {
+      "system": {
+        "type": "choice",
+        "values": [
+          "library book management system",
+          "online exam marking system",
+          "school timetable generator",
+          "hospital appointment booking system"
+        ]
+      }
+    },
+    "answer_template": "Library system: Inputs: book ID (barcode scan), student ID, return date. Processes: check availability in database, calculate due date, update loan records. Outputs: loan confirmation message, overdue notices, inventory reports. Feedback: overdue notices trigger system to flag account; return scanning updates availability status, which feeds back into the availability checking process. Each element accurately described and linked to the system's function.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per input (max 2); 1 mark per process (max 2); 1 mark per output (max 2); 1 mark feedback mechanism. Max 7, cap at 6.",
+    "hints": [
+      "IPO model: what goes in, what happens to it, what comes out.",
+      "Feedback closes the loop — output becomes a new input or triggers a system response."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "cs_2_1_mcq_001",
+    "subject": "computer_science",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "CPU Components and Functions",
+    "tags": [
+      "CPU",
+      "ALU",
+      "control-unit",
+      "registers",
+      "buses"
+    ],
+    "stem_template": "The {{component}} of the CPU is responsible for:",
+    "params": {
+      "component": {
+        "type": "choice",
+        "values": [
+          "Arithmetic Logic Unit (ALU)",
+          "Control Unit (CU)",
+          "Program Counter (PC) register",
+          "Accumulator register"
+        ]
+      }
+    },
+    "answer_template": "ALU: performs arithmetic (add, subtract, multiply) and logical (AND, OR, NOT, comparisons) operations. CU: fetches, decodes, and coordinates execution of instructions; generates control signals. PC: holds the memory address of the next instruction to be fetched. Accumulator: temporarily stores the result of the most recent ALU operation.",
+    "distractor_templates": [
+      "Permanently storing program instructions and data between sessions.",
+      "Controlling input/output devices through hardware interrupts only.",
+      "Encrypting data before it is sent to main memory."
+    ],
+    "options_template": [
+      {
+        "text": "ALU: arithmetic/logical operations. CU: fetch-decode-execute. PC: address of next instruction. Accumulator: stores ALU result.",
+        "correct": true
+      },
+      {
+        "text": "All components: permanently store programs between sessions.",
+        "correct": false
+      },
+      {
+        "text": "All components: control I/O through hardware interrupts.",
+        "correct": false
+      },
+      {
+        "text": "All components: encrypt data before sending to memory.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark per correct component-function match (max 4).",
+    "hints": [
+      "The CU orchestrates the fetch-decode-execute cycle.",
+      "The PC is automatically incremented after each fetch."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "cs_2_1_truth_table_001",
+    "subject": "computer_science",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "truth_table",
+    "difficulty": "core",
+    "title": "Logic Gates — AND, OR, NOT",
+    "tags": [
+      "CPU",
+      "ALU",
+      "logic-gates"
+    ],
+    "stem_template": "Complete the truth table for the logic expression: \\\\( Y = (A \\\\text{ AND } B) \\\\text{ OR } (\\\\text{NOT } A) \\\\)",
+    "params": {},
+    "answer_template": "A=0,B=0: NOT A=1, A AND B=0, Y=1. A=0,B=1: NOT A=1, A AND B=0, Y=1. A=1,B=0: NOT A=0, A AND B=0, Y=0. A=1,B=1: NOT A=0, A AND B=1, Y=1.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correct row (max 4). Penalise if intermediate columns omitted but correct final column still awarded.",
+    "hints": [
+      "Work out NOT A first, then A AND B, then combine with OR.",
+      "NOT flips the bit: NOT 0 = 1, NOT 1 = 0."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "cs_2_1_truth_table_002",
+    "subject": "computer_science",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "truth_table",
+    "difficulty": "challenge",
+    "title": "NAND and NOR Logic Gates",
+    "tags": [
+      "CPU",
+      "ALU",
+      "NAND",
+      "NOR",
+      "logic-gates"
+    ],
+    "stem_template": "Complete the truth table for: (a) NAND gate: \\\\( Y = \\\\overline{A \\\\cdot B} \\\\), (b) NOR gate: \\\\( Y = \\\\overline{A + B} \\\\) for all four input combinations.",
+    "params": {},
+    "answer_template": "NAND: A=0,B=0→Y=1; A=0,B=1→Y=1; A=1,B=0→Y=1; A=1,B=1→Y=0. NOR: A=0,B=0→Y=1; A=0,B=1→Y=0; A=1,B=0→Y=0; A=1,B=1→Y=0. NAND = NOT(AND); NOR = NOT(OR).",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correct NAND row (max 4); 1 mark per correct NOR row (max 4). Max 8, capped at 4 marks.",
+    "hints": [
+      "NAND is AND followed by NOT. Only output 0 when both inputs are 1.",
+      "NOR is OR followed by NOT. Only output 1 when both inputs are 0."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "cs_2_1_worked_001",
+    "subject": "computer_science",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Fetch-Decode-Execute Cycle",
+    "tags": [
+      "CPU",
+      "control-unit",
+      "registers"
+    ],
+    "stem_template": "Describe the fetch-decode-execute cycle for the instruction stored at memory address {{address}}. Name the registers involved at each stage.",
+    "params": {
+      "address": {
+        "type": "choice",
+        "values": [
+          "0x0A",
+          "0x1F",
+          "0x00",
+          "0x7F"
+        ]
+      }
+    },
+    "answer_template": "1. FETCH: Program Counter (PC) holds address {{address}}; address is copied to Memory Address Register (MAR); data at {{address}} is fetched into Memory Data Register (MDR); instruction copied to Current Instruction Register (CIR); PC incremented to point to next instruction. 2. DECODE: Control Unit (CU) decodes the opcode in CIR to determine the type of instruction. 3. EXECUTE: CU activates appropriate components — ALU for arithmetic/logic, or other registers for data movement; result stored in Accumulator.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per stage (fetch/decode/execute) with correct register (max 3); 1 mark per register correctly named and explained (max 3). Max 6.",
+    "hints": [
+      "Key registers: PC, MAR, MDR, CIR, Accumulator.",
+      "PC is incremented during the fetch stage, before execution."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "cs_2_2_mcq_001",
+    "subject": "computer_science",
+    "topic": "2",
+    "subtopic": "2.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Primary vs Secondary Memory",
+    "tags": [
+      "RAM",
+      "ROM",
+      "HDD",
+      "SSD"
+    ],
+    "stem_template": "Which of the following correctly distinguishes RAM from ROM?",
+    "params": {},
+    "answer_template": "RAM (Random Access Memory) is volatile (loses data when power is off), read/write, used for temporary storage of currently running programs and data. ROM (Read Only Memory) is non-volatile, read-only, contains permanent firmware (e.g. BIOS).",
+    "distractor_templates": [
+      "RAM is non-volatile and stores permanent firmware; ROM is volatile and used for temporary program storage.",
+      "Both RAM and ROM are volatile; they differ only in access speed.",
+      "ROM has faster access time than RAM because it uses solid-state technology."
+    ],
+    "options_template": [
+      {
+        "text": "RAM: volatile, read/write, temporary. ROM: non-volatile, read-only, permanent firmware.",
+        "correct": true
+      },
+      {
+        "text": "RAM: non-volatile, permanent firmware. ROM: volatile, temporary.",
+        "correct": false
+      },
+      {
+        "text": "Both volatile; differ only in speed.",
+        "correct": false
+      },
+      {
+        "text": "ROM is faster than RAM due to solid-state design.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for volatile/non-volatile distinction AND read/write vs read-only distinction.",
+    "hints": [
+      "RAM = Random Access Memory (volatile). ROM = Read Only Memory (non-volatile).",
+      "BIOS/UEFI firmware is stored in ROM."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_2_2_mcq_002",
+    "subject": "computer_science",
+    "topic": "2",
+    "subtopic": "2.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "SSD vs HDD",
+    "tags": [
+      "HDD",
+      "SSD",
+      "secondary-memory"
+    ],
+    "stem_template": "A user is choosing between an SSD and an HDD for secondary storage. Which statement correctly describes an advantage of SSDs over HDDs?",
+    "params": {},
+    "answer_template": "SSDs have no moving mechanical parts (flash memory) — faster read/write speeds, lower latency, more durable (shock-resistant), quieter, and lower power consumption compared to HDDs.",
+    "distractor_templates": [
+      "HDDs are faster because spinning platters allow simultaneous multi-track access.",
+      "SSDs are slower because they must verify each write operation for data integrity.",
+      "HDDs have no moving parts, making them more reliable than SSDs."
+    ],
+    "options_template": [
+      {
+        "text": "SSDs: no moving parts → faster, more durable, quieter, lower power.",
+        "correct": true
+      },
+      {
+        "text": "HDDs are faster due to simultaneous multi-track spinning access.",
+        "correct": false
+      },
+      {
+        "text": "SSDs are slower due to write verification overhead.",
+        "correct": false
+      },
+      {
+        "text": "HDDs have no moving parts — more reliable than SSDs.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for no moving parts + at least one advantage (speed, durability, or power).",
+    "hints": [
+      "SSD = solid-state drive (flash memory). HDD = hard disk drive (spinning platters).",
+      "SSDs are faster but more expensive per GB; HDDs are cheaper per GB."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_2_2_worked_001",
+    "subject": "computer_science",
+    "topic": "2",
+    "subtopic": "2.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Memory Hierarchy and Trade-offs",
+    "tags": [
+      "RAM",
+      "ROM",
+      "HDD",
+      "SSD",
+      "cache"
+    ],
+    "stem_template": "Explain the memory hierarchy from registers to cloud storage, describing the trade-off between speed, capacity, and cost at each level. Give an example of data stored at each level.",
+    "params": {},
+    "answer_template": "1. Registers (CPU): fastest, smallest (bytes), most expensive per bit; holds current instruction operands. 2. Cache (L1/L2/L3): very fast, small (KB–MB), expensive; stores frequently accessed data to reduce RAM access. 3. RAM: fast, medium capacity (GB), moderate cost; holds running programs and OS. 4. SSD/HDD (Secondary): slower, large capacity (TB), cheap; permanent program/file storage. 5. Cloud/archival storage: slowest access (network), virtually unlimited, lowest cost per GB; backups, large datasets. Trade-off: speed ↑ → cost ↑ → capacity ↓.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per level correctly described with speed/capacity/cost (max 5); 1 mark trade-off principle. Max 6.",
+    "hints": [
+      "The closer to the CPU, the faster and more expensive the memory.",
+      "Cache bridges the speed gap between registers and RAM."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "cs_3_1_mcq_001",
+    "subject": "computer_science",
+    "topic": "3",
+    "subtopic": "3.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "LAN vs WAN",
+    "tags": [
+      "LAN",
+      "WAN",
+      "protocols",
+      "TCP-IP"
+    ],
+    "stem_template": "Which of the following correctly distinguishes a Local Area Network (LAN) from a Wide Area Network (WAN)?",
+    "params": {},
+    "answer_template": "LAN: confined to a small geographic area (building/campus), owned and controlled by the organisation, high speed (typically 100Mbps–10Gbps). WAN: spans large geographic areas (cities/countries/globally), uses third-party infrastructure (ISPs), lower speeds relative to LAN.",
+    "distractor_templates": [
+      "LANs always use wireless technology; WANs always use wired connections.",
+      "WANs are faster than LANs because they use fibre optic connections throughout.",
+      "LANs require an internet connection; WANs are always private networks."
+    ],
+    "options_template": [
+      {
+        "text": "LAN: small area, organisation-owned, high speed. WAN: large area, third-party infrastructure, global reach.",
+        "correct": true
+      },
+      {
+        "text": "LANs = wireless; WANs = wired.",
+        "correct": false
+      },
+      {
+        "text": "WANs are faster than LANs (fibre optic).",
+        "correct": false
+      },
+      {
+        "text": "LANs require internet; WANs are private.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for geographic scope distinction AND ownership/infrastructure distinction.",
+    "hints": [
+      "LAN = Local (within building). WAN = Wide (across cities/countries).",
+      "The internet is a global WAN; your school network is a LAN."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_3_1_mcq_002",
+    "subject": "computer_science",
+    "topic": "3",
+    "subtopic": "3.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Network Topologies",
+    "tags": [
+      "LAN",
+      "WAN",
+      "protocols"
+    ],
+    "stem_template": "In a {{topology}} network topology, all devices are connected to a central {{hub_switch}}. What is a key disadvantage of this topology?",
+    "params": {
+      "topology": {
+        "type": "choice",
+        "values": [
+          "star",
+          "bus",
+          "ring"
+        ]
+      },
+      "hub_switch": {
+        "type": "computed",
+        "formula": "topology === 'star' ? 'hub or switch' : topology === 'bus' ? 'backbone cable' : 'ring cable'"
+      }
+    },
+    "answer_template": "Star topology: if the central switch/hub fails, the entire network goes down (single point of failure). Bus topology: if the backbone cable fails, all devices lose connectivity. Ring topology: if any node or cable fails, the entire network is disrupted.",
+    "distractor_templates": [
+      "Star: requires the most cable of any topology — highest infrastructure cost.",
+      "Star: data collisions are most frequent because all devices share one cable.",
+      "Star: devices cannot communicate directly — all data must travel through every other device."
+    ],
+    "options_template": [
+      {
+        "text": "Star: central switch failure takes down entire network (single point of failure).",
+        "correct": true
+      },
+      {
+        "text": "Star: requires the most cabling — highest cost.",
+        "correct": false
+      },
+      {
+        "text": "Star: data collisions most frequent due to shared cable.",
+        "correct": false
+      },
+      {
+        "text": "Star: data must travel through every device — slow.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for correct disadvantage of the given topology (single point of failure for star; backbone failure for bus).",
+    "hints": [
+      "Star: failure of central switch = entire network down.",
+      "Bus: backbone failure = network down. Ring: any failure = network disrupted."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_3_1_worked_001",
+    "subject": "computer_science",
+    "topic": "3",
+    "subtopic": "3.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "OSI Model Layers",
+    "tags": [
+      "OSI",
+      "protocols",
+      "TCP-IP"
+    ],
+    "stem_template": "Describe the function of each layer of the OSI model (7 layers) and give one example of a protocol or technology at each layer.",
+    "params": {},
+    "answer_template": "1. Physical: transmits raw bits over physical medium (e.g. Ethernet cables, Wi-Fi signals). 2. Data Link: frames data, handles MAC addressing, error detection (e.g. Ethernet, Wi-Fi 802.11). 3. Network: logical addressing and routing (e.g. IP protocol). 4. Transport: end-to-end communication, reliability, flow control (e.g. TCP, UDP). 5. Session: establishes, maintains, terminates communication sessions (e.g. NetBIOS). 6. Presentation: data formatting, encryption, compression (e.g. SSL/TLS, JPEG). 7. Application: interface for user applications (e.g. HTTP, FTP, DNS, SMTP).",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per layer with correct function (max 7). Cap at 6 marks. Accept equivalent examples.",
+    "hints": [
+      "Mnemonic: 'Please Do Not Throw Sausage Pizza Away' (Physical, Data Link, Network, Transport, Session, Presentation, Application).",
+      "TCP/IP model merges some OSI layers: Application, Transport, Internet, Network Access."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "cs_3_2_mcq_001",
+    "subject": "computer_science",
+    "topic": "3",
+    "subtopic": "3.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Packet Switching",
+    "tags": [
+      "packet-switching",
+      "bandwidth",
+      "encryption"
+    ],
+    "stem_template": "In packet-switched networks, data is divided into packets. Which statement correctly describes how packets reach their destination?",
+    "params": {},
+    "answer_template": "Packets may take different routes through the network; they are reassembled in the correct order at the destination using sequence numbers; this provides resilience (if one route fails, packets use another).",
+    "distractor_templates": [
+      "All packets must follow the same pre-defined route from source to destination (circuit switching).",
+      "Packets are always delivered in the same order they were sent without reassembly.",
+      "Packets are broadcast to every device on the network; only the destination accepts them."
+    ],
+    "options_template": [
+      {
+        "text": "Packets may take different routes; reassembled at destination using sequence numbers; resilient to failures.",
+        "correct": true
+      },
+      {
+        "text": "All packets follow the same pre-defined route (circuit switching).",
+        "correct": false
+      },
+      {
+        "text": "Packets delivered in exact send order without reassembly.",
+        "correct": false
+      },
+      {
+        "text": "Packets broadcast to all devices; destination accepts them.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for different routes possible + reassembly at destination. Bonus for resilience/error-checking.",
+    "hints": [
+      "Packet switching: each packet independently routed; reassembled at destination.",
+      "Circuit switching: dedicated path maintained throughout (e.g. telephone calls)."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_3_2_mcq_002",
+    "subject": "computer_science",
+    "topic": "3",
+    "subtopic": "3.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Symmetric vs Asymmetric Encryption",
+    "tags": [
+      "encryption",
+      "data-transmission",
+      "security"
+    ],
+    "stem_template": "HTTPS uses a hybrid encryption approach. In the initial handshake, {{asym_key}} encryption is used to securely exchange a {{sym_key}} key, which is then used for the session. Why is the {{sym_key}} key used for the bulk of data transmission?",
+    "params": {
+      "asym_key": {
+        "type": "choice",
+        "values": [
+          "asymmetric (public/private key)",
+          "RSA"
+        ]
+      },
+      "sym_key": {
+        "type": "choice",
+        "values": [
+          "symmetric (shared secret)",
+          "AES session"
+        ]
+      }
+    },
+    "answer_template": "Symmetric encryption is much faster than asymmetric encryption for bulk data; once the symmetric key is securely exchanged using asymmetric encryption, all subsequent data is encrypted/decrypted with the faster symmetric key.",
+    "distractor_templates": [
+      "Symmetric encryption is more secure than asymmetric, so it must be used for sensitive data.",
+      "Asymmetric encryption cannot handle large amounts of data due to key length limitations.",
+      "The symmetric key is used because it does not require any encryption — it is sent in plaintext."
+    ],
+    "options_template": [
+      {
+        "text": "Symmetric encryption is faster for bulk data; asymmetric used only for key exchange.",
+        "correct": true
+      },
+      {
+        "text": "Symmetric is more secure than asymmetric — used for sensitive data.",
+        "correct": false
+      },
+      {
+        "text": "Asymmetric cannot handle large data due to key length.",
+        "correct": false
+      },
+      {
+        "text": "Symmetric key sent in plaintext — no encryption needed.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for speed advantage of symmetric encryption + asymmetric used only for key exchange.",
+    "hints": [
+      "Asymmetric = public/private key pair (RSA, ECC) — slow but secure key exchange.",
+      "Symmetric = shared secret key (AES) — fast for bulk data."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_3_2_worked_001",
+    "subject": "computer_science",
+    "topic": "3",
+    "subtopic": "3.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Data Transmission — Error Detection",
+    "tags": [
+      "packet-switching",
+      "encryption",
+      "error-detection"
+    ],
+    "stem_template": "Explain how parity checking is used to detect errors in data transmission. A byte transmitted with even parity is {{byte}}. Has an error occurred? Show your working.",
+    "params": {
+      "byte": {
+        "type": "choice",
+        "values": [
+          "10110011",
+          "11001101",
+          "00111010",
+          "10100001"
+        ]
+      }
+    },
+    "answer_template": "Even parity: count of 1-bits in the byte must be even. For {{byte}}: count the 1s → if odd count, error detected; if even, no error detected. Parity checking: before transmission, a parity bit is added to make total 1s even (even parity) or odd (odd parity). Limitation: can detect single-bit errors but not double-bit errors (two errors cancel out); cannot correct errors (only detects them). For error correction, use more sophisticated methods (e.g. checksums, CRC, Hamming code).",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark even parity definition; 1 mark correctly counting 1s in {{byte}}; 1 mark correct error/no-error conclusion; 1 mark limitation of parity. Max 4.",
+    "hints": [
+      "Even parity: count all 1-bits including the parity bit — should total to an even number.",
+      "Parity only detects odd numbers of bit errors."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "cs_4_1_mcq_001",
+    "subject": "computer_science",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Abstraction in Computational Thinking",
+    "tags": [
+      "abstraction",
+      "decomposition",
+      "pattern-recognition",
+      "algorithms"
+    ],
+    "stem_template": "A programmer is designing a navigation app. Instead of modelling every physical detail of roads (texture, colour, material), they model only the {{relevant_features}}. This is an example of:",
+    "params": {
+      "relevant_features": {
+        "type": "choice",
+        "values": [
+          "connections, distances, and directions",
+          "road markings and lane widths",
+          "surface materials and gradients",
+          "traffic light timings and pedestrian crossings"
+        ]
+      }
+    },
+    "answer_template": "Abstraction — removing unnecessary detail and representing only the information relevant to solving the problem; allows complex systems to be modelled and managed at an appropriate level of detail.",
+    "distractor_templates": [
+      "Decomposition — breaking a complex problem into smaller, manageable sub-problems.",
+      "Pattern recognition — identifying recurring patterns or regularities in data.",
+      "Algorithm design — creating a step-by-step procedure to solve the problem."
+    ],
+    "options_template": [
+      {
+        "text": "Abstraction — removing irrelevant detail, keeping only relevant information.",
+        "correct": true
+      },
+      {
+        "text": "Decomposition — breaking into smaller sub-problems.",
+        "correct": false
+      },
+      {
+        "text": "Pattern recognition — identifying recurring regularities.",
+        "correct": false
+      },
+      {
+        "text": "Algorithm design — step-by-step solution procedure.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for abstraction + removing unnecessary detail / focusing on relevant features.",
+    "hints": [
+      "Abstraction: 'what' not 'how'; simplifies complex reality.",
+      "A map is an abstraction of geographical reality."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_4_1_mcq_002",
+    "subject": "computer_science",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Big-O Time Complexity",
+    "tags": [
+      "algorithms",
+      "complexity",
+      "abstraction"
+    ],
+    "stem_template": "A linear search algorithm checks each element in a list of {{n}} items one at a time until the target is found. In the worst case, what is its time complexity?",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          "n",
+          "1000",
+          "n²",
+          "log n"
+        ]
+      }
+    },
+    "answer_template": "\\\\( O(n) \\\\) — in the worst case, the algorithm must check all n elements; as the list size doubles, the maximum number of comparisons doubles (linear relationship).",
+    "distractor_templates": [
+      "\\\\( O(1) \\\\) — constant time; the algorithm always finds the element in one step.",
+      "\\\\( O(n^2) \\\\) — quadratic; the algorithm compares every pair of elements.",
+      "\\\\( O(\\\\log n) \\\\) — logarithmic; as in binary search."
+    ],
+    "options_template": [
+      {
+        "text": "\\\\( O(n) \\\\) — worst case: check all n elements (linear).",
+        "correct": true
+      },
+      {
+        "text": "\\\\( O(1) \\\\) — constant time.",
+        "correct": false
+      },
+      {
+        "text": "\\\\( O(n^2) \\\\) — quadratic time.",
+        "correct": false
+      },
+      {
+        "text": "\\\\( O(\\\\log n) \\\\) — logarithmic (binary search).",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for O(n) with correct explanation (worst case: n comparisons for n items).",
+    "hints": [
+      "O(n): linear; O(log n): binary search; O(n²): bubble sort worst case.",
+      "Big-O describes growth rate of time/space as n increases."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_4_1_ordering_001",
+    "subject": "computer_science",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "ordering",
+    "difficulty": "core",
+    "title": "Bubble Sort Algorithm Steps",
+    "tags": [
+      "algorithms",
+      "sorting",
+      "abstraction"
+    ],
+    "stem_template": "Arrange the steps of one complete pass of the bubble sort algorithm for the array [{{a}}, {{b}}, {{c}}, {{d}}].",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 5,
+        "max": 15
+      },
+      "b": {
+        "type": "computed",
+        "formula": "a - 3"
+      },
+      "c": {
+        "type": "computed",
+        "formula": "a + 7"
+      },
+      "d": {
+        "type": "computed",
+        "formula": "a + 2"
+      }
+    },
+    "answer_template": "1. Compare first pair ({{a}}, {{b}}): if {{a}} > {{b}}, swap → [{{b}}, {{a}}, {{c}}, {{d}}]. 2. Compare next pair (position 2,3): if out of order, swap. 3. Compare next pair (position 3,4): if out of order, swap. 4. After one pass, the largest element has 'bubbled' to the last position. 5. Repeat for n-1 passes (excluding sorted elements at end each time).",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correctly sequenced step. Max 4.",
+    "hints": [
+      "Bubble sort: repeatedly compare adjacent pairs and swap if out of order.",
+      "Each pass places the next-largest element in its correct position."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "cs_4_1_worked_001",
+    "subject": "computer_science",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Binary Search Trace",
+    "tags": [
+      "algorithms",
+      "binary-search",
+      "abstraction"
+    ],
+    "stem_template": "Trace a binary search for the value {{target}} in the sorted array: [{{arr}}]. Show each step including the low, high, and mid pointers.",
+    "params": {
+      "target": {
+        "type": "choice",
+        "values": [
+          7,
+          15,
+          23,
+          42,
+          56
+        ]
+      },
+      "arr": {
+        "type": "choice",
+        "values": [
+          "3, 7, 12, 15, 21, 23, 35, 42",
+          "2, 5, 8, 12, 16, 23, 35, 56, 72",
+          "1, 4, 7, 10, 15, 22, 30, 42, 55"
+        ]
+      }
+    },
+    "answer_template": "Step 1: low=0, high=n-1, mid=⌊(low+high)/2⌋. Check arr[mid] vs {{target}}. If equal → found. If arr[mid] < {{target}} → low = mid+1. If arr[mid] > {{target}} → high = mid-1. Repeat until found or low > high (not found). Binary search requires a sorted array; time complexity = O(log n) vs O(n) for linear search.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per step correctly shown with low/mid/high values (max 4); 1 mark comparison logic; 1 mark O(log n) complexity. Max 6.",
+    "hints": [
+      "Binary search halves the search space each iteration.",
+      "O(log₂ n) — for 1024 elements, at most 10 comparisons needed."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "cs_4_2_mcq_001",
+    "subject": "computer_science",
+    "topic": "4",
+    "subtopic": "4.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Flowchart Symbols",
+    "tags": [
+      "flowcharts",
+      "pseudocode",
+      "trace-tables"
+    ],
+    "stem_template": "In a flowchart, which symbol is used to represent a decision (conditional branch) such as an IF statement?",
+    "params": {},
+    "answer_template": "A diamond (rhombus) — represents a decision point with two or more exits (usually Yes/No or True/False), corresponding to conditional branching (IF...THEN...ELSE).",
+    "distractor_templates": [
+      "A rectangle — represents a process or action step.",
+      "An oval/rounded rectangle — represents start and end points (terminators).",
+      "A parallelogram — represents input/output operations."
+    ],
+    "options_template": [
+      {
+        "text": "Diamond/rhombus — decision point with Yes/No exits.",
+        "correct": true
+      },
+      {
+        "text": "Rectangle — process or action step.",
+        "correct": false
+      },
+      {
+        "text": "Oval/rounded rectangle — start/end (terminator).",
+        "correct": false
+      },
+      {
+        "text": "Parallelogram — input/output operation.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for diamond + decision/conditional branch description.",
+    "hints": [
+      "Flowchart shapes: Terminal=oval, Process=rectangle, Decision=diamond, I/O=parallelogram.",
+      "Decision symbol has exactly two exits: Yes and No."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_4_2_worked_001",
+    "subject": "computer_science",
+    "topic": "4",
+    "subtopic": "4.2",
+    "type": "worked",
+    "difficulty": "core",
+    "title": "Pseudocode Trace Table",
+    "tags": [
+      "pseudocode",
+      "trace-tables",
+      "flowcharts"
+    ],
+    "stem_template": "Trace the following pseudocode and complete a trace table showing the value of each variable for each iteration:\n\n```\ncount ← 0\nsum ← 0\nloop while count < {{n}}\n  count ← count + 1\n  sum ← sum + count\nend loop\noutput sum\n```",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          4,
+          5,
+          6
+        ]
+      },
+      "result": {
+        "type": "computed",
+        "formula": "n*(n+1)/2"
+      }
+    },
+    "answer_template": "For n={{n}}: Iteration 1: count=1, sum=1. Iteration 2: count=2, sum=3. Iteration 3: count=3, sum=6. Iteration 4: count=4, sum=10. [Continues to n={{n}}] Final output: sum = {{n}}*({{n}}+1)/2 = {{result}}. This computes the sum of integers from 1 to {{n}}.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per correct row in trace table (max n marks); 1 mark correct final output {{result}}. Cap at 5 marks.",
+    "hints": [
+      "Track count and sum at each iteration.",
+      "The loop runs while count < n, so it executes n times."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "cs_4_2_worked_002",
+    "subject": "computer_science",
+    "topic": "4",
+    "subtopic": "4.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Algorithm Design — Pseudocode",
+    "tags": [
+      "pseudocode",
+      "trace-tables",
+      "algorithm-design"
+    ],
+    "stem_template": "Write pseudocode for an algorithm that reads {{n}} numbers from the user, calculates their {{operation}}, and outputs the result. Include input validation (reject negative numbers).",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          5,
+          10,
+          3
+        ]
+      },
+      "operation": {
+        "type": "choice",
+        "values": [
+          "mean (average)",
+          "maximum",
+          "minimum"
+        ]
+      }
+    },
+    "answer_template": "```\ntotal ← 0\ncount ← 0\nloop for i ← 1 to {{n}}\n  input number\n  if number >= 0 then\n    total ← total + number\n    count ← count + 1\n  else\n    output 'Invalid input: number must be non-negative'\n  end if\nend loop\nif count > 0 then\n  result ← total / count  // for mean\n  output result\nelse\n  output 'No valid numbers entered'\nend if\n```",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark loop structure; 1 mark input validation (reject negatives); 1 mark accumulation logic; 1 mark correct operation (mean/max/min); 1 mark output with error handling. Max 5.",
+    "hints": [
+      "Include: loop, input, validation, accumulation, calculation, output.",
+      "Consider edge cases: all inputs invalid (count = 0)."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "cs_4_3_mcq_001",
+    "subject": "computer_science",
+    "topic": "4",
+    "subtopic": "4.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Variables and Data Types",
+    "tags": [
+      "variables",
+      "loops",
+      "conditionals",
+      "arrays"
+    ],
+    "stem_template": "A programmer declares a variable to store the number of students in a class ({{n}} students). Which data type is most appropriate?",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 15,
+        "max": 35
+      }
+    },
+    "answer_template": "Integer (int) — the number of students is a whole number (no fractional parts); integer data type is most memory-efficient and semantically correct for counting.",
+    "distractor_templates": [
+      "Float/real — required for any numerical data in programming.",
+      "String — because the number will be displayed on screen.",
+      "Boolean — because a class either has students or does not."
+    ],
+    "options_template": [
+      {
+        "text": "Integer (int) — whole number, counting, no fractional parts.",
+        "correct": true
+      },
+      {
+        "text": "Float/real — required for all numerical data.",
+        "correct": false
+      },
+      {
+        "text": "String — because it will be displayed on screen.",
+        "correct": false
+      },
+      {
+        "text": "Boolean — class either has or doesn't have students.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for integer + correct reasoning (whole number/counting).",
+    "hints": [
+      "Integer: whole numbers. Float: decimal numbers. String: text. Boolean: true/false.",
+      "Use the most restrictive (specific) data type appropriate to the data."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_4_3_mcq_002",
+    "subject": "computer_science",
+    "topic": "4",
+    "subtopic": "4.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "FOR vs WHILE Loops",
+    "tags": [
+      "loops",
+      "conditionals",
+      "variables"
+    ],
+    "stem_template": "A program needs to repeat a block of code exactly {{n}} times. Which loop structure is most appropriate?",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 3,
+        "max": 20
+      }
+    },
+    "answer_template": "A FOR loop — used when the number of iterations is known in advance (exactly {{n}} times); more concise and clear than a while loop for this purpose.",
+    "distractor_templates": [
+      "A WHILE loop — always preferred because it is more flexible.",
+      "A DO...WHILE loop — because it guarantees at least one execution.",
+      "A REPEAT...UNTIL loop — always used when iterating a fixed number of times."
+    ],
+    "options_template": [
+      {
+        "text": "FOR loop — number of iterations known in advance ({{n}} times); clearest structure.",
+        "correct": true
+      },
+      {
+        "text": "WHILE loop — always preferred for flexibility.",
+        "correct": false
+      },
+      {
+        "text": "DO...WHILE — guarantees at least one execution.",
+        "correct": false
+      },
+      {
+        "text": "REPEAT...UNTIL — always used for fixed iterations.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for FOR loop + correct reason (known number of iterations).",
+    "hints": [
+      "FOR loop: use when iteration count is known. WHILE loop: use when condition-driven.",
+      "DO...WHILE/REPEAT...UNTIL: always executes at least once (condition checked at end)."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_4_3_worked_001",
+    "subject": "computer_science",
+    "topic": "4",
+    "subtopic": "4.3",
+    "type": "worked",
+    "difficulty": "core",
+    "title": "Array Operations — Pseudocode",
+    "tags": [
+      "arrays",
+      "loops",
+      "variables",
+      "functions"
+    ],
+    "stem_template": "Write pseudocode to find the largest element in an array of {{n}} integers named numbers[]. Trace your algorithm with the example: [{{arr}}].",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          5
+        ]
+      },
+      "arr": {
+        "type": "choice",
+        "values": [
+          "4, 9, 2, 7, 1"
+        ]
+      },
+      "first": {
+        "type": "choice",
+        "values": [
+          4
+        ]
+      },
+      "maximum": {
+        "type": "choice",
+        "values": [
+          9
+        ]
+      }
+    },
+    "answer_template": "```\nmax ← numbers[0]\nfor i ← 1 to n-1\n  if numbers[i] > max then\n    max ← numbers[i]\n  end if\nend for\noutput max\n```\nTrace for [{{arr}}]: max initialised to {{first}}; iterate comparing each element; final max = {{maximum}}.",
+    "mark_scheme_template": "Award: 1 mark initialise max to first element; 1 mark loop from index 1; 1 mark correct comparison; 1 mark update max; 1 mark correct trace with final answer. Max 5.",
+    "hints": [
+      "Initialise max to first element (not 0, which may not be in the array).",
+      "Iterate from index 1 (not 0) since index 0 is already stored in max."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "cs_5_1_mcq_001",
+    "subject": "computer_science",
+    "topic": "5",
+    "subtopic": "5.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Stack Data Structure — LIFO",
+    "tags": [
+      "stacks",
+      "queues",
+      "abstract-data-structures"
+    ],
+    "stem_template": "A stack uses Last-In-First-Out (LIFO) ordering. If elements are pushed in order: {{e1}}, {{e2}}, {{e3}}, {{e4}}, then two elements are popped, what remains on the stack?",
+    "params": {
+      "e1": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      },
+      "e2": {
+        "type": "computed",
+        "formula": "e1 + 3"
+      },
+      "e3": {
+        "type": "computed",
+        "formula": "e1 + 7"
+      },
+      "e4": {
+        "type": "computed",
+        "formula": "e1 + 1"
+      }
+    },
+    "answer_template": "After pushing {{e1}}, {{e2}}, {{e3}}, {{e4}} (top = {{e4}}), two pops remove {{e4}} then {{e3}}. Remaining stack (bottom to top): {{e1}}, {{e2}}. Top of stack = {{e2}}.",
+    "distractor_templates": [
+      "{{e1}} and {{e4}} remain — FIFO removes from the front.",
+      "The stack is empty — pop removes all elements added.",
+      "{{e3}} and {{e4}} remain — LIFO pushes newer elements to the bottom."
+    ],
+    "options_template": [
+      {
+        "text": "{{e1}} and {{e2}} remain ({{e4}} and {{e3}} popped first — LIFO). Top = {{e2}}.",
+        "correct": true
+      },
+      {
+        "text": "{{e1}} and {{e4}} remain — FIFO removes from front.",
+        "correct": false
+      },
+      {
+        "text": "Stack is empty — pop removes all elements.",
+        "correct": false
+      },
+      {
+        "text": "{{e3}} and {{e4}} remain — newer elements pushed to bottom.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for correct identification of popped elements ({{e4}}, {{e3}}) + remaining elements ({{e1}}, {{e2}}).",
+    "hints": [
+      "Stack = LIFO: last element pushed is the first to be popped.",
+      "Think of a stack of plates — you always take from the top."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_5_1_mcq_002",
+    "subject": "computer_science",
+    "topic": "5",
+    "subtopic": "5.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Binary Tree — Traversal Orders",
+    "tags": [
+      "binary-trees",
+      "trees",
+      "abstract-data-structures"
+    ],
+    "stem_template": "For a binary tree with root {{root}}, left child {{left}}, and right child {{right}}, what is the in-order traversal result?",
+    "params": {
+      "root": {
+        "type": "int",
+        "min": 5,
+        "max": 15
+      },
+      "left": {
+        "type": "computed",
+        "formula": "root - 3"
+      },
+      "right": {
+        "type": "computed",
+        "formula": "root + 4"
+      }
+    },
+    "answer_template": "In-order traversal (Left → Root → Right): {{left}}, {{root}}, {{right}}. Pre-order (Root→L→R): {{root}}, {{left}}, {{right}}. Post-order (L→R→Root): {{left}}, {{right}}, {{root}}.",
+    "distractor_templates": [
+      "{{root}}, {{left}}, {{right}} — this is pre-order (root first).",
+      "{{left}}, {{right}}, {{root}} — this is post-order.",
+      "{{right}}, {{root}}, {{left}} — this is reverse in-order."
+    ],
+    "options_template": [
+      {
+        "text": "In-order: {{left}}, {{root}}, {{right}} (Left→Root→Right).",
+        "correct": true
+      },
+      {
+        "text": "{{root}}, {{left}}, {{right}} — pre-order traversal.",
+        "correct": false
+      },
+      {
+        "text": "{{left}}, {{right}}, {{root}} — post-order traversal.",
+        "correct": false
+      },
+      {
+        "text": "{{right}}, {{root}}, {{left}} — reverse in-order.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for correct in-order sequence {{left}}, {{root}}, {{right}}.",
+    "hints": [
+      "In-order: L → Root → R (gives sorted order for a BST).",
+      "Pre-order: Root → L → R; Post-order: L → R → Root."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_5_1_worked_001",
+    "subject": "computer_science",
+    "topic": "5",
+    "subtopic": "5.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Linked List Operations",
+    "tags": [
+      "linked-lists",
+      "abstract-data-structures"
+    ],
+    "stem_template": "A singly linked list contains nodes with values: {{n1}} → {{n2}} → {{n3}} → {{n4}} → null. Describe how to: (a) insert a new node with value {{new_val}} after the node with value {{n2}}, and (b) delete the node with value {{n3}}.",
+    "params": {
+      "n1": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      },
+      "n2": {
+        "type": "computed",
+        "formula": "n1 + 5"
+      },
+      "n3": {
+        "type": "computed",
+        "formula": "n1 + 10"
+      },
+      "n4": {
+        "type": "computed",
+        "formula": "n1 + 15"
+      },
+      "new_val": {
+        "type": "computed",
+        "formula": "n1 + 7"
+      }
+    },
+    "answer_template": "(a) INSERT {{new_val}} after {{n2}}: 1. Traverse to node {{n2}}. 2. Create new node with value {{new_val}}. 3. Set new_node.next = node({{n2}}).next (currently points to {{n3}}). 4. Set node({{n2}}).next = new_node. Result: {{n1}}→{{n2}}→{{new_val}}→{{n3}}→{{n4}}. (b) DELETE {{n3}}: 1. Traverse to node before {{n3}} (which is {{new_val}} after insertion). 2. Set prev_node.next = node({{n3}}).next = {{n4}}. 3. Free/dispose of node({{n3}}). Result: {{n1}}→{{n2}}→{{new_val}}→{{n4}}.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark traversal to correct position; 1 mark pointer update (insert); 1 mark new node creation; 1 mark deletion pointer update; 1 mark memory deallocation. Max 5.",
+    "hints": [
+      "Insertion: update pointers before inserting to avoid losing reference to rest of list.",
+      "Deletion: bypass the node by linking predecessor directly to successor."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "cs_5_1_ordering_001",
+    "subject": "computer_science",
+    "topic": "5",
+    "subtopic": "5.1",
+    "type": "ordering",
+    "difficulty": "challenge",
+    "title": "Binary Search Tree — Insertion Order",
+    "tags": [
+      "binary-trees",
+      "stacks",
+      "queues"
+    ],
+    "stem_template": "Insert the following values into an empty binary search tree (BST) in the given order: {{v1}}, {{v2}}, {{v3}}, {{v4}}, {{v5}}. Arrange the resulting tree structure showing parent-child relationships.",
+    "params": {
+      "v1": {
+        "type": "int",
+        "min": 10,
+        "max": 20
+      },
+      "v2": {
+        "type": "computed",
+        "formula": "v1 - 4"
+      },
+      "v3": {
+        "type": "computed",
+        "formula": "v1 + 6"
+      },
+      "v4": {
+        "type": "computed",
+        "formula": "v1 - 7"
+      },
+      "v5": {
+        "type": "computed",
+        "formula": "v1 + 3"
+      }
+    },
+    "answer_template": "1. Insert {{v1}} → root. 2. Insert {{v2}} < {{v1}} → left child of root. 3. Insert {{v3}} > {{v1}} → right child of root. 4. Insert {{v4}} < {{v1}}, < {{v2}} → left child of {{v2}}. 5. Insert {{v5}} > {{v1}}, < {{v3}} → left child of {{v3}}. BST property: left subtree values < parent; right subtree values > parent.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correct node placement relative to its parent (max 5). Must show BST property maintained.",
+    "hints": [
+      "BST: insert left if new value < current node; insert right if greater.",
+      "Each insertion starts from the root and traverses down."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "cs_5_2_mcq_001",
+    "subject": "computer_science",
+    "topic": "5",
+    "subtopic": "5.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Recursion — Base Case",
+    "tags": [
+      "recursive-thinking",
+      "base-case",
+      "call-stack"
+    ],
+    "stem_template": "A recursive function to calculate the factorial of n is defined. What is the base case that prevents infinite recursion?",
+    "params": {},
+    "answer_template": "factorial(0) = 1 (or factorial(1) = 1) — when n reaches 0 or 1, the function returns 1 without making a further recursive call, stopping the recursion.",
+    "distractor_templates": [
+      "factorial(n) = n × factorial(n+1) — this is the recursive case, not the base case.",
+      "factorial(n) = 0 when n is negative — this handles errors but is not the base case.",
+      "The function never needs a base case if sufficient memory is available for the call stack."
+    ],
+    "options_template": [
+      {
+        "text": "factorial(0) = 1 — returns without recursive call; stops recursion.",
+        "correct": true
+      },
+      {
+        "text": "factorial(n) = n × factorial(n+1) — recursive case (not base).",
+        "correct": false
+      },
+      {
+        "text": "factorial(n) = 0 when n is negative — error handling, not base case.",
+        "correct": false
+      },
+      {
+        "text": "No base case needed if sufficient call stack memory.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for n=0 (or n=1) returns 1 + explanation that no further recursive call is made.",
+    "hints": [
+      "Base case: the simplest case that can be solved directly without recursion.",
+      "Without a base case → infinite recursion → stack overflow error."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "cs_5_2_worked_001",
+    "subject": "computer_science",
+    "topic": "5",
+    "subtopic": "5.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Recursive Function Trace",
+    "tags": [
+      "recursive-thinking",
+      "base-case",
+      "call-stack"
+    ],
+    "stem_template": "Trace the execution of the following recursive function for the call fibonacci({{n}}):\n\n```\nfunction fibonacci(n)\n  if n <= 1 then\n    return n\n  else\n    return fibonacci(n-1) + fibonacci(n-2)\n  end if\nend function\n```\nShow the call stack and return values.",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          4,
+          5,
+          6
+        ]
+      },
+      "result": {
+        "type": "computed",
+        "formula": "n === 4 ? 3 : n === 5 ? 5 : 8"
+      }
+    },
+    "answer_template": "fibonacci({{n}}) calls fibonacci({{n}}-1) + fibonacci({{n}}-2). Each call branches further until base cases (n=0 returns 0, n=1 returns 1). The call tree has 2^n calls in worst case → O(2^n) time complexity. fibonacci(4)=3, fibonacci(5)=5, fibonacci(6)=8. Stack depth = n. This demonstrates why iterative or memoised implementations are more efficient.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark base cases (n≤1 returns n); 1 mark per level of call trace (max 3); 1 mark correct final result {{result}}; 1 mark exponential time complexity noted. Max 6.",
+    "hints": [
+      "Draw the call tree — each non-base call branches into two sub-calls.",
+      "fibonacci(n) result: fibonacci(4)=3, (5)=5, (6)=8."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "cs_5_2_worked_002",
+    "subject": "computer_science",
+    "topic": "5",
+    "subtopic": "5.2",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Recursion vs Iteration — Comparison",
+    "tags": [
+      "recursive-thinking",
+      "call-stack",
+      "algorithms"
+    ],
+    "stem_template": "Compare recursive and iterative implementations of {{algorithm}}. Write pseudocode for each and analyse trade-offs in terms of efficiency, readability, and memory use.",
+    "params": {
+      "algorithm": {
+        "type": "choice",
+        "values": [
+          "factorial calculation",
+          "Fibonacci sequence",
+          "binary search",
+          "sum of array elements"
+        ]
+      }
+    },
+    "answer_template": "Recursive {{algorithm}}: elegant, closely mirrors mathematical definition, easier to understand for complex problems (e.g. tree traversal). Disadvantages: each call adds a stack frame → O(n) memory for call stack; risk of stack overflow for large n; may have redundant calculations (Fibonacci without memoisation = O(2^n)). Iterative equivalent: O(1) space (constant memory, uses loop variables); generally faster due to no function call overhead; less elegant for some problems. Conclusion: recursion preferred for clarity in naturally recursive problems (trees, divide-and-conquer); iteration preferred for performance-critical, deep recursion cases.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark recursive pseudocode; 1 mark iterative pseudocode; 1 mark memory trade-off; 1 mark efficiency comparison; 1 mark appropriate conclusion. Max 5.",
+    "hints": [
+      "Recursive: clean code but stack overhead. Iterative: efficient but less readable for recursive problems.",
+      "Tail-call optimisation can make recursion as efficient as iteration in some languages."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "cs_4_1_ms_001",
+    "subject": "computer_science",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Data Structure Properties",
+    "tags": [
+      "data structures",
+      "arrays",
+      "stacks",
+      "queues"
+    ],
+    "stem_template": "Which of the following are TRUE about a STACK data structure? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "Elements are added and removed from the same end",
+        "correct": true
+      },
+      {
+        "text": "It follows Last In, First Out (LIFO) ordering",
+        "correct": true
+      },
+      {
+        "text": "It is used in breadth-first search (BFS)",
+        "correct": false
+      },
+      {
+        "text": "The main operations are push and pop",
+        "correct": true
+      },
+      {
+        "text": "It follows First In, First Out (FIFO) ordering",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Stack: LIFO; push/pop from same end (top). NOT FIFO (that's a queue); NOT used in BFS (BFS uses a queue; DFS uses a stack).",
+    "hints": [
+      "Stack = LIFO (like a stack of plates).",
+      "Queue = FIFO; Stack = LIFO."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "cs_5_1_ms_001",
+    "subject": "computer_science",
+    "topic": "5",
+    "subtopic": "5.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Algorithm Complexity",
+    "tags": [
+      "algorithms",
+      "Big-O",
+      "complexity"
+    ],
+    "stem_template": "Which of the following statements about algorithm time complexity are TRUE? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "O(1) means constant time regardless of input size",
+        "correct": true
+      },
+      {
+        "text": "A bubble sort has worst-case complexity O(n²)",
+        "correct": true
+      },
+      {
+        "text": "O(log n) is slower than O(n) for large inputs",
+        "correct": false
+      },
+      {
+        "text": "Binary search has O(log n) time complexity",
+        "correct": true
+      },
+      {
+        "text": "O(n!) algorithms scale well to large inputs",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "TRUE: O(1) constant; bubble sort O(n²); binary search O(log n). FALSE: O(log n) is FASTER than O(n); O(n!) is extremely slow (factorial growth — terrible for large n).",
+    "hints": [
+      "Order: O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2^n) < O(n!)",
+      "Faster = fewer operations for large n."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "cs_3_1_ms_001",
+    "subject": "computer_science",
+    "topic": "3",
+    "subtopic": "3.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Network Protocols",
+    "tags": [
+      "networks",
+      "protocols",
+      "TCP/IP",
+      "HTTP"
+    ],
+    "stem_template": "Which of the following are TRUE about the TCP/IP model? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "TCP provides reliable, ordered data delivery",
+        "correct": true
+      },
+      {
+        "text": "UDP is more reliable than TCP",
+        "correct": false
+      },
+      {
+        "text": "IP is responsible for addressing and routing packets",
+        "correct": true
+      },
+      {
+        "text": "HTTP operates at the application layer",
+        "correct": true
+      },
+      {
+        "text": "TCP performs handshaking before data transfer",
+        "correct": true
+      }
+    ],
+    "mark_scheme_template": "TCP: reliable, ordered, handshaked (3-way handshake). IP: addressing/routing. HTTP: application layer. FALSE: UDP is faster but LESS reliable (no error checking/retransmission).",
+    "hints": [
+      "TCP = reliable, slow; UDP = fast, unreliable.",
+      "IP handles routing, TCP handles data integrity."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "cs_2_1_match_001",
+    "subject": "computer_science",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "matching",
+    "difficulty": "core",
+    "title": "Data Structures to Use Cases",
+    "tags": [
+      "data structures",
+      "use cases",
+      "matching"
+    ],
+    "stem_template": "Match each data structure to its most appropriate use case.",
+    "params": {},
+    "left": [
+      "Stack",
+      "Queue",
+      "Hash Table",
+      "Binary Tree"
+    ],
+    "right": [
+      "Printer job management (first come, first served)",
+      "Undo/redo functionality in editors",
+      "Hierarchical data (file system, expression parsing)",
+      "Fast key-value lookup (O(1) average)"
+    ],
+    "correct_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "mark_scheme_template": "Stack → Undo/redo; Queue → Printer jobs (FIFO); Hash Table → fast lookup; Binary Tree → hierarchical structure.",
+    "hints": [
+      "Stack: LIFO = undo/redo.",
+      "Queue: FIFO = first in, first served."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "cs_1_1_calc_001",
+    "subject": "computer_science",
+    "topic": "1",
+    "subtopic": "1.1",
+    "type": "calculation",
+    "difficulty": "core",
+    "title": "Binary to Decimal Conversion",
+    "tags": [
+      "binary",
+      "number systems",
+      "conversion"
+    ],
+    "stem_template": "Convert the 8-bit binary number \\({{b7}}{{b6}}{{b5}}{{b4}}{{b3}}{{b2}}{{b1}}{{b0}}\\) to its decimal value.",
+    "params": {
+      "b7": {
+        "type": "choice",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "b6": {
+        "type": "choice",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "b5": {
+        "type": "choice",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "b4": {
+        "type": "choice",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "b3": {
+        "type": "choice",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "b2": {
+        "type": "choice",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "b1": {
+        "type": "choice",
+        "values": [
+          0,
+          1
+        ]
+      },
+      "b0": {
+        "type": "choice",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "answer_template": "{{b7}}*128 + {{b6}}*64 + {{b5}}*32 + {{b4}}*16 + {{b3}}*8 + {{b2}}*4 + {{b1}}*2 + {{b0}}*1",
+    "steps_template": [
+      {
+        "label": "Identify place values",
+        "content": "Binary positional values (right to left): 1, 2, 4, 8, 16, 32, 64, 128. Multiply each bit by its place value.",
+        "type": "info"
+      },
+      {
+        "label": "Calculate decimal value",
+        "content": "\\({{b7}} \\times 128 + {{b6}} \\times 64 + {{b5}} \\times 32 + {{b4}} \\times 16 + {{b3}} \\times 8 + {{b2}} \\times 4 + {{b1}} \\times 2 + {{b0}} \\times 1 = ?\\)",
+        "type": "input",
+        "answer": "{{b7}}*128 + {{b6}}*64 + {{b5}}*32 + {{b4}}*16 + {{b3}}*8 + {{b2}}*4 + {{b1}}*2 + {{b0}}*1",
+        "tolerance": 0,
+        "unit": ""
+      }
+    ],
+    "mark_scheme_template": "Decimal value = \\({{b7}} \\times 128 + {{b6}} \\times 64 + {{b5}} \\times 32 + {{b4}} \\times 16 + {{b3}} \\times 8 + {{b2}} \\times 4 + {{b1}} \\times 2 + {{b0}} \\times 1 = {{answer}}\\)",
+    "hints": [
+      "Work from left to right: bit 7 = 128, bit 0 = 1.",
+      "Only add place values where the bit is 1."
+    ],
+    "marks": 2
+  }
+]

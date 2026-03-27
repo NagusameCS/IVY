@@ -1,0 +1,2464 @@
+[
+  {
+    "id": "bio_A1_mcq_001",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Water Polarity and Hydrogen Bonding",
+    "tags": [
+      "hydrogen-bonding",
+      "polarity",
+      "water-properties"
+    ],
+    "stem_template": "Which property of water is directly responsible for its ability to act as a solvent for ionic compounds such as {{solute}}?",
+    "params": {
+      "solute": {
+        "type": "choice",
+        "values": [
+          "sodium chloride (NaCl)",
+          "potassium iodide (KI)",
+          "glucose",
+          "ammonia (NH₃)"
+        ]
+      }
+    },
+    "answer_template": "Water is a polar molecule; the partial charges on oxygen and hydrogen attract oppositely charged ions, surrounding and separating them.",
+    "distractor_templates": [
+      "Water has a high specific heat capacity, which stabilises the temperature around dissolved ions.",
+      "Water molecules form covalent bonds with the ions of {{solute}}, pulling them apart.",
+      "The low density of water allows ions to float freely in solution."
+    ],
+    "options_template": [
+      {
+        "text": "Water is a polar molecule; the partial charges on oxygen and hydrogen attract oppositely charged ions, surrounding and separating them.",
+        "correct": true
+      },
+      {
+        "text": "Water has a high specific heat capacity, which stabilises the temperature around dissolved ions.",
+        "correct": false
+      },
+      {
+        "text": "Water molecules form covalent bonds with the ions of {{solute}}, pulling them apart.",
+        "correct": false
+      },
+      {
+        "text": "The low density of water allows ions to float freely in solution.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for selecting the polar nature of water / hydrogen bonding as the basis of solvation.",
+    "hints": [
+      "Think about the electronegativity of oxygen versus hydrogen.",
+      "Ionic compounds dissociate into charged particles."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_A1_mcq_002",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "High Specific Heat Capacity of Water",
+    "tags": [
+      "thermal-properties",
+      "specific-heat",
+      "water-properties"
+    ],
+    "stem_template": "A lake has a surface temperature of {{T_surface}}°C while the surrounding air drops to {{T_air}}°C overnight. Which property of water best explains why aquatic organisms survive this temperature change?",
+    "params": {
+      "T_surface": {
+        "type": "int",
+        "min": 18,
+        "max": 25
+      },
+      "T_air": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      }
+    },
+    "answer_template": "High specific heat capacity — water absorbs or releases large amounts of heat energy with only a small change in temperature.",
+    "distractor_templates": [
+      "High surface tension — water molecules at the surface resist disruption, insulating the lake.",
+      "Low density of ice — ice floats and forms an insulating layer on the lake surface.",
+      "High latent heat of vaporisation — evaporation removes excess heat from the lake."
+    ],
+    "options_template": [
+      {
+        "text": "High specific heat capacity — water absorbs or releases large amounts of heat energy with only a small change in temperature.",
+        "correct": true
+      },
+      {
+        "text": "High surface tension — water molecules at the surface resist disruption, insulating the lake.",
+        "correct": false
+      },
+      {
+        "text": "Low density of ice — ice floats and forms an insulating layer on the lake surface.",
+        "correct": false
+      },
+      {
+        "text": "High latent heat of vaporisation — evaporation removes excess heat from the lake.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for high specific heat capacity with correct justification (requires large energy change for small temperature change).",
+    "hints": [
+      "Consider which property resists temperature fluctuation, not just heat loss.",
+      "Specific heat is measured in J kg⁻¹ K⁻¹."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_A1_matching_001",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.1",
+    "type": "matching",
+    "difficulty": "core",
+    "title": "Water Properties and Biological Roles",
+    "tags": [
+      "hydrogen-bonding",
+      "polarity",
+      "solvent-properties",
+      "thermal-properties"
+    ],
+    "stem_template": "Match each property of water to its primary biological significance.",
+    "params": {},
+    "answer_template": "High specific heat capacity → temperature stability in cells and oceans; Polarity/cohesion → transport in xylem; Latent heat of vaporisation → evaporative cooling in sweating; Hydrogen bonding → ice less dense than liquid water, protecting aquatic life.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correct match (max 4). Accept equivalent biological explanations.",
+    "hints": [
+      "Cohesion and adhesion are both linked to hydrogen bonding.",
+      "Think of where each property is most important for living organisms."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "bio_A1_worked_001",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Transpiration and Water Properties",
+    "tags": [
+      "cohesion",
+      "adhesion",
+      "solvent-properties",
+      "transport"
+    ],
+    "stem_template": "Explain how three properties of water contribute to the movement of water from roots to leaves in a plant with a height of {{height}} m.",
+    "params": {
+      "height": {
+        "type": "int",
+        "min": 5,
+        "max": 30
+      }
+    },
+    "answer_template": "1. Cohesion (hydrogen bonds between water molecules) creates a continuous water column in xylem. 2. Adhesion (water molecules attracted to xylem walls) prevents the column from collapsing under tension. 3. Polarity makes water an effective solvent, maintaining solute gradients that drive osmosis in root hair cells.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 2 marks per property (1 for naming, 1 for correct biological application), max 6. Must reference xylem for full marks.",
+    "hints": [
+      "Consider cohesion-tension theory.",
+      "Mention the role of osmosis in root uptake."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "bio_A2_mcq_001",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "DNA Base Pairing Rules",
+    "tags": [
+      "DNA",
+      "base-pairing",
+      "nucleotides"
+    ],
+    "stem_template": "A DNA strand has the sequence 5'-{{sequence}}-3'. What is the complementary antiparallel strand?",
+    "params": {
+      "sequence": {
+        "type": "choice",
+        "values": [
+          "ATGCTA",
+          "GCTATG",
+          "TACGAT",
+          "CGATAC"
+        ]
+      }
+    },
+    "answer_template": "Apply complementary base pairing (A-T, G-C) and reverse the strand: 5'-ATGCTA-3' → complement TACGAT → antiparallel 3'-TAGCAT-5' (written 5'-TACGAT-3').",
+    "distractor_templates": [
+      "The same sequence — DNA is self-complementary.",
+      "Simply reverse the sequence without applying base-pairing rules.",
+      "Replace each base with its RNA equivalent (A→U, T→A, G→C, C→G)."
+    ],
+    "options_template": [
+      {
+        "text": "Apply complementary base pairing (A-T, G-C) and reverse the direction.",
+        "correct": true
+      },
+      {
+        "text": "The same sequence — DNA is self-complementary.",
+        "correct": false
+      },
+      {
+        "text": "Simply reverse the sequence without applying base-pairing rules.",
+        "correct": false
+      },
+      {
+        "text": "Replace each base with its RNA equivalent (A→U, T→A, G→C, C→G).",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for complementary and antiparallel. Deduct if direction not reversed.",
+    "hints": [
+      "Adenine pairs with Thymine, Guanine with Cytosine.",
+      "Antiparallel means the strands run in opposite 5'→3' directions."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_A2_mcq_002",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "RNA vs DNA Structure",
+    "tags": [
+      "RNA",
+      "DNA",
+      "nucleotides"
+    ],
+    "stem_template": "Which of the following correctly distinguishes mRNA from DNA?",
+    "params": {},
+    "answer_template": "mRNA is single-stranded, contains uracil instead of thymine, and uses ribose sugar instead of deoxyribose.",
+    "distractor_templates": [
+      "mRNA is double-stranded and contains thymine instead of uracil.",
+      "mRNA contains deoxyribose sugar and adenine, while DNA uses ribose.",
+      "mRNA and DNA have identical nucleotide structures but differ only in length."
+    ],
+    "options_template": [
+      {
+        "text": "mRNA is single-stranded, contains uracil instead of thymine, and uses ribose sugar instead of deoxyribose.",
+        "correct": true
+      },
+      {
+        "text": "mRNA is double-stranded and contains thymine instead of uracil.",
+        "correct": false
+      },
+      {
+        "text": "mRNA contains deoxyribose sugar and adenine, while DNA uses ribose.",
+        "correct": false
+      },
+      {
+        "text": "mRNA and DNA have identical nucleotide structures but differ only in length.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark: single-stranded, uracil not thymine, ribose not deoxyribose — all three needed.",
+    "hints": [
+      "RNA uses ribose sugar (has an –OH at the 2' position).",
+      "Thymine is a DNA-exclusive base."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_A2_ordering_001",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.2",
+    "type": "ordering",
+    "difficulty": "core",
+    "title": "DNA Replication Steps",
+    "tags": [
+      "replication",
+      "DNA",
+      "helicase",
+      "polymerase"
+    ],
+    "stem_template": "Arrange the following steps of DNA replication in the correct order.",
+    "params": {},
+    "answer_template": "1. Helicase unwinds and separates the double helix at the origin of replication. 2. Primase synthesises a short RNA primer complementary to the template strand. 3. DNA polymerase III adds nucleotides in the 5'→3' direction, forming the leading strand continuously and the lagging strand in Okazaki fragments. 4. DNA polymerase I replaces RNA primers with DNA nucleotides. 5. DNA ligase seals the nicks between Okazaki fragments, completing the new strands.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correctly placed step relative to adjacent steps (max 4 transition marks).",
+    "hints": [
+      "Helicase acts first.",
+      "Ligase is the last enzyme to act."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "bio_A2_worked_001",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Chargaff's Rules Calculation",
+    "tags": [
+      "DNA",
+      "base-pairing",
+      "Chargaff"
+    ],
+    "stem_template": "A double-stranded DNA molecule contains {{percent_A}}% adenine. Calculate the percentage of each of the other three bases and explain your reasoning using Chargaff's rules.",
+    "params": {
+      "percent_A": {
+        "type": "choice",
+        "values": [
+          18,
+          22,
+          26,
+          30,
+          32
+        ]
+      },
+      "gc_total": {
+        "type": "computed",
+        "formula": "100 - 2*percent_A"
+      },
+      "gc_each": {
+        "type": "computed",
+        "formula": "(100 - 2*percent_A)/2"
+      }
+    },
+    "answer_template": "By Chargaff's rules, %A = %T = {{percent_A}}%. Since %A + %T + %G + %C = 100%, %G + %C = 100 − 2×{{percent_A}} = {{gc_total}}%. Therefore %G = %C = {{gc_each}}%.",
+    "mark_scheme_template": "A1: %T = {{percent_A}}% (1). A1: %G + %C = {{gc_total}}% (1). A1: %G = %C = {{gc_each}}% (1). R1: quotes Chargaff (A=T, G=C in double-stranded DNA) (1).",
+    "hints": [
+      "Chargaff's rules: A pairs with T, G pairs with C in double-stranded DNA.",
+      "All four percentages must sum to 100%."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "bio_A3_mcq_001",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Endosymbiotic Theory Evidence",
+    "tags": [
+      "endosymbiosis",
+      "prokaryotes",
+      "eukaryotes",
+      "cell-theory"
+    ],
+    "stem_template": "Which observation provides the strongest evidence for the endosymbiotic origin of {{organelle}}?",
+    "params": {
+      "organelle": {
+        "type": "choice",
+        "values": [
+          "mitochondria",
+          "chloroplasts"
+        ]
+      }
+    },
+    "answer_template": "{{organelle}} possess their own circular DNA and 70S ribosomes, similar to those found in prokaryotes, suggesting they were once free-living bacteria.",
+    "distractor_templates": [
+      "{{organelle}} are surrounded by a single membrane, which is consistent with membrane-bound vesicles derived from the nuclear envelope.",
+      "{{organelle}} replicate by budding off from the endoplasmic reticulum during cell division.",
+      "{{organelle}} are encoded entirely by the nuclear genome, which controls their biogenesis."
+    ],
+    "options_template": [
+      {
+        "text": "{{organelle}} possess their own circular DNA and 70S ribosomes, similar to prokaryotes.",
+        "correct": true
+      },
+      {
+        "text": "{{organelle}} are surrounded by a single membrane consistent with nuclear envelope origin.",
+        "correct": false
+      },
+      {
+        "text": "{{organelle}} replicate by budding from the endoplasmic reticulum.",
+        "correct": false
+      },
+      {
+        "text": "{{organelle}} are encoded entirely by the nuclear genome.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for circular DNA OR 70S ribosomes in {{organelle}} linked to prokaryotic ancestry.",
+    "hints": [
+      "Think about what features {{organelle}} share with bacteria.",
+      "70S vs 80S ribosomes is a key distinction."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_A3_mcq_002",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Cell Theory Tenets",
+    "tags": [
+      "cell-theory",
+      "prokaryotes",
+      "eukaryotes"
+    ],
+    "stem_template": "Which statement is NOT part of the cell theory?",
+    "params": {},
+    "answer_template": "All cells contain a nucleus.",
+    "distractor_templates": [
+      "All living organisms are composed of cells.",
+      "The cell is the basic unit of life.",
+      "All cells arise from pre-existing cells."
+    ],
+    "options_template": [
+      {
+        "text": "All living organisms are composed of cells.",
+        "correct": false
+      },
+      {
+        "text": "The cell is the basic unit of life.",
+        "correct": false
+      },
+      {
+        "text": "All cells arise from pre-existing cells.",
+        "correct": false
+      },
+      {
+        "text": "All cells contain a nucleus.",
+        "correct": true
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for 'All cells contain a nucleus' — prokaryotes lack a membrane-bound nucleus.",
+    "hints": [
+      "Prokaryotic cells lack a membrane-bound nucleus.",
+      "Cell theory has three classic tenets."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_A3_worked_001",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Prokaryote vs Eukaryote Comparison",
+    "tags": [
+      "prokaryotes",
+      "eukaryotes",
+      "cell-theory"
+    ],
+    "stem_template": "Outline four structural differences between a prokaryotic cell (e.g. {{bacterium}}) and a eukaryotic cell (e.g. {{eukaryote}}).",
+    "params": {
+      "bacterium": {
+        "type": "choice",
+        "values": [
+          "Escherichia coli",
+          "Streptococcus pneumoniae",
+          "Bacillus subtilis"
+        ]
+      },
+      "eukaryote": {
+        "type": "choice",
+        "values": [
+          "a yeast cell",
+          "a liver cell",
+          "an Amoeba cell"
+        ]
+      }
+    },
+    "answer_template": "1. Nucleus: prokaryotes lack a membrane-bound nucleus; DNA is in a nucleoid region. 2. Organelles: prokaryotes lack membrane-bound organelles (e.g. mitochondria). 3. Ribosomes: prokaryotes have 70S ribosomes; eukaryotes have 80S. 4. Cell wall: prokaryotes have peptidoglycan cell walls; plant eukaryotes have cellulose; animal cells lack a cell wall.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correctly contrasted difference (max 4). Must state both prokaryote and eukaryote feature.",
+    "hints": [
+      "Think about the nucleus, ribosomes, organelles, and cell wall.",
+      "Use comparative language (e.g. 'prokaryotes have X; eukaryotes have Y')."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "bio_A4_mcq_001",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Cell Membrane Fluid Mosaic Model",
+    "tags": [
+      "membrane-structure",
+      "fluid-mosaic",
+      "phospholipid"
+    ],
+    "stem_template": "The fluid mosaic model of the plasma membrane describes it as having a {{layer}} of phospholipids with embedded proteins. Which statement about this model is correct?",
+    "params": {
+      "layer": {
+        "type": "choice",
+        "values": [
+          "bilayer",
+          "monolayer"
+        ]
+      }
+    },
+    "answer_template": "Phospholipids can move laterally within the bilayer (fluid), and proteins are scattered throughout (mosaic), some spanning the full width (transmembrane proteins).",
+    "distractor_templates": [
+      "Proteins are fixed in position and do not move within the membrane.",
+      "The membrane is composed of a single layer of phospholipids with proteins on one surface only.",
+      "Cholesterol is absent from all cell membranes and plays no role in fluidity."
+    ],
+    "options_template": [
+      {
+        "text": "Phospholipids move laterally (fluid) and proteins are scattered throughout (mosaic), including transmembrane proteins.",
+        "correct": true
+      },
+      {
+        "text": "Proteins are fixed in position and do not move within the membrane.",
+        "correct": false
+      },
+      {
+        "text": "The membrane is a single phospholipid layer with proteins on one surface only.",
+        "correct": false
+      },
+      {
+        "text": "Cholesterol is absent from all cell membranes.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark: lateral movement of phospholipids (fluid) AND scattered/transmembrane proteins (mosaic).",
+    "hints": [
+      "'Fluid' refers to phospholipid lateral movement.",
+      "'Mosaic' describes the protein distribution."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_A4_mcq_002",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Passive vs Active Transport",
+    "tags": [
+      "transport",
+      "membrane-structure",
+      "osmosis",
+      "diffusion"
+    ],
+    "stem_template": "A molecule moves from an area of {{conc_high}} concentration to {{conc_low}} concentration across the plasma membrane without energy expenditure. This process is best described as:",
+    "params": {
+      "conc_high": {
+        "type": "choice",
+        "values": [
+          "high",
+          "low"
+        ]
+      },
+      "conc_low": {
+        "type": "computed",
+        "formula": "conc_high == 'high' ? 'low' : 'high'"
+      }
+    },
+    "answer_template": "Passive transport (diffusion or facilitated diffusion) — movement along a concentration gradient requires no ATP.",
+    "distractor_templates": [
+      "Active transport — requires ATP to move molecules regardless of concentration gradient.",
+      "Endocytosis — cells engulf large molecules by membrane infolding.",
+      "Exocytosis — vesicles fuse with the membrane to release molecules."
+    ],
+    "options_template": [
+      {
+        "text": "Passive transport (diffusion or facilitated diffusion) — movement along a concentration gradient, no ATP required.",
+        "correct": true
+      },
+      {
+        "text": "Active transport — requires ATP regardless of gradient direction.",
+        "correct": false
+      },
+      {
+        "text": "Endocytosis — cells engulf molecules by membrane infolding.",
+        "correct": false
+      },
+      {
+        "text": "Exocytosis — vesicles fuse with membrane to release molecules.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for passive transport/diffusion with correct reasoning (down gradient, no ATP).",
+    "hints": [
+      "Active transport always requires ATP.",
+      "Diffusion moves down the concentration gradient."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_A4_ordering_001",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.4",
+    "type": "ordering",
+    "difficulty": "core",
+    "title": "Stages of Mitosis",
+    "tags": [
+      "cell-division",
+      "mitosis",
+      "chromosome-behavior"
+    ],
+    "stem_template": "Arrange the following stages of mitosis in the correct sequence.",
+    "params": {},
+    "answer_template": "1. Prophase — chromosomes condense, spindle forms. 2. Metaphase — chromosomes align at the equatorial plate. 3. Anaphase — sister chromatids separate and move to poles. 4. Telophase — nuclear envelopes reform, chromosomes decondense. 5. Cytokinesis — cytoplasm divides, producing two daughter cells.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correct adjacent pair sequence (max 4).",
+    "hints": [
+      "Use the mnemonic PMAT: Prophase, Metaphase, Anaphase, Telophase.",
+      "Cytokinesis follows telophase."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "bio_A4_worked_001",
+    "subject": "biology",
+    "topic": "A",
+    "subtopic": "A.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Organelle Function Matching and Explanation",
+    "tags": [
+      "organelles",
+      "membrane-structure",
+      "cell-biology"
+    ],
+    "stem_template": "For each of the following organelles found in a {{cell_type}}, state one function and relate that function to the organelle's structure: (a) mitochondria, (b) rough endoplasmic reticulum, (c) Golgi apparatus.",
+    "params": {
+      "cell_type": {
+        "type": "choice",
+        "values": [
+          "pancreatic acinar cell",
+          "cardiac muscle cell",
+          "goblet cell",
+          "neuron"
+        ]
+      }
+    },
+    "answer_template": "(a) Mitochondria: ATP synthesis via aerobic respiration; cristae increase surface area for electron transport chain. (b) Rough ER: protein synthesis and folding; ribosomes on surface synthesise proteins that enter the lumen for modification. (c) Golgi apparatus: sorting, packaging, and secretion of proteins; stack of cisternae allows sequential processing.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per function + 1 mark per structural link, max 6. Accept relevant alternatives for the given cell type.",
+    "hints": [
+      "Link function to structural features (surface area, membranes, ribosomes).",
+      "Consider what the specific cell type needs most."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "bio_B1_mcq_001",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Monosaccharide vs Polysaccharide",
+    "tags": [
+      "monosaccharides",
+      "polysaccharides",
+      "carbohydrates"
+    ],
+    "stem_template": "{{molecule}} is classified as a {{class}} because it {{reason}}.",
+    "params": {
+      "molecule": {
+        "type": "choice",
+        "values": [
+          "Glucose",
+          "Starch",
+          "Cellulose",
+          "Glycogen"
+        ]
+      },
+      "class": {
+        "type": "computed",
+        "formula": "['Glucose'].includes(molecule) ? 'monosaccharide' : 'polysaccharide'"
+      },
+      "reason": {
+        "type": "computed",
+        "formula": "['Glucose'].includes(molecule) ? 'cannot be hydrolysed into simpler sugars' : 'is formed by condensation of many monosaccharide units'"
+      }
+    },
+    "answer_template": "{{molecule}} is a {{class}} because it {{reason}}.",
+    "distractor_templates": [
+      "{{molecule}} is a lipid because it is insoluble in water.",
+      "{{molecule}} is a disaccharide because it contains two sugar units linked by a glycosidic bond.",
+      "{{molecule}} is an amino acid because it contains nitrogen."
+    ],
+    "options_template": [
+      {
+        "text": "{{molecule}} is a {{class}} because it {{reason}}.",
+        "correct": true
+      },
+      {
+        "text": "{{molecule}} is a lipid because it is insoluble in water.",
+        "correct": false
+      },
+      {
+        "text": "{{molecule}} is a disaccharide formed from two sugar units.",
+        "correct": false
+      },
+      {
+        "text": "{{molecule}} is an amino acid because it contains nitrogen.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for correct classification with correct reasoning.",
+    "hints": [
+      "Mono = one sugar unit; poly = many sugar units joined by glycosidic bonds.",
+      "Condensation reactions release water."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_B1_mcq_002",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Saturated vs Unsaturated Fatty Acids",
+    "tags": [
+      "fatty-acids",
+      "triglycerides",
+      "lipids"
+    ],
+    "stem_template": "Which of the following correctly describes a saturated fatty acid compared to an unsaturated fatty acid?",
+    "params": {},
+    "answer_template": "A saturated fatty acid has no C=C double bonds in its hydrocarbon chain, making it straight and allowing closer packing; it is solid at room temperature.",
+    "distractor_templates": [
+      "A saturated fatty acid has one or more C=C double bonds, causing kinks in the chain.",
+      "A saturated fatty acid is liquid at room temperature due to loose molecular packing.",
+      "A saturated fatty acid contains fewer carbon atoms than an unsaturated fatty acid."
+    ],
+    "options_template": [
+      {
+        "text": "No C=C double bonds; straight chain; solid at room temperature due to close packing.",
+        "correct": true
+      },
+      {
+        "text": "One or more C=C double bonds causing kinks; liquid at room temperature.",
+        "correct": false
+      },
+      {
+        "text": "Fewer carbon atoms than unsaturated fatty acids.",
+        "correct": false
+      },
+      {
+        "text": "Saturated fatty acids have the same structure as unsaturated but differ only in chain length.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for no double bonds AND solid at room temperature / closer packing.",
+    "hints": [
+      "Saturation refers to hydrogen atoms: saturated = maximum H atoms.",
+      "Double bonds cause kinks preventing close packing."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_B1_matching_001",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.1",
+    "type": "matching",
+    "difficulty": "core",
+    "title": "Carbohydrate Functions in Living Organisms",
+    "tags": [
+      "polysaccharides",
+      "monosaccharides",
+      "carbohydrates"
+    ],
+    "stem_template": "Match each carbohydrate to its primary biological function.",
+    "params": {},
+    "answer_template": "Glucose → immediate energy source (cellular respiration); Glycogen → energy storage in animals (liver and muscle); Starch → energy storage in plants; Cellulose → structural support in plant cell walls.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correct match (max 4).",
+    "hints": [
+      "Think about where each carbohydrate is found (plant or animal, cell wall or cytoplasm).",
+      "Glycogen and starch are both storage molecules but in different organisms."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "bio_B2_mcq_001",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Levels of Protein Structure",
+    "tags": [
+      "protein-structure",
+      "amino-acids",
+      "enzymes"
+    ],
+    "stem_template": "The {{level}} structure of a protein refers to:",
+    "params": {
+      "level": {
+        "type": "choice",
+        "values": [
+          "primary",
+          "secondary",
+          "tertiary",
+          "quaternary"
+        ]
+      }
+    },
+    "answer_template": "Primary: sequence of amino acids linked by peptide bonds. Secondary: local folding (alpha helices, beta sheets) stabilised by hydrogen bonds. Tertiary: 3D shape from R-group interactions (hydrophobic, ionic, disulfide). Quaternary: multiple polypeptide subunits.",
+    "distractor_templates": [
+      "The sequence of nucleotides in the mRNA that codes for the protein.",
+      "The overall 3D folding of the entire protein determined by covalent bonds only.",
+      "The arrangement of atoms within a single amino acid monomer."
+    ],
+    "options_template": [
+      {
+        "text": "The level of folding described by the correct definition for {{level}} structure.",
+        "correct": true
+      },
+      {
+        "text": "The sequence of nucleotides in mRNA that codes for the protein.",
+        "correct": false
+      },
+      {
+        "text": "The overall 3D folding determined by covalent bonds only.",
+        "correct": false
+      },
+      {
+        "text": "The arrangement of atoms within a single amino acid monomer.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for correct definition of {{level}} structure with at least one correct stabilising interaction.",
+    "hints": [
+      "Primary = peptide bonds; secondary = H bonds; tertiary = R-group interactions; quaternary = multiple subunits.",
+      "Disulfide bonds are covalent and found at the tertiary level."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_B2_mcq_002",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Enzyme Active Site Specificity",
+    "tags": [
+      "enzymes",
+      "enzyme-kinetics",
+      "active-site"
+    ],
+    "stem_template": "Which model best explains why the enzyme {{enzyme}} only catalyses the reaction of {{substrate}}?",
+    "params": {
+      "enzyme": {
+        "type": "choice",
+        "values": [
+          "amylase",
+          "lactase",
+          "pepsin",
+          "urease"
+        ]
+      },
+      "substrate": {
+        "type": "choice",
+        "values": [
+          "starch",
+          "lactose",
+          "peptide bonds",
+          "urea"
+        ]
+      }
+    },
+    "answer_template": "The induced fit model: the active site of {{enzyme}} has a specific shape that is complementary to {{substrate}}; binding causes a conformational change that further optimises catalysis.",
+    "distractor_templates": [
+      "The lock-and-key model: the active site is rigid and perfectly shaped for {{substrate}} without any conformational change.",
+      "The substrate randomly collides with the enzyme surface until it fits any available binding site.",
+      "{{enzyme}} is a non-specific enzyme that can catalyse any reaction at a high enough temperature."
+    ],
+    "options_template": [
+      {
+        "text": "Induced fit model: complementary active site undergoes conformational change upon binding {{substrate}}.",
+        "correct": true
+      },
+      {
+        "text": "Lock-and-key model: rigid active site, no conformational change.",
+        "correct": false
+      },
+      {
+        "text": "Random collision of substrate with any enzyme surface site.",
+        "correct": false
+      },
+      {
+        "text": "{{enzyme}} is non-specific at high temperatures.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for induced fit with conformational change OR lock-and-key with rigid complementary site (either model accepted if correctly described).",
+    "hints": [
+      "Modern understanding favours induced fit over lock-and-key.",
+      "Both models emphasise complementary shape between enzyme and substrate."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_B2_worked_001",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Effect of Temperature on Enzyme Activity",
+    "tags": [
+      "enzyme-kinetics",
+      "denaturation",
+      "protein-structure"
+    ],
+    "stem_template": "An experiment measures the rate of activity of {{enzyme}} at temperatures from 10°C to 70°C. Describe and explain the expected graph shape, including the optimum temperature (approximately {{T_opt}}°C) and what happens above it.",
+    "params": {
+      "enzyme": {
+        "type": "choice",
+        "values": [
+          "salivary amylase",
+          "catalase",
+          "trypsin"
+        ]
+      },
+      "T_opt": {
+        "type": "choice",
+        "values": [
+          37,
+          40,
+          45
+        ]
+      }
+    },
+    "answer_template": "Rate increases from 10°C to ~{{T_opt}}°C because higher temperature increases kinetic energy of both enzyme and substrate, raising collision frequency and rate of enzyme-substrate complex formation. Above {{T_opt}}°C, rate falls sharply because excess thermal energy breaks hydrogen bonds and other weak interactions maintaining tertiary structure → denaturation → active site changes shape → substrate can no longer bind.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark rising rate + kinetic energy/collision frequency; 1 mark optimum at ~{{T_opt}}°C; 1 mark above optimum: denaturation; 1 mark: tertiary structure/active site changes; 1 mark: substrate cannot bind. Max 5.",
+    "hints": [
+      "Distinguish between reduced activity (reversible) and denaturation (irreversible).",
+      "Denaturation involves disruption of tertiary structure, not primary."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "bio_B3_mcq_001",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Stem Cell Potency",
+    "tags": [
+      "stem-cells",
+      "differentiation",
+      "tissues"
+    ],
+    "stem_template": "A {{stem_cell_type}} can differentiate into any cell type in the body, including extra-embryonic tissues. This level of potency is called:",
+    "params": {
+      "stem_cell_type": {
+        "type": "choice",
+        "values": [
+          "zygote",
+          "embryonic stem cell (early blastocyst)",
+          "adult bone marrow stem cell"
+        ]
+      }
+    },
+    "answer_template": "Totipotency — totipotent cells can give rise to all cell types including the placenta and other extra-embryonic structures.",
+    "distractor_templates": [
+      "Pluripotency — can form all cell types of the embryo proper but not extra-embryonic tissues.",
+      "Multipotency — can differentiate into a limited range of related cell types (e.g. blood cells).",
+      "Unipotency — can only produce one type of differentiated cell."
+    ],
+    "options_template": [
+      {
+        "text": "Totipotency — all cell types including extra-embryonic tissues.",
+        "correct": true
+      },
+      {
+        "text": "Pluripotency — all embryonic cell types but not extra-embryonic tissues.",
+        "correct": false
+      },
+      {
+        "text": "Multipotency — limited range of related cell types.",
+        "correct": false
+      },
+      {
+        "text": "Unipotency — only one differentiated cell type.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for totipotency with correct distinction (includes extra-embryonic tissues).",
+    "hints": [
+      "Toti = all; Pluri = many; Multi = several; Uni = one.",
+      "The key distinguishing feature is extra-embryonic tissue formation."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_B3_matching_001",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.3",
+    "type": "matching",
+    "difficulty": "core",
+    "title": "Cell Types and Their Specialised Features",
+    "tags": [
+      "differentiation",
+      "tissues",
+      "organs"
+    ],
+    "stem_template": "Match each specialised cell type to the structural feature that enables its function.",
+    "params": {},
+    "answer_template": "Red blood cell → biconcave shape increases surface area for oxygen diffusion; Neuron → long axon with myelin sheath for rapid impulse transmission; Ciliated epithelial cell → cilia beat to move mucus; Root hair cell → long extension increases surface area for water/mineral absorption.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correct match with structural feature (max 4).",
+    "hints": [
+      "Consider the function of each cell and what structure best serves it.",
+      "Surface area is a recurring theme in cell adaptation."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "bio_B3_worked_001",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Stem Cells in Medicine",
+    "tags": [
+      "stem-cells",
+      "differentiation",
+      "ethics"
+    ],
+    "stem_template": "Evaluate the use of embryonic stem cells in the treatment of {{disease}}. Include the potential benefits, limitations, and ethical considerations.",
+    "params": {
+      "disease": {
+        "type": "choice",
+        "values": [
+          "Parkinson's disease",
+          "type 1 diabetes",
+          "spinal cord injuries",
+          "leukaemia"
+        ]
+      }
+    },
+    "answer_template": "Benefits: embryonic stem cells are pluripotent and can differentiate into {{disease}}-relevant cells (e.g. dopaminergic neurons for Parkinson's); potentially replace damaged tissue. Limitations: risk of immune rejection; teratoma formation; technical difficulty of directing differentiation. Ethics: destruction of embryo; debate about moral status of blastocyst; donor consent issues. Alternatives: induced pluripotent stem cells (iPSCs) from patient's own cells reduce ethical concerns.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award up to 3 marks for benefits, 2 for limitations, 2 for ethics, 1 for alternative (max 6). Accept any well-reasoned points.",
+    "hints": [
+      "Structure your answer: benefits, limitations, ethical issues.",
+      "Consider iPSCs as an alternative with fewer ethical concerns."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "bio_B4_mcq_001",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Alveolar Adaptations for Gas Exchange",
+    "tags": [
+      "lungs",
+      "gas-exchange-surfaces",
+      "adaptations"
+    ],
+    "stem_template": "Which combination of features makes alveoli an efficient gas exchange surface?",
+    "params": {},
+    "answer_template": "Large total surface area, thin walls (one cell thick), rich capillary network maintaining a steep concentration gradient, and moist surface allowing gases to dissolve.",
+    "distractor_templates": [
+      "Thick walls to prevent collapse, few capillaries to slow blood flow, and dry surface to prevent water loss.",
+      "Small surface area with high oxygen concentration stored in alveolar walls.",
+      "Ciliated cells that actively pump oxygen across the membrane."
+    ],
+    "options_template": [
+      {
+        "text": "Large surface area, thin walls, rich capillary network (steep gradient), moist surface.",
+        "correct": true
+      },
+      {
+        "text": "Thick walls to prevent collapse, few capillaries, dry surface.",
+        "correct": false
+      },
+      {
+        "text": "Small surface area with high stored oxygen concentration.",
+        "correct": false
+      },
+      {
+        "text": "Cilia that actively pump oxygen across membranes.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for any two of: large SA, thin walls, rich blood supply/steep gradient, moist surface.",
+    "hints": [
+      "Fick's law: rate ∝ SA × concentration gradient / thickness.",
+      "Gas must dissolve in water to cross membranes."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_B4_mcq_002",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Ventilation Mechanism",
+    "tags": [
+      "ventilation",
+      "lungs",
+      "gas-exchange-surfaces"
+    ],
+    "stem_template": "During inhalation in mammals, the diaphragm {{diaphragm_action}} and the external intercostal muscles {{intercostal_action}}, causing lung volume to {{volume_change}}.",
+    "params": {
+      "diaphragm_action": {
+        "type": "choice",
+        "values": [
+          "contracts and flattens",
+          "relaxes and domes upward"
+        ]
+      },
+      "intercostal_action": {
+        "type": "computed",
+        "formula": "diaphragm_action === 'contracts and flattens' ? 'contract, raising the ribcage' : 'relax, lowering the ribcage'"
+      },
+      "volume_change": {
+        "type": "computed",
+        "formula": "diaphragm_action === 'contracts and flattens' ? 'increase, lowering air pressure' : 'decrease, raising air pressure'"
+      }
+    },
+    "answer_template": "During inhalation: diaphragm contracts and flattens; external intercostals contract raising ribcage; lung volume increases; pressure drops below atmospheric; air flows in.",
+    "distractor_templates": [
+      "During inhalation the diaphragm relaxes and internal intercostals contract, raising air pressure.",
+      "Volume decreases during inhalation, forcing air into the lungs under pressure.",
+      "The diaphragm stays fixed during breathing; only the ribcage moves."
+    ],
+    "options_template": [
+      {
+        "text": "Diaphragm contracts/flattens; external intercostals raise ribcage; volume increases; pressure falls; air flows in.",
+        "correct": true
+      },
+      {
+        "text": "Diaphragm relaxes; internal intercostals contract; pressure rises; air forced in.",
+        "correct": false
+      },
+      {
+        "text": "Volume decreases during inhalation, creating a positive pressure gradient.",
+        "correct": false
+      },
+      {
+        "text": "Only the ribcage moves; diaphragm is stationary.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for diaphragm contracts + volume increases + pressure decreases (all three needed).",
+    "hints": [
+      "Inhalation = inspiration; air moves from high to low pressure.",
+      "Boyle's law: pressure is inversely proportional to volume."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_B4_worked_001",
+    "subject": "biology",
+    "topic": "B",
+    "subtopic": "B.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Comparing Gas Exchange Surfaces",
+    "tags": [
+      "gas-exchange-surfaces",
+      "adaptations",
+      "lungs"
+    ],
+    "stem_template": "Compare the gas exchange surfaces of a fish (gills) and a mammal (alveoli). Include at least three structural similarities and two differences.",
+    "params": {},
+    "answer_template": "Similarities: both have large surface area; both have thin membranes for short diffusion distance; both are supplied with a rich blood/water supply to maintain steep gradients; both have moist surfaces. Differences: fish gills use countercurrent flow (water and blood in opposite directions) maximising gradient; mammals use tidal ventilation (bidirectional airflow). Fish gill lamellae are external and supported by water; mammalian alveoli are internal, supported by surfactant.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per similarity (max 3) and 1 mark per difference (max 2). Max 5.",
+    "hints": [
+      "Fick's law factors apply to both systems.",
+      "Countercurrent exchange is a key fish adaptation."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "bio_C1_mcq_001",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Enzyme Inhibitors",
+    "tags": [
+      "enzymes",
+      "inhibitors",
+      "metabolic-pathways"
+    ],
+    "stem_template": "A competitive inhibitor of the enzyme {{enzyme}} works by:",
+    "params": {
+      "enzyme": {
+        "type": "choice",
+        "values": [
+          "hexokinase",
+          "succinate dehydrogenase",
+          "carbonic anhydrase"
+        ]
+      }
+    },
+    "answer_template": "Binding to the active site of {{enzyme}} — its structure is similar to the substrate, so it competes for the active site; increasing substrate concentration can overcome competitive inhibition.",
+    "distractor_templates": [
+      "Binding to an allosteric site, causing a conformational change that alters the active site shape permanently.",
+      "Denaturing the enzyme by breaking peptide bonds in the active site.",
+      "Irreversibly blocking the active site so that increasing substrate concentration has no effect."
+    ],
+    "options_template": [
+      {
+        "text": "Binding to the active site (similar to substrate); overcome by increasing substrate concentration.",
+        "correct": true
+      },
+      {
+        "text": "Binding to an allosteric site; permanent conformational change.",
+        "correct": false
+      },
+      {
+        "text": "Denaturing by breaking peptide bonds.",
+        "correct": false
+      },
+      {
+        "text": "Irreversibly blocking the active site; not overcome by more substrate.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for active site binding + reversibility/overcome by substrate concentration.",
+    "hints": [
+      "Competitive = competes with substrate for the same active site.",
+      "Non-competitive inhibitors bind elsewhere (allosteric site)."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_C1_mcq_002",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Activation Energy and Enzymes",
+    "tags": [
+      "enzymes",
+      "activation-energy",
+      "metabolic-pathways"
+    ],
+    "stem_template": "How do enzymes speed up metabolic reactions?",
+    "params": {},
+    "answer_template": "Enzymes lower the activation energy of a reaction by providing an alternative reaction pathway, allowing more reactant molecules to have sufficient energy to react at a given temperature.",
+    "distractor_templates": [
+      "Enzymes provide energy to reactants, raising their kinetic energy above the activation threshold.",
+      "Enzymes increase the activation energy, making reactions more selective.",
+      "Enzymes are consumed in the reaction, becoming part of the product."
+    ],
+    "options_template": [
+      {
+        "text": "Lower activation energy, providing an alternative reaction pathway.",
+        "correct": true
+      },
+      {
+        "text": "Provide energy to reactants, raising kinetic energy.",
+        "correct": false
+      },
+      {
+        "text": "Increase activation energy for greater selectivity.",
+        "correct": false
+      },
+      {
+        "text": "Are consumed in the reaction and become part of the product.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for 'lower activation energy' + alternative reaction pathway.",
+    "hints": [
+      "Enzymes are catalysts — they are not consumed.",
+      "Activation energy is the minimum energy needed for a reaction."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_C1_worked_001",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "End-Product Inhibition in Metabolic Pathways",
+    "tags": [
+      "inhibitors",
+      "metabolic-pathways",
+      "allosteric"
+    ],
+    "stem_template": "Explain how end-product inhibition regulates a metabolic pathway such as the synthesis of {{amino_acid}} from a precursor molecule. Use the terms allosteric inhibitor and negative feedback.",
+    "params": {
+      "amino_acid": {
+        "type": "choice",
+        "values": [
+          "isoleucine",
+          "threonine",
+          "histidine"
+        ]
+      }
+    },
+    "answer_template": "When {{amino_acid}} accumulates in the cell, it acts as an allosteric inhibitor of the first enzyme in its own biosynthetic pathway. It binds to the allosteric site (not the active site), causing a conformational change that reduces enzyme activity. This is negative feedback: the end product inhibits its own production, maintaining homeostatic levels. When {{amino_acid}} is used up, inhibition is relieved and production resumes.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark allosteric inhibitor; 1 mark binds allosteric site; 1 mark conformational change; 1 mark negative feedback; 1 mark inhibition relieved when {{amino_acid}} used up. Max 5.",
+    "hints": [
+      "Allosteric = other site (not active site).",
+      "Negative feedback: product reduces its own production."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "bio_C2_mcq_001",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Stages of Cellular Respiration",
+    "tags": [
+      "glycolysis",
+      "krebs",
+      "electron-transport",
+      "ATP"
+    ],
+    "stem_template": "In which location within a eukaryotic cell does the Krebs cycle occur?",
+    "params": {},
+    "answer_template": "The matrix of the mitochondrion.",
+    "distractor_templates": [
+      "The cytoplasm (cytosol) of the cell.",
+      "The inner mitochondrial membrane.",
+      "The cristae of the mitochondrion."
+    ],
+    "options_template": [
+      {
+        "text": "The matrix of the mitochondrion.",
+        "correct": true
+      },
+      {
+        "text": "The cytoplasm (cytosol).",
+        "correct": false
+      },
+      {
+        "text": "The inner mitochondrial membrane.",
+        "correct": false
+      },
+      {
+        "text": "The cristae.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for mitochondrial matrix only.",
+    "hints": [
+      "Glycolysis occurs in the cytoplasm; the Krebs cycle is in the mitochondrion.",
+      "The inner membrane is where the electron transport chain is located."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_C2_mcq_002",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Net ATP from Glycolysis",
+    "tags": [
+      "glycolysis",
+      "ATP",
+      "cell-respiration"
+    ],
+    "stem_template": "During glycolysis, one molecule of glucose (C₆H₁₂O₆) is converted to two molecules of pyruvate. What is the net gain of ATP molecules per glucose molecule?",
+    "params": {},
+    "answer_template": "Net gain of 2 ATP (4 ATP produced − 2 ATP invested in the energy investment phase).",
+    "distractor_templates": [
+      "36–38 ATP, because glycolysis produces the most ATP of any stage.",
+      "0 ATP, because all ATP produced is used to invest energy in the substrates.",
+      "6 ATP, because each carbon in glucose yields 1 ATP."
+    ],
+    "options_template": [
+      {
+        "text": "2 ATP net (4 produced − 2 invested).",
+        "correct": true
+      },
+      {
+        "text": "36–38 ATP — glycolysis is the highest-yield stage.",
+        "correct": false
+      },
+      {
+        "text": "0 ATP — all produced ATP is reinvested.",
+        "correct": false
+      },
+      {
+        "text": "6 ATP — one per carbon atom.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for 2 net ATP with justification (4 produced − 2 invested).",
+    "hints": [
+      "Glycolysis has an investment phase (uses 2 ATP) and a payoff phase (produces 4 ATP).",
+      "Most ATP comes from oxidative phosphorylation, not glycolysis."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_C2_ordering_001",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.2",
+    "type": "ordering",
+    "difficulty": "challenge",
+    "title": "Stages of Aerobic Respiration in Order",
+    "tags": [
+      "glycolysis",
+      "krebs",
+      "electron-transport",
+      "ATP"
+    ],
+    "stem_template": "Arrange the following stages of aerobic respiration in the correct order, starting with glucose.",
+    "params": {},
+    "answer_template": "1. Glycolysis (cytoplasm): glucose → 2 pyruvate + 2 ATP + 2 NADH. 2. Link reaction (mitochondrial matrix): pyruvate → acetyl CoA + CO₂ + NADH. 3. Krebs cycle (matrix): acetyl CoA → CO₂ + ATP + NADH + FADH₂. 4. Electron transport chain + oxidative phosphorylation (inner mitochondrial membrane): NADH/FADH₂ → ~34 ATP + H₂O.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correct adjacent transition (max 3).",
+    "hints": [
+      "Glycolysis is always first and occurs in the cytoplasm.",
+      "CO₂ is released in the link reaction and Krebs cycle."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "bio_C2_worked_001",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Anaerobic vs Aerobic Respiration",
+    "tags": [
+      "glycolysis",
+      "ATP",
+      "lactic-acid",
+      "fermentation"
+    ],
+    "stem_template": "A sprinter runs {{distance}} m in {{time}} seconds. Explain why their muscle cells switch to anaerobic respiration during this sprint and describe the biochemical consequences.",
+    "params": {
+      "distance": {
+        "type": "choice",
+        "values": [
+          100,
+          200,
+          400
+        ]
+      },
+      "time": {
+        "type": "choice",
+        "values": [
+          10,
+          20,
+          45
+        ]
+      }
+    },
+    "answer_template": "During intense exercise, oxygen delivery to muscles is insufficient to meet ATP demand via aerobic respiration. Cells continue glycolysis anaerobically: pyruvate is converted to lactate by lactate dehydrogenase, regenerating NAD⁺ so glycolysis can continue. This produces only 2 ATP per glucose (vs ~38 ATP aerobically). Lactate accumulates, lowering pH, causing muscle fatigue. After exercise, oxygen is used to oxidise accumulated lactate (oxygen debt/EPOC).",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark insufficient O₂; 1 mark pyruvate → lactate; 1 mark NAD⁺ regenerated; 1 mark only 2 ATP; 1 mark lactate accumulation/fatigue. Max 5.",
+    "hints": [
+      "NAD⁺ regeneration is the key reason for anaerobic respiration.",
+      "Lactate can be converted back to pyruvate in the liver after exercise."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "bio_C3_mcq_001",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Light-Dependent Reactions",
+    "tags": [
+      "light-reactions",
+      "photosystems",
+      "chloroplast"
+    ],
+    "stem_template": "In the light-dependent reactions of photosynthesis, water molecules are split by the process of:",
+    "params": {},
+    "answer_template": "Photolysis — light energy absorbed by Photosystem II causes the splitting of water into protons (H⁺), electrons (e⁻), and oxygen (O₂), which is released as a by-product.",
+    "distractor_templates": [
+      "Hydrolysis by ATP — ATP powers the splitting of water in the stroma.",
+      "Chemiosmosis — proton movement through ATP synthase splits water molecules.",
+      "Carbon fixation — RuBisCO uses CO₂ to split water in the Calvin cycle."
+    ],
+    "options_template": [
+      {
+        "text": "Photolysis — light energy splits water into H⁺, e⁻, and O₂ at PSII.",
+        "correct": true
+      },
+      {
+        "text": "Hydrolysis by ATP — ATP powers water splitting in the stroma.",
+        "correct": false
+      },
+      {
+        "text": "Chemiosmosis — proton movement through ATP synthase splits water.",
+        "correct": false
+      },
+      {
+        "text": "Carbon fixation by RuBisCO — CO₂ used to split water in Calvin cycle.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for photolysis + linked to Photosystem II + products (H⁺/e⁻/O₂).",
+    "hints": [
+      "Photo = light; lysis = splitting.",
+      "Oxygen released in photosynthesis comes from water, not CO₂."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_C3_mcq_002",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Calvin Cycle Products",
+    "tags": [
+      "calvin-cycle",
+      "chloroplast",
+      "light-reactions"
+    ],
+    "stem_template": "In the Calvin cycle, CO₂ is fixed by the enzyme RuBisCO onto a {{acceptor}} molecule. The immediate product is {{product}}.",
+    "params": {
+      "acceptor": {
+        "type": "choice",
+        "values": [
+          "RuBP (ribulose-1,5-bisphosphate)",
+          "GP (glycerate-3-phosphate)"
+        ]
+      },
+      "product": {
+        "type": "computed",
+        "formula": "acceptor.includes('RuBP') ? 'two molecules of GP (3-carbon compound)' : 'G3P, which can be used to regenerate RuBP or synthesise glucose'"
+      }
+    },
+    "answer_template": "CO₂ is fixed by RuBisCO onto RuBP (5-carbon) to produce an unstable 6-carbon compound that immediately splits into two molecules of GP (3-phosphoglycerate, 3-carbon). GP is then reduced using ATP and NADPH to form G3P (glyceraldehyde-3-phosphate).",
+    "distractor_templates": [
+      "CO₂ is fixed directly onto glucose to produce a 7-carbon compound.",
+      "CO₂ combines with NADPH to produce ATP in the stroma.",
+      "CO₂ is fixed in the grana by Photosystem I."
+    ],
+    "options_template": [
+      {
+        "text": "RuBisCO fixes CO₂ onto RuBP → two 3-carbon GP molecules → reduced to G3P using ATP + NADPH.",
+        "correct": true
+      },
+      {
+        "text": "CO₂ fixed directly onto glucose to form a 7-carbon compound.",
+        "correct": false
+      },
+      {
+        "text": "CO₂ combines with NADPH to produce ATP in the stroma.",
+        "correct": false
+      },
+      {
+        "text": "CO₂ is fixed in the grana by Photosystem I.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for RuBisCO + RuBP + GP (3C). Must name the enzyme and acceptor molecule.",
+    "hints": [
+      "RuBisCO = ribulose bisphosphate carboxylase/oxygenase.",
+      "G3P can be used to synthesise glucose or regenerate RuBP."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_C3_worked_001",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Effect of Light Intensity on Photosynthesis Rate",
+    "tags": [
+      "light-reactions",
+      "photosystems",
+      "limiting-factors"
+    ],
+    "stem_template": "An aquatic plant is placed at distances of {{d1}} cm, {{d2}} cm, and {{d3}} cm from a light source. Oxygen bubble count per minute is used as a proxy for photosynthesis rate. Describe how light intensity affects photosynthesis rate and explain when light ceases to be the limiting factor.",
+    "params": {
+      "d1": {
+        "type": "int",
+        "min": 5,
+        "max": 10
+      },
+      "d2": {
+        "type": "int",
+        "min": 15,
+        "max": 25
+      },
+      "d3": {
+        "type": "int",
+        "min": 30,
+        "max": 50
+      }
+    },
+    "answer_template": "As the plant moves closer ({{d3}} → {{d1}} cm), light intensity increases (inversely proportional to distance²). Rate of photosynthesis increases as more light energy drives photolysis and the light-dependent reactions. However, rate plateaus at high light intensities because CO₂ concentration or temperature becomes the limiting factor — the light-independent reactions (Calvin cycle) cannot keep pace.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark light intensity inversely related to distance²; 1 mark rate increases with intensity; 1 mark plateau at high intensity; 1 mark CO₂ or temperature becomes limiting factor. Max 4.",
+    "hints": [
+      "Limiting factor = the factor in shortest supply relative to demand.",
+      "Light intensity ∝ 1/d² (inverse square law)."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "bio_C4_mcq_001",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Energy Flow in Ecosystems",
+    "tags": [
+      "ecosystems",
+      "energy-flow",
+      "food-chains"
+    ],
+    "stem_template": "Only approximately {{efficiency}}% of energy is transferred from one trophic level to the next in a food chain. What happens to the remaining energy?",
+    "params": {
+      "efficiency": {
+        "type": "choice",
+        "values": [
+          10,
+          5,
+          15,
+          20
+        ]
+      }
+    },
+    "answer_template": "The remaining energy is lost as heat through cellular respiration, used in movement, or passed to decomposers in faeces and dead organic matter. Energy transfer is inefficient because organisms use energy for their own metabolism.",
+    "distractor_templates": [
+      "It is stored in the soil and recycled back to producers in the next growing season.",
+      "It is converted to chemical energy in the consumer's ATP and passed on to the next trophic level.",
+      "It is reflected off organisms and returned to the sun."
+    ],
+    "options_template": [
+      {
+        "text": "Lost as heat via respiration, used in movement, and passed to decomposers via faeces/dead matter.",
+        "correct": true
+      },
+      {
+        "text": "Stored in soil and recycled to producers next season.",
+        "correct": false
+      },
+      {
+        "text": "Converted to ATP energy and passed to the next trophic level.",
+        "correct": false
+      },
+      {
+        "text": "Reflected off organisms and returned to the sun.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for heat/respiration loss AND/OR faeces/dead matter to decomposers.",
+    "hints": [
+      "Energy is lost as heat — it is not recycled like nutrients.",
+      "The 10% rule is an approximation; actual values vary."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_C4_mcq_002",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Nitrogen Cycle — Role of Bacteria",
+    "tags": [
+      "nutrient-cycling",
+      "ecosystems",
+      "nitrogen-cycle"
+    ],
+    "stem_template": "Which process is carried out by nitrifying bacteria such as Nitrosomonas and Nitrobacter?",
+    "params": {},
+    "answer_template": "Nitrification — converting ammonium ions (NH₄⁺) to nitrite (NO₂⁻) and then to nitrate (NO₃⁻), making nitrogen available for plant uptake.",
+    "distractor_templates": [
+      "Nitrogen fixation — converting atmospheric N₂ into ammonia (NH₃) or ammonium (NH₄⁺).",
+      "Denitrification — converting nitrates back to N₂ gas, reducing soil fertility.",
+      "Ammonification — breaking down organic nitrogen compounds into ammonium ions."
+    ],
+    "options_template": [
+      {
+        "text": "Nitrification — NH₄⁺ → NO₂⁻ → NO₃⁻, making N available to plants.",
+        "correct": true
+      },
+      {
+        "text": "Nitrogen fixation — N₂ → NH₃/NH₄⁺.",
+        "correct": false
+      },
+      {
+        "text": "Denitrification — NO₃⁻ → N₂.",
+        "correct": false
+      },
+      {
+        "text": "Ammonification — organic N → NH₄⁺.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for nitrification + correct substrates/products (NH₄⁺ → NO₃⁻).",
+    "hints": [
+      "Nitrosomonas: NH₄⁺ → NO₂⁻; Nitrobacter: NO₂⁻ → NO₃⁻.",
+      "Nitrification = making nitrates."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_C4_worked_001",
+    "subject": "biology",
+    "topic": "C",
+    "subtopic": "C.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Food Web Analysis and Trophic Efficiency",
+    "tags": [
+      "food-chains",
+      "energy-flow",
+      "ecosystems",
+      "trophic-levels"
+    ],
+    "stem_template": "A grassland food web contains: grass (producer, {{biomass}} kg/hectare), grasshoppers (primary consumer), frogs (secondary consumer), and hawks (tertiary consumer). Assuming {{eff}}% trophic efficiency at each level, calculate the expected biomass at each trophic level and explain why food chains rarely exceed 4–5 links.",
+    "params": {
+      "biomass": {
+        "type": "choice",
+        "values": [
+          10000,
+          8000,
+          12000
+        ]
+      },
+      "eff": {
+        "type": "choice",
+        "values": [
+          10,
+          12,
+          15
+        ]
+      },
+      "l2": {
+        "type": "computed",
+        "formula": "biomass * eff / 100"
+      },
+      "l3": {
+        "type": "computed",
+        "formula": "biomass * (eff/100)^2"
+      },
+      "l4": {
+        "type": "computed",
+        "formula": "biomass * (eff/100)^3"
+      }
+    },
+    "answer_template": "Grasshoppers: {{biomass}} × {{eff}}/100 = {{l2}} kg/ha. Frogs: {{l2}} × {{eff}}/100 = {{l3}} kg/ha. Hawks: {{l3}} × {{eff}}/100 = {{l4}} kg/ha. Food chains are short because energy lost at each level means insufficient energy remains to support viable populations at higher trophic levels.",
+    "mark_scheme_template": "Award 1 per correct biomass calculation (3). Award 2 for explanation of short food chains (energy loss limits viable populations). Max 5.",
+    "hints": [
+      "Multiply each level by the efficiency fraction.",
+      "After 4–5 levels, remaining energy is too little to support a population."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "bio_D1_mcq_001",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Mitosis vs Meiosis",
+    "tags": [
+      "mitosis",
+      "meiosis",
+      "chromosome-behavior"
+    ],
+    "stem_template": "Which statement correctly distinguishes meiosis from mitosis?",
+    "params": {},
+    "answer_template": "Meiosis produces four genetically diverse haploid daughter cells via two division rounds; mitosis produces two genetically identical diploid daughter cells via one division round.",
+    "distractor_templates": [
+      "Mitosis produces four haploid cells; meiosis produces two diploid cells.",
+      "Both mitosis and meiosis produce genetically identical diploid cells.",
+      "Meiosis occurs in somatic cells to repair damaged DNA; mitosis produces gametes."
+    ],
+    "options_template": [
+      {
+        "text": "Meiosis → 4 haploid, genetically diverse cells (2 divisions); Mitosis → 2 diploid, identical cells (1 division).",
+        "correct": true
+      },
+      {
+        "text": "Mitosis → 4 haploid; Meiosis → 2 diploid.",
+        "correct": false
+      },
+      {
+        "text": "Both produce 2 genetically identical diploid cells.",
+        "correct": false
+      },
+      {
+        "text": "Meiosis repairs somatic DNA; Mitosis produces gametes.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for all four correct contrasts: cell number, ploidy, genetic diversity, and division rounds.",
+    "hints": [
+      "Meiosis = 2 divisions; n cells (haploid); genetic variation via crossing over.",
+      "Mitosis = 1 division; 2n cells (diploid); genetically identical."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_D1_ordering_001",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.1",
+    "type": "ordering",
+    "difficulty": "core",
+    "title": "Stages of Meiosis in Order",
+    "tags": [
+      "meiosis",
+      "chromosome-behavior",
+      "cell-division"
+    ],
+    "stem_template": "Arrange the following key events of meiosis in the correct order.",
+    "params": {},
+    "answer_template": "1. Prophase I: homologous chromosomes pair (synapsis) and crossing over occurs at chiasmata. 2. Metaphase I: bivalents align at the equatorial plate. 3. Anaphase I: homologous chromosomes separate to opposite poles. 4. Telophase I/Cytokinesis I: two haploid cells form (each with duplicated chromosomes). 5. Meiosis II: sister chromatids separate (equivalent to mitosis) → 4 haploid cells.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award 1 mark per correctly sequenced adjacent event (max 4).",
+    "hints": [
+      "Crossing over in Prophase I is the main source of genetic recombination.",
+      "Independent assortment occurs at Metaphase I."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "bio_D1_worked_001",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Karyotype Analysis",
+    "tags": [
+      "karyotypes",
+      "meiosis",
+      "chromosome-behavior"
+    ],
+    "stem_template": "A human karyotype shows {{chromosome_number}} chromosomes in somatic cells. Determine whether this is normal and, if abnormal, name the likely condition and explain the meiotic error that caused it.",
+    "params": {
+      "chromosome_number": {
+        "type": "choice",
+        "values": [
+          46,
+          47,
+          45
+        ]
+      }
+    },
+    "answer_template": "Normal: 46 chromosomes (23 pairs). If 47: trisomy — an extra chromosome due to non-disjunction in Meiosis I or II (e.g. trisomy 21 → Down syndrome). If 45: monosomy — one missing chromosome due to non-disjunction (e.g. monosomy X → Turner syndrome). Non-disjunction: homologous chromosomes (Meiosis I) or sister chromatids (Meiosis II) fail to separate properly.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark correct normal count (46); 1 mark identifying trisomy/monosomy for 47/45; 1 mark naming the condition; 1 mark explaining non-disjunction; 1 mark specifying which meiotic division. Max 4.",
+    "hints": [
+      "Humans have 46 chromosomes (2n=46).",
+      "Non-disjunction can occur in Meiosis I (homologous pairs) or Meiosis II (sister chromatids)."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "bio_D2_mcq_001",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Transcription Process",
+    "tags": [
+      "transcription",
+      "gene-expression",
+      "mRNA"
+    ],
+    "stem_template": "During transcription of a gene, RNA polymerase reads the template strand in the {{direction}} direction, synthesising an mRNA strand in the {{synth_direction}} direction.",
+    "params": {
+      "direction": {
+        "type": "choice",
+        "values": [
+          "3'→5'",
+          "5'→3'"
+        ]
+      },
+      "synth_direction": {
+        "type": "computed",
+        "formula": "direction === '3′→5′' ? '5′→3′' : '3′→5′'"
+      }
+    },
+    "answer_template": "RNA polymerase reads the template strand 3'→5' and synthesises the mRNA 5'→3'. The mRNA sequence is the same as the coding (non-template) strand (with U replacing T).",
+    "distractor_templates": [
+      "RNA polymerase reads 5'→3' and synthesises mRNA in the 3'→5' direction.",
+      "Both template and mRNA run in the same 5'→3' direction.",
+      "RNA polymerase reads the coding strand directly to produce mRNA."
+    ],
+    "options_template": [
+      {
+        "text": "Template read 3'→5'; mRNA synthesised 5'→3'.",
+        "correct": true
+      },
+      {
+        "text": "Template read 5'→3'; mRNA synthesised 3'→5'.",
+        "correct": false
+      },
+      {
+        "text": "Both template and mRNA run 5'→3'.",
+        "correct": false
+      },
+      {
+        "text": "RNA polymerase reads the coding strand directly.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for template 3'→5' AND mRNA 5'→3' both stated correctly.",
+    "hints": [
+      "RNA polymerase always synthesises in the 5'→3' direction.",
+      "The mRNA is complementary and antiparallel to the template strand."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_D2_mcq_002",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Types of Point Mutations",
+    "tags": [
+      "mutations",
+      "gene-expression",
+      "point-mutation"
+    ],
+    "stem_template": "A point mutation changes the codon AUG to AUU. The amino acid methionine (Met) is replaced by isoleucine (Ile). This is an example of a:",
+    "params": {},
+    "answer_template": "Missense mutation — a single nucleotide change results in a different amino acid being incorporated into the protein.",
+    "distractor_templates": [
+      "Nonsense mutation — a point mutation that creates a premature stop codon.",
+      "Silent (synonymous) mutation — a nucleotide change that does not alter the amino acid sequence.",
+      "Frameshift mutation — insertion or deletion of a nucleotide shifts the reading frame."
+    ],
+    "options_template": [
+      {
+        "text": "Missense mutation — single base change → different amino acid.",
+        "correct": true
+      },
+      {
+        "text": "Nonsense mutation — creates a premature stop codon.",
+        "correct": false
+      },
+      {
+        "text": "Silent mutation — no change in amino acid sequence.",
+        "correct": false
+      },
+      {
+        "text": "Frameshift mutation — insertion/deletion shifts reading frame.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for missense mutation with correct definition (base change → different amino acid).",
+    "hints": [
+      "Missense = wrong amino acid; Nonsense = stop codon; Silent = same amino acid.",
+      "Frameshift mutations are caused by insertions or deletions, not substitutions."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_D2_worked_001",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Translation and the Genetic Code",
+    "tags": [
+      "translation",
+      "mutations",
+      "gene-regulation"
+    ],
+    "stem_template": "An mRNA sequence begins: 5'-AUG-{{codon2}}-{{codon3}}-UAA-3'. Using a codon table, determine the amino acid sequence, identify the start and stop codons, and explain what would happen if the second nucleotide of the first codon were deleted.",
+    "params": {
+      "codon2": {
+        "type": "choice",
+        "values": [
+          "UUU",
+          "GGG",
+          "CCC",
+          "AAA",
+          "UCU",
+          "GAA"
+        ]
+      },
+      "codon3": {
+        "type": "choice",
+        "values": [
+          "UGC",
+          "CGU",
+          "ACU",
+          "GUG",
+          "CAG",
+          "AGA"
+        ]
+      }
+    },
+    "answer_template": "AUG (Met, start) — {{codon2}} — {{codon3}} — UAA (stop). The polypeptide is Met-[codon2 AA]-[codon3 AA]. If the second nucleotide of AUG were deleted: reading frame shifts, all downstream codons change → completely different (likely non-functional) protein; premature stop codon may occur. This is a frameshift mutation.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per correct codon/AA identification (max 3); 1 mark frameshift explanation; 1 mark downstream codons change; 1 mark premature stop/non-functional protein. Max 5.",
+    "hints": [
+      "AUG is always the start codon (Met).",
+      "UAA, UAG, UGA are stop codons."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "bio_D3_mcq_001",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Monohybrid Cross — Dominant/Recessive",
+    "tags": [
+      "mendelian-genetics",
+      "punnett-squares",
+      "inheritance"
+    ],
+    "stem_template": "Two heterozygous parents (Aa × Aa) are crossed for a trait showing complete dominance. What is the expected phenotypic ratio of their offspring?",
+    "params": {},
+    "answer_template": "3 dominant : 1 recessive (3:1 phenotypic ratio). Genotypic ratio is 1 AA : 2 Aa : 1 aa.",
+    "distractor_templates": [
+      "1:1 (half dominant, half recessive).",
+      "All offspring show the dominant phenotype.",
+      "1:2:1 (three different phenotypes in equal proportions)."
+    ],
+    "options_template": [
+      {
+        "text": "3 dominant : 1 recessive.",
+        "correct": true
+      },
+      {
+        "text": "1:1 dominant : recessive.",
+        "correct": false
+      },
+      {
+        "text": "All offspring show the dominant phenotype.",
+        "correct": false
+      },
+      {
+        "text": "1:2:1 ratio with three different phenotypes.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for 3:1 phenotypic ratio. Award bonus if genotypic ratio (1:2:1) also stated.",
+    "hints": [
+      "Use a Punnett square: Aa × Aa → AA, Aa, Aa, aa.",
+      "1:2:1 is the genotypic ratio; 3:1 is the phenotypic ratio (complete dominance)."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_D3_worked_001",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.3",
+    "type": "worked",
+    "difficulty": "core",
+    "title": "Sex-Linked Inheritance — X-Linked Recessive",
+    "tags": [
+      "sex-linkage",
+      "punnett-squares",
+      "mendelian-genetics"
+    ],
+    "stem_template": "Colour blindness is X-linked recessive. A carrier female (X^N X^c) mates with a normal male (X^N Y). Construct a Punnett square and determine the probability of each offspring phenotype.",
+    "params": {},
+    "answer_template": "Punnett square: X^N X^N (normal female, 25%), X^N X^c (carrier female, 25%), X^N Y (normal male, 25%), X^c Y (colour-blind male, 25%). Therefore 25% of all offspring are colour-blind males; 50% of males are colour-blind.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark correct Punnett square set-up; 1 mark per correct genotype (max 4 genotypes); 1 mark probabilities; 1 mark stating colour-blind males only (X^c Y). Max 5.",
+    "hints": [
+      "X-linked recessive: females need two copies to be affected; males need only one.",
+      "Carrier females are phenotypically normal but carry the recessive allele."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "bio_D3_mcq_002",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.3",
+    "type": "mcq",
+    "difficulty": "challenge",
+    "title": "Codominance — ABO Blood Groups",
+    "tags": [
+      "codominance",
+      "mendelian-genetics",
+      "blood-groups"
+    ],
+    "stem_template": "A parent with blood type {{parent1}} and a parent with blood type {{parent2}} have children. Which blood types are possible in the offspring?",
+    "params": {
+      "parent1": {
+        "type": "choice",
+        "values": [
+          "AB",
+          "A (heterozygous I^A i)",
+          "B (heterozygous I^B i)"
+        ]
+      },
+      "parent2": {
+        "type": "choice",
+        "values": [
+          "O",
+          "B (heterozygous I^B i)",
+          "AB"
+        ]
+      }
+    },
+    "answer_template": "Use genotypes: AB = I^A I^B; O = ii; A (het) = I^A i; B (het) = I^B i. Work out all possible genotypic combinations using a Punnett square, then convert genotypes to blood types.",
+    "distractor_templates": [
+      "Only blood type AB is possible when one parent is AB.",
+      "All four blood types are always possible regardless of parental genotypes.",
+      "Blood type is determined solely by the mother's genotype."
+    ],
+    "options_template": [
+      {
+        "text": "Work out genotypes from I^A, I^B, i alleles; AB parents contribute I^A and I^B; O parents contribute only i.",
+        "correct": true
+      },
+      {
+        "text": "Only AB is possible when one parent is AB.",
+        "correct": false
+      },
+      {
+        "text": "All four blood types always possible regardless of parents.",
+        "correct": false
+      },
+      {
+        "text": "Blood type is determined solely by the mother's genotype.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for correct genotypes of each parent; 1 mark for Punnett square; 1 mark for correct offspring phenotypes.",
+    "hints": [
+      "I^A and I^B are codominant; i is recessive to both.",
+      "Blood type AB has genotype I^A I^B; O is ii."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "bio_D4_mcq_001",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Natural Selection — Adaptation",
+    "tags": [
+      "natural-selection",
+      "evolution",
+      "adaptation"
+    ],
+    "stem_template": "In a population of {{organism}}, individuals with {{trait}} survive and reproduce more successfully in {{environment}}. Over generations, the frequency of this trait increases. This process is known as:",
+    "params": {
+      "organism": {
+        "type": "choice",
+        "values": [
+          "moths",
+          "bacteria",
+          "peppered moths",
+          "giraffes"
+        ]
+      },
+      "trait": {
+        "type": "choice",
+        "values": [
+          "dark colouration",
+          "antibiotic resistance",
+          "longer necks",
+          "thicker fur"
+        ]
+      },
+      "environment": {
+        "type": "choice",
+        "values": [
+          "soot-polluted forests",
+          "antibiotic-treated environments",
+          "environments with tall trees",
+          "cold climates"
+        ]
+      }
+    },
+    "answer_template": "Natural selection — heritable variation exists; individuals with favourable traits have greater reproductive fitness in {{environment}}; these alleles increase in frequency over generations.",
+    "distractor_templates": [
+      "Lamarckian inheritance — organisms develop the trait during their lifetime and pass it to offspring.",
+      "Genetic drift — random changes in allele frequency due to chance events.",
+      "Mutation — new traits arise spontaneously and immediately spread through the population."
+    ],
+    "options_template": [
+      {
+        "text": "Natural selection — heritable variation; favourable traits increase reproductive fitness; allele frequency changes over generations.",
+        "correct": true
+      },
+      {
+        "text": "Lamarckian inheritance — traits developed in lifetime are passed on.",
+        "correct": false
+      },
+      {
+        "text": "Genetic drift — random allele frequency changes.",
+        "correct": false
+      },
+      {
+        "text": "Mutation — new traits spontaneously spread immediately.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for natural selection + heritable variation + differential reproductive success.",
+    "hints": [
+      "Natural selection requires: variation, heritability, differential survival/reproduction.",
+      "Lamarck's theory (acquired characteristics) is not accepted."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_D4_mcq_002",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Speciation — Allopatric vs Sympatric",
+    "tags": [
+      "speciation",
+      "evolution",
+      "natural-selection"
+    ],
+    "stem_template": "A population of birds is separated by a newly formed mountain range for thousands of years. The two isolated populations evolve different beak morphologies and can no longer interbreed when the barrier is removed. This is an example of:",
+    "params": {},
+    "answer_template": "Allopatric speciation — geographic isolation prevents gene flow; populations diverge through natural selection and genetic drift; reproductive isolation develops.",
+    "distractor_templates": [
+      "Sympatric speciation — populations diverge without geographic isolation.",
+      "Convergent evolution — unrelated species develop similar traits in the same environment.",
+      "Adaptive radiation — a single ancestor rapidly diversifies into many species in a new environment."
+    ],
+    "options_template": [
+      {
+        "text": "Allopatric speciation — geographic isolation → divergence → reproductive isolation.",
+        "correct": true
+      },
+      {
+        "text": "Sympatric speciation — divergence without geographic isolation.",
+        "correct": false
+      },
+      {
+        "text": "Convergent evolution — unrelated species develop similar traits.",
+        "correct": false
+      },
+      {
+        "text": "Adaptive radiation — single ancestor diversifies rapidly.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for allopatric speciation + geographic isolation + reproductive isolation.",
+    "hints": [
+      "Allopatric = different country/place; geographic barrier.",
+      "Sympatric = same place; no physical barrier."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "bio_D4_worked_001",
+    "subject": "biology",
+    "topic": "D",
+    "subtopic": "D.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Evidence for Evolution",
+    "tags": [
+      "evolution",
+      "evidence-for-evolution",
+      "natural-selection"
+    ],
+    "stem_template": "Evaluate {{evidence_type}} as evidence for evolution. Include specific examples and discuss any limitations of this evidence.",
+    "params": {
+      "evidence_type": {
+        "type": "choice",
+        "values": [
+          "the fossil record",
+          "comparative anatomy (homologous structures)",
+          "molecular phylogenetics (DNA/protein sequence comparisons)",
+          "biogeography"
+        ]
+      }
+    },
+    "answer_template": "Fossil record: shows progressive changes in organisms over geological time (e.g. horse evolution); limitation: gaps in the record due to rare fossilisation conditions. Homologous structures: pentadactyl limb in mammals shows common ancestry despite different functions; limitation: does not directly show mechanisms. Molecular phylogenetics: closely related species share more DNA/protein sequences (e.g. human and chimp share ~98% DNA); very powerful quantitative evidence; limitation: convergent molecular evolution can mislead. Biogeography: species distribution explained by continental drift and evolution from common ancestors; limitation: dispersal alone could explain some distributions.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award up to 3 marks for specific examples; 2 marks for limitations; 1 mark for linking to evolutionary mechanism. Max 5.",
+    "hints": [
+      "Give specific named examples for full marks.",
+      "A limitation should be a genuine weakness, not just 'it could be wrong'."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "bio_1_1_ms_001",
+    "subject": "biology",
+    "topic": "1",
+    "subtopic": "1.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Cell Organelle Functions",
+    "tags": [
+      "cell biology",
+      "organelles",
+      "functions"
+    ],
+    "stem_template": "Which of the following organelles are found in BOTH plant AND animal cells? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "Mitochondria",
+        "correct": true
+      },
+      {
+        "text": "Cell wall",
+        "correct": false
+      },
+      {
+        "text": "Ribosomes",
+        "correct": true
+      },
+      {
+        "text": "Chloroplasts",
+        "correct": false
+      },
+      {
+        "text": "Endoplasmic reticulum",
+        "correct": true
+      },
+      {
+        "text": "Nucleus",
+        "correct": true
+      }
+    ],
+    "mark_scheme_template": "BOTH: mitochondria, ribosomes, endoplasmic reticulum, nucleus (and Golgi, vacuoles, cell membrane). PLANT ONLY: cell wall, chloroplasts, large central vacuole.",
+    "hints": [
+      "Animal cells lack: cell wall and chloroplasts.",
+      "Both cell types need mitochondria for respiration."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "bio_3_1_ms_001",
+    "subject": "biology",
+    "topic": "3",
+    "subtopic": "3.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Mendelian Genetics",
+    "tags": [
+      "genetics",
+      "alleles",
+      "inheritance"
+    ],
+    "stem_template": "Which of the following statements about dominant and recessive alleles are TRUE? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "A dominant allele is expressed when at least one copy is present",
+        "correct": true
+      },
+      {
+        "text": "Recessive traits can only appear in individuals with two recessive alleles",
+        "correct": true
+      },
+      {
+        "text": "Dominant alleles are always more common in a population",
+        "correct": false
+      },
+      {
+        "text": "A heterozygous individual carries two different alleles",
+        "correct": true
+      },
+      {
+        "text": "Recessive alleles disappear in subsequent generations",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "TRUE: dominant expressed with 1 copy; recessive shown only in aa; heterozygous = two different alleles. FALSE: dominant ≠ more common (e.g. Huntington's is rare but dominant); recessive alleles persist in carriers.",
+    "hints": [
+      "Dominant: one copy is enough. Recessive: needs two copies.",
+      "Heterozygous = Aa, homozygous = AA or aa."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "bio_4_1_ms_001",
+    "subject": "biology",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Ecological Concepts",
+    "tags": [
+      "ecology",
+      "ecosystems",
+      "energy flow"
+    ],
+    "stem_template": "Which of the following statements about energy flow in ecosystems are TRUE? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "Energy flows in one direction through a food chain",
+        "correct": true
+      },
+      {
+        "text": "Approximately 10% of energy is transferred between trophic levels",
+        "correct": true
+      },
+      {
+        "text": "Producers are heterotrophs",
+        "correct": false
+      },
+      {
+        "text": "Decomposers recycle nutrients but not energy",
+        "correct": true
+      },
+      {
+        "text": "A food web shows more complex relationships than a food chain",
+        "correct": true
+      }
+    ],
+    "mark_scheme_template": "TRUE: one-directional energy flow; ~10% transfer efficiency; decomposers recycle matter; food webs more complex. FALSE: producers are autotrophs (make own food via photosynthesis).",
+    "hints": [
+      "Producers = autotrophs (make energy from sun).",
+      "Energy is lost as heat at each trophic level."
+    ],
+    "marks": 2
+  }
+]

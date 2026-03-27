@@ -1,0 +1,374 @@
+{
+  "subjects": {
+    "math_aa": {
+      "name": "Mathematics AA",
+      "full_name": "Mathematics: Analysis and Approaches",
+      "levels": ["SL", "HL"],
+      "topics": {
+        "1": {
+          "name": "Number and Algebra",
+          "subtopics": {
+            "1.1": {"name": "Arithmetic & Geometric Series", "level": "SL/HL", "tags": ["sequences", "series", "sigma-notation", "convergence"]},
+            "1.2": {"name": "Exponents & Logarithms", "level": "SL/HL", "tags": ["exponents", "logarithms", "laws-of-logs"]},
+            "1.3": {"name": "Counting & Binomial Theorem", "level": "SL/HL", "tags": ["permutations", "combinations", "binomial-expansion"]},
+            "1.4": {"name": "Proof by Induction", "level": "HL", "tags": ["proof", "induction", "mathematical-reasoning"]},
+            "1.5": {"name": "Complex Numbers Basics", "level": "HL", "tags": ["complex-numbers", "argand-diagram", "modulus-argument"]},
+            "1.6": {"name": "Polar Form of Complex Numbers", "level": "HL", "tags": ["polar-form", "euler-form", "cis"]},
+            "1.7": {"name": "Powers & Roots (De Moivre)", "level": "HL", "tags": ["de-moivre", "roots-of-unity", "complex-powers"]},
+            "1.8": {"name": "Conjugate Roots of Polynomials", "level": "HL", "tags": ["conjugate-roots", "polynomial-equations", "factor-theorem"]},
+            "1.9": {"name": "Systems of Linear Equations", "level": "SL/HL", "tags": ["systems", "matrices", "row-reduction", "gaussian-elimination"]}
+          }
+        },
+        "2": {
+          "name": "Functions",
+          "subtopics": {
+            "2.1": {"name": "Concept of Function", "level": "SL/HL", "tags": ["domain", "range", "injection", "surjection", "bijection"]},
+            "2.2": {"name": "Graph Features", "level": "SL/HL", "tags": ["asymptotes", "intercepts", "symmetry", "graph-reading"]},
+            "2.3": {"name": "Graph Transformations", "level": "SL/HL", "tags": ["translations", "reflections", "stretches", "composite-transformations"]},
+            "2.4": {"name": "Basic Function Families", "level": "SL/HL", "tags": ["linear", "quadratic", "exponential", "logarithmic", "rational"]},
+            "2.5": {"name": "Polynomial Functions", "level": "SL/HL", "tags": ["factor-theorem", "remainder-theorem", "roots", "polynomial-division"]},
+            "2.6": {"name": "Solving Equations", "level": "SL/HL", "tags": ["algebraic-equations", "graphical-solutions", "discriminant"]},
+            "2.7": {"name": "Inequalities", "level": "SL/HL", "tags": ["linear-inequalities", "quadratic-inequalities", "rational-inequalities"]}
+          }
+        },
+        "3": {
+          "name": "Geometry and Trigonometry",
+          "subtopics": {
+            "3.1": {"name": "Radian Measure, Arc & Sector", "level": "SL/HL", "tags": ["radians", "arc-length", "sector-area"]},
+            "3.2": {"name": "Unit Circle & Basic Identities", "level": "SL/HL", "tags": ["unit-circle", "trig-identities", "pythagorean-identity"]},
+            "3.3": {"name": "Compound & Double Angles", "level": "HL", "tags": ["compound-angle", "double-angle", "half-angle"]},
+            "3.4": {"name": "Sinusoidal Models", "level": "SL/HL", "tags": ["amplitude", "period", "phase-shift", "sinusoidal-modeling"]},
+            "3.5": {"name": "Inverse Trig Functions", "level": "SL/HL", "tags": ["arcsin", "arccos", "arctan", "restricted-domains"]},
+            "3.6": {"name": "Solving Trig Equations", "level": "SL/HL", "tags": ["trig-equations", "general-solutions", "identities"]},
+            "3.7": {"name": "Triangle Rules & Applications", "level": "SL/HL", "tags": ["sine-rule", "cosine-rule", "area-of-triangle"]}
+          }
+        },
+        "4": {
+          "name": "Vectors",
+          "subtopics": {
+            "4.1": {"name": "Vector Basics", "level": "SL/HL", "tags": ["vectors", "magnitude", "unit-vectors", "position-vectors"]},
+            "4.2": {"name": "Scalar (Dot) Product", "level": "SL/HL", "tags": ["dot-product", "angle-between-vectors", "perpendicularity"]},
+            "4.3": {"name": "Vector Equation of a Line", "level": "SL/HL", "tags": ["vector-lines", "parametric-equations", "direction-vectors"]},
+            "4.4": {"name": "Line Relationships", "level": "HL", "tags": ["parallel-lines", "intersecting-lines", "skew-lines", "shortest-distance"]},
+            "4.5": {"name": "Vector (Cross) Product", "level": "HL", "tags": ["cross-product", "area-parallelogram", "normal-vectors"]},
+            "4.6": {"name": "Planes in 3D", "level": "HL", "tags": ["equation-of-plane", "normal-form", "cartesian-form"]},
+            "4.7": {"name": "Intersections & Angles", "level": "HL", "tags": ["line-plane-intersection", "plane-plane-intersection", "dihedral-angles"]}
+          }
+        },
+        "5": {
+          "name": "Statistics and Probability",
+          "subtopics": {
+            "5.1": {"name": "Data Concepts & Descriptive Stats", "level": "SL/HL", "tags": ["mean", "median", "mode", "standard-deviation", "variance", "quartiles"]},
+            "5.2": {"name": "Basic Probability", "level": "SL/HL", "tags": ["sample-space", "complementary-events", "venn-diagrams"]},
+            "5.3": {"name": "Combined Events", "level": "SL/HL", "tags": ["addition-rule", "multiplication-rule", "mutually-exclusive", "independent"]},
+            "5.4": {"name": "Conditional Probability & Bayes", "level": "SL/HL", "tags": ["conditional-probability", "bayes-theorem", "tree-diagrams"]},
+            "5.5": {"name": "Random Variables & Distributions", "level": "SL/HL", "tags": ["discrete-rv", "expected-value", "variance-of-rv"]},
+            "5.6": {"name": "Binomial & Poisson", "level": "SL/HL", "tags": ["binomial-distribution", "poisson-distribution"]},
+            "5.7": {"name": "Normal Distribution", "level": "SL/HL", "tags": ["normal-distribution", "z-scores", "inverse-normal"]}
+          }
+        },
+        "6": {
+          "name": "Calculus",
+          "subtopics": {
+            "6.1": {"name": "Limits & Derivative Basics", "level": "SL/HL", "tags": ["limits", "first-principles", "derivative-definition"]},
+            "6.2": {"name": "Differentiation Rules", "level": "SL/HL", "tags": ["power-rule", "chain-rule", "product-rule", "quotient-rule"]},
+            "6.3": {"name": "Extrema & Graph Behaviour", "level": "SL/HL", "tags": ["stationary-points", "inflection-points", "optimization"]},
+            "6.4": {"name": "Indefinite Integration Basics", "level": "SL/HL", "tags": ["antiderivatives", "integration-rules", "constant-of-integration"]},
+            "6.5": {"name": "Definite Integrals, Area & Volume", "level": "SL/HL", "tags": ["definite-integrals", "area-under-curve", "volume-of-revolution"]},
+            "6.6": {"name": "Kinematics & Total Distance", "level": "SL/HL", "tags": ["displacement", "velocity", "acceleration", "total-distance"]},
+            "6.7": {"name": "Integration Techniques", "level": "HL", "tags": ["integration-by-parts", "substitution", "partial-fractions"]}
+          }
+        },
+        "7": {
+          "name": "Statistics & Probability (HL Extension)",
+          "subtopics": {
+            "7.1": {"name": "CDFs, Geometric, Neg Binomial, PGFs", "level": "HL", "tags": ["cdf", "geometric-distribution", "negative-binomial", "pgf"]},
+            "7.2": {"name": "Linear Combinations of RVs", "level": "HL", "tags": ["linear-combinations", "expectation-algebra", "variance-algebra"]},
+            "7.3": {"name": "Unbiased Estimators", "level": "HL", "tags": ["unbiased-estimators", "sampling-distributions"]},
+            "7.4": {"name": "Normal Combinations & CLT", "level": "HL", "tags": ["central-limit-theorem", "normal-combinations"]},
+            "7.5": {"name": "Confidence Intervals (Mean)", "level": "HL", "tags": ["confidence-intervals", "margin-of-error"]},
+            "7.6": {"name": "Hypothesis Testing (Mean)", "level": "HL", "tags": ["hypothesis-testing", "p-values", "significance-levels"]},
+            "7.7": {"name": "Bivariate Correlation & Regression", "level": "HL", "tags": ["correlation", "regression", "least-squares"]}
+          }
+        },
+        "8": {
+          "name": "Sets, Relations & Groups (HL Option)",
+          "subtopics": {
+            "8.1": {"name": "Set Operations & Laws", "level": "HL", "tags": ["sets", "union", "intersection", "complement", "de-morgan"]},
+            "8.2": {"name": "Relations & Equivalence", "level": "HL", "tags": ["relations", "equivalence-relations", "equivalence-classes"]},
+            "8.3": {"name": "Injections, Surjections, Bijections", "level": "HL", "tags": ["injective", "surjective", "bijective", "cardinality"]},
+            "8.4": {"name": "Binary Operations", "level": "HL", "tags": ["binary-operations", "closure", "operation-tables"]},
+            "8.5": {"name": "Operation Properties", "level": "HL", "tags": ["associativity", "commutativity", "distributivity"]},
+            "8.6": {"name": "Identity & Inverses", "level": "HL", "tags": ["identity-element", "inverse-element"]},
+            "8.7": {"name": "Definition of a Group", "level": "HL", "tags": ["group-axioms", "group-definition"]},
+            "8.8": {"name": "Group Examples", "level": "HL", "tags": ["cyclic-groups", "dihedral-groups", "symmetric-groups"]},
+            "8.9": {"name": "Cyclic Groups & Generators", "level": "HL", "tags": ["cyclic-groups", "generators", "order-of-element"]},
+            "8.10": {"name": "Permutations & Cycles", "level": "HL", "tags": ["permutations", "cycle-notation", "transpositions"]},
+            "8.11": {"name": "Subgroups, Cosets & Lagrange", "level": "HL", "tags": ["subgroups", "cosets", "lagrange-theorem"]},
+            "8.12": {"name": "Homomorphisms & Isomorphisms", "level": "HL", "tags": ["homomorphism", "isomorphism", "kernel"]}
+          }
+        },
+        "9": {
+          "name": "Calculus (HL Extension)",
+          "subtopics": {
+            "9.1": {"name": "Infinite Sequences", "level": "HL", "tags": ["sequences", "convergence", "squeeze-theorem"]},
+            "9.2": {"name": "Infinite Series & Tests", "level": "HL", "tags": ["convergence-tests", "ratio-test", "comparison-test", "integral-test"]},
+            "9.3": {"name": "Continuity & Differentiability", "level": "HL", "tags": ["continuity", "differentiability", "IVT", "MVT"]},
+            "9.4": {"name": "Riemann Sums & Improper Integrals", "level": "HL", "tags": ["riemann-sums", "improper-integrals", "convergence"]},
+            "9.5": {"name": "First-Order Differential Equations", "level": "HL", "tags": ["separable-DE", "linear-DE", "integrating-factor", "euler-method"]},
+            "9.6": {"name": "Taylor & Maclaurin Series", "level": "HL", "tags": ["taylor-series", "maclaurin-series", "radius-of-convergence"]},
+            "9.7": {"name": "Limit Evaluation (l'Hopital & Series)", "level": "HL", "tags": ["lhopital", "indeterminate-forms"]}
+          }
+        },
+        "10": {
+          "name": "Discrete Mathematics (HL Option)",
+          "subtopics": {
+            "10.1": {"name": "Strong Induction & Pigeonhole", "level": "HL", "tags": ["strong-induction", "pigeonhole-principle"]},
+            "10.2": {"name": "Divisibility, GCD, LCM & Primes", "level": "HL", "tags": ["divisibility", "gcd", "lcm", "prime-factorization", "euclidean-algorithm"]},
+            "10.3": {"name": "Linear Diophantine Equations", "level": "HL", "tags": ["diophantine-equations", "integer-solutions"]},
+            "10.4": {"name": "Modular Arithmetic & CRT", "level": "HL", "tags": ["modular-arithmetic", "congruences", "chinese-remainder-theorem"]},
+            "10.5": {"name": "Integer Bases", "level": "HL", "tags": ["base-conversion", "binary", "hexadecimal"]},
+            "10.6": {"name": "Fermat's Little Theorem", "level": "HL", "tags": ["fermat-little-theorem", "euler-theorem"]},
+            "10.7": {"name": "Graph Theory Basics", "level": "HL", "tags": ["graphs", "vertices", "edges", "degree", "adjacency"]},
+            "10.8": {"name": "Walks, Trails & Cycles", "level": "HL", "tags": ["walks", "trails", "paths", "euler-circuits", "hamiltonian"]},
+            "10.9": {"name": "Graph Algorithms (Kruskal & Dijkstra)", "level": "HL", "tags": ["kruskal", "dijkstra", "minimum-spanning-tree", "shortest-path"]},
+            "10.10": {"name": "Chinese Postman & TSP", "level": "HL", "tags": ["chinese-postman", "travelling-salesman", "optimization"]},
+            "10.11": {"name": "Recurrence Relations", "level": "HL", "tags": ["recurrence-relations", "characteristic-equation", "homogeneous", "particular-solution"]}
+          }
+        }
+      }
+    },
+    "math_ai": {
+      "name": "Mathematics AI",
+      "full_name": "Mathematics: Applications and Interpretation",
+      "levels": ["SL", "HL"],
+      "note": "Shares many subtopics with Math AA. Uses same template system with different emphasis.",
+      "shared_with_aa": ["1.1","1.2","1.3","1.9","2.1","2.2","2.3","2.4","2.5","2.6","2.7","3.1","3.2","3.4","3.5","3.6","3.7","4.1","4.2","4.3","5.1","5.2","5.3","5.4","5.5","5.6","5.7","6.1","6.2","6.3","6.4","6.5","6.6","7.1","7.2","7.3","7.4","7.5","7.6","7.7"]
+    },
+    "physics": {
+      "name": "Physics",
+      "full_name": "IB Physics",
+      "levels": ["SL", "HL"],
+      "topics": {
+        "A": {"name": "Space, Time and Motion", "subtopics": {
+          "A.1": {"name": "Kinematics", "level": "SL/HL", "tags": ["displacement","velocity","acceleration","suvat","projectile-motion"]},
+          "A.2": {"name": "Forces and Momentum", "level": "SL/HL", "tags": ["newtons-laws","free-body-diagrams","momentum","impulse"]},
+          "A.3": {"name": "Work, Energy and Power", "level": "SL/HL", "tags": ["work","kinetic-energy","potential-energy","power","efficiency"]},
+          "A.4": {"name": "Rigid Body Mechanics", "level": "HL", "tags": ["torque","rotational-motion","moment-of-inertia","angular-momentum"]},
+          "A.5": {"name": "Galilean and Special Relativity", "level": "HL", "tags": ["reference-frames","time-dilation","length-contraction","lorentz"]}
+        }},
+        "B": {"name": "The Particulate Nature of Matter", "subtopics": {
+          "B.1": {"name": "Thermal Energy Transfers", "level": "SL/HL", "tags": ["specific-heat","latent-heat","conduction","convection","radiation"]},
+          "B.2": {"name": "Greenhouse Effect", "level": "SL/HL", "tags": ["albedo","emissivity","greenhouse-gases","energy-balance"]},
+          "B.3": {"name": "Gas Laws", "level": "SL/HL", "tags": ["ideal-gas-law","kinetic-theory","pressure","temperature"]},
+          "B.4": {"name": "Thermodynamics", "level": "HL", "tags": ["first-law","entropy","second-law","heat-engines","carnot"]},
+          "B.5": {"name": "Current and Circuits", "level": "SL/HL", "tags": ["current","voltage","resistance","ohms-law","kirchhoff","circuits"]}
+        }},
+        "C": {"name": "Wave Behaviour", "subtopics": {
+          "C.1": {"name": "Simple Harmonic Motion", "level": "SL/HL", "tags": ["shm","pendulum","spring","oscillations"]},
+          "C.2": {"name": "Wave Model", "level": "SL/HL", "tags": ["transverse","longitudinal","wavelength","frequency","wave-speed"]},
+          "C.3": {"name": "Wave Phenomena", "level": "SL/HL", "tags": ["reflection","refraction","diffraction","interference","standing-waves"]},
+          "C.4": {"name": "Standing Waves and Resonance", "level": "HL", "tags": ["standing-waves","harmonics","resonance"]},
+          "C.5": {"name": "Doppler Effect", "level": "HL", "tags": ["doppler","moving-source","moving-observer"]}
+        }},
+        "D": {"name": "Fields", "subtopics": {
+          "D.1": {"name": "Gravitational Fields", "level": "SL/HL", "tags": ["gravitational-field","newtons-law-gravity","orbital-motion"]},
+          "D.2": {"name": "Electric and Magnetic Fields", "level": "SL/HL", "tags": ["electric-field","coulombs-law","magnetic-field","lorentz-force"]},
+          "D.3": {"name": "Motion in EM Fields", "level": "HL", "tags": ["charged-particles","mass-spectrometer","cyclotron"]},
+          "D.4": {"name": "Induction", "level": "HL", "tags": ["faraday","lenz","emf","flux","generators"]}
+        }},
+        "E": {"name": "Nuclear and Quantum Physics", "subtopics": {
+          "E.1": {"name": "Structure of the Atom", "level": "SL/HL", "tags": ["atomic-models","emission-spectra","energy-levels"]},
+          "E.2": {"name": "Quantum Physics", "level": "SL/HL", "tags": ["photoelectric","wave-particle-duality","de-broglie"]},
+          "E.3": {"name": "Radioactive Decay", "level": "SL/HL", "tags": ["alpha","beta","gamma","half-life","decay-equations"]},
+          "E.4": {"name": "Fission", "level": "SL/HL", "tags": ["fission","chain-reaction","nuclear-reactor","mass-defect"]},
+          "E.5": {"name": "Fusion and Stars", "level": "HL", "tags": ["fusion","stellar-nucleosynthesis","HR-diagram"]}
+        }}
+      }
+    },
+    "chemistry": {
+      "name": "Chemistry",
+      "full_name": "IB Chemistry (2025 Syllabus)",
+      "levels": ["SL", "HL"],
+      "topics": {
+        "S1": {"name": "Structure 1: Models of the Particulate Nature of Matter", "subtopics": {
+          "S1.1": {"name": "Introduction to the Particulate Nature of Matter", "level": "SL/HL", "tags": ["atoms","elements","compounds","mixtures"]},
+          "S1.2": {"name": "The Nuclear Atom", "level": "SL/HL", "tags": ["protons","neutrons","electrons","isotopes","mass-spectrometry"]},
+          "S1.3": {"name": "Electron Configurations", "level": "SL/HL", "tags": ["electron-config","orbitals","aufbau","hund","pauli"]},
+          "S1.4": {"name": "Counting Particles by Mass", "level": "SL/HL", "tags": ["moles","molar-mass","avogadro","empirical-formula"]},
+          "S1.5": {"name": "Ideal Gases", "level": "SL/HL", "tags": ["ideal-gas-law","molar-volume","gas-calculations"]}
+        }},
+        "S2": {"name": "Structure 2: Models of Bonding and Structure", "subtopics": {
+          "S2.1": {"name": "The Ionic Model", "level": "SL/HL", "tags": ["ionic-bonding","lattice-structure","properties-of-ionic"]},
+          "S2.2": {"name": "The Covalent Model", "level": "SL/HL", "tags": ["covalent-bonding","lewis-structures","VSEPR","polarity"]},
+          "S2.3": {"name": "The Metallic Model", "level": "SL/HL", "tags": ["metallic-bonding","delocalized-electrons","alloys"]},
+          "S2.4": {"name": "From Molecules to Materials", "level": "SL/HL", "tags": ["intermolecular-forces","hydrogen-bonding","van-der-waals"]}
+        }},
+        "S3": {"name": "Structure 3: Classification of Matter", "subtopics": {
+          "S3.1": {"name": "The Periodic Table", "level": "SL/HL", "tags": ["periodic-trends","groups","periods","electronegativity","ionization-energy"]},
+          "S3.2": {"name": "Functional Groups & Nomenclature", "level": "SL/HL", "tags": ["organic-nomenclature","functional-groups","IUPAC","isomers"]}
+        }},
+        "R1": {"name": "Reactivity 1: What Drives Chemical Reactions?", "subtopics": {
+          "R1.1": {"name": "Measuring Enthalpy Changes", "level": "SL/HL", "tags": ["enthalpy","calorimetry","hess-law","bond-enthalpy"]},
+          "R1.2": {"name": "Energy Cycles in Reactions", "level": "HL", "tags": ["born-haber","lattice-enthalpy","enthalpy-of-solution"]},
+          "R1.3": {"name": "Energy from Fuels", "level": "SL/HL", "tags": ["combustion","enthalpy-of-combustion","fuel-cells"]},
+          "R1.4": {"name": "Entropy and Spontaneity", "level": "SL/HL", "tags": ["entropy","gibbs-free-energy","spontaneity"]}
+        }},
+        "R2": {"name": "Reactivity 2: How Much, How Fast, and How Far?", "subtopics": {
+          "R2.1": {"name": "How Much? The Amount of Chemical Change", "level": "SL/HL", "tags": ["stoichiometry","limiting-reagent","percentage-yield","atom-economy"]},
+          "R2.2": {"name": "How Fast? The Rate of Chemical Change", "level": "SL/HL", "tags": ["rate-of-reaction","collision-theory","activation-energy","catalysts"]},
+          "R2.3": {"name": "How Far? The Extent of Chemical Change", "level": "SL/HL", "tags": ["equilibrium","le-chatelier","equilibrium-constant","Kc","Kp"]},
+          "R2.4": {"name": "Rate Expressions and Mechanisms", "level": "HL", "tags": ["rate-expression","order-of-reaction","rate-constant","mechanisms"]}
+        }},
+        "R3": {"name": "Reactivity 3: What Are the Mechanisms of Chemical Change?", "subtopics": {
+          "R3.1": {"name": "Proton Transfer Reactions", "level": "SL/HL", "tags": ["acids","bases","pH","Ka","buffers","titrations"]},
+          "R3.2": {"name": "Electron Transfer Reactions", "level": "SL/HL", "tags": ["oxidation","reduction","redox","electrochemistry","electrolysis"]},
+          "R3.3": {"name": "Electron Sharing Reactions", "level": "SL/HL", "tags": ["nucleophilic-substitution","electrophilic-addition","free-radical"]},
+          "R3.4": {"name": "Electron Pair Sharing Reactions", "level": "HL", "tags": ["SN1","SN2","elimination","addition-polymers","condensation-polymers"]}
+        }}
+      }
+    },
+    "biology": {
+      "name": "Biology",
+      "full_name": "IB Biology (2025 Syllabus)",
+      "levels": ["SL", "HL"],
+      "topics": {
+        "A": {"name": "Unity and Diversity", "subtopics": {
+          "A.1": {"name": "Water", "level": "SL/HL", "tags": ["hydrogen-bonding","polarity","solvent-properties","thermal-properties"]},
+          "A.2": {"name": "Nucleic Acids", "level": "SL/HL", "tags": ["DNA","RNA","nucleotides","base-pairing","replication"]},
+          "A.3": {"name": "Origins of Cells", "level": "SL/HL", "tags": ["cell-theory","endosymbiosis","prokaryotes","eukaryotes"]},
+          "A.4": {"name": "Cell Biology", "level": "SL/HL", "tags": ["organelles","membrane-structure","transport","cell-division"]}
+        }},
+        "B": {"name": "Form and Function", "subtopics": {
+          "B.1": {"name": "Carbohydrates and Lipids", "level": "SL/HL", "tags": ["monosaccharides","polysaccharides","fatty-acids","triglycerides"]},
+          "B.2": {"name": "Proteins", "level": "SL/HL", "tags": ["amino-acids","protein-structure","enzymes","enzyme-kinetics"]},
+          "B.3": {"name": "Cell Specialization", "level": "SL/HL", "tags": ["differentiation","stem-cells","tissues","organs"]},
+          "B.4": {"name": "Gas Exchange", "level": "SL/HL", "tags": ["lungs","ventilation","gas-exchange-surfaces","adaptations"]}
+        }},
+        "C": {"name": "Interaction and Interdependence", "subtopics": {
+          "C.1": {"name": "Enzymes and Metabolism", "level": "SL/HL", "tags": ["enzymes","activation-energy","inhibitors","metabolic-pathways"]},
+          "C.2": {"name": "Cell Respiration", "level": "SL/HL", "tags": ["glycolysis","krebs","electron-transport","ATP"]},
+          "C.3": {"name": "Photosynthesis", "level": "SL/HL", "tags": ["light-reactions","calvin-cycle","photosystems","chloroplast"]},
+          "C.4": {"name": "Ecology", "level": "SL/HL", "tags": ["ecosystems","food-chains","energy-flow","nutrient-cycling"]}
+        }},
+        "D": {"name": "Continuity and Change", "subtopics": {
+          "D.1": {"name": "Cell and Nuclear Division", "level": "SL/HL", "tags": ["mitosis","meiosis","chromosome-behavior","karyotypes"]},
+          "D.2": {"name": "Gene Expression", "level": "SL/HL", "tags": ["transcription","translation","mutations","gene-regulation"]},
+          "D.3": {"name": "Inheritance", "level": "SL/HL", "tags": ["mendelian-genetics","punnett-squares","sex-linkage","codominance"]},
+          "D.4": {"name": "Natural Selection", "level": "SL/HL", "tags": ["evolution","natural-selection","speciation","evidence-for-evolution"]}
+        }}
+      }
+    },
+    "economics": {
+      "name": "Economics",
+      "full_name": "IB Economics",
+      "levels": ["SL", "HL"],
+      "topics": {
+        "1": {"name": "Introduction to Economics", "subtopics": {
+          "1.1": {"name": "What Is Economics?", "level": "SL/HL", "tags": ["scarcity","opportunity-cost","factors-of-production"]},
+          "1.2": {"name": "How Do Economists Approach the World?", "level": "SL/HL", "tags": ["economic-models","positive-normative","ceteris-paribus"]}
+        }},
+        "2": {"name": "Microeconomics", "subtopics": {
+          "2.1": {"name": "Demand", "level": "SL/HL", "tags": ["demand-curve","determinants-of-demand","movement-vs-shift"]},
+          "2.2": {"name": "Supply", "level": "SL/HL", "tags": ["supply-curve","determinants-of-supply"]},
+          "2.3": {"name": "Competitive Market Equilibrium", "level": "SL/HL", "tags": ["equilibrium","surplus","shortage"]},
+          "2.4": {"name": "Critique of Maximizing Behaviour", "level": "SL/HL", "tags": ["bounded-rationality","nudge-theory","bias"]},
+          "2.5": {"name": "Elasticity of Demand", "level": "SL/HL", "tags": ["PED","YED","XED","elastic","inelastic"]},
+          "2.6": {"name": "Elasticity of Supply", "level": "SL/HL", "tags": ["PES","determinants-of-PES"]},
+          "2.7": {"name": "The Role of Government", "level": "SL/HL", "tags": ["price-controls","taxes","subsidies","externalities"]},
+          "2.8": {"name": "Market Failure", "level": "SL/HL", "tags": ["externalities","public-goods","common-resources","asymmetric-info"]}
+        }},
+        "3": {"name": "Macroeconomics", "subtopics": {
+          "3.1": {"name": "Measuring Economic Activity", "level": "SL/HL", "tags": ["GDP","GNI","real-vs-nominal"]},
+          "3.2": {"name": "Variations in Economic Activity", "level": "SL/HL", "tags": ["business-cycle","recession","inflation","unemployment"]},
+          "3.3": {"name": "Aggregate Demand and Supply", "level": "SL/HL", "tags": ["AD-AS-model","multiplier","keynesian","monetarist"]},
+          "3.4": {"name": "Macroeconomic Objectives", "level": "SL/HL", "tags": ["low-inflation","full-employment","growth","equity"]},
+          "3.5": {"name": "Fiscal Policy", "level": "SL/HL", "tags": ["government-spending","taxation","budget-deficit"]},
+          "3.6": {"name": "Monetary Policy", "level": "SL/HL", "tags": ["interest-rates","money-supply","central-bank"]},
+          "3.7": {"name": "Supply-Side Policies", "level": "SL/HL", "tags": ["supply-side","deregulation","privatization"]}
+        }},
+        "4": {"name": "The Global Economy", "subtopics": {
+          "4.1": {"name": "Benefits of International Trade", "level": "SL/HL", "tags": ["comparative-advantage","trade-gains","specialization"]},
+          "4.2": {"name": "Types of Trade Protection", "level": "SL/HL", "tags": ["tariffs","quotas","subsidies","administrative-barriers"]},
+          "4.3": {"name": "Economic Integration", "level": "SL/HL", "tags": ["trading-blocs","free-trade-areas","customs-unions","EU"]},
+          "4.4": {"name": "Exchange Rates", "level": "SL/HL", "tags": ["fixed","floating","managed","exchange-rate-determination"]},
+          "4.5": {"name": "Balance of Payments", "level": "SL/HL", "tags": ["current-account","capital-account","financial-account"]},
+          "4.6": {"name": "Sustainable Development", "level": "SL/HL", "tags": ["sustainability","poverty","inequality","HDI"]}
+        }}
+      }
+    },
+    "business": {
+      "name": "Business Management",
+      "full_name": "IB Business Management",
+      "levels": ["SL", "HL"],
+      "topics": {
+        "1": {"name": "Introduction to Business Management", "subtopics": {
+          "1.1": {"name": "What Is a Business?", "level": "SL/HL", "tags": ["business-sectors","inputs-outputs","value-added"]},
+          "1.2": {"name": "Types of Business Entities", "level": "SL/HL", "tags": ["sole-trader","partnership","corporation","cooperative"]},
+          "1.3": {"name": "Business Objectives", "level": "SL/HL", "tags": ["profit","growth","social-objectives","ethical"]},
+          "1.4": {"name": "Stakeholders", "level": "SL/HL", "tags": ["stakeholder-conflict","internal","external"]},
+          "1.5": {"name": "Growth and Evolution", "level": "SL/HL", "tags": ["organic-growth","mergers","acquisitions","economies-of-scale"]},
+          "1.6": {"name": "Multinational Companies", "level": "SL/HL", "tags": ["MNCs","globalization","FDI"]}
+        }},
+        "2": {"name": "Human Resource Management", "subtopics": {
+          "2.1": {"name": "Introduction to HRM", "level": "SL/HL", "tags": ["HR-planning","recruitment","appraisal"]},
+          "2.2": {"name": "Organizational Structure", "level": "SL/HL", "tags": ["hierarchy","span-of-control","delegation","centralization"]},
+          "2.3": {"name": "Leadership and Management", "level": "SL/HL", "tags": ["leadership-styles","autocratic","democratic","laissez-faire"]},
+          "2.4": {"name": "Motivation", "level": "SL/HL", "tags": ["maslow","herzberg","taylor","motivation-theory"]}
+        }},
+        "3": {"name": "Finance and Accounts", "subtopics": {
+          "3.1": {"name": "Sources of Finance", "level": "SL/HL", "tags": ["internal-finance","external-finance","equity","debt"]},
+          "3.2": {"name": "Costs and Revenues", "level": "SL/HL", "tags": ["fixed-costs","variable-costs","revenue","break-even"]},
+          "3.3": {"name": "Break-Even Analysis", "level": "SL/HL", "tags": ["break-even-point","margin-of-safety","break-even-chart"]},
+          "3.4": {"name": "Final Accounts", "level": "SL/HL", "tags": ["profit-loss","balance-sheet","depreciation"]},
+          "3.5": {"name": "Profitability and Liquidity Ratios", "level": "HL", "tags": ["gross-profit-margin","net-profit-margin","current-ratio"]},
+          "3.6": {"name": "Efficiency and Gearing Ratios", "level": "HL", "tags": ["stock-turnover","debtor-days","gearing"]},
+          "3.7": {"name": "Cash Flow", "level": "SL/HL", "tags": ["cash-flow-forecast","working-capital"]},
+          "3.8": {"name": "Investment Appraisal", "level": "HL", "tags": ["payback","ARR","NPV","IRR"]}
+        }},
+        "4": {"name": "Marketing", "subtopics": {
+          "4.1": {"name": "The Role of Marketing", "level": "SL/HL", "tags": ["market-orientation","product-orientation","marketing-mix"]},
+          "4.2": {"name": "Marketing Planning", "level": "SL/HL", "tags": ["market-research","SWOT","segmentation","targeting","positioning"]},
+          "4.3": {"name": "Sales Forecasting", "level": "HL", "tags": ["moving-averages","extrapolation","seasonal-variation"]},
+          "4.4": {"name": "The 4 Ps", "level": "SL/HL", "tags": ["product","price","place","promotion","PLC"]},
+          "4.5": {"name": "The Extended Marketing Mix", "level": "SL/HL", "tags": ["people","process","physical-evidence","7Ps"]}
+        }},
+        "5": {"name": "Operations Management", "subtopics": {
+          "5.1": {"name": "The Role of Operations", "level": "SL/HL", "tags": ["production-methods","job","batch","flow"]},
+          "5.2": {"name": "Production Methods", "level": "SL/HL", "tags": ["lean-production","JIT","kaizen","TQM"]},
+          "5.3": {"name": "Lean Production and QM", "level": "SL/HL", "tags": ["quality-control","quality-assurance","benchmarking"]},
+          "5.4": {"name": "Location", "level": "SL/HL", "tags": ["location-decisions","push-pull-factors"]},
+          "5.5": {"name": "Break-Even Analysis (Operations)", "level": "SL/HL", "tags": ["capacity-utilization","outsourcing","offshoring"]}
+        }}
+      }
+    },
+    "computer_science": {
+      "name": "Computer Science",
+      "full_name": "IB Computer Science",
+      "levels": ["SL", "HL"],
+      "topics": {
+        "1": {"name": "System Fundamentals", "subtopics": {
+          "1.1": {"name": "Systems in Organizations", "level": "SL/HL", "tags": ["system-planning","change-management"]},
+          "1.2": {"name": "System Design Basics", "level": "SL/HL", "tags": ["inputs","outputs","processes","feedback"]}
+        }},
+        "2": {"name": "Computer Organization", "subtopics": {
+          "2.1": {"name": "Computer Architecture", "level": "SL/HL", "tags": ["CPU","ALU","control-unit","registers","buses"]},
+          "2.2": {"name": "Secondary Memory", "level": "SL/HL", "tags": ["HDD","SSD","optical","RAM","ROM"]}
+        }},
+        "3": {"name": "Networks", "subtopics": {
+          "3.1": {"name": "Network Fundamentals", "level": "SL/HL", "tags": ["LAN","WAN","protocols","TCP-IP","OSI"]},
+          "3.2": {"name": "Data Transmission", "level": "SL/HL", "tags": ["packet-switching","bandwidth","encryption"]}
+        }},
+        "4": {"name": "Computational Thinking & Problem Solving", "subtopics": {
+          "4.1": {"name": "General Principles", "level": "SL/HL", "tags": ["abstraction","decomposition","pattern-recognition","algorithms"]},
+          "4.2": {"name": "Connecting Computational Thinking and Program Design", "level": "SL/HL", "tags": ["flowcharts","pseudocode","trace-tables"]},
+          "4.3": {"name": "Introduction to Programming", "level": "SL/HL", "tags": ["variables","loops","conditionals","arrays","functions"]}
+        }},
+        "5": {"name": "Abstract Data Structures (HL)", "subtopics": {
+          "5.1": {"name": "Abstract Data Structures", "level": "HL", "tags": ["stacks","queues","linked-lists","trees","binary-trees"]},
+          "5.2": {"name": "Recursion", "level": "HL", "tags": ["recursive-thinking","base-case","call-stack"]}
+        }}
+      }
+    }
+  }
+}

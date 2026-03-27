@@ -1,0 +1,119 @@
+# Lesson Quality Report
+
+- Total lessons in plans: 206
+- Completed files: 206
+- Missing files: 0
+- Needs review: 133
+- Warnings: 37
+- Average score: 75.58
+
+## By Subject
+- biology: 16/16 complete, score 96.56, reviews 5, warnings 1
+- business: 28/28 complete, score 95.89, reviews 14, warnings 4
+- chemistry: 23/23 complete, score 91.52, reviews 8, warnings 11
+- computer_science: 11/11 complete, score 95.91, reviews 5, warnings 1
+- economics: 23/23 complete, score 95.65, reviews 17, warnings 3
+- math_aa: 81/81 complete, score 60.8, reviews 60, warnings 17
+- physics: 24/24 complete, score 43.96, reviews 24, warnings 0
+
+## Critical Items (Needs Review)
+- biology B.B.1 Carbohydrates and Lipids: score 100.0, issues=foreign_curriculum_reference
+- biology B.B.2 Proteins: score 90.0, issues=foreign_curriculum_reference
+- biology C.C.3 Photosynthesis: score 100.0, issues=foreign_curriculum_reference
+- biology D.D.1 Cell and Nuclear Division: score 100.0, issues=foreign_curriculum_reference
+- biology D.D.4 Natural Selection: score 100.0, issues=foreign_curriculum_reference
+- business 1.1.3 Business Objectives: score 95.0, issues=foreign_curriculum_reference
+- business 1.1.4 Stakeholders: score 100.0, issues=foreign_curriculum_reference
+- business 1.1.5 Growth and Evolution: score 100.0, issues=foreign_curriculum_reference
+- business 2.2.2 Organizational Structure: score 100.0, issues=foreign_curriculum_reference
+- business 2.2.3 Leadership and Management: score 90.0, issues=foreign_curriculum_reference, low_tag_coverage
+- business 2.2.4 Motivation: score 95.0, issues=foreign_curriculum_reference, low_subject_term_hits
+- business 3.3.2 Costs and Revenues: score 100.0, issues=foreign_curriculum_reference
+- business 3.3.3 Break-Even Analysis: score 90.0, issues=foreign_curriculum_reference, low_tag_coverage
+- business 3.3.5 Profitability and Liquidity Ratios: score 100.0, issues=foreign_curriculum_reference
+- business 3.3.7 Cash Flow: score 100.0, issues=foreign_curriculum_reference
+- business 4.4.2 Marketing Planning: score 100.0, issues=foreign_curriculum_reference
+- business 4.4.3 Sales Forecasting: score 100.0, issues=foreign_curriculum_reference
+- business 5.5.1 The Role of Operations: score 100.0, issues=foreign_curriculum_reference
+- business 5.5.4 Location: score 95.0, issues=foreign_curriculum_reference
+- chemistry S1.S1.1 Introduction to the Particulate Nature of Matter: score 100.0, issues=foreign_curriculum_reference
+- chemistry S1.S1.3 Electron Configurations: score 95.0, issues=foreign_curriculum_reference, low_subject_term_hits
+- chemistry S1.S1.4 Counting Particles by Mass: score 85.0, issues=foreign_curriculum_reference, missing_math_signal
+- chemistry S2.S2.3 The Metallic Model: score 90.0, issues=foreign_curriculum_reference, low_subject_term_hits, missing_math_signal
+- chemistry S2.S2.4 From Molecules to Materials: score 100.0, issues=foreign_curriculum_reference
+- chemistry R2.R2.1 How Much? The Amount of Chemical Change: score 100.0, issues=foreign_curriculum_reference
+- chemistry R2.R2.2 How Fast? The Rate of Chemical Change: score 100.0, issues=foreign_curriculum_reference
+- chemistry R3.R3.4 Electron Pair Sharing Reactions: score 90.0, issues=foreign_curriculum_reference, low_tag_coverage
+- computer_science 2.2.1 Computer Architecture: score 100.0, issues=foreign_curriculum_reference
+- computer_science 2.2.2 Secondary Memory: score 100.0, issues=foreign_curriculum_reference
+- computer_science 3.3.1 Network Fundamentals: score 100.0, issues=foreign_curriculum_reference
+- computer_science 3.3.2 Data Transmission: score 90.0, issues=foreign_curriculum_reference, low_tag_coverage
+- computer_science 5.5.1 Abstract Data Structures: score 100.0, issues=foreign_curriculum_reference
+- economics 1.1.1 What Is Economics?: score 100.0, issues=foreign_curriculum_reference
+- economics 1.1.2 How Do Economists Approach the World?: score 95.0, issues=foreign_curriculum_reference
+- economics 2.2.1 Demand: score 100.0, issues=foreign_curriculum_reference
+- economics 2.2.2 Supply: score 100.0, issues=foreign_curriculum_reference
+- economics 2.2.3 Competitive Market Equilibrium: score 100.0, issues=foreign_curriculum_reference
+- economics 2.2.4 Critique of Maximizing Behaviour: score 100.0, issues=foreign_curriculum_reference
+- economics 2.2.8 Market Failure: score 95.0, issues=foreign_curriculum_reference, missing_math_signal
+- economics 3.3.1 Measuring Economic Activity: score 90.0, issues=foreign_curriculum_reference
+- economics 3.3.2 Variations in Economic Activity: score 100.0, issues=foreign_curriculum_reference
+- economics 3.3.4 Macroeconomic Objectives: score 95.0, issues=foreign_curriculum_reference, missing_math_signal
+- economics 3.3.5 Fiscal Policy: score 100.0, issues=foreign_curriculum_reference
+- economics 3.3.6 Monetary Policy: score 85.0, issues=foreign_curriculum_reference, missing_math_signal
+- economics 4.4.1 Benefits of International Trade: score 100.0, issues=foreign_curriculum_reference
+- economics 4.4.2 Types of Trade Protection: score 100.0, issues=foreign_curriculum_reference
+- economics 4.4.3 Economic Integration: score 100.0, issues=foreign_curriculum_reference
+- economics 4.4.4 Exchange Rates: score 90.0, issues=foreign_curriculum_reference
+- economics 4.4.6 Sustainable Development: score 95.0, issues=foreign_curriculum_reference, missing_math_signal
+- math_aa 1.1.2 Exponents & Logarithms: score 100.0, issues=foreign_curriculum_reference
+- math_aa 1.1.4 Proof by Induction: score 90.0, issues=foreign_curriculum_reference, low_subject_term_hits, missing_math_signal
+- math_aa 1.1.6 Polar Form of Complex Numbers: score 85.0, issues=foreign_curriculum_reference, low_subject_term_hits, missing_math_signal
+- math_aa 2.2.3 Graph Transformations: score 100.0, issues=foreign_curriculum_reference
+- math_aa 2.2.4 Basic Function Families: score 85.0, issues=foreign_curriculum_reference, missing_math_signal
+- math_aa 2.2.6 Solving Equations: score 80.0, issues=foreign_curriculum_reference, low_tag_coverage
+- math_aa 2.2.7 Inequalities: score 95.0, issues=foreign_curriculum_reference
+- math_aa 3.3.4 Sinusoidal Models: score 100.0, issues=foreign_curriculum_reference
+- math_aa 4.4.2 Scalar (Dot) Product: score 75.0, issues=foreign_curriculum_reference, low_subject_term_hits, missing_math_signal
+- math_aa 4.4.3 Vector Equation of a Line: score 90.0, issues=foreign_curriculum_reference, low_subject_term_hits
+- math_aa 4.4.7 Intersections & Angles: score 70.0, issues=foreign_curriculum_reference, low_tag_coverage, low_subject_term_hits, missing_math_signal
+- math_aa 5.5.3 Combined Events: score 40.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_tag_coverage, low_subject_term_hits, missing_math_signal
+- math_aa 5.5.4 Conditional Probability & Bayes: score 45.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 5.5.5 Random Variables & Distributions: score 30.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_tag_coverage, low_subject_term_hits, missing_math_signal
+- math_aa 5.5.6 Binomial & Poisson: score 35.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, foreign_curriculum_reference, low_subject_term_hits, missing_math_signal
+- math_aa 5.5.7 Normal Distribution: score 35.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 6.6.1 Limits & Derivative Basics: score 40.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, missing_math_signal
+- math_aa 6.6.2 Differentiation Rules: score 35.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_tag_coverage, missing_math_signal
+- math_aa 6.6.3 Extrema & Graph Behaviour: score 30.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, foreign_curriculum_reference, low_tag_coverage, low_subject_term_hits, missing_math_signal
+- math_aa 6.6.4 Indefinite Integration Basics: score 35.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_tag_coverage, missing_math_signal
+- math_aa 6.6.5 Definite Integrals, Area & Volume: score 50.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, missing_math_signal
+- math_aa 6.6.6 Kinematics & Total Distance: score 50.0, issues=low_word_count, missing_summary_section, foreign_curriculum_reference, low_subject_term_hits, missing_math_signal
+- math_aa 6.6.7 Integration Techniques: score 35.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_tag_coverage, missing_math_signal
+- math_aa 7.7.1 CDFs, Geometric, Neg Binomial, PGFs: score 50.0, issues=missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 7.7.2 Linear Combinations of RVs: score 35.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 7.7.3 Unbiased Estimators: score 45.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 7.7.4 Normal Combinations & CLT: score 40.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 7.7.5 Confidence Intervals (Mean): score 40.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 7.7.6 Hypothesis Testing (Mean): score 35.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 7.7.7 Bivariate Correlation & Regression: score 40.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 8.8.1 Set Operations & Laws: score 55.0, issues=missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 8.8.2 Relations & Equivalence: score 40.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 8.8.3 Injections, Surjections, Bijections: score 55.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, missing_math_signal
+- math_aa 8.8.4 Binary Operations: score 40.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, missing_math_signal
+- math_aa 8.8.5 Operation Properties: score 30.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_tag_coverage, low_subject_term_hits, missing_math_signal
+- math_aa 8.8.6 Identity & Inverses: score 50.0, issues=missing_key_concepts_section, missing_summary_section, low_tag_coverage, low_subject_term_hits, missing_math_signal
+- math_aa 8.8.7 Definition of a Group: score 40.0, issues=low_word_count, missing_summary_section, low_tag_coverage, low_subject_term_hits, missing_math_signal
+- math_aa 8.8.8 Group Examples: score 40.0, issues=low_word_count, missing_summary_section, low_tag_coverage, low_subject_term_hits, missing_math_signal
+- math_aa 8.8.9 Cyclic Groups & Generators: score 50.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 8.8.10 Permutations & Cycles: score 35.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, foreign_curriculum_reference, low_subject_term_hits, missing_math_signal
+- math_aa 8.8.11 Subgroups, Cosets & Lagrange: score 45.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, foreign_curriculum_reference, missing_math_signal
+- math_aa 8.8.12 Homomorphisms & Isomorphisms: score 50.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, foreign_curriculum_reference, low_subject_term_hits, missing_math_signal
+- math_aa 9.9.1 Infinite Sequences: score 50.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 9.9.2 Infinite Series & Tests: score 30.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_tag_coverage, low_subject_term_hits, missing_math_signal
+- math_aa 9.9.3 Continuity & Differentiability: score 45.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, missing_math_signal
+- math_aa 9.9.4 Riemann Sums & Improper Integrals: score 40.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal
+- math_aa 9.9.5 First-Order Differential Equations: score 65.0, issues=missing_key_concepts_section, missing_summary_section, low_tag_coverage, missing_math_signal
+- math_aa 9.9.6 Taylor & Maclaurin Series: score 45.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, missing_math_signal
+- math_aa 9.9.7 Limit Evaluation (l'Hopital & Series): score 40.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_tag_coverage, low_subject_term_hits, missing_math_signal
+- math_aa 10.10.1 Strong Induction & Pigeonhole: score 50.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, missing_math_signal
+- math_aa 10.10.2 Divisibility, GCD, LCM & Primes: score 40.0, issues=low_word_count, missing_key_concepts_section, missing_summary_section, low_subject_term_hits, missing_math_signal

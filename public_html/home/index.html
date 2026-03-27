@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=/">
+    <title>IVYSTUDY - Your IB Study Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/themeManager.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <style>
+        :root { --primary:#1a202c; --accent:#E4EEE9; --pillbg:#B7D2C0; --pillhover:#9fc2ad; }
+        body { font-family:'Space Grotesk',sans-serif; background:#f8fafc; color:var(--primary); }
+        body.dark-mode { background:#181818; color:#f0f0f0; }
+
+        .menu-button { position:fixed;top:20px;left:20px;z-index:1000;background:transparent;border:none;border-radius:8px;width:40px;height:40px;display:flex;justify-content:center;align-items:center;cursor:pointer; }
+        .menu-button:hover { background:transparent; }
+        .menu-button .line { width:20px;height:2px;background:#1a202c;position:absolute;transition:all .3s ease;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1001; }
+        .menu-button .line::before,.menu-button .line::after { content:'';position:absolute;width:20px;height:2px;background:#1a202c;transition:all .3s ease;left:0; }
+        .menu-button .line::before { transform:translateY(-8px); }
+        .menu-button .line::after { transform:translateY(8px); }
+        .menu-button.active .line { background:transparent !important; }
+        .menu-button.active .line::before { transform:rotate(45deg); }
+        .menu-button.active .line::after { transform:rotate(-45deg); }
+        body.dark-mode .menu-button .line, body.dark-mode .menu-button .line::before, body.dark-mode .menu-button .line::after { background:#f0f0f0; }
+
+        /* Loading Screen */
+        .loading-screen { position:fixed;top:0;left:0;width:100%;height:100%;background-color:#ffffff;display:flex;justify-content:center;align-items:center;z-index:9999; }
+        .loading-content { text-align:center;position:relative; }
+        .loading-logo { font-size:2rem;font-weight:bold;color:#1a202c;margin-bottom:1rem;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%); }
+        .loading-box { width:100px;height:100px;position:relative; }
+        .box-border { position:absolute;width:0;height:0;border:2px solid #1a202c;animation:draw-box .8s cubic-bezier(.4,0,1,1) forwards; }
+        @keyframes draw-box { 0%{width:0;height:0;border-radius:0;box-shadow:none} 20%{width:100%;height:2px} 40%{width:100%;height:100%} 60%{transform:scale(1.02);border-radius:12px;box-shadow:0 0 12px rgba(0,0,0,.2)} 80%{transform:scale(.98);border-radius:6px;box-shadow:0 0 6px rgba(0,0,0,.1)} 100%{width:100%;height:100%;transform:scale(1);border-radius:0;box-shadow:none} }
+        body.dark-mode .loading-screen { background-color:#181818; }
+        body.dark-mode .loading-logo { color:#f0f0f0; }
+        body.dark-mode .box-border { border-color:#4caf50; }
+
+        .sidebar { position:fixed;top:0;left:-280px;width:280px;height:100%;background:#fff;z-index:999;transition:left .3s ease;box-shadow:2px 0 10px rgba(0,0,0,.1);display:flex;flex-direction:column; }
+        .sidebar.active { left:0; }
+        .sidebar-content { padding:80px 20px 20px;flex:1;overflow-y:auto; }
+        .nav-menu { display:flex;flex-direction:column;gap:4px; }
+        .nav-menu-item { display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:8px;text-decoration:none;color:var(--primary);font-size:.95rem;transition:background .2s ease; }
+        .nav-menu-item:hover { background:#f0f0f0; }
+        .sidebar-footer { padding:20px;border-top:1px solid #e2e8f0; }
+        body.dark-mode .sidebar { background:#242424; }
+        body.dark-mode .nav-menu-item { color:#f0f0f0; }
+        body.dark-mode .nav-menu-item:hover { background:#333; }
+        body.dark-mode .sidebar-footer { border-top-color:#3a3a3a; }
+
+        .hero-section { position:relative;border-radius:20px;margin-bottom:3rem;overflow:hidden;min-height:340px;display:flex;align-items:flex-end; }
+        .hero-carousel { position:absolute;inset:0;z-index:0; }
+        .hero-carousel img { position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.5s ease-in-out; }
+        .hero-carousel img.active { opacity:1; }
+        .hero-gradient-overlay { position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.65) 45%,rgba(0,0,0,.35) 100%);border-radius:20px; }
+        .hero-inner { position:relative;z-index:2;color:#fff;padding:2.5rem 2rem;width:100%; }
+        .feature-card { background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:2rem;transition:all .2s; }
+        .feature-card:hover { box-shadow:0 8px 24px rgba(0,0,0,.06);transform:translateY(-2px); }
+        body.dark-mode .feature-card { background:#242424;border-color:#3a3a3a; }
+        .cta-card { background:linear-gradient(135deg,#39a95d,#2d8a4e);border-radius:16px;padding:2.5rem;color:#fff;text-align:center; }
+
+        .dark-mode-toggle { background:none;border:none;cursor:pointer;padding:8px;border-radius:8px;transition:background .2s; }
+        .dark-mode-toggle:hover { background:rgba(0,0,0,.05); }
+        body.dark-mode .dark-mode-toggle:hover { background:rgba(255,255,255,.05); }
+    </style>
+</head>
+<body class="min-h-screen" onload="if(typeof ThemeManager!=='undefined')ThemeManager.initialize()">
+    <script>
+        // /home is deprecated; keep this route as a redirect for old bookmarks.
+        window.location.replace('/');
+    </script>
+
+    <!-- LOADING SCREEN (only on fresh visit) -->
+    <div class="loading-screen" id="loading-screen" style="display:none;">
+        <div class="loading-content">
+            <div class="loading-logo">IVY</div>
+            <div class="loading-box"><div class="box-border"></div></div>
+        </div>
+    </div>
+    <script>
+        if (!sessionStorage.getItem('ivystudy_loaded')) {
+            document.getElementById('loading-screen').style.display = 'flex';
+            sessionStorage.setItem('ivystudy_loaded', 'true');
+        }
+    </script>
+
+    <button class="menu-button" id="menuButton" aria-label="Toggle Menu"><div class="line"></div></button>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <nav class="nav-menu">
+                <a href="/" class="nav-menu-item">
+                    <span class="material-symbols-outlined">home</span>
+                    Home
+                </a>
+                <a href="/info" class="nav-menu-item">
+                    <span class="material-symbols-outlined">planner_review</span>
+                    Stats
+                </a>
+                <a href="/" class="nav-menu-item">
+                    <span class="material-symbols-outlined">search</span>
+                    Search Lessons
+                </a>
+                <a href="/ib-practice-platform/" class="nav-menu-item">
+                    <span class="material-symbols-outlined">quiz</span>
+                    Practice
+                </a>
+                <a href="/exemplars" class="nav-menu-item">
+                    <span class="material-symbols-outlined">library_books</span>
+                    IA/EE Exemplars
+                </a>
+                <a href="/timer" class="nav-menu-item">
+                    <span class="material-symbols-outlined">timer</span>
+                    Exam Timer
+                </a>
+                <a href="https://opennotes.pages.dev/" class="nav-menu-item" target="_blank">
+                    <span class="material-symbols-outlined">note_stack</span>
+                    OpenNotes
+                </a>
+                <a href="https://github.com/NagusameCS/IVY" class="nav-menu-item">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 0C5.37 0 0 5.373 0 12c0 5.303 
+                        3.438 9.8 8.205 11.387.6.113.82-.258.82-.577
+                        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
+                        -.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729
+                        1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998
+                        .108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.933
+                        0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176
+                        0 0 1.005-.322 3.3 1.23a11.52 11.52 0 013.003-.403
+                        c1.02.005 2.045.137 3.003.403 2.28-1.552 3.285-1.23
+                        3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91
+                        1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.21
+                        0 1.595-.015 2.88-.015 3.27 0 .315.21.69.825.57C20.565 
+                        21.795 24 17.295 24 12c0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="/teachers" class="nav-menu-item">
+                    <span class="material-symbols-outlined">school</span>
+                    For Educators
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-600">Theme</span>
+                    <button onclick="ThemeManager.toggle()" class="dark-mode-toggle">
+                        <span class="material-symbols-outlined theme-toggle-icon">light_mode</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-20 pb-16">
+
+        <!-- Hero with poster carousel -->
+        <div class="hero-section">
+            <div class="hero-carousel" id="heroCarousel">
+                <img src="/background1.jpg" alt="" class="active">
+                <img src="/background2.jpg" alt="">
+                <img src="/background3.jpg" alt="">
+                <img src="/background4.jpg" alt="">
+            </div>
+            <div class="hero-gradient-overlay"></div>
+            <div class="hero-inner">
+                <span class="material-symbols-outlined text-5xl mb-4 block" style="color:#4ade80">home</span>
+                <h1 class="text-4xl font-bold mb-3">Your IB Study Hub Test</h1>
+                <p class="text-lg text-gray-300 max-w-2xl">Free, comprehensive resources for every IB student. Study guides, exam timers, IA/EE exemplars, and more â€” all open-source and community-driven.</p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="/" class="bg-white text-green-700 font-semibold px-6 py-3 rounded-full hover:bg-green-50 transition">Explore Resources â†’</a>
+                    <a href="/timer" class="border border-white text-white font-semibold px-6 py-3 rounded-full hover:bg-white/10 transition">Exam Timer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- What is IVY -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6">Everything You Need for IB Success</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="feature-card">
+                    <span class="material-symbols-outlined text-3xl mb-3" style="color:#39a95d">search</span>
+                    <h3 class="font-semibold text-lg mb-2">Subject Resources</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Access carefully curated notes, study guides, and practice questions for all IB subjects.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="material-symbols-outlined text-3xl mb-3" style="color:#39a95d">library_books</span>
+                    <h3 class="font-semibold text-lg mb-2">IA/EE Exemplars</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">High-scoring IA and EE examples with examiner comments to guide your own work.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="material-symbols-outlined text-3xl mb-3" style="color:#39a95d">timer</span>
+                    <h3 class="font-semibold text-lg mb-2">Exam Tools</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Customizable timers, revision planners, and past paper organizers to optimize your study sessions.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="material-symbols-outlined text-3xl mb-3" style="color:#39a95d">partner_exchange</span>
+                    <h3 class="font-semibold text-lg mb-2">Legal and Transparent</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Everything on this site is completely free, open-source, and legal. Using it won't jeopardize your diploma.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="material-symbols-outlined text-3xl mb-3" style="color:#39a95d">school</span>
+                    <h3 class="font-semibold text-lg mb-2">Community-Driven</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Content is contributed and reviewed by IB students and recent graduates. Open-source on GitHub for transparency and collaboration.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="material-symbols-outlined text-3xl mb-3" style="color:#39a95d">devices</span>
+                    <h3 class="font-semibold text-lg mb-2">Works Everywhere</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Web-based with offline support. Students can access content on any device â€” phones, tablets, Chromebooks, or laptops.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6">By the Numbers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg">
+                    <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">100+</div>
+                    <div class="text-gray-600 dark:text-gray-300">Study Guides</div>
+                </div>
+                <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg">
+                    <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">50+</div>
+                    <div class="text-gray-600 dark:text-gray-300">IA/EE Examples</div>
+                </div>
+                <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg">
+                    <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">24</div>
+                    <div class="text-gray-600 dark:text-gray-300">IB Subjects Covered</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Stories -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6">What Students Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg">
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">"I used to split a Revision Village account with a friend just to get access. A site offering similar quality for free would be a revolution."</p>
+                    <div class="font-semibold">Artemii Letov</div>
+                    <div class="text-sm text-gray-500">Full IB - President's Award recipient</div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg">
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">"The Math HL resources and practice problems helped me understand complex topics. I improved from a 4 to a 6!"</p>
+                    <div class="font-semibold">Alex T.</div>
+                    <div class="text-sm text-gray-500">Class of 2024</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-card">
+            <span class="material-symbols-outlined text-5xl mb-4">rocket_launch</span>
+            <h2 class="text-2xl font-bold mb-3">Start Your IB Journey</h2>
+            <p class="mb-6 text-green-100 max-w-lg mx-auto">Join thousands of IB students worldwide using IVYSTUDY to excel in their studies. Free, comprehensive, and community-driven.</p>
+            <a href="/" class="inline-block bg-white text-green-700 font-semibold px-6 py-3 rounded-full hover:bg-green-50 transition">Explore Resources â†’</a>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-12" id="site-footer">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center mt">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-gray-500 hover:text-gray-700">IVYSTUDY Content © 2025 is licensed under CC BY-NC-SA 4.0</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#terms" class="text-gray-500 hover:text-gray-700">Terms</a>
+                    <a href="#privacy" class="text-gray-500 hover:text-gray-700">Privacy</a>
+                    <a href="#contact" class="text-gray-500 hover:text-gray-700">Contact</a>
+                    <a href="https://github.com/NagusameCS/IVY/tree/main" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-gray-500 hover:text-gray-700">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.933 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 013.003-.403c1.02.005 2.045.137 3.003.403 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.21 0 1.595-.015 2.88-.015 3.27 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.627-5.373-12-12-12z"/></svg>GitHub
+                    </a>
+                    <a href="/info" id="viewer-count" class="group flex items-center gap-1 text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12s3.75-6.75 9.75-6.75S21.75 12 21.75 12s-3.75 6.75-9.75 6.75S2.25 12 2.25 12z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <span id="viewer-count-text" class="text-gray-500">Loading...</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <style>
+        body.dark-mode footer,
+        body.dark-mode #site-footer { background: #181818 !important; border-top-color: #3a3a3a !important; }
+        body.dark-mode footer a,
+        body.dark-mode footer span,
+        body.dark-mode footer div { color: #9ca3af !important; }
+        body.dark-mode footer a:hover { color: #f0f0f0 !important; }
+        body.dark-mode footer #viewer-count-text { color: #9ca3af !important; }
+        body.dark-mode footer svg { color: #9ca3af !important; stroke: #9ca3af !important; }
+    </style>
+
+    <script>
+        // Menu toggle
+        const menuButton = document.getElementById('menuButton');
+        const sidebar = document.getElementById('sidebar');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            menuButton.classList.toggle('active');
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuButton.contains(e.target) && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                menuButton.classList.remove('active');
+            }
+        });
+
+        // Loading screen
+        window.addEventListener('load', () => {
+            const ls = document.getElementById('loading-screen');
+            if (ls && ls.style.display !== 'none') {
+                const b = ls.querySelector('.box-border');
+                if (b) b.addEventListener('animationend', () => { ls.style.display = 'none'; });
+                setTimeout(() => { ls.style.display = 'none'; }, 1500);
+            }
+        });
+
+        // Hero poster carousel
+        (function() {
+            const imgs = document.querySelectorAll('#heroCarousel img');
+            if (imgs.length < 2) return;
+            let current = 0;
+            setInterval(() => {
+                imgs[current].classList.remove('active');
+                current = (current + 1) % imgs.length;
+                imgs[current].classList.add('active');
+            }, 5000);
+        })();
+
+        // Page view counter
+        function formatCount(n) {
+            if (n < 1000) return n.toString();
+            if (n < 10000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+            if (n < 1_000_000) return Math.floor(n / 1000) + 'k';
+            return (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+        }
+        fetch('/api/').then(r=>r.text()).then(t=>{
+            const c=parseInt(t,10);
+            if(!isNaN(c))document.getElementById('viewer-count-text').textContent=formatCount(c);
+            else document.getElementById('viewer-count-text').textContent='â€“';
+        }).catch(()=>{document.getElementById('viewer-count-text').textContent='â€“';});
+    </script>
+
+</body>
+</html>
+

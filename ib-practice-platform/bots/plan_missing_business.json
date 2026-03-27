@@ -1,0 +1,25 @@
+[
+  {
+    "subject_key": "business",
+    "source_subject": "Business",
+    "source_section": "Business Basics",
+    "source_section_path": "business-basics",
+    "topic_code": "BM1.1",
+    "lesson_title": "Introduction to Business Organization",
+    "lesson_file": "intro-business-org.md",
+    "level": "SL",
+    "time_estimate": 15,
+    "tags": [
+      "business",
+      "organization",
+      "ownership",
+      "objectives"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# Introduction to Business Organization\\n\\nTopic: BM1.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  }
+]

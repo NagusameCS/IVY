@@ -1,0 +1,5140 @@
+[
+  {
+    "id": "biz_1_1_mcq_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Business Sectors — Primary, Secondary, Tertiary",
+    "tags": [
+      "business-sectors",
+      "inputs-outputs",
+      "value-added"
+    ],
+    "stem_template": "A company that manufactures {{product}} from raw materials and sells finished goods to retailers operates in which sector?",
+    "params": {
+      "product": {
+        "type": "choice",
+        "values": [
+          "furniture",
+          "steel beams",
+          "processed food",
+          "clothing",
+          "electronic devices"
+        ]
+      }
+    },
+    "answer_template": "Secondary sector — involves manufacturing or processing raw materials into finished or semi-finished products.",
+    "distractor_templates": [
+      "Primary sector — extracts raw materials directly from natural resources.",
+      "Tertiary sector — provides services to businesses and consumers.",
+      "Quaternary sector — involves knowledge-based and intellectual activities."
+    ],
+    "options_template": [
+      {
+        "text": "Secondary sector — manufacturing/processing raw materials into finished goods.",
+        "correct": true
+      },
+      {
+        "text": "Primary sector — extracts raw materials from nature.",
+        "correct": false
+      },
+      {
+        "text": "Tertiary sector — provides services.",
+        "correct": false
+      },
+      {
+        "text": "Quaternary sector — knowledge-based activities.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for secondary sector with correct definition (manufacturing/processing).",
+    "hints": [
+      "Primary = extraction (farming, mining); Secondary = manufacturing; Tertiary = services.",
+      "Value is added at each stage of production."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_1_1_worked_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.1",
+    "type": "worked",
+    "difficulty": "core",
+    "title": "Value Added Calculation",
+    "tags": [
+      "value-added",
+      "inputs-outputs",
+      "business-sectors"
+    ],
+    "stem_template": "A bakery buys raw ingredients (flour, butter, sugar) for a total cost of ${{input_cost}} and sells finished cakes for ${{revenue}}. (a) Calculate the value added. (b) Explain what value added represents for the business.",
+    "params": {
+      "input_cost": {
+        "type": "int",
+        "min": 100,
+        "max": 500
+      },
+      "revenue": {
+        "type": "computed",
+        "formula": "input_cost + Math.floor(input_cost * 0.6)"
+      },
+      "va": {
+        "type": "computed",
+        "formula": "revenue - input_cost"
+      }
+    },
+    "answer_template": "Value added = Revenue − Cost of bought-in materials = ${{revenue}} − ${{input_cost}} = ${{va}}. Value added represents the contribution made by the business's own production process — it covers wages, profit, and other costs; it is the basis for VAT assessment and measures economic contribution.",
+    "mark_scheme_template": "Award: 1 mark correct formula; 1 mark correct calculation (${{va}}); 2 marks explanation (covers labour + profit + adds to GDP). Max 4.",
+    "hints": [
+      "Value added = Selling price − Cost of inputs (not total costs).",
+      "Higher value added generally means more profitable business activity."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "biz_1_1_mcq_002",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Business Purpose and Objectives",
+    "tags": [
+      "inputs-outputs",
+      "value-added",
+      "business-sectors"
+    ],
+    "stem_template": "Which of the following is the primary purpose of a for-profit business?",
+    "params": {},
+    "answer_template": "To add value to inputs and generate profit for its owners or shareholders by supplying goods and services that satisfy consumer needs and wants.",
+    "distractor_templates": [
+      "To provide employment for as many workers as possible in the local community.",
+      "To pay the maximum possible amount of tax to fund public services.",
+      "To minimise the use of natural resources regardless of consumer demand."
+    ],
+    "options_template": [
+      {
+        "text": "Add value, generate profit, and satisfy consumer needs.",
+        "correct": true
+      },
+      {
+        "text": "Provide maximum local employment.",
+        "correct": false
+      },
+      {
+        "text": "Pay maximum tax to fund public services.",
+        "correct": false
+      },
+      {
+        "text": "Minimise resource use regardless of consumer demand.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for profit generation + adding value + satisfying consumer needs (all three needed).",
+    "hints": [
+      "Profit = Revenue − Total Costs.",
+      "For-profit businesses still have social responsibilities, but profit is the primary driver."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_1_2_mcq_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Sole Trader vs Limited Company",
+    "tags": [
+      "sole-trader",
+      "partnership",
+      "corporation",
+      "limited-liability"
+    ],
+    "stem_template": "What is the key advantage of forming a private limited company (Ltd) compared to operating as a {{entity}}?",
+    "params": {
+      "entity": {
+        "type": "choice",
+        "values": [
+          "sole trader",
+          "partnership"
+        ]
+      }
+    },
+    "answer_template": "Limited liability — shareholders can only lose the amount they have invested; personal assets are protected from business debts.",
+    "distractor_templates": [
+      "The owner(s) retain unlimited personal liability for all business debts.",
+      "The business can raise capital by selling shares on the stock exchange.",
+      "There are no legal requirements or administrative costs for formation."
+    ],
+    "options_template": [
+      {
+        "text": "Limited liability — shareholders only risk their investment; personal assets protected.",
+        "correct": true
+      },
+      {
+        "text": "Owners retain unlimited personal liability for all debts.",
+        "correct": false
+      },
+      {
+        "text": "Can sell shares on the stock exchange (public companies only).",
+        "correct": false
+      },
+      {
+        "text": "No legal requirements or formation costs.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for limited liability + correct explanation (personal assets protected; only investment at risk).",
+    "hints": [
+      "Limited liability: maximum loss = amount invested in the company.",
+      "Sole traders and partnerships have unlimited liability (personal assets at risk)."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_1_2_mcq_002",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Franchise Business Model",
+    "tags": [
+      "corporation",
+      "franchise",
+      "cooperation"
+    ],
+    "stem_template": "A person buys the right to operate a {{brand}} outlet under its established brand, systems, and support. This business arrangement is called:",
+    "params": {
+      "brand": {
+        "type": "choice",
+        "values": [
+          "McDonald's",
+          "Subway",
+          "KFC",
+          "Starbucks",
+          "Anytime Fitness"
+        ]
+      }
+    },
+    "answer_template": "A franchise — the franchisee pays fees/royalties to the franchisor for the right to use their brand, business model, and support systems.",
+    "distractor_templates": [
+      "A joint venture — two companies temporarily combine resources for a specific project.",
+      "A merger — two companies permanently combine to form a single entity.",
+      "A cooperative — a business owned and democratically controlled by its members."
+    ],
+    "options_template": [
+      {
+        "text": "A franchise — franchisee pays fees to franchisor to use brand and systems.",
+        "correct": true
+      },
+      {
+        "text": "A joint venture — temporary combination for a specific project.",
+        "correct": false
+      },
+      {
+        "text": "A merger — permanent combination of two companies.",
+        "correct": false
+      },
+      {
+        "text": "A cooperative — member-owned and democratically controlled.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for franchise + correct description of franchisee/franchisor relationship.",
+    "hints": [
+      "Franchisee = buyer of the right to use the brand/system.",
+      "Franchisor = seller of the right (the original brand owner)."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_1_2_worked_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Choosing Business Structure",
+    "tags": [
+      "sole-trader",
+      "corporation",
+      "limited-liability"
+    ],
+    "stem_template": "{{person}} is setting up a {{business_type}} with an initial investment of ${{investment}}. Evaluate whether they should operate as a sole trader or form a private limited company (Ltd).",
+    "params": {
+      "person": {
+        "type": "choice",
+        "values": [
+          "Ahmed",
+          "Sofia",
+          "Carlos",
+          "Mei"
+        ]
+      },
+      "business_type": {
+        "type": "choice",
+        "values": [
+          "online retail store",
+          "consultancy firm",
+          "restaurant",
+          "design agency"
+        ]
+      },
+      "investment": {
+        "type": "choice",
+        "values": [
+          20000,
+          50000,
+          100000,
+          250000
+        ]
+      }
+    },
+    "answer_template": "Sole trader: simple to set up, full control, keep all profit. But: unlimited liability — personal assets at risk if business fails; harder to raise capital; business ends with owner. Private Ltd: limited liability protects personal assets (crucial if investment is ${{investment}}); can attract investors; perpetual existence; but: more complex setup, annual accounts required, profit shared, separation of ownership and control. Recommendation: if risk is high or outside investment needed, Ltd is preferable; for low-risk, sole trader is simpler.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 2 marks sole trader pros/cons; 2 marks Ltd pros/cons; 2 marks justified recommendation. Max 6.",
+    "hints": [
+      "Limited liability is the key advantage of a Ltd company.",
+      "Consider the level of risk, need for investment, and administrative burden."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_1_3_mcq_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "SMART Business Objectives",
+    "tags": [
+      "profit",
+      "growth",
+      "social-objectives",
+      "ethical"
+    ],
+    "stem_template": "A company sets the objective: 'Increase market share by {{pct}}% within {{years}} years through expansion into {{region}}.' This objective is SMART because it is:",
+    "params": {
+      "pct": {
+        "type": "choice",
+        "values": [
+          5,
+          10,
+          15,
+          20
+        ]
+      },
+      "years": {
+        "type": "choice",
+        "values": [
+          1,
+          2,
+          3
+        ]
+      },
+      "region": {
+        "type": "choice",
+        "values": [
+          "Asia",
+          "Europe",
+          "Latin America",
+          "the Middle East"
+        ]
+      }
+    },
+    "answer_template": "Specific (market share in {{region}}), Measurable ({{pct}}%), Achievable (realistic target), Relevant (aligned with growth strategy), Time-bound (within {{years}} years).",
+    "distractor_templates": [
+      "Only specific and time-bound — measurable targets are optional for SMART objectives.",
+      "Not SMART because it lacks a financial target such as profit or revenue.",
+      "SMART only applies to personal goals, not business objectives."
+    ],
+    "options_template": [
+      {
+        "text": "Specific, Measurable ({{pct}}%), Achievable, Relevant, Time-bound ({{years}} years).",
+        "correct": true
+      },
+      {
+        "text": "Only specific and time-bound — measurable targets are optional.",
+        "correct": false
+      },
+      {
+        "text": "Not SMART — lacks a financial profit/revenue target.",
+        "correct": false
+      },
+      {
+        "text": "SMART applies to personal goals only.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for each SMART element correctly identified and linked to the objective (max 5). Accept any 3 for full marks.",
+    "hints": [
+      "SMART: Specific, Measurable, Achievable/Attainable, Relevant/Realistic, Time-bound.",
+      "Business objectives guide strategic decision-making."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "biz_1_3_mcq_002",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Profit vs Social Objectives",
+    "tags": [
+      "profit",
+      "social-objectives",
+      "ethical",
+      "CSR"
+    ],
+    "stem_template": "A company installs solar panels on its factory at a cost of ${{cost}}, reducing electricity bills by ${{saving}} annually. A manager argues this is both ethical and profitable. This is an example of:",
+    "params": {
+      "cost": {
+        "type": "int",
+        "min": 50000,
+        "max": 500000
+      },
+      "saving": {
+        "type": "computed",
+        "formula": "Math.floor(cost * 0.15)"
+      }
+    },
+    "answer_template": "Corporate Social Responsibility (CSR) that also aligns with profit objectives — ethical and financial goals need not conflict; environmental responsibility can reduce costs and enhance brand reputation.",
+    "distractor_templates": [
+      "A conflict between profit and social objectives — the upfront cost reduces shareholder value.",
+      "Greenwashing — the company is pretending to be environmentally responsible for marketing purposes.",
+      "An example where social objectives always take priority over profit in modern businesses."
+    ],
+    "options_template": [
+      {
+        "text": "CSR aligned with profit — ethical and financial goals can coexist.",
+        "correct": true
+      },
+      {
+        "text": "Conflict between profit and social objectives — upfront cost harms shareholders.",
+        "correct": false
+      },
+      {
+        "text": "Greenwashing — fake environmental credentials for marketing.",
+        "correct": false
+      },
+      {
+        "text": "Social objectives always take priority over profit in modern businesses.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for CSR + explanation that profit and ethics can align (win-win scenario).",
+    "hints": [
+      "CSR = corporate social responsibility; not always a trade-off with profit.",
+      "Long-term brand reputation benefits can offset short-term costs."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_1_3_worked_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Objective Setting at Different Business Stages",
+    "tags": [
+      "profit",
+      "growth",
+      "social-objectives"
+    ],
+    "stem_template": "{{company}}, a {{stage}} company in the {{industry}} industry, is currently {{situation}}. Analyse how its business objectives might differ from those of an established market leader.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "TechStart Ltd",
+          "GreenGrow Co",
+          "FreshEats Inc",
+          "SwiftLogistics"
+        ]
+      },
+      "stage": {
+        "type": "choice",
+        "values": [
+          "start-up",
+          "recently launched",
+          "early-stage"
+        ]
+      },
+      "industry": {
+        "type": "choice",
+        "values": [
+          "technology",
+          "food delivery",
+          "renewable energy",
+          "logistics"
+        ]
+      },
+      "situation": {
+        "type": "choice",
+        "values": [
+          "cash-flow negative but growing",
+          "pre-profit but gaining market share",
+          "breaking even for the first time"
+        ]
+      }
+    },
+    "answer_template": "Start-up objectives: survival (covering costs, positive cash flow); building a customer base; establishing brand awareness; achieving break-even. These differ from a market leader which may focus on: profit maximisation; market share growth; shareholder value; international expansion; innovation. Objectives change with business lifecycle — from survival → growth → profit → social responsibility.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 2 marks start-up objectives (min 2 examples with reasons); 2 marks market leader objectives; 2 marks analysis of difference (lifecycle context). Max 6.",
+    "hints": [
+      "Business lifecycle: launch → growth → maturity → decline.",
+      "Survival is the primary objective for start-ups."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_1_4_mcq_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Stakeholder Conflict",
+    "tags": [
+      "stakeholder-conflict",
+      "internal",
+      "external"
+    ],
+    "stem_template": "A company decides to automate its production line, reducing costs by {{cost_saving}}% but making {{workers}} workers redundant. Which stakeholder conflict is most clearly illustrated?",
+    "params": {
+      "cost_saving": {
+        "type": "choice",
+        "values": [
+          15,
+          20,
+          25,
+          30
+        ]
+      },
+      "workers": {
+        "type": "int",
+        "min": 50,
+        "max": 500
+      }
+    },
+    "answer_template": "Shareholders (want higher profits through lower costs) vs Employees (want job security) — this is a typical stakeholder conflict between owners' financial interests and workers' employment interests.",
+    "distractor_templates": [
+      "Customers vs government — regulatory disputes over product safety standards.",
+      "Suppliers vs employees — conflict over raw material pricing affecting wages.",
+      "Managers vs customers — conflict over product quality versus cost reduction."
+    ],
+    "options_template": [
+      {
+        "text": "Shareholders (profit/cost reduction) vs Employees (job security).",
+        "correct": true
+      },
+      {
+        "text": "Customers vs government — product safety regulation dispute.",
+        "correct": false
+      },
+      {
+        "text": "Suppliers vs employees — raw material pricing affecting wages.",
+        "correct": false
+      },
+      {
+        "text": "Managers vs customers — quality vs cost trade-off.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for shareholders vs employees + correct rationale for each side's interest.",
+    "hints": [
+      "Internal stakeholders: employees, managers, shareholders.",
+      "External stakeholders: customers, suppliers, government, community."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_1_4_worked_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Stakeholder Mapping and Conflict Resolution",
+    "tags": [
+      "stakeholder-conflict",
+      "internal",
+      "external"
+    ],
+    "stem_template": "{{company}} is planning to build a new {{facility}} in {{location}}. Identify four key stakeholders, their interests, and analyse how the company might manage potential conflicts.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "a supermarket chain",
+          "an energy company",
+          "a property developer",
+          "an airline"
+        ]
+      },
+      "facility": {
+        "type": "choice",
+        "values": [
+          "distribution warehouse",
+          "wind farm",
+          "residential complex",
+          "maintenance hub"
+        ]
+      },
+      "location": {
+        "type": "choice",
+        "values": [
+          "a rural area",
+          "an urban residential zone",
+          "a coastal region",
+          "near a wildlife reserve"
+        ]
+      }
+    },
+    "answer_template": "Stakeholders: (1) Shareholders — want profit and growth; support construction. (2) Local residents — concerned about noise, traffic, environmental impact; may oppose. (3) Government — wants economic development (jobs, tax) but must ensure planning compliance. (4) Employees — want job security and safe conditions. Conflict management: public consultation, community benefits (e.g. local employment, environmental offsetting), transparent communication, compromise on design/hours.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per stakeholder identified (max 4); 1 mark per correct interest; 1 mark per conflict management strategy (max 2). Max 6.",
+    "hints": [
+      "Mendelow's matrix categorises stakeholders by power and interest.",
+      "Not all stakeholder conflicts can be fully resolved — prioritise by power and interest."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_1_5_mcq_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Economies of Scale",
+    "tags": [
+      "economies-of-scale",
+      "organic-growth",
+      "mergers"
+    ],
+    "stem_template": "A car manufacturer increases production from {{q1}} to {{q2}} vehicles per year, reducing average unit costs from ${{ac1}} to ${{ac2}}. This reduction in average costs with increased scale is known as:",
+    "params": {
+      "q1": {
+        "type": "int",
+        "min": 50000,
+        "max": 200000
+      },
+      "q2": {
+        "type": "computed",
+        "formula": "q1 * 2"
+      },
+      "ac1": {
+        "type": "int",
+        "min": 5000,
+        "max": 20000
+      },
+      "ac2": {
+        "type": "computed",
+        "formula": "Math.floor(ac1 * 0.8)"
+      }
+    },
+    "answer_template": "Economies of scale — as output increases, average (unit) costs fall due to spreading fixed costs, bulk purchasing discounts, specialisation of labour, and use of specialised equipment.",
+    "distractor_templates": [
+      "Diseconomies of scale — average costs rise as output increases beyond the optimal scale.",
+      "Diminishing returns — adding more of one variable input yields progressively smaller output gains.",
+      "Marginal cost reduction — the cost of producing one additional unit decreases at all output levels."
+    ],
+    "options_template": [
+      {
+        "text": "Economies of scale — average costs fall as output rises (fixed cost spreading, bulk buying, specialisation).",
+        "correct": true
+      },
+      {
+        "text": "Diseconomies of scale — average costs rise beyond optimal scale.",
+        "correct": false
+      },
+      {
+        "text": "Diminishing returns — additional input yields smaller output gains.",
+        "correct": false
+      },
+      {
+        "text": "Marginal cost reduction at all output levels.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for economies of scale + at least one correct reason (spreading fixed costs, bulk buying, specialisation).",
+    "hints": [
+      "Economies of scale → lower LRAC as output increases.",
+      "Diseconomies occur when firms get too large (communication/coordination problems)."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_1_5_mcq_002",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Organic vs External Growth",
+    "tags": [
+      "organic-growth",
+      "mergers",
+      "acquisitions"
+    ],
+    "stem_template": "A retail chain opens {{new_stores}} new stores using retained profits. This is an example of:",
+    "params": {
+      "new_stores": {
+        "type": "choice",
+        "values": [
+          5,
+          10,
+          20,
+          50
+        ]
+      }
+    },
+    "answer_template": "Organic (internal) growth — the business grows by expanding its own operations using internal resources, without merging with or acquiring another business.",
+    "distractor_templates": [
+      "External growth through a merger — combining with another firm to increase size.",
+      "A takeover bid — acquiring another company by purchasing a majority of its shares.",
+      "A strategic alliance — two firms cooperating without full integration."
+    ],
+    "options_template": [
+      {
+        "text": "Organic/internal growth — expanding own operations with internal resources.",
+        "correct": true
+      },
+      {
+        "text": "External growth through a merger — combining with another firm.",
+        "correct": false
+      },
+      {
+        "text": "A takeover bid — acquiring another company.",
+        "correct": false
+      },
+      {
+        "text": "A strategic alliance — cooperation without full integration.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for organic/internal growth + correct description (own resources, no merger/acquisition).",
+    "hints": [
+      "Organic growth: slower, less risky, uses internal resources.",
+      "External growth (merger/acquisition): faster, riskier, uses external resources."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_1_5_worked_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.5",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Growth Strategy Evaluation",
+    "tags": [
+      "organic-growth",
+      "mergers",
+      "acquisitions",
+      "economies-of-scale"
+    ],
+    "stem_template": "{{company}}, a {{industry}} company with annual revenue of ${{revenue}}m, is considering acquiring {{target}} for ${{price}}m. Evaluate whether this acquisition strategy is preferable to organic growth.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "TechCorp",
+          "FoodGiant",
+          "RetailPlus",
+          "MediHealth"
+        ]
+      },
+      "industry": {
+        "type": "choice",
+        "values": [
+          "technology",
+          "food manufacturing",
+          "retail",
+          "healthcare"
+        ]
+      },
+      "revenue": {
+        "type": "int",
+        "min": 100,
+        "max": 2000
+      },
+      "target": {
+        "type": "choice",
+        "values": [
+          "a smaller competitor",
+          "a key supplier",
+          "a company in a new market",
+          "a technology start-up"
+        ]
+      },
+      "price": {
+        "type": "computed",
+        "formula": "revenue * 0.5"
+      }
+    },
+    "answer_template": "Acquisition advantages: rapid growth; instant access to {{target}}'s customers/assets/technology; eliminates competitor; potential economies of scale. Acquisition disadvantages: expensive (${{price}}m); integration risk (culture clash, redundancies); potential diseconomies if too large; requires debt financing. Organic advantages: lower risk, maintained control, no integration challenges, builds capabilities gradually. Recommendation: acquisition preferable if speed is critical, the target has unique assets, and {{company}} has the financial capacity; organic growth better for long-term sustainable development.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 2 marks acquisition advantages; 2 marks acquisition disadvantages; 1 mark organic growth advantage; 1 mark justified recommendation. Max 6.",
+    "hints": [
+      "Consider cultural fit, integration costs, and synergies.",
+      "Evaluate both financial and strategic implications."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_1_6_mcq_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.6",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Multinational Companies — Benefits and Costs",
+    "tags": [
+      "MNCs",
+      "globalization",
+      "FDI"
+    ],
+    "stem_template": "A multinational company (MNC) sets up a manufacturing plant in {{country}}, creating {{jobs}} jobs. Which statement best describes a potential benefit to the host country?",
+    "params": {
+      "country": {
+        "type": "choice",
+        "values": [
+          "Vietnam",
+          "Mexico",
+          "Bangladesh",
+          "Poland"
+        ]
+      },
+      "jobs": {
+        "type": "int",
+        "min": 500,
+        "max": 10000
+      }
+    },
+    "answer_template": "Employment creation ({{jobs}} jobs), technology transfer, tax revenue, and infrastructure development — MNCs bring FDI, skills, and global supply chain integration.",
+    "distractor_templates": [
+      "MNCs always increase income inequality in host countries by paying above-average wages.",
+      "Host countries lose all manufacturing expertise to MNCs, creating long-term dependency.",
+      "MNCs must share profits equally with host country governments under international law."
+    ],
+    "options_template": [
+      {
+        "text": "Employment, technology transfer, tax revenue, and infrastructure development.",
+        "correct": true
+      },
+      {
+        "text": "MNCs always increase inequality by paying above-average wages.",
+        "correct": false
+      },
+      {
+        "text": "Host countries lose all manufacturing expertise — creates dependency.",
+        "correct": false
+      },
+      {
+        "text": "MNCs must share profits equally with host governments by law.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for employment + any one of: technology transfer, tax revenue, infrastructure. Accept any two valid benefits.",
+    "hints": [
+      "MNCs: benefits = jobs, technology, investment. Costs = profit repatriation, environmental harm, displacement of local firms.",
+      "FDI = Foreign Direct Investment."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_1_6_worked_001",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.6",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "MNC Impact on Host Country",
+    "tags": [
+      "MNCs",
+      "globalization",
+      "FDI"
+    ],
+    "stem_template": "Evaluate the impact of {{mnc}}, a {{industry}} multinational, on the host country {{country}}. Consider economic, social, and environmental dimensions.",
+    "params": {
+      "mnc": {
+        "type": "choice",
+        "values": [
+          "a major fast-food chain",
+          "an oil company",
+          "a garment manufacturer",
+          "a technology company"
+        ]
+      },
+      "industry": {
+        "type": "choice",
+        "values": [
+          "food",
+          "energy",
+          "fashion",
+          "technology"
+        ]
+      },
+      "country": {
+        "type": "choice",
+        "values": [
+          "Bangladesh",
+          "Nigeria",
+          "Cambodia",
+          "Brazil"
+        ]
+      }
+    },
+    "answer_template": "Economic: positive — FDI, jobs, tax revenue, technology transfer, export earnings. Negative — profit repatriation, tax avoidance, displacement of local firms, dependency on MNC decisions. Social: positive — higher wages, training. Negative — exploitation of cheap labour, poor conditions, cultural homogenisation. Environmental: positive — some MNCs bring cleaner technology. Negative — resource extraction, pollution, pressure to lower environmental standards. Overall: net impact depends on government regulation, negotiating power of host country, and MNC practices.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per well-developed point across economic/social/environmental (max 2 each), 1 mark evaluation/conclusion. Max 6.",
+    "hints": [
+      "Use examples from the specific industry where possible.",
+      "A strong answer weighs benefits against costs with a reasoned conclusion."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_2_1_mcq_001",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "HRM — Recruitment Process",
+    "tags": [
+      "HR-planning",
+      "recruitment",
+      "appraisal"
+    ],
+    "stem_template": "A company posts a job vacancy for a {{role}} on its website and receives {{apps}} applications. After shortlisting, candidates are interviewed. What is the difference between internal and external recruitment?",
+    "params": {
+      "role": {
+        "type": "choice",
+        "values": [
+          "marketing manager",
+          "software developer",
+          "finance analyst",
+          "operations supervisor"
+        ]
+      },
+      "apps": {
+        "type": "int",
+        "min": 20,
+        "max": 500
+      }
+    },
+    "answer_template": "Internal recruitment: filling a vacancy by promoting or transferring an existing employee. Advantages: faster, cheaper, known candidate, motivates staff. Disadvantage: creates another vacancy, limited new ideas. External recruitment: hiring from outside the organisation. Advantages: wider talent pool, new skills and ideas. Disadvantages: more expensive, longer process, risk of poor culture fit.",
+    "distractor_templates": [
+      "Internal recruitment always produces better results because the candidate knows the company culture.",
+      "External recruitment is always preferred because it brings new skills that internal candidates cannot offer.",
+      "Both types of recruitment are identical in terms of cost and time."
+    ],
+    "options_template": [
+      {
+        "text": "Internal (existing employee promoted/transferred) vs External (hired from outside) — each has distinct advantages.",
+        "correct": true
+      },
+      {
+        "text": "Internal always produces better results.",
+        "correct": false
+      },
+      {
+        "text": "External always preferred for new skills.",
+        "correct": false
+      },
+      {
+        "text": "Both are identical in cost and time.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark each for correct definition of internal and external, plus 1 mark each for at least one advantage of each. Max 4.",
+    "hints": [
+      "Internal: within the organisation. External: from the labour market.",
+      "Both types have advantages and limitations — context determines which is better."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "biz_2_1_worked_001",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Appraisal Systems",
+    "tags": [
+      "appraisal",
+      "HR-planning",
+      "motivation"
+    ],
+    "stem_template": "{{company}} implements a {{appraisal_type}} appraisal system for its {{n_employees}} employees. Evaluate the potential benefits and limitations of this approach.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "RetailCo",
+          "BankPlus",
+          "TechFirm",
+          "HealthCare Ltd"
+        ]
+      },
+      "appraisal_type": {
+        "type": "choice",
+        "values": [
+          "360-degree",
+          "performance-related pay (PRP)",
+          "management by objectives (MBO)",
+          "self-appraisal"
+        ]
+      },
+      "n_employees": {
+        "type": "int",
+        "min": 100,
+        "max": 5000
+      }
+    },
+    "answer_template": "360-degree: feedback from peers, subordinates, managers → holistic view, reduces bias. But: time-consuming, potential for politics/revenge ratings. PRP: links pay to measurable performance → motivates high performers (Maslow esteem, Herzberg motivators). But: may undermine teamwork, difficult to measure performance objectively, can cause stress. MBO: aligns individual and company objectives → clarity, ownership. But: requires clear targets, may be inflexible. Conclusion: effectiveness depends on company culture, quality of implementation, and employee attitudes.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 2 marks benefits; 2 marks limitations; 2 marks contextual evaluation. Max 6.",
+    "hints": [
+      "Link appraisal to motivation theory (Maslow, Herzberg) for full marks.",
+      "Consider fairness, cost, and implementation challenges."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_2_2_mcq_001",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Organisational Hierarchy — Span of Control",
+    "tags": [
+      "hierarchy",
+      "span-of-control",
+      "delegation",
+      "centralization"
+    ],
+    "stem_template": "A company has {{layers}} layers of management and each manager directly supervises {{span}} employees. This company has a {{type}} organisational structure with a {{span_desc}} span of control.",
+    "params": {
+      "layers": {
+        "type": "choice",
+        "values": [
+          2,
+          3,
+          7,
+          8
+        ]
+      },
+      "span": {
+        "type": "choice",
+        "values": [
+          3,
+          4,
+          10,
+          15
+        ]
+      },
+      "type": {
+        "type": "computed",
+        "formula": "layers <= 3 ? 'flat' : 'tall/hierarchical'"
+      },
+      "span_desc": {
+        "type": "computed",
+        "formula": "span >= 8 ? 'wide' : 'narrow'"
+      }
+    },
+    "answer_template": "Flat structure + wide span of control → fewer managers, more direct communication, greater employee autonomy, lower overhead costs. Tall structure + narrow span → more layers of management, slower communication, more supervisory control.",
+    "distractor_templates": [
+      "Flat structure → narrow span of control; tall structure → wide span.",
+      "Span of control and structure type are unrelated to each other.",
+      "All modern organisations use flat structures with narrow spans of control."
+    ],
+    "options_template": [
+      {
+        "text": "Flat (few layers) + wide span → fast communication, autonomy, lower costs.",
+        "correct": true
+      },
+      {
+        "text": "Flat → narrow span; tall → wide span.",
+        "correct": false
+      },
+      {
+        "text": "Span of control and hierarchy are unrelated.",
+        "correct": false
+      },
+      {
+        "text": "All modern organisations use flat structures with narrow spans.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for correct structure type + span description + one implication.",
+    "hints": [
+      "Wide span = more subordinates per manager → less supervision.",
+      "Tall hierarchy = narrow span, more management layers, slower decisions."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_2_2_worked_001",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Centralisation vs Decentralisation",
+    "tags": [
+      "centralization",
+      "delegation",
+      "hierarchy"
+    ],
+    "stem_template": "{{company}}, a {{industry}} company with operations in {{num_countries}} countries, is deciding whether to centralise or decentralise decision-making. Evaluate each approach for this specific context.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "GlobalRetail",
+          "FastFoodChain",
+          "TechMNC",
+          "BankCorp"
+        ]
+      },
+      "industry": {
+        "type": "choice",
+        "values": [
+          "retail",
+          "food service",
+          "technology",
+          "banking"
+        ]
+      },
+      "num_countries": {
+        "type": "choice",
+        "values": [
+          5,
+          10,
+          20,
+          50
+        ]
+      }
+    },
+    "answer_template": "Centralisation: consistent brand standards, easier coordination, economies of scale in decision-making, clear accountability. But: slow to respond to local market differences across {{num_countries}} countries; may demotivate local managers; overloads senior management. Decentralisation: faster local decision-making, better market adaptation, empowers local managers, develops talent. But: inconsistency, duplication of effort, risk of poor decisions without oversight. For {{company}} operating in {{num_countries}} countries: some decentralisation of operational decisions while centralising strategic decisions (e.g. brand, finance) is likely optimal.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 2 marks centralisation pros/cons; 2 marks decentralisation pros/cons; 2 marks contextual evaluation. Max 6.",
+    "hints": [
+      "Multi-country operations usually favour some decentralisation for local responsiveness.",
+      "Consider the nature of decisions: strategic (centralise) vs operational (decentralise)."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_2_3_mcq_001",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Leadership Styles",
+    "tags": [
+      "leadership-styles",
+      "autocratic",
+      "democratic",
+      "laissez-faire"
+    ],
+    "stem_template": "A manager makes all decisions unilaterally, gives clear instructions, and expects strict compliance from subordinates. This leadership style is best described as:",
+    "params": {},
+    "answer_template": "Autocratic — the leader makes all decisions without consulting staff; appropriate in crises or with unskilled workers but can demotivate capable employees.",
+    "distractor_templates": [
+      "Democratic — involves staff in decision-making through consultation.",
+      "Laissez-faire — gives employees complete freedom to make their own decisions.",
+      "Paternalistic — makes decisions in what the leader believes is best for employees."
+    ],
+    "options_template": [
+      {
+        "text": "Autocratic — unilateral decisions, strict compliance, no consultation.",
+        "correct": true
+      },
+      {
+        "text": "Democratic — involves staff in decision-making.",
+        "correct": false
+      },
+      {
+        "text": "Laissez-faire — complete employee freedom.",
+        "correct": false
+      },
+      {
+        "text": "Paternalistic — decisions made 'for' employees' best interests.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for autocratic + correct key feature (unilateral decisions, no consultation).",
+    "hints": [
+      "Autocratic: fast decisions, used in emergencies or with low-skilled staff.",
+      "Democratic: better for creative, skilled teams; builds motivation."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_2_3_worked_001",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Leadership Style Appropriateness",
+    "tags": [
+      "leadership-styles",
+      "autocratic",
+      "democratic"
+    ],
+    "stem_template": "Analyse which leadership style is most appropriate for {{manager}} managing a team of {{team_desc}} in a {{context}}.",
+    "params": {
+      "manager": {
+        "type": "choice",
+        "values": [
+          "a new manager",
+          "an experienced director",
+          "a crisis manager"
+        ]
+      },
+      "team_desc": {
+        "type": "choice",
+        "values": [
+          "highly experienced professionals",
+          "new unskilled employees",
+          "creative designers",
+          "mixed-experience customer service staff"
+        ]
+      },
+      "context": {
+        "type": "choice",
+        "values": [
+          "financial crisis requiring immediate cost-cutting",
+          "product development project",
+          "routine call centre operation",
+          "innovative tech start-up"
+        ]
+      }
+    },
+    "answer_template": "Context analysis: highly skilled/creative teams → democratic/laissez-faire (Maslow self-actualisation; Herzberg intrinsic motivators; autonomy increases innovation). New/unskilled employees or crisis → autocratic (clear direction needed; no time for consultation). Mature stable teams → paternalistic/democratic. Conclusion: no single 'best' style — effective leaders adapt their style (situational leadership) to the team's competence and the urgency of the situation.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark each style description (max 2); 2 marks for context-appropriate justification; 1 mark motivation theory link; 1 mark conclusion (situational leadership). Max 6.",
+    "hints": [
+      "Hersey and Blanchard's situational leadership model is useful here.",
+      "Link to motivation theories: Maslow, Herzberg, McGregor Theory X/Y."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_2_4_mcq_001",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Maslow's Hierarchy of Needs",
+    "tags": [
+      "maslow",
+      "motivation-theory",
+      "herzberg"
+    ],
+    "stem_template": "According to Maslow's hierarchy, which level of need is being satisfied when a company offers a {{benefit}} to its employees?",
+    "params": {
+      "benefit": {
+        "type": "choice",
+        "values": [
+          "group health insurance",
+          "bonuses and high salary",
+          "flexible working for work-life balance",
+          "job title and recognition awards",
+          "sense of team belonging and social events"
+        ]
+      }
+    },
+    "answer_template": "Health insurance → Safety needs (level 2). Salary/bonuses → Physiological (level 1) or Safety. Flexible working → Love/belonging or Esteem. Recognition → Esteem needs (level 4). Team belonging → Love/Social needs (level 3). Self-actualisation (level 5) is satisfied by challenging, meaningful work and personal growth.",
+    "distractor_templates": [
+      "All employee benefits satisfy the same level: safety needs.",
+      "Maslow's hierarchy is irrelevant to business — only financial incentives matter.",
+      "The highest level (self-actualisation) is always satisfied by financial reward."
+    ],
+    "options_template": [
+      {
+        "text": "Each benefit satisfies a different hierarchical level as described above.",
+        "correct": true
+      },
+      {
+        "text": "All benefits satisfy safety needs only.",
+        "correct": false
+      },
+      {
+        "text": "Maslow is irrelevant — only financial incentives matter.",
+        "correct": false
+      },
+      {
+        "text": "Self-actualisation is always satisfied by financial reward.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark per correct benefit-level match (max 3). Accept: any correctly identified Maslow level with justification.",
+    "hints": [
+      "Maslow: Physiological → Safety → Social → Esteem → Self-actualisation.",
+      "Lower needs must be largely satisfied before higher needs become motivating."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "biz_2_4_mcq_002",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Herzberg Two-Factor Theory",
+    "tags": [
+      "herzberg",
+      "motivation-theory",
+      "maslow"
+    ],
+    "stem_template": "According to Herzberg's two-factor theory, which of the following is a 'motivator' (intrinsic factor) rather than a 'hygiene factor'?",
+    "params": {},
+    "answer_template": "Recognition for achievement — a true motivator that leads to job satisfaction; hygiene factors (e.g. salary, working conditions) only prevent dissatisfaction but do not motivate.",
+    "distractor_templates": [
+      "Salary and pay — this is a hygiene factor that prevents dissatisfaction but does not motivate.",
+      "Working conditions (office environment) — this is a hygiene factor.",
+      "Company policy and administration — this is a hygiene factor."
+    ],
+    "options_template": [
+      {
+        "text": "Recognition for achievement — intrinsic motivator causing job satisfaction.",
+        "correct": true
+      },
+      {
+        "text": "Salary and pay — hygiene factor, prevents dissatisfaction only.",
+        "correct": false
+      },
+      {
+        "text": "Working conditions — hygiene factor.",
+        "correct": false
+      },
+      {
+        "text": "Company policy and administration — hygiene factor.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for recognition/achievement/responsibility/advancement (any motivator) + explanation (intrinsic, causes satisfaction not just removes dissatisfaction).",
+    "hints": [
+      "Motivators: achievement, recognition, responsibility, advancement, the work itself.",
+      "Hygiene factors: salary, working conditions, company policy, supervision, relationships."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_2_4_worked_001",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Motivation Theory Application",
+    "tags": [
+      "maslow",
+      "herzberg",
+      "taylor",
+      "motivation-theory"
+    ],
+    "stem_template": "{{company}} is experiencing high staff turnover ({{turnover}}% annually) among its {{role}} staff. Apply {{theory}} to explain the likely causes of low motivation and recommend two specific interventions.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "CallCentreCo",
+          "RetailStore",
+          "FactoryPlus",
+          "HospitalGroup"
+        ]
+      },
+      "turnover": {
+        "type": "int",
+        "min": 20,
+        "max": 60
+      },
+      "role": {
+        "type": "choice",
+        "values": [
+          "call centre",
+          "retail floor",
+          "production line",
+          "nursing"
+        ]
+      },
+      "theory": {
+        "type": "choice",
+        "values": [
+          "Herzberg's two-factor theory",
+          "Maslow's hierarchy of needs",
+          "Taylor's scientific management"
+        ]
+      }
+    },
+    "answer_template": "Using {{theory}}: Herzberg — hygiene factors (poor pay, bad conditions) create dissatisfaction; interventions: improve pay structure (hygiene) AND enrich jobs (add responsibility, recognition as motivators). Maslow — lower needs not met → interventions: ensure competitive pay (physiological/safety), team-building (social), recognition programmes (esteem). Taylor — financial incentives and clear piece-rate systems can motivate if work is routine. Interventions must address the specific root cause of turnover (exit interviews recommended to diagnose).",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 2 marks theory application to root cause; 1 mark each intervention (max 2) with justification. Max 4+2 = 6.",
+    "hints": [
+      "Herzberg: fix hygiene first, then add motivators.",
+      "High turnover is costly — calculate replacement cost as ${{turnover}}% × annual salary."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_3_1_mcq_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Sources of Finance — Internal vs External",
+    "tags": [
+      "internal-finance",
+      "external-finance",
+      "equity",
+      "debt"
+    ],
+    "stem_template": "A company needs ${{amount}} to fund a new project. It decides to use {{source}}. Is this internal or external finance, and what are the key advantages?",
+    "params": {
+      "amount": {
+        "type": "int",
+        "min": 50000,
+        "max": 5000000
+      },
+      "source": {
+        "type": "choice",
+        "values": [
+          "retained profits",
+          "a bank loan",
+          "issuing new shares",
+          "sale and leaseback",
+          "a debenture"
+        ]
+      }
+    },
+    "answer_template": "Retained profits → internal (no interest, no dilution, but reduces dividend). Bank loan → external debt (maintains ownership but requires interest and repayment). New shares → external equity (no repayment obligation but dilutes ownership). Sale and leaseback → internal/asset-based (immediate cash but loses asset ownership).",
+    "distractor_templates": [
+      "All financing sources are external because money always comes from outside the business.",
+      "Retained profits are external finance because they represent past customer payments.",
+      "Issuing new shares is internal finance because it uses the company's own equity."
+    ],
+    "options_template": [
+      {
+        "text": "Retained profits = internal; bank loan/shares/debenture = external. Each has distinct cost/control implications.",
+        "correct": true
+      },
+      {
+        "text": "All financing is external — money always comes from outside.",
+        "correct": false
+      },
+      {
+        "text": "Retained profits are external as they come from customer payments.",
+        "correct": false
+      },
+      {
+        "text": "Issuing shares is internal finance using company equity.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for correctly classifying {{source}} as internal or external. Award 1 mark for correct key advantage.",
+    "hints": [
+      "Internal: retained profits, depreciation provisions, sale of assets.",
+      "External: loans, shares, debentures, venture capital, grants."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_3_2_mcq_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Fixed vs Variable Costs",
+    "tags": [
+      "fixed-costs",
+      "variable-costs",
+      "revenue",
+      "break-even"
+    ],
+    "stem_template": "A factory producing {{product}} has monthly rent of ${{rent}}, wages of ${{wages}} per unit, and material costs of ${{materials}} per unit. Which are fixed costs?",
+    "params": {
+      "product": {
+        "type": "choice",
+        "values": [
+          "furniture",
+          "clothing",
+          "electronics",
+          "food"
+        ]
+      },
+      "rent": {
+        "type": "int",
+        "min": 5000,
+        "max": 50000
+      },
+      "wages": {
+        "type": "int",
+        "min": 5,
+        "max": 50
+      },
+      "materials": {
+        "type": "int",
+        "min": 2,
+        "max": 30
+      }
+    },
+    "answer_template": "Fixed costs: rent (${{rent}}/month) — does not change with output level. Variable costs: wages (${{wages}}/unit) and materials (${{materials}}/unit) — both increase directly with production volume.",
+    "distractor_templates": [
+      "All costs are variable — they all change when output changes.",
+      "Wages are always fixed — workers are paid the same regardless of output.",
+      "Only material costs are variable; wages and rent are both fixed."
+    ],
+    "options_template": [
+      {
+        "text": "Rent = fixed (unchanged with output); wages per unit + materials per unit = variable.",
+        "correct": true
+      },
+      {
+        "text": "All costs are variable — all change with output.",
+        "correct": false
+      },
+      {
+        "text": "Wages are always fixed; only materials vary.",
+        "correct": false
+      },
+      {
+        "text": "Only materials are variable; wages and rent are both fixed.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for correctly identifying rent as fixed + reason. Award 1 mark for wages and materials as variable + reason.",
+    "hints": [
+      "Fixed costs: do not change with output (e.g. rent, insurance, managers' salaries).",
+      "Variable costs: change directly with output (e.g. materials, direct labour, packaging)."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_3_2_numerical_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.2",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Total Revenue, Costs, and Profit",
+    "tags": [
+      "fixed-costs",
+      "variable-costs",
+      "revenue",
+      "profit"
+    ],
+    "stem_template": "A business has fixed costs of ${{fc}} per month, variable costs of ${{vc}} per unit, and sells {{q}} units at ${{price}} each. Calculate: (a) Total Revenue, (b) Total Costs, (c) Profit or Loss.",
+    "params": {
+      "fc": {
+        "type": "int",
+        "min": 5000,
+        "max": 50000
+      },
+      "vc": {
+        "type": "int",
+        "min": 5,
+        "max": 50
+      },
+      "q": {
+        "type": "int",
+        "min": 500,
+        "max": 5000
+      },
+      "price": {
+        "type": "computed",
+        "formula": "vc + 10 + Math.floor(fc/q)"
+      },
+      "tr": {
+        "type": "computed",
+        "formula": "price * q"
+      },
+      "tc": {
+        "type": "computed",
+        "formula": "fc + vc * q"
+      },
+      "profit": {
+        "type": "computed",
+        "formula": "tr - tc"
+      }
+    },
+    "answer_template": "TR = ${{price}} × {{q}} = ${{tr}}. TC = ${{fc}} + (${{vc}} × {{q}}) = ${{tc}}. Profit = TR − TC = ${{profit}}.",
+    "mark_scheme_template": "Award 1 mark TR = ${{tr}}; 1 mark TC = ${{tc}}; 1 mark Profit/Loss = ${{profit}}. Max 3.",
+    "hints": [
+      "TR = Price × Quantity. TC = FC + (VC × Q). Profit = TR − TC.",
+      "If profit is negative, it is a loss."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "biz_3_3_mcq_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Break-Even Point Definition",
+    "tags": [
+      "break-even-point",
+      "margin-of-safety"
+    ],
+    "stem_template": "A business has fixed costs of ${{fc}}, a selling price of ${{price}} per unit, and variable costs of ${{vc}} per unit. What is the break-even quantity?",
+    "params": {
+      "fc": {
+        "type": "int",
+        "min": 10000,
+        "max": 100000
+      },
+      "price": {
+        "type": "int",
+        "min": 20,
+        "max": 100
+      },
+      "vc": {
+        "type": "computed",
+        "formula": "Math.floor(price * 0.6)"
+      },
+      "contribution": {
+        "type": "computed",
+        "formula": "price - vc"
+      },
+      "beq": {
+        "type": "computed",
+        "formula": "Math.ceil(fc / (price - vc))"
+      }
+    },
+    "answer_template": "\\\\( BEQ = \\\\dfrac{FC}{SP - VC} = \\\\dfrac{{{fc}}}{{{price}} - {{vc}}} = \\\\dfrac{{{fc}}}{{{contribution}}} = {{beq}} \\\\text{ units} \\\\)",
+    "distractor_templates": [
+      "\\\\( BEQ = FC / SP = {{wrong1}} \\\\) (ignores variable costs).",
+      "\\\\( BEQ = FC \\\\times (SP - VC) = {{wrong2}} \\\\) (multiplies instead of divides).",
+      "\\\\( BEQ = (FC + VC) / SP = {{wrong3}} \\\\) (adds all costs incorrectly)."
+    ],
+    "options_template": [
+      {
+        "text": "\\\\( BEQ = FC/(SP-VC) = {{beq}} \\\\text{ units} \\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\( BEQ = FC/SP \\\\) (ignores variable costs).",
+        "correct": false
+      },
+      {
+        "text": "\\\\( BEQ = FC \\\\times (SP-VC) \\\\) (multiplication error).",
+        "correct": false
+      },
+      {
+        "text": "\\\\( BEQ = (FC+VC)/SP \\\\) (incorrect formula).",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award: 1 mark correct formula; 1 mark contribution per unit (SP−VC); 1 mark correct BEQ = {{beq}}. Max 3.",
+    "hints": [
+      "Break-even = Fixed Costs ÷ Contribution per unit.",
+      "Contribution per unit = Selling Price − Variable Cost per unit."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "biz_3_3_numerical_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.3",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Margin of Safety Calculation",
+    "tags": [
+      "margin-of-safety",
+      "break-even-point"
+    ],
+    "stem_template": "A firm has fixed costs of ${{fc}}, selling price ${{price}}/unit, variable costs ${{vc}}/unit, and currently sells {{current_q}} units. Calculate: (a) break-even quantity, (b) margin of safety in units and as a percentage.",
+    "params": {
+      "fc": {
+        "type": "int",
+        "min": 20000,
+        "max": 100000
+      },
+      "price": {
+        "type": "int",
+        "min": 30,
+        "max": 150
+      },
+      "vc": {
+        "type": "computed",
+        "formula": "Math.floor(price * 0.55)"
+      },
+      "contribution": {
+        "type": "computed",
+        "formula": "price - vc"
+      },
+      "beq": {
+        "type": "computed",
+        "formula": "Math.ceil(fc / contribution)"
+      },
+      "current_q": {
+        "type": "computed",
+        "formula": "beq + 500"
+      },
+      "mos": {
+        "type": "computed",
+        "formula": "current_q - beq"
+      },
+      "mos_pct": {
+        "type": "computed",
+        "formula": "((current_q - beq)/current_q * 100).toFixed(1)"
+      }
+    },
+    "answer_template": "Contribution = ${{price}} − ${{vc}} = ${{contribution}}/unit. BEQ = ${{fc}} / ${{contribution}} = {{beq}} units. MOS = {{current_q}} − {{beq}} = {{mos}} units. MOS% = ({{mos}} / {{current_q}}) × 100 = {{mos_pct}}%.",
+    "mark_scheme_template": "Award: 1 mark contribution; 1 mark BEQ; 1 mark MOS in units; 1 mark MOS%. Max 4.",
+    "hints": [
+      "MOS = Actual sales − Break-even sales.",
+      "Higher MOS% = safer position; firm can absorb larger sales drops."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "biz_3_3_worked_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Break-Even Analysis — Full Worked Example",
+    "tags": [
+      "break-even-chart",
+      "break-even-point",
+      "margin-of-safety"
+    ],
+    "stem_template": "{{business}} sells {{product}} at ${{price}} per unit. Fixed costs are ${{fc}} per month and variable costs are ${{vc}} per unit. They aim to sell {{target}} units. (a) Calculate BEQ. (b) Calculate profit at target sales. (c) Calculate margin of safety. (d) Explain one limitation of break-even analysis.",
+    "params": {
+      "business": {
+        "type": "choice",
+        "values": [
+          "A bakery",
+          "A clothing retailer"
+        ]
+      },
+      "product": {
+        "type": "choice",
+        "values": [
+          "cakes",
+          "t-shirts"
+        ]
+      },
+      "price": {
+        "type": "int",
+        "min": 20,
+        "max": 200
+      },
+      "fc": {
+        "type": "int",
+        "min": 5000,
+        "max": 50000
+      },
+      "vc": {
+        "type": "computed",
+        "formula": "Math.floor(price * 0.45)"
+      },
+      "contribution": {
+        "type": "computed",
+        "formula": "price - vc"
+      },
+      "beq": {
+        "type": "computed",
+        "formula": "Math.ceil(fc / contribution)"
+      },
+      "target": {
+        "type": "computed",
+        "formula": "beq + 300"
+      },
+      "tr": {
+        "type": "computed",
+        "formula": "price * target"
+      },
+      "tc": {
+        "type": "computed",
+        "formula": "fc + vc * target"
+      },
+      "profit": {
+        "type": "computed",
+        "formula": "tr - tc"
+      },
+      "mos": {
+        "type": "computed",
+        "formula": "target - beq"
+      },
+      "mos_pct": {
+        "type": "computed",
+        "formula": "((target - beq)/target * 100).toFixed(1)"
+      }
+    },
+    "answer_template": "(a) BEQ = ${{fc}} / (${{price}} − ${{vc}}) = {{beq}} units. (b) Profit at {{target}} units: TR = ${{tr}} − TC = ${{tc}} = ${{profit}}. (c) MOS = {{target}} − {{beq}} = {{mos}} units ({{mos_pct}}%). (d) Limitation: assumes all output is sold (no unsold stock); linear cost/revenue relationships may not hold in practice; ignores economies of scale.",
+    "mark_scheme_template": "Award: 1 mark BEQ; 1 mark TR; 1 mark TC; 1 mark profit; 1 mark MOS; 1 mark limitation. Max 6.",
+    "hints": [
+      "Work through each calculation step by step.",
+      "A limitation must be a genuine weakness that reduces reliability of the analysis."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_3_4_mcq_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Profit and Loss Account — Gross Profit",
+    "tags": [
+      "profit-loss",
+      "gross-profit",
+      "net-profit"
+    ],
+    "stem_template": "A company has revenue of ${{revenue}}, cost of goods sold (COGS) of ${{cogs}}, and operating expenses of ${{opex}}. What is the gross profit?",
+    "params": {
+      "revenue": {
+        "type": "int",
+        "min": 500000,
+        "max": 5000000
+      },
+      "cogs": {
+        "type": "computed",
+        "formula": "Math.floor(revenue * 0.6)"
+      },
+      "opex": {
+        "type": "computed",
+        "formula": "Math.floor(revenue * 0.15)"
+      },
+      "gross_profit": {
+        "type": "computed",
+        "formula": "revenue - cogs"
+      },
+      "net_profit": {
+        "type": "computed",
+        "formula": "revenue - cogs - opex"
+      }
+    },
+    "answer_template": "Gross Profit = Revenue − COGS = ${{revenue}} − ${{cogs}} = ${{gross_profit}}. Net Profit = Gross Profit − Operating Expenses = ${{gross_profit}} − ${{opex}} = ${{net_profit}}.",
+    "distractor_templates": [
+      "Gross Profit = Revenue − COGS − Operating Expenses = ${{wrong1}}.",
+      "Gross Profit = Revenue − Operating Expenses only = ${{wrong2}}.",
+      "Gross Profit = COGS − Revenue = ${{wrong3}} (negative)."
+    ],
+    "options_template": [
+      {
+        "text": "Gross Profit = Revenue − COGS = ${{gross_profit}}.",
+        "correct": true
+      },
+      {
+        "text": "Gross Profit = Revenue − COGS − Operating Expenses = ${{net_profit}}.",
+        "correct": false
+      },
+      {
+        "text": "Gross Profit = Revenue − Operating Expenses only.",
+        "correct": false
+      },
+      {
+        "text": "Gross Profit = COGS − Revenue (negative value).",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award: 1 mark Gross Profit formula; 1 mark correct value ${{gross_profit}}. Max 2.",
+    "hints": [
+      "Gross Profit = Revenue − Cost of Goods Sold (direct costs only).",
+      "Net Profit = Gross Profit − Operating Expenses (overheads)."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_3_4_mcq_002",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Depreciation Methods",
+    "tags": [
+      "depreciation",
+      "balance-sheet",
+      "final-accounts"
+    ],
+    "stem_template": "A machine is bought for ${{cost}} and is expected to last {{years}} years with a residual value of ${{residual}}. Using straight-line depreciation, what is the annual depreciation charge?",
+    "params": {
+      "cost": {
+        "type": "int",
+        "min": 50000,
+        "max": 500000
+      },
+      "years": {
+        "type": "choice",
+        "values": [
+          4,
+          5,
+          8,
+          10
+        ]
+      },
+      "residual": {
+        "type": "computed",
+        "formula": "Math.floor(cost * 0.1)"
+      },
+      "annual_dep": {
+        "type": "computed",
+        "formula": "Math.floor((cost - residual) / years)"
+      }
+    },
+    "answer_template": "\\\\( \\\\text{Annual Depreciation} = \\\\dfrac{\\\\text{Cost} - \\\\text{Residual Value}}{\\\\text{Useful Life}} = \\\\dfrac{{{cost}} - {{residual}}}{{{years}}} = \\\\${{annual_dep}} \\\\text{ per year} \\\\)",
+    "distractor_templates": [
+      "\\\\( \\\\text{Annual Dep} = \\\\text{Cost} / \\\\text{Years} = \\\\${{wrong1}} \\\\) (ignores residual value).",
+      "\\\\( \\\\text{Annual Dep} = (\\\\text{Cost} + \\\\text{Residual}) / \\\\text{Years} = \\\\${{wrong2}} \\\\) (adds instead of subtracts).",
+      "\\\\( \\\\text{Annual Dep} = \\\\text{Cost} \\\\times \\\\text{Years} = \\\\${{wrong3}} \\\\) (multiplies instead of divides)."
+    ],
+    "options_template": [
+      {
+        "text": "\\\\( (Cost - Residual) / Years = ${{annual_dep}} \\\\text{ p.a.} \\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\( Cost / Years = ${{wrong1}} \\\\) (ignores residual).",
+        "correct": false
+      },
+      {
+        "text": "\\\\( (Cost + Residual) / Years \\\\) (adds residual value).",
+        "correct": false
+      },
+      {
+        "text": "\\\\( Cost \\\\times Years \\\\) (multiplication error).",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award: 1 mark correct formula; 1 mark correct answer ${{annual_dep}}. Max 2.",
+    "hints": [
+      "Straight-line: equal depreciation each year over the asset's useful life.",
+      "Residual value = expected sale value at end of useful life."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_3_5_mcq_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Gross Profit Margin",
+    "tags": [
+      "gross-profit-margin",
+      "net-profit-margin",
+      "profitability-ratios"
+    ],
+    "stem_template": "A company reports revenue of ${{revenue}} and cost of goods sold of ${{cogs}}. Calculate the gross profit margin.",
+    "params": {
+      "revenue": {
+        "type": "int",
+        "min": 100000,
+        "max": 2000000
+      },
+      "cogs": {
+        "type": "computed",
+        "formula": "Math.floor(revenue * 0.65)"
+      },
+      "gpm": {
+        "type": "computed",
+        "formula": "((revenue - cogs)/revenue * 100).toFixed(1)"
+      }
+    },
+    "answer_template": "\\\\( GPM = \\\\dfrac{Revenue - COGS}{Revenue} \\\\times 100 = \\\\dfrac{{{revenue}} - {{cogs}}}{{{revenue}}} \\\\times 100 = {{gpm}}\\\\% \\\\)",
+    "distractor_templates": [
+      "\\\\( COGS / Revenue \\\\times 100 = 65\\\\% \\\\) (COGS ratio, not gross margin).",
+      "\\\\( (Revenue - COGS) / COGS \\\\times 100 \\\\) (wrong denominator).",
+      "\\\\( Revenue / COGS \\\\times 100 \\\\) (inverse of cost ratio)."
+    ],
+    "options_template": [
+      {
+        "text": "\\\\( (Revenue-COGS)/Revenue \\\\times 100 = {{gpm}}\\\\% \\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\( COGS/Revenue \\\\times 100 = 65\\\\% \\\\) (COGS ratio).",
+        "correct": false
+      },
+      {
+        "text": "\\\\( (Revenue-COGS)/COGS \\\\times 100 \\\\) (wrong denominator).",
+        "correct": false
+      },
+      {
+        "text": "\\\\( Revenue/COGS \\\\times 100 \\\\) (inverse ratio).",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award: 1 mark correct formula; 1 mark correct GPM = {{gpm}}%. Max 2.",
+    "hints": [
+      "GPM = (Revenue − COGS) / Revenue × 100.",
+      "GPM measures the profitability of core production/trading activities before overheads."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_3_5_numerical_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.5",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Profitability and Liquidity Ratios",
+    "tags": [
+      "gross-profit-margin",
+      "net-profit-margin",
+      "current-ratio"
+    ],
+    "stem_template": "From the following data: Revenue ${{revenue}}, COGS ${{cogs}}, Operating Expenses ${{opex}}, Current Assets ${{ca}}, Current Liabilities ${{cl}}. Calculate: (a) Gross Profit Margin, (b) Net Profit Margin, (c) Current Ratio.",
+    "params": {
+      "revenue": {
+        "type": "int",
+        "min": 500000,
+        "max": 3000000
+      },
+      "cogs": {
+        "type": "computed",
+        "formula": "Math.floor(revenue * 0.6)"
+      },
+      "opex": {
+        "type": "computed",
+        "formula": "Math.floor(revenue * 0.15)"
+      },
+      "ca": {
+        "type": "int",
+        "min": 100000,
+        "max": 800000
+      },
+      "cl": {
+        "type": "computed",
+        "formula": "Math.floor(ca * 0.7)"
+      },
+      "gp": {
+        "type": "computed",
+        "formula": "revenue - cogs"
+      },
+      "gpm": {
+        "type": "computed",
+        "formula": "((revenue-cogs)/revenue*100).toFixed(1)"
+      },
+      "np": {
+        "type": "computed",
+        "formula": "revenue - cogs - opex"
+      },
+      "npm": {
+        "type": "computed",
+        "formula": "((revenue-cogs-opex)/revenue*100).toFixed(1)"
+      },
+      "cr": {
+        "type": "computed",
+        "formula": "(ca/cl).toFixed(2)"
+      }
+    },
+    "answer_template": "GP = ${{revenue}} − ${{cogs}} = ${{gp}}. GPM = ${{gp}}/${{revenue}} × 100 = {{gpm}}%. NP = ${{gp}} − ${{opex}} = ${{np}}. NPM = ${{np}}/${{revenue}} × 100 = {{npm}}%. Current Ratio = ${{ca}} / ${{cl}} = {{cr}}:1.",
+    "mark_scheme_template": "Award: 1 mark each for GPM, NPM, Current Ratio (correct formula and value). Max 3.",
+    "hints": [
+      "Current Ratio = Current Assets / Current Liabilities. Ideal ≈ 1.5:1 to 2:1.",
+      "NPM = Net Profit / Revenue × 100."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "biz_3_5_worked_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.5",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Ratio Analysis and Interpretation",
+    "tags": [
+      "gross-profit-margin",
+      "net-profit-margin",
+      "current-ratio"
+    ],
+    "stem_template": "{{company}} reports the following ratios: GPM {{gpm_curr}}% (industry average: {{gpm_avg}}%), NPM {{npm_curr}}% (industry: {{npm_avg}}%), Current Ratio {{cr_curr}} (industry: {{cr_avg}}). Analyse what these ratios suggest about the company's financial health.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "RetailPlus",
+          "ManufactCo",
+          "ServiceHub",
+          "FoodChain"
+        ]
+      },
+      "gpm_curr": {
+        "type": "choice",
+        "values": [
+          25,
+          35,
+          45,
+          55
+        ]
+      },
+      "gpm_avg": {
+        "type": "choice",
+        "values": [
+          30,
+          40,
+          50,
+          60
+        ]
+      },
+      "npm_curr": {
+        "type": "choice",
+        "values": [
+          5,
+          8,
+          12,
+          15
+        ]
+      },
+      "npm_avg": {
+        "type": "choice",
+        "values": [
+          8,
+          12,
+          15,
+          18
+        ]
+      },
+      "cr_curr": {
+        "type": "choice",
+        "values": [
+          0.8,
+          1.2,
+          2.5,
+          3.0
+        ]
+      },
+      "cr_avg": {
+        "type": "choice",
+        "values": [
+          1.5,
+          1.8,
+          2.0,
+          2.2
+        ]
+      }
+    },
+    "answer_template": "GPM {{gpm_curr}}% vs industry {{gpm_avg}}%: below/above average → suggests {{company}} has higher/lower COGS relative to revenue; may indicate pricing issues or supplier costs. NPM {{npm_curr}}% vs {{npm_avg}}%: if below average, overheads are high relative to competitors. Current Ratio {{cr_curr}}: if below 1.5, potential liquidity risk (cannot cover short-term debts); if above 2.5, may have excess idle cash. Limitations: ratios are snapshots; industry comparisons may not be perfect; need multiple years of data.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per ratio interpretation (max 3); 1 mark comparison to industry average; 1 mark limitation of ratio analysis. Max 5.",
+    "hints": [
+      "Always compare ratios to industry averages and previous years, not in isolation.",
+      "A falling NPM with stable GPM suggests rising overheads."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "biz_3_6_mcq_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.6",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Gearing Ratio",
+    "tags": [
+      "gearing",
+      "stock-turnover",
+      "debtor-days"
+    ],
+    "stem_template": "A company has long-term debt of ${{debt}}m and total capital employed of ${{capital}}m. Calculate the gearing ratio and state whether the company is highly geared.",
+    "params": {
+      "debt": {
+        "type": "int",
+        "min": 10,
+        "max": 200
+      },
+      "capital": {
+        "type": "computed",
+        "formula": "debt + Math.floor(debt * 0.8)"
+      },
+      "gearing": {
+        "type": "computed",
+        "formula": "(debt / (debt + Math.floor(debt * 0.8)) * 100).toFixed(1)"
+      }
+    },
+    "answer_template": "\\\\( \\\\text{Gearing} = \\\\dfrac{\\\\text{Long-term debt}}{\\\\text{Capital employed}} \\\\times 100 = \\\\dfrac{{{debt}}}{{{capital}}} \\\\times 100 = {{gearing}}\\\\% \\\\). {{gearing}}% > 50% = highly geared (greater financial risk); {{gearing}}% < 50% = lowly geared.",
+    "distractor_templates": [
+      "Gearing = Total Capital / Long-term Debt × 100 (inverse formula).",
+      "Gearing = Short-term debt / Total Assets × 100.",
+      "Gearing = Equity / Long-term Debt × 100."
+    ],
+    "options_template": [
+      {
+        "text": "Gearing = Long-term debt / Capital employed × 100 = {{gearing}}%. Classification: {{gearing}}% vs 50% benchmark.",
+        "correct": true
+      },
+      {
+        "text": "Gearing = Total Capital / Long-term Debt × 100 (inverse).",
+        "correct": false
+      },
+      {
+        "text": "Gearing = Short-term debt / Total Assets.",
+        "correct": false
+      },
+      {
+        "text": "Gearing = Equity / Long-term Debt.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award: 1 mark correct formula; 1 mark calculation {{gearing}}%; 1 mark correct classification (highly/lowly geared). Max 3.",
+    "hints": [
+      "Gearing > 50% = highly geared = greater risk but potential for higher returns (leverage).",
+      "Highly geared firms are more vulnerable to interest rate rises."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "biz_3_6_numerical_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.6",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Debtor Days and Stock Turnover",
+    "tags": [
+      "debtor-days",
+      "stock-turnover",
+      "efficiency-ratios"
+    ],
+    "stem_template": "A company has annual sales of ${{sales}}, debtors of ${{debtors}}, stock of ${{stock}}, and COGS of ${{cogs}}. Calculate: (a) Debtor days, (b) Stock turnover (times per year).",
+    "params": {
+      "sales": {
+        "type": "int",
+        "min": 500000,
+        "max": 5000000
+      },
+      "debtors": {
+        "type": "computed",
+        "formula": "Math.floor(sales * 0.1)"
+      },
+      "stock": {
+        "type": "computed",
+        "formula": "Math.floor(sales * 0.08)"
+      },
+      "cogs": {
+        "type": "computed",
+        "formula": "Math.floor(sales * 0.65)"
+      },
+      "debtor_days": {
+        "type": "computed",
+        "formula": "Math.round(debtors/sales * 365)"
+      },
+      "stock_turn": {
+        "type": "computed",
+        "formula": "(cogs/stock).toFixed(1)"
+      }
+    },
+    "answer_template": "Debtor Days = (Debtors / Sales) × 365 = (${{debtors}} / ${{sales}}) × 365 = {{debtor_days}} days. Stock Turnover = COGS / Stock = ${{cogs}} / ${{stock}} = {{stock_turn}} times/year.",
+    "mark_scheme_template": "Award: 1 mark Debtor Days formula + answer {{debtor_days}} days; 1 mark Stock Turnover formula + answer {{stock_turn}} times. Max 2.",
+    "hints": [
+      "Debtor days = (Debtors / Sales) × 365. Lower is generally better.",
+      "Stock turnover = COGS / Closing Stock. Higher = faster moving stock."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_3_7_mcq_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.7",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Cash Flow vs Profit",
+    "tags": [
+      "cash-flow-forecast",
+      "working-capital"
+    ],
+    "stem_template": "A growing company reports a net profit of ${{profit}} but has negative cash flow of ${{cashflow}}. Which of the following best explains this apparent contradiction?",
+    "params": {
+      "profit": {
+        "type": "int",
+        "min": 10000,
+        "max": 200000
+      },
+      "cashflow": {
+        "type": "computed",
+        "formula": "Math.floor(profit * 0.5)"
+      }
+    },
+    "answer_template": "A profitable company can have negative cash flow if it has high debtors (profit recognised but not yet received), large capital expenditure, high stock levels (cash tied up in inventory), or is repaying loans. Profit is an accounting concept; cash flow is a liquidity concept.",
+    "distractor_templates": [
+      "A profitable company always has positive cash flow — if cash flow is negative, the profit figures are incorrect.",
+      "The company is paying too much tax on its profits, leaving insufficient cash.",
+      "Negative cash flow only occurs in loss-making companies."
+    ],
+    "options_template": [
+      {
+        "text": "High debtors, capital expenditure, or stock levels can make a profitable firm cash-flow negative.",
+        "correct": true
+      },
+      {
+        "text": "Profitable companies always have positive cash flow.",
+        "correct": false
+      },
+      {
+        "text": "Negative cash flow due to excessive tax payments on profit.",
+        "correct": false
+      },
+      {
+        "text": "Negative cash flow only occurs in loss-making companies.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for any valid reason (debtors/receivables not yet paid, capex, stock build-up) + distinction between profit and cash.",
+    "hints": [
+      "Profit ≠ Cash. Sales on credit increase profit but not immediate cash.",
+      "Cash flow problems (not losses) are the most common cause of business failure."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_3_7_numerical_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.7",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Cash Flow Forecast Construction",
+    "tags": [
+      "cash-flow-forecast",
+      "working-capital"
+    ],
+    "stem_template": "Complete a 3-month cash flow forecast for {{company}}. Month 1: Receipts ${{r1}}, Payments ${{p1}}, Opening balance ${{open}}. Month 2: Receipts ${{r2}}, Payments ${{p2}}. Month 3: Receipts ${{r3}}, Payments ${{p3}}. Calculate closing balances for each month.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "StarBakes",
+          "TechStart"
+        ]
+      },
+      "r1": {
+        "type": "int",
+        "min": 10000,
+        "max": 100000
+      },
+      "p1": {
+        "type": "computed",
+        "formula": "Math.floor(r1 * 1.1)"
+      },
+      "r2": {
+        "type": "computed",
+        "formula": "Math.floor(r1 * 1.2)"
+      },
+      "p2": {
+        "type": "computed",
+        "formula": "Math.floor(r1 * 0.9)"
+      },
+      "r3": {
+        "type": "computed",
+        "formula": "Math.floor(r1 * 1.5)"
+      },
+      "p3": {
+        "type": "computed",
+        "formula": "Math.floor(r1 * 0.95)"
+      },
+      "open": {
+        "type": "int",
+        "min": 5000,
+        "max": 30000
+      },
+      "ncf1": {
+        "type": "computed",
+        "formula": "r1 - p1"
+      },
+      "close1": {
+        "type": "computed",
+        "formula": "open + ncf1"
+      },
+      "ncf2": {
+        "type": "computed",
+        "formula": "r2 - p2"
+      },
+      "close2": {
+        "type": "computed",
+        "formula": "close1 + ncf2"
+      },
+      "ncf3": {
+        "type": "computed",
+        "formula": "r3 - p3"
+      },
+      "close3": {
+        "type": "computed",
+        "formula": "close2 + ncf3"
+      }
+    },
+    "answer_template": "M1: Net CF = ${{r1}} − ${{p1}} = ${{ncf1}}. Closing = ${{open}} + ${{ncf1}} = ${{close1}}. M2: Net CF = ${{r2}} − ${{p2}} = ${{ncf2}}. Closing = ${{close1}} + ${{ncf2}} = ${{close2}}. M3: Net CF = ${{r3}} − ${{p3}} = ${{ncf3}}. Closing = ${{close2}} + ${{ncf3}} = ${{close3}}.",
+    "mark_scheme_template": "Award 1 mark per correct closing balance (max 3). Accept carry-forward errors if method is correct.",
+    "hints": [
+      "Closing balance = Opening balance + Net cash flow (Receipts − Payments).",
+      "Opening balance of each month = Closing balance of previous month."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "biz_3_8_mcq_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.8",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Payback Period",
+    "tags": [
+      "payback",
+      "ARR",
+      "NPV",
+      "investment-appraisal"
+    ],
+    "stem_template": "An investment of ${{investment}} is expected to generate annual net cash inflows of ${{annual_cf}}. What is the payback period?",
+    "params": {
+      "investment": {
+        "type": "int",
+        "min": 50000,
+        "max": 500000
+      },
+      "annual_cf": {
+        "type": "computed",
+        "formula": "Math.floor(investment / 4)"
+      },
+      "payback": {
+        "type": "computed",
+        "formula": "(investment / annual_cf).toFixed(1)"
+      }
+    },
+    "answer_template": "Payback Period = Initial Investment / Annual Cash Inflow = ${{investment}} / ${{annual_cf}} = {{payback}} years.",
+    "distractor_templates": [
+      "Payback = Annual CF / Investment = {{wrong1}} years.",
+      "Payback = Investment × Annual CF = {{wrong2}} (multiplication error).",
+      "Payback cannot be calculated without knowing the discount rate."
+    ],
+    "options_template": [
+      {
+        "text": "Investment / Annual CF = {{payback}} years.",
+        "correct": true
+      },
+      {
+        "text": "Annual CF / Investment = {{wrong1}} years.",
+        "correct": false
+      },
+      {
+        "text": "Investment × Annual CF (multiplication error).",
+        "correct": false
+      },
+      {
+        "text": "Cannot be calculated without discount rate.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award: 1 mark correct formula; 1 mark answer {{payback}} years. Max 2.",
+    "hints": [
+      "Payback = Initial Investment / Annual Net Cash Inflow (for equal annual flows).",
+      "Payback ignores cash flows after break-even and the time value of money."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_3_8_calculation_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.8",
+    "type": "calculation",
+    "difficulty": "challenge",
+    "title": "Net Present Value (NPV) Calculation",
+    "tags": [
+      "NPV",
+      "investment-appraisal",
+      "discount-rate"
+    ],
+    "stem_template": "An investment project costs ${{investment}} today. It is expected to generate cash inflows of ${{cf1}} in Year 1, ${{cf2}} in Year 2, and ${{cf3}} in Year 3. The discount rate is {{rate}}%. Calculate the NPV using the discount factors: Year 1 = {{df1}}, Year 2 = {{df2}}, Year 3 = {{df3}}. Should the company invest?",
+    "params": {
+      "investment": {
+        "type": "int",
+        "min": 100000,
+        "max": 500000
+      },
+      "cf1": {
+        "type": "computed",
+        "formula": "Math.floor(investment * 0.35)"
+      },
+      "cf2": {
+        "type": "computed",
+        "formula": "Math.floor(investment * 0.40)"
+      },
+      "cf3": {
+        "type": "computed",
+        "formula": "Math.floor(investment * 0.45)"
+      },
+      "rate": {
+        "type": "choice",
+        "values": [
+          8,
+          10,
+          12
+        ]
+      },
+      "df1": {
+        "type": "computed",
+        "formula": "(1/(1+rate/100)).toFixed(3)"
+      },
+      "df2": {
+        "type": "computed",
+        "formula": "(1/(1+rate/100)**2).toFixed(3)"
+      },
+      "df3": {
+        "type": "computed",
+        "formula": "(1/(1+rate/100)**3).toFixed(3)"
+      },
+      "pv1": {
+        "type": "computed",
+        "formula": "Math.round(cf1 * df1)"
+      },
+      "pv2": {
+        "type": "computed",
+        "formula": "Math.round(cf2 * df2)"
+      },
+      "pv3": {
+        "type": "computed",
+        "formula": "Math.round(cf3 * df3)"
+      },
+      "total_pv": {
+        "type": "computed",
+        "formula": "pv1 + pv2 + pv3"
+      },
+      "npv": {
+        "type": "computed",
+        "formula": "total_pv - investment"
+      },
+      "decision": {
+        "type": "computed",
+        "formula": "npv >= 0 ? 'INVEST — positive NPV' : 'DO NOT INVEST — negative NPV'"
+      }
+    },
+    "answer_template": "PV Year 1 = ${{cf1}} × {{df1}} = ${{pv1}}. PV Year 2 = ${{cf2}} × {{df2}} = ${{pv2}}. PV Year 3 = ${{cf3}} × {{df3}} = ${{pv3}}. Total PV = ${{total_pv}}. NPV = Total PV − Initial Investment = ${{total_pv}} − ${{investment}} = ${{npv}}. Decision: {{decision}} (positive NPV → invest; negative NPV → do not invest).",
+    "mark_scheme_template": "Award: 1 mark per PV calculation (max 3); 1 mark total PV; 1 mark NPV; 1 mark correct investment decision with justification. Max 6.",
+    "hints": [
+      "NPV > 0 → invest (project returns more than the cost of capital).",
+      "Higher discount rate → lower NPV (future cash flows worth less today)."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_3_8_calculation_002",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.8",
+    "type": "calculation",
+    "difficulty": "challenge",
+    "title": "ARR and Investment Comparison",
+    "tags": [
+      "ARR",
+      "payback",
+      "NPV",
+      "investment-appraisal"
+    ],
+    "stem_template": "Project A: Initial cost ${{inv_a}}, total net profit over {{years}} years = ${{profit_a}}. Project B: Initial cost ${{inv_b}}, total net profit over {{years}} years = ${{profit_b}}. Calculate the ARR for both projects and recommend which to select.",
+    "params": {
+      "inv_a": {
+        "type": "int",
+        "min": 100000,
+        "max": 500000
+      },
+      "inv_b": {
+        "type": "computed",
+        "formula": "Math.floor(inv_a * 1.2)"
+      },
+      "years": {
+        "type": "choice",
+        "values": [
+          3,
+          4,
+          5
+        ]
+      },
+      "profit_a": {
+        "type": "computed",
+        "formula": "Math.floor(inv_a * 0.6)"
+      },
+      "profit_b": {
+        "type": "computed",
+        "formula": "Math.floor(inv_b * 0.7)"
+      },
+      "avg_a": {
+        "type": "computed",
+        "formula": "Math.round(profit_a / years)"
+      },
+      "avg_b": {
+        "type": "computed",
+        "formula": "Math.round(profit_b / years)"
+      },
+      "arr_a": {
+        "type": "computed",
+        "formula": "(avg_a / inv_a * 100).toFixed(1)"
+      },
+      "arr_b": {
+        "type": "computed",
+        "formula": "(avg_b / inv_b * 100).toFixed(1)"
+      },
+      "best_project": {
+        "type": "computed",
+        "formula": "arr_a > arr_b ? 'A' : 'B'"
+      }
+    },
+    "answer_template": "ARR = (Average Annual Profit / Initial Investment) × 100. Project A: avg profit = ${{profit_a}} / {{years}} = ${{avg_a}}. ARR_A = (${{avg_a}} / ${{inv_a}}) × 100 = {{arr_a}}%. Project B: avg profit = ${{profit_b}} / {{years}} = ${{avg_b}}. ARR_B = (${{avg_b}} / ${{inv_b}}) × 100 = {{arr_b}}%. Recommendation: select project with higher ARR (Project {{best_project}}), but also consider payback period and NPV.",
+    "mark_scheme_template": "Award: 1 mark ARR formula; 1 mark ARR_A = {{arr_a}}%; 1 mark ARR_B = {{arr_b}}%; 1 mark recommendation + limitation. Max 4.",
+    "hints": [
+      "ARR = (Average Annual Profit / Initial Investment) × 100.",
+      "ARR ignores the time value of money — compare with NPV for better decision."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "biz_4_1_mcq_001",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Market vs Product Orientation",
+    "tags": [
+      "market-orientation",
+      "product-orientation",
+      "marketing-mix"
+    ],
+    "stem_template": "A company develops a {{product}} based entirely on consumer research showing that customers want {{feature}}. This approach is:",
+    "params": {
+      "product": {
+        "type": "choice",
+        "values": [
+          "new smartphone",
+          "food item",
+          "financial service",
+          "healthcare app"
+        ]
+      },
+      "feature": {
+        "type": "choice",
+        "values": [
+          "longer battery life",
+          "lower sugar content",
+          "zero fees",
+          "faster diagnosis"
+        ]
+      }
+    },
+    "answer_template": "Market-oriented — the company identifies consumer needs first ({{feature}}) and then develops the product to meet those needs.",
+    "distractor_templates": [
+      "Product-oriented — the company develops the product first and then markets it to consumers.",
+      "Asset-oriented — the company uses its existing manufacturing assets to produce the product.",
+      "Sales-oriented — the company uses aggressive sales techniques to push the product."
+    ],
+    "options_template": [
+      {
+        "text": "Market-oriented — identifies consumer needs first, then develops product.",
+        "correct": true
+      },
+      {
+        "text": "Product-oriented — develops product first, then markets it.",
+        "correct": false
+      },
+      {
+        "text": "Asset-oriented — uses existing assets to determine product.",
+        "correct": false
+      },
+      {
+        "text": "Sales-oriented — pushes products through aggressive selling.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for market-oriented + correct description (needs identified before product development).",
+    "hints": [
+      "Market-oriented = 'outside-in'; Product-oriented = 'inside-out'.",
+      "Most modern businesses are market-oriented."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_4_1_worked_001",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "worked",
+    "difficulty": "core",
+    "title": "Marketing Mix — 4Ps Analysis",
+    "tags": [
+      "marketing-mix",
+      "market-orientation",
+      "product"
+    ],
+    "stem_template": "Analyse the marketing mix (4Ps) of {{brand}} in the {{market}} market. For each element, describe the current approach and suggest one improvement.",
+    "params": {
+      "brand": {
+        "type": "choice",
+        "values": [
+          "Apple",
+          "Zara",
+          "McDonald's",
+          "Spotify",
+          "Tesla"
+        ]
+      },
+      "market": {
+        "type": "choice",
+        "values": [
+          "premium smartphone",
+          "fast fashion",
+          "fast food",
+          "music streaming",
+          "electric vehicle"
+        ]
+      }
+    },
+    "answer_template": "Product: {{brand}} focuses on innovation/quality/design; suggestion — expand product range. Price: premium/competitive pricing strategy; suggestion — introduce tiered pricing. Place: direct sales/online/retail; suggestion — expand distribution channels. Promotion: social media/word-of-mouth/traditional advertising; suggestion — target new demographic segments. The 4Ps must be coherent and mutually reinforcing (marketing mix coherence).",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per P described + 1 mark per improvement (max 4 Ps × 2 = max 6, but accept 4 total marks minimum).",
+    "hints": [
+      "All 4Ps must be internally consistent (e.g. premium product → premium price).",
+      "Consider target market when evaluating each P."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_4_2_mcq_001",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Market Segmentation Bases",
+    "tags": [
+      "segmentation",
+      "targeting",
+      "positioning",
+      "SWOT"
+    ],
+    "stem_template": "{{company}} segments its market by {{basis}}, dividing consumers into groups based on {{description}}. This is {{type}} segmentation.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "a car manufacturer",
+          "a bank",
+          "a clothing brand",
+          "a food company"
+        ]
+      },
+      "basis": {
+        "type": "choice",
+        "values": [
+          "age and income",
+          "lifestyle and values",
+          "geographic region",
+          "purchase frequency"
+        ]
+      },
+      "description": {
+        "type": "choice",
+        "values": [
+          "demographic characteristics",
+          "psychographic profile",
+          "location",
+          "behavioural patterns"
+        ]
+      },
+      "type": {
+        "type": "choice",
+        "values": [
+          "demographic",
+          "psychographic",
+          "geographic",
+          "behavioural"
+        ]
+      }
+    },
+    "answer_template": "{{type}} segmentation — dividing the market by {{description}} allows targeted product development, pricing, and promotion for each segment.",
+    "distractor_templates": [
+      "Mass marketing — treating all consumers identically with one undifferentiated offer.",
+      "Niche marketing — targeting a very specific, narrow market segment only.",
+      "Product differentiation — making one product appeal to all market segments."
+    ],
+    "options_template": [
+      {
+        "text": "{{type}} segmentation — group by {{description}} for targeted marketing.",
+        "correct": true
+      },
+      {
+        "text": "Mass marketing — one undifferentiated offer for all consumers.",
+        "correct": false
+      },
+      {
+        "text": "Niche marketing — targeting a narrow segment only.",
+        "correct": false
+      },
+      {
+        "text": "Product differentiation — one product for all segments.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for {{type}} segmentation + correct basis description.",
+    "hints": [
+      "Demographic: age, gender, income, education.",
+      "Psychographic: lifestyle, values, personality. Behavioural: usage, loyalty, purchase frequency."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_4_2_worked_001",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "SWOT Analysis and Marketing Strategy",
+    "tags": [
+      "SWOT",
+      "market-research",
+      "segmentation",
+      "targeting"
+    ],
+    "stem_template": "Conduct a SWOT analysis for {{company}} in the {{industry}} industry and recommend a marketing strategy based on your findings.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "a local gym",
+          "an independent coffee shop",
+          "a regional airline",
+          "an online tutoring service"
+        ]
+      },
+      "industry": {
+        "type": "choice",
+        "values": [
+          "fitness",
+          "food and beverage",
+          "aviation",
+          "education"
+        ]
+      }
+    },
+    "answer_template": "S: Strong local community relationships; personalised service; low overhead costs (vs chains). W: Limited marketing budget; no economies of scale; limited product range. O: Growing health/wellness trend; digital marketing access; underserved niche segments. T: Large chain competitors; economic downturn affecting discretionary spending; rising costs. Strategy: exploit strengths+opportunities (SO strategy) — target health-conscious local consumers using low-cost social media; differentiate on personalised service vs chains. Must match strategy to specific SWOT findings.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per SWOT element with example (max 4); 1 mark strategy linked to S+O; 1 mark addressing W or T. Max 6.",
+    "hints": [
+      "Link your strategy directly to SWOT — don't write a generic strategy.",
+      "SO strategy (use strengths to exploit opportunities) is most common in marketing plans."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_4_3_mcq_001",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Moving Average — Sales Forecasting",
+    "tags": [
+      "moving-averages",
+      "extrapolation",
+      "seasonal-variation"
+    ],
+    "stem_template": "A company's quarterly sales (in $000s) for the past four quarters are: Q1: ${{q1}}, Q2: ${{q2}}, Q3: ${{q3}}, Q4: ${{q4}}. Calculate the 4-quarter moving average centred on Q2-Q3.",
+    "params": {
+      "q1": {
+        "type": "int",
+        "min": 100,
+        "max": 400
+      },
+      "q2": {
+        "type": "computed",
+        "formula": "q1 + 50"
+      },
+      "q3": {
+        "type": "computed",
+        "formula": "q1 + 20"
+      },
+      "q4": {
+        "type": "computed",
+        "formula": "q1 + 80"
+      },
+      "ma": {
+        "type": "computed",
+        "formula": "((q1 + q2 + q3 + q4)/4).toFixed(0)"
+      }
+    },
+    "answer_template": "4-quarter moving average = (${{q1}} + ${{q2}} + ${{q3}} + ${{q4}}) / 4 = ${{ma}} (in $000s). This smooths seasonal variation to reveal the underlying trend.",
+    "distractor_templates": [
+      "Moving average = (Q2 + Q3) / 2 (two-quarter average only).",
+      "Moving average = highest value in the set (Q4).",
+      "Moving average cannot be calculated with only 4 data points."
+    ],
+    "options_template": [
+      {
+        "text": "(Q1+Q2+Q3+Q4)/4 = ${{ma}}k — smooths seasonal variation.",
+        "correct": true
+      },
+      {
+        "text": "(Q2+Q3)/2 — two-quarter average only.",
+        "correct": false
+      },
+      {
+        "text": "Highest value = Q4 figure.",
+        "correct": false
+      },
+      {
+        "text": "Cannot be calculated with only 4 data points.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award: 1 mark correct formula (sum / 4); 1 mark correct answer ${{ma}}k. Max 2.",
+    "hints": [
+      "Moving average = sum of n periods / n.",
+      "It smooths out seasonal fluctuations to show the underlying trend."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_4_3_worked_001",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Sales Forecasting with Trend and Seasonal Variation",
+    "tags": [
+      "moving-averages",
+      "extrapolation",
+      "seasonal-variation"
+    ],
+    "stem_template": "Using the following data for {{company}}, calculate a 3-period moving average and identify the trend. Quarters: {{q1}}, {{q2}}, {{q3}}, {{q4}}, {{q5}}. Forecast Q6 using extrapolation.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "IceCreamCo"
+        ]
+      },
+      "q1": {
+        "type": "int",
+        "min": 100,
+        "max": 300
+      },
+      "q2": {
+        "type": "computed",
+        "formula": "q1 + 20"
+      },
+      "q3": {
+        "type": "computed",
+        "formula": "q1 + 30"
+      },
+      "q4": {
+        "type": "computed",
+        "formula": "q1 + 50"
+      },
+      "q5": {
+        "type": "computed",
+        "formula": "q1 + 70"
+      },
+      "ma1": {
+        "type": "computed",
+        "formula": "((q1+q2+q3)/3).toFixed(1)"
+      },
+      "ma2": {
+        "type": "computed",
+        "formula": "((q2+q3+q4)/3).toFixed(1)"
+      },
+      "ma3": {
+        "type": "computed",
+        "formula": "((q3+q4+q5)/3).toFixed(1)"
+      },
+      "trend_inc": {
+        "type": "computed",
+        "formula": "(((q3+q4+q5)/3 - (q1+q2+q3)/3)/2).toFixed(1)"
+      },
+      "q6_fore": {
+        "type": "computed",
+        "formula": "((q3+q4+q5)/3 + (((q3+q4+q5)/3 - (q1+q2+q3)/3)/2)).toFixed(0)"
+      }
+    },
+    "answer_template": "3-period MAs: MA1 = (${{q1}}+${{q2}}+${{q3}})/3 = ${{ma1}}. MA2 = (${{q2}}+${{q3}}+${{q4}})/3 = ${{ma2}}. MA3 = (${{q3}}+${{q4}}+${{q5}})/3 = ${{ma3}}. Trend = increasing by approx ${{trend_inc}} per period. Forecast Q6 ≈ ${{q6_fore}}. Limitation: extrapolation assumes past trends continue; does not account for market changes.",
+    "mark_scheme_template": "Award: 1 mark each MA (max 3); 1 mark trend identification; 1 mark Q6 forecast; 1 mark limitation. Max 6.",
+    "hints": [
+      "3-period MA: average of three consecutive data points.",
+      "Extrapolation = extending the trend line beyond known data."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_4_4_mcq_001",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Product Life Cycle",
+    "tags": [
+      "PLC",
+      "product",
+      "price",
+      "promotion"
+    ],
+    "stem_template": "{{product}} is in the {{stage}} stage of its product life cycle, characterised by {{characteristics}}. Which marketing mix strategy is most appropriate?",
+    "params": {
+      "product": {
+        "type": "choice",
+        "values": [
+          "A new electric scooter",
+          "A classic soft drink",
+          "A declining print newspaper",
+          "A recently launched app"
+        ]
+      },
+      "stage": {
+        "type": "choice",
+        "values": [
+          "introduction",
+          "growth",
+          "maturity",
+          "decline"
+        ]
+      },
+      "characteristics": {
+        "type": "choice",
+        "values": [
+          "low sales, high promotion costs",
+          "rapidly increasing sales, growing competition",
+          "peak sales, intense competition",
+          "falling sales, reduced profitability"
+        ]
+      }
+    },
+    "answer_template": "Introduction: penetration/skimming pricing, heavy promotion (awareness), limited distribution. Growth: expand distribution, differentiate, reduce price as competition grows. Maturity: extension strategies (new markets, product modifications), competitive pricing. Decline: harvest profits, reduce costs, niche targeting, or product discontinuation.",
+    "distractor_templates": [
+      "The same marketing mix should be used throughout the product life cycle for consistency.",
+      "Only price changes are needed across PLC stages; promotion stays constant.",
+      "During decline, increase advertising spending to revive sales."
+    ],
+    "options_template": [
+      {
+        "text": "Each PLC stage requires a different marketing mix adapted to the stage characteristics.",
+        "correct": true
+      },
+      {
+        "text": "Same marketing mix throughout for consistency.",
+        "correct": false
+      },
+      {
+        "text": "Only price needs to change across PLC stages.",
+        "correct": false
+      },
+      {
+        "text": "Decline stage: increase advertising to revive sales.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark per correct PLC-stage specific strategy (max 3). Accept any appropriate stage-specific recommendation.",
+    "hints": [
+      "Each PLC stage has different sales, profit, and competition profiles.",
+      "Extension strategies delay the decline stage."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "biz_4_4_worked_001",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Pricing Strategies Analysis",
+    "tags": [
+      "price",
+      "PLC",
+      "pricing-strategies"
+    ],
+    "stem_template": "{{company}} is launching {{product}} in the {{market}} market. Evaluate the suitability of {{strategy1}} versus {{strategy2}} as pricing strategies.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "TechNova",
+          "LuxBrand",
+          "BudgetMart",
+          "NovaMed"
+        ]
+      },
+      "product": {
+        "type": "choice",
+        "values": [
+          "a premium smartwatch",
+          "a generic household cleaner",
+          "a new pharmaceutical drug",
+          "a budget smartphone"
+        ]
+      },
+      "market": {
+        "type": "choice",
+        "values": [
+          "premium tech",
+          "commodity FMCG",
+          "healthcare",
+          "developing economy"
+        ]
+      },
+      "strategy1": {
+        "type": "choice",
+        "values": [
+          "price skimming",
+          "penetration pricing",
+          "cost-plus pricing"
+        ]
+      },
+      "strategy2": {
+        "type": "choice",
+        "values": [
+          "competitive pricing",
+          "psychological pricing",
+          "value-based pricing"
+        ]
+      }
+    },
+    "answer_template": "{{strategy1}}: Advantages and disadvantages specific to {{product}} and {{market}}. {{strategy2}}: Advantages and disadvantages. Recommendation: choose the strategy that best matches target market price sensitivity (PED), competitive landscape, and company objectives. Premium markets → skimming; commoditised markets → penetration; pharmaceutical → value-based. Must link to PED and marketing mix coherence.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 2 marks strategy 1 (pros/cons); 2 marks strategy 2; 2 marks justified recommendation. Max 6.",
+    "hints": [
+      "Link pricing strategy to PED: inelastic demand → skimming; elastic → penetration.",
+      "Pricing must be consistent with the other 3Ps."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_4_5_mcq_001",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Extended Marketing Mix — 7Ps",
+    "tags": [
+      "people",
+      "process",
+      "physical-evidence",
+      "7Ps"
+    ],
+    "stem_template": "A hotel's commitment to staff training, appearance, and attitude is an example of which element of the extended marketing mix?",
+    "params": {},
+    "answer_template": "People — in service businesses, the quality of customer-facing staff directly influences customer satisfaction and brand perception.",
+    "distractor_templates": [
+      "Process — the systems and procedures for delivering the service.",
+      "Physical evidence — tangible elements of the service environment (décor, brochures).",
+      "Product — the core service offering provided to customers."
+    ],
+    "options_template": [
+      {
+        "text": "People — staff quality and attitude directly influence service experience.",
+        "correct": true
+      },
+      {
+        "text": "Process — systems and procedures for service delivery.",
+        "correct": false
+      },
+      {
+        "text": "Physical evidence — tangible service environment elements.",
+        "correct": false
+      },
+      {
+        "text": "Product — the core service offering.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for People + explanation (staff quality/training affects service delivery and satisfaction).",
+    "hints": [
+      "7Ps = 4Ps + People, Process, Physical Evidence.",
+      "Service businesses rely especially on the additional 3Ps."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_4_5_worked_001",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.5",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "7Ps Analysis for a Service Business",
+    "tags": [
+      "people",
+      "process",
+      "physical-evidence",
+      "7Ps"
+    ],
+    "stem_template": "Apply the 7Ps marketing mix to {{service_business}}. For each P, describe the current approach and suggest one enhancement.",
+    "params": {
+      "service_business": {
+        "type": "choice",
+        "values": [
+          "a luxury hotel",
+          "an online bank",
+          "a private hospital",
+          "a fitness club"
+        ]
+      }
+    },
+    "answer_template": "Product: core service + supplementary services. Price: premium/value strategy. Place: online/physical/omnichannel distribution. Promotion: digital/traditional channels. People: staff training, appearance, customer service standards. Process: booking, check-in, complaints handling systems. Physical Evidence: premises design, uniforms, brochures, online presence. Enhancement for each: e.g. People → invest in service training; Process → streamline digital booking; Physical Evidence → redesign reception area.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per P description (max 7); 1 mark per enhancement (max 3). Total cap: 6 marks.",
+    "hints": [
+      "Services are intangible — physical evidence and people are especially important.",
+      "Link each P to customer satisfaction and competitive advantage."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_5_1_mcq_001",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Production Methods",
+    "tags": [
+      "production-methods",
+      "job",
+      "batch",
+      "flow"
+    ],
+    "stem_template": "A tailor makes a {{garment}} from scratch to a single customer's exact specifications. This is an example of:",
+    "params": {
+      "garment": {
+        "type": "choice",
+        "values": [
+          "wedding dress",
+          "business suit",
+          "school uniform batch",
+          "luxury coat"
+        ]
+      }
+    },
+    "answer_template": "Job production — each item is made individually to specific customer requirements; high quality, skilled labour, flexible, but high cost per unit and slow.",
+    "distractor_templates": [
+      "Batch production — a set quantity of identical items produced before switching to another product.",
+      "Flow/mass production — continuous automated production of identical items.",
+      "Cell production — teams of workers complete all stages of manufacturing."
+    ],
+    "options_template": [
+      {
+        "text": "Job production — individual item, unique specifications, high skill, high cost.",
+        "correct": true
+      },
+      {
+        "text": "Batch production — set quantity before switching to next product.",
+        "correct": false
+      },
+      {
+        "text": "Flow/mass production — continuous automated identical production.",
+        "correct": false
+      },
+      {
+        "text": "Cell production — team-based complete manufacturing.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for job production + key feature (individual/unique/bespoke).",
+    "hints": [
+      "Job = unique, one at a time. Batch = groups. Flow = continuous/automated.",
+      "Job production is most flexible but most expensive per unit."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_5_1_worked_001",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Choosing Production Method",
+    "tags": [
+      "production-methods",
+      "job",
+      "batch",
+      "flow"
+    ],
+    "stem_template": "{{company}}, which produces {{product}}, is considering switching from {{current_method}} to {{new_method}} production. Analyse the implications of this change.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "ArtisanBakery",
+          "CarManufacturer",
+          "ClothingCo",
+          "PrintShop"
+        ]
+      },
+      "product": {
+        "type": "choice",
+        "values": [
+          "artisan bread",
+          "luxury cars",
+          "custom uniforms",
+          "bespoke stationery"
+        ]
+      },
+      "current_method": {
+        "type": "choice",
+        "values": [
+          "job",
+          "batch",
+          "job"
+        ]
+      },
+      "new_method": {
+        "type": "choice",
+        "values": [
+          "batch",
+          "flow",
+          "batch"
+        ]
+      }
+    },
+    "answer_template": "Switching from {{current_method}} to {{new_method}}: Benefits — lower cost per unit (economies of scale), faster production, more consistent quality, ability to meet larger orders. Drawbacks — loss of customisation/uniqueness (may undermine brand premium), capital investment required, workers may need retraining (de-skilling risk), reduced flexibility to respond to individual orders. Strategic implication: suitable if market demand is high-volume and price-sensitive; unsuitable if brand differentiation depends on artisanal quality.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 2 marks benefits; 2 marks drawbacks; 2 marks strategic analysis (context-specific). Max 6.",
+    "hints": [
+      "Consider the impact on cost, quality, flexibility, and brand positioning.",
+      "Link to the concept of economies of scale and opportunity cost of customisation."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_5_2_mcq_001",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Just-In-Time (JIT) Production",
+    "tags": [
+      "lean-production",
+      "JIT",
+      "kaizen"
+    ],
+    "stem_template": "A car manufacturer orders components only when needed for production, holding virtually no stock. This approach is known as:",
+    "params": {},
+    "answer_template": "Just-In-Time (JIT) inventory management — components arrive exactly when needed, minimising storage costs and working capital tied up in stock. Requires reliable suppliers and accurate demand forecasting.",
+    "distractor_templates": [
+      "Just-In-Case (JIC) — holding large buffer stocks to ensure continuous production regardless of supply disruptions.",
+      "Kaizen — continuous incremental improvement in production processes.",
+      "TQM (Total Quality Management) — a company-wide approach to achieving zero defects."
+    ],
+    "options_template": [
+      {
+        "text": "JIT (Just-In-Time) — components arrive exactly when needed; minimal stock holdings.",
+        "correct": true
+      },
+      {
+        "text": "JIC (Just-In-Case) — large buffer stocks for supply disruption protection.",
+        "correct": false
+      },
+      {
+        "text": "Kaizen — continuous incremental process improvement.",
+        "correct": false
+      },
+      {
+        "text": "TQM — company-wide zero-defect quality approach.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for JIT + stock minimisation + reliable supplier dependency.",
+    "hints": [
+      "JIT reduces stockholding costs but requires very reliable supply chains.",
+      "Vulnerability: any supply disruption immediately halts production."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_5_2_mcq_002",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Kaizen — Continuous Improvement",
+    "tags": [
+      "kaizen",
+      "lean-production",
+      "TQM"
+    ],
+    "stem_template": "Workers on the production line at {{company}} are encouraged to identify small inefficiencies and suggest improvements on a daily basis. This approach is called:",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "Toyota",
+          "Honda",
+          "Samsung",
+          "an automotive plant"
+        ]
+      }
+    },
+    "answer_template": "Kaizen — Japanese philosophy of continuous, incremental improvement involving all employees; small changes accumulate to significant efficiency gains over time.",
+    "distractor_templates": [
+      "Business Process Re-engineering (BPR) — radical, top-down redesign of entire business processes.",
+      "Six Sigma — statistical methodology to reduce defects to near zero.",
+      "Benchmarking — comparing performance against industry best practices."
+    ],
+    "options_template": [
+      {
+        "text": "Kaizen — continuous incremental improvement involving all employees.",
+        "correct": true
+      },
+      {
+        "text": "BPR — radical top-down process redesign.",
+        "correct": false
+      },
+      {
+        "text": "Six Sigma — statistical defect reduction methodology.",
+        "correct": false
+      },
+      {
+        "text": "Benchmarking — comparing against best-in-class competitors.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for Kaizen + continuous + incremental + all employees involved.",
+    "hints": [
+      "Kaizen = Japanese for 'change for better'.",
+      "Kaizen is bottom-up (employees suggest changes); BPR is top-down."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_5_3_mcq_001",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Quality Control vs Quality Assurance",
+    "tags": [
+      "quality-control",
+      "quality-assurance",
+      "benchmarking"
+    ],
+    "stem_template": "In quality control (QC), finished products are inspected at the end of the production line. How does quality assurance (QA) differ from this approach?",
+    "params": {},
+    "answer_template": "Quality assurance involves building quality into every stage of the production process — prevention of defects rather than detection at the end. QA involves all employees and uses systems like ISO certification and TQM to ensure quality throughout.",
+    "distractor_templates": [
+      "QA is identical to QC — both involve end-of-line inspection of finished goods.",
+      "QA involves inspecting only raw materials before production; QC inspects the final product.",
+      "QA is more expensive than QC because it requires dedicated quality inspection teams."
+    ],
+    "options_template": [
+      {
+        "text": "QA = prevention throughout all production stages; involves all employees; not just end-of-line inspection.",
+        "correct": true
+      },
+      {
+        "text": "QA is identical to QC — both inspect finished goods.",
+        "correct": false
+      },
+      {
+        "text": "QA only inspects raw materials before production.",
+        "correct": false
+      },
+      {
+        "text": "QA is more expensive as it needs dedicated teams.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for QA as prevention/built-in quality + all stages + reduces waste (vs QC = detection at end).",
+    "hints": [
+      "QC = detection; QA = prevention.",
+      "TQM and kaizen are quality assurance approaches."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_5_3_worked_001",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Total Quality Management Implementation",
+    "tags": [
+      "TQM",
+      "quality-control",
+      "quality-assurance"
+    ],
+    "stem_template": "{{company}} has a defect rate of {{defect}}% and customer complaint rate of {{complaint}}%. Evaluate whether implementing TQM would be beneficial and identify two potential challenges.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "AutoParts Ltd",
+          "FoodProcess Co",
+          "ElectroCo",
+          "TextileMfg"
+        ]
+      },
+      "defect": {
+        "type": "choice",
+        "values": [
+          5,
+          8,
+          12,
+          15
+        ]
+      },
+      "complaint": {
+        "type": "choice",
+        "values": [
+          3,
+          6,
+          10,
+          14
+        ]
+      }
+    },
+    "answer_template": "TQM benefits: reduces {{defect}}% defect rate → lower rework/waste costs; reduces {{complaint}}% complaint rate → improved customer retention and brand reputation; motivates employees through quality ownership. Challenges: (1) culture change — all employees must embrace quality mindset (may face resistance); (2) high implementation cost and time (training, new systems); (3) requires sustained commitment — short-term pressure for output may undermine long-term quality focus. Recommendation: TQM beneficial if defect/complaint rates are causing significant cost/reputation damage.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 2 marks benefits; 1 mark each challenge (max 2) with explanation; 1 mark recommendation. Max 5.",
+    "hints": [
+      "TQM = company-wide quality commitment, zero-defect goal.",
+      "The biggest TQM challenge is cultural change, not technical implementation."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "biz_5_4_mcq_001",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Location Decision Factors",
+    "tags": [
+      "location-decisions",
+      "push-pull-factors"
+    ],
+    "stem_template": "A manufacturing company is choosing between locating in {{loc_A}} (near raw materials, low labour costs, but poor infrastructure) and {{loc_B}} (near customers, excellent transport links, but higher costs). Which factor is most important for a {{product_type}} manufacturer?",
+    "params": {
+      "loc_A": {
+        "type": "choice",
+        "values": [
+          "a remote rural area",
+          "a developing economy export zone",
+          "a resource-rich region"
+        ]
+      },
+      "loc_B": {
+        "type": "choice",
+        "values": [
+          "a major city centre",
+          "a developed economy industrial park",
+          "a port city"
+        ]
+      },
+      "product_type": {
+        "type": "choice",
+        "values": [
+          "heavy industrial",
+          "fast-moving consumer goods (FMCG)",
+          "perishable food",
+          "digital/service"
+        ]
+      }
+    },
+    "answer_template": "Location depends on: raw material proximity (heavy industry → bulk material costs); market proximity (perishables, FMCG → minimise transport/spoilage); labour costs (labour-intensive production → low-cost location); infrastructure (transport links, utilities); government incentives. No single factor is universally most important — depends on the specific product and industry.",
+    "distractor_templates": [
+      "Climate is always the most important location factor for any industry.",
+      "Digital businesses require physical proximity to customers — location is irrelevant.",
+      "All businesses should locate near raw materials regardless of product type."
+    ],
+    "options_template": [
+      {
+        "text": "Depends on product type: heavy industry → raw materials; FMCG → market/transport; digital → anywhere.",
+        "correct": true
+      },
+      {
+        "text": "Climate is always the most important factor.",
+        "correct": false
+      },
+      {
+        "text": "Digital businesses need physical proximity to customers.",
+        "correct": false
+      },
+      {
+        "text": "All businesses should locate near raw materials.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for context-specific factor + reason linked to {{product_type}}.",
+    "hints": [
+      "Location factors: raw materials, labour, market, transport, costs, government incentives.",
+      "For digital businesses, location is less critical (ubiquitous internet access)."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_5_4_worked_001",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Location Decision Analysis",
+    "tags": [
+      "location-decisions",
+      "push-pull-factors"
+    ],
+    "stem_template": "{{company}} must choose between relocating to {{option_a}} or {{option_b}}. Evaluate both options using a weighted decision matrix approach with the following criteria: cost, proximity to market, labour availability, and infrastructure.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "a textile factory",
+          "a call centre",
+          "a food processing plant",
+          "a tech company"
+        ]
+      },
+      "option_a": {
+        "type": "choice",
+        "values": [
+          "Bangladesh",
+          "India",
+          "Mexico",
+          "Eastern Europe"
+        ]
+      },
+      "option_b": {
+        "type": "choice",
+        "values": [
+          "the current location",
+          "China",
+          "Vietnam",
+          "South Africa"
+        ]
+      }
+    },
+    "answer_template": "Weighted decision matrix: assign weights (e.g. cost 40%, market 20%, labour 20%, infrastructure 20%). Score each option 1–10 per criterion. {{option_a}}: typically lower costs, abundant labour, but may have weaker infrastructure; {{option_b}}: better infrastructure, market access, but higher costs. Multiply scores × weights, total and compare. Conclusion depends on computed scores. Limitation: subjective weightings and scores; ignores political/currency risk.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per criterion evaluated for each option (max 4); 1 mark weighted comparison; 1 mark justified recommendation. Max 6.",
+    "hints": [
+      "Weighted decision matrix: assign importance weights to criteria, score each option.",
+      "Quantitative analysis should be supplemented with qualitative judgement."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_5_5_mcq_001",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Capacity Utilisation",
+    "tags": [
+      "capacity-utilization",
+      "outsourcing",
+      "offshoring"
+    ],
+    "stem_template": "A factory has a maximum capacity of {{max_cap}} units per month but is currently producing {{actual}} units. What is its capacity utilisation rate?",
+    "params": {
+      "max_cap": {
+        "type": "int",
+        "min": 1000,
+        "max": 10000
+      },
+      "actual": {
+        "type": "computed",
+        "formula": "Math.floor(max_cap * 0.7)"
+      },
+      "cu": {
+        "type": "computed",
+        "formula": "70"
+      },
+      "message": {
+        "type": "computed",
+        "formula": "'30% spare capacity — potential inefficiency (fixed costs spread over fewer units); could sub-let space or outsource'"
+      }
+    },
+    "answer_template": "\\\\( \\\\text{Capacity Utilisation} = \\\\dfrac{\\\\text{Actual Output}}{\\\\text{Maximum Capacity}} \\\\times 100 = \\\\dfrac{{{actual}}}{{{max_cap}}} \\\\times 100 = {{cu}}\\\\% \\\\). Operating at {{cu}}% suggests {{message}}.",
+    "distractor_templates": [
+      "\\\\( \\\\text{Max Capacity} / \\\\text{Actual Output} \\\\times 100 = {{wrong}}\\\\% \\\\) (inverse formula).",
+      "\\\\( (\\\\text{Max} - \\\\text{Actual}) / \\\\text{Max} \\\\times 100 \\\\) (spare capacity %, not utilisation).",
+      "Capacity utilisation is always 100% because firms only produce what they can sell."
+    ],
+    "options_template": [
+      {
+        "text": "\\\\( \\\\text{Actual} / \\\\text{Max} \\\\times 100 = {{cu}}\\\\% \\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\( \\\\text{Max} / \\\\text{Actual} \\\\times 100 \\\\) (inverse).",
+        "correct": false
+      },
+      {
+        "text": "\\\\( (\\\\text{Max}-\\\\text{Actual}) / \\\\text{Max} \\\\times 100 \\\\) (spare capacity).",
+        "correct": false
+      },
+      {
+        "text": "Always 100% — firms only produce what they can sell.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award: 1 mark correct formula; 1 mark answer {{cu}}%. Max 2.",
+    "hints": [
+      "Capacity utilisation = (Actual output / Max capacity) × 100.",
+      "80–90% is generally considered efficient; below 70% suggests underutilisation."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_5_5_worked_001",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.5",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Outsourcing Decision Analysis",
+    "tags": [
+      "outsourcing",
+      "offshoring",
+      "capacity-utilization"
+    ],
+    "stem_template": "{{company}} is operating at {{cu}}% capacity utilisation. It is considering outsourcing its {{function}} to a specialist provider in {{country}} at a cost of ${{outsource_cost}} per year, compared to its current in-house cost of ${{inhouse_cost}} per year. Evaluate this outsourcing decision.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "TechMaker"
+        ]
+      },
+      "cu": {
+        "type": "choice",
+        "values": [
+          65
+        ]
+      },
+      "function": {
+        "type": "choice",
+        "values": [
+          "IT support"
+        ]
+      },
+      "country": {
+        "type": "choice",
+        "values": [
+          "India"
+        ]
+      },
+      "outsource_cost": {
+        "type": "int",
+        "min": 200000,
+        "max": 2000000
+      },
+      "inhouse_cost": {
+        "type": "computed",
+        "formula": "Math.floor(outsource_cost * 1.3)"
+      },
+      "saving": {
+        "type": "computed",
+        "formula": "inhouse_cost - outsource_cost"
+      }
+    },
+    "answer_template": "Financial case: outsourcing saves ${{inhouse_cost}} − ${{outsource_cost}} = ${{saving}} per year. At {{cu}}% utilisation, spare capacity suggests internal resources could be redeployed. Non-financial factors: quality control risk (loss of oversight), data security concerns (especially payroll/IT), employee redundancies (HR/ethical implications), dependency on single supplier (supply chain risk). Recommendation: if quality can be maintained and transition risk managed, outsourcing is financially beneficial; conduct pilot before full commitment.",
+    "mark_scheme_template": "Award: 1 mark saving calculation ${{saving}}; 2 marks non-financial factors (min 2); 1 mark risk assessment; 1 mark justified recommendation. Max 5.",
+    "hints": [
+      "Always consider both financial and non-financial factors in outsourcing decisions.",
+      "Data security and quality control are key risks in outsourcing."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "biz_1_4_mcq_002",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Stakeholder Mapping — Mendelow's Matrix",
+    "tags": [
+      "stakeholder-conflict",
+      "internal",
+      "external"
+    ],
+    "stem_template": "In Mendelow's stakeholder matrix, a stakeholder with HIGH power and HIGH interest should be:",
+    "params": {},
+    "answer_template": "Managed closely — these key stakeholders have the ability and motivation to significantly influence the business; they require active communication, consultation, and engagement.",
+    "distractor_templates": [
+      "Kept informed — communicate regularly but do not need to be actively managed.",
+      "Kept satisfied — high power but low interest; manage their concerns but minimal engagement needed.",
+      "Monitor — low power and low interest; minimal management effort required."
+    ],
+    "options_template": [
+      {
+        "text": "Managed closely — high power + high interest = maximum engagement required.",
+        "correct": true
+      },
+      {
+        "text": "Kept informed — regular communication but minimal active management.",
+        "correct": false
+      },
+      {
+        "text": "Kept satisfied — manage concerns but minimal consultation.",
+        "correct": false
+      },
+      {
+        "text": "Monitor — minimal management effort.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for 'managed closely' + high power + high interest explanation.",
+    "hints": [
+      "Mendelow's matrix: Power (x) vs Interest (y).",
+      "High/High = key players; High power/Low interest = keep satisfied."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_1_6_mcq_002",
+    "subject": "business",
+    "topic": "1",
+    "subtopic": "1.6",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Globalisation and MNCs",
+    "tags": [
+      "MNCs",
+      "globalization",
+      "FDI"
+    ],
+    "stem_template": "Which factor has most significantly enabled the growth of multinational companies (MNCs) since the 1990s?",
+    "params": {},
+    "answer_template": "Advances in communication technology (internet, telecommunications) and trade liberalisation (WTO, trade agreements) have dramatically reduced the cost and barriers of operating across borders.",
+    "distractor_templates": [
+      "The collapse of global trade — fewer imports/exports made domestic markets more attractive.",
+      "Rising transport costs making it essential to produce locally in each market.",
+      "Government restrictions on capital flows forcing companies to expand domestically."
+    ],
+    "options_template": [
+      {
+        "text": "Communication technology advances + trade liberalisation → reduced cross-border costs and barriers.",
+        "correct": true
+      },
+      {
+        "text": "Collapse of global trade — domestic focus.",
+        "correct": false
+      },
+      {
+        "text": "Rising transport costs forcing local production.",
+        "correct": false
+      },
+      {
+        "text": "Government capital flow restrictions forcing domestic expansion.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for technology (internet/communications) AND/OR trade liberalisation with correct explanation.",
+    "hints": [
+      "Technology reduced communication and coordination costs across borders.",
+      "WTO rounds reduced tariffs; regional trade agreements further liberalised trade."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_2_1_mcq_002",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Labour Turnover Rate",
+    "tags": [
+      "HR-planning",
+      "recruitment",
+      "labour-turnover"
+    ],
+    "stem_template": "A company has {{employees}} employees and {{leavers}} left during the year. What is the labour turnover rate, and what does a high rate indicate?",
+    "params": {
+      "employees": {
+        "type": "int",
+        "min": 100,
+        "max": 1000
+      },
+      "leavers": {
+        "type": "computed",
+        "formula": "Math.floor(employees * 0.15)"
+      },
+      "lt": {
+        "type": "computed",
+        "formula": "15"
+      }
+    },
+    "answer_template": "Labour turnover = (Leavers / Average employees) × 100 = ({{leavers}} / {{employees}}) × 100 = {{lt}}%. A high rate indicates low motivation, poor working conditions, uncompetitive pay, or poor management — leading to high recruitment and training costs.",
+    "distractor_templates": [
+      "Labour turnover = Leavers × Employees (multiplication).",
+      "Labour turnover = New hires / Leavers.",
+      "Labour turnover has no implications for business performance."
+    ],
+    "options_template": [
+      {
+        "text": "LT% = (Leavers/Employees) × 100 = {{lt}}%. High rate → low motivation, high recruitment costs.",
+        "correct": true
+      },
+      {
+        "text": "LT = Leavers × Employees (multiplication error).",
+        "correct": false
+      },
+      {
+        "text": "LT = New hires / Leavers.",
+        "correct": false
+      },
+      {
+        "text": "LT has no performance implications.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for correct formula + {{lt}}% + implication (motivation/cost). Max 2.",
+    "hints": [
+      "Labour turnover = (Number leaving / Average workforce) × 100.",
+      "Industry averages vary; high turnover is costly (recruitment, training, lost productivity)."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_2_2_mcq_002",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Matrix Organisation Structure",
+    "tags": [
+      "hierarchy",
+      "delegation",
+      "matrix-structure"
+    ],
+    "stem_template": "In a matrix organisation structure, employees report to both a functional manager and a {{other_manager}}. What is a key advantage of this structure?",
+    "params": {
+      "other_manager": {
+        "type": "choice",
+        "values": [
+          "project manager",
+          "product manager",
+          "regional manager"
+        ]
+      }
+    },
+    "answer_template": "Improved communication and resource sharing across departments — specialists can contribute to multiple projects simultaneously, improving flexibility and collaboration.",
+    "distractor_templates": [
+      "Clear lines of authority — employees have one clear line of reporting reducing confusion.",
+      "Reduced costs — fewer managers are needed compared to a traditional hierarchy.",
+      "Strict departmental specialisation — each department works independently."
+    ],
+    "options_template": [
+      {
+        "text": "Improved cross-functional communication and flexible resource allocation across projects.",
+        "correct": true
+      },
+      {
+        "text": "Clear single line of authority — reduces confusion.",
+        "correct": false
+      },
+      {
+        "text": "Fewer managers needed — lower overhead costs.",
+        "correct": false
+      },
+      {
+        "text": "Strict departmental independence.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for cross-functional communication/collaboration + flexible resource allocation.",
+    "hints": [
+      "Matrix: dual reporting lines → more communication, potentially more conflict.",
+      "Disadvantage of matrix: dual authority can create confusion ('two bosses')."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_2_3_mcq_002",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "McGregor Theory X and Theory Y",
+    "tags": [
+      "leadership-styles",
+      "motivation-theory",
+      "management"
+    ],
+    "stem_template": "A manager who believes employees are inherently lazy and must be closely supervised adopts which management philosophy?",
+    "params": {},
+    "answer_template": "Theory X — assumes workers are inherently lazy, dislike work, avoid responsibility, and must be controlled and coerced; leads to autocratic management style.",
+    "distractor_templates": [
+      "Theory Y — assumes workers are self-motivated, enjoy work, and seek responsibility.",
+      "Maslow's self-actualisation — workers strive for personal growth and fulfilment.",
+      "Herzberg's motivator theory — workers are motivated by intrinsic factors."
+    ],
+    "options_template": [
+      {
+        "text": "Theory X — lazy workers, need control/coercion → autocratic style.",
+        "correct": true
+      },
+      {
+        "text": "Theory Y — self-motivated, seek responsibility → democratic style.",
+        "correct": false
+      },
+      {
+        "text": "Maslow self-actualisation — workers seek personal growth.",
+        "correct": false
+      },
+      {
+        "text": "Herzberg motivator theory — intrinsic factors drive motivation.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for Theory X + inherently lazy + autocratic management implication.",
+    "hints": [
+      "McGregor Theory X: pessimistic view → tight control. Theory Y: optimistic → empowerment.",
+      "Theory Y leads to democratic/participative management."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_3_1_mcq_002",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Debt vs Equity Financing",
+    "tags": [
+      "internal-finance",
+      "external-finance",
+      "equity",
+      "debt"
+    ],
+    "stem_template": "A company raises ${{amount}}m by issuing new shares rather than taking out a bank loan. What is the key advantage of equity financing over debt financing?",
+    "params": {
+      "amount": {
+        "type": "int",
+        "min": 5,
+        "max": 100
+      }
+    },
+    "answer_template": "No obligation to repay or pay interest — equity does not require fixed repayments; in difficult periods, no dividend needs to be paid (unlike loan interest); reduces financial risk.",
+    "distractor_templates": [
+      "Equity maintains 100% ownership control for existing shareholders.",
+      "Equity is always cheaper than debt financing.",
+      "Dividends are tax-deductible unlike loan interest."
+    ],
+    "options_template": [
+      {
+        "text": "No fixed repayment or mandatory interest — reduces financial risk in downturns.",
+        "correct": true
+      },
+      {
+        "text": "Maintains 100% shareholder control — no dilution.",
+        "correct": false
+      },
+      {
+        "text": "Equity is always cheaper than debt.",
+        "correct": false
+      },
+      {
+        "text": "Dividends are tax-deductible unlike interest.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for no repayment obligation + reduced financial risk.",
+    "hints": [
+      "Equity: no repayment, but dilutes ownership. Debt: must repay with interest, but no dilution.",
+      "Interest on debt is usually tax-deductible; dividends are not."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_3_1_worked_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Appropriate Sources of Finance",
+    "tags": [
+      "internal-finance",
+      "external-finance",
+      "equity",
+      "debt"
+    ],
+    "stem_template": "{{company}}, a {{size}} company in the {{industry}} sector, needs ${{amount}} to fund {{purpose}}. Evaluate which source(s) of finance would be most appropriate.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "StartUpTech",
+          "FamilyBakery",
+          "PublicRetailChain",
+          "ManufacturingCo"
+        ]
+      },
+      "size": {
+        "type": "choice",
+        "values": [
+          "small private",
+          "medium",
+          "large publicly listed"
+        ]
+      },
+      "industry": {
+        "type": "choice",
+        "values": [
+          "technology",
+          "food",
+          "retail",
+          "manufacturing"
+        ]
+      },
+      "amount": {
+        "type": "choice",
+        "values": [
+          50000,
+          500000,
+          5000000,
+          50000000
+        ]
+      },
+      "purpose": {
+        "type": "choice",
+        "values": [
+          "new equipment",
+          "expansion into new markets",
+          "working capital",
+          "R&D investment"
+        ]
+      }
+    },
+    "answer_template": "Analysis: for ${{amount}} to fund {{purpose}}: small amount/short term → retained profit, overdraft, trade credit. Medium/long term → bank loan, leasing. Large scale → share issue (if public), venture capital (if private), debentures. Considerations: stage of business life, profitability, existing debt levels (gearing), asset availability for security, urgency of need, cost of finance.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per appropriate source identified (max 2); 1 mark per justification; 1 mark evaluation of alternatives. Max 5.",
+    "hints": [
+      "Match the financing term to the purpose: long-term asset → long-term finance.",
+      "Consider the business's size, profitability, and risk profile."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "biz_3_2_mcq_002",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Contribution per Unit",
+    "tags": [
+      "variable-costs",
+      "revenue",
+      "contribution"
+    ],
+    "stem_template": "A product sells for ${{price}} and has variable costs of ${{vc}} per unit. What is the contribution per unit?",
+    "params": {
+      "price": {
+        "type": "int",
+        "min": 20,
+        "max": 100
+      },
+      "vc": {
+        "type": "computed",
+        "formula": "Math.floor(price * 0.6)"
+      },
+      "contribution": {
+        "type": "computed",
+        "formula": "price - Math.floor(price * 0.6)"
+      }
+    },
+    "answer_template": "Contribution per unit = Selling Price − Variable Cost per unit = ${{price}} − ${{vc}} = ${{contribution}}. This contributes to covering fixed costs and generating profit.",
+    "distractor_templates": [
+      "Contribution = Selling Price − Fixed Cost = ${{wrong1}}.",
+      "Contribution = Total Revenue − Total Cost.",
+      "Contribution = Selling Price × Quantity."
+    ],
+    "options_template": [
+      {
+        "text": "SP − VC per unit = ${{price}} − ${{vc}} = ${{contribution}}.",
+        "correct": true
+      },
+      {
+        "text": "SP − Fixed Cost per unit.",
+        "correct": false
+      },
+      {
+        "text": "Total Revenue − Total Cost.",
+        "correct": false
+      },
+      {
+        "text": "SP × Quantity.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award: 1 mark correct formula; 1 mark correct value ${{contribution}}. Max 2.",
+    "hints": [
+      "Contribution = SP − VC (per unit). Covers fixed costs, then generates profit.",
+      "Total contribution = Contribution per unit × Quantity sold."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_3_4_worked_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Balance Sheet Analysis",
+    "tags": [
+      "balance-sheet",
+      "depreciation",
+      "assets-liabilities"
+    ],
+    "stem_template": "A company's balance sheet shows: Non-current assets ${{nca}}, Current assets ${{ca}}, Non-current liabilities ${{ncl}}, Current liabilities ${{cl}}, Share capital ${{sc}}, Retained earnings ${{re}}. Verify the balance sheet equation and calculate: (a) net assets, (b) working capital.",
+    "params": {
+      "nca": {
+        "type": "int",
+        "min": 200000,
+        "max": 1000000
+      },
+      "ca": {
+        "type": "int",
+        "min": 50000,
+        "max": 300000
+      },
+      "ncl": {
+        "type": "int",
+        "min": 100000,
+        "max": 500000
+      },
+      "cl": {
+        "type": "int",
+        "min": 20000,
+        "max": 150000
+      },
+      "sc": {
+        "type": "computed",
+        "formula": "Math.floor((nca + ca - ncl - cl) * 0.6)"
+      },
+      "re": {
+        "type": "computed",
+        "formula": "nca + ca - ncl - cl - Math.floor((nca + ca - ncl - cl) * 0.6)"
+      },
+      "net_assets": {
+        "type": "computed",
+        "formula": "nca + ca - ncl - cl"
+      },
+      "wc": {
+        "type": "computed",
+        "formula": "ca - cl"
+      }
+    },
+    "answer_template": "Net Assets = (NCA + CA) − (NCL + CL) = ${{nca}} + ${{ca}} − ${{ncl}} − ${{cl}} = ${{net_assets}}. Working Capital = CA − CL = ${{ca}} − ${{cl}} = ${{wc}}. Balance sheet: Assets = Liabilities + Equity → ${{nca}} + ${{ca}} = ${{ncl}} + ${{cl}} + ${{sc}} + ${{re}} ✓",
+    "mark_scheme_template": "Award: 1 mark net assets formula; 1 mark correct net assets value; 1 mark working capital formula; 1 mark balance sheet equation verified. Max 4.",
+    "hints": [
+      "Balance sheet equation: Total Assets = Total Liabilities + Equity.",
+      "Working capital = Current Assets − Current Liabilities. Positive = liquid."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "biz_3_6_worked_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.6",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Efficiency Ratio Analysis",
+    "tags": [
+      "stock-turnover",
+      "debtor-days",
+      "creditor-days"
+    ],
+    "stem_template": "{{company}} has: Sales ${{sales}}, COGS ${{cogs}}, Debtors ${{debtors}}, Stock ${{stock}}, Creditors ${{creditors}}. Calculate all three efficiency ratios and evaluate the company's working capital management.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "RetailGroup"
+        ]
+      },
+      "sales": {
+        "type": "int",
+        "min": 1000000,
+        "max": 10000000
+      },
+      "cogs": {
+        "type": "computed",
+        "formula": "Math.floor(sales * 0.65)"
+      },
+      "debtors": {
+        "type": "computed",
+        "formula": "Math.floor(sales * 0.08)"
+      },
+      "stock": {
+        "type": "computed",
+        "formula": "Math.floor(sales * 0.06)"
+      },
+      "creditors": {
+        "type": "computed",
+        "formula": "Math.floor(cogs * 0.1)"
+      },
+      "dd": {
+        "type": "computed",
+        "formula": "Math.round(debtors/sales * 365)"
+      },
+      "st": {
+        "type": "computed",
+        "formula": "(cogs/stock).toFixed(1)"
+      },
+      "cd": {
+        "type": "computed",
+        "formula": "Math.round(creditors/cogs * 365)"
+      }
+    },
+    "answer_template": "Debtor days = ({{debtors}}/{{sales}}) × 365 = {{dd}} days. Stock turnover = {{cogs}}/{{stock}} = {{st}} times. Creditor days = ({{creditors}}/{{cogs}}) × 365 = {{cd}} days. Good WCM: debtor days < creditor days (collect before you pay); high stock turnover (fast-moving inventory). If {{dd}} > {{cd}}, funding gap exists — potential cash flow pressure.",
+    "mark_scheme_template": "Award: 1 mark each ratio calculation (max 3); 1 mark comparison/evaluation. Max 4.",
+    "hints": [
+      "Creditor days = (Creditors/COGS) × 365.",
+      "Funding gap = Debtor days + Stock days − Creditor days."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "biz_3_7_worked_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.7",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Cash Flow Problem Solutions",
+    "tags": [
+      "cash-flow-forecast",
+      "working-capital"
+    ],
+    "stem_template": "{{company}} has a negative closing cash balance of ${{deficit}} in Month {{month}}. Identify three causes of this cash flow problem and recommend two solutions.",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "NewBakery",
+          "StartUpTech",
+          "SeasonalGarden",
+          "GrowthRetail"
+        ]
+      },
+      "deficit": {
+        "type": "int",
+        "min": 5000,
+        "max": 100000
+      },
+      "month": {
+        "type": "choice",
+        "values": [
+          2,
+          3,
+          4,
+          6
+        ]
+      }
+    },
+    "answer_template": "Causes: (1) Sales on credit — debtors delay payments while {{company}} has immediate expenses. (2) High fixed costs (rent, salaries) relative to early-stage revenue. (3) Seasonal demand — revenue low in Month {{month}} but costs continue. Solutions: (1) Negotiate extended payment terms with suppliers (increase creditor days). (2) Offer early payment discounts to debtors to accelerate receipts. (3) Arrange an overdraft facility or short-term loan for the deficit period. (4) Reduce discretionary spending temporarily.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark per cause (max 3); 1 mark per solution with justification (max 2). Max 5.",
+    "hints": [
+      "Cash flow problems ≠ losses. A profitable business can be cash-flow negative.",
+      "Solutions: speed up receipts, slow down payments, or arrange short-term finance."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "biz_4_1_mcq_002",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Market Share Calculation",
+    "tags": [
+      "market-orientation",
+      "marketing-mix",
+      "market-share"
+    ],
+    "stem_template": "The total market for {{product}} is ${{total_market}}m annually. {{company}} has sales of ${{company_sales}}m. What is {{company}}'s market share?",
+    "params": {
+      "product": {
+        "type": "choice",
+        "values": [
+          "smartphones"
+        ]
+      },
+      "total_market": {
+        "type": "int",
+        "min": 100,
+        "max": 5000
+      },
+      "company_sales": {
+        "type": "computed",
+        "formula": "Math.floor(total_market * 0.22)"
+      },
+      "company": {
+        "type": "choice",
+        "values": [
+          "TechBrand"
+        ]
+      },
+      "ms": {
+        "type": "computed",
+        "formula": "22"
+      }
+    },
+    "answer_template": "Market share = (Company sales / Total market) × 100 = (${{company_sales}} / ${{total_market}}) × 100 = {{ms}}%.",
+    "distractor_templates": [
+      "Market share = Total market / Company sales × 100.",
+      "Market share = Company sales × Total market.",
+      "Market share = Company sales / Total market (without × 100)."
+    ],
+    "options_template": [
+      {
+        "text": "Market share = (Company sales / Total market) × 100 = {{ms}}%.",
+        "correct": true
+      },
+      {
+        "text": "Total market / Company sales × 100.",
+        "correct": false
+      },
+      {
+        "text": "Company sales × Total market.",
+        "correct": false
+      },
+      {
+        "text": "(Company sales / Total market) without × 100.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award: 1 mark correct formula; 1 mark correct answer {{ms}}%.",
+    "hints": [
+      "Market share = (Your sales / Total market sales) × 100.",
+      "High market share often indicates competitive advantage."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_4_2_mcq_002",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Primary vs Secondary Market Research",
+    "tags": [
+      "market-research",
+      "primary-research",
+      "secondary-research"
+    ],
+    "stem_template": "A company conducts focus groups with {{n}} target customers to understand preferences for a new product. This is an example of:",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      }
+    },
+    "answer_template": "Primary (field) research — original data collected directly from respondents for a specific research purpose; includes surveys, interviews, focus groups, and observations.",
+    "distractor_templates": [
+      "Secondary (desk) research — using existing published data sources.",
+      "Qualitative secondary research — analysing competitors' annual reports.",
+      "Experimental research — A/B testing using historical sales data."
+    ],
+    "options_template": [
+      {
+        "text": "Primary research — original data collected directly from target customers (focus groups).",
+        "correct": true
+      },
+      {
+        "text": "Secondary research — existing published data.",
+        "correct": false
+      },
+      {
+        "text": "Qualitative secondary research — competitor reports.",
+        "correct": false
+      },
+      {
+        "text": "Experimental research — historical A/B testing.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for primary research + original data + direct from respondents.",
+    "hints": [
+      "Primary = collected first-hand for this specific purpose.",
+      "Secondary = data that already exists (reports, censuses, competitor data)."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_4_3_mcq_002",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Seasonal Variation in Sales Forecasting",
+    "tags": [
+      "seasonal-variation",
+      "moving-averages",
+      "extrapolation"
+    ],
+    "stem_template": "A company notices that sales of {{product}} are consistently {{direction}} in Q{{quarter}} each year. This regular pattern is called:",
+    "params": {
+      "product": {
+        "type": "choice",
+        "values": [
+          "ice cream",
+          "winter clothing",
+          "sunscreen",
+          "Christmas decorations"
+        ]
+      },
+      "direction": {
+        "type": "choice",
+        "values": [
+          "higher",
+          "lower"
+        ]
+      },
+      "quarter": {
+        "type": "choice",
+        "values": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    "answer_template": "Seasonal variation — a regular, predictable fluctuation in sales tied to the time of year; identified using moving averages to separate the trend from seasonal effects.",
+    "distractor_templates": [
+      "Cyclical variation — long-term economic cycles affecting demand.",
+      "Random variation — unpredictable, one-off fluctuations with no pattern.",
+      "Secular trend — long-term underlying upward or downward movement."
+    ],
+    "options_template": [
+      {
+        "text": "Seasonal variation — regular predictable fluctuation; identified via moving averages.",
+        "correct": true
+      },
+      {
+        "text": "Cyclical variation — long-term economic cycle effects.",
+        "correct": false
+      },
+      {
+        "text": "Random variation — unpredictable one-off fluctuations.",
+        "correct": false
+      },
+      {
+        "text": "Secular trend — long-term underlying movement.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for seasonal variation + regular/predictable + time-of-year pattern.",
+    "hints": [
+      "Seasonal variation is regular and predictable — it repeats each year.",
+      "Moving averages remove seasonal effects to reveal the underlying trend."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_4_4_mcq_002",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Distribution Channels",
+    "tags": [
+      "place",
+      "distribution",
+      "PLC"
+    ],
+    "stem_template": "A manufacturer of {{product}} sells directly to consumers through its own website, bypassing wholesalers and retailers. This is called:",
+    "params": {
+      "product": {
+        "type": "choice",
+        "values": [
+          "luxury watches",
+          "organic food",
+          "software",
+          "handmade jewellery"
+        ]
+      }
+    },
+    "answer_template": "Direct distribution (zero-level channel) — manufacturer sells directly to consumer without intermediaries; increases control over brand experience and margins, but requires investment in own distribution infrastructure.",
+    "distractor_templates": [
+      "Indirect distribution — manufacturer uses wholesalers and retailers.",
+      "Multi-channel distribution — selling through multiple channels simultaneously.",
+      "Franchised distribution — selling through licensed franchise outlets."
+    ],
+    "options_template": [
+      {
+        "text": "Direct distribution (zero-level channel) — no intermediaries; higher control and margin.",
+        "correct": true
+      },
+      {
+        "text": "Indirect distribution — uses wholesalers/retailers.",
+        "correct": false
+      },
+      {
+        "text": "Multi-channel distribution — multiple simultaneous channels.",
+        "correct": false
+      },
+      {
+        "text": "Franchised distribution — through licensed outlets.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for direct distribution/zero-level channel + no intermediaries.",
+    "hints": [
+      "Zero-level: Manufacturer → Consumer. One-level: Manufacturer → Retailer → Consumer.",
+      "Direct distribution: more control, higher margin, but higher logistics cost."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_4_5_mcq_002",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Process in Service Marketing",
+    "tags": [
+      "process",
+      "physical-evidence",
+      "7Ps"
+    ],
+    "stem_template": "A hospital implements a new patient booking system that reduces waiting times from {{old_wait}} to {{new_wait}} minutes. This improvement relates to which element of the 7Ps?",
+    "params": {
+      "old_wait": {
+        "type": "int",
+        "min": 30,
+        "max": 90
+      },
+      "new_wait": {
+        "type": "computed",
+        "formula": "Math.floor(old_wait * 0.4)"
+      }
+    },
+    "answer_template": "Process — the systems and procedures used to deliver a service; improving the booking process directly enhances customer experience and service efficiency.",
+    "distractor_templates": [
+      "People — staff training and attitude.",
+      "Physical evidence — tangible elements like facilities and branding.",
+      "Product — the core medical service offered."
+    ],
+    "options_template": [
+      {
+        "text": "Process — systems and procedures for service delivery; booking system = process improvement.",
+        "correct": true
+      },
+      {
+        "text": "People — staff training and attitude.",
+        "correct": false
+      },
+      {
+        "text": "Physical evidence — tangible elements.",
+        "correct": false
+      },
+      {
+        "text": "Product — core medical service.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for process + service delivery systems/procedures.",
+    "hints": [
+      "Process: how the service is delivered (booking, queuing, service flow).",
+      "Physical evidence: what customers can see/touch (building, brochure, uniform)."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_5_1_mcq_002",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Flow Production Characteristics",
+    "tags": [
+      "production-methods",
+      "flow",
+      "batch"
+    ],
+    "stem_template": "A {{product}} production line runs 24 hours a day, producing identical items continuously on an automated assembly line. This is:",
+    "params": {
+      "product": {
+        "type": "choice",
+        "values": [
+          "car",
+          "bottled water",
+          "tinned soup",
+          "paper"
+        ]
+      }
+    },
+    "answer_template": "Flow (mass/continuous) production — large volumes of identical products manufactured continuously using highly automated machinery; lowest cost per unit due to economies of scale but high capital investment and inflexible.",
+    "distractor_templates": [
+      "Job production — each unit made individually to unique specifications.",
+      "Batch production — set quantities made before switching to another product.",
+      "Cell production — small teams complete all stages for groups of products."
+    ],
+    "options_template": [
+      {
+        "text": "Flow (mass) production — continuous, automated, identical products, lowest unit cost.",
+        "correct": true
+      },
+      {
+        "text": "Job production — individual unique items.",
+        "correct": false
+      },
+      {
+        "text": "Batch production — set quantities then switch.",
+        "correct": false
+      },
+      {
+        "text": "Cell production — team-based complete manufacture.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for flow/mass/continuous production + correct characteristics (continuous, automated, high volume, identical).",
+    "hints": [
+      "Flow production: 24/7 operation, highest volume, lowest cost/unit, least flexible.",
+      "Examples: car assembly (semi-continuous), oil refining, bottled water."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_5_2_worked_001",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Lean Production Evaluation",
+    "tags": [
+      "lean-production",
+      "JIT",
+      "kaizen",
+      "TQM"
+    ],
+    "stem_template": "{{manufacturer}}, a {{product}} manufacturer, is considering implementing a full lean production system including JIT, kaizen, and TQM. Evaluate the potential benefits and challenges.",
+    "params": {
+      "manufacturer": {
+        "type": "choice",
+        "values": [
+          "AutoParts Ltd",
+          "ElectroFactory",
+          "FoodProcessing Co",
+          "TextileMfg"
+        ]
+      },
+      "product": {
+        "type": "choice",
+        "values": [
+          "automotive components",
+          "electronics",
+          "packaged food",
+          "clothing"
+        ]
+      }
+    },
+    "answer_template": "Benefits: JIT eliminates stock costs and working capital tied up in inventory; kaizen continuously reduces waste (muda) through employee-led improvements; TQM reduces defect rates and rework costs; combined, these reduce costs, improve quality, and increase customer satisfaction. Challenges: JIT requires very reliable suppliers (any disruption halts production — vulnerability shown in COVID-19 supply chain crisis); kaizen requires cultural change (employee buy-in, management commitment); TQM is time-consuming to implement; initial training and system setup costs are high. Overall: lean is beneficial for high-volume, stable-demand manufacturing but risky in volatile supply environments.",
+    "distractor_templates": [],
+    "mark_scheme_template": "Award: 1 mark JIT benefit; 1 mark kaizen benefit; 1 mark TQM benefit; 1 mark supply chain risk; 1 mark cultural challenge; 1 mark conclusion. Max 6.",
+    "hints": [
+      "Lean production eliminates all forms of waste (muda: overproduction, waiting, transport, inventory, motion, defects, overprocessing).",
+      "COVID-19 exposed JIT vulnerability — global supply chain disruptions."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "biz_5_3_mcq_002",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "ISO Certification",
+    "tags": [
+      "quality-assurance",
+      "benchmarking",
+      "ISO"
+    ],
+    "stem_template": "A company obtains ISO {{standard}} certification. What does this signify to its customers and stakeholders?",
+    "params": {
+      "standard": {
+        "type": "choice",
+        "values": [
+          "9001 (Quality Management)",
+          "14001 (Environmental Management)",
+          "27001 (Information Security)"
+        ]
+      }
+    },
+    "answer_template": "ISO {{standard}} certification signifies that the company has independently verified systems and processes meeting internationally recognised standards; it provides assurance of quality/environmental/security management practices to customers, suppliers, and regulators.",
+    "distractor_templates": [
+      "That the company's products are guaranteed to be defect-free.",
+      "That the company has the lowest prices in its industry.",
+      "That the company is owned by the International Organisation for Standardisation."
+    ],
+    "options_template": [
+      {
+        "text": "ISO {{standard}} confirms independently verified management systems meeting international standards.",
+        "correct": true
+      },
+      {
+        "text": "Products guaranteed defect-free.",
+        "correct": false
+      },
+      {
+        "text": "Company has lowest industry prices.",
+        "correct": false
+      },
+      {
+        "text": "Company is owned by ISO.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for independently verified management systems + international standards + stakeholder assurance.",
+    "hints": [
+      "ISO certification: third-party audit confirms processes meet standards.",
+      "ISO 9001 is the most common quality management standard globally."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_5_4_mcq_002",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Offshoring vs Outsourcing",
+    "tags": [
+      "location-decisions",
+      "offshoring",
+      "outsourcing"
+    ],
+    "stem_template": "{{company}} moves its customer service operations to {{country}} where labour costs are lower, but keeps these operations in-house (not given to an external firm). This is:",
+    "params": {
+      "company": {
+        "type": "choice",
+        "values": [
+          "TechCorp",
+          "BankCo",
+          "RetailChain",
+          "InsurancePlus"
+        ]
+      },
+      "country": {
+        "type": "choice",
+        "values": [
+          "India",
+          "Philippines",
+          "South Africa",
+          "Poland"
+        ]
+      }
+    },
+    "answer_template": "Offshoring (not outsourcing) — the company relocates its own operations to a lower-cost country but retains internal control; outsourcing would mean contracting an external third party to perform the function.",
+    "distractor_templates": [
+      "Outsourcing — giving the function to an external specialist firm.",
+      "Domestic relocation — moving operations within the same country.",
+      "Franchising — licensing the operation to a local business in {{country}}."
+    ],
+    "options_template": [
+      {
+        "text": "Offshoring — relocating own operations to lower-cost country; still internal control.",
+        "correct": true
+      },
+      {
+        "text": "Outsourcing — contracting an external firm.",
+        "correct": false
+      },
+      {
+        "text": "Domestic relocation — moving within same country.",
+        "correct": false
+      },
+      {
+        "text": "Franchising — licensing to a local business.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for offshoring + internal control maintained + lower-cost country.",
+    "hints": [
+      "Offshoring = move location; still internal. Outsourcing = give to external firm.",
+      "A firm can offshore AND outsource simultaneously (offshore outsourcing)."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_5_5_mcq_002",
+    "subject": "business",
+    "topic": "5",
+    "subtopic": "5.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Outsourcing Advantages",
+    "tags": [
+      "outsourcing",
+      "offshoring",
+      "capacity-utilization"
+    ],
+    "stem_template": "A company outsources its {{function}} to a specialist provider. What is the primary benefit of this decision?",
+    "params": {
+      "function": {
+        "type": "choice",
+        "values": [
+          "IT maintenance",
+          "payroll processing",
+          "logistics and distribution",
+          "marketing analytics"
+        ]
+      }
+    },
+    "answer_template": "Access to specialist expertise and economies of scale without the overhead of maintaining an in-house team — the outsourcing provider's specialisation and scale means lower cost and higher quality than the company could achieve internally.",
+    "distractor_templates": [
+      "The company retains full control over the quality and speed of {{function}}.",
+      "Outsourcing always results in job creation within the company.",
+      "The company eliminates all risks associated with {{function}}."
+    ],
+    "options_template": [
+      {
+        "text": "Access to specialist expertise and scale economies without in-house overhead.",
+        "correct": true
+      },
+      {
+        "text": "Full control over quality and speed maintained.",
+        "correct": false
+      },
+      {
+        "text": "Creates more jobs within the company.",
+        "correct": false
+      },
+      {
+        "text": "Eliminates all risks associated with {{function}}.",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Award 1 mark for specialist expertise + cost/quality benefit vs in-house.",
+    "hints": [
+      "Outsourcing: buy the expertise externally rather than build it internally.",
+      "Disadvantage: loss of control over quality and confidentiality risks."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "biz_4_1_ms_001",
+    "subject": "business",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Marketing Mix (4Ps)",
+    "tags": [
+      "marketing",
+      "4Ps",
+      "marketing mix"
+    ],
+    "stem_template": "Which of the following are elements of the Marketing Mix (4Ps)? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "Product",
+        "correct": true
+      },
+      {
+        "text": "People",
+        "correct": false
+      },
+      {
+        "text": "Price",
+        "correct": true
+      },
+      {
+        "text": "Place (distribution)",
+        "correct": true
+      },
+      {
+        "text": "Promotion",
+        "correct": true
+      },
+      {
+        "text": "Process",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "4Ps: Product, Price, Place, Promotion. People and Process are part of the extended 7Ps (services marketing) but not the core 4Ps.",
+    "hints": [
+      "4Ps = Product, Price, Place, Promotion.",
+      "7Ps adds People, Process, Physical evidence."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_3_1_ms_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Break-Even Analysis",
+    "tags": [
+      "finance",
+      "break-even",
+      "fixed costs",
+      "variable costs"
+    ],
+    "stem_template": "Which of the following statements about break-even analysis are TRUE? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "At break-even, total revenue equals total costs",
+        "correct": true
+      },
+      {
+        "text": "Above break-even output, the firm makes a loss",
+        "correct": false
+      },
+      {
+        "text": "Fixed costs do not change with output level",
+        "correct": true
+      },
+      {
+        "text": "Break-even output = Fixed Costs ÷ Contribution per unit",
+        "correct": true
+      },
+      {
+        "text": "A lower selling price always reduces the break-even quantity",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "TRUE: TR=TC at break-even; FC constant; BEQ=FC÷(P-VC). FALSE: above BEQ = profit (not loss); lower price reduces contribution per unit → INCREASES BEQ.",
+    "hints": [
+      "Break-even: no profit, no loss.",
+      "Contribution per unit = Selling price - Variable cost per unit."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_2_1_ms_001",
+    "subject": "business",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Organisational Structures",
+    "tags": [
+      "HR",
+      "organisational structure",
+      "hierarchy"
+    ],
+    "stem_template": "Which of the following are TRUE about a TALL organisational structure? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "There are many levels of hierarchy",
+        "correct": true
+      },
+      {
+        "text": "Each manager has a wide span of control",
+        "correct": false
+      },
+      {
+        "text": "Communication from top to bottom may be slower",
+        "correct": true
+      },
+      {
+        "text": "It tends to be more bureaucratic",
+        "correct": true
+      },
+      {
+        "text": "It is better suited to creative, innovative firms",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Tall = many levels; NARROW span of control; slower vertical communication; more bureaucratic. FALSE: narrow (not wide) span; flat structures suit creative/innovative environments.",
+    "hints": [
+      "Tall = more levels, narrow span.",
+      "Flat = fewer levels, wide span."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "biz_3_3_ord_001",
+    "subject": "business",
+    "topic": "3",
+    "subtopic": "3.3",
+    "type": "ordering",
+    "difficulty": "core",
+    "title": "Investment Appraisal — Payback Period Steps",
+    "tags": [
+      "finance",
+      "investment appraisal",
+      "payback period"
+    ],
+    "stem_template": "Arrange the following steps for calculating the PAYBACK PERIOD of an investment in the CORRECT ORDER.",
+    "params": {},
+    "items": [
+      "Calculate cumulative cash flows year by year",
+      "Identify the year when cumulative cash flow turns positive",
+      "Identify the initial investment cost",
+      "Calculate the exact payback month within the final year"
+    ],
+    "correct_order": [
+      2,
+      0,
+      1,
+      3
+    ],
+    "mark_scheme_template": "Correct order: (1) identify initial cost; (2) calculate cumulative CF; (3) find when CF turns positive; (4) calculate exact month within that year.",
+    "hints": [
+      "Start with initial cost (year 0).",
+      "Payback month = remaining cost ÷ that year's CF × 12."
+    ],
+    "marks": 2
+  }
+]

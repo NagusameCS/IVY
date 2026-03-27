@@ -1,0 +1,365 @@
+[
+  {
+    "subject": "physics",
+    "topic": "A",
+    "topic_name": "Space, Time and Motion",
+    "subtopic": "A.1",
+    "lesson_title": "Kinematics",
+    "level": "SL/HL",
+    "tags": [
+      "displacement",
+      "velocity",
+      "acceleration",
+      "suvat",
+      "projectile-motion"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "A",
+    "topic_name": "Space, Time and Motion",
+    "subtopic": "A.2",
+    "lesson_title": "Forces and Momentum",
+    "level": "SL/HL",
+    "tags": [
+      "newtons-laws",
+      "free-body-diagrams",
+      "momentum",
+      "impulse"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "A",
+    "topic_name": "Space, Time and Motion",
+    "subtopic": "A.3",
+    "lesson_title": "Work, Energy and Power",
+    "level": "SL/HL",
+    "tags": [
+      "work",
+      "kinetic-energy",
+      "potential-energy",
+      "power",
+      "efficiency"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "A",
+    "topic_name": "Space, Time and Motion",
+    "subtopic": "A.4",
+    "lesson_title": "Rigid Body Mechanics",
+    "level": "HL",
+    "tags": [
+      "torque",
+      "rotational-motion",
+      "moment-of-inertia",
+      "angular-momentum"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "A",
+    "topic_name": "Space, Time and Motion",
+    "subtopic": "A.5",
+    "lesson_title": "Galilean and Special Relativity",
+    "level": "HL",
+    "tags": [
+      "reference-frames",
+      "time-dilation",
+      "length-contraction",
+      "lorentz"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "B",
+    "topic_name": "The Particulate Nature of Matter",
+    "subtopic": "B.1",
+    "lesson_title": "Thermal Energy Transfers",
+    "level": "SL/HL",
+    "tags": [
+      "specific-heat",
+      "latent-heat",
+      "conduction",
+      "convection",
+      "radiation"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "B",
+    "topic_name": "The Particulate Nature of Matter",
+    "subtopic": "B.2",
+    "lesson_title": "Greenhouse Effect",
+    "level": "SL/HL",
+    "tags": [
+      "albedo",
+      "emissivity",
+      "greenhouse-gases",
+      "energy-balance"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "B",
+    "topic_name": "The Particulate Nature of Matter",
+    "subtopic": "B.3",
+    "lesson_title": "Gas Laws",
+    "level": "SL/HL",
+    "tags": [
+      "ideal-gas-law",
+      "kinetic-theory",
+      "pressure",
+      "temperature"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "B",
+    "topic_name": "The Particulate Nature of Matter",
+    "subtopic": "B.4",
+    "lesson_title": "Thermodynamics",
+    "level": "HL",
+    "tags": [
+      "first-law",
+      "entropy",
+      "second-law",
+      "heat-engines",
+      "carnot"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "B",
+    "topic_name": "The Particulate Nature of Matter",
+    "subtopic": "B.5",
+    "lesson_title": "Current and Circuits",
+    "level": "SL/HL",
+    "tags": [
+      "current",
+      "voltage",
+      "resistance",
+      "ohms-law",
+      "kirchhoff",
+      "circuits"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "C",
+    "topic_name": "Wave Behaviour",
+    "subtopic": "C.1",
+    "lesson_title": "Simple Harmonic Motion",
+    "level": "SL/HL",
+    "tags": [
+      "shm",
+      "pendulum",
+      "spring",
+      "oscillations"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "C",
+    "topic_name": "Wave Behaviour",
+    "subtopic": "C.2",
+    "lesson_title": "Wave Model",
+    "level": "SL/HL",
+    "tags": [
+      "transverse",
+      "longitudinal",
+      "wavelength",
+      "frequency",
+      "wave-speed"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "C",
+    "topic_name": "Wave Behaviour",
+    "subtopic": "C.3",
+    "lesson_title": "Wave Phenomena",
+    "level": "SL/HL",
+    "tags": [
+      "reflection",
+      "refraction",
+      "diffraction",
+      "interference",
+      "standing-waves"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "C",
+    "topic_name": "Wave Behaviour",
+    "subtopic": "C.4",
+    "lesson_title": "Standing Waves and Resonance",
+    "level": "HL",
+    "tags": [
+      "standing-waves",
+      "harmonics",
+      "resonance"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "C",
+    "topic_name": "Wave Behaviour",
+    "subtopic": "C.5",
+    "lesson_title": "Doppler Effect",
+    "level": "HL",
+    "tags": [
+      "doppler",
+      "moving-source",
+      "moving-observer"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "D",
+    "topic_name": "Fields",
+    "subtopic": "D.1",
+    "lesson_title": "Gravitational Fields",
+    "level": "SL/HL",
+    "tags": [
+      "gravitational-field",
+      "newtons-law-gravity",
+      "orbital-motion"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "D",
+    "topic_name": "Fields",
+    "subtopic": "D.2",
+    "lesson_title": "Electric and Magnetic Fields",
+    "level": "SL/HL",
+    "tags": [
+      "electric-field",
+      "coulombs-law",
+      "magnetic-field",
+      "lorentz-force"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "D",
+    "topic_name": "Fields",
+    "subtopic": "D.3",
+    "lesson_title": "Motion in EM Fields",
+    "level": "HL",
+    "tags": [
+      "charged-particles",
+      "mass-spectrometer",
+      "cyclotron"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "D",
+    "topic_name": "Fields",
+    "subtopic": "D.4",
+    "lesson_title": "Induction",
+    "level": "HL",
+    "tags": [
+      "faraday",
+      "lenz",
+      "emf",
+      "flux",
+      "generators"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "E",
+    "topic_name": "Nuclear and Quantum Physics",
+    "subtopic": "E.1",
+    "lesson_title": "Structure of the Atom",
+    "level": "SL/HL",
+    "tags": [
+      "atomic-models",
+      "emission-spectra",
+      "energy-levels"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "E",
+    "topic_name": "Nuclear and Quantum Physics",
+    "subtopic": "E.2",
+    "lesson_title": "Quantum Physics",
+    "level": "SL/HL",
+    "tags": [
+      "photoelectric",
+      "wave-particle-duality",
+      "de-broglie"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "E",
+    "topic_name": "Nuclear and Quantum Physics",
+    "subtopic": "E.3",
+    "lesson_title": "Radioactive Decay",
+    "level": "SL/HL",
+    "tags": [
+      "alpha",
+      "beta",
+      "gamma",
+      "half-life",
+      "decay-equations"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "E",
+    "topic_name": "Nuclear and Quantum Physics",
+    "subtopic": "E.4",
+    "lesson_title": "Fission",
+    "level": "SL/HL",
+    "tags": [
+      "fission",
+      "chain-reaction",
+      "nuclear-reactor",
+      "mass-defect"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "physics",
+    "topic": "E",
+    "topic_name": "Nuclear and Quantum Physics",
+    "subtopic": "E.5",
+    "lesson_title": "Fusion and Stars",
+    "level": "HL",
+    "tags": [
+      "fusion",
+      "stellar-nucleosynthesis",
+      "HR-diagram"
+    ],
+    "practice_integration": true
+  }
+]

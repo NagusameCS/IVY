@@ -1,0 +1,70 @@
+# cPanel Server Configuration
+# Place this in /home/ivysfyoq/public_html/.htaccess
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # HTTPS redirect
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Remove .html extension
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^\.]+)$ $1.html [NC,L]
+    
+    # Cache control for assets
+    <FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    
+    # Cache generated data (questions.json, structures, etc.)
+    <FilesMatch "\.(json)$">
+        Header set Cache-Control "max-age=3600, public"
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+    
+    # Compress HTML, CSS, JS
+    <IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+        BrowserMatch ^Mozilla/4 gzip-only-text/html
+        BrowserMatch ^Mozilla/4\.0[678] no-gzip
+        BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    </IfModule>
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Deny access to hidden files
+<FilesMatch "^\.|\.json$|\.db$">
+    <IfModule mod_version.c>
+        <IfVersion >= 2.4>
+            Require all denied
+        </IfVersion>
+        <IfVersion < 2.4>
+            Order allow,deny
+            Deny from all
+        </IfVersion>
+    </IfModule>
+</FilesMatch>
+
+# Allow access to data files (questions, structures)
+<Directory "*/data/">
+    <IfModule mod_version.c>
+        <IfVersion >= 2.4>
+            Require all granted
+        </IfVersion>
+        <IfVersion < 2.4>
+            Order allow,deny
+            Allow from all
+        </IfVersion>
+    </IfModule>
+</Directory>
+
+# CORS headers for API
+<FilesMatch "\.php$">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type"
+</FilesMatch>

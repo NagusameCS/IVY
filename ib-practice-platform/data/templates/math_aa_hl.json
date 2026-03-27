@@ -1,0 +1,6473 @@
+[
+  {
+    "id": "math_aa_7.1_mcq_001",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Geometric Distribution CDF",
+    "tags": [
+      "geometric-distribution",
+      "cdf",
+      "probability"
+    ],
+    "stem_template": "The random variable \\\\(X\\\\) follows a geometric distribution with parameter \\\\(p = {{p}}\\\\). Find \\\\(P(X \\\\leq {{k}})\\\\).",
+    "params": {
+      "p": {
+        "type": "choice",
+        "values": [
+          0.2,
+          0.25,
+          0.3,
+          0.4,
+          0.5
+        ]
+      },
+      "k": {
+        "type": "int",
+        "min": 2,
+        "max": 5
+      }
+    },
+    "answer_template": "1 - (1-{{p}})^{{k}}",
+    "distractor_templates": [
+      "(1-{{p}})^{{k}}",
+      "1 - {{p}}^{{k}}",
+      "{{p}} * (1-{{p}})^({{k}}-1)"
+    ],
+    "mark_scheme_template": "The CDF of the geometric distribution is \\\\(P(X \\\\leq k) = 1-(1-p)^k\\\\). Substituting \\\\(p={{p}}\\\\) and \\\\(k={{k}}\\\\): \\\\(P(X \\\\leq {{k}}) = 1-(1-{{p}})^{{{k}}}\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(1-(1-{{p}})^{{{k}}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\((1-{{p}})^{{{k}}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(1-{{p}}^{{{k}}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{p}}(1-{{p}})^{{{k}}-1}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "The geometric distribution counts trials until the first success.",
+      "The CDF is the complement of the probability that all first k trials are failures."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_7.1_mcq_002",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Negative Binomial Mean",
+    "tags": [
+      "negative-binomial",
+      "expectation",
+      "probability"
+    ],
+    "stem_template": "The random variable \\\\(X\\\\) follows a negative binomial distribution representing the number of trials needed to achieve \\\\(r = {{r}}\\\\) successes, where the probability of success is \\\\(p = {{p}}\\\\). Find \\\\(E(X)\\\\).",
+    "params": {
+      "r": {
+        "type": "int",
+        "min": 2,
+        "max": 5
+      },
+      "p": {
+        "type": "choice",
+        "values": [
+          0.2,
+          0.25,
+          0.4,
+          0.5
+        ]
+      }
+    },
+    "answer_template": "{{r}}/{{p}}",
+    "distractor_templates": [
+      "{{r}}*(1-{{p}})/{{p}}",
+      "{{r}}/{{p}} - 1",
+      "{{r}}*(1-{{p}})"
+    ],
+    "mark_scheme_template": "For a negative binomial distribution with parameters \\\\(r\\\\) and \\\\(p\\\\), the mean is \\\\(E(X)=\\\\dfrac{r}{p}\\\\). With \\\\(r={{r}}\\\\) and \\\\(p={{p}}\\\\): \\\\(E(X)=\\\\dfrac{{{r}}}{{{p}}}\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(\\\\dfrac{{{r}}}{{{p}}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(\\\\dfrac{{{r}}(1-{{p}})}{{{p}}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\dfrac{{{r}}}{{{p}}}-1\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{r}}(1-{{p}})\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Recall the mean of the negative binomial distribution.",
+      "The negative binomial extends the geometric distribution to r successes."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_7.1_numerical_003",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "PGF of Geometric Distribution",
+    "tags": [
+      "pgf",
+      "geometric-distribution",
+      "generating-functions"
+    ],
+    "stem_template": "The random variable \\\\(X \\\\sim \\\\text{Geo}(p)\\\\) with \\\\(p={{p}}\\\\). The probability generating function is \\\\(G_X(t) = \\\\dfrac{pt}{1-(1-p)t}\\\\). Find \\\\(G_X'(1)\\\\), the mean of \\\\(X\\\\).",
+    "params": {
+      "p": {
+        "type": "choice",
+        "values": [
+          0.2,
+          0.25,
+          0.4,
+          0.5
+        ]
+      }
+    },
+    "answer_template": "1/{{p}}",
+    "mark_scheme_template": "Differentiate \\\\(G_X(t)=\\\\dfrac{{{p}}t}{1-(1-{{p}})t}\\\\) using the quotient rule. At \\\\(t=1\\\\): \\\\(G_X'(1)=E(X)=\\\\dfrac{1}{p}=\\\\dfrac{1}{{{p}}}\\\\).",
+    "hints": [
+      "Differentiate G(t) with respect to t using the quotient rule.",
+      "Evaluate at t=1 to find the mean."
+    ],
+    "tolerance": 0.01,
+    "unit": "",
+    "marks": 5
+  },
+  {
+    "id": "math_aa_7.1_worked_004",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "PGF to Find Mean and Variance",
+    "tags": [
+      "pgf",
+      "negative-binomial",
+      "expectation",
+      "variance"
+    ],
+    "stem_template": "A random variable \\\\(X\\\\) has probability generating function \\\\(G_X(t) = \\\\left(\\\\dfrac{{{p}}t}{1-(1-{{p}})t}\\\\right)^{{{r}}}\\\\). (a) Find \\\\(E(X)\\\\). (b) Find \\\\(\\\\text{Var}(X)\\\\).",
+    "params": {
+      "r": {
+        "type": "int",
+        "min": 2,
+        "max": 4
+      },
+      "p": {
+        "type": "choice",
+        "values": [
+          0.25,
+          0.4,
+          0.5
+        ]
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "{{r}}/{{p}}"
+      },
+      {
+        "label": "b",
+        "marks": 4,
+        "answer_template": "{{r}}*(1-{{p}})/{{p}}^2"
+      }
+    ],
+    "mark_scheme_template": "(a) \\\\(E(X)=G_X'(1)\\\\). Differentiating and evaluating at \\\\(t=1\\\\) gives \\\\(E(X)=\\\\dfrac{r}{p}=\\\\dfrac{{{r}}}{{{p}}}\\\\). (b) \\\\(\\\\text{Var}(X)=G_X''(1)+G_X'(1)-[G_X'(1)]^2=\\\\dfrac{r(1-p)}{p^2}=\\\\dfrac{{{r}}(1-{{p}})}{{{p}}^2}\\\\).",
+    "hints": [
+      "Use E(X) = G'(1) for the mean.",
+      "Use Var(X) = G''(1) + G'(1) - [G'(1)]^2.",
+      "This PGF represents a negative binomial distribution."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_7.2_mcq_001",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Variance of Linear Combination",
+    "tags": [
+      "linear-combinations",
+      "variance-algebra",
+      "independence"
+    ],
+    "stem_template": "Independent random variables \\\\(X\\\\) and \\\\(Y\\\\) have \\\\(\\\\text{Var}(X)={{vx}}\\\\) and \\\\(\\\\text{Var}(Y)={{vy}}\\\\). Find \\\\(\\\\text{Var}({{a}}X - {{b}}Y)\\\\).",
+    "params": {
+      "vx": {
+        "type": "int",
+        "min": 2,
+        "max": 9
+      },
+      "vy": {
+        "type": "int",
+        "min": 2,
+        "max": 9
+      },
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 4
+      },
+      "b": {
+        "type": "int",
+        "min": 2,
+        "max": 4
+      }
+    },
+    "answer_template": "{{a}}^2 * {{vx}} + {{b}}^2 * {{vy}}",
+    "distractor_templates": [
+      "{{a}}^2 * {{vx}} - {{b}}^2 * {{vy}}",
+      "({{a}} + {{b}})^2 * ({{vx}} + {{vy}})",
+      "{{a}} * {{vx}} + {{b}} * {{vy}}"
+    ],
+    "mark_scheme_template": "For independent variables, \\\\(\\\\text{Var}(aX-bY)=a^2\\\\text{Var}(X)+b^2\\\\text{Var}(Y)={{a}}^2\\\\cdot{{vx}}+{{b}}^2\\\\cdot{{vy}}\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\({{a}}^2\\\\cdot{{vx}}+{{b}}^2\\\\cdot{{vy}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{a}}^2\\\\cdot{{vx}}-{{b}}^2\\\\cdot{{vy}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(({{a}}+{{b}})^2({{vx}}+{{vy}})\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{a}}\\\\cdot{{vx}}+{{b}}\\\\cdot{{vy}}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "For independent RVs, Var(aX ± bY) = a²Var(X) + b²Var(Y).",
+      "Subtraction does NOT make the variances subtract — they always add."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_7.2_mcq_002",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Expectation of Linear Combination",
+    "tags": [
+      "linear-combinations",
+      "expectation-algebra"
+    ],
+    "stem_template": "Random variables \\\\(X\\\\) and \\\\(Y\\\\) have \\\\(E(X)={{ex}}\\\\) and \\\\(E(Y)={{ey}}\\\\). Find \\\\(E({{a}}X + {{b}}Y - {{c}})\\\\).",
+    "params": {
+      "ex": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "ey": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 5
+      },
+      "b": {
+        "type": "int",
+        "min": 2,
+        "max": 5
+      },
+      "c": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      }
+    },
+    "answer_template": "{{a}}*{{ex}} + {{b}}*{{ey}} - {{c}}",
+    "distractor_templates": [
+      "{{a}}*{{ex}} + {{b}}*{{ey}} + {{c}}",
+      "({{a}}+{{b}})*({{ex}}+{{ey}}) - {{c}}",
+      "{{a}}*{{ex}} * {{b}}*{{ey}} - {{c}}"
+    ],
+    "mark_scheme_template": "Using linearity of expectation: \\\\(E({{a}}X+{{b}}Y-{{c}})={{a}}E(X)+{{b}}E(Y)-{{c}}={{a}}\\\\cdot{{ex}}+{{b}}\\\\cdot{{ey}}-{{c}}\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\({{a}}\\\\cdot{{ex}}+{{b}}\\\\cdot{{ey}}-{{c}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{a}}\\\\cdot{{ex}}+{{b}}\\\\cdot{{ey}}+{{c}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(({{a}}+{{b}})({{ex}}+{{ey}})-{{c}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{a}}\\\\cdot{{ex}}\\\\cdot{{b}}\\\\cdot{{ey}}-{{c}}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Expectation is linear: E(aX + bY) = aE(X) + bE(Y).",
+      "Constants shift the expectation directly."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_7.2_numerical_003",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.2",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Standard Deviation of Combination",
+    "tags": [
+      "linear-combinations",
+      "variance-algebra",
+      "standard-deviation"
+    ],
+    "stem_template": "Independent random variables \\\\(X_1, X_2, \\\\ldots, X_{{n}}\\\\) each have mean \\\\({{mu}}\\\\) and standard deviation \\\\({{sigma}}\\\\). Find the standard deviation of \\\\(\\\\bar{X} = \\\\dfrac{X_1+\\\\cdots+X_{{n}}}{{{n}}}\\\\).",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 4,
+        "max": 25
+      },
+      "mu": {
+        "type": "int",
+        "min": 10,
+        "max": 50
+      },
+      "sigma": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      }
+    },
+    "answer_template": "{{sigma}} / sqrt({{n}})",
+    "mark_scheme_template": "\\\\(\\\\text{Var}(\\\\bar{X})=\\\\dfrac{n\\\\sigma^2}{n^2}=\\\\dfrac{\\\\sigma^2}{n}\\\\). So \\\\(\\\\text{SD}(\\\\bar{X})=\\\\dfrac{\\\\sigma}{\\\\sqrt{n}}=\\\\dfrac{{{sigma}}}{\\\\sqrt{{{n}}}}\\\\).",
+    "hints": [
+      "Variance of a sum of independent variables equals the sum of variances.",
+      "Dividing by n affects variance by factor 1/n²."
+    ],
+    "tolerance": 0.001,
+    "unit": "",
+    "marks": 4
+  },
+  {
+    "id": "math_aa_7.2_worked_004",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.2",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Covariance and Correlation from Joint Distribution",
+    "tags": [
+      "covariance",
+      "correlation",
+      "joint-distribution"
+    ],
+    "stem_template": "Random variables \\\\(X\\\\) and \\\\(Y\\\\) have \\\\(E(X)={{ex}}\\\\), \\\\(E(Y)={{ey}}\\\\), \\\\(E(XY)={{exy}}\\\\), \\\\(\\\\text{Var}(X)={{vx}}\\\\), \\\\(\\\\text{Var}(Y)={{vy}}\\\\). (a) Find \\\\(\\\\text{Cov}(X,Y)\\\\). (b) Find the correlation coefficient \\\\(r_{XY}\\\\).",
+    "params": {
+      "ex": {
+        "type": "int",
+        "min": 2,
+        "max": 6
+      },
+      "ey": {
+        "type": "int",
+        "min": 2,
+        "max": 6
+      },
+      "exy": {
+        "type": "int",
+        "min": 5,
+        "max": 40
+      },
+      "vx": {
+        "type": "int",
+        "min": 1,
+        "max": 9
+      },
+      "vy": {
+        "type": "int",
+        "min": 1,
+        "max": 9
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "{{exy}} - {{ex}}*{{ey}}"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "({{exy}} - {{ex}}*{{ey}}) / sqrt({{vx}} * {{vy}})"
+      }
+    ],
+    "mark_scheme_template": "(a) \\\\(\\\\text{Cov}(X,Y)=E(XY)-E(X)E(Y)={{exy}}-{{ex}}\\\\cdot{{ey}}\\\\). (b) \\\\(r_{XY}=\\\\dfrac{\\\\text{Cov}(X,Y)}{\\\\sqrt{\\\\text{Var}(X)\\\\text{Var}(Y)}}\\\\).",
+    "hints": [
+      "Cov(X,Y) = E(XY) - E(X)E(Y).",
+      "Correlation = Cov(X,Y) / [SD(X) × SD(Y)]"
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_7.3_mcq_001",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Unbiased Estimator of Mean",
+    "tags": [
+      "unbiased-estimators",
+      "sample-mean",
+      "bias"
+    ],
+    "stem_template": "A sample \\\\(X_1, X_2, \\\\ldots, X_n\\\\) is drawn from a population with mean \\\\(\\\\mu\\\\). Which of the following is an unbiased estimator of \\\\(\\\\mu\\\\)?",
+    "params": {},
+    "answer_template": "\\\\(\\\\bar{X} = \\\\dfrac{1}{n}\\\\sum_{i=1}^n X_i\\\\)",
+    "distractor_templates": [
+      "\\\\(X_1\\\\) alone",
+      "\\\\(\\\\dfrac{X_1 + X_n}{3}\\\\)",
+      "\\\\(\\\\dfrac{\\\\sum X_i}{n+1}\\\\)"
+    ],
+    "mark_scheme_template": "An estimator \\\\(\\\\hat{\\\\theta}\\\\) is unbiased if \\\\(E(\\\\hat{\\\\theta})=\\\\theta\\\\). We have \\\\(E(\\\\bar{X})=\\\\mu\\\\), so \\\\(\\\\bar{X}\\\\) is unbiased. Note \\\\(E\\\\left(\\\\dfrac{\\\\sum X_i}{n+1}\\\\right)=\\\\dfrac{n\\\\mu}{n+1}\\\\neq\\\\mu\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(\\\\bar{X}=\\\\dfrac{1}{n}\\\\sum_{i=1}^n X_i\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(X_1\\\\) alone",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\dfrac{X_1+X_n}{3}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\dfrac{\\\\sum X_i}{n+1}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "An unbiased estimator has expected value equal to the parameter.",
+      "Check E(estimator) = parameter for each option."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_7.3_mcq_002",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Unbiased Sample Variance",
+    "tags": [
+      "unbiased-estimators",
+      "sample-variance",
+      "degrees-of-freedom"
+    ],
+    "stem_template": "A sample of size \\\\(n={{n}}\\\\) is taken from a population with variance \\\\(\\\\sigma^2\\\\). The sample variance with denominator \\\\(n-1\\\\) gives a value of \\\\({{sv}}\\\\). What is the unbiased estimate of \\\\(\\\\sigma^2\\\\)?",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      },
+      "sv": {
+        "type": "float",
+        "min": 1.0,
+        "max": 20.0,
+        "decimals": 2
+      }
+    },
+    "answer_template": "{{sv}}",
+    "distractor_templates": [
+      "{{sv}} * ({{n}}-1) / {{n}}",
+      "{{sv}} * {{n}} / ({{n}}-1)",
+      "sqrt({{sv}})"
+    ],
+    "mark_scheme_template": "The unbiased estimator of \\\\(\\\\sigma^2\\\\) is \\\\(s^2=\\\\dfrac{\\\\sum(x_i-\\\\bar{x})^2}{n-1}\\\\), which equals \\\\({{sv}}\\\\) as given.",
+    "options_template": [
+      {
+        "text": "\\\\({{sv}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{sv}}\\\\cdot\\\\dfrac{{{n}}-1}{{{n}}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{sv}}\\\\cdot\\\\dfrac{{{n}}}{{{n}}-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\sqrt{{{sv}}}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "The unbiased sample variance uses n-1 in the denominator (Bessel's correction).",
+      "The sample variance s² is already unbiased when computed with n-1."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_7.3_numerical_003",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.3",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Computing Unbiased Variance from Data",
+    "tags": [
+      "unbiased-estimators",
+      "sample-variance",
+      "calculation"
+    ],
+    "stem_template": "A sample of \\\\(n={{n}}\\\\) observations has \\\\(\\\\sum x_i = {{sumx}}\\\\) and \\\\(\\\\sum x_i^2 = {{sumx2}}\\\\). Find the unbiased estimate of the population variance.",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 5,
+        "max": 12
+      },
+      "sumx": {
+        "type": "int",
+        "min": 30,
+        "max": 120
+      },
+      "sumx2": {
+        "type": "int",
+        "min": 200,
+        "max": 1500
+      }
+    },
+    "answer_template": "({{sumx2}} - {{sumx}}^2/{{n}}) / ({{n}}-1)",
+    "mark_scheme_template": "\\\\(\\\\bar{x}=\\\\dfrac{{{sumx}}}{{{n}}}\\\\). \\\\(s^2=\\\\dfrac{\\\\sum x_i^2 - n\\\\bar{x}^2}{n-1}=\\\\dfrac{{{sumx2}}-{{sumx}}^2/{{n}}}{{{n}}-1}\\\\).",
+    "hints": [
+      "Use the computational formula: s² = [Σx² - (Σx)²/n] / (n-1).",
+      "Divide by n-1, not n, for the unbiased estimate."
+    ],
+    "tolerance": 0.01,
+    "unit": "",
+    "marks": 4
+  },
+  {
+    "id": "math_aa_7.3_worked_004",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.3",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Proving an Estimator is Unbiased",
+    "tags": [
+      "unbiased-estimators",
+      "proof",
+      "expected-value"
+    ],
+    "stem_template": "Let \\\\(X_1, X_2, \\\\ldots, X_n\\\\) be a random sample from a distribution with mean \\\\(\\\\mu\\\\) and variance \\\\(\\\\sigma^2\\\\). (a) Show that \\\\(T = \\\\dfrac{{{a}}X_1 + {{b}}X_2}{{{a}}+{{b}}}\\\\) is an unbiased estimator of \\\\(\\\\mu\\\\). (b) Find \\\\(\\\\text{Var}(T)\\\\) in terms of \\\\(\\\\sigma^2\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "b": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "E(T) = mu (proof)"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "({{a}}^2 + {{b}}^2) * sigma^2 / ({{a}}+{{b}})^2"
+      }
+    ],
+    "mark_scheme_template": "(a) \\\\(E(T)=\\\\dfrac{{{a}}E(X_1)+{{b}}E(X_2)}{{{a}}+{{b}}}=\\\\dfrac{({{a}}+{{b}})\\\\mu}{{{a}}+{{b}}}=\\\\mu\\\\). \\\\checkmark (b) \\\\(\\\\text{Var}(T)=\\\\dfrac{{{a}}^2\\\\sigma^2+{{b}}^2\\\\sigma^2}{({{a}}+{{b}})^2}=\\\\dfrac{({{a}}^2+{{b}}^2)\\\\sigma^2}{({{a}}+{{b}})^2}\\\\).",
+    "hints": [
+      "Apply E(aX) = aE(X) for each term.",
+      "Use Var(aX) = a²Var(X) for independent variables."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_7.4_mcq_001",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Sum of Independent Normal Variables",
+    "tags": [
+      "normal-combinations",
+      "sum-of-normals"
+    ],
+    "stem_template": "\\\\(X \\\\sim N({{mux}}, {{vx}}^2)\\\\) and \\\\(Y \\\\sim N({{muy}}, {{vy}}^2)\\\\) are independent. What is the distribution of \\\\(X + Y\\\\)?",
+    "params": {
+      "mux": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      },
+      "muy": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      },
+      "vx": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "vy": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      }
+    },
+    "answer_template": "N({{mux}}+{{muy}}, {{vx}}^2+{{vy}}^2)",
+    "distractor_templates": [
+      "N({{mux}}+{{muy}}, {{vx}}+{{vy}})",
+      "N({{mux}}*{{muy}}, {{vx}}*{{vy}})",
+      "N({{mux}}+{{muy}}, sqrt({{vx}}^2+{{vy}}^2))"
+    ],
+    "mark_scheme_template": "For independent normals, \\\\(X+Y\\\\sim N(\\\\mu_X+\\\\mu_Y, \\\\sigma_X^2+\\\\sigma_Y^2)=N({{mux}}+{{muy}},{{vx}}^2+{{vy}}^2)\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(N({{mux}}+{{muy}},\\, {{vx}}^2+{{vy}}^2)\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(N({{mux}}+{{muy}},\\, {{vx}}+{{vy}})\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(N({{mux}}\\cdot{{muy}},\\, {{vx}}\\cdot{{vy}})\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(N\\!\\left({{mux}}+{{muy}},\\, \\\\sqrt{{{vx}}^2+{{vy}}^2}\\\\right)\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "When combining independent normal variables, means add and variances add.",
+      "Be careful: variances add, not standard deviations."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_7.4_mcq_002",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Central Limit Theorem Application",
+    "tags": [
+      "central-limit-theorem",
+      "sampling-distribution",
+      "sample-mean"
+    ],
+    "stem_template": "A population has mean \\\\(\\\\mu={{mu}}\\\\) and standard deviation \\\\(\\\\sigma={{sigma}}\\\\). A random sample of size \\\\(n={{n}}\\\\) is taken. By the CLT, what is the approximate distribution of the sample mean \\\\(\\\\bar{X}\\\\)?",
+    "params": {
+      "mu": {
+        "type": "int",
+        "min": 20,
+        "max": 100
+      },
+      "sigma": {
+        "type": "int",
+        "min": 2,
+        "max": 15
+      },
+      "n": {
+        "type": "choice",
+        "values": [
+          25,
+          36,
+          49,
+          64,
+          100
+        ]
+      }
+    },
+    "answer_template": "N({{mu}}, {{sigma}}^2/{{n}})",
+    "distractor_templates": [
+      "N({{mu}}, {{sigma}}^2)",
+      "N({{mu}}/{{n}}, {{sigma}}^2/{{n}})",
+      "N({{mu}}, {{sigma}}/{{n}})"
+    ],
+    "mark_scheme_template": "By the CLT, \\\\(\\\\bar{X}\\\\sim N\\\\!\\\\left(\\\\mu,\\\\dfrac{\\\\sigma^2}{n}\\\\right)=N\\\\!\\\\left({{mu}},\\\\dfrac{{{sigma}}^2}{{{n}}}\\\\right)\\\\) approximately for large \\\\(n\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(N\\\\!\\\\left({{mu}},\\, \\\\dfrac{{{sigma}}^2}{{{n}}}\\\\right)\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(N({{mu}},\\, {{sigma}}^2)\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(N\\\\!\\\\left(\\\\dfrac{{{mu}}}{{{n}}},\\, \\\\dfrac{{{sigma}}^2}{{{n}}}\\\\right)\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(N\\\\!\\\\left({{mu}},\\, \\\\dfrac{{{sigma}}}{{{n}}}\\\\right)\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "The CLT states that sample means are approximately normal for large n.",
+      "The standard error of the mean is σ/√n, giving variance σ²/n."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_7.4_numerical_003",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.4",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Probability for Sample Mean via CLT",
+    "tags": [
+      "central-limit-theorem",
+      "normal-distribution",
+      "probability"
+    ],
+    "stem_template": "A population has mean \\\\({{mu}}\\\\) and standard deviation \\\\({{sigma}}\\\\). Find the probability that the mean of a random sample of \\\\({{n}}\\\\) observations exceeds \\\\({{x}}\\\\). Give your answer to 4 decimal places.",
+    "params": {
+      "mu": {
+        "type": "int",
+        "min": 30,
+        "max": 80
+      },
+      "sigma": {
+        "type": "int",
+        "min": 4,
+        "max": 15
+      },
+      "n": {
+        "type": "choice",
+        "values": [
+          16,
+          25,
+          36,
+          49
+        ]
+      },
+      "x": {
+        "type": "computed",
+        "formula": "mu + sigma/sqrt(n) * 1.2"
+      }
+    },
+    "answer_template": "1 - Phi(({{x}} - {{mu}}) / ({{sigma}}/sqrt({{n}})))",
+    "mark_scheme_template": "\\\\(\\\\bar{X}\\\\sim N\\\\!\\\\left({{mu}},\\\\dfrac{{{sigma}}^2}{{{n}}}\\\\right)\\\\). Standardise: \\\\(Z=\\\\dfrac{\\\\bar{X}-{{mu}}}{{{sigma}}/\\\\sqrt{{{n}}}}\\\\). \\\\(P(\\\\bar{X}>{{x}})=P\\\\!\\\\left(Z>\\\\dfrac{{{x}}-{{mu}}}{{{sigma}}/\\\\sqrt{{{n}}}}\\\\right)\\\\).",
+    "hints": [
+      "Use the CLT: X̄ ~ N(μ, σ²/n).",
+      "Standardise by subtracting μ and dividing by σ/√n."
+    ],
+    "tolerance": 0.0001,
+    "unit": "",
+    "marks": 5
+  },
+  {
+    "id": "math_aa_7.4_worked_004",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.4",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Linear Combination of Normal Variables",
+    "tags": [
+      "normal-combinations",
+      "linear-combination"
+    ],
+    "stem_template": "Independent random variables \\\\(X\\\\sim N({{mux}},{{sx}}^2)\\\\) and \\\\(Y\\\\sim N({{muy}},{{sy}}^2)\\\\). Find \\\\(P({{a}}X - {{b}}Y > {{c}})\\\\).",
+    "params": {
+      "mux": {
+        "type": "int",
+        "min": 10,
+        "max": 30
+      },
+      "muy": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      },
+      "sx": {
+        "type": "int",
+        "min": 2,
+        "max": 5
+      },
+      "sy": {
+        "type": "int",
+        "min": 2,
+        "max": 5
+      },
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 3
+      },
+      "b": {
+        "type": "int",
+        "min": 1,
+        "max": 2
+      },
+      "c": {
+        "type": "int",
+        "min": 0,
+        "max": 30
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "Find mean and variance of aX - bY"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "Standardise and use normal tables"
+      }
+    ],
+    "mark_scheme_template": "Let \\\\(W={{a}}X-{{b}}Y\\\\). \\\\(E(W)={{a}}\\\\cdot{{mux}}-{{b}}\\\\cdot{{muy}}\\\\). \\\\(\\\\text{Var}(W)={{a}}^2\\\\cdot{{sx}}^2+{{b}}^2\\\\cdot{{sy}}^2\\\\). Then \\\\(W\\\\sim N(E(W),\\\\text{Var}(W))\\\\) and standardise to find probability.",
+    "hints": [
+      "Find the distribution of W = aX - bY first.",
+      "Variances always add (even for differences) when variables are independent."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_7.5_mcq_001",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Confidence Interval Interpretation",
+    "tags": [
+      "confidence-intervals",
+      "interpretation"
+    ],
+    "stem_template": "A 95% confidence interval for a population mean is calculated as \\\\(({{lower}}, {{upper}})\\\\). Which statement is correct?",
+    "params": {
+      "lower": {
+        "type": "float",
+        "min": 10.0,
+        "max": 50.0,
+        "decimals": 1
+      },
+      "upper": {
+        "type": "computed",
+        "formula": "lower + 8"
+      }
+    },
+    "answer_template": "If we repeated this procedure many times, 95% of such intervals would contain the true mean.",
+    "distractor_templates": [
+      "There is a 95% probability that the true mean lies in this specific interval.",
+      "95% of the data lies between {{lower}} and {{upper}}.",
+      "The sample mean has a 95% chance of being correct."
+    ],
+    "mark_scheme_template": "A confidence interval is a procedure: 95% of all confidence intervals constructed this way contain the true parameter. For this specific interval, the true mean either is or is not in it — probability is not 95%.",
+    "options_template": [
+      {
+        "text": "If we repeated this procedure many times, 95% of such intervals would contain the true mean.",
+        "correct": true
+      },
+      {
+        "text": "There is a 95% probability that the true mean lies in this specific interval.",
+        "correct": false
+      },
+      {
+        "text": "95% of the data lies between \\\\({{lower}}\\\\) and \\\\({{upper}}\\\\).",
+        "correct": false
+      },
+      {
+        "text": "The sample mean has a 95% chance of being correct.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "A CI is a statement about the procedure, not about a fixed interval.",
+      "Once the interval is calculated, the parameter is either in it or not."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_7.5_numerical_002",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.5",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Constructing a 95% CI for Mean (known σ)",
+    "tags": [
+      "confidence-intervals",
+      "z-interval",
+      "margin-of-error"
+    ],
+    "stem_template": "A random sample of \\\\(n={{n}}\\\\) observations from a normal population with known \\\\(\\\\sigma={{sigma}}\\\\) yields \\\\(\\\\bar{x}={{xbar}}\\\\). Find the 95% confidence interval for the population mean. Give bounds to 2 decimal places.",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          16,
+          25,
+          36,
+          49,
+          64
+        ]
+      },
+      "sigma": {
+        "type": "int",
+        "min": 3,
+        "max": 12
+      },
+      "xbar": {
+        "type": "float",
+        "min": 20.0,
+        "max": 80.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "({{xbar}} - 1.96*{{sigma}}/sqrt({{n}}), {{xbar}} + 1.96*{{sigma}}/sqrt({{n}}))",
+    "mark_scheme_template": "95% CI: \\\\(\\\\bar{x}\\\\pm 1.96\\\\cdot\\\\dfrac{\\\\sigma}{\\\\sqrt{n}}={{xbar}}\\\\pm 1.96\\\\cdot\\\\dfrac{{{sigma}}}{\\\\sqrt{{{n}}}}\\\\).",
+    "hints": [
+      "Use z* = 1.96 for a 95% confidence interval.",
+      "The margin of error is z* × σ/√n."
+    ],
+    "tolerance": 0.01,
+    "unit": "",
+    "marks": 4
+  },
+  {
+    "id": "math_aa_7.5_numerical_003",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.5",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Required Sample Size for CI Width",
+    "tags": [
+      "confidence-intervals",
+      "sample-size",
+      "margin-of-error"
+    ],
+    "stem_template": "A population has known \\\\(\\\\sigma={{sigma}}\\\\). Find the minimum sample size \\\\(n\\\\) needed so that a 95% confidence interval for the mean has width at most \\\\({{w}}\\\\).",
+    "params": {
+      "sigma": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      },
+      "w": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      }
+    },
+    "answer_template": "ceil((2*1.96*{{sigma}}/{{w}})^2)",
+    "mark_scheme_template": "Width \\\\(=2\\\\times 1.96\\\\times\\\\dfrac{\\\\sigma}{\\\\sqrt{n}}\\\\leq{{w}}\\\\). Rearranging: \\\\(n\\\\geq\\\\left(\\\\dfrac{2\\\\times 1.96\\\\times{{sigma}}}{{{w}}}\\\\right)^2\\\\). Round up to nearest integer.",
+    "hints": [
+      "Width = 2 × margin of error.",
+      "Rearrange for n and always round up."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 5
+  },
+  {
+    "id": "math_aa_7.5_worked_004",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.5",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "t-Interval for Unknown Population Variance",
+    "tags": [
+      "confidence-intervals",
+      "t-distribution",
+      "unknown-variance"
+    ],
+    "stem_template": "A sample of \\\\(n={{n}}\\\\) observations has \\\\(\\\\bar{x}={{xbar}}\\\\) and unbiased sample standard deviation \\\\(s={{s}}\\\\). Construct a 95% confidence interval for the population mean, using the \\\\(t\\\\)-distribution with \\\\({{n}}-1\\\\) degrees of freedom. (Critical value: \\\\(t^*={{tstar}}\\\\)).",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          10,
+          12,
+          15,
+          20
+        ]
+      },
+      "xbar": {
+        "type": "float",
+        "min": 15.0,
+        "max": 60.0,
+        "decimals": 1
+      },
+      "s": {
+        "type": "float",
+        "min": 2.0,
+        "max": 10.0,
+        "decimals": 2
+      },
+      "tstar": {
+        "type": "choice",
+        "values": [
+          2.262,
+          2.201,
+          2.145,
+          2.093
+        ]
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "Identify t* and standard error"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "(xbar - t*×s/√n, xbar + t*×s/√n)"
+      }
+    ],
+    "mark_scheme_template": "Standard error \\\\(=\\\\dfrac{s}{\\\\sqrt{n}}=\\\\dfrac{{{s}}}{\\\\sqrt{{{n}}}}\\\\). 95% CI: \\\\({{xbar}}\\\\pm {{tstar}}\\\\times\\\\dfrac{{{s}}}{\\\\sqrt{{{n}}}}\\\\).",
+    "hints": [
+      "Use the t-distribution when σ is unknown.",
+      "Degrees of freedom = n - 1."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "math_aa_7.6_mcq_001",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.6",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Type I and Type II Errors",
+    "tags": [
+      "hypothesis-testing",
+      "type-I-error",
+      "type-II-error"
+    ],
+    "stem_template": "In a hypothesis test with significance level \\\\(\\\\alpha={{alpha}}\\\\), which statement correctly defines a Type I error?",
+    "params": {
+      "alpha": {
+        "type": "choice",
+        "values": [
+          0.01,
+          0.05,
+          0.1
+        ]
+      }
+    },
+    "answer_template": "Rejecting H₀ when H₀ is true, with probability α.",
+    "distractor_templates": [
+      "Accepting H₀ when H₁ is true.",
+      "Rejecting H₁ when H₁ is true.",
+      "The probability of correctly rejecting H₀."
+    ],
+    "mark_scheme_template": "Type I error: rejecting \\\\(H_0\\\\) when \\\\(H_0\\\\) is true. Its probability equals \\\\(\\\\alpha={{alpha}}\\\\). Type II error: failing to reject \\\\(H_0\\\\) when \\\\(H_1\\\\) is true.",
+    "options_template": [
+      {
+        "text": "Rejecting \\\\(H_0\\\\) when \\\\(H_0\\\\) is true, with probability \\\\({{alpha}}\\\\).",
+        "correct": true
+      },
+      {
+        "text": "Accepting \\\\(H_0\\\\) when \\\\(H_1\\\\) is true.",
+        "correct": false
+      },
+      {
+        "text": "Rejecting \\\\(H_1\\\\) when \\\\(H_1\\\\) is true.",
+        "correct": false
+      },
+      {
+        "text": "The probability of correctly rejecting \\\\(H_0\\\\).",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Type I = false positive (reject a true null).",
+      "Type II = false negative (fail to reject a false null)."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_7.6_mcq_002",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.6",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "One-Sample z-Test Decision",
+    "tags": [
+      "hypothesis-testing",
+      "z-test",
+      "p-value"
+    ],
+    "stem_template": "A one-sample \\\\(z\\\\)-test for a population mean gives a test statistic of \\\\(z={{z}}\\\\) for a two-tailed test. The significance level is \\\\(\\\\alpha=0.05\\\\) (critical value \\\\(z^*=1.96\\\\)). What is the correct conclusion?",
+    "params": {
+      "z": {
+        "type": "choice",
+        "values": [
+          2.15,
+          2.5,
+          1.5,
+          1.8,
+          3.1
+        ]
+      }
+    },
+    "answer_template": "Reject H₀ if |z| > 1.96, otherwise fail to reject H₀.",
+    "distractor_templates": [
+      "Always reject H₀ for any positive z.",
+      "Reject H₀ only if z > 0.",
+      "Accept H₁ only if z > 2."
+    ],
+    "mark_scheme_template": "For a two-tailed test at \\\\(\\\\alpha=0.05\\\\), reject \\\\(H_0\\\\) if \\\\(|z|>1.96\\\\). Since \\\\(z={{z}}\\\\), \\\\(|z|={{z}}\\\\). Compare to 1.96 to decide.",
+    "options_template": [
+      {
+        "text": "Reject \\\\(H_0\\\\) if \\\\(|z|>1.96\\\\), otherwise fail to reject \\\\(H_0\\\\).",
+        "correct": true
+      },
+      {
+        "text": "Always reject \\\\(H_0\\\\) for any positive \\\\(z\\\\).",
+        "correct": false
+      },
+      {
+        "text": "Reject \\\\(H_0\\\\) only if \\\\(z>0\\\\).",
+        "correct": false
+      },
+      {
+        "text": "Accept \\\\(H_1\\\\) only if \\\\(z>2\\\\).",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Compare |z| to the critical value for two-tailed tests.",
+      "At α=0.05 two-tailed, the critical z-value is ±1.96."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_7.6_numerical_003",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.6",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Compute z-Test Statistic",
+    "tags": [
+      "hypothesis-testing",
+      "z-test",
+      "test-statistic"
+    ],
+    "stem_template": "A random sample of \\\\(n={{n}}\\\\) from a population with known \\\\(\\\\sigma={{sigma}}\\\\) gives \\\\(\\\\bar{x}={{xbar}}\\\\). Test \\\\(H_0: \\\\mu={{mu0}}\\\\) against \\\\(H_1: \\\\mu\\\\neq{{mu0}}\\\\). Find the test statistic \\\\(z\\\\) to 3 significant figures.",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          25,
+          36,
+          49,
+          64
+        ]
+      },
+      "sigma": {
+        "type": "int",
+        "min": 3,
+        "max": 10
+      },
+      "xbar": {
+        "type": "float",
+        "min": 20.0,
+        "max": 60.0,
+        "decimals": 1
+      },
+      "mu0": {
+        "type": "int",
+        "min": 20,
+        "max": 60
+      }
+    },
+    "answer_template": "({{xbar}} - {{mu0}}) / ({{sigma}} / sqrt({{n}}))",
+    "mark_scheme_template": "\\\\(z=\\\\dfrac{\\\\bar{x}-\\\\mu_0}{\\\\sigma/\\\\sqrt{n}}=\\\\dfrac{{{xbar}}-{{mu0}}}{{{sigma}}/\\\\sqrt{{{n}}}}\\\\).",
+    "hints": [
+      "The test statistic is z = (x̄ - μ₀) / (σ/√n).",
+      "σ/√n is the standard error of the mean."
+    ],
+    "tolerance": 0.01,
+    "unit": "",
+    "marks": 4
+  },
+  {
+    "id": "math_aa_7.6_worked_004",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.6",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Full Hypothesis Test with Conclusion",
+    "tags": [
+      "hypothesis-testing",
+      "z-test",
+      "full-test",
+      "conclusion"
+    ],
+    "stem_template": "A manufacturer claims the mean lifetime of batteries is \\\\(\\\\mu_0={{mu0}}\\\\) hours. A sample of \\\\(n={{n}}\\\\) batteries has mean \\\\(\\\\bar{x}={{xbar}}\\\\) hours. The population standard deviation is \\\\(\\\\sigma={{sigma}}\\\\) hours. Carry out a hypothesis test at the \\\\({{alpha}}\\\\)% significance level and state your conclusion clearly.",
+    "params": {
+      "mu0": {
+        "type": "int",
+        "min": 50,
+        "max": 200
+      },
+      "n": {
+        "type": "choice",
+        "values": [
+          25,
+          36,
+          49,
+          64
+        ]
+      },
+      "xbar": {
+        "type": "float",
+        "min": 40.0,
+        "max": 210.0,
+        "decimals": 1
+      },
+      "sigma": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      },
+      "alpha": {
+        "type": "choice",
+        "values": [
+          1,
+          5,
+          10
+        ]
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "State H0 and H1"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "Compute z-statistic"
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "answer_template": "Compare to critical value and conclude"
+      }
+    ],
+    "mark_scheme_template": "(a) \\\\(H_0: \\\\mu={{mu0}}\\\\), \\\\(H_1: \\\\mu\\\\neq{{mu0}}\\\\) (two-tailed). (b) \\\\(z=\\\\dfrac{{{xbar}}-{{mu0}}}{{{sigma}}/\\\\sqrt{{{n}}}}\\\\). (c) Compare \\\\(|z|\\\\) to the critical value. State conclusion in context.",
+    "hints": [
+      "State hypotheses first.",
+      "Use a two-tailed test unless the claim is directional.",
+      "State conclusion in context of the problem."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_7.7_mcq_001",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.7",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Pearson Correlation Coefficient Range",
+    "tags": [
+      "correlation",
+      "pearson",
+      "interpretation"
+    ],
+    "stem_template": "A dataset of \\\\((x,y)\\\\) pairs gives Pearson's correlation coefficient \\\\(r={{r}}\\\\). Which statement best describes this?",
+    "params": {
+      "r": {
+        "type": "choice",
+        "values": [
+          0.92,
+          -0.85,
+          0.15,
+          -0.03,
+          0.6
+        ]
+      }
+    },
+    "answer_template": "r = 0.92 indicates strong positive linear correlation.",
+    "distractor_templates": [
+      "r always lies between 0 and 1.",
+      "r = 0 means the variables are independent.",
+      "r measures non-linear relationships."
+    ],
+    "mark_scheme_template": "Pearson's \\\\(r\\\\in[-1,1]\\\\). \\\\(|r|\\\\) near 1 indicates strong linear correlation; \\\\(r>0\\\\) is positive, \\\\(r<0\\\\) is negative. \\\\(r=0\\\\) means no linear correlation (but variables could still be dependent).",
+    "options_template": [
+      {
+        "text": "\\\\(r={{r}}\\\\) indicates a strong linear relationship (positive if \\\\(r>0\\\\), negative if \\\\(r<0\\\\)).",
+        "correct": true
+      },
+      {
+        "text": "\\\\(r\\\\) always lies between 0 and 1.",
+        "correct": false
+      },
+      {
+        "text": "\\\\(r=0\\\\) means the variables are independent.",
+        "correct": false
+      },
+      {
+        "text": "\\\\(r\\\\) measures non-linear relationships.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Pearson's r is always between -1 and 1.",
+      "r = 0 does not imply independence, only no linear correlation."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_7.7_numerical_002",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.7",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Least-Squares Regression Line",
+    "tags": [
+      "regression",
+      "least-squares",
+      "slope",
+      "intercept"
+    ],
+    "stem_template": "Given data: \\\\(n={{n}}\\\\), \\\\(\\\\sum x={{sx}}\\\\), \\\\(\\\\sum y={{sy}}\\\\), \\\\(\\\\sum x^2={{sx2}}\\\\), \\\\(\\\\sum xy={{sxy}}\\\\). Find the slope \\\\(b\\\\) of the least-squares regression line \\\\(\\\\hat{y}=a+bx\\\\).",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 5,
+        "max": 10
+      },
+      "sx": {
+        "type": "int",
+        "min": 20,
+        "max": 80
+      },
+      "sy": {
+        "type": "int",
+        "min": 20,
+        "max": 100
+      },
+      "sx2": {
+        "type": "int",
+        "min": 100,
+        "max": 800
+      },
+      "sxy": {
+        "type": "int",
+        "min": 100,
+        "max": 1000
+      }
+    },
+    "answer_template": "({{n}}*{{sxy}} - {{sx}}*{{sy}}) / ({{n}}*{{sx2}} - {{sx}}^2)",
+    "mark_scheme_template": "\\\\(b=\\\\dfrac{n\\\\sum xy-\\\\sum x\\\\sum y}{n\\\\sum x^2-(\\\\sum x)^2}=\\\\dfrac{{{n}}\\\\cdot{{sxy}}-{{sx}}\\\\cdot{{sy}}}{{{n}}\\\\cdot{{sx2}}-{{sx}}^2}\\\\).",
+    "hints": [
+      "Use the formula b = [nΣxy - ΣxΣy] / [nΣx² - (Σx)²].",
+      "This minimises the sum of squared residuals."
+    ],
+    "tolerance": 0.01,
+    "unit": "",
+    "marks": 4
+  },
+  {
+    "id": "math_aa_7.7_worked_003",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.7",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Full Regression Analysis with Prediction",
+    "tags": [
+      "regression",
+      "prediction",
+      "correlation"
+    ],
+    "stem_template": "For a dataset with \\\\(n={{n}}\\\\) points: \\\\(\\\\bar{x}={{xbar}}\\\\), \\\\(\\\\bar{y}={{ybar}}\\\\), \\\\(S_{xx}={{sxx}}\\\\), \\\\(S_{xy}={{sxy}}\\\\). (a) Find the equation of the regression line of \\\\(y\\\\) on \\\\(x\\\\). (b) Predict \\\\(y\\\\) when \\\\(x={{xnew}}\\\\). (c) State a reason why this prediction may be unreliable.",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 6,
+        "max": 12
+      },
+      "xbar": {
+        "type": "float",
+        "min": 5.0,
+        "max": 20.0,
+        "decimals": 1
+      },
+      "ybar": {
+        "type": "float",
+        "min": 10.0,
+        "max": 40.0,
+        "decimals": 1
+      },
+      "sxx": {
+        "type": "float",
+        "min": 20.0,
+        "max": 100.0,
+        "decimals": 1
+      },
+      "sxy": {
+        "type": "float",
+        "min": 10.0,
+        "max": 120.0,
+        "decimals": 1
+      },
+      "xnew": {
+        "type": "float",
+        "min": 25.0,
+        "max": 40.0,
+        "decimals": 1
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "b = Sxy/Sxx, a = ybar - b*xbar"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "Substitute xnew into regression equation"
+      },
+      {
+        "label": "c",
+        "marks": 1,
+        "answer_template": "Extrapolation beyond data range"
+      }
+    ],
+    "mark_scheme_template": "(a) \\\\(b=\\\\dfrac{S_{xy}}{S_{xx}}=\\\\dfrac{{{sxy}}}{{{sxx}}}\\\\); \\\\(a=\\\\bar{y}-b\\\\bar{x}\\\\). Regression line: \\\\(\\\\hat{y}=a+bx\\\\). (b) Substitute \\\\(x={{xnew}}\\\\). (c) \\\\(x={{xnew}}\\\\) may be outside the range of observed data (extrapolation), making the prediction unreliable.",
+    "hints": [
+      "Slope b = Sxy/Sxx where Sxx = Σ(xi - x̄)².",
+      "The line passes through (x̄, ȳ).",
+      "Extrapolation beyond the data range is unreliable."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_7.7_mcq_004",
+    "subject": "math_aa",
+    "topic": "7",
+    "subtopic": "7.7",
+    "type": "mcq",
+    "difficulty": "challenge",
+    "title": "Coefficient of Determination",
+    "tags": [
+      "correlation",
+      "r-squared",
+      "regression"
+    ],
+    "stem_template": "For a regression of \\\\(y\\\\) on \\\\(x\\\\), the correlation coefficient is \\\\(r={{r}}\\\\). What percentage of the variation in \\\\(y\\\\) is explained by the linear regression on \\\\(x\\\\)?",
+    "params": {
+      "r": {
+        "type": "choice",
+        "values": [
+          0.9,
+          0.8,
+          0.7,
+          0.6,
+          0.5
+        ]
+      }
+    },
+    "answer_template": "{{r}}^2 * 100 percent",
+    "distractor_templates": [
+      "{{r}} * 100 percent",
+      "(1-{{r}}^2) * 100 percent",
+      "2*{{r}}^2 * 100 percent"
+    ],
+    "mark_scheme_template": "The coefficient of determination \\\\(r^2={{r}}^2\\\\) gives the proportion of variance in \\\\(y\\\\) explained by the linear regression. This is \\\\({{r}}^2\\\\times 100\\\\%\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\({{r}}^2\\\\times 100\\\\% \\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{r}}\\\\times 100\\\\%\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\((1-{{r}}^2)\\\\times 100\\\\%\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(2{{r}}^2\\\\times 100\\\\%\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "r² (not r) gives the proportion of explained variance.",
+      "Multiply by 100 for percentage."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.1_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "De Morgan's Law",
+    "tags": [
+      "sets",
+      "de-morgan",
+      "complement"
+    ],
+    "stem_template": "Which of the following correctly states De Morgan's Law?",
+    "params": {},
+    "answer_template": "(A ∪ B)' = A' ∩ B'",
+    "distractor_templates": [
+      "(A ∪ B)' = A' ∪ B'",
+      "(A ∩ B)' = A ∪ B",
+      "(A ∪ B)' = A ∩ B"
+    ],
+    "mark_scheme_template": "De Morgan's Laws: \\\\((A\\\\cup B)'=A'\\\\cap B'\\\\) and \\\\((A\\\\cap B)'=A'\\\\cup B'\\\\). The complement of a union is the intersection of complements.",
+    "options_template": [
+      {
+        "text": "\\\\((A\\\\cup B)'=A'\\\\cap B'\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\((A\\\\cup B)'=A'\\\\cup B'\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\((A\\\\cap B)'=A\\\\cup B\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\((A\\\\cup B)'=A\\\\cap B\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Think about complement of 'either' — you must be outside BOTH sets.",
+      "The complement of a union is the intersection of complements."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_8.1_mcq_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Set Cardinality with Inclusion-Exclusion",
+    "tags": [
+      "sets",
+      "inclusion-exclusion",
+      "cardinality"
+    ],
+    "stem_template": "Sets \\\\(A\\\\) and \\\\(B\\\\) satisfy \\\\(|A|={{a}}\\\\), \\\\(|B|={{b}}\\\\), and \\\\(|A\\\\cap B|={{ab}}\\\\). Find \\\\(|A\\\\cup B|\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 10,
+        "max": 30
+      },
+      "b": {
+        "type": "int",
+        "min": 10,
+        "max": 30
+      },
+      "ab": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      }
+    },
+    "answer_template": "{{a}} + {{b}} - {{ab}}",
+    "distractor_templates": [
+      "{{a}} + {{b}} + {{ab}}",
+      "{{a}} + {{b}}",
+      "{{a}} * {{b}} - {{ab}}"
+    ],
+    "mark_scheme_template": "Inclusion-exclusion: \\\\(|A\\\\cup B|=|A|+|B|-|A\\\\cap B|={{a}}+{{b}}-{{ab}}\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\({{a}}+{{b}}-{{ab}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{a}}+{{b}}+{{ab}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{a}}+{{b}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{a}}\\\\cdot{{b}}-{{ab}}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Use the inclusion-exclusion principle.",
+      "|A ∪ B| = |A| + |B| - |A ∩ B|"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_8.1_numerical_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.1",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Symmetric Difference",
+    "tags": [
+      "sets",
+      "symmetric-difference",
+      "set-operations"
+    ],
+    "stem_template": "Sets \\\\(A\\\\) and \\\\(B\\\\) satisfy \\\\(|A|={{a}}\\\\), \\\\(|B|={{b}}\\\\), \\\\(|A\\\\cap B|={{ab}}\\\\). Find \\\\(|A\\\\triangle B|\\\\) (symmetric difference).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 10,
+        "max": 25
+      },
+      "b": {
+        "type": "int",
+        "min": 10,
+        "max": 25
+      },
+      "ab": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      }
+    },
+    "answer_template": "{{a}} + {{b}} - 2*{{ab}}",
+    "mark_scheme_template": "\\\\(A\\\\triangle B=(A\\\\setminus B)\\\\cup(B\\\\setminus A)\\\\). \\\\(|A\\\\triangle B|=|A|+|B|-2|A\\\\cap B|={{a}}+{{b}}-2\\\\cdot{{ab}}\\\\).",
+    "hints": [
+      "Symmetric difference = elements in A or B but not both.",
+      "|A△B| = |A| + |B| - 2|A ∩ B|"
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.1_worked_004",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.1",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Proving Set Identity",
+    "tags": [
+      "sets",
+      "set-laws",
+      "proof",
+      "distributivity"
+    ],
+    "stem_template": "Prove that for any sets \\\\(A\\\\), \\\\(B\\\\), and \\\\(C\\\\): \\\\(A\\\\cap(B\\\\cup C)=(A\\\\cap B)\\\\cup(A\\\\cap C)\\\\).",
+    "params": {},
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "Show LHS ⊆ RHS"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "Show RHS ⊆ LHS"
+      }
+    ],
+    "mark_scheme_template": "Let \\\\(x\\\\in A\\\\cap(B\\\\cup C)\\\\). Then \\\\(x\\\\in A\\\\) and \\\\(x\\\\in B\\\\cup C\\\\). Case 1: \\\\(x\\\\in B\\\\Rightarrow x\\\\in A\\\\cap B\\\\). Case 2: \\\\(x\\\\in C\\\\Rightarrow x\\\\in A\\\\cap C\\\\). Either way \\\\(x\\\\in(A\\\\cap B)\\\\cup(A\\\\cap C)\\\\). Reverse inclusion by similar argument.",
+    "hints": [
+      "Prove both containments: LHS ⊆ RHS and RHS ⊆ LHS.",
+      "Let x be an arbitrary element of one side and show it belongs to the other."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_8.2_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Equivalence Relation Properties",
+    "tags": [
+      "relations",
+      "equivalence-relations",
+      "reflexive",
+      "symmetric",
+      "transitive"
+    ],
+    "stem_template": "A relation \\\\(R\\\\) on \\\\(\\\\mathbb{Z}\\\\) is defined by \\\\(aRb \\\\Leftrightarrow {{m}} \\\\mid (a-b)\\\\). Which properties does \\\\(R\\\\) satisfy?",
+    "params": {
+      "m": {
+        "type": "choice",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "answer_template": "Reflexive, symmetric, and transitive (equivalence relation).",
+    "distractor_templates": [
+      "Reflexive and symmetric only.",
+      "Symmetric and transitive only.",
+      "Transitive only."
+    ],
+    "mark_scheme_template": "Reflexive: \\\\({{m}}\\\\mid(a-a)=0\\\\). ✓ Symmetric: if \\\\({{m}}\\\\mid(a-b)\\\\) then \\\\({{m}}\\\\mid(b-a)\\\\). ✓ Transitive: if \\\\({{m}}\\\\mid(a-b)\\\\) and \\\\({{m}}\\\\mid(b-c)\\\\) then \\\\({{m}}\\\\mid(a-c)\\\\). ✓ So \\\\(R\\\\) is an equivalence relation.",
+    "options_template": [
+      {
+        "text": "Reflexive, symmetric, and transitive (equivalence relation).",
+        "correct": true
+      },
+      {
+        "text": "Reflexive and symmetric only.",
+        "correct": false
+      },
+      {
+        "text": "Symmetric and transitive only.",
+        "correct": false
+      },
+      {
+        "text": "Transitive only.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Check all three properties: reflexive, symmetric, transitive.",
+      "This is congruence modulo m."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "math_aa_8.2_numerical_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.2",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Counting Equivalence Classes",
+    "tags": [
+      "equivalence-classes",
+      "modular-arithmetic",
+      "partitions"
+    ],
+    "stem_template": "The relation \\\\(R\\\\) on \\\\(\\\\{1, 2, \\\\ldots, {{n}}\\\\}\\\\) is defined by \\\\(aRb\\\\Leftrightarrow {{m}}\\\\mid(a-b)\\\\). How many distinct equivalence classes does \\\\(R\\\\) have?",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 10,
+        "max": 30
+      },
+      "m": {
+        "type": "choice",
+        "values": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "answer_template": "{{m}}",
+    "mark_scheme_template": "The equivalence classes are the residue classes modulo \\\\({{m}}\\\\): \\\\([0],[1],\\\\ldots,[{{m}}-1]\\\\). There are exactly \\\\({{m}}\\\\) classes.",
+    "hints": [
+      "The equivalence classes correspond to residues modulo m.",
+      "There are exactly m classes: [0], [1], ..., [m-1]."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.2_worked_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Proving a Relation is an Equivalence",
+    "tags": [
+      "equivalence-relations",
+      "proof",
+      "partition"
+    ],
+    "stem_template": "Define \\\\(R\\\\) on \\\\(\\\\mathbb{R}\\\\times\\\\mathbb{R}\\\\) by \\\\((a,b)R(c,d)\\\\Leftrightarrow a^2+b^2=c^2+d^2\\\\). (a) Prove \\\\(R\\\\) is an equivalence relation. (b) Describe the equivalence class of \\\\(({{x}},{{y}})\\\\).",
+    "params": {
+      "x": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "y": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 4,
+        "answer_template": "Prove R, S, T"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "Circle of radius sqrt(x²+y²)"
+      }
+    ],
+    "mark_scheme_template": "(a) Reflexive: \\\\(a^2+b^2=a^2+b^2\\\\). ✓ Symmetric: if \\\\(a^2+b^2=c^2+d^2\\\\) then vice versa. ✓ Transitive: if \\\\(a^2+b^2=c^2+d^2\\\\) and \\\\(c^2+d^2=e^2+f^2\\\\) then \\\\(a^2+b^2=e^2+f^2\\\\). ✓ (b) The class is \\\\(\\\\{(x,y): x^2+y^2={{x}}^2+{{y}}^2\\\\}\\\\), a circle of radius \\\\(\\\\sqrt{{{x}}^2+{{y}}^2}\\\\).",
+    "hints": [
+      "Check reflexive, symmetric, transitive separately.",
+      "Each equivalence class is a circle centred at the origin."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_8.3_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Injective, Surjective, Bijective",
+    "tags": [
+      "injective",
+      "surjective",
+      "bijective",
+      "functions"
+    ],
+    "stem_template": "The function \\\\(f:\\\\mathbb{R}\\\\to\\\\mathbb{R}\\\\) defined by \\\\(f(x)=x^3\\\\) is:",
+    "params": {},
+    "answer_template": "Both injective and surjective (bijective).",
+    "distractor_templates": [
+      "Injective but not surjective.",
+      "Surjective but not injective.",
+      "Neither injective nor surjective."
+    ],
+    "mark_scheme_template": "\\\\(f(x)=x^3\\\\) is strictly increasing on \\\\(\\\\mathbb{R}\\\\), so it is injective. Every real number has a real cube root, so it is surjective. Hence bijective.",
+    "options_template": [
+      {
+        "text": "Both injective and surjective (bijective).",
+        "correct": true
+      },
+      {
+        "text": "Injective but not surjective.",
+        "correct": false
+      },
+      {
+        "text": "Surjective but not injective.",
+        "correct": false
+      },
+      {
+        "text": "Neither injective nor surjective.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Injective: f(a) = f(b) implies a = b.",
+      "Surjective: every y in the codomain has a preimage."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.3_mcq_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Classifying a Finite Function",
+    "tags": [
+      "injective",
+      "surjective",
+      "bijective",
+      "finite-sets"
+    ],
+    "stem_template": "A function \\\\(f: A\\\\to B\\\\) where \\\\(|A|={{a}}\\\\) and \\\\(|B|={{b}}\\\\). If \\\\(f\\\\) is injective and \\\\(|A|<|B|\\\\), which is true?",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 3,
+        "max": 6
+      },
+      "b": {
+        "type": "int",
+        "min": 7,
+        "max": 10
+      }
+    },
+    "answer_template": "f cannot be surjective.",
+    "distractor_templates": [
+      "f must be surjective.",
+      "f must be bijective.",
+      "f cannot be injective."
+    ],
+    "mark_scheme_template": "If \\\\(f\\\\) is injective and \\\\(|A|<|B|\\\\), then the image of \\\\(f\\\\) has at most \\\\(|A|={{a}}\\\\) elements, leaving \\\\(|B|-|A|={{b}}-{{a}}\\\\) elements of \\\\(B\\\\) without a preimage. So \\\\(f\\\\) cannot be surjective.",
+    "options_template": [
+      {
+        "text": "\\\\(f\\\\) cannot be surjective.",
+        "correct": true
+      },
+      {
+        "text": "\\\\(f\\\\) must be surjective.",
+        "correct": false
+      },
+      {
+        "text": "\\\\(f\\\\) must be bijective.",
+        "correct": false
+      },
+      {
+        "text": "\\\\(f\\\\) cannot be injective.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "For a bijection, |A| must equal |B|.",
+      "If |A| < |B|, not all of B can be mapped to."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_8.3_worked_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.3",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Proving Bijection and Finding Inverse",
+    "tags": [
+      "bijective",
+      "inverse-function",
+      "proof"
+    ],
+    "stem_template": "Let \\\\(f:\\\\mathbb{R}\\\\to\\\\mathbb{R}\\\\) be defined by \\\\(f(x)={{a}}x+{{b}}\\\\). (a) Prove \\\\(f\\\\) is a bijection. (b) Find \\\\(f^{-1}(x)\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 6,
+        "exclude": [
+          0
+        ]
+      },
+      "b": {
+        "type": "int",
+        "min": -5,
+        "max": 5
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 4,
+        "answer_template": "Prove injective and surjective"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "(x - b) / a"
+      }
+    ],
+    "mark_scheme_template": "(a) Injective: \\\\({{a}}x_1+{{b}}={{a}}x_2+{{b}}\\\\Rightarrow x_1=x_2\\\\). ✓ Surjective: for any \\\\(y\\\\in\\\\mathbb{R}\\\\), set \\\\(x=\\\\frac{y-{{b}}}{{{a}}}\\\\). ✓ (b) \\\\(y={{a}}x+{{b}}\\\\Rightarrow x=\\\\frac{y-{{b}}}{{{a}}}\\\\), so \\\\(f^{-1}(x)=\\\\frac{x-{{b}}}{{{a}}}\\\\).",
+    "hints": [
+      "Prove injective by assuming f(a) = f(b) and showing a = b.",
+      "Prove surjective by constructing an explicit preimage for any y."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_8.4_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Binary Operation Closure",
+    "tags": [
+      "binary-operations",
+      "closure",
+      "operation-tables"
+    ],
+    "stem_template": "The operation \\\\(\\\\star\\\\) on \\\\(\\\\mathbb{Z}\\\\) is defined by \\\\(a\\\\star b = a + b - {{k}}\\\\). Is this operation closed on \\\\(\\\\mathbb{Z}\\\\)?",
+    "params": {
+      "k": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      }
+    },
+    "answer_template": "Yes, because a + b - k is always an integer when a, b are integers.",
+    "distractor_templates": [
+      "No, because k may be greater than a or b.",
+      "No, because the result could be negative.",
+      "Yes, only if a and b are positive."
+    ],
+    "mark_scheme_template": "For all \\\\(a, b\\\\in\\\\mathbb{Z}\\\\), \\\\(a+b-{{k}}\\\\in\\\\mathbb{Z}\\\\) since integers are closed under addition and subtraction. So \\\\(\\\\star\\\\) is closed on \\\\(\\\\mathbb{Z}\\\\).",
+    "options_template": [
+      {
+        "text": "Yes, because \\\\(a+b-{{k}}\\\\in\\\\mathbb{Z}\\\\) for all \\\\(a,b\\\\in\\\\mathbb{Z}\\\\).",
+        "correct": true
+      },
+      {
+        "text": "No, because \\\\({{k}}\\\\) may be greater than \\\\(a\\\\) or \\\\(b\\\\).",
+        "correct": false
+      },
+      {
+        "text": "No, because the result could be negative.",
+        "correct": false
+      },
+      {
+        "text": "Yes, only if \\\\(a\\\\) and \\\\(b\\\\) are positive.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Closure means the result must be in the same set.",
+      "Negative integers are still integers — closure is about set membership."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_8.4_numerical_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.4",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Operation Table Completion",
+    "tags": [
+      "binary-operations",
+      "operation-tables",
+      "modular-arithmetic"
+    ],
+    "stem_template": "The binary operation \\\\(\\\\star\\\\) on \\\\(\\\\{0, 1, 2, \\\\ldots, {{m}}-1\\\\}\\\\) is defined by \\\\(a\\\\star b = (a+b) \\\\bmod {{m}}\\\\). Find the value of \\\\({{a}} \\\\star {{b}}\\\\).",
+    "params": {
+      "m": {
+        "type": "choice",
+        "values": [
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 6
+      },
+      "b": {
+        "type": "int",
+        "min": 1,
+        "max": 6
+      }
+    },
+    "answer_template": "({{a}} + {{b}}) mod {{m}}",
+    "mark_scheme_template": "\\\\({{a}}\\\\star{{b}}=({{a}}+{{b}})\\\\bmod{{m}}\\\\).",
+    "hints": [
+      "Add a and b, then take the remainder when divided by m.",
+      "mod m gives a value in {0, 1, ..., m-1}."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 2
+  },
+  {
+    "id": "math_aa_8.4_worked_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Cayley Table Analysis",
+    "tags": [
+      "binary-operations",
+      "cayley-table",
+      "closure",
+      "commutativity"
+    ],
+    "stem_template": "A binary operation \\\\(\\\\star\\\\) on \\\\(S=\\\\{a,b,c,d\\\\}\\\\) is given by a Cayley table. (a) Is \\\\(\\\\star\\\\) commutative? (b) Find the identity element, if it exists. (c) Is the operation closed?",
+    "params": {},
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "Check if table is symmetric about the main diagonal"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "Find row/column that leaves every element unchanged"
+      },
+      {
+        "label": "c",
+        "marks": 1,
+        "answer_template": "All entries must be in S"
+      }
+    ],
+    "mark_scheme_template": "(a) Commutative iff the table is symmetric about the main diagonal. (b) Identity element \\\\(e\\\\) satisfies \\\\(e\\\\star x=x\\\\star e=x\\\\) for all \\\\(x\\\\). Look for a row and column that reproduce the header. (c) Closed iff every entry in the table belongs to \\\\(S\\\\).",
+    "hints": [
+      "A symmetric Cayley table indicates commutativity.",
+      "The identity element reproduces the row/column headers exactly."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "math_aa_8.5_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Associativity Test",
+    "tags": [
+      "associativity",
+      "binary-operations"
+    ],
+    "stem_template": "The operation \\\\(\\\\star\\\\) on \\\\(\\\\mathbb{R}\\\\) is defined by \\\\(a\\\\star b = a + b + {{k}}ab\\\\). Is \\\\(\\\\star\\\\) associative?",
+    "params": {
+      "k": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "answer_template": "Yes — verify (a★b)★c = a★(b★c) algebraically.",
+    "distractor_templates": [
+      "No — star is never associative when products appear.",
+      "Only if k = 0.",
+      "No — because the operation is not commutative."
+    ],
+    "mark_scheme_template": "Compute \\\\((a\\\\star b)\\\\star c=(a+b+{{k}}ab)+c+{{k}}(a+b+{{k}}ab)c\\\\). Similarly for \\\\(a\\\\star(b\\\\star c)\\\\). Expand and verify they are equal.",
+    "options_template": [
+      {
+        "text": "Yes — verify \\\\((a\\\\star b)\\\\star c=a\\\\star(b\\\\star c)\\\\) algebraically.",
+        "correct": true
+      },
+      {
+        "text": "No — \\\\(\\\\star\\\\) is never associative when products appear.",
+        "correct": false
+      },
+      {
+        "text": "Only if \\\\(k=0\\\\).",
+        "correct": false
+      },
+      {
+        "text": "No — because the operation is not commutative.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Compute (a★b)★c and a★(b★c) and compare.",
+      "Commutativity and associativity are independent properties."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "math_aa_8.5_numerical_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.5",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Verifying Distributivity",
+    "tags": [
+      "distributivity",
+      "binary-operations"
+    ],
+    "stem_template": "Operations \\\\(\\\\oplus\\\\) and \\\\(\\\\otimes\\\\) on \\\\(\\\\mathbb{Z}\\\\) are defined by \\\\(a\\\\oplus b=a+b\\\\) and \\\\(a\\\\otimes b=ab\\\\). Verify: does \\\\(\\\\otimes\\\\) distribute over \\\\(\\\\oplus\\\\)? Find \\\\({{a}}\\\\otimes({{b}}\\\\oplus{{c}})\\\\) and \\\\(({{a}}\\\\otimes{{b}})\\\\oplus({{a}}\\\\otimes{{c}})\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      },
+      "b": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      },
+      "c": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      }
+    },
+    "answer_template": "{{a}} * ({{b}} + {{c}})",
+    "mark_scheme_template": "\\\\({{a}}\\\\otimes({{b}}\\\\oplus{{c}})={{a}}({{b}}+{{c}})\\\\). \\\\(({{a}}\\\\otimes{{b}})\\\\oplus({{a}}\\\\otimes{{c}})={{a}}{{b}}+{{a}}{{c}}={{a}}({{b}}+{{c}})\\\\). Equal — distributivity holds.",
+    "hints": [
+      "⊗ is multiplication, ⊕ is addition.",
+      "This is just the ordinary distributive law of arithmetic."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.5_worked_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.5",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Checking All Operation Properties",
+    "tags": [
+      "associativity",
+      "commutativity",
+      "closure",
+      "binary-operations"
+    ],
+    "stem_template": "The operation \\\\(\\\\star\\\\) on \\\\(\\\\mathbb{R}^+\\\\) is defined by \\\\(a\\\\star b = \\\\sqrt{ab}\\\\). Determine whether \\\\(\\\\star\\\\) is: (a) closed, (b) commutative, (c) associative.",
+    "params": {},
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "Yes — product of positives is positive, square root of positive is positive"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "Yes — √(ab) = √(ba)"
+      },
+      {
+        "label": "c",
+        "marks": 3,
+        "answer_template": "No — (a★b)★c = (ab)^(1/2)^(1/2)... show inequality with a counterexample"
+      }
+    ],
+    "mark_scheme_template": "(a) For \\\\(a,b>0\\\\): \\\\(\\\\sqrt{ab}>0\\\\in\\\\mathbb{R}^+\\\\). Closed. ✓ (b) \\\\(\\\\sqrt{ab}=\\\\sqrt{ba}\\\\). Commutative. ✓ (c) \\\\((a\\\\star b)\\\\star c=\\\\sqrt{\\\\sqrt{ab}\\\\cdot c}=(ab)^{1/4}c^{1/2}\\\\). \\\\(a\\\\star(b\\\\star c)=a^{1/2}(bc)^{1/4}\\\\). These are not equal in general. Not associative. ✗",
+    "hints": [
+      "Try a specific counterexample for associativity.",
+      "a★(b★c) = √(a·√(bc)) ≠ (√(ab))★c in general."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_8.6_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.6",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Identity Element",
+    "tags": [
+      "identity-element",
+      "binary-operations"
+    ],
+    "stem_template": "The operation \\\\(\\\\star\\\\) on \\\\(\\\\mathbb{R}\\\\) is defined by \\\\(a\\\\star b=a+b-{{k}}\\\\). Find the identity element.",
+    "params": {
+      "k": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      }
+    },
+    "answer_template": "{{k}}",
+    "distractor_templates": [
+      "0",
+      "-{{k}}",
+      "2*{{k}}"
+    ],
+    "mark_scheme_template": "Require \\\\(e\\\\star a=a\\\\): \\\\(e+a-{{k}}=a\\\\Rightarrow e={{k}}\\\\). Verify: \\\\(a\\\\star{{k}}=a+{{k}}-{{k}}=a\\\\). ✓",
+    "options_template": [
+      {
+        "text": "\\\\({{k}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(0\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(-{{k}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(2{{k}}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Solve e★a = a for e.",
+      "Substitute back to verify both e★a = a and a★e = a."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.6_numerical_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.6",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Finding Inverse Element",
+    "tags": [
+      "inverse-element",
+      "binary-operations"
+    ],
+    "stem_template": "The operation \\\\(\\\\star\\\\) on \\\\(\\\\mathbb{R}\\\\) is defined by \\\\(a\\\\star b=a+b-{{k}}\\\\) with identity \\\\(e={{k}}\\\\). Find the inverse of \\\\(a\\\\) under \\\\(\\\\star\\\\).",
+    "params": {
+      "k": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      }
+    },
+    "answer_template": "2*{{k}} - a",
+    "mark_scheme_template": "Require \\\\(a\\\\star a'=e={{k}}\\\\): \\\\(a+a'-{{k}}={{k}}\\\\Rightarrow a'=2{{k}}-a\\\\).",
+    "hints": [
+      "Solve a★a' = e where e is the identity.",
+      "Rearrange to find a'."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.6_worked_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.6",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Identity and Inverses in a Group Structure",
+    "tags": [
+      "identity-element",
+      "inverse-element",
+      "group-axioms"
+    ],
+    "stem_template": "The operation \\\\(\\\\star\\\\) on \\\\(\\\\mathbb{R}\\\\setminus\\\\{0\\\\}\\\\) is defined by \\\\(a\\\\star b=\\\\dfrac{ab}{{{k}}}\\\\). (a) Find the identity element. (b) Find the inverse of \\\\(a\\\\). (c) Is this a group?",
+    "params": {
+      "k": {
+        "type": "int",
+        "min": 2,
+        "max": 6
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "e = k"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "a^(-1) = k²/a"
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "answer_template": "Yes — closed, associative, identity, inverses all exist"
+      }
+    ],
+    "mark_scheme_template": "(a) \\\\(a\\\\star e=\\\\frac{ae}{{{k}}}=a\\\\Rightarrow e={{k}}\\\\). (b) \\\\(a\\\\star a'={{k}}\\\\Rightarrow\\\\frac{aa'}{{{k}}}={{k}}\\\\Rightarrow a'=\\\\frac{{{k}}^2}{a}\\\\). (c) Verify all four group axioms hold.",
+    "hints": [
+      "Set a★e = a to find the identity.",
+      "Set a★a' = e to find the inverse."
+    ],
+    "marks": 8
+  },
+  {
+    "id": "math_aa_8.7_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.7",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Group Axioms",
+    "tags": [
+      "group-axioms",
+      "group-definition"
+    ],
+    "stem_template": "Which set of axioms defines a group \\\\((G, \\\\star)\\\\)?",
+    "params": {},
+    "answer_template": "Closure, Associativity, Identity, and Inverses.",
+    "distractor_templates": [
+      "Closure, Commutativity, Identity, and Inverses.",
+      "Associativity, Commutativity, Identity, and Inverses.",
+      "Closure, Associativity, Commutativity, and Inverses."
+    ],
+    "mark_scheme_template": "A group requires exactly four axioms: (G1) Closure, (G2) Associativity, (G3) Identity element, (G4) Inverses for all elements. Commutativity is NOT required (that would make it an abelian group).",
+    "options_template": [
+      {
+        "text": "Closure, Associativity, Identity, and Inverses.",
+        "correct": true
+      },
+      {
+        "text": "Closure, Commutativity, Identity, and Inverses.",
+        "correct": false
+      },
+      {
+        "text": "Associativity, Commutativity, Identity, and Inverses.",
+        "correct": false
+      },
+      {
+        "text": "Closure, Associativity, Commutativity, and Inverses.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "There are exactly 4 group axioms.",
+      "Commutativity is extra — it makes an abelian/commutative group."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_8.7_mcq_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.7",
+    "type": "mcq",
+    "difficulty": "challenge",
+    "title": "Verifying Group Axioms",
+    "tags": [
+      "group-axioms",
+      "verification",
+      "integers-mod-n"
+    ],
+    "stem_template": "Does \\\\((\\\\mathbb{Z}_{{n}}, +_{{n}})\\\\) form a group, where \\\\(+_n\\\\) denotes addition modulo \\\\({{n}}\\\\)?",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    "answer_template": "Yes — all four group axioms are satisfied.",
+    "distractor_templates": [
+      "No — there is no identity element.",
+      "No — not every element has an inverse.",
+      "No — the operation is not associative."
+    ],
+    "mark_scheme_template": "\\\\((\\\\mathbb{Z}_n,+_n)\\\\): Closed ✓, Associative ✓ (inherited from \\\\(\\\\mathbb{Z}\\\\)), Identity is 0 ✓, Inverse of \\\\(k\\\\) is \\\\(n-k\\\\) ✓. This is a cyclic group of order \\\\(n\\\\).",
+    "options_template": [
+      {
+        "text": "Yes — all four group axioms are satisfied.",
+        "correct": true
+      },
+      {
+        "text": "No — there is no identity element.",
+        "correct": false
+      },
+      {
+        "text": "No — not every element has an inverse.",
+        "correct": false
+      },
+      {
+        "text": "No — the operation is not associative.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "The identity under addition mod n is 0.",
+      "The inverse of k is n-k (since k + (n-k) = n ≡ 0 mod n)."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "math_aa_8.7_worked_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.7",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Proving a Non-Group",
+    "tags": [
+      "group-axioms",
+      "proof",
+      "counterexample"
+    ],
+    "stem_template": "The set \\\\(S=\\\\mathbb{Z}\\\\) under the operation \\\\(a\\\\star b=a-b\\\\). (a) Show that \\\\((\\\\mathbb{Z},\\\\star)\\\\) is not a group by identifying which axiom fails. (b) Find the identity element if it exists.",
+    "params": {},
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "Associativity fails: (a-b)-c ≠ a-(b-c)"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "e = 0 is a right identity but not a left identity"
+      }
+    ],
+    "mark_scheme_template": "(a) \\\\((a\\\\star b)\\\\star c=(a-b)-c=a-b-c\\\\). \\\\(a\\\\star(b\\\\star c)=a-(b-c)=a-b+c\\\\). These differ when \\\\(c\\\\neq 0\\\\). So associativity fails. (b) \\\\(a\\\\star 0=a-0=a\\\\) (right identity), but \\\\(0\\\\star a=0-a=-a\\\\neq a\\\\). No (two-sided) identity exists.",
+    "hints": [
+      "Test associativity with specific numbers first.",
+      "Check if a★e = e★a = a for some fixed e."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "math_aa_8.8_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.8",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Order of a Group",
+    "tags": [
+      "group-examples",
+      "cyclic-groups",
+      "order"
+    ],
+    "stem_template": "The group \\\\((\\\\mathbb{Z}_{{{n}}}, +)\\\\) has order \\\\({{n}}\\\\). What is the order of the element \\\\({{a}}\\\\) in this group?",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          6,
+          8,
+          10,
+          12
+        ]
+      },
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      }
+    },
+    "answer_template": "n / gcd(a, n)",
+    "distractor_templates": [
+      "n - a",
+      "a",
+      "gcd(a, n)"
+    ],
+    "mark_scheme_template": "The order of element \\\\(a\\\\) in \\\\(\\\\mathbb{Z}_n\\\\) is \\\\(\\\\dfrac{n}{\\\\gcd(a,n)}\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(\\\\dfrac{{{n}}}{\\\\gcd({{a}},{{n}})}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{n}}-{{a}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{a}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\gcd({{a}},{{n}})\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "The order of a is the smallest positive k such that a+a+...+a (k times) = 0 mod n.",
+      "This equals n/gcd(a,n)."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.8_worked_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.8",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Symmetry Group of a Triangle",
+    "tags": [
+      "dihedral-groups",
+      "symmetry",
+      "group-examples"
+    ],
+    "stem_template": "The symmetry group of an equilateral triangle has 6 elements. (a) List all 6 symmetries (rotations and reflections). (b) Show it is non-abelian with an example. (c) What is the order of each element?",
+    "params": {},
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "e, r, r², s, sr, sr² where r = 120° rotation, s = reflection"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "Find r,s such that rs ≠ sr"
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "answer_template": "e: order 1, r,r²: order 3, s,sr,sr²: order 2"
+      }
+    ],
+    "mark_scheme_template": "(a) \\\\(e, r, r^2\\\\) (rotations by \\\\(0°, 120°, 240°\\\\)) and \\\\(s, sr, sr^2\\\\) (reflections). (b) \\\\(rs\\\\neq sr\\\\) in general. (c) \\\\(|e|=1\\\\), \\\\(|r|=|r^2|=3\\\\), \\\\(|s|=|sr|=|sr^2|=2\\\\). This is the dihedral group \\\\(D_3\\\\cong S_3\\\\).",
+    "hints": [
+      "An equilateral triangle has 3 rotational and 3 reflective symmetries.",
+      "Dihedral group D₃ is the simplest non-abelian group."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_8.8_numerical_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.8",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Order of Element in Multiplication Group",
+    "tags": [
+      "group-examples",
+      "order-of-element",
+      "multiplicative-group"
+    ],
+    "stem_template": "In the group \\\\((\\\\mathbb{Z}_{{p}}^*, \\\\times)\\\\) where \\\\(p={{p}}\\\\) is prime, find the order of the element \\\\({{a}}\\\\).",
+    "params": {
+      "p": {
+        "type": "choice",
+        "values": [
+          5,
+          7,
+          11,
+          13
+        ]
+      },
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 4
+      }
+    },
+    "answer_template": "smallest k such that a^k ≡ 1 mod p",
+    "mark_scheme_template": "Compute successive powers of \\\\({{a}}\\\\) modulo \\\\({{p}}\\\\) until you reach 1. The order divides \\\\(p-1\\\\) by Lagrange's theorem.",
+    "hints": [
+      "Compute a¹, a², a³, ... mod p until you get 1.",
+      "The order must divide p-1 by Lagrange's theorem."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.9_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.9",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Generator of a Cyclic Group",
+    "tags": [
+      "cyclic-groups",
+      "generators",
+      "order-of-element"
+    ],
+    "stem_template": "Which elements are generators of \\\\(\\\\mathbb{Z}_{{n}}\\\\)?",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          6,
+          8,
+          10,
+          12
+        ]
+      }
+    },
+    "answer_template": "Elements a with gcd(a, n) = 1.",
+    "distractor_templates": [
+      "All non-zero elements.",
+      "Only the element 1.",
+      "Elements a with a | n."
+    ],
+    "mark_scheme_template": "An element \\\\(a\\\\in\\\\mathbb{Z}_n\\\\) is a generator iff \\\\(\\\\gcd(a,n)=1\\\\). The number of generators equals \\\\(\\\\phi(n)\\\\) (Euler's totient).",
+    "options_template": [
+      {
+        "text": "Elements \\\\(a\\\\) with \\\\(\\\\gcd(a,n)=1\\\\).",
+        "correct": true
+      },
+      {
+        "text": "All non-zero elements.",
+        "correct": false
+      },
+      {
+        "text": "Only the element 1.",
+        "correct": false
+      },
+      {
+        "text": "Elements \\\\(a\\\\) with \\\\(a\\\\mid n\\\\).",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "A generator has order equal to the group order n.",
+      "Order of a in Zₙ is n/gcd(a,n), so for order n we need gcd(a,n)=1."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.9_numerical_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.9",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Number of Generators",
+    "tags": [
+      "cyclic-groups",
+      "generators",
+      "euler-totient"
+    ],
+    "stem_template": "How many generators does the cyclic group \\\\(\\\\mathbb{Z}_{{n}}\\\\) have?",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          6,
+          8,
+          9,
+          10,
+          12,
+          15
+        ]
+      }
+    },
+    "answer_template": "phi({{n}})",
+    "mark_scheme_template": "The number of generators of \\\\(\\\\mathbb{Z}_n\\\\) equals \\\\(\\\\phi(n)\\\\), Euler's totient of \\\\(n\\\\) = count of integers in \\\\(\\\\{1,\\\\ldots,n-1\\\\}\\\\) coprime to \\\\(n\\\\).",
+    "hints": [
+      "Generators are elements with gcd(a,n) = 1.",
+      "Count them using Euler's totient function φ(n)."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.9_worked_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.9",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Subgroups of a Cyclic Group",
+    "tags": [
+      "cyclic-groups",
+      "subgroups",
+      "order"
+    ],
+    "stem_template": "Let \\\\(G=\\\\mathbb{Z}_{{n}}\\\\). (a) List all subgroups of \\\\(G\\\\). (b) For each divisor \\\\(d\\\\) of \\\\({{n}}\\\\), find the unique subgroup of order \\\\(d\\\\).",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          12,
+          18,
+          20,
+          24
+        ]
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 4,
+        "answer_template": "One subgroup of order d for each divisor d of n"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "Subgroup of order d is generated by n/d"
+      }
+    ],
+    "mark_scheme_template": "For \\\\(\\\\mathbb{Z}_n\\\\), the subgroups are in bijection with divisors of \\\\(n\\\\). The subgroup of order \\\\(d\\\\) (where \\\\(d\\\\mid n\\\\)) is generated by \\\\(\\\\frac{n}{d}\\\\), i.e., \\\\(H_d=\\\\langle n/d\\\\rangle\\\\).",
+    "hints": [
+      "Every cyclic group has exactly one subgroup of each order dividing the group order.",
+      "The subgroup of order d in Zₙ is generated by n/d."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_8.10_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.10",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Cycle Notation Composition",
+    "tags": [
+      "permutations",
+      "cycle-notation",
+      "composition"
+    ],
+    "stem_template": "Let \\\\(\\\\sigma=(1\\\\;2\\\\;3)\\\\) and \\\\(\\\\tau=(1\\\\;2)\\\\) be permutations in \\\\(S_3\\\\). What is \\\\(\\\\sigma\\\\tau\\\\) (apply \\\\(\\\\tau\\\\) first)?",
+    "params": {},
+    "answer_template": "(1 3)",
+    "distractor_templates": [
+      "(2 3)",
+      "(1 2 3)",
+      "(1 3 2)"
+    ],
+    "mark_scheme_template": "Applying \\\\(\\\\tau=(12)\\\\) first: \\\\(1\\\\to2, 2\\\\to1, 3\\\\to3\\\\). Then \\\\(\\\\sigma=(123)\\\\): \\\\(2\\\\to3, 1\\\\to2, 3\\\\to3\\\\). Composition: \\\\(1\\\\to2\\\\to3\\\\), \\\\(2\\\\to1\\\\to2\\\\), \\\\(3\\\\to3\\\\to1\\\\). Wait — track: \\\\(1\\\\xrightarrow{\\\\tau}2\\\\xrightarrow{\\\\sigma}3\\\\), \\\\(2\\\\xrightarrow{\\\\tau}1\\\\xrightarrow{\\\\sigma}2\\\\), \\\\(3\\\\xrightarrow{\\\\tau}3\\\\xrightarrow{\\\\sigma}1\\\\). So \\\\(\\\\sigma\\\\tau=(1\\\\;3)\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\((1\\;3)\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\((2\\;3)\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\((1\\;2\\;3)\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\((1\\;3\\;2)\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Apply the rightmost permutation first.",
+      "Track where each element goes under τ, then σ."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "math_aa_8.10_numerical_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.10",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Order of a Permutation",
+    "tags": [
+      "permutations",
+      "cycle-notation",
+      "order"
+    ],
+    "stem_template": "Find the order of the permutation \\\\(\\\\sigma=(1\\\\;2\\\\;3)(4\\\\;5)\\\\) in \\\\(S_5\\\\).",
+    "params": {},
+    "answer_template": "6",
+    "mark_scheme_template": "The order of a permutation is the lcm of the lengths of its disjoint cycles. \\\\(\\\\text{lcm}(3,2)=6\\\\).",
+    "hints": [
+      "Write the permutation as disjoint cycles.",
+      "The order = lcm of cycle lengths."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.10_worked_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.10",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Decomposition into Transpositions",
+    "tags": [
+      "permutations",
+      "transpositions",
+      "even-odd-permutation"
+    ],
+    "stem_template": "Write the permutation \\\\(\\\\sigma=(1\\\\;2\\\\;3\\\\;4\\\\;5)\\\\) as a product of transpositions and determine whether it is even or odd.",
+    "params": {},
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "(1 2)(1 3)(1 4)(1 5) — product of 4 transpositions"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "Even permutation (4 transpositions)"
+      }
+    ],
+    "mark_scheme_template": "A \\\\(k\\\\)-cycle can be written as \\\\(k-1\\\\) transpositions: \\\\((1\\;2\\;3\\;4\\;5)=(15)(14)(13)(12)\\\\), which is a product of 4 transpositions. Since 4 is even, \\\\(\\\\sigma\\\\) is an even permutation.",
+    "hints": [
+      "A k-cycle decomposes into k-1 transpositions.",
+      "Even permutation ↔ even number of transpositions."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "math_aa_8.11_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.11",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Lagrange's Theorem",
+    "tags": [
+      "subgroups",
+      "lagrange-theorem",
+      "order"
+    ],
+    "stem_template": "A group \\\\(G\\\\) has order \\\\({{n}}\\\\). According to Lagrange's theorem, which of the following could be the order of a subgroup of \\\\(G\\\\)?",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          12,
+          18,
+          20,
+          24,
+          30
+        ]
+      }
+    },
+    "answer_template": "Any divisor of {{n}}.",
+    "distractor_templates": [
+      "Any integer from 1 to {{n}}.",
+      "Only prime divisors of {{n}}.",
+      "Only {{n}} and 1."
+    ],
+    "mark_scheme_template": "Lagrange's Theorem: the order of any subgroup of \\\\(G\\\\) must divide \\\\(|G|={{n}}\\\\). So subgroup orders are exactly the divisors of \\\\({{n}}\\\\).",
+    "options_template": [
+      {
+        "text": "Any divisor of \\\\({{n}}\\\\).",
+        "correct": true
+      },
+      {
+        "text": "Any integer from 1 to \\\\({{n}}\\\\).",
+        "correct": false
+      },
+      {
+        "text": "Only prime divisors of \\\\({{n}}\\\\).",
+        "correct": false
+      },
+      {
+        "text": "Only \\\\({{n}}\\\\) and 1.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Lagrange: |H| divides |G| for any subgroup H.",
+      "Possible orders are divisors of |G|."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_8.11_numerical_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.11",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Number of Cosets",
+    "tags": [
+      "cosets",
+      "lagrange-theorem",
+      "index"
+    ],
+    "stem_template": "Group \\\\(G\\\\) has order \\\\({{g}}\\\\) and \\\\(H\\\\) is a subgroup of order \\\\({{h}}\\\\). How many distinct left cosets of \\\\(H\\\\) in \\\\(G\\\\) are there?",
+    "params": {
+      "g": {
+        "type": "choice",
+        "values": [
+          12,
+          18,
+          20,
+          24
+        ]
+      },
+      "h": {
+        "type": "int",
+        "min": 2,
+        "max": 6
+      }
+    },
+    "answer_template": "{{g}} / {{h}}",
+    "mark_scheme_template": "By Lagrange's theorem, the index \\\\([G:H]=\\\\dfrac{|G|}{|H|}=\\\\dfrac{{{g}}}{{{h}}}\\\\) equals the number of distinct left cosets.",
+    "hints": [
+      "Index [G:H] = |G|/|H|.",
+      "This equals the number of distinct left (or right) cosets."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 2
+  },
+  {
+    "id": "math_aa_8.11_worked_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.11",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Finding and Listing Cosets",
+    "tags": [
+      "cosets",
+      "subgroups",
+      "partition"
+    ],
+    "stem_template": "Let \\\\(G=(\\\\mathbb{Z}_{{{n}}}, +)\\\\) and \\\\(H=\\\\langle {{k}} \\\\rangle\\\\), the subgroup generated by \\\\({{k}}\\\\). (a) List the elements of \\\\(H\\\\). (b) Find all distinct left cosets of \\\\(H\\\\) in \\\\(G\\\\). (c) Verify they partition \\\\(G\\\\).",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          12,
+          15,
+          18
+        ]
+      },
+      "k": {
+        "type": "choice",
+        "values": [
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "Multiples of k mod n"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "Cosets a+H for a = 0,1,...,k-1"
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "answer_template": "Cosets are disjoint and their union is G"
+      }
+    ],
+    "mark_scheme_template": "(a) \\\\(H=\\\\{0, {{k}}, 2{{k}}, \\\\ldots\\\\}\\\\pmod{{{n}}}\\\\). (b) Left cosets are \\\\(a+H\\\\) for \\\\(a=0,1,\\\\ldots,{{k}}-1\\\\). (c) Cosets are disjoint and cover \\\\(\\\\mathbb{Z}_{{{n}}}\\\\), forming a partition.",
+    "hints": [
+      "The subgroup H consists of all multiples of k mod n.",
+      "Each coset a+H = {a+h : h ∈ H}."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_8.12_mcq_001",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.12",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Homomorphism Property",
+    "tags": [
+      "homomorphism",
+      "group-homomorphism"
+    ],
+    "stem_template": "A function \\\\(\\\\phi: G\\\\to H\\\\) is a group homomorphism if and only if:",
+    "params": {},
+    "answer_template": "φ(a★b) = φ(a)⊕φ(b) for all a, b ∈ G.",
+    "distractor_templates": [
+      "φ is a bijection.",
+      "φ(a) = φ(b) implies a = b.",
+      "φ maps the identity of G to the identity of G."
+    ],
+    "mark_scheme_template": "A homomorphism preserves the group operation: \\\\(\\\\phi(a\\\\star b)=\\\\phi(a)\\\\oplus\\\\phi(b)\\\\). This must hold for all \\\\(a,b\\\\in G\\\\). Bijectivity makes it an isomorphism.",
+    "options_template": [
+      {
+        "text": "\\\\(\\\\phi(a\\\\star b)=\\\\phi(a)\\\\oplus\\\\phi(b)\\\\) for all \\\\(a,b\\\\in G\\\\).",
+        "correct": true
+      },
+      {
+        "text": "\\\\(\\\\phi\\\\) is a bijection.",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\phi(a)=\\\\phi(b)\\\\) implies \\\\(a=b\\\\).",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\phi\\\\) maps the identity of \\\\(G\\\\) to the identity of \\\\(G\\\\).",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "A homomorphism preserves group structure.",
+      "The operation in G and in H may be different symbols."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_8.12_numerical_002",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.12",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Kernel of a Homomorphism",
+    "tags": [
+      "homomorphism",
+      "kernel",
+      "normal-subgroup"
+    ],
+    "stem_template": "Let \\\\(\\\\phi: \\\\mathbb{Z}_{{{n}}}\\\\to\\\\mathbb{Z}_{{{m}}}\\\\) be defined by \\\\(\\\\phi(x)=x\\\\bmod{{m}}\\\\). How many elements are in \\\\(\\\\ker(\\\\phi)\\\\)?",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          12,
+          18,
+          20,
+          24
+        ]
+      },
+      "m": {
+        "type": "choice",
+        "values": [
+          2,
+          3,
+          4,
+          6
+        ]
+      }
+    },
+    "answer_template": "{{n}} / {{m}}",
+    "mark_scheme_template": "\\\\(\\\\ker(\\\\phi)=\\\\{x\\\\in\\\\mathbb{Z}_n:\\\\phi(x)=0\\\\}=\\\\{x: m\\\\mid x\\\\}\\\\) in \\\\(\\\\mathbb{Z}_n\\\\). This has \\\\(n/m\\\\) elements.",
+    "hints": [
+      "ker(φ) = {x : φ(x) = 0_H}.",
+      "Count multiples of m in Zₙ."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 3
+  },
+  {
+    "id": "math_aa_8.12_worked_003",
+    "subject": "math_aa",
+    "topic": "8",
+    "subtopic": "8.12",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Proving an Isomorphism",
+    "tags": [
+      "isomorphism",
+      "bijective-homomorphism",
+      "proof"
+    ],
+    "stem_template": "Define \\\\(\\\\phi: (\\\\mathbb{R}, +)\\\\to(\\\\mathbb{R}^+, \\\\times)\\\\) by \\\\(\\\\phi(x)=e^x\\\\). (a) Show \\\\(\\\\phi\\\\) is a group homomorphism. (b) Show \\\\(\\\\phi\\\\) is bijective. (c) Conclude that \\\\((\\\\mathbb{R},+)\\\\cong(\\\\mathbb{R}^+,\\\\times)\\\\).",
+    "params": {},
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "φ(x+y) = e^(x+y) = e^x · e^y = φ(x)·φ(y)"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "Injective: e^x = e^y ⇒ x=y. Surjective: for y>0, x=ln(y) is a preimage"
+      },
+      {
+        "label": "c",
+        "marks": 1,
+        "answer_template": "Bijective homomorphism ⟹ isomorphism"
+      }
+    ],
+    "mark_scheme_template": "(a) \\\\(\\\\phi(x+y)=e^{x+y}=e^x\\\\cdot e^y=\\\\phi(x)\\\\cdot\\\\phi(y)\\\\). ✓ (b) Injective: \\\\(e^x=e^y\\\\Rightarrow x=y\\\\). Surjective: any \\\\(y>0\\\\), take \\\\(x=\\\\ln y\\\\). (c) Bijective homomorphism \\\\(\\\\Rightarrow\\\\) isomorphism.",
+    "hints": [
+      "A homomorphism converts + to ×.",
+      "A bijective homomorphism is an isomorphism."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_9.1_mcq_001",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Convergence of a Sequence",
+    "tags": [
+      "sequences",
+      "convergence",
+      "limits"
+    ],
+    "stem_template": "Determine the limit of the sequence \\\\(a_n = \\\\dfrac{{{a}}n + {{b}}}{{{c}}n - {{d}}}\\\\) as \\\\(n\\\\to\\\\infty\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 6
+      },
+      "b": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      },
+      "c": {
+        "type": "int",
+        "min": 1,
+        "max": 6
+      },
+      "d": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      }
+    },
+    "answer_template": "{{a}} / {{c}}",
+    "distractor_templates": [
+      "{{b}} / {{d}}",
+      "({{a}} + {{b}}) / ({{c}} + {{d}})",
+      "infinity"
+    ],
+    "mark_scheme_template": "Divide numerator and denominator by \\\\(n\\\\): \\\\(\\\\lim_{n\\\\to\\\\infty}\\\\dfrac{{{a}}+{{b}}/n}{{{c}}-{{d}}/n}=\\\\dfrac{{{a}}}{{{c}}}\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(\\\\dfrac{{{a}}}{{{c}}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(\\\\dfrac{{{b}}}{{{d}}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\dfrac{{{a}}+{{b}}}{{{c}}+{{d}}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\infty\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Divide every term by the highest power of n.",
+      "Terms like b/n → 0 as n → ∞."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_9.1_mcq_002",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Squeeze Theorem Application",
+    "tags": [
+      "sequences",
+      "squeeze-theorem",
+      "convergence"
+    ],
+    "stem_template": "Given \\\\(\\\\dfrac{-1}{n} \\\\leq a_n \\\\leq \\\\dfrac{1}{n}\\\\) for all \\\\(n\\\\geq 1\\\\). What is \\\\(\\\\lim_{n\\\\to\\\\infty} a_n\\\\)?",
+    "params": {},
+    "answer_template": "0",
+    "distractor_templates": [
+      "1",
+      "-1",
+      "does not exist"
+    ],
+    "mark_scheme_template": "Both \\\\(-\\\\frac{1}{n}\\\\to 0\\\\) and \\\\(\\\\frac{1}{n}\\\\to 0\\\\) as \\\\(n\\\\to\\\\infty\\\\). By the Squeeze Theorem, \\\\(a_n\\\\to 0\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(0\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(1\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(-1\\\\)",
+        "correct": false
+      },
+      {
+        "text": "Does not exist.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Apply the Squeeze (Sandwich) Theorem.",
+      "If g(n) ≤ aₙ ≤ h(n) and g,h → L, then aₙ → L."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_9.1_numerical_003",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.1",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Limit of Geometric Sequence",
+    "tags": [
+      "sequences",
+      "geometric-convergence"
+    ],
+    "stem_template": "Find the limit of \\\\(a_n = {{a}} \\\\cdot \\\\left(\\\\dfrac{1}{{{r}}}\\\\right)^n\\\\) as \\\\(n\\\\to\\\\infty\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "r": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      }
+    },
+    "answer_template": "0",
+    "mark_scheme_template": "Since \\\\(\\\\left|\\\\frac{1}{{{r}}}\\\\right| = \\\\frac{1}{{{r}}} < 1\\\\), we have \\\\(\\\\left(\\\\frac{1}{{{r}}}\\\\right)^n \\\\to 0\\\\). Therefore \\\\(a_n = {{a}}\\\\cdot\\\\left(\\\\frac{1}{{{r}}}\\\\right)^n\\\\to 0\\\\).",
+    "hints": [
+      "A geometric sequence with |r| < 1 converges to 0.",
+      "Multiplying by a constant does not change the limit."
+    ],
+    "tolerance": 0.0001,
+    "unit": "",
+    "marks": 3
+  },
+  {
+    "id": "math_aa_9.1_worked_004",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.1",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Formal ε-N Definition of Convergence",
+    "tags": [
+      "sequences",
+      "epsilon-N",
+      "formal-convergence",
+      "proof"
+    ],
+    "stem_template": "Using the formal definition of a limit, prove that \\\\(\\\\lim_{n\\\\to\\\\infty} \\\\dfrac{1}{n} = 0\\\\).",
+    "params": {},
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "State the definition: for every ε>0, ∃N such that n>N ⟹ |aₙ - 0| < ε"
+      },
+      {
+        "label": "b",
+        "marks": 4,
+        "answer_template": "Given ε>0, choose N > 1/ε. Then n>N ⟹ 1/n < 1/N < ε"
+      }
+    ],
+    "mark_scheme_template": "Let \\\\(\\\\varepsilon>0\\\\). Choose \\\\(N\\\\in\\\\mathbb{N}\\\\) with \\\\(N>\\\\frac{1}{\\\\varepsilon}\\\\) (by Archimedean property). Then for \\\\(n>N\\\\): \\\\(\\\\left|\\\\frac{1}{n}-0\\\\right|=\\\\frac{1}{n}<\\\\frac{1}{N}<\\\\varepsilon\\\\). ✓",
+    "hints": [
+      "The ε-N definition requires choosing N in terms of ε.",
+      "Note |1/n - 0| = 1/n < ε when n > 1/ε."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_9.2_mcq_001",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Ratio Test for Convergence",
+    "tags": [
+      "convergence-tests",
+      "ratio-test",
+      "series"
+    ],
+    "stem_template": "Apply the ratio test to \\\\(\\\\sum_{n=1}^\\\\infty \\\\dfrac{{{a}}^n}{n!}\\\\). What does the ratio test conclude?",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      }
+    },
+    "answer_template": "The series converges absolutely (ratio L = 0 < 1).",
+    "distractor_templates": [
+      "The series diverges (ratio L > 1).",
+      "The ratio test is inconclusive (L = 1).",
+      "The series conditionally converges."
+    ],
+    "mark_scheme_template": "\\\\(L=\\\\lim_{n\\\\to\\\\infty}\\\\left|\\\\frac{a_{n+1}}{a_n}\\\\right|=\\\\lim_{n\\\\to\\\\infty}\\\\frac{{{a}}}{n+1}=0<1\\\\). So the series converges absolutely by the ratio test.",
+    "options_template": [
+      {
+        "text": "The series converges absolutely (\\\\(L=0<1\\\\)).",
+        "correct": true
+      },
+      {
+        "text": "The series diverges (\\\\(L>1\\\\)).",
+        "correct": false
+      },
+      {
+        "text": "The ratio test is inconclusive (\\\\(L=1\\\\)).",
+        "correct": false
+      },
+      {
+        "text": "The series conditionally converges.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Compute |a_{n+1}/a_n| and take the limit.",
+      "If L < 1, the series converges absolutely."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "math_aa_9.2_mcq_002",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Harmonic Series Divergence",
+    "tags": [
+      "series",
+      "harmonic-series",
+      "divergence",
+      "comparison-test"
+    ],
+    "stem_template": "Which test most directly shows that \\\\(\\\\sum_{n=1}^\\\\infty \\\\dfrac{1}{n}\\\\) diverges?",
+    "params": {},
+    "answer_template": "The integral test: ∫₁^∞ (1/x) dx = ∞.",
+    "distractor_templates": [
+      "The ratio test (gives L = 1, inconclusive).",
+      "The comparison test with 1/n² (which converges).",
+      "The nth term test (1/n → 0, so test is inconclusive)."
+    ],
+    "mark_scheme_template": "The integral test: \\\\(\\\\int_1^\\\\infty \\\\frac{dx}{x}=\\\\ln x\\\\Big|_1^\\\\infty=\\\\infty\\\\). Since the integral diverges, so does \\\\(\\\\sum 1/n\\\\). (Cauchy condensation or Cauchy's grouping also work.)",
+    "options_template": [
+      {
+        "text": "The integral test: \\\\(\\\\int_1^\\\\infty \\\\frac{dx}{x}=\\\\infty\\\\).",
+        "correct": true
+      },
+      {
+        "text": "The ratio test (gives \\\\(L=1\\\\), inconclusive).",
+        "correct": false
+      },
+      {
+        "text": "The comparison test with \\\\(\\\\frac{1}{n^2}\\\\) (which converges).",
+        "correct": false
+      },
+      {
+        "text": "The \\\\(n\\\\)th term test (\\\\(\\\\frac{1}{n}\\\\to 0\\\\), inconclusive).",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "The nth term test cannot prove divergence when aₙ → 0.",
+      "The integral test connects series and integral convergence."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_9.2_numerical_003",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.2",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Sum of a Convergent Series",
+    "tags": [
+      "series",
+      "geometric-series",
+      "convergence"
+    ],
+    "stem_template": "Find the sum \\\\(\\\\displaystyle\\\\sum_{n=0}^{\\\\infty} {{a}} \\\\cdot \\\\left(\\\\frac{1}{{{r}}}\\\\right)^n\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 8
+      },
+      "r": {
+        "type": "int",
+        "min": 2,
+        "max": 6
+      }
+    },
+    "answer_template": "{{a}} * {{r}} / ({{r}} - 1)",
+    "mark_scheme_template": "Geometric series with first term \\\\({{a}}\\\\) and common ratio \\\\(\\\\frac{1}{{{r}}}\\\\). Sum \\\\(=\\\\dfrac{{{a}}}{1-1/{{r}}}=\\\\dfrac{{{a}}{{r}}}{{{r}}-1}\\\\).",
+    "hints": [
+      "Use the geometric series formula S = a/(1-r) for |r| < 1.",
+      "The common ratio here is 1/r."
+    ],
+    "tolerance": 0.001,
+    "unit": "",
+    "marks": 4
+  },
+  {
+    "id": "math_aa_9.2_worked_004",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.2",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Applying Multiple Convergence Tests",
+    "tags": [
+      "convergence-tests",
+      "comparison-test",
+      "limit-comparison"
+    ],
+    "stem_template": "Determine whether \\\\(\\\\sum_{n=1}^{\\\\infty} \\\\dfrac{{{a}}n+1}{{{b}}n^3+{{c}}}\\\\) converges or diverges. State the test used.",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      },
+      "b": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      },
+      "c": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "Identify comparison series 1/n²"
+      },
+      {
+        "label": "b",
+        "marks": 4,
+        "answer_template": "Apply limit comparison test, compute L = a/b, conclude convergence"
+      }
+    ],
+    "mark_scheme_template": "Compare with \\\\(\\\\sum \\\\frac{1}{n^2}\\\\). Limit comparison: \\\\(L=\\\\lim_{n\\\\to\\\\infty}\\\\dfrac{({{a}}n+1)/({{b}}n^3+{{c}})}{1/n^2}=\\\\lim\\\\dfrac{{{a}}n^3+n^2}{{{b}}n^3+{{c}}}=\\\\dfrac{{{a}}}{{{b}}}>0\\\\). Since \\\\(\\\\sum 1/n^2\\\\) converges and \\\\(L\\\\) is finite and positive, the series converges.",
+    "hints": [
+      "For large n, the dominant term in numerator is an, denominator is bn³.",
+      "Use limit comparison with Σ 1/n²."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_9.3_mcq_001",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Continuity at a Point",
+    "tags": [
+      "continuity",
+      "limits",
+      "piecewise-functions"
+    ],
+    "stem_template": "The function \\\\(f(x) = \\\\begin{cases} {{a}}x+{{b}} & x<{{c}} \\\\\\\\ {{d}} & x={{c}} \\\\\\\\ {{e}}x^2 & x>{{c}} \\\\end{cases}\\\\) is continuous at \\\\(x={{c}}\\\\) if and only if all three values agree. What must \\\\(d\\\\) equal?",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      },
+      "b": {
+        "type": "int",
+        "min": 0,
+        "max": 8
+      },
+      "c": {
+        "type": "int",
+        "min": 2,
+        "max": 5
+      },
+      "e": {
+        "type": "int",
+        "min": 1,
+        "max": 3
+      }
+    },
+    "answer_template": "{{a}}*{{c}} + {{b}}",
+    "distractor_templates": [
+      "{{e}}*{{c}}^2",
+      "({{a}}*{{c}} + {{b}} + {{e}}*{{c}}^2) / 2",
+      "{{c}}"
+    ],
+    "mark_scheme_template": "Continuity requires \\\\(f(c^-)=f(c)=f(c^+)\\\\). Left limit: \\\\({{a}}\\\\cdot{{c}}+{{b}}\\\\). Right limit: \\\\({{e}}\\\\cdot{{c}}^2\\\\). For continuity all three equal \\\\(d\\\\). Both limits must also agree, so \\\\(d={{a}}{{c}}+{{b}}\\\\) (assuming the left limit is the required value).",
+    "options_template": [
+      {
+        "text": "\\\\({{a}}\\\\cdot{{c}}+{{b}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{e}}\\\\cdot{{c}}^2\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\dfrac{{{a}}\\\\cdot{{c}}+{{b}}+{{e}}\\\\cdot{{c}}^2}{2}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{c}}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Continuity at c requires: left limit = f(c) = right limit.",
+      "Compute the limit from each side."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_9.3_mcq_002",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Mean Value Theorem",
+    "tags": [
+      "MVT",
+      "differentiability",
+      "mean-value-theorem"
+    ],
+    "stem_template": "The Mean Value Theorem guarantees a \\\\(c\\\\in(a,b)\\\\) such that \\\\(f'(c)=\\\\dfrac{f(b)-f(a)}{b-a}\\\\), provided:",
+    "params": {},
+    "answer_template": "f is continuous on [a,b] and differentiable on (a,b).",
+    "distractor_templates": [
+      "f is differentiable on [a,b].",
+      "f(a) = f(b) (Rolle's Theorem).",
+      "f is integrable on [a,b]."
+    ],
+    "mark_scheme_template": "The MVT requires \\\\(f\\\\) continuous on \\\\([a,b]\\\\) and differentiable on \\\\((a,b)\\\\). Note: Rolle's Theorem is the special case where \\\\(f(a)=f(b)\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(f\\\\) is continuous on \\\\([a,b]\\\\) and differentiable on \\\\((a,b)\\\\).",
+        "correct": true
+      },
+      {
+        "text": "\\\\(f\\\\) is differentiable on \\\\([a,b]\\\\).",
+        "correct": false
+      },
+      {
+        "text": "\\\\(f(a)=f(b)\\\\) (Rolle's Theorem).",
+        "correct": false
+      },
+      {
+        "text": "\\\\(f\\\\) is integrable on \\\\([a,b]\\\\).",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Continuity on the closed interval and differentiability on the open interval are both required.",
+      "Differentiability on a closed interval is stronger than needed."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_9.3_worked_003",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Intermediate Value Theorem Application",
+    "tags": [
+      "IVT",
+      "continuity",
+      "existence-of-root"
+    ],
+    "stem_template": "Show that \\\\(f(x) = x^3 - {{a}}x - {{b}}\\\\) has a root in the interval \\\\(({{c}}, {{d}})\\\\), where \\\\({{c}}<{{d}}\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 6
+      },
+      "b": {
+        "type": "int",
+        "min": 1,
+        "max": 8
+      },
+      "c": {
+        "type": "int",
+        "min": 1,
+        "max": 3
+      },
+      "d": {
+        "type": "int",
+        "min": 4,
+        "max": 6
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "Evaluate f(c) and f(d)"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "Apply IVT: f continuous, sign change ⟹ root exists"
+      }
+    ],
+    "mark_scheme_template": "\\\\(f\\\\) is a polynomial, hence continuous on \\\\([{{c}},{{d}}]\\\\). Compute \\\\(f({{c}})={{c}}^3-{{a}}\\\\cdot{{c}}-{{b}}\\\\) and \\\\(f({{d}})={{d}}^3-{{a}}\\\\cdot{{d}}-{{b}}\\\\). If one is negative and the other positive, the IVT guarantees a root in \\\\(({{c}},{{d}})\\\\).",
+    "hints": [
+      "Polynomials are continuous everywhere.",
+      "Apply IVT: if f(c) and f(d) have opposite signs, there's a root between them."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "math_aa_9.4_mcq_001",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Riemann Sum Interpretation",
+    "tags": [
+      "riemann-sums",
+      "definite-integral",
+      "area"
+    ],
+    "stem_template": "The left Riemann sum for \\\\(\\\\int_{{a}}^{{b}} f(x)\\\\,dx\\\\) with \\\\(n={{n}}\\\\) subintervals uses sample points:",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 0,
+        "max": 3
+      },
+      "b": {
+        "type": "int",
+        "min": 4,
+        "max": 8
+      },
+      "n": {
+        "type": "choice",
+        "values": [
+          4,
+          5,
+          8,
+          10
+        ]
+      }
+    },
+    "answer_template": "x_i = a + i·Δx for i = 0, 1, ..., n-1, where Δx = (b-a)/n.",
+    "distractor_templates": [
+      "x_i = a + (i+1)·Δx for i = 0, ..., n-1 (right endpoints).",
+      "x_i = midpoints of each subinterval.",
+      "x_i = a + i·(b-a) for i = 1, ..., n."
+    ],
+    "mark_scheme_template": "The left Riemann sum uses left endpoints: \\\\(x_i=a+i\\\\Delta x\\\\) for \\\\(i=0,1,\\\\ldots,n-1\\\\), where \\\\(\\\\Delta x=\\\\frac{b-a}{n}\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(x_i=a+i\\\\Delta x\\\\) for \\\\(i=0,1,\\\\ldots,n-1\\\\), where \\\\(\\\\Delta x=\\\\frac{b-a}{n}\\\\).",
+        "correct": true
+      },
+      {
+        "text": "Right endpoints: \\\\(x_i=a+(i+1)\\\\Delta x\\\\) for \\\\(i=0,\\\\ldots,n-1\\\\).",
+        "correct": false
+      },
+      {
+        "text": "Midpoints of each subinterval.",
+        "correct": false
+      },
+      {
+        "text": "\\\\(x_i=a+i(b-a)\\\\) for \\\\(i=1,\\\\ldots,n\\\\).",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Left Riemann sum uses the left endpoint of each subinterval.",
+      "The subinterval width is Δx = (b-a)/n."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_9.4_numerical_002",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.4",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Improper Integral Convergence",
+    "tags": [
+      "improper-integrals",
+      "convergence",
+      "p-integral"
+    ],
+    "stem_template": "Determine whether \\\\(\\\\displaystyle\\\\int_1^{\\\\infty} \\\\dfrac{1}{x^{{{p}}}}\\\\,dx\\\\) converges or diverges, and if it converges, find its value.",
+    "params": {
+      "p": {
+        "type": "choice",
+        "values": [
+          2,
+          3,
+          4,
+          1.5,
+          2.5
+        ]
+      }
+    },
+    "answer_template": "1 / ({{p}} - 1) if p > 1, diverges if p ≤ 1",
+    "mark_scheme_template": "\\\\(\\\\int_1^R x^{-{{p}}}\\\\,dx=\\\\left[\\\\frac{x^{1-{{p}}}}{1-{{p}}}\\\\right]_1^R\\\\). As \\\\(R\\\\to\\\\infty\\\\): if \\\\({{p}}>1\\\\), \\\\(R^{1-{{p}}}\\\\to 0\\\\), giving \\\\(\\\\frac{1}{{{p}}-1}\\\\). If \\\\({{p}}\\\\leq 1\\\\), diverges.",
+    "hints": [
+      "Compute the antiderivative and take the limit as the upper bound → ∞.",
+      "For p > 1, x^(1-p) → 0 as x → ∞."
+    ],
+    "tolerance": 0.001,
+    "unit": "",
+    "marks": 5
+  },
+  {
+    "id": "math_aa_9.4_worked_003",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.4",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Improper Integral with Discontinuity",
+    "tags": [
+      "improper-integrals",
+      "vertical-asymptote",
+      "convergence"
+    ],
+    "stem_template": "Evaluate \\\\(\\\\displaystyle\\\\int_0^1 \\\\dfrac{1}{x^{{{q}}}}\\\\,dx\\\\), where \\\\(0 < {{q}} < 1\\\\).",
+    "params": {
+      "q": {
+        "type": "choice",
+        "values": [
+          0.5,
+          0.25,
+          0.75,
+          0.333
+        ]
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "Identify discontinuity at x=0"
+      },
+      {
+        "label": "b",
+        "marks": 4,
+        "answer_template": "Integral from ε to 1, take limit as ε→0⁺, get 1/(1-q)"
+      }
+    ],
+    "mark_scheme_template": "\\\\(\\\\int_\\\\varepsilon^1 x^{-{{q}}}\\\\,dx=\\\\left[\\\\frac{x^{1-{{q}}}}{1-{{q}}}\\\\right]_\\\\varepsilon^1=\\\\frac{1-\\\\varepsilon^{1-{{q}}}}{1-{{q}}}\\\\). As \\\\(\\\\varepsilon\\\\to 0^+\\\\): since \\\\(1-{{q}}>0\\\\), \\\\(\\\\varepsilon^{1-{{q}}}\\\\to 0\\\\). Converges to \\\\(\\\\frac{1}{1-{{q}}}\\\\).",
+    "hints": [
+      "This integral has a singularity at x = 0.",
+      "Define as lim_{ε→0⁺} ∫_ε^1 x^(-q) dx."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_9.5_mcq_001",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Separable Differential Equation",
+    "tags": [
+      "separable-DE",
+      "first-order-DE"
+    ],
+    "stem_template": "The differential equation \\\\(\\\\dfrac{dy}{dx} = {{a}}xy\\\\) is separable. Which gives the general solution?",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "answer_template": "y = Ae^(a x²/2)",
+    "distractor_templates": [
+      "y = Ae^(ax)",
+      "y = ax² + C",
+      "y = Ce^(ax²)"
+    ],
+    "mark_scheme_template": "Separate: \\\\(\\\\frac{dy}{y}={{a}}x\\\\,dx\\\\). Integrate: \\\\(\\\\ln|y|=\\\\frac{{{a}}x^2}{2}+C\\\\). So \\\\(y=Ae^{{{a}}x^2/2}\\\\) where \\\\(A=\\\\pm e^C\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(y=Ae^{{{a}}x^2/2}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(y=Ae^{{{a}}x}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(y={{a}}x^2+C\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(y=Ce^{{{a}}x^2}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Separate variables: dy/y = ax dx.",
+      "Integrate both sides."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "math_aa_9.5_numerical_002",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.5",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Solving a First-Order Linear DE",
+    "tags": [
+      "linear-DE",
+      "integrating-factor"
+    ],
+    "stem_template": "Solve \\\\(\\\\dfrac{dy}{dx} + {{p}}y = {{q}}\\\\), with initial condition \\\\(y(0) = {{y0}}\\\\).",
+    "params": {
+      "p": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      },
+      "q": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "y0": {
+        "type": "int",
+        "min": 0,
+        "max": 6
+      }
+    },
+    "answer_template": "({{q}}/{{p}}) + ({{y0}} - {{q}}/{{p}}) * exp(-{{p}}*x)",
+    "mark_scheme_template": "Integrating factor \\\\(\\\\mu=e^{{{p}}x}\\\\). Multiply through: \\\\(\\\\frac{d}{dx}(ye^{{{p}}x})={{q}}e^{{{p}}x}\\\\). Integrate: \\\\(ye^{{{p}}x}=\\\\frac{{{q}}}{{{p}}}e^{{{p}}x}+C\\\\). Apply \\\\(y(0)={{y0}}\\\\): \\\\(C={{y0}}-\\\\frac{{{q}}}{{{p}}}\\\\). Solution: \\\\(y=\\\\frac{{{q}}}{{{p}}}+\\\\left({{y0}}-\\\\frac{{{q}}}{{{p}}}\\\\right)e^{-{{p}}x}\\\\).",
+    "hints": [
+      "Integrating factor for y' + py = q is e^(px).",
+      "Apply the initial condition to find C."
+    ],
+    "tolerance": 0.01,
+    "unit": "",
+    "marks": 6
+  },
+  {
+    "id": "math_aa_9.5_worked_003",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.5",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Euler's Method Approximation",
+    "tags": [
+      "euler-method",
+      "numerical-DE",
+      "approximation"
+    ],
+    "stem_template": "Use Euler's method with step size \\\\(h={{h}}\\\\) to approximate \\\\(y({{x1}})\\\\) given \\\\(\\\\dfrac{dy}{dx}=x+y\\\\) and \\\\(y(0)={{y0}}\\\\).",
+    "params": {
+      "h": {
+        "type": "choice",
+        "values": [
+          0.1,
+          0.2,
+          0.25,
+          0.5
+        ]
+      },
+      "x1": {
+        "type": "choice",
+        "values": [
+          0.2,
+          0.5,
+          1.0
+        ]
+      },
+      "y0": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "Apply Euler steps: y_{n+1} = y_n + h·f(x_n, y_n)"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "State approximate value of y at x1"
+      }
+    ],
+    "mark_scheme_template": "Euler: \\\\(y_{n+1}=y_n+h(x_n+y_n)\\\\). Starting at \\\\((0,{{y0}})\\\\), apply the formula until reaching \\\\(x={{x1}}\\\\). Show each step with computed values.",
+    "hints": [
+      "Euler's method: y_{n+1} = yₙ + h·f(xₙ, yₙ).",
+      "Apply the step repeatedly, updating x and y each time."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "math_aa_9.5_worked_004",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.5",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Logistic Growth Model",
+    "tags": [
+      "separable-DE",
+      "logistic-growth",
+      "modelling"
+    ],
+    "stem_template": "The logistic equation \\\\(\\\\dfrac{dP}{dt}={{r}}P\\\\left(1-\\\\dfrac{P}{{{K}}}\\\\right)\\\\) with \\\\(P(0)={{P0}}\\\\). (a) Separate variables and integrate to find \\\\(P(t)\\\\). (b) Find the limiting population.",
+    "params": {
+      "r": {
+        "type": "choice",
+        "values": [
+          0.2,
+          0.3,
+          0.5
+        ]
+      },
+      "K": {
+        "type": "choice",
+        "values": [
+          100,
+          200,
+          500,
+          1000
+        ]
+      },
+      "P0": {
+        "type": "int",
+        "min": 10,
+        "max": 80
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 6,
+        "answer_template": "P(t) = K / (1 + ((K-P0)/P0) · e^(-rt))"
+      },
+      {
+        "label": "b",
+        "marks": 1,
+        "answer_template": "K (carrying capacity)"
+      }
+    ],
+    "mark_scheme_template": "Separate: \\\\(\\\\frac{dP}{P(1-P/K)}=r\\\\,dt\\\\). Partial fractions: \\\\(\\\\frac{1}{P}+\\\\frac{1}{K-P}\\\\). Integrate to get logistic solution \\\\(P(t)=\\\\frac{K}{1+\\\\frac{K-P_0}{P_0}e^{-rt}}\\\\). As \\\\(t\\\\to\\\\infty\\\\), \\\\(P\\\\to K\\\\).",
+    "hints": [
+      "Use partial fractions on the left side.",
+      "The carrying capacity K is the long-term limit."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_9.6_mcq_001",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.6",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Maclaurin Series for e^x",
+    "tags": [
+      "maclaurin-series",
+      "exponential",
+      "taylor-series"
+    ],
+    "stem_template": "The Maclaurin series for \\\\(e^x\\\\) is \\\\(\\\\sum_{n=0}^{\\\\infty} \\\\dfrac{x^n}{n!}\\\\). Using this, write down the first four non-zero terms of the Maclaurin series for \\\\(e^{{{a}}x}\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 4
+      }
+    },
+    "answer_template": "1 + ax + (ax)²/2! + (ax)³/3!",
+    "distractor_templates": [
+      "1 + ax + a²x²/2! + a³x³/3!  (same thing — correct)",
+      "1 + x + x²/2 + x³/6  (wrong: didn't substitute ax)",
+      "ax + a²x²/2 + a³x³/6  (missing constant term)"
+    ],
+    "mark_scheme_template": "Substitute \\\\(ax\\\\) for \\\\(x\\\\): \\\\(e^{{{a}}x}=1+{{a}}x+\\\\dfrac{({{a}}x)^2}{2!}+\\\\dfrac{({{a}}x)^3}{3!}+\\\\cdots=1+{{a}}x+\\\\dfrac{{{a}}^2x^2}{2}+\\\\dfrac{{{a}}^3x^3}{6}+\\\\cdots\\\\)",
+    "options_template": [
+      {
+        "text": "\\\\(1+{{a}}x+\\\\dfrac{{{a}}^2x^2}{2}+\\\\dfrac{{{a}}^3x^3}{6}+\\\\cdots\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(1+x+\\\\dfrac{x^2}{2}+\\\\dfrac{x^3}{6}+\\\\cdots\\\\) (forgot to substitute)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{a}}x+\\\\dfrac{{{a}}^2x^2}{2}+\\\\dfrac{{{a}}^3x^3}{6}+\\\\cdots\\\\) (missing constant term)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(1+{{a}}x+\\\\dfrac{{{a}}x^2}{2}+\\\\dfrac{{{a}}x^3}{6}\\\\) (didn't raise a to powers)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Replace x with ax in the standard series for e^x.",
+      "Each term involves (ax)^n / n!."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_9.6_numerical_002",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.6",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Taylor Series Approximation",
+    "tags": [
+      "taylor-series",
+      "approximation",
+      "polynomial"
+    ],
+    "stem_template": "Using the Maclaurin series for \\\\(\\\\sin x\\\\) up to the \\\\(x^3\\\\) term, approximate \\\\(\\\\sin(0.{{d}})\\\\) to 4 decimal places.",
+    "params": {
+      "d": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      }
+    },
+    "answer_template": "0.{{d}}/10 - (0.{{d}}/10)^3/6",
+    "mark_scheme_template": "\\\\(\\\\sin x\\\\approx x-\\\\frac{x^3}{6}\\\\). Let \\\\(x=0.{{d}}\\\\): \\\\(\\\\sin(0.{{d}})\\\\approx 0.{{d}}-\\\\frac{(0.{{d}})^3}{6}\\\\).",
+    "hints": [
+      "The Maclaurin series for sin x is x - x³/3! + x⁵/5! - ...",
+      "For small x, truncating after the x³ term gives a good approximation."
+    ],
+    "tolerance": 0.0001,
+    "unit": "",
+    "marks": 4
+  },
+  {
+    "id": "math_aa_9.6_worked_003",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.6",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Deriving a Maclaurin Series from First Principles",
+    "tags": [
+      "maclaurin-series",
+      "derivatives",
+      "series-coefficients"
+    ],
+    "stem_template": "Find the Maclaurin series for \\\\(f(x)=\\\\ln(1+{{a}}x)\\\\) up to and including the term in \\\\(x^4\\\\). State the radius of convergence.",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 3
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 5,
+        "answer_template": "ax - (ax)²/2 + (ax)³/3 - (ax)⁴/4 + ..."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "R = 1/a"
+      }
+    ],
+    "mark_scheme_template": "Differentiate repeatedly or use \\\\(\\\\ln(1+u)=u-\\\\frac{u^2}{2}+\\\\frac{u^3}{3}-\\\\cdots\\\\) with \\\\(u={{a}}x\\\\): \\\\({{a}}x-\\\\frac{{{a}}^2x^2}{2}+\\\\frac{{{a}}^3x^3}{3}-\\\\frac{{{a}}^4x^4}{4}+\\\\cdots\\\\). Radius of convergence \\\\(R=\\\\frac{1}{{{a}}}\\\\) (ratio test).",
+    "hints": [
+      "Use the known series for ln(1+u) and substitute u = ax.",
+      "The ratio test gives radius of convergence 1/a."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_9.6_worked_004",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.6",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Radius of Convergence via Ratio Test",
+    "tags": [
+      "taylor-series",
+      "radius-of-convergence",
+      "ratio-test"
+    ],
+    "stem_template": "Find the radius of convergence of the power series \\\\(\\\\displaystyle\\\\sum_{n=0}^{\\\\infty} \\\\dfrac{({{a}}x)^n}{n^{{k}}}\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 5
+      },
+      "k": {
+        "type": "int",
+        "min": 1,
+        "max": 3
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 4,
+        "answer_template": "Apply ratio test, get L = |a||x| · (n/(n+1))^k → |a||x|"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "Converges for |ax| < 1, so R = 1/a"
+      }
+    ],
+    "mark_scheme_template": "Ratio test: \\\\(L=\\\\lim\\\\left|\\\\frac{({{a}}x)^{n+1}/(n+1)^{{k}}}{({{a}}x)^n/n^{{k}}}\\\\right|=|{{a}}x|\\\\cdot\\\\lim\\\\left(\\\\frac{n}{n+1}\\\\right)^{{k}}=|{{a}}x|\\\\). Converges iff \\\\(L<1\\\\), i.e., \\\\(|x|<\\\\frac{1}{{{a}}}\\\\). Radius of convergence \\\\(R=\\\\frac{1}{{{a}}}\\\\).",
+    "hints": [
+      "Apply the ratio test to the general term.",
+      "The limit of (n/(n+1))^k as n→∞ is 1."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_9.7_mcq_001",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.7",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "l'Hôpital's Rule Application",
+    "tags": [
+      "lhopital",
+      "indeterminate-forms",
+      "limits"
+    ],
+    "stem_template": "Evaluate \\\\(\\\\displaystyle\\\\lim_{x\\\\to 0} \\\\dfrac{\\\\sin({{a}}x)}{{{b}}x}\\\\) using l'Hôpital's rule.",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "b": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      }
+    },
+    "answer_template": "{{a}} / {{b}}",
+    "distractor_templates": [
+      "{{b}} / {{a}}",
+      "0",
+      "1"
+    ],
+    "mark_scheme_template": "Form is \\\\(\\\\frac{0}{0}\\\\). Apply l'Hôpital: \\\\(\\\\lim_{x\\\\to 0}\\\\frac{{{a}}\\\\cos({{a}}x)}{{{b}}}=\\\\frac{{{a}}}{{{b}}}\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(\\\\dfrac{{{a}}}{{{b}}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(\\\\dfrac{{{b}}}{{{a}}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(0\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(1\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Check the form is 0/0 or ∞/∞ before applying l'Hôpital.",
+      "Differentiate numerator and denominator separately."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_9.7_mcq_002",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.7",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "l'Hôpital with Exponential",
+    "tags": [
+      "lhopital",
+      "indeterminate-forms",
+      "exponential"
+    ],
+    "stem_template": "Evaluate \\\\(\\\\displaystyle\\\\lim_{x\\\\to\\\\infty} \\\\dfrac{x^{{{n}}}}{e^x}\\\\).",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "answer_template": "0",
+    "distractor_templates": [
+      "∞",
+      "1",
+      "n!"
+    ],
+    "mark_scheme_template": "Apply l'Hôpital \\\\({{n}}\\\\) times: the numerator becomes \\\\({{n}}!\\\\) (constant) and the denominator remains \\\\(e^x\\\\to\\\\infty\\\\). So the limit is \\\\(0\\\\). Exponential grows faster than any polynomial.",
+    "options_template": [
+      {
+        "text": "\\\\(0\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(\\\\infty\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(1\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{n}}!\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Apply l'Hôpital's rule n times.",
+      "Exponential growth always dominates polynomial growth."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_9.7_numerical_003",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.7",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Limit via Maclaurin Series",
+    "tags": [
+      "lhopital",
+      "maclaurin-series",
+      "limits"
+    ],
+    "stem_template": "Evaluate \\\\(\\\\displaystyle\\\\lim_{x\\\\to 0} \\\\dfrac{e^{{{a}}x}-1-{{a}}x}{x^2}\\\\) using Maclaurin series.",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "answer_template": "{{a}}^2 / 2",
+    "mark_scheme_template": "Expand \\\\(e^{{{a}}x}=1+{{a}}x+\\\\frac{{{a}}^2x^2}{2}+O(x^3)\\\\). Numerator: \\\\(\\\\frac{{{a}}^2x^2}{2}+O(x^3)\\\\). Divide by \\\\(x^2\\\\): limit is \\\\(\\\\frac{{{a}}^2}{2}\\\\).",
+    "hints": [
+      "Expand e^(ax) as a Maclaurin series.",
+      "After cancellation, the limit becomes the coefficient of x²."
+    ],
+    "tolerance": 0.01,
+    "unit": "",
+    "marks": 5
+  },
+  {
+    "id": "math_aa_9.7_worked_004",
+    "subject": "math_aa",
+    "topic": "9",
+    "subtopic": "9.7",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Indeterminate Form 1^∞",
+    "tags": [
+      "lhopital",
+      "indeterminate-forms",
+      "exponential-limits"
+    ],
+    "stem_template": "Evaluate \\\\(\\\\displaystyle\\\\lim_{x\\\\to\\\\infty} \\\\left(1+\\\\dfrac{{{a}}}{x}\\\\right)^x\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "Write as exp(x ln(1 + a/x)) and find lim of exponent"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "lim x·ln(1+a/x) = a via l'Hôpital, so answer is e^a"
+      }
+    ],
+    "mark_scheme_template": "Let \\\\(L=\\\\lim x\\\\ln(1+a/x)\\\\). As \\\\(x\\\\to\\\\infty\\\\), this is \\\\(\\\\infty\\\\cdot 0\\\\) form. Rewrite: \\\\(\\\\frac{\\\\ln(1+a/x)}{1/x}\\\\to\\\\frac{0}{0}\\\\). l'Hôpital: differentiate numerator and denominator with respect to \\\\(x\\\\). Result: \\\\(L={{a}}\\\\). So limit \\\\(=e^{{{a}}}\\\\).",
+    "hints": [
+      "Write the expression as e^(x·ln(1+a/x)).",
+      "The exponent has indeterminate form ∞·0; rewrite as a fraction for l'Hôpital."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_10.1_mcq_001",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Pigeonhole Principle Basic",
+    "tags": [
+      "pigeonhole-principle",
+      "counting"
+    ],
+    "stem_template": "There are \\\\({{n}}\\\\) students and \\\\({{k}}\\\\) possible birthdays in a year. What is the minimum number of students needed to guarantee at least two share a birthday month (12 months)?",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 15,
+        "max": 50
+      },
+      "k": {
+        "type": "int",
+        "min": 5,
+        "max": 10
+      }
+    },
+    "answer_template": "13",
+    "distractor_templates": [
+      "12",
+      "24",
+      "2"
+    ],
+    "mark_scheme_template": "By the Pigeonhole Principle: with 12 pigeonholes (months) and 13 pigeons (students), at least two must share the same month. So the answer is \\\\(12+1=13\\\\).",
+    "options_template": [
+      {
+        "text": "13",
+        "correct": true
+      },
+      {
+        "text": "12",
+        "correct": false
+      },
+      {
+        "text": "24",
+        "correct": false
+      },
+      {
+        "text": "2",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "With n pigeonholes, you need n+1 pigeons to guarantee a collision.",
+      "12 months → need 13 students."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.1_mcq_002",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Strong Induction vs Weak Induction",
+    "tags": [
+      "strong-induction",
+      "mathematical-induction"
+    ],
+    "stem_template": "Strong induction differs from weak induction in that the inductive step assumes:",
+    "params": {},
+    "answer_template": "The statement holds for ALL k ≤ n (not just k = n) to prove it for n+1.",
+    "distractor_templates": [
+      "The statement holds only for k = n to prove it for n+1.",
+      "The base case covers more values.",
+      "There is no inductive hypothesis — it is proved directly."
+    ],
+    "mark_scheme_template": "In strong (complete) induction, the inductive hypothesis assumes \\\\(P(k)\\\\) holds for ALL \\\\(k\\\\leq n\\\\) (not just \\\\(n\\\\)), and uses this to prove \\\\(P(n+1)\\\\). This is useful when \\\\(P(n+1)\\\\) depends on earlier cases, not just the immediate predecessor.",
+    "options_template": [
+      {
+        "text": "The statement holds for ALL \\\\(k\\\\leq n\\\\) to prove it for \\\\(n+1\\\\).",
+        "correct": true
+      },
+      {
+        "text": "The statement holds only for \\\\(k=n\\\\) to prove it for \\\\(n+1\\\\).",
+        "correct": false
+      },
+      {
+        "text": "The base case covers more values.",
+        "correct": false
+      },
+      {
+        "text": "There is no inductive hypothesis — it is proved directly.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "In weak induction, we assume P(n) to prove P(n+1).",
+      "In strong induction, we assume P(1), P(2), ..., P(n) all hold."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.1_worked_003",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Strong Induction Proof",
+    "tags": [
+      "strong-induction",
+      "proof",
+      "fibonacci"
+    ],
+    "stem_template": "Use strong induction to prove that every integer \\\\(n\\\\geq 2\\\\) can be written as a product of prime numbers.",
+    "params": {},
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "Base case: n=2 is prime"
+      },
+      {
+        "label": "b",
+        "marks": 4,
+        "answer_template": "Inductive step: assume true for all 2 ≤ k ≤ n. If n+1 prime, done. If composite, n+1=ab with 2≤a,b≤n, apply hypothesis to each"
+      }
+    ],
+    "mark_scheme_template": "Base case: \\\\(n=2\\\\) is prime. ✓ Inductive step: Assume every integer \\\\(2\\\\leq k\\\\leq n\\\\) is a product of primes. Consider \\\\(n+1\\\\): if prime, done. If composite, \\\\(n+1=ab\\\\) with \\\\(2\\\\leq a,b\\\\leq n\\\\). By IH, both \\\\(a\\\\) and \\\\(b\\\\) are products of primes, so \\\\(n+1=ab\\\\) is also a product of primes. ✓",
+    "hints": [
+      "This requires strong induction because the factors of n+1 may be far from n.",
+      "A composite number n+1 = ab with a, b < n+1 — apply the inductive hypothesis to a and b."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_10.1_worked_004",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.1",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Pigeonhole Application",
+    "tags": [
+      "pigeonhole-principle",
+      "combinatorics"
+    ],
+    "stem_template": "Among any \\\\({{n}}\\\\) integers, show that at least two have the same remainder when divided by \\\\({{n}}-1\\\\).",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          6,
+          7,
+          8,
+          10,
+          11
+        ]
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "Identify the pigeonholes: remainders 0, 1, ..., n-2 (n-1 choices)"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "n integers, n-1 possible remainders → by PHP, two integers share a remainder"
+      }
+    ],
+    "mark_scheme_template": "When dividing by \\\\({{n}}-1\\\\), remainders lie in \\\\(\\\\{0,1,\\\\ldots,{{n}}-2\\\\}\\\\), giving \\\\({{n}}-1\\\\) possible values. With \\\\({{n}}\\\\) integers, by the Pigeonhole Principle, at least two must have the same remainder. ✓",
+    "hints": [
+      "The 'pigeonholes' are the possible remainders mod (n-1).",
+      "n-1 holes, n pigeons → at least one hole has ≥ 2 pigeons."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "math_aa_10.2_mcq_001",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "GCD via Euclidean Algorithm",
+    "tags": [
+      "gcd",
+      "euclidean-algorithm",
+      "divisibility"
+    ],
+    "stem_template": "Find \\\\(\\\\gcd({{a}}, {{b}})\\\\) using the Euclidean algorithm.",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 30,
+        "max": 200
+      },
+      "b": {
+        "type": "int",
+        "min": 10,
+        "max": 80
+      }
+    },
+    "answer_template": "gcd({{a}}, {{b}}) computed by Euclidean algorithm",
+    "distractor_templates": [
+      "{{a}} - {{b}}",
+      "lcm(a,b) / (a+b)",
+      "min(a, b)"
+    ],
+    "mark_scheme_template": "Apply the Euclidean algorithm: \\\\({{a}}={{b}}\\\\cdot q_1+r_1\\\\), \\\\({{b}}=r_1\\\\cdot q_2+r_2\\\\), etc., until remainder is 0. The last non-zero remainder is \\\\(\\\\gcd({{a}},{{b}})\\\\).",
+    "options_template": [
+      {
+        "text": "The last non-zero remainder in the Euclidean algorithm.",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{a}}-{{b}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\min({{a}},{{b}})\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\frac{\\\\text{lcm}({{a}},{{b}})}{{{a}}+{{b}}}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Euclidean algorithm: gcd(a,b) = gcd(b, a mod b).",
+      "Continue until remainder = 0."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_10.2_numerical_002",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.2",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Computing LCM from GCD",
+    "tags": [
+      "lcm",
+      "gcd",
+      "divisibility"
+    ],
+    "stem_template": "Given \\\\(\\\\gcd({{a}}, {{b}}) = {{d}}\\\\), find \\\\(\\\\text{lcm}({{a}}, {{b}})\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 12,
+        "max": 60
+      },
+      "b": {
+        "type": "int",
+        "min": 12,
+        "max": 60
+      },
+      "d": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      }
+    },
+    "answer_template": "{{a}} * {{b}} / {{d}}",
+    "mark_scheme_template": "\\\\(\\\\text{lcm}(a,b)=\\\\dfrac{ab}{\\\\gcd(a,b)}=\\\\dfrac{{{a}}\\\\cdot{{b}}}{{{d}}}\\\\).",
+    "hints": [
+      "Use lcm(a,b) × gcd(a,b) = a × b.",
+      "Rearrange to find lcm."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.2_worked_003",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Infinitely Many Primes",
+    "tags": [
+      "primes",
+      "proof",
+      "euclid"
+    ],
+    "stem_template": "Prove that there are infinitely many prime numbers. (Euclid's proof)",
+    "params": {},
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "Assume finite set of primes p₁,...,pₙ, form N = p₁p₂...pₙ + 1"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "N has a prime factor not in the list — contradiction"
+      }
+    ],
+    "mark_scheme_template": "Suppose for contradiction there are finitely many primes \\\\(p_1,\\\\ldots,p_n\\\\). Let \\\\(N=p_1p_2\\\\cdots p_n+1\\\\). Then \\\\(N>1\\\\) has a prime factor \\\\(p\\\\). But \\\\(p\\\\nmid N - p_1\\\\cdots p_n=1\\\\), so \\\\(p\\\\notin\\\\{p_1,\\\\ldots,p_n\\\\}\\\\). Contradiction. ✓",
+    "hints": [
+      "Assume finitely many primes and derive a contradiction.",
+      "The product + 1 cannot be divisible by any of the listed primes."
+    ],
+    "marks": 6
+  },
+  {
+    "id": "math_aa_10.3_mcq_001",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Existence of Solutions to Linear Diophantine Equation",
+    "tags": [
+      "diophantine-equations",
+      "gcd",
+      "existence"
+    ],
+    "stem_template": "The equation \\\\({{a}}x + {{b}}y = {{c}}\\\\) has integer solutions if and only if:",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 15
+      },
+      "b": {
+        "type": "int",
+        "min": 2,
+        "max": 15
+      },
+      "c": {
+        "type": "int",
+        "min": 1,
+        "max": 30
+      }
+    },
+    "answer_template": "gcd(a, b) divides c.",
+    "distractor_templates": [
+      "gcd(a, b) = 1.",
+      "c divides gcd(a, b).",
+      "a and b are coprime."
+    ],
+    "mark_scheme_template": "The linear Diophantine equation \\\\(ax+by=c\\\\) has integer solutions iff \\\\(\\\\gcd(a,b)\\\\mid c\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(\\\\gcd({{a}},{{b}})\\\\mid {{c}}\\\\).",
+        "correct": true
+      },
+      {
+        "text": "\\\\(\\\\gcd({{a}},{{b}})=1\\\\).",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{c}}\\\\mid\\\\gcd({{a}},{{b}})\\\\).",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{a}}\\\\) and \\\\({{b}}\\\\) are coprime.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "This is Bezout's identity.",
+      "Integer solutions exist iff gcd(a,b) | c."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.3_numerical_002",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.3",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Solving a Linear Diophantine Equation",
+    "tags": [
+      "diophantine-equations",
+      "integer-solutions",
+      "extended-euclidean"
+    ],
+    "stem_template": "Find all integer solutions to \\\\({{a}}x + {{b}}y = \\\\gcd({{a}},{{b}})\\\\).",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 6,
+        "max": 30
+      },
+      "b": {
+        "type": "int",
+        "min": 4,
+        "max": 20
+      }
+    },
+    "answer_template": "x = x0 + (b/d)*t, y = y0 - (a/d)*t for integer t, where (x0,y0) is a particular solution from extended Euclidean algorithm",
+    "mark_scheme_template": "Use the extended Euclidean algorithm to find a particular solution \\\\((x_0,y_0)\\\\). General solution: \\\\(x=x_0+\\\\frac{b}{d}t\\\\), \\\\(y=y_0-\\\\frac{a}{d}t\\\\), \\\\(t\\\\in\\\\mathbb{Z}\\\\), where \\\\(d=\\\\gcd(a,b)\\\\).",
+    "hints": [
+      "Use the extended Euclidean algorithm to find a particular solution.",
+      "The general solution adds multiples of b/d and -a/d."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 5
+  },
+  {
+    "id": "math_aa_10.3_worked_003",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.3",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Word Problem with Diophantine Equation",
+    "tags": [
+      "diophantine-equations",
+      "modelling",
+      "integer-solutions"
+    ],
+    "stem_template": "A shopkeeper sells apples for \\\\({{p1}}\\\\) pence and oranges for \\\\({{p2}}\\\\) pence. A customer spends exactly \\\\({{total}}\\\\) pence on a mixture. Find all non-negative integer solutions.",
+    "params": {
+      "p1": {
+        "type": "int",
+        "min": 3,
+        "max": 9
+      },
+      "p2": {
+        "type": "int",
+        "min": 4,
+        "max": 12
+      },
+      "total": {
+        "type": "int",
+        "min": 20,
+        "max": 60
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "Set up p1·x + p2·y = total, check gcd divides total"
+      },
+      {
+        "label": "b",
+        "marks": 4,
+        "answer_template": "Find particular solution then restrict to x,y ≥ 0"
+      }
+    ],
+    "mark_scheme_template": "Set up \\\\({{p1}}x+{{p2}}y={{total}}\\\\). Check \\\\(\\\\gcd({{p1}},{{p2}})\\\\mid{{total}}\\\\). Find particular solution using extended Euclidean algorithm. Write general solution, then impose \\\\(x\\\\geq 0,y\\\\geq 0\\\\) to find all valid non-negative integer solutions.",
+    "hints": [
+      "Set up the Diophantine equation from the problem.",
+      "After finding the general solution, apply the constraint x, y ≥ 0."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_10.4_mcq_001",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Modular Arithmetic Calculation",
+    "tags": [
+      "modular-arithmetic",
+      "congruences"
+    ],
+    "stem_template": "Find the value of \\\\({{a}}^{{{n}}} \\\\pmod{{{m}}}\\\\), where \\\\({{m}}\\\\) is prime.",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      },
+      "n": {
+        "type": "int",
+        "min": 3,
+        "max": 10
+      },
+      "m": {
+        "type": "choice",
+        "values": [
+          5,
+          7,
+          11,
+          13
+        ]
+      }
+    },
+    "answer_template": "a^n mod m",
+    "distractor_templates": [
+      "a*n mod m",
+      "n mod m",
+      "a mod m"
+    ],
+    "mark_scheme_template": "Compute \\\\({{a}}^{{{n}}}\\\\pmod{{{m}}}\\\\) by successive squaring or repeated multiplication. Reduce at each step.",
+    "options_template": [
+      {
+        "text": "\\\\({{a}}^{{{n}}} \\\\bmod {{m}}\\\\) (computed value)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{a}} \\\\cdot {{n}} \\\\bmod {{m}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{n}} \\\\bmod {{m}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{a}} \\\\bmod {{m}}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Reduce after each multiplication to keep numbers small.",
+      "Use the property (ab) mod m = ((a mod m)(b mod m)) mod m."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_10.4_numerical_002",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.4",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Chinese Remainder Theorem",
+    "tags": [
+      "chinese-remainder-theorem",
+      "congruences"
+    ],
+    "stem_template": "Find the smallest positive integer \\\\(x\\\\) such that \\\\(x\\\\equiv{{r1}}\\\\pmod{{{m1}}}\\\\) and \\\\(x\\\\equiv{{r2}}\\\\pmod{{{m2}}}\\\\), where \\\\(\\\\gcd({{m1}},{{m2}})=1\\\\).",
+    "params": {
+      "r1": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      },
+      "m1": {
+        "type": "choice",
+        "values": [
+          3,
+          4,
+          5
+        ]
+      },
+      "r2": {
+        "type": "int",
+        "min": 1,
+        "max": 6
+      },
+      "m2": {
+        "type": "choice",
+        "values": [
+          7,
+          8,
+          11
+        ]
+      }
+    },
+    "answer_template": "CRT solution: unique mod m1*m2",
+    "mark_scheme_template": "By CRT, since \\\\(\\\\gcd({{m1}},{{m2}})=1\\\\), a unique solution exists modulo \\\\({{m1}}\\\\cdot{{m2}}\\\\). Find it by substitution or using \\\\(x={{r1}}+{{m1}}t\\\\) and solving \\\\({{r1}}+{{m1}}t\\\\equiv{{r2}}\\\\pmod{{{m2}}}\\\\).",
+    "hints": [
+      "Write x = r1 + m1·t and substitute into the second congruence.",
+      "Solve for t mod m2 to find the solution."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 5
+  },
+  {
+    "id": "math_aa_10.4_worked_003",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.4",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "System of Congruences",
+    "tags": [
+      "chinese-remainder-theorem",
+      "modular-arithmetic",
+      "system"
+    ],
+    "stem_template": "Solve the system: \\\\(x\\\\equiv{{a}}\\\\pmod{{{m1}}}\\\\), \\\\(x\\\\equiv{{b}}\\\\pmod{{{m2}}}\\\\), \\\\(x\\\\equiv{{c}}\\\\pmod{{{m3}}}\\\\), where \\\\({{m1}}, {{m2}}, {{m3}}\\\\) are pairwise coprime.",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 1,
+        "max": 3
+      },
+      "b": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      },
+      "c": {
+        "type": "int",
+        "min": 1,
+        "max": 6
+      },
+      "m1": {
+        "type": "choice",
+        "values": [
+          3,
+          4
+        ]
+      },
+      "m2": {
+        "type": "choice",
+        "values": [
+          5,
+          7
+        ]
+      },
+      "m3": {
+        "type": "choice",
+        "values": [
+          8,
+          11
+        ]
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "Combine first two congruences using CRT"
+      },
+      {
+        "label": "b",
+        "marks": 4,
+        "answer_template": "Combine result with third congruence, state solution mod m1·m2·m3"
+      }
+    ],
+    "mark_scheme_template": "Apply CRT iteratively. First combine the first two congruences to get a solution mod \\\\({{m1}}\\\\cdot{{m2}}\\\\). Then combine with the third to get the unique solution mod \\\\({{m1}}\\\\cdot{{m2}}\\\\cdot{{m3}}\\\\).",
+    "hints": [
+      "Apply CRT step by step.",
+      "The final solution is unique modulo m1·m2·m3."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_10.5_mcq_001",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Decimal to Binary Conversion",
+    "tags": [
+      "base-conversion",
+      "binary",
+      "integer-bases"
+    ],
+    "stem_template": "Convert the decimal number \\\\({{n}}\\\\) to binary (base 2).",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 5,
+        "max": 63
+      }
+    },
+    "answer_template": "binary representation of {{n}}",
+    "distractor_templates": [
+      "n in hex",
+      "n in octal",
+      "wrong binary"
+    ],
+    "mark_scheme_template": "Divide \\\\({{n}}\\\\) repeatedly by 2 and record remainders. Read remainders from bottom to top to get the binary representation.",
+    "options_template": [
+      {
+        "text": "Binary representation obtained by repeated division by 2.",
+        "correct": true
+      },
+      {
+        "text": "Hexadecimal representation of \\\\({{n}}\\\\).",
+        "correct": false
+      },
+      {
+        "text": "Octal representation of \\\\({{n}}\\\\).",
+        "correct": false
+      },
+      {
+        "text": "A different binary string.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Divide by 2 and record remainders.",
+      "Read the remainders from last to first."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_10.5_numerical_002",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.5",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Base Conversion Calculation",
+    "tags": [
+      "base-conversion",
+      "hexadecimal",
+      "binary"
+    ],
+    "stem_template": "Convert \\\\({{n}}_{10}\\\\) to base \\\\({{b}}\\\\).",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 20,
+        "max": 255
+      },
+      "b": {
+        "type": "choice",
+        "values": [
+          2,
+          8,
+          16
+        ]
+      }
+    },
+    "answer_template": "n in base b",
+    "mark_scheme_template": "Repeatedly divide \\\\({{n}}\\\\) by \\\\({{b}}\\\\), recording remainders. The base-\\\\({{b}}\\\\) representation is read from the last remainder to the first.",
+    "hints": [
+      "Divide by the base and record remainders.",
+      "Digits in bases > 10 use letters (A=10, B=11, etc.) for base 16."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 3
+  },
+  {
+    "id": "math_aa_10.5_worked_003",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.5",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Arithmetic in a Different Base",
+    "tags": [
+      "integer-bases",
+      "base-arithmetic"
+    ],
+    "stem_template": "Compute \\\\({{a}}_{{base}}+{{bb}}_{{base}}\\\\) in base \\\\({{base}}\\\\), showing all working. Then convert the result to base 10.",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 11,
+        "max": 77
+      },
+      "bb": {
+        "type": "int",
+        "min": 11,
+        "max": 55
+      },
+      "base": {
+        "type": "choice",
+        "values": [
+          8,
+          5,
+          6
+        ]
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "Add in given base, carrying correctly"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "Convert result to base 10"
+      }
+    ],
+    "mark_scheme_template": "Add column by column in base \\\\({{base}}\\\\), carrying when a digit reaches \\\\({{base}}\\\\). Verify by converting both numbers and result to base 10.",
+    "hints": [
+      "Remember: in base b, you carry when a column sum reaches b.",
+      "Convert to base 10 to verify your answer."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "math_aa_10.6_mcq_001",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.6",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Fermat's Little Theorem",
+    "tags": [
+      "fermat-little-theorem",
+      "modular-arithmetic",
+      "prime"
+    ],
+    "stem_template": "By Fermat's Little Theorem, if \\\\(p={{p}}\\\\) is prime and \\\\(\\\\gcd(a,p)=1\\\\), then \\\\(a^{{{pm1}}}\\\\equiv\\\\;?\\\\;\\\\pmod{{{p}}}\\\\).",
+    "params": {
+      "p": {
+        "type": "choice",
+        "values": [
+          5,
+          7,
+          11,
+          13
+        ]
+      },
+      "pm1": {
+        "type": "computed",
+        "formula": "p - 1"
+      }
+    },
+    "answer_template": "1",
+    "distractor_templates": [
+      "0",
+      "a",
+      "p"
+    ],
+    "mark_scheme_template": "Fermat's Little Theorem: if \\\\(p\\\\) is prime and \\\\(\\\\gcd(a,p)=1\\\\), then \\\\(a^{p-1}\\\\equiv 1\\\\pmod{p}\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(1\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(0\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(a\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(p\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Fermat's Little Theorem: a^(p-1) ≡ 1 (mod p) for prime p with gcd(a,p)=1.",
+      "This has important applications in computing large powers modulo a prime."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.6_numerical_002",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.6",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Large Power via Fermat's Little Theorem",
+    "tags": [
+      "fermat-little-theorem",
+      "modular-exponentiation"
+    ],
+    "stem_template": "Compute \\\\({{a}}^{{{n}}} \\\\pmod{{{p}}}\\\\) where \\\\(p={{p}}\\\\) is prime, using Fermat's Little Theorem.",
+    "params": {
+      "a": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "n": {
+        "type": "int",
+        "min": 50,
+        "max": 200
+      },
+      "p": {
+        "type": "choice",
+        "values": [
+          5,
+          7,
+          11,
+          13
+        ]
+      }
+    },
+    "answer_template": "a^(n mod (p-1)) mod p",
+    "mark_scheme_template": "Since \\\\(a^{p-1}\\\\equiv 1\\\\pmod{p}\\\\), write \\\\({{n}}={{n}}\\\\div({{p}}-1)\\\\cdot({{p}}-1)+r\\\\) where \\\\(r={{n}}\\\\bmod({{p}}-1)\\\\). Then \\\\({{a}}^{{{n}}}\\\\equiv {{a}}^r\\\\pmod{{{p}}}\\\\). Compute \\\\({{a}}^r\\\\pmod{{{p}}}\\\\).",
+    "hints": [
+      "Use a^(p-1) ≡ 1 (mod p) to reduce the exponent.",
+      "Compute n mod (p-1) first, then raise a to that reduced power."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 5
+  },
+  {
+    "id": "math_aa_10.6_worked_003",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.6",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Wilson's Theorem and Primality",
+    "tags": [
+      "fermat-little-theorem",
+      "wilson-theorem",
+      "primality"
+    ],
+    "stem_template": "State and prove Wilson's Theorem: \\\\((p-1)!\\\\equiv -1\\\\pmod{p}\\\\) for prime \\\\(p\\\\). Verify for \\\\(p={{p}}\\\\).",
+    "params": {
+      "p": {
+        "type": "choice",
+        "values": [
+          5,
+          7,
+          11
+        ]
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "State the theorem"
+      },
+      {
+        "label": "b",
+        "marks": 4,
+        "answer_template": "Pair each a with its inverse mod p, leaving 1 and p-1 unpaired"
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "answer_template": "Verify computationally for p"
+      }
+    ],
+    "mark_scheme_template": "For prime \\\\(p\\\\), each \\\\(a\\\\in\\\\{2,\\\\ldots,p-2\\\\}\\\\) can be paired with its unique inverse \\\\(a^{-1}\\\\neq a\\\\) in \\\\(\\\\{1,\\\\ldots,p-1\\\\}\\\\). Each pair multiplies to 1. The elements 1 and \\\\(p-1\\\\) are self-inverse. So \\\\((p-1)!=1\\\\cdot(p-1)\\\\cdot(\\\\text{pairs})\\\\equiv(p-1)\\\\equiv -1\\\\pmod{p}\\\\). Verify: \\\\(({{p}}-1)!=\\\\ldots\\\\equiv -1\\\\pmod{{{p}}}\\\\).",
+    "hints": [
+      "Each element a ≠ 1, p-1 in Z_p* pairs with its distinct inverse.",
+      "Only 1 and p-1 are their own inverses mod p."
+    ],
+    "marks": 8
+  },
+  {
+    "id": "math_aa_10.7_mcq_001",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.7",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Handshaking Lemma",
+    "tags": [
+      "graphs",
+      "degree",
+      "handshaking-lemma"
+    ],
+    "stem_template": "A graph has \\\\({{v}}\\\\) vertices. The sum of all vertex degrees is \\\\({{s}}\\\\). How many edges does the graph have?",
+    "params": {
+      "v": {
+        "type": "int",
+        "min": 4,
+        "max": 10
+      },
+      "s": {
+        "type": "int",
+        "min": 8,
+        "max": 20
+      }
+    },
+    "answer_template": "{{s}} / 2",
+    "distractor_templates": [
+      "{{s}}",
+      "{{s}} * {{v}} / 2",
+      "{{s}} - {{v}}"
+    ],
+    "mark_scheme_template": "Handshaking Lemma: \\\\(\\\\sum_{v} \\\\deg(v) = 2|E|\\\\). So \\\\(|E|=\\\\dfrac{{{s}}}{2}\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(\\\\dfrac{{{s}}}{2}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{s}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\dfrac{{{s}}\\\\cdot{{v}}}{2}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{s}}-{{v}}\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "The Handshaking Lemma: Σdeg(v) = 2|E|.",
+      "Each edge contributes 2 to the sum of degrees."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.7_mcq_002",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.7",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Graph Degree Sequence",
+    "tags": [
+      "graphs",
+      "degree-sequence",
+      "graph-theory"
+    ],
+    "stem_template": "Which degree sequence is NOT possible for a simple graph?",
+    "params": {},
+    "answer_template": "3, 3, 3, 1 (sum = 10, which is even, but check graph exists).",
+    "distractor_templates": [
+      "2, 2, 2, 2",
+      "3, 2, 2, 1",
+      "4, 3, 2, 1"
+    ],
+    "mark_scheme_template": "The sum of degrees must be even (Handshaking Lemma). Also verify the sequence is graphical by the Erdős–Gallai theorem. Odd sum (like 5 vertices with degrees 3,3,3,3,1 giving sum=13) is not possible.",
+    "options_template": [
+      {
+        "text": "\\\\((3,3,3,3,1)\\\\) — sum = 13 (odd, impossible).",
+        "correct": true
+      },
+      {
+        "text": "\\\\((2,2,2,2)\\\\) — sum = 8 ✓",
+        "correct": false
+      },
+      {
+        "text": "\\\\((3,2,2,1)\\\\) — sum = 8 ✓",
+        "correct": false
+      },
+      {
+        "text": "\\\\((4,3,2,1)\\\\) — sum = 10 ✓",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Sum of all degrees must be even.",
+      "Check Σdeg for each option."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "math_aa_10.7_numerical_003",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.7",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Complete Graph Edges",
+    "tags": [
+      "graphs",
+      "complete-graph",
+      "adjacency"
+    ],
+    "stem_template": "How many edges does the complete graph \\\\(K_{{n}}\\\\) have?",
+    "params": {
+      "n": {
+        "type": "int",
+        "min": 4,
+        "max": 10
+      }
+    },
+    "answer_template": "{{n}} * ({{n}} - 1) / 2",
+    "mark_scheme_template": "In \\\\(K_n\\\\), every vertex connects to every other vertex. Number of edges \\\\(=\\\\binom{n}{2}=\\\\dfrac{n(n-1)}{2}=\\\\dfrac{{{n}}({{n}}-1)}{2}\\\\).",
+    "hints": [
+      "Each pair of vertices forms one edge in K_n.",
+      "Use the combination formula C(n,2)."
+    ],
+    "tolerance": 0,
+    "unit": "edges",
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.7_worked_004",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.7",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Graph Planarity and Euler's Formula",
+    "tags": [
+      "graph-theory",
+      "planar-graphs",
+      "euler-formula"
+    ],
+    "stem_template": "A connected planar graph has \\\\(v={{v}}\\\\) vertices and \\\\(e={{e}}\\\\) edges. (a) Apply Euler's formula to find the number of faces \\\\(f\\\\). (b) For a simple planar graph, verify the inequality \\\\(e\\\\leq 3v-6\\\\).",
+    "params": {
+      "v": {
+        "type": "int",
+        "min": 4,
+        "max": 8
+      },
+      "e": {
+        "type": "int",
+        "min": 4,
+        "max": 12
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "f = e - v + 2"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "Check e ≤ 3v - 6"
+      }
+    ],
+    "mark_scheme_template": "(a) Euler's formula: \\\\(v-e+f=2\\\\Rightarrow f=2+e-v=2+{{e}}-{{v}}\\\\). (b) For a simple planar graph, \\\\(e\\\\leq 3v-6=3\\\\cdot{{v}}-6\\\\). Check: \\\\({{e}}\\\\leq{{3v-6}}\\\\).",
+    "hints": [
+      "Euler's formula: v - e + f = 2 for connected planar graphs.",
+      "The inequality e ≤ 3v-6 is a necessary condition for planarity."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "math_aa_10.8_mcq_001",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.8",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Euler Circuit Existence",
+    "tags": [
+      "euler-circuits",
+      "walks",
+      "trails",
+      "eulerian"
+    ],
+    "stem_template": "A connected graph has \\\\({{v}}\\\\) vertices. Which condition guarantees an Eulerian circuit (traversing every edge exactly once and returning to start)?",
+    "params": {
+      "v": {
+        "type": "int",
+        "min": 4,
+        "max": 8
+      }
+    },
+    "answer_template": "Every vertex has even degree.",
+    "distractor_templates": [
+      "Every vertex has degree ≥ 2.",
+      "The graph is complete.",
+      "Exactly two vertices have odd degree."
+    ],
+    "mark_scheme_template": "An Eulerian circuit exists iff the graph is connected and every vertex has even degree (Euler's theorem). An Eulerian path (not circuit) exists iff exactly two vertices have odd degree.",
+    "options_template": [
+      {
+        "text": "Every vertex has even degree.",
+        "correct": true
+      },
+      {
+        "text": "Every vertex has degree \\\\(\\\\geq 2\\\\).",
+        "correct": false
+      },
+      {
+        "text": "The graph is complete.",
+        "correct": false
+      },
+      {
+        "text": "Exactly two vertices have odd degree.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Eulerian circuit: all vertices have even degree.",
+      "Eulerian path (not circuit): exactly 2 vertices have odd degree."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.8_numerical_002",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.8",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Odd-Degree Vertices Count",
+    "tags": [
+      "walks",
+      "euler-path",
+      "degree"
+    ],
+    "stem_template": "A graph has degree sequence \\\\(({{d1}}, {{d2}}, {{d3}}, {{d4}}, {{d5}})\\\\). How many vertices have odd degree?",
+    "params": {
+      "d1": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "d2": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "d3": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "d4": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "d5": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      }
+    },
+    "answer_template": "count of odd values in (d1,d2,d3,d4,d5)",
+    "mark_scheme_template": "Count the odd values in the degree sequence. Note: by the Handshaking Lemma, the number of odd-degree vertices is always even.",
+    "hints": [
+      "Count which of the listed degrees are odd.",
+      "The number of odd-degree vertices is always even (Handshaking Lemma)."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.8_worked_003",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.8",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Finding an Euler Path",
+    "tags": [
+      "euler-path",
+      "trails",
+      "graph-algorithms"
+    ],
+    "stem_template": "A graph \\\\(G\\\\) has vertices \\\\(A, B, C, D, E\\\\) with edges \\\\(AB, AC, BC, BD, CD, DE\\\\). (a) Find the degree of each vertex. (b) Determine whether an Euler path or circuit exists. (c) If an Euler path exists, write it down.",
+    "params": {},
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "answer_template": "deg(A)=2, deg(B)=3, deg(C)=3, deg(D)=3, deg(E)=1"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "Exactly 4 odd-degree vertices — neither Euler path nor circuit"
+      },
+      {
+        "label": "c",
+        "marks": 1,
+        "answer_template": "Not possible"
+      }
+    ],
+    "mark_scheme_template": "Compute degrees. A: 2 (AB,AC), B: 3 (AB,BC,BD), C: 3 (AC,BC,CD), D: 3 (BD,CD,DE), E: 1 (DE). Odd-degree vertices: B, C, D, E — four vertices. Neither Euler path (needs exactly 2 odd) nor Euler circuit (needs 0 odd) exists.",
+    "hints": [
+      "Count edges at each vertex for degree.",
+      "Euler path requires exactly 0 or 2 vertices of odd degree."
+    ],
+    "marks": 5
+  },
+  {
+    "id": "math_aa_10.9_mcq_001",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.9",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Kruskal's Algorithm Objective",
+    "tags": [
+      "kruskal",
+      "minimum-spanning-tree",
+      "greedy-algorithm"
+    ],
+    "stem_template": "Kruskal's algorithm finds:",
+    "params": {},
+    "answer_template": "A minimum spanning tree by repeatedly adding the cheapest edge that doesn't form a cycle.",
+    "distractor_templates": [
+      "The shortest path between two specific vertices.",
+      "The maximum flow through a network.",
+      "A Hamiltonian cycle of minimum weight."
+    ],
+    "mark_scheme_template": "Kruskal's algorithm: sort edges by weight, add each edge (cheapest first) if it doesn't create a cycle, until the tree spans all vertices. This gives a minimum spanning tree (MST).",
+    "options_template": [
+      {
+        "text": "A minimum spanning tree by adding cheapest edges without forming cycles.",
+        "correct": true
+      },
+      {
+        "text": "The shortest path between two specific vertices.",
+        "correct": false
+      },
+      {
+        "text": "The maximum flow through a network.",
+        "correct": false
+      },
+      {
+        "text": "A Hamiltonian cycle of minimum weight.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Kruskal's = greedy edge-addition for minimum spanning tree.",
+      "Avoid cycles at each step."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.9_numerical_002",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.9",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Minimum Spanning Tree Weight",
+    "tags": [
+      "kruskal",
+      "minimum-spanning-tree",
+      "graph-algorithms"
+    ],
+    "stem_template": "A weighted graph with {{v}} vertices has edges with weights \\\\({{e1}}, {{e2}}, {{e3}}, {{e4}}, {{e5}}, {{e6}}\\\\). Apply Kruskal's algorithm to find the total weight of the minimum spanning tree.",
+    "params": {
+      "v": {
+        "type": "int",
+        "min": 4,
+        "max": 5
+      },
+      "e1": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "e2": {
+        "type": "int",
+        "min": 3,
+        "max": 7
+      },
+      "e3": {
+        "type": "int",
+        "min": 4,
+        "max": 9
+      },
+      "e4": {
+        "type": "int",
+        "min": 5,
+        "max": 12
+      },
+      "e5": {
+        "type": "int",
+        "min": 6,
+        "max": 14
+      },
+      "e6": {
+        "type": "int",
+        "min": 8,
+        "max": 18
+      }
+    },
+    "answer_template": "Sum of the v-1 lightest non-cycle-forming edges",
+    "mark_scheme_template": "Sort edges by weight. Add edges greedily, skipping any that form a cycle. The MST has \\\\(v-1={{v}}-1\\\\) edges. Sum their weights.",
+    "hints": [
+      "A spanning tree with v vertices has exactly v-1 edges.",
+      "Kruskal's: sort edges, add if no cycle is formed."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 5
+  },
+  {
+    "id": "math_aa_10.9_worked_003",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.9",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Dijkstra's Algorithm",
+    "tags": [
+      "dijkstra",
+      "shortest-path",
+      "graph-algorithms"
+    ],
+    "stem_template": "Apply Dijkstra's algorithm to the weighted graph below to find the shortest path from vertex \\\\(A\\\\) to vertex \\\\(E\\\\). Edge weights: \\\\(AB={{w1}}\\\\), \\\\(AC={{w2}}\\\\), \\\\(BC={{w3}}\\\\), \\\\(BD={{w4}}\\\\), \\\\(CD={{w5}}\\\\), \\\\(DE={{w6}}\\\\), \\\\(CE={{w7}}\\\\).",
+    "params": {
+      "w1": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "w2": {
+        "type": "int",
+        "min": 2,
+        "max": 7
+      },
+      "w3": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "w4": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      },
+      "w5": {
+        "type": "int",
+        "min": 1,
+        "max": 6
+      },
+      "w6": {
+        "type": "int",
+        "min": 2,
+        "max": 7
+      },
+      "w7": {
+        "type": "int",
+        "min": 3,
+        "max": 10
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 5,
+        "answer_template": "Step through Dijkstra's algorithm showing updated distances"
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "answer_template": "State shortest path and its total distance"
+      }
+    ],
+    "mark_scheme_template": "Initialize: \\\\(d(A)=0\\\\), all others \\\\(=\\\\infty\\\\). At each step, visit the unvisited vertex with smallest tentative distance, update neighbors. Show the full table of distances at each step. State the shortest path to \\\\(E\\\\).",
+    "hints": [
+      "Dijkstra's: always extend the shortest known partial path.",
+      "Keep a table of tentative distances, updating when shorter paths are found."
+    ],
+    "marks": 7
+  },
+  {
+    "id": "math_aa_10.10_mcq_001",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.10",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Chinese Postman Problem",
+    "tags": [
+      "chinese-postman",
+      "graph-optimization"
+    ],
+    "stem_template": "The Chinese Postman Problem seeks to find:",
+    "params": {},
+    "answer_template": "The minimum-weight closed walk traversing every edge at least once.",
+    "distractor_templates": [
+      "The shortest Hamiltonian cycle.",
+      "A minimum spanning tree.",
+      "The longest path through the graph."
+    ],
+    "mark_scheme_template": "The Chinese Postman Problem (Route Inspection) finds the minimum-weight closed walk covering every edge at least once. If the graph is Eulerian (all even degrees), the answer equals the total edge weight. Otherwise, duplicate some edges to make all vertices even-degree.",
+    "options_template": [
+      {
+        "text": "The minimum-weight closed walk traversing every edge at least once.",
+        "correct": true
+      },
+      {
+        "text": "The shortest Hamiltonian cycle.",
+        "correct": false
+      },
+      {
+        "text": "A minimum spanning tree.",
+        "correct": false
+      },
+      {
+        "text": "The longest path through the graph.",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Chinese Postman = Route Inspection Problem.",
+      "If all vertices have even degree, the answer = sum of all edge weights."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.10_numerical_002",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.10",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Chinese Postman Minimum Route",
+    "tags": [
+      "chinese-postman",
+      "route-inspection",
+      "odd-degree-vertices"
+    ],
+    "stem_template": "A graph has total edge weight \\\\({{total}}\\\\). It has exactly two odd-degree vertices connected by the shortest path of weight \\\\({{extra}}\\\\). Find the minimum route for the Chinese Postman Problem.",
+    "params": {
+      "total": {
+        "type": "int",
+        "min": 50,
+        "max": 200
+      },
+      "extra": {
+        "type": "int",
+        "min": 5,
+        "max": 30
+      }
+    },
+    "answer_template": "{{total}} + {{extra}}",
+    "mark_scheme_template": "Two odd-degree vertices must be connected by a repeated path. The minimum extra distance is the shortest path between them (\\\\({{extra}}\\\\)). Total \\\\(={{total}}+{{extra}}\\\\).",
+    "hints": [
+      "Add the shortest path between odd-degree vertices to make all degrees even.",
+      "Minimum route = total edge weight + repeated edge weight."
+    ],
+    "tolerance": 0,
+    "unit": "",
+    "marks": 4
+  },
+  {
+    "id": "math_aa_10.10_worked_003",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.10",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Travelling Salesman Problem — Nearest Neighbour",
+    "tags": [
+      "travelling-salesman",
+      "heuristic",
+      "optimization"
+    ],
+    "stem_template": "A salesman must visit cities \\\\(A, B, C, D\\\\) and return to \\\\(A\\\\). Distances: \\\\(AB={{ab}}\\\\), \\\\(AC={{ac}}\\\\), \\\\(AD={{ad}}\\\\), \\\\(BC={{bc}}\\\\), \\\\(BD={{bd}}\\\\), \\\\(CD={{cd}}\\\\). (a) Apply the nearest-neighbour heuristic starting from \\\\(A\\\\). (b) Find the optimal tour by exhaustive search.",
+    "params": {
+      "ab": {
+        "type": "int",
+        "min": 3,
+        "max": 10
+      },
+      "ac": {
+        "type": "int",
+        "min": 4,
+        "max": 12
+      },
+      "ad": {
+        "type": "int",
+        "min": 5,
+        "max": 14
+      },
+      "bc": {
+        "type": "int",
+        "min": 3,
+        "max": 10
+      },
+      "bd": {
+        "type": "int",
+        "min": 4,
+        "max": 12
+      },
+      "cd": {
+        "type": "int",
+        "min": 3,
+        "max": 10
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 4,
+        "answer_template": "Apply nearest-neighbour heuristic step by step"
+      },
+      {
+        "label": "b",
+        "marks": 4,
+        "answer_template": "List all 3 distinct tours (n-1)!/2 = 3, find minimum"
+      }
+    ],
+    "mark_scheme_template": "(a) Nearest neighbour from A: at each step, go to the nearest unvisited city. Record the route and total distance. (b) The \\\\(3\\\\) distinct tours are \\\\(A\\\\to B\\\\to C\\\\to D\\\\to A\\\\), \\\\(A\\\\to B\\\\to D\\\\to C\\\\to A\\\\), \\\\(A\\\\to C\\\\to B\\\\to D\\\\to A\\\\). Calculate each and identify the minimum.",
+    "hints": [
+      "With 4 cities, there are (4-1)!/2 = 3 distinct tours.",
+      "Compare all 3 to find the optimal solution."
+    ],
+    "marks": 8
+  },
+  {
+    "id": "math_aa_10.11_mcq_001",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.11",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Linear Recurrence Characteristic Equation",
+    "tags": [
+      "recurrence-relations",
+      "characteristic-equation",
+      "homogeneous"
+    ],
+    "stem_template": "The recurrence relation \\\\(a_n = {{p}}a_{n-1} + {{q}}a_{n-2}\\\\) has characteristic equation:",
+    "params": {
+      "p": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "q": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      }
+    },
+    "answer_template": "x² - px - q = 0",
+    "distractor_templates": [
+      "x² + px + q = 0",
+      "x² - px + q = 0",
+      "x² + px - q = 0"
+    ],
+    "mark_scheme_template": "Substitute \\\\(a_n=x^n\\\\) into the recurrence \\\\(x^n={{p}}x^{n-1}+{{q}}x^{n-2}\\\\). Divide by \\\\(x^{n-2}\\\\): \\\\(x^2-{{p}}x-{{q}}=0\\\\).",
+    "options_template": [
+      {
+        "text": "\\\\(x^2-{{p}}x-{{q}}=0\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(x^2+{{p}}x+{{q}}=0\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(x^2-{{p}}x+{{q}}=0\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(x^2+{{p}}x-{{q}}=0\\\\)",
+        "correct": false
+      }
+    ],
+    "hints": [
+      "Substitute a_n = x^n and divide by x^(n-2).",
+      "All terms on the same side with the leading coefficient positive."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_10.11_numerical_002",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.11",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Solving a Recurrence with Distinct Roots",
+    "tags": [
+      "recurrence-relations",
+      "characteristic-equation",
+      "general-solution"
+    ],
+    "stem_template": "Solve \\\\(a_n = {{p}}a_{n-1} - {{q}}a_{n-2}\\\\) with \\\\(a_0={{a0}}\\\\) and \\\\(a_1={{a1}}\\\\).",
+    "params": {
+      "p": {
+        "type": "int",
+        "min": 3,
+        "max": 6
+      },
+      "q": {
+        "type": "int",
+        "min": 2,
+        "max": 4
+      },
+      "a0": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "a1": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      }
+    },
+    "answer_template": "A·r1^n + B·r2^n where r1,r2 are roots of x²-px+q=0",
+    "mark_scheme_template": "Characteristic equation \\\\(x^2-{{p}}x+{{q}}=0\\\\). Find roots \\\\(r_1, r_2\\\\). General solution: \\\\(a_n=Ar_1^n+Br_2^n\\\\). Apply initial conditions \\\\(a_0={{a0}}, a_1={{a1}}\\\\) to find \\\\(A\\\\) and \\\\(B\\\\).",
+    "hints": [
+      "Find the characteristic roots first.",
+      "Use the initial conditions to determine the constants A and B."
+    ],
+    "tolerance": 0.01,
+    "unit": "",
+    "marks": 6
+  },
+  {
+    "id": "math_aa_10.11_worked_003",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.11",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Recurrence with Repeated Roots",
+    "tags": [
+      "recurrence-relations",
+      "repeated-roots",
+      "general-solution"
+    ],
+    "stem_template": "Solve the recurrence \\\\(a_n = {{r}}a_{n-1} - \\\\dfrac{{{r}}^2}{4}a_{n-2}\\\\) ... Actually: Solve \\\\(a_n - {{twor}}a_{n-1} + {{rsq}}a_{n-2} = 0\\\\) (with repeated root \\\\(r={{r}}\\\\)) given \\\\(a_0={{a0}}\\\\), \\\\(a_1={{a1}}\\\\).",
+    "params": {
+      "r": {
+        "type": "int",
+        "min": 2,
+        "max": 5
+      },
+      "twor": {
+        "type": "computed",
+        "formula": "2*r"
+      },
+      "rsq": {
+        "type": "computed",
+        "formula": "r*r"
+      },
+      "a0": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "a1": {
+        "type": "int",
+        "min": 2,
+        "max": 15
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "Characteristic equation (x-r)² = 0, repeated root r"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "General solution: a_n = (A + Bn)·r^n"
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "answer_template": "Apply initial conditions to find A and B"
+      }
+    ],
+    "mark_scheme_template": "Characteristic equation \\\\((x-{{r}})^2=0\\\\), repeated root \\\\(x={{r}}\\\\). General solution: \\\\(a_n=(A+Bn){{r}}^n\\\\). Using \\\\(a_0={{a0}}\\\\): \\\\(A={{a0}}\\\\). Using \\\\(a_1={{a1}}\\\\): \\\\(({{a0}}+B){{r}}={{a1}}\\\\), so \\\\(B=\\\\frac{{{a1}}}{{{r}}}-{{a0}}\\\\).",
+    "hints": [
+      "With a repeated root r, the general solution is (A + Bn)·r^n.",
+      "Apply both initial conditions to find A and B."
+    ],
+    "marks": 8
+  },
+  {
+    "id": "math_aa_10.11_worked_004",
+    "subject": "math_aa",
+    "topic": "10",
+    "subtopic": "10.11",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Non-Homogeneous Recurrence Relation",
+    "tags": [
+      "recurrence-relations",
+      "non-homogeneous",
+      "particular-solution"
+    ],
+    "stem_template": "Solve \\\\(a_n = {{p}}a_{n-1} + {{c}}^n\\\\) with \\\\(a_0={{a0}}\\\\).",
+    "params": {
+      "p": {
+        "type": "int",
+        "min": 2,
+        "max": 4
+      },
+      "c": {
+        "type": "int",
+        "min": 2,
+        "max": 5
+      },
+      "a0": {
+        "type": "int",
+        "min": 1,
+        "max": 6
+      }
+    },
+    "parts": [
+      {
+        "label": "a",
+        "marks": 3,
+        "answer_template": "Solve homogeneous part: a_n^(h) = A·p^n"
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "answer_template": "Find particular solution: try a_n^(p) = B·c^n, get B = c^n/(c-p)"
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "answer_template": "Apply initial condition to get A"
+      }
+    ],
+    "mark_scheme_template": "Homogeneous solution: \\\\(a_n^{(h)}=A{{p}}^n\\\\). For particular solution, try \\\\(a_n^{(p)}=B{{c}}^n\\\\): \\\\(B{{c}}^n={{p}}B{{c}}^{n-1}+{{c}}^n\\\\Rightarrow B=\\\\frac{{{c}}}{{{c}}-{{p}}}\\\\) (if \\\\({{c}}\\\\neq{{p}}\\\\)). General solution: \\\\(a_n=A{{p}}^n+\\\\frac{{{c}}^{n+1}}{{{c}}-{{p}}}\\\\). Apply \\\\(a_0={{a0}}\\\\) to find \\\\(A\\\\).",
+    "hints": [
+      "Separate into homogeneous and particular solutions.",
+      "For the particular solution, try a_n = B·c^n (if c ≠ p)."
+    ],
+    "marks": 8
+  },
+  {
+    "id": "math_aa_hl_3_1_ms_001",
+    "subject": "math_aa",
+    "topic": "3",
+    "subtopic": "3.1",
+    "type": "multi_select",
+    "difficulty": "hl",
+    "title": "Complex Number Properties",
+    "tags": [
+      "complex numbers",
+      "properties",
+      "hl"
+    ],
+    "stem_template": "Let \\(z = a + bi\\). Which of the following statements are TRUE? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "The modulus of \\(z\\) is \\(|z| = \\sqrt{a^2 + b^2}\\)",
+        "correct": true
+      },
+      {
+        "text": "The conjugate of \\(z\\) is \\(\\bar{z} = a - bi\\)",
+        "correct": true
+      },
+      {
+        "text": "\\(z \\cdot \\bar{z} = a^2 + b^2\\)",
+        "correct": true
+      },
+      {
+        "text": "\\(z + \\bar{z} = 2bi\\)",
+        "correct": false
+      },
+      {
+        "text": "\\(i^4 = 1\\)",
+        "correct": true
+      }
+    ],
+    "mark_scheme_template": "TRUE: |z|=√(a²+b²); conjugate ā=a-bi; z·ā=a²+b²; i⁴=1. FALSE: z+ā=2a (real part × 2), not 2bi.",
+    "hints": [
+      "Conjugate: change sign of imaginary part.",
+      "z × z̄ is always real."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_hl_5_2_ms_001",
+    "subject": "math_aa",
+    "topic": "5",
+    "subtopic": "5.2",
+    "type": "multi_select",
+    "difficulty": "hl",
+    "title": "Integration Techniques",
+    "tags": [
+      "integration",
+      "calculus",
+      "hl"
+    ],
+    "stem_template": "Which of the following integrals can be solved directly using the substitution method \\(u = g(x)\\)? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "\\(\\displaystyle\\int 2x \\cdot e^{x^2} \\, dx\\)",
+        "correct": true
+      },
+      {
+        "text": "\\(\\displaystyle\\int \\cos(3x) \\, dx\\)",
+        "correct": true
+      },
+      {
+        "text": "\\(\\displaystyle\\int x^2 e^x \\, dx\\)",
+        "correct": false
+      },
+      {
+        "text": "\\(\\displaystyle\\int \\dfrac{2x}{x^2+1} \\, dx\\)",
+        "correct": true
+      },
+      {
+        "text": "\\(\\displaystyle\\int x \\ln x \\, dx\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Substitution works when the integrand contains a function and its derivative: 2x·e^(x²) (u=x²); cos(3x) (u=3x); 2x/(x²+1) (u=x²+1). Integration by parts needed for x²eˣ and x ln x.",
+    "hints": [
+      "Look for f'(x)·f(g(x)) patterns.",
+      "x²eˣ and x ln x require integration by parts."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_hl_4_1_ms_001",
+    "subject": "math_aa",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "multi_select",
+    "difficulty": "hl",
+    "title": "Probability Concepts",
+    "tags": [
+      "probability",
+      "statistics",
+      "hl"
+    ],
+    "stem_template": "Two events \\(A\\) and \\(B\\) are mutually exclusive. Which statements MUST be true? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "\\(P(A \\cap B) = 0\\)",
+        "correct": true
+      },
+      {
+        "text": "\\(P(A \\cup B) = P(A) + P(B)\\)",
+        "correct": true
+      },
+      {
+        "text": "\\(A\\) and \\(B\\) are independent",
+        "correct": false
+      },
+      {
+        "text": "\\(P(A|B) = 0\\)",
+        "correct": true
+      },
+      {
+        "text": "\\(P(A) + P(B) \\leq 1\\)",
+        "correct": true
+      }
+    ],
+    "mark_scheme_template": "Mutually exclusive: P(A∩B)=0; P(A∪B)=P(A)+P(B); P(A|B)=0; P(A)+P(B)≤1. NOT independent (mutual exclusivity implies dependence unless one has P=0).",
+    "hints": [
+      "Mutually exclusive → cannot occur together.",
+      "Independence requires P(A∩B)=P(A)·P(B)."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "math_aa_hl_5_3_calc_001",
+    "subject": "math_aa",
+    "topic": "5",
+    "subtopic": "5.3",
+    "type": "calculation",
+    "difficulty": "hl",
+    "title": "Integration by Parts",
+    "tags": [
+      "integration",
+      "by-parts",
+      "calculus",
+      "hl"
+    ],
+    "stem_template": "Evaluate \\(\\displaystyle\\int x \\cdot e^{{{k}}x} \\, dx\\) using integration by parts.",
+    "params": {
+      "k": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      }
+    },
+    "answer_template": "None",
+    "steps_template": [
+      {
+        "label": "Identify u and dv",
+        "content": "Let \\(u = x\\) and \\(dv = e^{{{k}}x} \\, dx\\), so \\(du = dx\\) and \\(v = \\dfrac{1}{{{k}}}e^{{{k}}x}\\).",
+        "type": "info"
+      },
+      {
+        "label": "Apply formula",
+        "content": "Integration by parts: \\(\\int u \\, dv = uv - \\int v \\, du\\). Write out \\(\\dfrac{x}{{{k}}}e^{{{k}}x} - \\int \\dfrac{1}{{{k}}}e^{{{k}}x} \\, dx\\).",
+        "type": "info"
+      },
+      {
+        "label": "What is the coefficient of \\(e^{{{k}}x}\\) in the final answer?",
+        "content": "The final answer is \\(\\dfrac{x}{{{k}}}e^{{{k}}x} - \\dfrac{1}{{{k}}^2}e^{{{k}}x} + C\\). What is the coefficient of the second term \\(e^{{{k}}x}\\)?",
+        "type": "input",
+        "answer": "-1 / ({{k}} ** 2)",
+        "tolerance": 0.001,
+        "unit": ""
+      }
+    ],
+    "mark_scheme_template": "\\(\\int x e^{{{k}}x} \\, dx = \\dfrac{x}{{{k}}}e^{{{k}}x} - \\dfrac{1}{{{k}}^2}e^{{{k}}x} + C\\)",
+    "hints": [
+      "Let u=x (easy to differentiate).",
+      "The integral of e^(kx) is (1/k)e^(kx)."
+    ],
+    "marks": 5
+  }
+]

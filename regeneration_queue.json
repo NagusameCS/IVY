@@ -1,0 +1,925 @@
+{
+  "total_to_regenerate": 71,
+  "by_subject": {
+    "math_aa": 47,
+    "physics": 24
+  },
+  "lessons_by_subject": {
+    "math_aa": [
+      {
+        "code": "5.5.2",
+        "title": "Basic Probability",
+        "score": 40.0,
+        "issues": [
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "5.5.2_basic_probability.md"
+      },
+      {
+        "code": "5.5.3",
+        "title": "Combined Events",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "5.5.3_combined_events.md"
+      },
+      {
+        "code": "5.5.4",
+        "title": "Conditional Probability & Bayes",
+        "score": 45.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "5.5.4_conditional_probability__bayes.md"
+      },
+      {
+        "code": "5.5.5",
+        "title": "Random Variables & Distributions",
+        "score": 30.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "5.5.5_random_variables__distributions.md"
+      },
+      {
+        "code": "5.5.6",
+        "title": "Binomial & Poisson",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "foreign_curriculum_reference",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "5.5.6_binomial__poisson.md"
+      },
+      {
+        "code": "5.5.7",
+        "title": "Normal Distribution",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "5.5.7_normal_distribution.md"
+      },
+      {
+        "code": "6.6.1",
+        "title": "Limits & Derivative Basics",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "6.6.1_limits__derivative_basics.md"
+      },
+      {
+        "code": "6.6.2",
+        "title": "Differentiation Rules",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "missing_math_signal"
+        ],
+        "filename": "6.6.2_differentiation_rules.md"
+      },
+      {
+        "code": "6.6.3",
+        "title": "Extrema & Graph Behaviour",
+        "score": 30.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "foreign_curriculum_reference",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "6.6.3_extrema__graph_behaviour.md"
+      },
+      {
+        "code": "6.6.4",
+        "title": "Indefinite Integration Basics",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "missing_math_signal"
+        ],
+        "filename": "6.6.4_indefinite_integration_basics.md"
+      },
+      {
+        "code": "6.6.5",
+        "title": "Definite Integrals, Area & Volume",
+        "score": 50.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "6.6.5_definite_integrals_area__volume.md"
+      },
+      {
+        "code": "6.6.6",
+        "title": "Kinematics & Total Distance",
+        "score": 50.0,
+        "issues": [
+          "low_word_count",
+          "missing_summary_section",
+          "foreign_curriculum_reference",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "6.6.6_kinematics__total_distance.md"
+      },
+      {
+        "code": "6.6.7",
+        "title": "Integration Techniques",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "missing_math_signal"
+        ],
+        "filename": "6.6.7_integration_techniques.md"
+      },
+      {
+        "code": "7.7.1",
+        "title": "CDFs, Geometric, Neg Binomial, PGFs",
+        "score": 50.0,
+        "issues": [
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "7.7.1_cdfs_geometric_neg_binomial_pgfs.md"
+      },
+      {
+        "code": "7.7.2",
+        "title": "Linear Combinations of RVs",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "7.7.2_linear_combinations_of_rvs.md"
+      },
+      {
+        "code": "7.7.3",
+        "title": "Unbiased Estimators",
+        "score": 45.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "7.7.3_unbiased_estimators.md"
+      },
+      {
+        "code": "7.7.4",
+        "title": "Normal Combinations & CLT",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "7.7.4_normal_combinations__clt.md"
+      },
+      {
+        "code": "7.7.5",
+        "title": "Confidence Intervals (Mean)",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "7.7.5_confidence_intervals_mean.md"
+      },
+      {
+        "code": "7.7.6",
+        "title": "Hypothesis Testing (Mean)",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "7.7.6_hypothesis_testing_mean.md"
+      },
+      {
+        "code": "7.7.7",
+        "title": "Bivariate Correlation & Regression",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "7.7.7_bivariate_correlation__regression.md"
+      },
+      {
+        "code": "8.8.1",
+        "title": "Set Operations & Laws",
+        "score": 55.0,
+        "issues": [
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.1_set_operations__laws.md"
+      },
+      {
+        "code": "8.8.2",
+        "title": "Relations & Equivalence",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.2_relations__equivalence.md"
+      },
+      {
+        "code": "8.8.3",
+        "title": "Injections, Surjections, Bijections",
+        "score": 55.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.3_injections_surjections_bijections.md"
+      },
+      {
+        "code": "8.8.4",
+        "title": "Binary Operations",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.4_binary_operations.md"
+      },
+      {
+        "code": "8.8.5",
+        "title": "Operation Properties",
+        "score": 30.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.5_operation_properties.md"
+      },
+      {
+        "code": "8.8.6",
+        "title": "Identity & Inverses",
+        "score": 50.0,
+        "issues": [
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.6_identity__inverses.md"
+      },
+      {
+        "code": "8.8.7",
+        "title": "Definition of a Group",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.7_definition_of_a_group.md"
+      },
+      {
+        "code": "8.8.8",
+        "title": "Group Examples",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.8_group_examples.md"
+      },
+      {
+        "code": "8.8.9",
+        "title": "Cyclic Groups & Generators",
+        "score": 50.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.9_cyclic_groups__generators.md"
+      },
+      {
+        "code": "8.8.10",
+        "title": "Permutations & Cycles",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "foreign_curriculum_reference",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.10_permutations__cycles.md"
+      },
+      {
+        "code": "8.8.11",
+        "title": "Subgroups, Cosets & Lagrange",
+        "score": 45.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "foreign_curriculum_reference",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.11_subgroups_cosets__lagrange.md"
+      },
+      {
+        "code": "8.8.12",
+        "title": "Homomorphisms & Isomorphisms",
+        "score": 50.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "foreign_curriculum_reference",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "8.8.12_homomorphisms__isomorphisms.md"
+      },
+      {
+        "code": "9.9.1",
+        "title": "Infinite Sequences",
+        "score": 50.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "9.9.1_infinite_sequences.md"
+      },
+      {
+        "code": "9.9.2",
+        "title": "Infinite Series & Tests",
+        "score": 30.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "9.9.2_infinite_series__tests.md"
+      },
+      {
+        "code": "9.9.3",
+        "title": "Continuity & Differentiability",
+        "score": 45.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "9.9.3_continuity__differentiability.md"
+      },
+      {
+        "code": "9.9.4",
+        "title": "Riemann Sums & Improper Integrals",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "9.9.4_riemann_sums__improper_integrals.md"
+      },
+      {
+        "code": "9.9.6",
+        "title": "Taylor & Maclaurin Series",
+        "score": 45.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "9.9.6_taylor__maclaurin_series.md"
+      },
+      {
+        "code": "9.9.7",
+        "title": "Limit Evaluation (l'Hopital & Series)",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "9.9.7_limit_evaluation_lhopital__series.md"
+      },
+      {
+        "code": "10.10.1",
+        "title": "Strong Induction & Pigeonhole",
+        "score": 50.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "10.10.1_strong_induction__pigeonhole.md"
+      },
+      {
+        "code": "10.10.2",
+        "title": "Divisibility, GCD, LCM & Primes",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "10.10.2_divisibility_gcd_lcm__primes.md"
+      },
+      {
+        "code": "10.10.3",
+        "title": "Linear Diophantine Equations",
+        "score": 45.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "foreign_curriculum_reference",
+          "missing_math_signal"
+        ],
+        "filename": "10.10.3_linear_diophantine_equations.md"
+      },
+      {
+        "code": "10.10.4",
+        "title": "Modular Arithmetic & CRT",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "10.10.4_modular_arithmetic__crt.md"
+      },
+      {
+        "code": "10.10.5",
+        "title": "Integer Bases",
+        "score": 45.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "10.10.5_integer_bases.md"
+      },
+      {
+        "code": "10.10.6",
+        "title": "Fermat's Little Theorem",
+        "score": 30.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "10.10.6_fermats_little_theorem.md"
+      },
+      {
+        "code": "10.10.7",
+        "title": "Graph Theory Basics",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "10.10.7_graph_theory_basics.md"
+      },
+      {
+        "code": "10.10.8",
+        "title": "Walks, Trails & Cycles",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "10.10.8_walks_trails__cycles.md"
+      },
+      {
+        "code": "10.10.11",
+        "title": "Recurrence Relations",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "foreign_curriculum_reference",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "10.10.11_recurrence_relations.md"
+      }
+    ],
+    "physics": [
+      {
+        "code": "A.A.1",
+        "title": "Kinematics",
+        "score": 55.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "A.A.1_kinematics.md"
+      },
+      {
+        "code": "A.A.2",
+        "title": "Forces and Momentum",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "A.A.2_forces_and_momentum.md"
+      },
+      {
+        "code": "A.A.3",
+        "title": "Work, Energy and Power",
+        "score": 45.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "A.A.3_work_energy_and_power.md"
+      },
+      {
+        "code": "A.A.4",
+        "title": "Rigid Body Mechanics",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "missing_math_signal"
+        ],
+        "filename": "A.A.4_rigid_body_mechanics.md"
+      },
+      {
+        "code": "A.A.5",
+        "title": "Galilean and Special Relativity",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "A.A.5_galilean_and_special_relativity.md"
+      },
+      {
+        "code": "B.B.1",
+        "title": "Thermal Energy Transfers",
+        "score": 30.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "B.B.1_thermal_energy_transfers.md"
+      },
+      {
+        "code": "B.B.2",
+        "title": "Greenhouse Effect",
+        "score": 50.0,
+        "issues": [
+          "low_word_count",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "B.B.2_greenhouse_effect.md"
+      },
+      {
+        "code": "B.B.3",
+        "title": "Gas Laws",
+        "score": 65.0,
+        "issues": [
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "B.B.3_gas_laws.md"
+      },
+      {
+        "code": "B.B.4",
+        "title": "Thermodynamics",
+        "score": 30.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "B.B.4_thermodynamics.md"
+      },
+      {
+        "code": "B.B.5",
+        "title": "Current and Circuits",
+        "score": 45.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "B.B.5_current_and_circuits.md"
+      },
+      {
+        "code": "C.C.1",
+        "title": "Simple Harmonic Motion",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "C.C.1_simple_harmonic_motion.md"
+      },
+      {
+        "code": "C.C.2",
+        "title": "Wave Model",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "C.C.2_wave_model.md"
+      },
+      {
+        "code": "C.C.3",
+        "title": "Wave Phenomena",
+        "score": 60.0,
+        "issues": [
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "C.C.3_wave_phenomena.md"
+      },
+      {
+        "code": "C.C.4",
+        "title": "Standing Waves and Resonance",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "C.C.4_standing_waves_and_resonance.md"
+      },
+      {
+        "code": "C.C.5",
+        "title": "Doppler Effect",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "C.C.5_doppler_effect.md"
+      },
+      {
+        "code": "D.D.1",
+        "title": "Gravitational Fields",
+        "score": 50.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "D.D.1_gravitational_fields.md"
+      },
+      {
+        "code": "D.D.2",
+        "title": "Electric and Magnetic Fields",
+        "score": 45.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "D.D.2_electric_and_magnetic_fields.md"
+      },
+      {
+        "code": "D.D.3",
+        "title": "Motion in EM Fields",
+        "score": 50.0,
+        "issues": [
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "missing_math_signal"
+        ],
+        "filename": "D.D.3_motion_in_em_fields.md"
+      },
+      {
+        "code": "D.D.4",
+        "title": "Induction",
+        "score": 45.0,
+        "issues": [
+          "low_word_count",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "missing_math_signal"
+        ],
+        "filename": "D.D.4_induction.md"
+      },
+      {
+        "code": "E.E.1",
+        "title": "Structure of the Atom",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "missing_math_signal"
+        ],
+        "filename": "E.E.1_structure_of_the_atom.md"
+      },
+      {
+        "code": "E.E.2",
+        "title": "Quantum Physics",
+        "score": 35.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_tag_coverage",
+          "missing_math_signal"
+        ],
+        "filename": "E.E.2_quantum_physics.md"
+      },
+      {
+        "code": "E.E.3",
+        "title": "Radioactive Decay",
+        "score": 50.0,
+        "issues": [
+          "low_word_count",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "E.E.3_radioactive_decay.md"
+      },
+      {
+        "code": "E.E.4",
+        "title": "Fission",
+        "score": 40.0,
+        "issues": [
+          "low_word_count",
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "E.E.4_fission.md"
+      },
+      {
+        "code": "E.E.5",
+        "title": "Fusion and Stars",
+        "score": 55.0,
+        "issues": [
+          "missing_key_concepts_section",
+          "missing_summary_section",
+          "low_subject_term_hits",
+          "missing_math_signal"
+        ],
+        "filename": "E.E.5_fusion_and_stars.md"
+      }
+    ]
+  }
+}

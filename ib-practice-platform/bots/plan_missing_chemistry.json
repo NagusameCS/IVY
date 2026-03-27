@@ -1,0 +1,26 @@
+[
+  {
+    "subject_key": "chemistry",
+    "source_subject": "Chem",
+    "source_section": "Introduction to Chemistry",
+    "source_section_path": "intro-to-chemistry",
+    "topic_code": "C1.1",
+    "lesson_title": "Atomic Structure",
+    "lesson_file": "atomic-structure.md",
+    "level": "SL",
+    "time_estimate": 15,
+    "tags": [
+      "atoms",
+      "structure",
+      "protons",
+      "neutrons",
+      "electrons"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# Atomic Structure\\n\\nTopic: C1.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  }
+]

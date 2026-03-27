@@ -1,0 +1,333 @@
+[
+  {
+    "subject": "economics",
+    "topic": "1",
+    "topic_name": "Introduction to Economics",
+    "subtopic": "1.1",
+    "lesson_title": "What Is Economics?",
+    "level": "SL/HL",
+    "tags": [
+      "scarcity",
+      "opportunity-cost",
+      "factors-of-production"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "1",
+    "topic_name": "Introduction to Economics",
+    "subtopic": "1.2",
+    "lesson_title": "How Do Economists Approach the World?",
+    "level": "SL/HL",
+    "tags": [
+      "economic-models",
+      "positive-normative",
+      "ceteris-paribus"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "2",
+    "topic_name": "Microeconomics",
+    "subtopic": "2.1",
+    "lesson_title": "Demand",
+    "level": "SL/HL",
+    "tags": [
+      "demand-curve",
+      "determinants-of-demand",
+      "movement-vs-shift"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "2",
+    "topic_name": "Microeconomics",
+    "subtopic": "2.2",
+    "lesson_title": "Supply",
+    "level": "SL/HL",
+    "tags": [
+      "supply-curve",
+      "determinants-of-supply"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "2",
+    "topic_name": "Microeconomics",
+    "subtopic": "2.3",
+    "lesson_title": "Competitive Market Equilibrium",
+    "level": "SL/HL",
+    "tags": [
+      "equilibrium",
+      "surplus",
+      "shortage"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "2",
+    "topic_name": "Microeconomics",
+    "subtopic": "2.4",
+    "lesson_title": "Critique of Maximizing Behaviour",
+    "level": "SL/HL",
+    "tags": [
+      "bounded-rationality",
+      "nudge-theory",
+      "bias"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "2",
+    "topic_name": "Microeconomics",
+    "subtopic": "2.5",
+    "lesson_title": "Elasticity of Demand",
+    "level": "SL/HL",
+    "tags": [
+      "PED",
+      "YED",
+      "XED",
+      "elastic",
+      "inelastic"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "2",
+    "topic_name": "Microeconomics",
+    "subtopic": "2.6",
+    "lesson_title": "Elasticity of Supply",
+    "level": "SL/HL",
+    "tags": [
+      "PES",
+      "determinants-of-PES"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "2",
+    "topic_name": "Microeconomics",
+    "subtopic": "2.7",
+    "lesson_title": "The Role of Government",
+    "level": "SL/HL",
+    "tags": [
+      "price-controls",
+      "taxes",
+      "subsidies",
+      "externalities"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "2",
+    "topic_name": "Microeconomics",
+    "subtopic": "2.8",
+    "lesson_title": "Market Failure",
+    "level": "SL/HL",
+    "tags": [
+      "externalities",
+      "public-goods",
+      "common-resources",
+      "asymmetric-info"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "3",
+    "topic_name": "Macroeconomics",
+    "subtopic": "3.1",
+    "lesson_title": "Measuring Economic Activity",
+    "level": "SL/HL",
+    "tags": [
+      "GDP",
+      "GNI",
+      "real-vs-nominal"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "3",
+    "topic_name": "Macroeconomics",
+    "subtopic": "3.2",
+    "lesson_title": "Variations in Economic Activity",
+    "level": "SL/HL",
+    "tags": [
+      "business-cycle",
+      "recession",
+      "inflation",
+      "unemployment"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "3",
+    "topic_name": "Macroeconomics",
+    "subtopic": "3.3",
+    "lesson_title": "Aggregate Demand and Supply",
+    "level": "SL/HL",
+    "tags": [
+      "AD-AS-model",
+      "multiplier",
+      "keynesian",
+      "monetarist"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "3",
+    "topic_name": "Macroeconomics",
+    "subtopic": "3.4",
+    "lesson_title": "Macroeconomic Objectives",
+    "level": "SL/HL",
+    "tags": [
+      "low-inflation",
+      "full-employment",
+      "growth",
+      "equity"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "3",
+    "topic_name": "Macroeconomics",
+    "subtopic": "3.5",
+    "lesson_title": "Fiscal Policy",
+    "level": "SL/HL",
+    "tags": [
+      "government-spending",
+      "taxation",
+      "budget-deficit"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "3",
+    "topic_name": "Macroeconomics",
+    "subtopic": "3.6",
+    "lesson_title": "Monetary Policy",
+    "level": "SL/HL",
+    "tags": [
+      "interest-rates",
+      "money-supply",
+      "central-bank"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "3",
+    "topic_name": "Macroeconomics",
+    "subtopic": "3.7",
+    "lesson_title": "Supply-Side Policies",
+    "level": "SL/HL",
+    "tags": [
+      "supply-side",
+      "deregulation",
+      "privatization"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "4",
+    "topic_name": "The Global Economy",
+    "subtopic": "4.1",
+    "lesson_title": "Benefits of International Trade",
+    "level": "SL/HL",
+    "tags": [
+      "comparative-advantage",
+      "trade-gains",
+      "specialization"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "4",
+    "topic_name": "The Global Economy",
+    "subtopic": "4.2",
+    "lesson_title": "Types of Trade Protection",
+    "level": "SL/HL",
+    "tags": [
+      "tariffs",
+      "quotas",
+      "subsidies",
+      "administrative-barriers"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "4",
+    "topic_name": "The Global Economy",
+    "subtopic": "4.3",
+    "lesson_title": "Economic Integration",
+    "level": "SL/HL",
+    "tags": [
+      "trading-blocs",
+      "free-trade-areas",
+      "customs-unions",
+      "EU"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "4",
+    "topic_name": "The Global Economy",
+    "subtopic": "4.4",
+    "lesson_title": "Exchange Rates",
+    "level": "SL/HL",
+    "tags": [
+      "fixed",
+      "floating",
+      "managed",
+      "exchange-rate-determination"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "4",
+    "topic_name": "The Global Economy",
+    "subtopic": "4.5",
+    "lesson_title": "Balance of Payments",
+    "level": "SL/HL",
+    "tags": [
+      "current-account",
+      "capital-account",
+      "financial-account"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "economics",
+    "topic": "4",
+    "topic_name": "The Global Economy",
+    "subtopic": "4.6",
+    "lesson_title": "Sustainable Development",
+    "level": "SL/HL",
+    "tags": [
+      "sustainability",
+      "poverty",
+      "inequality",
+      "HDI"
+    ],
+    "practice_integration": true
+  }
+]

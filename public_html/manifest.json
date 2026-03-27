@@ -1,0 +1,51 @@
+{
+    "name": "IVYSTUDY",
+    "short_name": "IVY",
+    "description": "Free, comprehensive IB study resources",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8fafc",
+    "theme_color": "#39a95d",
+    "orientation": "portrait-primary",
+    "categories": ["education", "productivity"],
+    "lang": "en",
+    "dir": "ltr",
+    "icons": [
+        {
+            "src": "https://raw.githubusercontent.com/NagusameCS/IVY/main/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/NagusameCS/IVY/main/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Exam Timer",
+            "short_name": "Timer",
+            "description": "Practice under real IB exam conditions",
+            "url": "/timer",
+            "icons": [{"src": "https://raw.githubusercontent.com/NagusameCS/IVY/main/favicon.png", "sizes": "192x192"}]
+        },
+        {
+            "name": "IA/EE Exemplars", 
+            "short_name": "Exemplars",
+            "description": "Browse high-scoring examples",
+            "url": "/exemplars",
+            "icons": [{"src": "https://raw.githubusercontent.com/NagusameCS/IVY/main/favicon.png", "sizes": "192x192"}]
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "https://raw.githubusercontent.com/NagusameCS/IVY/main/favicon.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide"
+        }
+    ]
+}

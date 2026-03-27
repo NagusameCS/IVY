@@ -1,0 +1,1591 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Viewer Statistics</title>
+  <script>
+    // Dark mode functionality
+    function initDarkMode() {
+      const darkMode = localStorage.getItem('darkMode');
+      if (darkMode === 'enabled' || (!darkMode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.body.classList.add('dark-mode');
+      }
+    }
+
+    // Initialize dark mode before page loads to prevent flash
+    initDarkMode();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .counter-digit { transition: transform 0.3s ease; }
+    .counter-digit.flip { transform: rotateX(90deg); }
+    .graph-container { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+    .graph-container.visible { opacity: 1; transform: translateY(0); }
+    .tab-button.active { border-bottom: 2px solid #111; }
+    .glow { box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); }
+
+
+body.dark-mode .tab-button.active {
+    border-bottom: 2px solid #f0f0f0; /* Dark mode - using the same white color used elsewhere */
+}
+  </style>
+  <style>
+
+        :root {
+            --primary: #1a202c; 
+        }
+
+        .primary-text {
+            color: var(--primary);
+        }
+
+        .primary-border {
+            border-color: var(--primary);
+        }
+
+        .spinner {
+            border-top-color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        :root {
+            --accent: #E4EEE9;
+            --pillbg: #B7D2C0;
+            --pillhover: #9fc2ad;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #f8fafc;
+            color: var(--primary);
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .search-bar {
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-bar:focus-within {
+            box-shadow: 0 4px 15px rgba(35, 53, 45, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .class-pill {
+            background-color: var(--pillbg);
+            transition: all 0.2s ease;
+        }
+        
+        .class-pill:hover, .class-pill.active {
+            background-color: var(--pillhover);
+            transform: translateY(-1px);
+        }
+        
+        .content-card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+        }
+        
+        .content-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .lesson-tag {
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            background-color: rgba(74, 124, 114, 0.1);
+            color: var(--primary);
+        }
+        
+        .markdown-content img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .markdown-content pre {
+            background-color: #f6f8fa;
+            border-radius: 6px;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+
+        body.dark-mode .markdown-content p{ /* Neutral dark gray */
+            color: #f0f0f0; /* Bright text for readability */
+        }
+
+        /* Ensure all text elements in markdown are properly colored in dark mode */
+        body.dark-mode .markdown-content {
+            color: #f0f0f0;
+        }
+
+        /* Tailwind prose dark mode overrides */
+        body.dark-mode .prose :where(strong):not(:where([class~="not-prose"],[class~="not-prose"] *)),
+        body.dark-mode .prose :where(b):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+            color: #f0f0f0 !important;
+        }
+
+        body.dark-mode .prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+            color: #4caf50 !important;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        body.dark-mode .markdown-content strong,
+        body.dark-mode .markdown-content b,
+        body.dark-mode .markdown-content em,
+        body.dark-mode .markdown-content i,
+        body.dark-mode .markdown-content mark,
+        body.dark-mode .markdown-content del,
+        body.dark-mode .markdown-content ins,
+        body.dark-mode .markdown-content sub,
+        body.dark-mode .markdown-content sup {
+            color: inherit;
+        }
+
+        /* Specific styling for marked/highlighted text in dark mode */
+        body.dark-mode .markdown-content mark {
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #f0f0f0;
+        }
+        
+        .markdown-content code {
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            background-color: rgba(175, 184, 193, 0.2);
+            border-radius: 4px;
+            padding: 0.2em 0.4em;
+            font-size: 85%;
+        }
+        
+        .modal-overlay {
+            animation: fadeInOverlay 0.3s ease-out;
+        }
+        
+        @keyframes fadeInOverlay {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            animation: slideUp 0.4s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .loading-spinner {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Enhanced Markdown Styling */
+        .markdown-content h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        body.dark-mode .markdown-content h1 {
+            color: #e2e8f0;
+        }
+
+
+        .markdown-content h2 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        body.dark-mode .markdown-content h2 {
+
+            color: #e2e8f0;
+ 
+        }
+        
+        .markdown-content h3 {
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .markdown-content p {
+            line-height: 1;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .markdown-content blockquote {
+            border-left: 4px solid #39a95d;
+            background-color: rgba(168, 203, 167, 0.391); /* Updated from blue to B7D2C0 */
+            padding: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #2c8247;
+        }
+
+        .markdown-content ul {
+            list-style-type: disc;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .markdown-content ol {
+            list-style-type: decimal;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .markdown-content pre {
+            background-color: #f7fcf8;
+            border: 1px solid #e2f0e6;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-content code {
+            background-color: #edf2f7;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+            font-family: monospace;
+            color: #2d3748;
+        }
+
+        .markdown-content hr {
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 2rem 0;
+        }
+
+        .markdown-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-content table th,
+        .markdown-content table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .markdown-content table th {
+            background-color: #f7fafc;
+            font-weight: bold;
+        }
+
+        .markdown-content table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        .markdown-content a {
+            color: var(--primary);
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+
+        .markdown-content a:hover {
+            color: #2bb053;
+        }
+
+        .toc a {
+            color: #2d4838;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover {
+            color: var(--primary);
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #181818; /* Neutral dark gray background */
+            color: #f0f0f0; /* Bright text for readability */
+        }
+
+        body.dark-mode .content-card {
+            background-color: #242424; /* Slightly lighter dark gray */
+            color: #f0f0f0; /* Bright text */
+            border: 1px solid #3a3a3a; /* Subtle border */
+        }
+
+        body.dark-mode .class-pill {
+            background-color: #3a3a3a; /* Neutral dark gray */
+            color: #f0f0f0; /* Bright text */
+        }
+
+        body.dark-mode .class-pill:hover {
+            background-color: #f0f0f0; /* Bright green hover */
+            color: #181818; /* Contrast for dark mode */
+        }
+
+        body.dark-mode .class-pill:hover .material-symbols-outlined {
+            color: #181818 !important; /* Match the text color on hover */
+        }
+
+        body.dark-mode .material-symbols-outlined {
+            color: #f0f0f0; /* Bright green accent color */
+        }
+
+        body.dark-mode .search-bar {
+            background-color: #242424; /* Neutral dark gray */
+            border-color: #3a3a3a; /* Subtle border */
+            color: #f0f0f0; /* Bright text */
+        }
+
+        body.dark-mode .search-bar input {
+            color: #f0f0f0; /* Bright text */
+            background-color: transparent;
+        }
+
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+            color: #f8f8f2; /* Eggshell white for titles */
+        }
+
+        body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+            color: #f8f8f2; /* Eggshell white for subtitles */
+        }
+
+        body.dark-mode p, body.dark-mode span, body.dark-mode li {
+            color: #f8f8f2; /* Eggshell white for normal text */
+        }
+
+        body.dark-mode #search-suggestions {
+            background-color: #242424; /* Neutral dark gray */
+            border-color: #3a3a3a; /* Subtle border */
+            color: #f0f0f0; /* Bright text */
+        }
+
+        body.dark-mode .markdown-content {
+            background-color: #242424; /* Neutral dark gray */
+            color: #f0f0f0; /* Bright text */
+        }
+
+        body.dark-mode .markdown-content a {
+            color: #4caf50; /* Bright green links */
+        }
+
+        body.dark-mode .markdown-content blockquote {
+            background-color: rgba(76, 175, 80, 0.1); /* Subtle greenish background */
+            border-left: 4px solid #4caf50; /* Bright green border */
+            color: #e0f5e0; /* Light greenish text */
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            background-color: transparent; /* Bright green background */
+            color: #181818; /* Contrast for dark mode */
+        }
+
+        body.dark-mode .lesson-icon {
+            color: #4caf50; /* Bright green for lesson icons */
+        }
+
+        body.dark-mode .modal-content {
+            background-color: #242424; /* Neutral dark gray for modal content */
+            color: #f0f0f0; /* Bright text for readability */
+        }
+
+        body.dark-mode .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.8); /* Darker overlay for modals */
+        }
+
+        body.dark-mode #static-modal-content {
+            background-color: #1e1e1e; /* Darker gray for static modal content */
+            color: #f8f8f2; /* Eggshell white for text */
+        }
+
+        /* Ensure all colors have dark mode counterparts */
+        body.dark-mode .primary-text {
+            color: #f8f8f2; /* Eggshell white for primary text */
+        }
+
+        body.dark-mode .primary-border {
+            border-color: #3a3a3a; /* Subtle border for primary elements */
+        }
+
+        body.dark-mode .spinner {
+            border-top-color: #4caf50; /* Bright green spinner */
+            border-bottom-color: #4caf50; /* Bright green spinner */
+        }
+
+        body.dark-mode .lesson-tag {
+            background-color: rgba(76, 175, 80, 0.1); /* Subtle greenish background */
+            color: #4caf50; /* Bright green text */
+        }
+
+        body.dark-mode .markdown-content pre {
+            background-color: #1e1e1e; /* Darker gray for code blocks */
+            border: 1px solid #3a3a3a; /* Subtle border */
+            color: #f8f8f2; /* Eggshell white for code text */
+        }
+
+        body.dark-mode .markdown-content code {
+            background-color: rgba(76, 175, 80, 0.1); /* Subtle greenish background */
+            color: #4caf50; /* Bright green text */
+        }
+
+        body.dark-mode .markdown-content hr {
+            background: #3a3a3a; /* Subtle border for horizontal rules */
+        }
+
+        body.dark-mode .markdown-content table th {
+            background-color: #242424; /* Neutral dark gray for table headers */
+            color: #f0f0f0; /* Bright text */
+        }
+
+        body.dark-mode .markdown-content table td {
+            background-color: #1e1e1e; /* Darker gray for table cells */
+            color: #f0f0f0; /* Bright text */
+        }
+
+        body.dark-mode .markdown-content table tr:nth-child(even) {
+            background-color: #242424; /* Neutral dark gray for even rows */
+        }
+
+        /* Dark mode styles for modal and popups */
+        body.dark-mode .modal-content {
+            background-color: #242424; /* Neutral dark gray for modal content */
+            color: #f0f0f0; /* Bright text for readability */
+        }
+
+        body.dark-mode .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.8); /* Darker overlay for modals */
+        }
+
+        body.dark-mode #static-modal-content {
+            background-color: #1e1e1e; /* Darker gray for static modal content */
+            color: #f8f8f2; /* Eggshell white for text */
+        }
+
+        body.dark-mode .search-bar {
+            background-color: #242424; /* Neutral dark gray */
+            border-color: #3a3a3a; /* Subtle border */
+            color: #f0f0f0; /* Bright text */
+        }
+
+        /* Consistent color for Google icons in dark mode */
+        body.dark-mode .material-symbols-outlined {
+            color: #f0f0f0; /* Bright green for all Google icons */
+        }
+
+        /* Dark mode styles for resource title cards */
+        body.dark-mode .content-card {
+            background-color: #242424; /* Neutral dark gray for cards */
+            color: #f0f0f0; /* Bright text */
+            border: 1px solid #3a3a3a; /* Subtle border */
+        }
+
+        body.dark-mode .content-card:hover {
+            background-color: #3a3a3a; /* Slightly lighter gray on hover */
+        }
+
+        /* Global dark mode for bg-white */
+        body.dark-mode .bg-white {
+            background-color: #242424 !important; /* Neutral dark gray */
+            color: #f0f0f0 !important; /* Bright text */
+        }
+
+        /* Dark mode for elements using var(--primary) */
+        body.dark-mode [style*="--primary"] {
+            color: #4caf50 !important; /* Bright green for primary elements */
+        }
+
+        /* Dark mode for navigation bar in modal */
+        body.dark-mode .bg-gray-50 {
+            background-color: #242424 !important; /* Neutral dark gray */
+            color: #f0f0f0 !important; /* Bright text */
+        }
+
+        body.dark-mode .text-gray-500 {
+            color: #b0b0b0 !important; /* Lighter gray for text */
+        }
+
+        body.dark-mode .text-gray-500:hover {
+            color: #f0f0f0 !important; /* Bright text on hover */
+        }
+
+        /* Adjust hover highlight color to 90% transparency */
+        .hover\:bg-gray-50:hover {
+            background-color: rgba(0, 0, 0, 0.1) !important; /* 90% transparent */
+        }
+
+        body.dark-mode .hover\:bg-gray-50:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important; /* 90% transparent for dark mode */
+        }
+
+        /* Dark mode hover highlight for class-pill elements */
+        body.dark-mode .class-pill:hover {
+            background-color: rgba(255, 255, 255, 0.81) !important; /* 90% transparent for dark mode */
+        }
+
+        /* Light mode hover highlight for class-pill elements */
+        .class-pill:hover {
+            background-color: rgba(0, 0, 0, 0.1) !important; /* 90% transparent for light mode */
+        }
+
+        #dark-mode-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px; /* 1.3x the previous size */
+            height: 36px;
+            border-radius: 50%; /* Keep the button circular */
+            position: fixed;
+            top: 16px; /* Maintain top-right corner position */
+            right: 16px;
+            background-color: white;
+            z-index: 50;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200%; }
+            100% { background-position: 200%; }
+        }
+
+        .typed-effect {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid var(--primary);
+            animation: typing 3s steps(30, end), blink 0.5s step-end infinite alternate;
+        }
+
+        .shimmer-effect {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 2s infinite;
+        }
+
+        /* Adjusted Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* Light background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-content {
+            text-align: center;
+            position: relative;
+        }
+
+        .loading-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1a202c; /* Primary text color */
+            margin-bottom: 1rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .loading-box {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        .box-border {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 2px solid #1a202c; /* Primary color */
+            animation: draw-box 0.8s cubic-bezier(0.4, 0, 1, 1) forwards;
+        }
+
+        @keyframes draw-box {
+            0% {
+                width: 0;
+                height: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            20% {
+                width: 100%;
+                height: 2px;
+            }
+
+            40% {
+                width: 100%;
+                height: 100%;
+            }
+
+            60% {
+                transform: scale(1.02);
+                border-radius: 12px;
+                box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+            }
+
+            80% {
+                transform: scale(0.98);
+                border-radius: 6px;
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+            }
+
+            100% {
+                width: 100%;
+                height: 100%;
+                transform: scale(1);
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+
+        /* Dark Mode Loading Screen */
+        body.dark-mode .loading-screen {
+            background-color: #181818; /* Dark background */
+        }
+
+        body.dark-mode .loading-logo {
+            color: #f0f0f0; /* Bright text */
+        }
+
+        body.dark-mode .box-border {
+            border-color: #4caf50; /* Bright green */
+        }
+
+        /* Fade-out animation for the loading screen */
+        .fade-out {
+            animation: fadeOut 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        /* Fade-in animation for the main content */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .cc-icon {
+            max-width: 1em;
+            max-height: 1em;
+            margin-left: 0.2em;
+        }
+
+        /* Add custom scrollbar styles for light and dark mode */
+
+        /* Light Mode Scrollbar */
+        body.light-mode::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body.light-mode::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        body.light-mode::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 6px;
+        }
+
+        body.light-mode::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Dark Mode Scrollbar */
+        body.dark-mode::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body.dark-mode::-webkit-scrollbar-track {
+            background: #2c2c2c;
+        }
+
+        body.dark-mode::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 6px;
+        }
+
+        body.dark-mode::-webkit-scrollbar-thumb:hover {
+            background: #888;
+        }
+
+        /* Fallback for browsers without scrollbar-width and scrollbar-color support */
+        body.light-mode {
+            --scrollbar-bg: #f1f1f1;
+            --scrollbar-thumb: #888;
+        }
+
+        body.dark-mode {
+            --scrollbar-bg: #2c2c2c;
+            --scrollbar-thumb: #555;
+        }
+
+        /* Use CSS variables for fallback styling */
+        body {
+            scrollbar-width: auto; /* Default width */
+            scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+        }
+ 
+        .invisible-hitbox {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            cursor: pointer;
+        }
+        
+        /* Menu Button Styles */
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .menu-button:hover {
+            background: transparent;
+        }
+        
+        .menu-button .line {
+            width: 20px;
+            height: 2px;
+            background: #1a202c;
+            position: absolute;
+            transition: all 0.3s ease;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1001;
+        }
+        
+        .menu-button .line::before,
+        .menu-button .line::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: #1a202c;
+            transition: all 0.3s ease;
+            left: 0;
+        }
+        
+        .menu-button .line::before {
+            transform: translateY(-8px);
+        }
+        
+        .menu-button .line::after {
+            transform: translateY(8px);
+        }
+        
+        .menu-button.active .line {
+            background: transparent !important;
+        }
+        
+        .menu-button.active .line::before {
+            transform: rotate(45deg);
+        }
+        
+        .menu-button.active .line::after {
+            transform: rotate(-45deg);
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100%;
+            background: white;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            transition: left 0.3s ease;
+            overflow-y: auto;
+        }
+        
+        .sidebar.active {
+            left: 0;
+        }
+        
+        .sidebar-content {
+            padding: 80px 20px 20px;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-menu-item {
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .nav-menu-item:hover {
+            background-color: rgba(74, 124, 114, 0.1);
+        }
+        
+        .sidebar-footer {
+            padding: 20px;
+            border-top: 2px solid rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+        }
+        
+        /* Dark Mode Styles */
+        body.dark-mode .menu-button .line,
+        body.dark-mode .menu-button .line::before,
+        body.dark-mode .menu-button .line::after {
+            background: #f0f0f0; /* Light color for dark mode */
+        }
+        
+        body.dark-mode .sidebar {
+            background: #242424;
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .nav-menu-item {
+            color: #f0f0f0;
+        }
+
+        
+        body.dark-mode .nav-menu-item:hover {
+            background-color: rgba(74, 124, 114, 0.2);
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .nav-menu-item span.material-symbols-outlined {
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .sidebar-footer {
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .sidebar-footer .text-gray-600 {
+            color: #f0f0f0;
+        }
+        body.dark-mode .nav-menu-item span.material-symbols-outlined {
+            color: #f0f0f0;
+        }
+        
+        
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #f8fafc;
+            color: var(--primary);
+        }
+
+    </style>
+  <meta property="og:title" content="Site Information">
+    <meta property="og:description" content="Views and History">
+    <meta property="og:image" content="https://www.ivystudy.org/SocialBanner.png">
+    <meta property="og:url" content="https://www.ivystudy.org/info">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50">
+
+<!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="fixed bottom-4 right-4 p-3 rounded-full bg-transparent shadow-md -z-50 opacity-0 pointer-events-none">
+        <span class="material-symbols-outlined theme-toggle-icon">dark_mode</span>
+    </button>
+
+
+<!-- Sidebar Toggle Button -->
+<button class="menu-button" id="menuButton" aria-label="Toggle Menu">
+    <div class="line"></div>
+</button>
+
+<!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <nav class="nav-menu">
+                <a href="/info" class="nav-menu-item">
+                    <span class="material-symbols-outlined">planner_review</span>
+                    Stats
+                </a>
+                <a href="/" class="nav-menu-item">
+                    <span class="material-symbols-outlined">search</span>
+                    Search Lessons
+                </a>
+                <a href="/ib-practice-platform/" class="nav-menu-item">
+                    <span class="material-symbols-outlined">quiz</span>
+                    Practice
+                </a>
+                <a href="/exemplars" class="nav-menu-item">
+                    <span class="material-symbols-outlined">library_books</span>
+                    IA/EE Exemplars
+                </a>
+                <a href="/timer" class="nav-menu-item">
+                    <span class="material-symbols-outlined">timer</span>
+                    Exam Timer
+                </a>
+                <a href="https://opennotes.pages.dev/" class="nav-menu-item" target="_blank">
+                    <span class="material-symbols-outlined">note_stack</span>
+                    OpenNotes
+                </a>
+                <a href="https://github.com/NagusameCS/IVY" class="nav-menu-item">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 0C5.37 0 0 5.373 0 12c0 5.303 
+                        3.438 9.8 8.205 11.387.6.113.82-.258.82-.577
+                        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
+                        -.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729
+                        1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998
+                        .108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.933
+                        0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176
+                        0 0 1.005-.322 3.3 1.23a11.52 11.52 0 013.003-.403
+                        c1.02.005 2.045.137 3.003.403 2.28-1.552 3.285-1.23
+                        3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91
+                        1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.21
+                        0 1.595-.015 2.88-.015 3.27 0 .315.21.69.825.57C20.565 
+                        21.795 24 17.295 24 12c0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="/teachers" class="nav-menu-item">
+                    <span class="material-symbols-outlined">school</span>
+                    For Educators
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-600">Theme</span>
+                    <button onclick="ThemeManager.toggle()" class="dark-mode-toggle">
+                        <span class="material-symbols-outlined theme-toggle-icon">light_mode</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>    
+// Menu Elements
+const menuButton = document.getElementById('menuButton');
+const sidebar = document.getElementById('sidebar');
+const sidebarDarkModeToggle = document.getElementById('sidebarDarkModeToggle');
+
+// Menu Toggle Function
+function toggleMenu() {
+    menuButton.classList.toggle('active');
+    sidebar.classList.toggle('active');
+}
+
+// Event Listeners for Menu
+menuButton.addEventListener('click', toggleMenu);
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!menuButton.contains(e.target) && !sidebar.contains(e.target) && sidebar.classList.contains('active')) {
+        toggleMenu();
+    }
+});
+
+// Sync dark mode toggle states
+if (sidebarDarkModeToggle) {
+    sidebarDarkModeToggle.addEventListener('click', () => {
+        ThemeManager.toggle();
+    });
+}
+
+// Update all dark mode icons
+function updateDarkModeIcons() {
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    const icon = isDarkMode ? 'dark_mode' : 'light_mode';
+    darkModeToggle.innerHTML = `<span class="material-symbols-outlined">${icon}</span>`;
+    if (sidebarDarkModeToggle) sidebarDarkModeToggle.innerHTML = `<span class="material-symbols-outlined">${icon}</span>`;
+}
+</script>
+  <main class="flex-grow container mx-auto px-4 sm:px-8 py-12">
+    <div class="text-center mb-12 relative">
+    <h1 class="text-4xl font-bold mb-4 primary-text relative z-10" id="animated-title">IVYSTUDY.org</h1>
+    <p class="text-gray-600 max-w-2xl mx-auto" id="subtitle">Your go-to platform for lessons and study materials.</p>
+</div>
+
+<script>
+    // These elements are already handled in the previous script
+    
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+        const titleElement = document.getElementById('animated-title');
+        const titleText = 'IVYSTUDY.org';
+        let currentIndex = 0;
+        const typingSpeed = 150; // Typing speed in milliseconds
+        const cursor = '<span class="blinking-cursor">_</span>';
+
+        function typeWriter() {
+            if (currentIndex <= titleText.length) {
+                titleElement.innerHTML = titleText.slice(0, currentIndex) + cursor;
+                currentIndex++;
+                setTimeout(typeWriter, typingSpeed);
+            } else {
+                // Remove the cursor after typing is complete
+                const cursorElement = document.querySelector('.blinking-cursor');
+                if (cursorElement) {
+                    cursorElement.style.animation = 'none';
+                    cursorElement.style.opacity = '0';
+                }
+            }
+        }
+
+        // Add blinking cursor style
+        const style = document.createElement('style');
+        style.textContent = `
+            .blinking-cursor {
+                display: inline-block;
+                animation: blink 1s step-end infinite;
+            }
+
+            @keyframes blink {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Start the typewriter effect
+        typeWriter();
+    });
+</script>
+
+      <!-- Stats Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12" id="statsContainer"></div>
+
+      <!-- Tabs -->
+      <div class="mb-8">
+        <div class="flex space-x-6 border-b border-gray-200">
+          <button class="tab-button active pb-3 px-1 font-medium" data-tab="daily">Daily</button>
+          <button class="tab-button pb-3 px-1 font-medium" data-tab="weekly">Weekly</button>
+          <button class="tab-button pb-3 px-1 font-medium" data-tab="monthly">Monthly</button>
+        </div>
+      </div>
+
+      <!-- Graph Containers -->
+      <div class="graph-container visible" id="daily-graph">
+        <div class="bg-white dark:bg-gray-900 dark:border dark:border-gray-700 rounded-xl p-6 glow chart-container"><canvas id="dailyChart"></canvas></div>
+      </div>
+      <div class="graph-container hidden" id="weekly-graph">
+        <div class="bg-white dark:bg-gray-900 dark:border dark:border-gray-700 rounded-xl p-6 glow chart-container"><canvas id="weeklyChart"></canvas></div>
+      </div>
+      <div class="graph-container hidden" id="monthly-graph">
+        <div class="bg-white dark:bg-gray-900 dark:border dark:border-gray-700 rounded-xl p-6 glow chart-container"><canvas id="monthlyChart"></canvas></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let charts = {};
+
+        function parseViewData(text) {
+            if (!text || !text.includes(',')) return [];
+            return text.trim().split("\n").map(line => {
+                const [dateStr, viewStr] = line.split(",");
+                const views = parseInt(viewStr, 10);
+                return { date: dateStr, views: Number.isFinite(views) ? views : 0 };
+            }).filter(d => d.date && /^\d{4}-\d{2}-\d{2}$/.test(d.date));
+        }
+
+        async function ensureChartJs() {
+            if (window.Chart) return true;
+
+            const src = "https://cdn.jsdelivr.net/npm/chart.js";
+            await new Promise((resolve) => {
+                const s = document.createElement('script');
+                s.src = src;
+                s.async = true;
+                s.onload = resolve;
+                s.onerror = resolve;
+                document.head.appendChild(s);
+            });
+
+            return !!window.Chart;
+        }
+
+    async function loadData() {
+            const cacheKey = 'ivy_info_chart_data';
+            const endpoints = ["/api/v.txt", "/api/v.txt?raw=1", "/api"];
+
+            for (const url of endpoints) {
+                try {
+                    const res = await fetch(url, { cache: 'no-store' });
+                    if (!res.ok) continue;
+
+                    const txt = (await res.text()).trim();
+                    const parsed = parseViewData(txt);
+                    if (parsed.length > 0) {
+                        try { localStorage.setItem(cacheKey, JSON.stringify(parsed)); } catch (_) {}
+                        return parsed;
+                    }
+                } catch (_) {
+                    // Try next endpoint.
+                }
+            }
+
+            try {
+                const cached = JSON.parse(localStorage.getItem(cacheKey) || '[]');
+                if (Array.isArray(cached) && cached.length > 0) return cached;
+            } catch (_) {}
+
+            return [];
+    }
+
+    function createStatCard(title, value, comparison = "") {
+      const color = comparison.includes('+') ? 'text-green-600' : comparison.includes('-') ? 'text-red-600' : 'text-gray-600';
+      return `
+        <div class="bg-white rounded-xl p-6 glow">
+          <h3 class="text-lg font-semibold mb-2">${title}</h3>
+          <div class="text-3xl font-bold">${value}</div>
+          ${comparison ? `<div class="text-sm mt-2 ${color}">${comparison}</div>` : ""}
+        </div>
+      `;
+    }
+
+    function destroyChart(id) {
+      if (charts[id]) {
+        charts[id].destroy();
+        delete charts[id];
+      }
+    }
+
+    function initializeChartsWithTheme(data) {
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        
+        // Define chart colors based on theme
+        const chartColors = {
+            light: {
+                text: '#111',
+                border: '#111',
+                background: 'rgba(0, 0, 0, 0.7)',
+                grid: '#e2e8f0'
+            },
+            dark: {
+                text: '#f0f0f0',
+                border: '#4caf50',  // Using the green accent color
+                background: 'rgba(76, 175, 80, 0.7)',  // Semi-transparent green
+                grid: '#3a3a3a'
+            }
+        };
+
+        const colors = isDarkMode ? chartColors.dark : chartColors.light;
+        updateCharts(data, colors);
+    }
+
+    // Modify the updateCharts function to accept colors parameter
+    function updateCharts(data, colors) {
+            if (!window.Chart) return;
+
+      const dates = data.map(d => d.date);
+      const views = data.map(d => d.views);
+
+      // Common chart options
+      const commonOptions = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+              legend: {
+                  labels: {
+                      color: colors.text
+                  }
+              }
+          },
+          scales: {
+              x: {
+                  grid: {
+                      color: colors.grid
+                  },
+                  ticks: {
+                      color: colors.text
+                  }
+              },
+              y: {
+                  beginAtZero: true,
+                  grid: {
+                      color: colors.grid
+                  },
+                  ticks: {
+                      color: colors.text
+                  }
+              }
+          }
+      };
+
+      // Daily Chart
+      destroyChart('daily');
+      charts['daily'] = new Chart(document.getElementById('dailyChart'), {
+          type: 'line',
+          data: {
+              labels: dates.slice(-30),
+              datasets: [{
+                  label: 'Views',
+                  data: views.slice(-30),
+                  borderColor: colors.border,
+                  borderWidth: 2,
+                  tension: 0.4,
+                  pointBackgroundColor: colors.border
+              }]
+          },
+          options: commonOptions
+      });
+
+      // Weekly Chart
+      destroyChart('weekly');
+      const weeklyData = [];
+      for (let i = 0; i < data.length; i += 7) {
+          weeklyData.push(data.slice(i, i + 7).reduce((sum, d) => sum + d.views, 0));
+      }
+      charts['weekly'] = new Chart(document.getElementById('weeklyChart'), {
+          type: 'bar',
+          data: {
+              labels: weeklyData.map((_, i) => `Week ${i + 1}`),
+              datasets: [{
+                  label: 'Weekly Views',
+                  data: weeklyData,
+                  backgroundColor: colors.background,
+                  borderColor: colors.border,
+                  borderWidth: 1
+              }]
+          },
+          options: commonOptions
+      });
+
+      // Monthly Chart
+      destroyChart('monthly');
+      const monthlyData = {};
+      data.forEach(d => {
+          const month = d.date.slice(0, 7);
+          monthlyData[month] = (monthlyData[month] || 0) + d.views;
+      });
+      charts['monthly'] = new Chart(document.getElementById('monthlyChart'), {
+          type: 'line',
+          data: {
+              labels: Object.keys(monthlyData),
+              datasets: [{
+                  label: 'Monthly Views',
+                  data: Object.values(monthlyData),
+                  borderColor: colors.border,
+                  borderWidth: 2,
+                  tension: 0.4,
+                  pointBackgroundColor: colors.border
+              }]
+          },
+          options: commonOptions
+      });
+    }
+
+        async function initialize() {
+            const hasChart = await ensureChartJs();
+            const data = await loadData();
+
+            const totalViews = data.reduce((sum, d) => sum + d.views, 0);
+            const avgViews = data.length > 0 ? (totalViews / data.length).toFixed(1) : "0.0";
+            const last30 = data.slice(-30).reduce((sum, d) => sum + d.views, 0);
+            const prev30 = data.slice(-60, -30).reduce((sum, d) => sum + d.views, 0);
+            const growth = prev30 > 0 ? `${(((last30 - prev30) / prev30) * 100).toFixed(1)}%` : "N/A";
+
+            const statsContainer = document.getElementById('statsContainer');
+            if (statsContainer) {
+                statsContainer.innerHTML = [
+                    createStatCard('Total Views', totalViews.toLocaleString()),
+                    createStatCard('Daily Average', avgViews),
+                    createStatCard('30-Day Trend', last30.toLocaleString(), growth)
+                ].join('');
+            }
+
+            // Reuse totalViews to update the footer view counter
+            const viewerCount = document.getElementById('viewer-count-text');
+            if (viewerCount) viewerCount.textContent = formatCount(totalViews);
+
+            // Store data for theme changes
+            window.chartData = data;
+
+            // Initialize charts with current theme
+            if (hasChart && data.length > 0) {
+                initializeChartsWithTheme(data);
+            } else {
+                const chartContainers = document.querySelectorAll('.chart-container');
+                chartContainers.forEach((container) => {
+                    container.innerHTML = '<div class="text-sm text-gray-500 dark:text-gray-300">Chart data unavailable right now.</div>';
+                });
+            }
+
+      // Add tab button listeners
+      document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          document.querySelectorAll('.graph-container').forEach(gc => {
+            gc.classList.add('hidden');
+            gc.classList.remove('visible');
+          });
+
+          const target = document.getElementById(`${button.dataset.tab}-graph`);
+          target.classList.remove('hidden');
+          setTimeout(() => target.classList.add('visible'), 10);
+        });
+      });
+    }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initialize().catch((e) => {
+                console.warn('Info page initialize failed:', e);
+            });
+        });
+  </script>
+  <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center mt">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">IVYSTUDY Content &copy; 2025 is licensed under CC BY-NC-SA 4.0</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#terms" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">Terms</a>
+                    <a href="#privacy" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">Privacy</a>
+                    <a href="#contact" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">Contact</a>
+                    <a href="https://github.com/NagusameCS/IVY/tree/main" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.933 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 013.003-.403c1.02.005 2.045.137 3.003.403 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.21 0 1.595-.015 2.88-.015 3.27 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>GitHub
+                    </a>
+                    <a href="/info" id="viewer-count" class="group flex items-center gap-1 text-gray-500 dark:text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12s3.75-6.75 9.75-6.75S21.75 12 21.75 12s-3.75 6.75-9.75 6.75S2.25 12 2.25 12z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <span id="viewer-count-text" class="text-gray-500 dark:text-gray-400">Loading...</span>
+                    </a>
+                    <script>
+                    function formatCount(n) {
+                        if (n < 1000) return n.toString();
+                        if (n < 10000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+                        if (n < 1_000_000) return Math.floor(n / 1000) + 'k';
+                        return (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+                    }
+                    fetch('/api/')
+                        .then(res => res.text())
+                        .then(text => {
+                            const count = parseInt(text, 10);
+                            document.getElementById('viewer-count-text').textContent = formatCount(count);
+                        })
+                        .catch(() => {
+                            document.getElementById('viewer-count-text').textContent = '\u2014';
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script>
+  function openModal(title, content) {
+    const modal = document.getElementById('modal-view');
+    const modalTitle = document.getElementById('modal-title');
+    const modalContent = document.getElementById('modal-content');
+
+    modalTitle.textContent = title;
+    modalContent.innerHTML = marked.parse(content);
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modal-view').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+
+  const footerLinks = {
+    'privacy': 'https://raw.githubusercontent.com/NagusameCS/IVY/main/privacy.md',
+    'terms': 'https://raw.githubusercontent.com/NagusameCS/IVY/main/terms.md',
+    'contact': 'https://raw.githubusercontent.com/NagusameCS/IVY/main/contact.md'
+  };
+
+  Object.keys(footerLinks).forEach(id => {
+    const link = document.querySelector(`a[href="#${id}"]`);
+    if (link) {
+      link.addEventListener('click', async (event) => {
+        event.preventDefault();
+        try {
+          const response = await fetch(footerLinks[id]);
+          if (!response.ok) throw new Error('Failed to load content');
+          const content = await response.text();
+          const capitalized = id.charAt(0).toUpperCase() + id.slice(1);
+          openModal(capitalized, content);
+        } catch (error) {
+          console.error(error);
+          openModal('Error', 'Failed to load content. Please try again later.');
+        }
+      });
+    }
+  });
+</script>
+
+<!-- Modal -->
+<div id="modal-view" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white rounded-xl shadow-lg max-w-3xl w-full max-h-[80vh] overflow-y-auto p-6 md:p-10 space-y-4">
+    <div class="flex justify-between items-center border-b pb-2 mb-4">
+      <h2 id="modal-title" class="text-xl font-semibold text-gray-800">Title</h2>
+      <button onclick="closeModal()" class="text-gray-500 hover:text-black text-2xl font-bold">&times;</button>
+    </div>
+    <div id="modal-content" class="prose max-w-none text-gray-800"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize theme manager
+    ThemeManager.initialize();
+    
+    // Set up click handlers for both toggle buttons
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const sidebarDarkModeToggle = document.getElementById('sidebarDarkModeToggle');
+    
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => ThemeManager.toggle());
+    }
+    
+    if (sidebarDarkModeToggle) {
+        sidebarDarkModeToggle.addEventListener('click', () => ThemeManager.toggle());
+    }
+    
+    // Listen for theme changes to update charts
+    document.addEventListener('themeChanged', () => {
+        if (window.chartData) {
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            const colors = isDarkMode ? {
+                text: '#f0f0f0',
+                border: '#4caf50',
+                background: 'rgba(76, 175, 80, 0.7)',
+                grid: '#3a3a3a'
+            } : {
+                text: '#111',
+                border: '#111',
+                background: 'rgba(0, 0, 0, 0.7)',
+                grid: '#e2e8f0'
+            };
+            updateCharts(window.chartData, colors);
+        }
+    });
+});
+</script>
+<script defer src="/js/themeManager.js"></script>
+<style>
+/* Reset material icons specific styles for dark mode */
+body.dark-mode .material-symbols-outlined {
+    color: #f0f0f0 !important;
+    background-color: transparent !important;
+}
+
+/* Reset hover styles */
+body.dark-mode .nav-menu-item:hover .material-symbols-outlined {
+    color: #f0f0f0 !important;
+    background-color: transparent !important;
+}
+
+/* Specific styles for dark mode toggle icons */
+body.dark-mode #dark-mode-toggle .material-symbols-outlined,
+body.dark-mode #sidebarDarkModeToggle .material-symbols-outlined {
+    color: #f0f0f0 !important;
+}
+
+/* Light mode specific styles */
+#dark-mode-toggle .material-symbols-outlined,
+#sidebarDarkModeToggle .material-symbols-outlined {
+    color: #1a202c !important;
+}
+
+/* Chart container styles */
+.chart-container {
+    height: 400px;
+    width: 100%;
+}
+
+body.dark-mode .chart-container {
+    background-color: #242424;
+    color: #f0f0f0;
+}
+</style>
+</body>
+
+</html>
+

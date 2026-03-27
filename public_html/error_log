@@ -1,0 +1,50 @@
+[24-May-2025 16:41:33 UTC] Home directory set to: /home/ivysfyoq
+[24-May-2025 16:41:33 UTC] Binary directory: /home/ivysfyoq/bin, Manager path: /home/ivysfyoq/bin/ssl-manager
+[24-May-2025 16:41:33 UTC] API Base URL: https://externalautossl.service.spaceship.com/api/v1/externalautossl/user
+[24-May-2025 16:41:33 UTC] Download URL: https://ssl-manager.s3.amazonaws.com/bin/ssl-manager
+[24-May-2025 16:41:35 UTC] Home directory set to: /home/ivysfyoq
+[24-May-2025 16:41:35 UTC] Binary directory: /home/ivysfyoq/bin, Manager path: /home/ivysfyoq/bin/ssl-manager
+[24-May-2025 16:41:35 UTC] API Base URL: https://externalautossl.service.spaceship.com/api/v1/externalautossl/user
+[24-May-2025 16:41:35 UTC] Download URL: https://ssl-manager.s3.amazonaws.com/bin/ssl-manager
+[24-May-2025 16:41:35 UTC] Action received: install
+[24-May-2025 16:41:35 UTC] Install action initiated.
+[24-May-2025 16:41:35 UTC] Created bin directory: /home/ivysfyoq/bin
+[24-May-2025 16:41:35 UTC] Downloading manager binary from https://ssl-manager.s3.amazonaws.com/bin/ssl-manager
+[24-May-2025 16:41:35 UTC] Trying file_get_contents method
+[24-May-2025 16:41:36 UTC] Downloaded manager binary using file_get_contents
+[24-May-2025 16:41:36 UTC] Manager installed successfully.
+[24-May-2025 16:41:36 UTC] Fetching manager info.
+[24-May-2025 16:41:36 UTC] Running command: /home/ivysfyoq/bin/ssl-manager info 2>/dev/null
+[24-May-2025 16:41:36 UTC] Manager info: Error: Could not get control panel credentials
+{"error": "Error: panel credentials not found"}
+
+[24-May-2025 16:41:43 UTC] Home directory set to: /home/ivysfyoq
+[24-May-2025 16:41:43 UTC] Binary directory: /home/ivysfyoq/bin, Manager path: /home/ivysfyoq/bin/ssl-manager
+[24-May-2025 16:41:43 UTC] API Base URL: https://externalautossl.service.spaceship.com/api/v1/externalautossl/user
+[24-May-2025 16:41:43 UTC] Download URL: https://ssl-manager.s3.amazonaws.com/bin/ssl-manager
+[24-May-2025 16:41:43 UTC] Action received: register
+[24-May-2025 16:41:43 UTC] Running command: /home/ivysfyoq/bin/ssl-manager register -t 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjFkNmlmTUlzRlpTcU5GTzdkWDBkeTltanBqX21qX1NnZ084bng2ektQTHcifQ.eyJpc3MiOiJodHRwczovL2V4dGVybmFsYXV0b3NzbC5zZXJ2aWNlLnNwYWNlc2hpcC5jb20iLCJuYmYiOjE3NDgxMDExODIsImlhdCI6MTc0ODEwMTE4MiwiZXhwIjoxNzQ4MTg3NTgyLCJhdWQiOlsiZXh0ZXJuYWxhdXRvc3NsIl0sInNjb3BlIjpbImV4dGVybmFsYXV0b3NzbC5leHRlcm5hbGF1dG9zc2wiLCJleHRlcm5hbGF1dG9zc2wudXNlci1pbnRlZ3JhdGlvbi1jcmVhdGUiXSwiY2xpZW50X2lkIjoiZXh0ZXJuYWwtc3NsLWNsaWVudCIsInN1YiI6ImYxY2JkODkwLTM5ODgtNDRkMi05M2VjLTRkMDA0MjEyMjNkYiJ9.Z-8IPz0FnqA3NRNjD368Muq24lwlooQNTPPMfRBP8wh0EQeB7v5IFLn_lpEaK7bg6QvP42rqz3DOoZhs7PMkidn07FcPE6K7gEnft16B6PMUECw0Etx6BZlaV2-b75IgOiG1LBrfy5zuCAFeTiAUUbk__WLKY0m_t0zSV1m4wEi1eLt2LX9IWvJSiS-1MJi4ovu9hqiYPa5bdm249ATk2v-hAhvpEa4X7Cs-S_6SDoGhkf_h6sVF6O5E5dhJ8R-4BH65WGCYR_dmoEr5ta9YmD9Fx1EA-egJgf8u38tcufKo_DgVez4x_v4l2FKxS9dbIhTxNj1HB20jwQSQmQYksg' -u 'https://externalautossl.service.spaceship.com/api/v1/externalautossl/user/' 2>&1
+[24-May-2025 16:41:46 UTC] Registration output: Installing certificate manager
+Vendor registered successfully
+Integrated with control panel successfully
+Setting up cron job
+
+[24-May-2025 16:41:46 UTC] Fetching manager info.
+[24-May-2025 16:41:46 UTC] Running command: /home/ivysfyoq/bin/ssl-manager info 2>/dev/null
+[24-May-2025 16:41:46 UTC] Manager info: Control panel credentials found
+Vendor credentials found
+Manager is ready
+
+[24-May-2025 16:41:50 UTC] Home directory set to: /home/ivysfyoq
+[24-May-2025 16:41:50 UTC] Binary directory: /home/ivysfyoq/bin, Manager path: /home/ivysfyoq/bin/ssl-manager
+[24-May-2025 16:41:50 UTC] API Base URL: https://externalautossl.service.spaceship.com/api/v1/externalautossl/user
+[24-May-2025 16:41:50 UTC] Download URL: https://ssl-manager.s3.amazonaws.com/bin/ssl-manager
+[24-May-2025 16:41:50 UTC] Action received: remove_installer
+[24-May-2025 16:41:50 UTC] Fetching manager info.
+[24-May-2025 16:41:50 UTC] Running command: /home/ivysfyoq/bin/ssl-manager info 2>/dev/null
+[24-May-2025 16:41:50 UTC] Manager info: Control panel credentials found
+Vendor credentials found
+Manager is ready
+
+[24-May-2025 16:41:50 UTC] Remove installer action initiated.
+[24-May-2025 16:41:50 UTC] Installer file removed.

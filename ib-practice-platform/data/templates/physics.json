@@ -1,0 +1,4521 @@
+[
+  {
+    "id": "physics_A1_numerical_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "SUVAT: Find Final Velocity",
+    "tags": [
+      "suvat",
+      "kinematics",
+      "velocity",
+      "acceleration"
+    ],
+    "stem_template": "An object starts from rest and accelerates uniformly at \\\\({{a}}\\\\) m s\\\\(^{-2}\\\\) for \\\\({{t}}\\\\) s. Calculate the final velocity of the object.",
+    "params": {
+      "a": {
+        "type": "float",
+        "min": 1.0,
+        "max": 10.0,
+        "decimals": 1
+      },
+      "t": {
+        "type": "int",
+        "min": 2,
+        "max": 15
+      }
+    },
+    "answer_template": "{{a * t}}",
+    "tolerance": 0.1,
+    "unit": "m/s",
+    "mark_scheme_template": "Use \\\\(v = u + at\\\\) with \\\\(u = 0\\\\), \\\\(a = {{a}}\\\\) m s\\\\(^{-2}\\\\), \\\\(t = {{t}}\\\\) s. \\\\(v = 0 + {{a}} \\\\times {{t}} = {{a*t}}\\\\) m s\\\\(^{-1}\\\\) [2 marks]",
+    "hints": [
+      "Start with v = u + at",
+      "Initial velocity u = 0 (starts from rest)"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_A1_numerical_002",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "SUVAT: Find Displacement",
+    "tags": [
+      "suvat",
+      "kinematics",
+      "displacement"
+    ],
+    "stem_template": "A car travelling at \\\\({{u}}\\\\) m s\\\\(^{-1}\\\\) decelerates uniformly at \\\\({{a}}\\\\) m s\\\\(^{-2}\\\\) until it stops. Calculate the distance travelled before stopping.",
+    "params": {
+      "u": {
+        "type": "int",
+        "min": 10,
+        "max": 30
+      },
+      "a": {
+        "type": "float",
+        "min": 1.0,
+        "max": 5.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{u*u / (2*a)}}",
+    "tolerance": 0.5,
+    "unit": "m",
+    "mark_scheme_template": "Use \\\\(v^2 = u^2 - 2as\\\\) with \\\\(v = 0\\\\): \\\\(0 = {{u}}^2 - 2 \\\\times {{a}} \\\\times s\\\\), so \\\\(s = \\\\frac{{{u}}^2}{2 \\\\times {{a}}} = {{u*u/(2*a)}}\\\\) m [2 marks]",
+    "hints": [
+      "v = 0 when the car stops",
+      "Use v² = u² - 2as"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_A1_mcq_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Projectile Maximum Height",
+    "tags": [
+      "projectile-motion",
+      "kinematics",
+      "vertical-motion"
+    ],
+    "stem_template": "A ball is thrown vertically upward with initial speed \\\\({{u}}\\\\) m s\\\\(^{-1}\\\\). What is the maximum height reached? (g = 9.8 m s\\\\(^{-2}\\\\))",
+    "params": {
+      "u": {
+        "type": "choice",
+        "values": [
+          10,
+          14,
+          20,
+          25
+        ]
+      }
+    },
+    "answer_template": "{{u*u / (2*9.8)}}",
+    "distractor_templates": [
+      "{{u*u / (9.8)}}",
+      "{{u / (2*9.8)}}",
+      "{{u*u / (2*9.8) * 2}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{u*u/(2*9.8)}}\\\\) m",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{u*u/9.8}}\\\\) m",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{u/(2*9.8)}}\\\\) m",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{u*u/(2*9.8)*2}}\\\\) m",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "At maximum height, \\\\(v = 0\\\\). Use \\\\(v^2 = u^2 - 2gh\\\\): \\\\(h = \\\\frac{u^2}{2g} = \\\\frac{{{u}}^2}{2 \\\\times 9.8} = {{u*u/(2*9.8)}}\\\\) m [1 mark]",
+    "hints": [
+      "At max height, v = 0",
+      "Use v² = u² − 2gh"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_A1_worked_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Projectile Motion: Range and Time of Flight",
+    "tags": [
+      "projectile-motion",
+      "kinematics",
+      "range",
+      "two-dimensional"
+    ],
+    "stem_template": "A projectile is launched from ground level at \\\\({{v0}}\\\\) m s\\\\(^{-1}\\\\) at an angle of \\\\({{theta}}°\\\\) above the horizontal. (a) Find the time of flight. (b) Find the horizontal range. (g = 9.8 m s\\\\(^{-2}\\\\))",
+    "params": {
+      "v0": {
+        "type": "choice",
+        "values": [
+          20,
+          25,
+          30,
+          40
+        ]
+      },
+      "theta": {
+        "type": "choice",
+        "values": [
+          30,
+          45,
+          60
+        ]
+      }
+    },
+    "answer_template": "Time of flight: \\\\(T = \\\\frac{2 v_0 \\\\sin\\\\theta}{g}\\\\); Range: \\\\(R = \\\\frac{v_0^2 \\\\sin 2\\\\theta}{g}\\\\)",
+    "mark_scheme_template": "Vertical component: \\\\(u_y = {{v0}}\\\\sin{{theta}}°\\\\). Time of flight: \\\\(T = \\\\frac{2u_y}{g}\\\\). Horizontal range: \\\\(R = v_0 \\\\cos{{theta}}° \\\\times T\\\\) [4 marks]",
+    "hints": [
+      "Split velocity into horizontal and vertical components",
+      "Vertical motion: use s = ut + ½at²",
+      "At landing, vertical displacement = 0"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_A1_mcq_002",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Velocity-Time Graph Interpretation",
+    "tags": [
+      "velocity-time-graph",
+      "kinematics",
+      "acceleration"
+    ],
+    "stem_template": "A velocity-time graph shows a straight line from \\\\((0, {{u}})\\\\) to \\\\(({{t}}, {{v}})\\\\). What is the acceleration?",
+    "params": {
+      "u": {
+        "type": "int",
+        "min": 2,
+        "max": 8
+      },
+      "t": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "v": {
+        "type": "int",
+        "min": 10,
+        "max": 25
+      }
+    },
+    "answer_template": "{{(v - u) / t}}",
+    "distractor_templates": [
+      "{{v / t}}",
+      "{{(v + u) / t}}",
+      "{{(v - u) * t}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{(v-u)/t}}\\\\) m s\\\\(^{-2}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{v/t}}\\\\) m s\\\\(^{-2}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{(v+u)/t}}\\\\) m s\\\\(^{-2}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{(v-u)*t}}\\\\) m s\\\\(^{-2}\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Acceleration = gradient = \\\\(\\\\frac{\\\\Delta v}{\\\\Delta t} = \\\\frac{{{v}} - {{u}}}{{{t}}} = {{(v-u)/t}}\\\\) m s\\\\(^{-2}\\\\) [1 mark]",
+    "hints": [
+      "Acceleration = gradient of v-t graph",
+      "Δv = v_final − v_initial"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_A2_numerical_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.2",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Newton's Second Law: Net Force",
+    "tags": [
+      "newtons-laws",
+      "force",
+      "acceleration",
+      "mass"
+    ],
+    "stem_template": "A mass of \\\\({{m}}\\\\) kg accelerates at \\\\({{a}}\\\\) m s\\\\(^{-2}\\\\) on a frictionless surface. Calculate the net force acting on it.",
+    "params": {
+      "m": {
+        "type": "float",
+        "min": 0.5,
+        "max": 20.0,
+        "decimals": 1
+      },
+      "a": {
+        "type": "float",
+        "min": 0.5,
+        "max": 10.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{m * a}}",
+    "tolerance": 0.1,
+    "unit": "N",
+    "mark_scheme_template": "\\\\(F = ma = {{m}} \\\\times {{a}} = {{m*a}}\\\\) N [1 mark]",
+    "hints": [
+      "Use F = ma"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_A2_numerical_002",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.2",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Impulse and Change in Momentum",
+    "tags": [
+      "momentum",
+      "impulse",
+      "force",
+      "newtons-laws"
+    ],
+    "stem_template": "A \\\\({{m}}\\\\) kg ball moving at \\\\({{u}}\\\\) m s\\\\(^{-1}\\\\) is brought to rest in \\\\({{t}}\\\\) ms. Calculate the average force exerted on the ball.",
+    "params": {
+      "m": {
+        "type": "float",
+        "min": 0.1,
+        "max": 1.0,
+        "decimals": 2
+      },
+      "u": {
+        "type": "int",
+        "min": 5,
+        "max": 40
+      },
+      "t": {
+        "type": "int",
+        "min": 5,
+        "max": 100
+      }
+    },
+    "answer_template": "{{m * u / (t / 1000)}}",
+    "tolerance": 1.0,
+    "unit": "N",
+    "mark_scheme_template": "Impulse = change in momentum: \\\\(F \\\\Delta t = m \\\\Delta v\\\\). \\\\(F = \\\\frac{m \\\\Delta v}{\\\\Delta t} = \\\\frac{{{m}} \\\\times {{u}}}{{{t}} \\\\times 10^{-3}} = {{m*u/(t/1000)}}\\\\) N [3 marks]",
+    "hints": [
+      "Impulse = FΔt = Δ(mv)",
+      "Convert ms to s: divide by 1000"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_A2_mcq_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Conservation of Momentum",
+    "tags": [
+      "momentum",
+      "conservation",
+      "collision"
+    ],
+    "stem_template": "A \\\\({{m1}}\\\\) kg trolley moving at \\\\({{v1}}\\\\) m s\\\\(^{-1}\\\\) collides and sticks to a stationary \\\\({{m2}}\\\\) kg trolley. What is their common velocity after collision?",
+    "params": {
+      "m1": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "v1": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "m2": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      }
+    },
+    "answer_template": "{{m1 * v1 / (m1 + m2)}}",
+    "distractor_templates": [
+      "{{v1}}",
+      "{{m1 * v1 / m2}}",
+      "{{v1 / 2}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{m1*v1/(m1+m2)}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{v1}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{m1*v1/m2}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{v1/2}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Conservation of momentum: \\\\(m_1 v_1 = (m_1+m_2)v_f\\\\). \\\\(v_f = \\\\frac{{{m1}} \\\\times {{v1}}}{{{m1}}+{{m2}}} = {{m1*v1/(m1+m2)}}\\\\) m s\\\\(^{-1}\\\\) [2 marks]",
+    "hints": [
+      "Total momentum before = total momentum after",
+      "Inelastic collision: objects move together"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_A2_worked_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Friction and Inclined Plane",
+    "tags": [
+      "friction",
+      "inclined-plane",
+      "newtons-laws",
+      "free-body-diagrams"
+    ],
+    "stem_template": "A block of mass \\\\({{m}}\\\\) kg rests on a plane inclined at \\\\({{theta}}°\\\\) to the horizontal. The coefficient of static friction is \\\\({{mu}}\\\\). (a) Draw a free-body diagram and label all forces. (b) Determine whether the block slides or remains stationary. (g = 9.8 m s\\\\(^{-2}\\\\))",
+    "params": {
+      "m": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "theta": {
+        "type": "choice",
+        "values": [
+          20,
+          25,
+          30,
+          35,
+          40
+        ]
+      },
+      "mu": {
+        "type": "float",
+        "min": 0.3,
+        "max": 0.7,
+        "decimals": 2
+      }
+    },
+    "answer_template": "Compare \\\\(mg\\\\sin{{theta}}°\\\\) with \\\\(\\\\mu mg\\\\cos{{theta}}°\\\\)",
+    "mark_scheme_template": "(a) Weight downward, normal force perpendicular to plane, friction up the slope. (b) Component of weight down slope = \\\\(mg\\\\sin{{theta}}°\\\\). Maximum static friction = \\\\({{mu}} mg\\\\cos{{theta}}°\\\\). If \\\\(\\\\tan{{theta}}° > {{mu}}\\\\), block slides. [4 marks]",
+    "hints": [
+      "Resolve forces parallel and perpendicular to the slope",
+      "Compare tanθ with μ to determine if sliding occurs"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_A3_numerical_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.3",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Kinetic Energy Calculation",
+    "tags": [
+      "kinetic-energy",
+      "work",
+      "energy"
+    ],
+    "stem_template": "Calculate the kinetic energy of a \\\\({{m}}\\\\) kg object moving at \\\\({{v}}\\\\) m s\\\\(^{-1}\\\\).",
+    "params": {
+      "m": {
+        "type": "float",
+        "min": 0.5,
+        "max": 50.0,
+        "decimals": 1
+      },
+      "v": {
+        "type": "float",
+        "min": 1.0,
+        "max": 30.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{0.5 * m * v * v}}",
+    "tolerance": 0.5,
+    "unit": "J",
+    "mark_scheme_template": "\\\\(E_k = \\\\frac{1}{2}mv^2 = \\\\frac{1}{2} \\\\times {{m}} \\\\times {{v}}^2 = {{0.5*m*v*v}}\\\\) J [1 mark]",
+    "hints": [
+      "Use Ek = ½mv²"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_A3_numerical_002",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.3",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Work Done Against Gravity",
+    "tags": [
+      "work",
+      "potential-energy",
+      "gravity"
+    ],
+    "stem_template": "A \\\\({{m}}\\\\) kg crate is lifted vertically through \\\\({{h}}\\\\) m at constant speed. Calculate the work done against gravity. (g = 9.8 m s\\\\(^{-2}\\\\))",
+    "params": {
+      "m": {
+        "type": "int",
+        "min": 5,
+        "max": 50
+      },
+      "h": {
+        "type": "float",
+        "min": 1.0,
+        "max": 20.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{m * 9.8 * h}}",
+    "tolerance": 1.0,
+    "unit": "J",
+    "mark_scheme_template": "\\\\(W = mgh = {{m}} \\\\times 9.8 \\\\times {{h}} = {{m*9.8*h}}\\\\) J [2 marks]",
+    "hints": [
+      "Work against gravity = gain in gravitational PE",
+      "W = mgh"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_A3_mcq_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Power Output",
+    "tags": [
+      "power",
+      "work",
+      "energy"
+    ],
+    "stem_template": "A motor lifts a \\\\({{m}}\\\\) kg load through \\\\({{h}}\\\\) m in \\\\({{t}}\\\\) s. What is the useful output power? (g = 9.8 m s\\\\(^{-2}\\\\))",
+    "params": {
+      "m": {
+        "type": "int",
+        "min": 10,
+        "max": 100
+      },
+      "h": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      },
+      "t": {
+        "type": "int",
+        "min": 5,
+        "max": 60
+      }
+    },
+    "answer_template": "{{m * 9.8 * h / t}}",
+    "distractor_templates": [
+      "{{m * 9.8 * t / h}}",
+      "{{m * h / t}}",
+      "{{m * 9.8 * h * t}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{m*9.8*h/t}}\\\\) W",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{m*9.8*t/h}}\\\\) W",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{m*h/t}}\\\\) W",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{m*9.8*h*t}}\\\\) W",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(P = \\\\frac{W}{t} = \\\\frac{mgh}{t} = \\\\frac{{{m}} \\\\times 9.8 \\\\times {{h}}}{{{t}}} = {{m*9.8*h/t}}\\\\) W [2 marks]",
+    "hints": [
+      "Power = Work / time",
+      "Work done = mgh"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_A3_worked_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Energy Conservation with Friction",
+    "tags": [
+      "energy-conservation",
+      "friction",
+      "kinetic-energy",
+      "potential-energy"
+    ],
+    "stem_template": "A \\\\({{m}}\\\\) kg block slides down a frictionless ramp from a height of \\\\({{h}}\\\\) m. (a) Find the speed at the bottom. (b) If there were friction and the block arrived at speed \\\\({{vf}}\\\\) m s\\\\(^{-1}\\\\), find the energy lost to friction. (g = 9.8 m s\\\\(^{-2}\\\\))",
+    "params": {
+      "m": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "h": {
+        "type": "float",
+        "min": 2.0,
+        "max": 8.0,
+        "decimals": 1
+      },
+      "vf": {
+        "type": "float",
+        "min": 1.0,
+        "max": 5.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "(a) \\\\(v = \\\\sqrt{2gh}\\\\) (b) \\\\(E_{friction} = mgh - \\\\frac{1}{2}mv_f^2\\\\)",
+    "mark_scheme_template": "(a) \\\\(v = \\\\sqrt{2 \\\\times 9.8 \\\\times {{h}}}\\\\) m s\\\\(^{-1}\\\\) [2 marks]. (b) \\\\(E_{lost} = mgh - \\\\frac{1}{2}mv_f^2 = {{m}} \\\\times 9.8 \\\\times {{h}} - \\\\frac{1}{2} \\\\times {{m}} \\\\times {{vf}}^2\\\\) J [2 marks]",
+    "hints": [
+      "Conservation of energy: PE → KE",
+      "Energy lost = initial PE − final KE"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_A4_numerical_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.4",
+    "type": "numerical",
+    "difficulty": "extension",
+    "title": "Torque Calculation",
+    "tags": [
+      "torque",
+      "rotational-motion",
+      "rigid-body"
+    ],
+    "stem_template": "A force of \\\\({{F}}\\\\) N is applied perpendicular to a wrench at a distance of \\\\({{r}}\\\\) m from the pivot. Calculate the torque produced.",
+    "params": {
+      "F": {
+        "type": "float",
+        "min": 5.0,
+        "max": 50.0,
+        "decimals": 1
+      },
+      "r": {
+        "type": "float",
+        "min": 0.1,
+        "max": 1.0,
+        "decimals": 2
+      }
+    },
+    "answer_template": "{{F * r}}",
+    "tolerance": 0.05,
+    "unit": "N m",
+    "mark_scheme_template": "\\\\(\\\\tau = Fr = {{F}} \\\\times {{r}} = {{F*r}}\\\\) N m [1 mark]",
+    "hints": [
+      "Torque τ = Fr (for perpendicular force)",
+      "Units: N m"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_A4_mcq_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.4",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "Rotational Kinetic Energy",
+    "tags": [
+      "rotational-kinetic-energy",
+      "moment-of-inertia",
+      "angular-velocity"
+    ],
+    "stem_template": "A solid disk of mass \\\\({{m}}\\\\) kg and radius \\\\({{r}}\\\\) m rotates at angular velocity \\\\({{omega}}\\\\) rad s\\\\(^{-1}\\\\). The moment of inertia of a solid disk is \\\\(I = \\\\frac{1}{2}mr^2\\\\). What is the rotational kinetic energy?",
+    "params": {
+      "m": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      },
+      "r": {
+        "type": "float",
+        "min": 0.1,
+        "max": 1.0,
+        "decimals": 2
+      },
+      "omega": {
+        "type": "float",
+        "min": 2.0,
+        "max": 20.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{0.25 * m * r * r * omega * omega}}",
+    "distractor_templates": [
+      "{{0.5 * m * r * r * omega * omega}}",
+      "{{0.5 * m * omega * omega}}",
+      "{{m * r * r * omega * omega}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{0.25*m*r*r*omega*omega}}\\\\) J",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{0.5*m*r*r*omega*omega}}\\\\) J",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{0.5*m*omega*omega}}\\\\) J",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{m*r*r*omega*omega}}\\\\) J",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(E_k = \\\\frac{1}{2}I\\\\omega^2 = \\\\frac{1}{2} \\\\times \\\\frac{1}{2}mr^2 \\\\times \\\\omega^2 = \\\\frac{1}{4}mr^2\\\\omega^2 = {{0.25*m*r*r*omega*omega}}\\\\) J [2 marks]",
+    "hints": [
+      "Rotational KE = ½Iω²",
+      "For solid disk: I = ½mr²"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_A4_worked_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.4",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Angular Momentum Conservation",
+    "tags": [
+      "angular-momentum",
+      "conservation",
+      "moment-of-inertia"
+    ],
+    "stem_template": "A figure skater spinning with arms outstretched has moment of inertia \\\\({{I1}}\\\\) kg m\\\\(^2\\\\) and angular velocity \\\\({{omega1}}\\\\) rad s\\\\(^{-1}\\\\). She pulls her arms in, reducing her moment of inertia to \\\\({{I2}}\\\\) kg m\\\\(^2\\\\). Calculate her new angular velocity.",
+    "params": {
+      "I1": {
+        "type": "float",
+        "min": 3.0,
+        "max": 8.0,
+        "decimals": 1
+      },
+      "omega1": {
+        "type": "float",
+        "min": 1.0,
+        "max": 4.0,
+        "decimals": 1
+      },
+      "I2": {
+        "type": "float",
+        "min": 0.5,
+        "max": 2.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{I1 * omega1 / I2}}",
+    "mark_scheme_template": "Angular momentum conserved: \\\\(I_1 \\\\omega_1 = I_2 \\\\omega_2\\\\). \\\\(\\\\omega_2 = \\\\frac{I_1 \\\\omega_1}{I_2} = \\\\frac{{{I1}} \\\\times {{omega1}}}{{{I2}}} = {{I1*omega1/I2}}\\\\) rad s\\\\(^{-1}\\\\) [3 marks]",
+    "hints": [
+      "Angular momentum L = Iω is conserved",
+      "No external torque acts on the skater"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_A4_mcq_002",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.4",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "Equilibrium of a Beam",
+    "tags": [
+      "torque",
+      "equilibrium",
+      "rigid-body",
+      "moments"
+    ],
+    "stem_template": "A uniform beam of length \\\\({{L}}\\\\) m and mass \\\\({{M}}\\\\) kg is pivoted at one end. A weight of \\\\({{W}}\\\\) N hangs from the other end. What force \\\\(F\\\\) must be applied upward at \\\\({{d}}\\\\) m from the pivot to keep it horizontal? (g = 9.8 m s\\\\(^{-2}\\\\))",
+    "params": {
+      "L": {
+        "type": "int",
+        "min": 2,
+        "max": 6
+      },
+      "M": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      },
+      "W": {
+        "type": "int",
+        "min": 20,
+        "max": 100
+      },
+      "d": {
+        "type": "float",
+        "min": 0.5,
+        "max": 1.5,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{(M * 9.8 * L / 2 + W * L) / d}}",
+    "distractor_templates": [
+      "{{(W * L) / d}}",
+      "{{(M * 9.8 + W) * L / d}}",
+      "{{W * L / (2 * d)}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{(M*9.8*L/2 + W*L)/d}}\\\\) N",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{W*L/d}}\\\\) N",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{(M*9.8+W)*L/d}}\\\\) N",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{W*L/(2*d)}}\\\\) N",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Take moments about pivot: \\\\(F \\\\times {{d}} = M g \\\\times \\\\frac{L}{2} + W \\\\times L\\\\). \\\\(F = \\\\frac{{{M}} \\\\times 9.8 \\\\times {{L/2}} + {{W}} \\\\times {{L}}}{{{d}}}\\\\) N [3 marks]",
+    "hints": [
+      "Sum of clockwise moments = sum of anticlockwise moments",
+      "Weight of beam acts at its centre of mass"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_A5_numerical_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.5",
+    "type": "numerical",
+    "difficulty": "extension",
+    "title": "Time Dilation",
+    "tags": [
+      "time-dilation",
+      "special-relativity",
+      "lorentz"
+    ],
+    "stem_template": "A spaceship moves at \\\\({{beta}}c\\\\) relative to Earth. A clock on the spaceship records a proper time of \\\\({{t0}}\\\\) s for an event. Calculate the time measured by an Earth observer. (c = 3 × 10\\\\(^8\\\\) m s\\\\(^{-1}\\\\))",
+    "params": {
+      "beta": {
+        "type": "choice",
+        "values": [
+          0.6,
+          0.8,
+          0.9,
+          0.95
+        ]
+      },
+      "t0": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      }
+    },
+    "answer_template": "{{t0 / sqrt(1 - beta*beta)}}",
+    "tolerance": 0.05,
+    "unit": "s",
+    "mark_scheme_template": "Lorentz factor: \\\\(\\\\gamma = \\\\frac{1}{\\\\sqrt{1-\\\\beta^2}} = \\\\frac{1}{\\\\sqrt{1-{{beta}}^2}}\\\\). Dilated time: \\\\(t = \\\\gamma t_0 = {{t0/sqrt(1-beta*beta)}}\\\\) s [3 marks]",
+    "hints": [
+      "Use t = γt₀ where γ = 1/√(1−β²)",
+      "Proper time is measured in the rest frame"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_A5_mcq_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.5",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "Length Contraction",
+    "tags": [
+      "length-contraction",
+      "special-relativity",
+      "lorentz"
+    ],
+    "stem_template": "A rod has proper length \\\\({{L0}}\\\\) m. It moves at \\\\({{beta}}c\\\\) relative to an observer. What length does the observer measure?",
+    "params": {
+      "L0": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      },
+      "beta": {
+        "type": "choice",
+        "values": [
+          0.6,
+          0.8,
+          0.9
+        ]
+      }
+    },
+    "answer_template": "{{L0 * sqrt(1 - beta*beta)}}",
+    "distractor_templates": [
+      "{{L0}}",
+      "{{L0 / sqrt(1 - beta*beta)}}",
+      "{{L0 * beta}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{L0*sqrt(1-beta*beta)}}\\\\) m",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{L0}}\\\\) m",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{L0/sqrt(1-beta*beta)}}\\\\) m",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{L0*beta}}\\\\) m",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(L = \\\\frac{L_0}{\\\\gamma} = L_0 \\\\sqrt{1-\\\\beta^2} = {{L0}} \\\\times \\\\sqrt{1-{{beta}}^2} = {{L0*sqrt(1-beta*beta)}}\\\\) m [2 marks]",
+    "hints": [
+      "Contracted length L = L₀/γ = L₀√(1−β²)",
+      "Length contraction occurs along direction of motion only"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_A5_worked_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.5",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Relativistic Mass-Energy",
+    "tags": [
+      "mass-energy",
+      "special-relativity",
+      "rest-energy"
+    ],
+    "stem_template": "An electron (rest mass \\\\(m_e = 9.11 \\\\times 10^{-31}\\\\) kg) is accelerated to \\\\({{beta}}c\\\\). (a) Calculate the Lorentz factor \\\\(\\\\gamma\\\\). (b) Calculate the total energy of the electron. (c = 3 × 10\\\\(^8\\\\) m s\\\\(^{-1}\\\\))",
+    "params": {
+      "beta": {
+        "type": "choice",
+        "values": [
+          0.8,
+          0.9,
+          0.95,
+          0.99
+        ]
+      }
+    },
+    "answer_template": "(a) \\\\(\\\\gamma = 1/\\\\sqrt{1-{{beta}}^2}\\\\) (b) \\\\(E = \\\\gamma m_e c^2\\\\)",
+    "mark_scheme_template": "(a) \\\\(\\\\gamma = \\\\frac{1}{\\\\sqrt{1-{{beta}}^2}}\\\\) [1 mark]. (b) \\\\(E = \\\\gamma m_e c^2\\\\) [2 marks]. Substitute values to get numerical answer in J [1 mark].",
+    "hints": [
+      "Total energy E = γmc²",
+      "Rest energy E₀ = mc²",
+      "Kinetic energy = (γ−1)mc²"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_B1_numerical_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Specific Heat Capacity",
+    "tags": [
+      "specific-heat",
+      "thermal-energy",
+      "calorimetry"
+    ],
+    "stem_template": "A mass of \\\\({{m}}\\\\) kg of water is heated from \\\\({{T1}}\\\\) °C to \\\\({{T2}}\\\\) °C. Calculate the energy required. (Specific heat capacity of water = 4200 J kg\\\\(^{-1}\\\\) K\\\\(^{-1}\\\\))",
+    "params": {
+      "m": {
+        "type": "float",
+        "min": 0.1,
+        "max": 5.0,
+        "decimals": 2
+      },
+      "T1": {
+        "type": "int",
+        "min": 10,
+        "max": 40
+      },
+      "T2": {
+        "type": "int",
+        "min": 60,
+        "max": 100
+      }
+    },
+    "answer_template": "{{m * 4200 * (T2 - T1)}}",
+    "tolerance": 50.0,
+    "unit": "J",
+    "mark_scheme_template": "\\\\(Q = mc\\\\Delta T = {{m}} \\\\times 4200 \\\\times ({{T2}} - {{T1}}) = {{m*4200*(T2-T1)}}\\\\) J [2 marks]",
+    "hints": [
+      "Use Q = mcΔT",
+      "ΔT = T₂ − T₁"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_B1_numerical_002",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Latent Heat of Vaporization",
+    "tags": [
+      "latent-heat",
+      "phase-change",
+      "thermal-energy"
+    ],
+    "stem_template": "Calculate the energy needed to vaporize \\\\({{m}}\\\\) kg of water at 100 °C. (Specific latent heat of vaporization of water = 2.26 × 10\\\\(^6\\\\) J kg\\\\(^{-1}\\\\))",
+    "params": {
+      "m": {
+        "type": "float",
+        "min": 0.1,
+        "max": 2.0,
+        "decimals": 2
+      }
+    },
+    "answer_template": "{{m * 2260000}}",
+    "tolerance": 1000.0,
+    "unit": "J",
+    "mark_scheme_template": "\\\\(Q = mL = {{m}} \\\\times 2.26 \\\\times 10^6 = {{m*2260000}}\\\\) J [2 marks]",
+    "hints": [
+      "Use Q = mL for phase changes",
+      "No temperature change occurs during a phase change"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_B1_mcq_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Thermal Radiation and Stefan–Boltzmann Law",
+    "tags": [
+      "radiation",
+      "stefan-boltzmann",
+      "emissivity"
+    ],
+    "stem_template": "A black body of surface area \\\\({{A}}\\\\) m\\\\(^2\\\\) is at temperature \\\\({{T}}\\\\) K. What is the power radiated? (Stefan–Boltzmann constant σ = 5.67 × 10\\\\(^{-8}\\\\) W m\\\\(^{-2}\\\\) K\\\\(^{-4}\\\\))",
+    "params": {
+      "A": {
+        "type": "float",
+        "min": 0.01,
+        "max": 2.0,
+        "decimals": 2
+      },
+      "T": {
+        "type": "choice",
+        "values": [
+          300,
+          400,
+          500,
+          600,
+          1000
+        ]
+      }
+    },
+    "answer_template": "{{A * 5.67e-8 * T**4}}",
+    "distractor_templates": [
+      "{{A * 5.67e-8 * T**3}}",
+      "{{A * 5.67e-8 * T**2}}",
+      "{{A * 5.67e-8 * T}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{A*5.67e-8*T**4}}\\\\) W",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{A*5.67e-8*T**3}}\\\\) W",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{A*5.67e-8*T**2}}\\\\) W",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{A*5.67e-8*T}}\\\\) W",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(P = \\\\sigma A T^4 = 5.67 \\\\times 10^{-8} \\\\times {{A}} \\\\times {{T}}^4 = {{A*5.67e-8*T**4}}\\\\) W [2 marks]",
+    "hints": [
+      "Stefan–Boltzmann law: P = σAT⁴",
+      "T must be in Kelvin"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_B1_worked_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Heat Transfer by Conduction",
+    "tags": [
+      "conduction",
+      "thermal-conductivity",
+      "temperature-gradient"
+    ],
+    "stem_template": "A glass window pane has area \\\\({{A}}\\\\) m\\\\(^2\\\\), thickness \\\\({{d}}\\\\) mm, and thermal conductivity 0.8 W m\\\\(^{-1}\\\\) K\\\\(^{-1}\\\\). The temperature difference across it is \\\\({{deltaT}}\\\\) °C. Calculate the rate of heat transfer.",
+    "params": {
+      "A": {
+        "type": "float",
+        "min": 0.5,
+        "max": 4.0,
+        "decimals": 1
+      },
+      "d": {
+        "type": "int",
+        "min": 4,
+        "max": 10
+      },
+      "deltaT": {
+        "type": "int",
+        "min": 5,
+        "max": 30
+      }
+    },
+    "answer_template": "{{0.8 * A * deltaT / (d / 1000)}}",
+    "mark_scheme_template": "\\\\(\\\\frac{dQ}{dt} = \\\\frac{kA \\\\Delta T}{d} = \\\\frac{0.8 \\\\times {{A}} \\\\times {{deltaT}}}{{{d}} \\\\times 10^{-3}} = {{0.8*A*deltaT/(d/1000)}}\\\\) W [3 marks]",
+    "hints": [
+      "Rate of conduction = kAΔT/d",
+      "Convert thickness to metres"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_B2_mcq_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Albedo and Absorbed Radiation",
+    "tags": [
+      "albedo",
+      "energy-balance",
+      "greenhouse-effect"
+    ],
+    "stem_template": "Earth receives solar intensity \\\\({{S}}\\\\) W m\\\\(^{-2}\\\\) and has an average albedo of \\\\({{alpha}}\\\\). What fraction of incoming solar radiation is absorbed by Earth?",
+    "params": {
+      "S": {
+        "type": "choice",
+        "values": [
+          1361
+        ]
+      },
+      "alpha": {
+        "type": "choice",
+        "values": [
+          0.3,
+          0.35,
+          0.25
+        ]
+      }
+    },
+    "answer_template": "{{1 - alpha}}",
+    "distractor_templates": [
+      "{{alpha}}",
+      "{{alpha / 2}}",
+      "{{1 - alpha/2}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{1-alpha}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{alpha}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{alpha/2}}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{1-alpha/2}}\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Absorbed fraction = 1 − albedo = 1 − {{alpha}} = {{1-alpha}} [1 mark]",
+    "hints": [
+      "Albedo is the fraction of radiation reflected, not absorbed"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_B2_numerical_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.2",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Effective Temperature of Earth",
+    "tags": [
+      "energy-balance",
+      "effective-temperature",
+      "blackbody"
+    ],
+    "stem_template": "Using the Stefan-Boltzmann law and energy balance, estimate Earth's effective temperature given: Solar constant S = 1361 W m\\\\(^{-2}\\\\), albedo α = \\\\({{alpha}}\\\\), σ = 5.67 × 10\\\\(^{-8}\\\\) W m\\\\(^{-2}\\\\) K\\\\(^{-4}\\\\). Use the formula \\\\(T = \\\\left(\\\\frac{S(1-\\\\alpha)}{4\\\\sigma}\\\\right)^{1/4}\\\\).",
+    "params": {
+      "alpha": {
+        "type": "choice",
+        "values": [
+          0.3,
+          0.35
+        ]
+      }
+    },
+    "answer_template": "{{(1361*(1-alpha)/(4*5.67e-8))**0.25}}",
+    "tolerance": 1.0,
+    "unit": "K",
+    "mark_scheme_template": "\\\\(T = \\\\left(\\\\frac{1361(1-{{alpha}})}{4 \\\\times 5.67 \\\\times 10^{-8}}\\\\right)^{1/4} \\\\approx {{(1361*(1-alpha)/(4*5.67e-8))**0.25}}\\\\) K [3 marks]",
+    "hints": [
+      "Energy absorbed = S(1−α)πR²",
+      "Energy emitted = σT⁴(4πR²)",
+      "Set them equal and solve for T"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_B2_worked_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Greenhouse Effect and Enhanced Warming",
+    "tags": [
+      "greenhouse-effect",
+      "energy-balance",
+      "emissivity"
+    ],
+    "stem_template": "Explain, using an energy balance diagram, how the greenhouse effect causes Earth's surface temperature to be higher than its effective blackbody temperature. State TWO greenhouse gases and describe their molecular mechanism for absorbing infrared radiation.",
+    "params": {},
+    "answer_template": "N/A — qualitative response",
+    "mark_scheme_template": "Energy balance: solar in = IR out at TOA [1]. Greenhouse gases (e.g. CO₂, H₂O, CH₄) absorb outgoing IR and re-emit in all directions [1]. Net effect is reduced outgoing radiation, increasing surface temperature [1]. Molecular mechanism: vibrational modes of polyatomic molecules match IR frequencies [1]. [4 marks]",
+    "hints": [
+      "Consider the energy balance at the top of atmosphere",
+      "Greenhouse gases are polyatomic molecules with IR-active vibrational modes"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_B3_numerical_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.3",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Ideal Gas Law: Find Pressure",
+    "tags": [
+      "ideal-gas-law",
+      "pressure",
+      "temperature",
+      "volume"
+    ],
+    "stem_template": "A sample of \\\\({{n}}\\\\) mol of ideal gas occupies \\\\({{V}}\\\\) L at temperature \\\\({{T}}\\\\) °C. Calculate the pressure. (R = 8.31 J mol\\\\(^{-1}\\\\) K\\\\(^{-1}\\\\))",
+    "params": {
+      "n": {
+        "type": "float",
+        "min": 0.5,
+        "max": 5.0,
+        "decimals": 1
+      },
+      "V": {
+        "type": "float",
+        "min": 1.0,
+        "max": 20.0,
+        "decimals": 1
+      },
+      "T": {
+        "type": "int",
+        "min": 0,
+        "max": 300
+      }
+    },
+    "answer_template": "{{n * 8.31 * (T + 273) / (V / 1000)}}",
+    "tolerance": 1000.0,
+    "unit": "Pa",
+    "mark_scheme_template": "\\\\(pV = nRT\\\\). Convert: \\\\(T = {{T}}+273 = {{T+273}}\\\\) K, \\\\(V = {{V}} \\\\times 10^{-3}\\\\) m\\\\(^3\\\\). \\\\(p = \\\\frac{nRT}{V} = \\\\frac{{{n}} \\\\times 8.31 \\\\times {{T+273}}}{{{V}}\\\\times10^{-3}} = {{n*8.31*(T+273)/(V/1000)}}\\\\) Pa [3 marks]",
+    "hints": [
+      "pV = nRT",
+      "T must be in Kelvin: T(K) = T(°C) + 273",
+      "V must be in m³: V(m³) = V(L) × 10⁻³"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_B3_numerical_002",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.3",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Gas Law: Combined Changes",
+    "tags": [
+      "ideal-gas-law",
+      "combined-gas-law"
+    ],
+    "stem_template": "A gas occupies \\\\({{V1}}\\\\) L at pressure \\\\({{P1}}\\\\) kPa and temperature \\\\({{T1}}\\\\) °C. It is heated to \\\\({{T2}}\\\\) °C at constant volume. Find the new pressure.",
+    "params": {
+      "V1": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      },
+      "P1": {
+        "type": "int",
+        "min": 100,
+        "max": 300
+      },
+      "T1": {
+        "type": "int",
+        "min": 0,
+        "max": 50
+      },
+      "T2": {
+        "type": "int",
+        "min": 100,
+        "max": 300
+      }
+    },
+    "answer_template": "{{P1 * (T2 + 273) / (T1 + 273)}}",
+    "tolerance": 2.0,
+    "unit": "kPa",
+    "mark_scheme_template": "Constant volume: \\\\(\\\\frac{P_1}{T_1} = \\\\frac{P_2}{T_2}\\\\). \\\\(P_2 = P_1 \\\\times \\\\frac{T_2}{T_1} = {{P1}} \\\\times \\\\frac{{{T2+273}}}{{{T1+273}}} = {{P1*(T2+273)/(T1+273)}}\\\\) kPa [2 marks]",
+    "hints": [
+      "At constant volume, P/T = constant",
+      "Convert temperatures to Kelvin"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_B3_mcq_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Root Mean Square Speed",
+    "tags": [
+      "kinetic-theory",
+      "rms-speed",
+      "temperature"
+    ],
+    "stem_template": "What is the root mean square speed of nitrogen molecules (molar mass 28 g mol\\\\(^{-1}\\\\)) at \\\\({{T}}\\\\) °C? (R = 8.31 J mol\\\\(^{-1}\\\\) K\\\\(^{-1}\\\\))",
+    "params": {
+      "T": {
+        "type": "choice",
+        "values": [
+          0,
+          27,
+          100,
+          300
+        ]
+      }
+    },
+    "answer_template": "{{(3*8.31*(T+273)/0.028)**0.5}}",
+    "distractor_templates": [
+      "{{(2*8.31*(T+273)/0.028)**0.5}}",
+      "{{(3*8.31*T/0.028)**0.5}}",
+      "{{(8.31*(T+273)/0.028)**0.5}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{(3*8.31*(T+273)/0.028)**0.5}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{(2*8.31*(T+273)/0.028)**0.5}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{(3*8.31*T/0.028)**0.5}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{(8.31*(T+273)/0.028)**0.5}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(v_{rms} = \\\\sqrt{\\\\frac{3RT}{M}} = \\\\sqrt{\\\\frac{3 \\\\times 8.31 \\\\times {{T+273}}}{0.028}} = {{(3*8.31*(T+273)/0.028)**0.5}}\\\\) m s\\\\(^{-1}\\\\) [2 marks]",
+    "hints": [
+      "Use v_rms = √(3RT/M)",
+      "M is molar mass in kg/mol",
+      "T must be in Kelvin"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_B4_worked_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.4",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "First Law of Thermodynamics",
+    "tags": [
+      "first-law",
+      "thermodynamics",
+      "internal-energy",
+      "work"
+    ],
+    "stem_template": "A gas absorbs \\\\({{Q}}\\\\) J of heat and does \\\\({{W}}\\\\) J of work on its surroundings. Calculate the change in internal energy of the gas. State whether the internal energy increases or decreases.",
+    "params": {
+      "Q": {
+        "type": "int",
+        "min": 200,
+        "max": 1000
+      },
+      "W": {
+        "type": "int",
+        "min": 50,
+        "max": 500
+      }
+    },
+    "answer_template": "{{Q - W}}",
+    "mark_scheme_template": "\\\\(\\\\Delta U = Q - W = {{Q}} - {{W}} = {{Q-W}}\\\\) J [2 marks]. Since \\\\(\\\\Delta U {{'>0' if Q>W else '<0'}}\\\\), internal energy {{increases if Q>W else decreases}}. [1 mark]",
+    "hints": [
+      "First law: ΔU = Q − W",
+      "Q is heat INTO the system, W is work done BY the system"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_B4_numerical_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.4",
+    "type": "numerical",
+    "difficulty": "extension",
+    "title": "Carnot Efficiency",
+    "tags": [
+      "carnot",
+      "heat-engine",
+      "efficiency",
+      "thermodynamics"
+    ],
+    "stem_template": "A Carnot heat engine operates between a hot reservoir at \\\\({{Th}}\\\\) °C and a cold reservoir at \\\\({{Tc}}\\\\) °C. Calculate its maximum efficiency.",
+    "params": {
+      "Th": {
+        "type": "choice",
+        "values": [
+          227,
+          327,
+          427,
+          527
+        ]
+      },
+      "Tc": {
+        "type": "choice",
+        "values": [
+          27,
+          47,
+          77
+        ]
+      }
+    },
+    "answer_template": "{{1 - (Tc + 273) / (Th + 273)}}",
+    "tolerance": 0.005,
+    "unit": "",
+    "mark_scheme_template": "\\\\(\\\\eta = 1 - \\\\frac{T_c}{T_h} = 1 - \\\\frac{{{Tc+273}}}{{{Th+273}}} = {{1-(Tc+273)/(Th+273)}}\\\\) (or as a percentage: \\\\({{100*(1-(Tc+273)/(Th+273))}}\\\\)%) [2 marks]",
+    "hints": [
+      "Carnot efficiency η = 1 − Tc/Th",
+      "Both temperatures must be in Kelvin"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_B4_mcq_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.4",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "Entropy Change",
+    "tags": [
+      "entropy",
+      "second-law",
+      "thermodynamics"
+    ],
+    "stem_template": "\\\\({{Q}}\\\\) J of heat flows reversibly into a gas at constant temperature \\\\({{T}}\\\\) K. What is the entropy change of the gas?",
+    "params": {
+      "Q": {
+        "type": "int",
+        "min": 100,
+        "max": 2000
+      },
+      "T": {
+        "type": "choice",
+        "values": [
+          300,
+          400,
+          500,
+          600
+        ]
+      }
+    },
+    "answer_template": "{{Q / T}}",
+    "distractor_templates": [
+      "{{Q * T}}",
+      "{{T / Q}}",
+      "{{Q / (2*T)}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{Q/T}}\\\\) J K\\\\(^{-1}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{Q*T}}\\\\) J K",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{T/Q}}\\\\) K J\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{Q/(2*T)}}\\\\) J K\\\\(^{-1}\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(\\\\Delta S = \\\\frac{Q}{T} = \\\\frac{{{Q}}}{{{T}}} = {{Q/T}}\\\\) J K\\\\(^{-1}\\\\) [1 mark]",
+    "hints": [
+      "ΔS = Q/T for reversible process at constant T"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_B5_numerical_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.5",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Ohm's Law: Find Current",
+    "tags": [
+      "ohms-law",
+      "current",
+      "voltage",
+      "resistance"
+    ],
+    "stem_template": "A resistor of \\\\({{R}}\\\\) Ω is connected to a \\\\({{V}}\\\\) V battery. Calculate the current flowing through it.",
+    "params": {
+      "R": {
+        "type": "choice",
+        "values": [
+          10,
+          20,
+          47,
+          100,
+          220,
+          470
+        ]
+      },
+      "V": {
+        "type": "choice",
+        "values": [
+          3,
+          6,
+          9,
+          12,
+          24
+        ]
+      }
+    },
+    "answer_template": "{{V / R}}",
+    "tolerance": 0.001,
+    "unit": "A",
+    "mark_scheme_template": "\\\\(I = \\\\frac{V}{R} = \\\\frac{{{V}}}{{{R}}} = {{V/R}}\\\\) A [1 mark]",
+    "hints": [
+      "Use Ohm's law: V = IR, so I = V/R"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_B5_numerical_002",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.5",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Power Dissipated in a Resistor",
+    "tags": [
+      "power",
+      "circuits",
+      "resistance"
+    ],
+    "stem_template": "A current of \\\\({{I}}\\\\) A flows through a resistor of \\\\({{R}}\\\\) Ω. Calculate the power dissipated.",
+    "params": {
+      "I": {
+        "type": "float",
+        "min": 0.1,
+        "max": 5.0,
+        "decimals": 1
+      },
+      "R": {
+        "type": "int",
+        "min": 5,
+        "max": 100
+      }
+    },
+    "answer_template": "{{I * I * R}}",
+    "tolerance": 0.1,
+    "unit": "W",
+    "mark_scheme_template": "\\\\(P = I^2 R = {{I}}^2 \\\\times {{R}} = {{I*I*R}}\\\\) W [1 mark]",
+    "hints": [
+      "P = I²R or P = V²/R or P = IV"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_B5_worked_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.5",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Series-Parallel Circuit Analysis",
+    "tags": [
+      "circuits",
+      "kirchhoff",
+      "resistance",
+      "series-parallel"
+    ],
+    "stem_template": "A circuit has a \\\\({{R1}}\\\\) Ω resistor in series with a parallel combination of \\\\({{R2}}\\\\) Ω and \\\\({{R3}}\\\\) Ω. The supply voltage is \\\\({{V}}\\\\) V. Find: (a) total resistance, (b) total current from the supply, (c) voltage across the parallel combination.",
+    "params": {
+      "R1": {
+        "type": "int",
+        "min": 5,
+        "max": 30
+      },
+      "R2": {
+        "type": "int",
+        "min": 10,
+        "max": 50
+      },
+      "R3": {
+        "type": "int",
+        "min": 10,
+        "max": 50
+      },
+      "V": {
+        "type": "int",
+        "min": 9,
+        "max": 24
+      }
+    },
+    "answer_template": "(a) \\\\(R_{total} = R_1 + \\\\frac{R_2 R_3}{R_2+R_3}\\\\) (b) \\\\(I = V/R_{total}\\\\) (c) \\\\(V_{parallel} = I \\\\times \\\\frac{R_2 R_3}{R_2+R_3}\\\\)",
+    "mark_scheme_template": "(a) \\\\(R_{parallel} = \\\\frac{{{R2}} \\\\times {{R3}}}{{{R2}}+{{R3}}}\\\\) Ω; \\\\(R_{total} = {{R1}} + R_{parallel}\\\\) Ω [2 marks]. (b) \\\\(I = \\\\frac{{{V}}}{R_{total}}\\\\) A [1 mark]. (c) \\\\(V_{parallel} = I \\\\times R_{parallel}\\\\) V [1 mark].",
+    "hints": [
+      "Find equivalent resistance of parallel branch first",
+      "Use V = IR for each component"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_B5_mcq_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Internal Resistance",
+    "tags": [
+      "internal-resistance",
+      "emf",
+      "terminal-voltage"
+    ],
+    "stem_template": "A battery with EMF \\\\({{emf}}\\\\) V and internal resistance \\\\({{r}}\\\\) Ω is connected to an external resistance \\\\({{R}}\\\\) Ω. What is the terminal voltage?",
+    "params": {
+      "emf": {
+        "type": "int",
+        "min": 6,
+        "max": 12
+      },
+      "r": {
+        "type": "float",
+        "min": 0.5,
+        "max": 2.0,
+        "decimals": 1
+      },
+      "R": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      }
+    },
+    "answer_template": "{{emf * R / (R + r)}}",
+    "distractor_templates": [
+      "{{emf}}",
+      "{{emf - r}}",
+      "{{emf * r / (R + r)}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{emf*R/(R+r)}}\\\\) V",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{emf}}\\\\) V",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{emf - r}}\\\\) V",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{emf*r/(R+r)}}\\\\) V",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Current: \\\\(I = \\\\frac{\\\\varepsilon}{R+r} = \\\\frac{{{emf}}}{{{R}}+{{r}}}\\\\). Terminal voltage: \\\\(V = IR = {{emf*R/(R+r)}}\\\\) V [2 marks]",
+    "hints": [
+      "I = ε/(R+r)",
+      "Terminal voltage V = ε − Ir = IR"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_C1_numerical_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Period of a Simple Pendulum",
+    "tags": [
+      "pendulum",
+      "shm",
+      "period"
+    ],
+    "stem_template": "Calculate the period of a simple pendulum of length \\\\({{L}}\\\\) m. (g = 9.8 m s\\\\(^{-2}\\\\))",
+    "params": {
+      "L": {
+        "type": "float",
+        "min": 0.1,
+        "max": 3.0,
+        "decimals": 2
+      }
+    },
+    "answer_template": "{{2 * 3.14159 * (L / 9.8)**0.5}}",
+    "tolerance": 0.01,
+    "unit": "s",
+    "mark_scheme_template": "\\\\(T = 2\\\\pi\\\\sqrt{\\\\frac{L}{g}} = 2\\\\pi\\\\sqrt{\\\\frac{{{L}}}{9.8}} = {{2*3.14159*(L/9.8)**0.5}}\\\\) s [2 marks]",
+    "hints": [
+      "T = 2π√(L/g)"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_C1_numerical_002",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Spring-Mass Period",
+    "tags": [
+      "spring",
+      "shm",
+      "period",
+      "frequency"
+    ],
+    "stem_template": "A mass of \\\\({{m}}\\\\) kg is attached to a spring with spring constant \\\\({{k}}\\\\) N m\\\\(^{-1}\\\\). Calculate the period of oscillation.",
+    "params": {
+      "m": {
+        "type": "float",
+        "min": 0.1,
+        "max": 2.0,
+        "decimals": 2
+      },
+      "k": {
+        "type": "int",
+        "min": 10,
+        "max": 200
+      }
+    },
+    "answer_template": "{{2 * 3.14159 * (m / k)**0.5}}",
+    "tolerance": 0.01,
+    "unit": "s",
+    "mark_scheme_template": "\\\\(T = 2\\\\pi\\\\sqrt{\\\\frac{m}{k}} = 2\\\\pi\\\\sqrt{\\\\frac{{{m}}}{{{k}}}} = {{2*3.14159*(m/k)**0.5}}\\\\) s [2 marks]",
+    "hints": [
+      "T = 2π√(m/k)"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_C1_mcq_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Energy in SHM",
+    "tags": [
+      "shm",
+      "energy",
+      "amplitude"
+    ],
+    "stem_template": "A mass-spring system oscillates with amplitude \\\\({{A}}\\\\) m and spring constant \\\\({{k}}\\\\) N m\\\\(^{-1}\\\\). What is the maximum kinetic energy?",
+    "params": {
+      "A": {
+        "type": "float",
+        "min": 0.01,
+        "max": 0.2,
+        "decimals": 2
+      },
+      "k": {
+        "type": "int",
+        "min": 20,
+        "max": 200
+      }
+    },
+    "answer_template": "{{0.5 * k * A * A}}",
+    "distractor_templates": [
+      "{{k * A * A}}",
+      "{{0.5 * k * A}}",
+      "{{k * A}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{0.5*k*A*A}}\\\\) J",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{k*A*A}}\\\\) J",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{0.5*k*A}}\\\\) J",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{k*A}}\\\\) J",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Maximum KE = maximum PE = \\\\(\\\\frac{1}{2}kA^2 = \\\\frac{1}{2} \\\\times {{k}} \\\\times {{A}}^2 = {{0.5*k*A*A}}\\\\) J [2 marks]",
+    "hints": [
+      "Maximum KE occurs at equilibrium position",
+      "Maximum PE = ½kA² = maximum KE"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_C1_worked_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "SHM Equations of Motion",
+    "tags": [
+      "shm",
+      "displacement",
+      "velocity",
+      "acceleration"
+    ],
+    "stem_template": "A particle undergoes SHM with amplitude \\\\({{A}}\\\\) cm and period \\\\({{T}}\\\\) s. The displacement is given by \\\\(x = A\\\\cos(\\\\omega t)\\\\). (a) Find ω. (b) Find the maximum velocity. (c) Find the acceleration when x = \\\\({{x0}}\\\\) cm.",
+    "params": {
+      "A": {
+        "type": "int",
+        "min": 5,
+        "max": 20
+      },
+      "T": {
+        "type": "float",
+        "min": 0.5,
+        "max": 4.0,
+        "decimals": 1
+      },
+      "x0": {
+        "type": "int",
+        "min": 1,
+        "max": 8
+      }
+    },
+    "answer_template": "(a) ω = 2π/T (b) v_max = Aω (c) a = −ω²x₀",
+    "mark_scheme_template": "(a) \\\\(\\\\omega = \\\\frac{2\\\\pi}{{{T}}} = {{2*3.14159/T}}\\\\) rad s\\\\(^{-1}\\\\) [1]. (b) \\\\(v_{max} = A\\\\omega = {{A/100}} \\\\times {{2*3.14159/T}}\\\\) m s\\\\(^{-1}\\\\) [1]. (c) \\\\(a = -\\\\omega^2 x_0 = -{{(2*3.14159/T)**2}} \\\\times {{x0/100}}\\\\) m s\\\\(^{-2}\\\\) [2].",
+    "hints": [
+      "ω = 2π/T = 2πf",
+      "v_max = Aω at equilibrium",
+      "a = −ω²x (always directed towards equilibrium)"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_C2_numerical_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.2",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Wave Speed",
+    "tags": [
+      "wave-speed",
+      "frequency",
+      "wavelength"
+    ],
+    "stem_template": "A wave has frequency \\\\({{f}}\\\\) Hz and wavelength \\\\({{lam}}\\\\) m. Calculate the wave speed.",
+    "params": {
+      "f": {
+        "type": "int",
+        "min": 50,
+        "max": 5000
+      },
+      "lam": {
+        "type": "float",
+        "min": 0.05,
+        "max": 10.0,
+        "decimals": 2
+      }
+    },
+    "answer_template": "{{f * lam}}",
+    "tolerance": 0.5,
+    "unit": "m/s",
+    "mark_scheme_template": "\\\\(v = f\\\\lambda = {{f}} \\\\times {{lam}} = {{f*lam}}\\\\) m s\\\\(^{-1}\\\\) [1 mark]",
+    "hints": [
+      "Use v = fλ"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_C2_mcq_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Transverse vs Longitudinal Waves",
+    "tags": [
+      "transverse",
+      "longitudinal",
+      "wave-types"
+    ],
+    "stem_template": "Which of the following is an example of a longitudinal wave?",
+    "params": {},
+    "answer_template": "Sound waves in air",
+    "distractor_templates": [
+      "Light waves in vacuum",
+      "Waves on a string",
+      "Water surface waves"
+    ],
+    "options_template": [
+      {
+        "text": "Sound waves in air",
+        "correct": true
+      },
+      {
+        "text": "Light waves in vacuum",
+        "correct": false
+      },
+      {
+        "text": "Waves on a string",
+        "correct": false
+      },
+      {
+        "text": "Water surface waves",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Sound waves are longitudinal: particles vibrate parallel to the direction of energy transfer. All other options are transverse waves. [1 mark]",
+    "hints": [
+      "In longitudinal waves, particle oscillation is parallel to wave propagation"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_C2_worked_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Wave Properties from Graph",
+    "tags": [
+      "wave-model",
+      "amplitude",
+      "wavelength",
+      "period"
+    ],
+    "stem_template": "A transverse wave is described by \\\\(y = {{A}} \\\\times 10^{-2} \\\\sin({{k}}x - {{omega}}t)\\\\) where x and y are in metres and t in seconds. State: (a) amplitude (b) wavelength (c) frequency (d) wave speed.",
+    "params": {
+      "A": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      },
+      "k": {
+        "type": "choice",
+        "values": [
+          2,
+          4,
+          6,
+          8,
+          10
+        ]
+      },
+      "omega": {
+        "type": "choice",
+        "values": [
+          20,
+          40,
+          60,
+          100,
+          200
+        ]
+      }
+    },
+    "answer_template": "(a) \\\\({{A}} \\\\times 10^{-2}\\\\) m (b) \\\\(2\\\\pi/{{k}}\\\\) m (c) \\\\({{omega}}/(2\\\\pi)\\\\) Hz (d) \\\\({{omega}}/{{k}}\\\\) m s\\\\(^{-1}\\\\)",
+    "mark_scheme_template": "(a) Amplitude = \\\\({{A}} \\\\times 10^{-2}\\\\) m [1]. (b) \\\\(\\\\lambda = 2\\\\pi/k = 2\\\\pi/{{k}}\\\\) m [1]. (c) \\\\(f = \\\\omega/2\\\\pi = {{omega/2/3.14159}}\\\\) Hz [1]. (d) \\\\(v = \\\\omega/k = {{omega}}/{{k}} = {{omega/k}}\\\\) m s\\\\(^{-1}\\\\) [1].",
+    "hints": [
+      "Compare with y = A sin(kx − ωt)",
+      "λ = 2π/k, f = ω/2π, v = ω/k"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_C3_mcq_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Snell's Law of Refraction",
+    "tags": [
+      "refraction",
+      "snells-law",
+      "refractive-index"
+    ],
+    "stem_template": "Light travels from air (n = 1.00) into glass (n = \\\\({{n}}\\\\)). The angle of incidence is \\\\({{theta_i}}°\\\\). What is the angle of refraction?",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          1.5,
+          1.6,
+          1.7
+        ]
+      },
+      "theta_i": {
+        "type": "choice",
+        "values": [
+          30,
+          45,
+          60
+        ]
+      }
+    },
+    "answer_template": "{{degrees(asin(sin(radians(theta_i)) / n))}}",
+    "distractor_templates": [
+      "{{theta_i}}",
+      "{{theta_i * n}}",
+      "{{theta_i / n}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\(\\\\approx {{round(degrees(asin(sin(radians(theta_i))/n)), 1)}}°\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{theta_i}}°\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(theta_i * n, 1)}}°\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(theta_i / n, 1)}}°\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Snell's law: \\\\(n_1 \\\\sin\\\\theta_1 = n_2 \\\\sin\\\\theta_2\\\\). \\\\(\\\\sin\\\\theta_2 = \\\\frac{\\\\sin{{theta_i}}°}{{{n}}}\\\\), so \\\\(\\\\theta_2 = \\\\arcsin\\\\left(\\\\frac{\\\\sin{{theta_i}}°}{{{n}}}\\\\right)\\\\) [2 marks]",
+    "hints": [
+      "n₁sinθ₁ = n₂sinθ₂ (Snell's law)",
+      "Light bends towards normal when entering denser medium"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_C3_numerical_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.3",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Young's Double Slit: Fringe Spacing",
+    "tags": [
+      "interference",
+      "double-slit",
+      "wavelength",
+      "diffraction"
+    ],
+    "stem_template": "In a Young's double slit experiment, the slit separation is \\\\({{d}}\\\\) mm, and the screen is \\\\({{L}}\\\\) m away. The light has wavelength \\\\({{lam}}\\\\) nm. Calculate the fringe spacing.",
+    "params": {
+      "d": {
+        "type": "float",
+        "min": 0.2,
+        "max": 1.0,
+        "decimals": 2
+      },
+      "L": {
+        "type": "float",
+        "min": 0.5,
+        "max": 3.0,
+        "decimals": 1
+      },
+      "lam": {
+        "type": "choice",
+        "values": [
+          400,
+          500,
+          550,
+          600,
+          700
+        ]
+      }
+    },
+    "answer_template": "{{lam * 1e-9 * L / (d * 1e-3) * 1000}}",
+    "tolerance": 0.1,
+    "unit": "mm",
+    "mark_scheme_template": "\\\\(\\\\Delta y = \\\\frac{\\\\lambda L}{d} = \\\\frac{{{lam}} \\\\times 10^{-9} \\\\times {{L}}}{{{d}} \\\\times 10^{-3}} = {{lam*1e-9*L/(d*1e-3)*1000}}\\\\) mm [3 marks]",
+    "hints": [
+      "Δy = λL/d",
+      "Convert all to SI units: λ in m, d in m"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_C3_worked_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Single Slit Diffraction Minimum",
+    "tags": [
+      "diffraction",
+      "single-slit",
+      "minimum"
+    ],
+    "stem_template": "Light of wavelength \\\\({{lam}}\\\\) nm passes through a single slit of width \\\\({{b}}\\\\) μm. Calculate the angle of the first diffraction minimum.",
+    "params": {
+      "lam": {
+        "type": "choice",
+        "values": [
+          450,
+          500,
+          600,
+          650
+        ]
+      },
+      "b": {
+        "type": "choice",
+        "values": [
+          1,
+          2,
+          3,
+          5,
+          10
+        ]
+      }
+    },
+    "answer_template": "{{degrees(asin(lam * 1e-9 / (b * 1e-6)))}}",
+    "mark_scheme_template": "For first minimum: \\\\(b\\\\sin\\\\theta = \\\\lambda\\\\). \\\\(\\\\sin\\\\theta = \\\\frac{{{lam}} \\\\times 10^{-9}}{{{b}} \\\\times 10^{-6}} = {{lam/b/1000}}\\\\). \\\\(\\\\theta = {{round(degrees(asin(lam*1e-9/(b*1e-6))), 1)}}°\\\\) [3 marks]",
+    "hints": [
+      "First minimum condition: b sinθ = λ",
+      "θ = arcsin(λ/b)"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_C4_numerical_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.4",
+    "type": "numerical",
+    "difficulty": "extension",
+    "title": "Standing Wave on a String: Harmonics",
+    "tags": [
+      "standing-waves",
+      "harmonics",
+      "string"
+    ],
+    "stem_template": "A string of length \\\\({{L}}\\\\) m has a wave speed of \\\\({{v}}\\\\) m s\\\\(^{-1}\\\\). Calculate the frequency of the \\\\({{n}}\\\\)th harmonic.",
+    "params": {
+      "L": {
+        "type": "float",
+        "min": 0.5,
+        "max": 3.0,
+        "decimals": 1
+      },
+      "v": {
+        "type": "int",
+        "min": 50,
+        "max": 400
+      },
+      "n": {
+        "type": "int",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "answer_template": "{{n * v / (2 * L)}}",
+    "tolerance": 0.5,
+    "unit": "Hz",
+    "mark_scheme_template": "For the nth harmonic of a string fixed at both ends: \\\\(f_n = \\\\frac{nv}{2L} = \\\\frac{{{n}} \\\\times {{v}}}{2 \\\\times {{L}}} = {{n*v/(2*L)}}\\\\) Hz [2 marks]",
+    "hints": [
+      "For string fixed at both ends: fn = nv/2L",
+      "Fundamental (n=1) has one antinode"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_C4_mcq_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.4",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "Open Pipe Resonance",
+    "tags": [
+      "standing-waves",
+      "open-pipe",
+      "resonance",
+      "harmonics"
+    ],
+    "stem_template": "An open pipe of length \\\\({{L}}\\\\) m has speed of sound \\\\({{v}}\\\\) m s\\\\(^{-1}\\\\). Which of the following is a resonant frequency?",
+    "params": {
+      "L": {
+        "type": "float",
+        "min": 0.3,
+        "max": 1.5,
+        "decimals": 2
+      },
+      "v": {
+        "type": "choice",
+        "values": [
+          340,
+          343
+        ]
+      }
+    },
+    "answer_template": "{{v / (2 * L)}}",
+    "distractor_templates": [
+      "{{v / (4 * L)}}",
+      "{{v / L}}",
+      "{{2 * v / L}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{round(v/(2*L), 1)}}\\\\) Hz (fundamental)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{round(v/(4*L), 1)}}\\\\) Hz",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(v/L, 1)}}\\\\) Hz",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(2*v/L, 1)}}\\\\) Hz",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Open pipe: both ends are antinodes. Fundamental frequency: \\\\(f_1 = \\\\frac{v}{2L} = \\\\frac{{{v}}}{2 \\\\times {{L}}} = {{v/(2*L)}}\\\\) Hz [1 mark]",
+    "hints": [
+      "Open pipe fundamental: f₁ = v/2L",
+      "Closed pipe fundamental: f₁ = v/4L"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_C4_worked_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.4",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Resonance in Closed Pipe",
+    "tags": [
+      "standing-waves",
+      "closed-pipe",
+      "resonance"
+    ],
+    "stem_template": "A closed pipe resonates at its fundamental frequency with a tuning fork of \\\\({{f}}\\\\) Hz. (a) Calculate the length of the pipe. (b) Find the next resonant frequency. (Speed of sound = 340 m s\\\\(^{-1}\\\\))",
+    "params": {
+      "f": {
+        "type": "choice",
+        "values": [
+          85,
+          100,
+          170,
+          200,
+          340
+        ]
+      }
+    },
+    "answer_template": "(a) \\\\(L = v/4f\\\\) (b) \\\\(f_3 = 3f\\\\)",
+    "mark_scheme_template": "(a) Closed pipe fundamental: \\\\(f_1 = v/(4L)\\\\), so \\\\(L = v/(4f) = 340/(4 \\\\times {{f}}) = {{340/(4*f)}}\\\\) m [2 marks]. (b) Closed pipe supports odd harmonics only: next is 3rd harmonic, \\\\(f_3 = 3 \\\\times {{f}} = {{3*f}}\\\\) Hz [1 mark].",
+    "hints": [
+      "Closed pipe has a node at closed end and antinode at open end",
+      "Closed pipe supports only odd harmonics: f, 3f, 5f..."
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_C5_numerical_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.5",
+    "type": "numerical",
+    "difficulty": "extension",
+    "title": "Doppler Effect: Moving Source",
+    "tags": [
+      "doppler",
+      "moving-source",
+      "frequency-shift"
+    ],
+    "stem_template": "A siren emits sound at \\\\({{f0}}\\\\) Hz. It moves towards a stationary observer at \\\\({{vs}}\\\\) m s\\\\(^{-1}\\\\). Calculate the observed frequency. (Speed of sound = 340 m s\\\\(^{-1}\\\\))",
+    "params": {
+      "f0": {
+        "type": "int",
+        "min": 200,
+        "max": 1000
+      },
+      "vs": {
+        "type": "int",
+        "min": 10,
+        "max": 50
+      }
+    },
+    "answer_template": "{{f0 * 340 / (340 - vs)}}",
+    "tolerance": 1.0,
+    "unit": "Hz",
+    "mark_scheme_template": "\\\\(f_{obs} = f_0 \\\\frac{v}{v - v_s} = {{f0}} \\\\times \\\\frac{340}{340 - {{vs}}} = {{f0*340/(340-vs)}}\\\\) Hz [2 marks]",
+    "hints": [
+      "f_obs = f₀ × v/(v − v_s) when source moves towards observer",
+      "Observed frequency is higher when source approaches"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_C5_mcq_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.5",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "Doppler Effect: Receding Source",
+    "tags": [
+      "doppler",
+      "receding-source",
+      "redshift"
+    ],
+    "stem_template": "A star moves away from Earth at \\\\({{v}}\\\\) × 10\\\\(^6\\\\) m s\\\\(^{-1}\\\\). It emits light at \\\\({{lambda0}}\\\\) nm. What is the observed wavelength? (c = 3 × 10\\\\(^8\\\\) m s\\\\(^{-1}\\\\))",
+    "params": {
+      "v": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      },
+      "lambda0": {
+        "type": "int",
+        "min": 400,
+        "max": 700
+      }
+    },
+    "answer_template": "{{lambda0 * (1 + v * 1e6 / 3e8)}}",
+    "distractor_templates": [
+      "{{lambda0}}",
+      "{{lambda0 * (1 - v * 1e6 / 3e8)}}",
+      "{{lambda0 * v * 1e6 / 3e8}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\(\\\\approx {{round(lambda0*(1+v*1e6/3e8), 1)}}\\\\) nm (redshifted)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{lambda0}}\\\\) nm (unchanged)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\approx {{round(lambda0*(1-v*1e6/3e8), 1)}}\\\\) nm (blueshifted)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(lambda0*v*1e6/3e8, 1)}}\\\\) nm",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "For receding source: \\\\(\\\\lambda_{obs} = \\\\lambda_0 \\\\frac{v+v_s}{v} \\\\approx \\\\lambda_0 \\\\left(1 + \\\\frac{v_s}{c}\\\\right) = {{lambda0}} \\\\times (1 + \\\\frac{{{v}} \\\\times 10^6}{3 \\\\times 10^8}) = {{round(lambda0*(1+v*1e6/3e8),1)}}\\\\) nm [2 marks]",
+    "hints": [
+      "Receding source: wavelength is redshifted (longer)",
+      "Use Δλ/λ₀ ≈ v/c for non-relativistic speeds"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_C5_worked_001",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.5",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Doppler Application: Speed Measurement",
+    "tags": [
+      "doppler",
+      "radar",
+      "speed-measurement"
+    ],
+    "stem_template": "A radar gun emits microwaves at \\\\({{f0}}\\\\) × 10\\\\(^9\\\\) Hz. A car moving towards the gun at \\\\({{v}}\\\\) m s\\\\(^{-1}\\\\) reflects the waves back. Calculate the beat frequency between transmitted and received waves. (c = 3 × 10\\\\(^8\\\\) m s\\\\(^{-1}\\\\))",
+    "params": {
+      "f0": {
+        "type": "int",
+        "min": 10,
+        "max": 30
+      },
+      "v": {
+        "type": "int",
+        "min": 10,
+        "max": 40
+      }
+    },
+    "answer_template": "{{2 * f0 * 1e9 * v / 3e8}}",
+    "mark_scheme_template": "Beat frequency ≈ \\\\(\\\\frac{2v f_0}{c} = \\\\frac{2 \\\\times {{v}} \\\\times {{f0}} \\\\times 10^9}{3 \\\\times 10^8} = {{2*f0*1e9*v/3e8}}\\\\) Hz [3 marks]. Double Doppler shift because car acts as both receiver and reflector.",
+    "hints": [
+      "Double Doppler effect: car receives shifted frequency then re-emits it",
+      "Beat frequency ≈ 2v f₀/c"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_D1_numerical_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Gravitational Field Strength",
+    "tags": [
+      "gravitational-field",
+      "newtons-law-gravity",
+      "field-strength"
+    ],
+    "stem_template": "Calculate the gravitational field strength at the surface of a planet of mass \\\\({{M}}\\\\) × 10\\\\(^{24}\\\\) kg and radius \\\\({{R}}\\\\) × 10\\\\(^6\\\\) m. (G = 6.67 × 10\\\\(^{-11}\\\\) N m\\\\(^2\\\\) kg\\\\(^{-2}\\\\))",
+    "params": {
+      "M": {
+        "type": "float",
+        "min": 1.0,
+        "max": 10.0,
+        "decimals": 1
+      },
+      "R": {
+        "type": "float",
+        "min": 1.0,
+        "max": 10.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{6.67e-11 * M * 1e24 / (R * 1e6)**2}}",
+    "tolerance": 0.1,
+    "unit": "m/s²",
+    "mark_scheme_template": "\\\\(g = \\\\frac{GM}{R^2} = \\\\frac{6.67 \\\\times 10^{-11} \\\\times {{M}} \\\\times 10^{24}}{({{R}} \\\\times 10^6)^2} = {{6.67e-11*M*1e24/(R*1e6)**2}}\\\\) m s\\\\(^{-2}\\\\) [2 marks]",
+    "hints": [
+      "g = GM/R²",
+      "Be careful with powers of 10"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_D1_numerical_002",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Orbital Period (Kepler's Third Law)",
+    "tags": [
+      "orbital-motion",
+      "kepler",
+      "period"
+    ],
+    "stem_template": "A satellite orbits Earth at radius \\\\({{r}}\\\\) × 10\\\\(^6\\\\) m. Calculate its orbital period. (G = 6.67 × 10\\\\(^{-11}\\\\) N m\\\\(^2\\\\) kg\\\\(^{-2}\\\\), M_Earth = 6.0 × 10\\\\(^{24}\\\\) kg)",
+    "params": {
+      "r": {
+        "type": "float",
+        "min": 7.0,
+        "max": 20.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{2 * 3.14159 * (r * 1e6)**1.5 / (6.67e-11 * 6e24)**0.5}}",
+    "tolerance": 100.0,
+    "unit": "s",
+    "mark_scheme_template": "\\\\(T = 2\\\\pi\\\\sqrt{\\\\frac{r^3}{GM}} = 2\\\\pi\\\\sqrt{\\\\frac{({{r}} \\\\times 10^6)^3}{6.67 \\\\times 10^{-11} \\\\times 6.0 \\\\times 10^{24}}}\\\\) s [3 marks]",
+    "hints": [
+      "Use T = 2π√(r³/GM)",
+      "Gravitational force provides centripetal force"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_D1_mcq_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Gravitational Potential Energy",
+    "tags": [
+      "gravitational-potential",
+      "orbital-energy"
+    ],
+    "stem_template": "Two masses \\\\(m_1\\\\) = \\\\({{m1}}\\\\) kg and \\\\(m_2\\\\) = \\\\({{m2}}\\\\) kg are separated by \\\\({{r}}\\\\) m. What is the gravitational potential energy of the system? (G = 6.67 × 10\\\\(^{-11}\\\\) N m\\\\(^2\\\\) kg\\\\(^{-2}\\\\))",
+    "params": {
+      "m1": {
+        "type": "choice",
+        "values": [
+          10000000000.0,
+          1e+20,
+          5e+20
+        ]
+      },
+      "m2": {
+        "type": "choice",
+        "values": [
+          10000000000.0,
+          1e+20,
+          5e+20
+        ]
+      },
+      "r": {
+        "type": "choice",
+        "values": [
+          1000000.0,
+          10000000.0,
+          100000000.0
+        ]
+      }
+    },
+    "answer_template": "{{-6.67e-11 * m1 * m2 / r}}",
+    "distractor_templates": [
+      "{{6.67e-11 * m1 * m2 / r}}",
+      "{{-6.67e-11 * m1 * m2 / r**2}}",
+      "{{6.67e-11 * m1 * m2 / r**2}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\(-{{round(6.67e-11*m1*m2/r, 2)}}\\\\) J",
+        "correct": true
+      },
+      {
+        "text": "\\\\(+{{round(6.67e-11*m1*m2/r, 2)}}\\\\) J",
+        "correct": false
+      },
+      {
+        "text": "\\\\(-{{round(6.67e-11*m1*m2/r**2, 2)}}\\\\) J",
+        "correct": false
+      },
+      {
+        "text": "\\\\(+{{round(6.67e-11*m1*m2/r**2, 2)}}\\\\) J",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(E_p = -\\\\frac{Gm_1m_2}{r} = -\\\\frac{6.67 \\\\times 10^{-11} \\\\times {{m1}} \\\\times {{m2}}}{{{r}}} = {{-6.67e-11*m1*m2/r}}\\\\) J [2 marks]. Gravitational PE is always negative.",
+    "hints": [
+      "Gravitational PE = −Gm₁m₂/r",
+      "The negative sign indicates a bound system"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_D2_numerical_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.2",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Coulomb's Law: Electric Force",
+    "tags": [
+      "coulombs-law",
+      "electric-force",
+      "charge"
+    ],
+    "stem_template": "Two point charges of \\\\({{q1}}\\\\) μC and \\\\({{q2}}\\\\) μC are separated by \\\\({{r}}\\\\) cm. Calculate the electrostatic force between them. (k = 8.99 × 10\\\\(^9\\\\) N m\\\\(^2\\\\) C\\\\(^{-2}\\\\))",
+    "params": {
+      "q1": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      },
+      "q2": {
+        "type": "int",
+        "min": 1,
+        "max": 10
+      },
+      "r": {
+        "type": "float",
+        "min": 1.0,
+        "max": 20.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{8.99e9 * q1 * 1e-6 * q2 * 1e-6 / (r * 1e-2)**2}}",
+    "tolerance": 0.1,
+    "unit": "N",
+    "mark_scheme_template": "\\\\(F = \\\\frac{kq_1q_2}{r^2} = \\\\frac{8.99 \\\\times 10^9 \\\\times {{q1}} \\\\times 10^{-6} \\\\times {{q2}} \\\\times 10^{-6}}{({{r}} \\\\times 10^{-2})^2} = {{8.99e9*q1*1e-6*q2*1e-6/(r*1e-2)**2}}\\\\) N [2 marks]",
+    "hints": [
+      "F = kq₁q₂/r²",
+      "Convert μC to C (× 10⁻⁶) and cm to m (× 10⁻²)"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_D2_numerical_002",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.2",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Magnetic Force on a Current",
+    "tags": [
+      "magnetic-field",
+      "lorentz-force",
+      "current"
+    ],
+    "stem_template": "A wire of length \\\\({{L}}\\\\) m carries current \\\\({{I}}\\\\) A perpendicular to a magnetic field of \\\\({{B}}\\\\) T. Calculate the magnetic force on the wire.",
+    "params": {
+      "L": {
+        "type": "float",
+        "min": 0.1,
+        "max": 2.0,
+        "decimals": 2
+      },
+      "I": {
+        "type": "float",
+        "min": 1.0,
+        "max": 20.0,
+        "decimals": 1
+      },
+      "B": {
+        "type": "float",
+        "min": 0.01,
+        "max": 1.0,
+        "decimals": 3
+      }
+    },
+    "answer_template": "{{I * L * B}}",
+    "tolerance": 0.01,
+    "unit": "N",
+    "mark_scheme_template": "\\\\(F = BIL = {{B}} \\\\times {{I}} \\\\times {{L}} = {{I*L*B}}\\\\) N [1 mark]",
+    "hints": [
+      "F = BIL (for wire perpendicular to field)",
+      "Use F = BIL sinθ in general; here θ = 90°"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_D2_mcq_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Electric Field Strength",
+    "tags": [
+      "electric-field",
+      "field-strength",
+      "charge"
+    ],
+    "stem_template": "A point charge of \\\\({{q}}\\\\) μC creates an electric field at a distance of \\\\({{r}}\\\\) m. What is the field strength? (k = 8.99 × 10\\\\(^9\\\\) N m\\\\(^2\\\\) C\\\\(^{-2}\\\\))",
+    "params": {
+      "q": {
+        "type": "int",
+        "min": 1,
+        "max": 20
+      },
+      "r": {
+        "type": "float",
+        "min": 0.1,
+        "max": 2.0,
+        "decimals": 2
+      }
+    },
+    "answer_template": "{{8.99e9 * q * 1e-6 / r**2}}",
+    "distractor_templates": [
+      "{{8.99e9 * q * 1e-6 / r}}",
+      "{{8.99e9 * q * 1e-6 * r**2}}",
+      "{{q * 1e-6 / r**2}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{round(8.99e9*q*1e-6/r**2, 1)}}\\\\) N C\\\\(^{-1}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{round(8.99e9*q*1e-6/r, 1)}}\\\\) N C\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(8.99e9*q*1e-6*r**2, 1)}}\\\\) N C\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(q*1e-6/r**2, 8)}}\\\\) N C\\\\(^{-1}\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(E = \\\\frac{kq}{r^2} = \\\\frac{8.99 \\\\times 10^9 \\\\times {{q}} \\\\times 10^{-6}}{{{r}}^2} = {{round(8.99e9*q*1e-6/r**2,1)}}\\\\) N C\\\\(^{-1}\\\\) [2 marks]",
+    "hints": [
+      "E = kq/r² for a point charge"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_D3_worked_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.3",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Circular Motion in Magnetic Field",
+    "tags": [
+      "charged-particles",
+      "cyclotron",
+      "lorentz-force",
+      "circular-motion"
+    ],
+    "stem_template": "A proton (mass 1.67 × 10\\\\(^{-27}\\\\) kg, charge 1.6 × 10\\\\(^{-19}\\\\) C) moves at \\\\({{v}}\\\\) × 10\\\\(^6\\\\) m s\\\\(^{-1}\\\\) perpendicular to a uniform magnetic field of \\\\({{B}}\\\\) T. (a) Find the radius of its circular path. (b) Find the period of revolution.",
+    "params": {
+      "v": {
+        "type": "float",
+        "min": 1.0,
+        "max": 5.0,
+        "decimals": 1
+      },
+      "B": {
+        "type": "float",
+        "min": 0.1,
+        "max": 1.0,
+        "decimals": 2
+      }
+    },
+    "answer_template": "(a) \\\\(r = mv/(qB)\\\\) (b) \\\\(T = 2\\\\pi m/(qB)\\\\)",
+    "mark_scheme_template": "(a) \\\\(qvB = \\\\frac{mv^2}{r}\\\\), so \\\\(r = \\\\frac{mv}{qB} = \\\\frac{1.67 \\\\times 10^{-27} \\\\times {{v}} \\\\times 10^6}{1.6 \\\\times 10^{-19} \\\\times {{B}}}\\\\) m [2 marks]. (b) \\\\(T = \\\\frac{2\\\\pi r}{v} = \\\\frac{2\\\\pi m}{qB}\\\\) s (independent of v) [2 marks].",
+    "hints": [
+      "Lorentz force = centripetal force: qvB = mv²/r",
+      "Solve for r: r = mv/(qB)"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_D3_mcq_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.3",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "Velocity Selector",
+    "tags": [
+      "velocity-selector",
+      "electric-field",
+      "magnetic-field",
+      "crossed-fields"
+    ],
+    "stem_template": "In a velocity selector, electric field \\\\(E\\\\) = \\\\({{E}}\\\\) kV m\\\\(^{-1}\\\\) and magnetic field \\\\(B\\\\) = \\\\({{B}}\\\\) T are perpendicular. What speed of particle passes through undeflected?",
+    "params": {
+      "E": {
+        "type": "int",
+        "min": 10,
+        "max": 100
+      },
+      "B": {
+        "type": "float",
+        "min": 0.05,
+        "max": 0.5,
+        "decimals": 3
+      }
+    },
+    "answer_template": "{{E * 1000 / B}}",
+    "distractor_templates": [
+      "{{E * 1000 * B}}",
+      "{{B / (E * 1000)}}",
+      "{{(E * 1000 / B)**0.5}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{round(E*1000/B, 0)}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{round(E*1000*B, 2)}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(B/(E*1000), 8)}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round((E*1000/B)**0.5, 1)}}\\\\) m s\\\\(^{-1}\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Undeflected when electric force = magnetic force: \\\\(qE = qvB\\\\), so \\\\(v = E/B = {{E*1000}}/{{B}} = {{round(E*1000/B,0)}}\\\\) m s\\\\(^{-1}\\\\) [2 marks]",
+    "hints": [
+      "Electric force qE must balance magnetic force qvB",
+      "v = E/B"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_D4_numerical_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.4",
+    "type": "numerical",
+    "difficulty": "extension",
+    "title": "Faraday's Law: Induced EMF",
+    "tags": [
+      "faraday",
+      "emf",
+      "flux",
+      "induction"
+    ],
+    "stem_template": "A coil of \\\\({{N}}\\\\) turns has its magnetic flux changed from \\\\({{phi1}}\\\\) mWb to \\\\({{phi2}}\\\\) mWb in \\\\({{t}}\\\\) ms. Calculate the magnitude of the induced EMF.",
+    "params": {
+      "N": {
+        "type": "int",
+        "min": 50,
+        "max": 500
+      },
+      "phi1": {
+        "type": "int",
+        "min": 1,
+        "max": 20
+      },
+      "phi2": {
+        "type": "int",
+        "min": 25,
+        "max": 100
+      },
+      "t": {
+        "type": "int",
+        "min": 10,
+        "max": 200
+      }
+    },
+    "answer_template": "{{N * (phi2 - phi1) * 1e-3 / (t * 1e-3)}}",
+    "tolerance": 0.1,
+    "unit": "V",
+    "mark_scheme_template": "\\\\(|\\\\varepsilon| = N\\\\frac{\\\\Delta\\\\Phi}{\\\\Delta t} = {{N}} \\\\times \\\\frac{({{phi2}}-{{phi1}}) \\\\times 10^{-3}}{{{t}} \\\\times 10^{-3}} = {{N*(phi2-phi1)*1e-3/(t*1e-3)}}\\\\) V [3 marks]",
+    "hints": [
+      "Faraday's law: ε = −NΔΦ/Δt",
+      "Convert mWb to Wb and ms to s"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_D4_mcq_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.4",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "Lenz's Law Direction",
+    "tags": [
+      "lenz",
+      "induced-current",
+      "induction"
+    ],
+    "stem_template": "A bar magnet's north pole is thrust into a coil. According to Lenz's law, the induced current in the coil will:",
+    "params": {},
+    "answer_template": "Create a magnetic field opposing the approaching north pole",
+    "distractor_templates": [
+      "Create a magnetic field assisting the approaching north pole",
+      "Flow in the same direction as the magnet's motion",
+      "Not flow, as Lenz's law is about voltage not current"
+    ],
+    "options_template": [
+      {
+        "text": "Create a magnetic field opposing the approaching north pole (north pole facing the magnet)",
+        "correct": true
+      },
+      {
+        "text": "Create a magnetic field assisting the approaching north pole (south pole facing the magnet)",
+        "correct": false
+      },
+      {
+        "text": "Flow in a direction determined only by the resistance of the coil",
+        "correct": false
+      },
+      {
+        "text": "Not flow, as the coil is stationary",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Lenz's law: induced current opposes the change causing it. The increasing flux through the coil induces a current creating a north pole facing the approaching magnet, repelling it. [1 mark]",
+    "hints": [
+      "Lenz's law is the negative sign in Faraday's law",
+      "The induced effect always opposes the change"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_D4_worked_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.4",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Transformer Turns Ratio",
+    "tags": [
+      "transformer",
+      "turns-ratio",
+      "emf",
+      "induction"
+    ],
+    "stem_template": "A transformer has \\\\({{Np}}\\\\) primary turns and \\\\({{Ns}}\\\\) secondary turns. The primary voltage is \\\\({{Vp}}\\\\) V. (a) Calculate the secondary voltage. (b) If the secondary current is \\\\({{Is}}\\\\) A, find the primary current (assume 100% efficiency).",
+    "params": {
+      "Np": {
+        "type": "int",
+        "min": 100,
+        "max": 2000
+      },
+      "Ns": {
+        "type": "int",
+        "min": 100,
+        "max": 2000
+      },
+      "Vp": {
+        "type": "int",
+        "min": 100,
+        "max": 240
+      },
+      "Is": {
+        "type": "float",
+        "min": 0.1,
+        "max": 5.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "(a) \\\\(V_s = V_p N_s / N_p\\\\) (b) \\\\(I_p = I_s N_s / N_p\\\\)",
+    "mark_scheme_template": "(a) \\\\(V_s = \\\\frac{N_s}{N_p} V_p = \\\\frac{{{Ns}}}{{{Np}}} \\\\times {{Vp}} = {{round(Ns/Np*Vp, 1)}}\\\\) V [2]. (b) \\\\(P_p = P_s\\\\): \\\\(I_p V_p = I_s V_s\\\\), so \\\\(I_p = \\\\frac{I_s V_s}{V_p} = {{round(Is*Ns/Np, 3)}}\\\\) A [2].",
+    "hints": [
+      "Vs/Vp = Ns/Np (turns ratio)",
+      "For ideal transformer: input power = output power"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_E1_mcq_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Energy Level Transitions",
+    "tags": [
+      "energy-levels",
+      "emission-spectra",
+      "photon"
+    ],
+    "stem_template": "An electron in a hydrogen atom falls from energy level \\\\(n = {{n2}}\\\\) to \\\\(n = {{n1}}\\\\). The energy levels are given by \\\\(E_n = -13.6/n^2\\\\) eV. Calculate the energy of the emitted photon.",
+    "params": {
+      "n2": {
+        "type": "choice",
+        "values": [
+          3,
+          4,
+          5
+        ]
+      },
+      "n1": {
+        "type": "choice",
+        "values": [
+          1,
+          2
+        ]
+      }
+    },
+    "answer_template": "{{13.6 * (1/n1**2 - 1/n2**2)}}",
+    "distractor_templates": [
+      "{{13.6 / n2**2}}",
+      "{{13.6 * (1/n2**2 - 1/n1**2)}}",
+      "{{13.6 / n1**2}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{round(13.6*(1/n1**2-1/n2**2), 2)}}\\\\) eV",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{round(13.6/n2**2, 2)}}\\\\) eV",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(13.6*(1/n2**2-1/n1**2), 2)}}\\\\) eV",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(13.6/n1**2, 2)}}\\\\) eV",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(\\\\Delta E = E_{n_1} - E_{n_2} = -\\\\frac{13.6}{{{n1}}^2} - \\\\left(-\\\\frac{13.6}{{{n2}}^2}\\\\right) = 13.6\\\\left(\\\\frac{1}{{{n1}}^2} - \\\\frac{1}{{{n2}}^2}\\\\right) = {{round(13.6*(1/n1**2-1/n2**2),2)}}\\\\) eV [2 marks]",
+    "hints": [
+      "Energy of photon = energy difference between levels",
+      "E_n = −13.6/n² eV (negative = bound state)"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_E1_worked_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.1",
+    "type": "worked",
+    "difficulty": "core",
+    "title": "Atomic Models and Spectral Lines",
+    "tags": [
+      "atomic-models",
+      "bohr-model",
+      "emission-spectra"
+    ],
+    "stem_template": "Describe the Bohr model of the hydrogen atom. Explain why it predicts discrete spectral lines and calculate the wavelength of light emitted when hydrogen transitions from \\\\(n = {{n2}}\\\\) to \\\\(n = 2\\\\). (h = 6.63 × 10\\\\(^{-34}\\\\) J s, c = 3 × 10\\\\(^8\\\\) m s\\\\(^{-1}\\\\))",
+    "params": {
+      "n2": {
+        "type": "choice",
+        "values": [
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "answer_template": "\\\\(\\\\lambda = hc/\\\\Delta E\\\\) where \\\\(\\\\Delta E = 13.6(1/4 - 1/n_2^2)\\\\) eV",
+    "mark_scheme_template": "Bohr model: electrons in fixed circular orbits [1]. Electrons can only jump between discrete energy levels [1]. \\\\(\\\\Delta E = 13.6(1/4 - 1/{{n2}}^2) = {{round(13.6*(1/4-1/n2**2),3)}}\\\\) eV [1]. \\\\(\\\\lambda = hc/\\\\Delta E = {{round(6.63e-34*3e8/(13.6*(1/4-1/n2**2)*1.6e-19)*1e9,0)}}\\\\) nm [1].",
+    "hints": [
+      "Balmer series: transitions to n=2",
+      "E(photon) = hc/λ, so λ = hc/E"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_E2_numerical_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.2",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Photoelectric Effect: Maximum KE",
+    "tags": [
+      "photoelectric",
+      "work-function",
+      "photon-energy"
+    ],
+    "stem_template": "Light of frequency \\\\({{f}}\\\\) × 10\\\\(^{14}\\\\) Hz shines on a metal with work function \\\\({{phi}}\\\\) eV. Calculate the maximum kinetic energy of emitted electrons. (h = 6.63 × 10\\\\(^{-34}\\\\) J s, 1 eV = 1.6 × 10\\\\(^{-19}\\\\) J)",
+    "params": {
+      "f": {
+        "type": "float",
+        "min": 6.0,
+        "max": 15.0,
+        "decimals": 1
+      },
+      "phi": {
+        "type": "float",
+        "min": 2.0,
+        "max": 5.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{max(0, 6.63e-34 * f * 1e14 / 1.6e-19 - phi)}}",
+    "tolerance": 0.1,
+    "unit": "eV",
+    "mark_scheme_template": "\\\\(E_{photon} = hf = 6.63 \\\\times 10^{-34} \\\\times {{f}} \\\\times 10^{14} = {{round(6.63e-34*f*1e14, 22)}}\\\\) J = \\\\({{round(6.63e-34*f*1e14/1.6e-19,2)}}\\\\) eV. \\\\(KE_{max} = hf - \\\\phi = {{round(6.63e-34*f*1e14/1.6e-19,2)}} - {{phi}} = {{round(max(0,6.63e-34*f*1e14/1.6e-19-phi),2)}}\\\\) eV [3 marks]",
+    "hints": [
+      "Use KE_max = hf − φ (photoelectric equation)",
+      "No emission if hf < φ"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_E2_numerical_002",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.2",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "De Broglie Wavelength",
+    "tags": [
+      "de-broglie",
+      "wave-particle-duality",
+      "momentum"
+    ],
+    "stem_template": "Calculate the de Broglie wavelength of an electron (mass 9.11 × 10\\\\(^{-31}\\\\) kg) moving at \\\\({{v}}\\\\) × 10\\\\(^6\\\\) m s\\\\(^{-1}\\\\). (h = 6.63 × 10\\\\(^{-34}\\\\) J s)",
+    "params": {
+      "v": {
+        "type": "float",
+        "min": 1.0,
+        "max": 5.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{6.63e-34 / (9.11e-31 * v * 1e6) * 1e12}}",
+    "tolerance": 0.5,
+    "unit": "pm",
+    "mark_scheme_template": "\\\\(\\\\lambda = \\\\frac{h}{mv} = \\\\frac{6.63 \\\\times 10^{-34}}{9.11 \\\\times 10^{-31} \\\\times {{v}} \\\\times 10^6} = {{round(6.63e-34/(9.11e-31*v*1e6)*1e12,1)}}\\\\) pm [2 marks]",
+    "hints": [
+      "λ = h/(mv) = h/p",
+      "1 pm = 10⁻¹² m"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_E2_mcq_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Photon Energy and Momentum",
+    "tags": [
+      "photon",
+      "energy",
+      "momentum",
+      "quantum"
+    ],
+    "stem_template": "A photon has wavelength \\\\({{lam}}\\\\) nm. What is its momentum? (h = 6.63 × 10\\\\(^{-34}\\\\) J s)",
+    "params": {
+      "lam": {
+        "type": "choice",
+        "values": [
+          400,
+          500,
+          600,
+          700
+        ]
+      }
+    },
+    "answer_template": "{{6.63e-34 / (lam * 1e-9)}}",
+    "distractor_templates": [
+      "{{6.63e-34 * lam * 1e-9}}",
+      "{{6.63e-34 * 3e8 / (lam * 1e-9)}}",
+      "{{6.63e-34 / (lam * 1e-9)**2}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{round(6.63e-34/(lam*1e-9),28)}}\\\\) kg m s\\\\(^{-1}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{round(6.63e-34*lam*1e-9,48)}}\\\\) kg m s\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(6.63e-34*3e8/(lam*1e-9),22)}}\\\\) kg m s\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(6.63e-34/(lam*1e-9)**2,20)}}\\\\) kg m s\\\\(^{-1}\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(p = \\\\frac{h}{\\\\lambda} = \\\\frac{6.63 \\\\times 10^{-34}}{{{lam}} \\\\times 10^{-9}} = {{round(6.63e-34/(lam*1e-9),28)}}\\\\) kg m s\\\\(^{-1}\\\\) [1 mark]",
+    "hints": [
+      "Photon momentum p = h/λ"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_E3_numerical_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.3",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Radioactive Half-Life: Remaining Activity",
+    "tags": [
+      "half-life",
+      "radioactive-decay",
+      "activity"
+    ],
+    "stem_template": "A radioactive sample has initial activity \\\\({{A0}}\\\\) × 10\\\\(^4\\\\) Bq. Its half-life is \\\\({{t_half}}\\\\) hours. What is the activity after \\\\({{t}}\\\\) hours?",
+    "params": {
+      "A0": {
+        "type": "int",
+        "min": 2,
+        "max": 20
+      },
+      "t_half": {
+        "type": "int",
+        "min": 2,
+        "max": 12
+      },
+      "t": {
+        "type": "int",
+        "min": 4,
+        "max": 48
+      }
+    },
+    "answer_template": "{{A0 * 1e4 * 0.5**(t/t_half)}}",
+    "tolerance": 500.0,
+    "unit": "Bq",
+    "mark_scheme_template": "Number of half-lives = \\\\({{t}}/{{t_half}}\\\\). \\\\(A = A_0 \\\\times (0.5)^{t/t_{1/2}} = {{A0}} \\\\times 10^4 \\\\times 0.5^{{{t}}/{{t_half}}} = {{round(A0*1e4*0.5**(t/t_half), 0)}}\\\\) Bq [3 marks]",
+    "hints": [
+      "A = A₀ × (½)^(t/t½)",
+      "First find how many half-lives have passed: n = t/t½"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_E3_mcq_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Alpha Decay Equation",
+    "tags": [
+      "alpha",
+      "nuclear-equation",
+      "decay"
+    ],
+    "stem_template": "Uranium-238 (\\\\(^{238}_{92}\\\\)U) undergoes alpha decay. What is the daughter nucleus?",
+    "params": {},
+    "answer_template": "Thorium-234 (²³⁴₉₀Th)",
+    "distractor_templates": [
+      "Radium-234 (²³⁴₈₈Ra)",
+      "Uranium-234 (²³⁴₉₂U)",
+      "Thorium-236 (²³⁶₉₀Th)"
+    ],
+    "options_template": [
+      {
+        "text": "Thorium-234 (\\\\(^{234}_{90}\\\\)Th)",
+        "correct": true
+      },
+      {
+        "text": "Radium-234 (\\\\(^{234}_{88}\\\\)Ra)",
+        "correct": false
+      },
+      {
+        "text": "Uranium-234 (\\\\(^{234}_{92}\\\\)U)",
+        "correct": false
+      },
+      {
+        "text": "Thorium-236 (\\\\(^{236}_{90}\\\\)Th)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Alpha particle: \\\\(^4_2\\\\)He. \\\\(^{238}_{92}\\\\)U → \\\\(^{234}_{90}\\\\)Th + \\\\(^4_2\\\\)He. Mass: 238 − 4 = 234 ✓. Charge: 92 − 2 = 90 ✓. [1 mark]",
+    "hints": [
+      "Alpha particle is ⁴₂He: loses 4 from mass number, 2 from atomic number",
+      "Conservation of mass number and atomic number"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_E3_worked_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Radioactive Decay Constant",
+    "tags": [
+      "decay-constant",
+      "half-life",
+      "activity"
+    ],
+    "stem_template": "A radioactive isotope has half-life \\\\({{t_half}}\\\\) days. (a) Calculate the decay constant in s\\\\(^{-1}\\\\). (b) A sample initially contains \\\\({{N0}}\\\\) × 10\\\\(^{20}\\\\) atoms. Find the initial activity in Bq.",
+    "params": {
+      "t_half": {
+        "type": "int",
+        "min": 5,
+        "max": 30
+      },
+      "N0": {
+        "type": "int",
+        "min": 1,
+        "max": 9
+      }
+    },
+    "answer_template": "(a) λ = ln2/(t½ in s) (b) A₀ = λN₀",
+    "mark_scheme_template": "(a) \\\\(\\\\lambda = \\\\frac{\\\\ln 2}{t_{1/2}} = \\\\frac{0.693}{{{t_half}} \\\\times 86400} = {{round(0.693/(t_half*86400),15)}}\\\\) s\\\\(^{-1}\\\\) [2 marks]. (b) \\\\(A_0 = \\\\lambda N_0 = {{round(0.693/(t_half*86400),15)}} \\\\times {{N0}} \\\\times 10^{20}\\\\) Bq [1 mark].",
+    "hints": [
+      "λ = ln2/t½",
+      "A = λN (activity)"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_E4_numerical_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.4",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Mass Defect and Binding Energy",
+    "tags": [
+      "fission",
+      "mass-defect",
+      "binding-energy"
+    ],
+    "stem_template": "The mass of a helium-4 nucleus is 4.0015 u. Given that proton mass = 1.00728 u and neutron mass = 1.00867 u, calculate the mass defect and the binding energy per nucleon. (1 u = 931.5 MeV)",
+    "params": {},
+    "answer_template": "Mass defect = 2(1.00728) + 2(1.00867) − 4.0015 = 0.03040 u; BE/nucleon = 0.03040 × 931.5 / 4 = 7.08 MeV",
+    "mark_scheme_template": "Mass of constituents = 2(1.00728) + 2(1.00867) = 4.03190 u [1]. Mass defect = 4.03190 − 4.0015 = 0.03040 u [1]. Binding energy = 0.03040 × 931.5 = 28.3 MeV [1]. BE per nucleon = 28.3/4 = 7.08 MeV [1].",
+    "hints": [
+      "Mass defect = Δm = mass of protons + mass of neutrons − actual nuclear mass",
+      "Binding energy = Δm × 931.5 MeV per u"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_E4_mcq_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Nuclear Fission Energy",
+    "tags": [
+      "fission",
+      "chain-reaction",
+      "energy-release"
+    ],
+    "stem_template": "In a fission reaction, \\\\(^{235}\\\\)U absorbs a neutron and splits releasing a mass deficit of \\\\({{dm}}\\\\) u per reaction. How much energy is released per reaction? (1 u = 931.5 MeV)",
+    "params": {
+      "dm": {
+        "type": "float",
+        "min": 0.1,
+        "max": 0.3,
+        "decimals": 3
+      }
+    },
+    "answer_template": "{{dm * 931.5}}",
+    "distractor_templates": [
+      "{{dm}}",
+      "{{dm * 931.5 / 1000}}",
+      "{{dm * 3e8**2}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{round(dm*931.5, 1)}}\\\\) MeV",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{dm}}\\\\) MeV",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(dm*931.5/1000, 4)}}\\\\) GeV",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(dm*3e8**2, 2)}}\\\\) J",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(E = \\\\Delta m \\\\times 931.5 = {{dm}} \\\\times 931.5 = {{round(dm*931.5,1)}}\\\\) MeV [2 marks]",
+    "hints": [
+      "1 u corresponds to 931.5 MeV of energy",
+      "E = Δmc² where 1u × c² = 931.5 MeV"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_E4_worked_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Nuclear Reactor: Chain Reaction and Criticality",
+    "tags": [
+      "fission",
+      "chain-reaction",
+      "nuclear-reactor",
+      "moderation"
+    ],
+    "stem_template": "Describe the conditions necessary for a sustained chain reaction in a nuclear reactor. Explain the role of: (a) moderator, (b) control rods, (c) coolant.",
+    "params": {},
+    "answer_template": "Qualitative description of critical mass, moderation, and control.",
+    "mark_scheme_template": "(a) Moderator (e.g., graphite, water) slows fast neutrons to thermal speeds, increasing probability of fission [2]. (b) Control rods (e.g., boron) absorb neutrons to control reaction rate; inserted to slow/stop, withdrawn to increase rate [2]. (c) Coolant transfers heat from core to generate steam for electricity [1]. Sustained chain reaction requires multiplication factor k ≥ 1 [1]. [6 marks]",
+    "hints": [
+      "Fast neutrons are less likely to cause fission in ²³⁵U",
+      "Control rods absorb excess neutrons",
+      "Coolant removes thermal energy"
+    ],
+    "marks": 6
+  },
+  {
+    "id": "physics_E5_worked_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.5",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Fusion Reaction: Energy Release",
+    "tags": [
+      "fusion",
+      "mass-defect",
+      "energy",
+      "stars"
+    ],
+    "stem_template": "The proton-proton chain results in the fusion of four protons into one helium-4 nucleus. Given the masses: proton = 1.00728 u, \\\\(^4\\\\)He = 4.00260 u, and 2 positrons (each 0.000549 u) are released. Calculate the total energy released per reaction. (1 u = 931.5 MeV)",
+    "params": {},
+    "answer_template": "Δm = 4(1.00728) − 4.00260 − 2(0.000549) = 0.02652 u; E = 0.02652 × 931.5 = 24.7 MeV",
+    "mark_scheme_template": "Mass of reactants = 4 × 1.00728 = 4.02912 u [1]. Mass of products = 4.00260 + 2 × 0.000549 = 4.00370 u [1]. Δm = 4.02912 − 4.00370 = 0.02542 u [1]. E = 0.02542 × 931.5 ≈ 23.7 MeV [1]. (Plus annihilation: 2 × 2 × 0.511 MeV additional energy from positron-electron annihilation.)",
+    "hints": [
+      "Count all products and reactants",
+      "Positrons will annihilate with electrons releasing additional 2 × 0.511 MeV each"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_E5_mcq_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.5",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "HR Diagram: Stellar Evolution",
+    "tags": [
+      "HR-diagram",
+      "stars",
+      "stellar-evolution",
+      "main-sequence"
+    ],
+    "stem_template": "On a Hertzsprung-Russell (HR) diagram, where are main sequence stars located?",
+    "params": {},
+    "answer_template": "Along a diagonal band from upper-left (hot, bright) to lower-right (cool, dim)",
+    "distractor_templates": [
+      "In the upper-right corner (cool, bright)",
+      "In the lower-left corner (hot, dim)",
+      "Scattered randomly across the diagram"
+    ],
+    "options_template": [
+      {
+        "text": "Along a diagonal band from upper-left (hot, luminous) to lower-right (cool, dim)",
+        "correct": true
+      },
+      {
+        "text": "In the upper-right corner (cool, very luminous — red giants)",
+        "correct": false
+      },
+      {
+        "text": "In the lower-left corner (hot, dim — white dwarfs)",
+        "correct": false
+      },
+      {
+        "text": "Scattered uniformly across the diagram",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Main sequence is a diagonal band from upper-left (O-type, hot, blue, luminous) to lower-right (M-type, cool, red, dim). Stars fuse hydrogen in their cores on the main sequence. [1 mark]",
+    "hints": [
+      "X-axis: temperature (decreasing to right)",
+      "Y-axis: luminosity (increasing upward)"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_E5_numerical_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.5",
+    "type": "numerical",
+    "difficulty": "extension",
+    "title": "Stellar Luminosity: Stefan–Boltzmann Law",
+    "tags": [
+      "fusion",
+      "stars",
+      "luminosity",
+      "stefan-boltzmann"
+    ],
+    "stem_template": "A star has surface temperature \\\\({{T}}\\\\) × 10\\\\(^3\\\\) K and radius \\\\({{R}}\\\\) × 10\\\\(^8\\\\) m. Calculate its luminosity. (σ = 5.67 × 10\\\\(^{-8}\\\\) W m\\\\(^{-2}\\\\) K\\\\(^{-4}\\\\))",
+    "params": {
+      "T": {
+        "type": "int",
+        "min": 4,
+        "max": 30
+      },
+      "R": {
+        "type": "float",
+        "min": 2.0,
+        "max": 20.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{4 * 3.14159 * (R * 1e8)**2 * 5.67e-8 * (T * 1e3)**4}}",
+    "tolerance": 1e+25,
+    "unit": "W",
+    "mark_scheme_template": "\\\\(L = 4\\\\pi R^2 \\\\sigma T^4 = 4\\\\pi ({{R}} \\\\times 10^8)^2 \\\\times 5.67 \\\\times 10^{-8} \\\\times ({{T}} \\\\times 10^3)^4\\\\) W [3 marks]",
+    "hints": [
+      "L = 4πR²σT⁴",
+      "Treat star as a perfect blackbody"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_E5_worked_002",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.5",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Nucleosynthesis and Stellar Life Cycles",
+    "tags": [
+      "stellar-nucleosynthesis",
+      "fusion",
+      "stars",
+      "HR-diagram"
+    ],
+    "stem_template": "Describe the sequence of nuclear reactions in a star like the Sun. Explain what happens after the main sequence phase, referring to the HR diagram.",
+    "params": {},
+    "answer_template": "Qualitative description: main sequence H fusion → red giant → He fusion → planetary nebula → white dwarf",
+    "mark_scheme_template": "Main sequence: H → He fusion (p-p chain) [1]. As H runs out, core contracts, outer layers expand → red giant [1]. Red giant: He → C fusion (triple-alpha process) [1]. Shell hydrogen burning continues [1]. For Sun-like star: outer layers shed → planetary nebula; core remains as white dwarf [1]. Higher-mass stars: continue to fuse up to Fe; Fe has maximum binding energy per nucleon, so fusion becomes endothermic → supernova → neutron star or black hole [1]. [6 marks]",
+    "hints": [
+      "Fusion proceeds to heavier elements as each stage ends",
+      "Maximum binding energy per nucleon is at iron (Fe-56)"
+    ],
+    "marks": 6
+  },
+  {
+    "id": "physics_A1_calculation_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.1",
+    "type": "calculation",
+    "difficulty": "challenge",
+    "title": "SUVAT: Displacement with Initial Velocity",
+    "tags": [
+      "suvat",
+      "kinematics",
+      "displacement",
+      "acceleration"
+    ],
+    "stem_template": "An object with initial velocity \\\\({{u}}\\\\) m s\\\\(^{-1}\\\\) accelerates at \\\\({{a}}\\\\) m s\\\\(^{-2}\\\\) for \\\\({{t}}\\\\) s. Calculate the displacement.",
+    "params": {
+      "u": {
+        "type": "int",
+        "min": 2,
+        "max": 20
+      },
+      "a": {
+        "type": "float",
+        "min": 1.0,
+        "max": 8.0,
+        "decimals": 1
+      },
+      "t": {
+        "type": "int",
+        "min": 2,
+        "max": 10
+      }
+    },
+    "answer_template": "{{u * t + 0.5 * a * t * t}}",
+    "tolerance": 0.1,
+    "unit": "m",
+    "mark_scheme_template": "\\\\(s = ut + \\\\frac{1}{2}at^2 = {{u}} \\\\times {{t}} + \\\\frac{1}{2} \\\\times {{a}} \\\\times {{t}}^2 = {{u*t + 0.5*a*t*t}}\\\\) m [2 marks]",
+    "hints": [
+      "Use s = ut + ½at²"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_A2_calculation_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.2",
+    "type": "calculation",
+    "difficulty": "core",
+    "title": "Weight and Normal Force on Incline",
+    "tags": [
+      "weight",
+      "normal-force",
+      "inclined-plane",
+      "newtons-laws"
+    ],
+    "stem_template": "A block of mass \\\\({{m}}\\\\) kg rests on a smooth incline at \\\\({{theta}}°\\\\) to the horizontal. (g = 9.8 m s\\\\(^{-2}\\\\)) Calculate: (a) the normal contact force, (b) the acceleration along the incline.",
+    "params": {
+      "m": {
+        "type": "int",
+        "min": 2,
+        "max": 20
+      },
+      "theta": {
+        "type": "choice",
+        "values": [
+          20,
+          30,
+          40,
+          45
+        ]
+      }
+    },
+    "answer_template": "(a) N = mg cosθ (b) a = g sinθ",
+    "tolerance": 0.1,
+    "unit": "N, m/s²",
+    "mark_scheme_template": "(a) \\\\(N = mg\\\\cos{{theta}}° = {{m}} \\\\times 9.8 \\\\times \\\\cos{{theta}}°\\\\) N [2]. (b) \\\\(a = g\\\\sin{{theta}}° = 9.8 \\\\times \\\\sin{{theta}}°\\\\) m s\\\\(^{-2}\\\\) [2].",
+    "hints": [
+      "Resolve weight parallel and perpendicular to slope",
+      "N balances perpendicular component of weight"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_A3_calculation_001",
+    "subject": "physics",
+    "topic": "A",
+    "subtopic": "A.3",
+    "type": "calculation",
+    "difficulty": "core",
+    "title": "Efficiency of a Machine",
+    "tags": [
+      "efficiency",
+      "power",
+      "work",
+      "energy"
+    ],
+    "stem_template": "A machine has input power \\\\({{Pin}}\\\\) W and useful output power \\\\({{Pout}}\\\\) W. Calculate the efficiency as a percentage.",
+    "params": {
+      "Pin": {
+        "type": "int",
+        "min": 100,
+        "max": 2000
+      },
+      "Pout": {
+        "type": "int",
+        "min": 50,
+        "max": 1500
+      }
+    },
+    "answer_template": "{{Pout / Pin * 100}}",
+    "tolerance": 0.5,
+    "unit": "%",
+    "mark_scheme_template": "\\\\(\\\\eta = \\\\frac{P_{out}}{P_{in}} \\\\times 100 = \\\\frac{{{Pout}}}{{{Pin}}} \\\\times 100 = {{round(Pout/Pin*100,1)}}\\\\% [2 marks]",
+    "hints": [
+      "Efficiency = (useful output / total input) x 100%"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_B1_mcq_002",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Mechanisms of Heat Transfer",
+    "tags": [
+      "conduction",
+      "convection",
+      "radiation",
+      "thermal-energy"
+    ],
+    "stem_template": "Which mode of heat transfer can occur through a vacuum?",
+    "params": {},
+    "answer_template": "Radiation",
+    "distractor_templates": [
+      "Conduction",
+      "Convection",
+      "Both conduction and convection"
+    ],
+    "options_template": [
+      {
+        "text": "Radiation (electromagnetic waves, no medium required)",
+        "correct": true
+      },
+      {
+        "text": "Conduction (requires physical contact between particles)",
+        "correct": false
+      },
+      {
+        "text": "Convection (requires a fluid)",
+        "correct": false
+      },
+      {
+        "text": "Both conduction and convection",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Radiation: energy transferred by electromagnetic waves (infrared), needs no medium. Conduction and convection require a material medium. [1 mark]",
+    "hints": [
+      "The Sun heats Earth through empty space — that is radiation"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_B2_mcq_002",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Which Gas Is NOT a Greenhouse Gas?",
+    "tags": [
+      "greenhouse-gases",
+      "infrared",
+      "climate"
+    ],
+    "stem_template": "Which of the following is NOT a greenhouse gas?",
+    "params": {},
+    "answer_template": "N₂",
+    "distractor_templates": [
+      "CO₂",
+      "CH₄",
+      "N₂O"
+    ],
+    "options_template": [
+      {
+        "text": "N\\\\(_2\\\\) (diatomic homonuclear, no IR-active vibrations)",
+        "correct": true
+      },
+      {
+        "text": "CO\\\\(_2\\\\) (major anthropogenic greenhouse gas)",
+        "correct": false
+      },
+      {
+        "text": "CH\\\\(_4\\\\) (methane, strong greenhouse gas)",
+        "correct": false
+      },
+      {
+        "text": "N\\\\(_2\\\\)O (nitrous oxide, significant greenhouse gas)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "N₂ is homonuclear diatomic: its only vibration has no change in dipole moment, so it cannot absorb infrared radiation. All other options are polyatomic with IR-active vibrational modes. [1 mark]",
+    "hints": [
+      "Greenhouse gases must have IR-active vibrational modes (change in dipole moment)"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_B3_worked_001",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Kinetic Theory: Pressure and Molecular Speed",
+    "tags": [
+      "kinetic-theory",
+      "pressure",
+      "molecular-speed"
+    ],
+    "stem_template": "Using kinetic theory, show that \\\\(p = \\\\frac{1}{3}\\\\rho \\\\langle v^2 \\\\rangle\\\\). State all assumptions of the kinetic model of an ideal gas.",
+    "params": {},
+    "answer_template": "Derivation using change of momentum and random motion",
+    "mark_scheme_template": "Assumptions: large N, elastic collisions, random motion, no intermolecular forces, particle volume negligible [2]. Force from one particle on wall = rate of change of momentum [1]. Summing over all N particles and averaging over 3 dimensions: p = Nm\\\\langle v^2\\\\rangle/(3V) = rho\\\\langle v^2\\\\rangle/3 [2]. [5 marks]",
+    "hints": [
+      "Consider particle bouncing between walls",
+      "Average of vx^2 = vy^2 = vz^2 = v^2/3"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "physics_B4_worked_002",
+    "subject": "physics",
+    "topic": "B",
+    "subtopic": "B.4",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Isothermal Expansion: Work and Heat",
+    "tags": [
+      "thermodynamics",
+      "isothermal",
+      "work",
+      "first-law"
+    ],
+    "stem_template": "A gas expands isothermally at \\\\({{T}}\\\\) K from \\\\({{V1}}\\\\) L to \\\\({{V2}}\\\\) L (n = \\\\({{n}}\\\\) mol). Calculate (a) work done by gas and (b) heat absorbed. (R = 8.31 J mol\\\\(^{-1}\\\\) K\\\\(^{-1}\\\\))",
+    "params": {
+      "T": {
+        "type": "int",
+        "min": 300,
+        "max": 600
+      },
+      "V1": {
+        "type": "int",
+        "min": 1,
+        "max": 5
+      },
+      "V2": {
+        "type": "int",
+        "min": 6,
+        "max": 20
+      },
+      "n": {
+        "type": "float",
+        "min": 0.5,
+        "max": 3.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "W = nRT ln(V2/V1); Q = W (isothermal: deltaU=0)",
+    "mark_scheme_template": "(a) \\\\(W = nRT\\\\ln(V_2/V_1) = {{n}} \\\\times 8.31 \\\\times {{T}} \\\\times \\\\ln({{V2}}/{{V1}})\\\\) J [3]. (b) Isothermal: \\\\(\\\\Delta U = 0\\\\). By first law: Q = W (heat absorbed from surroundings) [2]. [5 marks]",
+    "hints": [
+      "Isothermal expansion: W = nRT ln(V2/V1)",
+      "Isothermal: T constant → deltaU = 0 → Q = W"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "physics_C1_mcq_002",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Condition for SHM",
+    "tags": [
+      "shm",
+      "restoring-force",
+      "oscillations"
+    ],
+    "stem_template": "Which condition is necessary for simple harmonic motion?",
+    "params": {},
+    "answer_template": "Restoring force proportional to and directed opposite to displacement",
+    "distractor_templates": [
+      "Constant force in one direction",
+      "Force proportional to velocity",
+      "Restoring force independent of displacement"
+    ],
+    "options_template": [
+      {
+        "text": "Restoring force proportional to displacement, directed towards equilibrium",
+        "correct": true
+      },
+      {
+        "text": "Constant force always acting in the same direction",
+        "correct": false
+      },
+      {
+        "text": "Force proportional to velocity (viscous damping)",
+        "correct": false
+      },
+      {
+        "text": "Restoring force independent of displacement",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "SHM: a = -omega^2 x, meaning acceleration is proportional to and directed opposite to displacement. Equivalent to F = -kx. [1 mark]",
+    "hints": [
+      "a = -omega^2 x is the defining equation of SHM"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_C2_mcq_002",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Intensity and Amplitude Relationship",
+    "tags": [
+      "intensity",
+      "amplitude",
+      "wave-model"
+    ],
+    "stem_template": "If the amplitude of a wave is doubled, by what factor does the intensity change?",
+    "params": {},
+    "answer_template": "4",
+    "distractor_templates": [
+      "2",
+      "8",
+      "0.5"
+    ],
+    "options_template": [
+      {
+        "text": "4 (intensity is proportional to amplitude squared)",
+        "correct": true
+      },
+      {
+        "text": "2 (doubles with amplitude)",
+        "correct": false
+      },
+      {
+        "text": "8 (cubed factor)",
+        "correct": false
+      },
+      {
+        "text": "0.5 (intensity decreases)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "I is proportional to A^2. If A doubles: I multiplied by (2)^2 = 4. [1 mark]",
+    "hints": [
+      "I proportional to A^2"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_C3_mcq_002",
+    "subject": "physics",
+    "topic": "C",
+    "subtopic": "C.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Critical Angle for Total Internal Reflection",
+    "tags": [
+      "total-internal-reflection",
+      "critical-angle",
+      "refraction"
+    ],
+    "stem_template": "Glass has refractive index \\\\({{n}}\\\\). Calculate the critical angle for total internal reflection.",
+    "params": {
+      "n": {
+        "type": "choice",
+        "values": [
+          1.5,
+          1.6,
+          1.7,
+          1.4
+        ]
+      }
+    },
+    "answer_template": "arcsin(1/n)",
+    "distractor_templates": [
+      "arccos(1/n)",
+      "arcsin(n)",
+      "90/n degrees"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\(\\\\theta_c = \\\\arcsin(1/{{n}})\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(\\\\theta_c = \\\\arccos(1/{{n}})\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\theta_c = \\\\arcsin({{n}})\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(\\\\theta_c = 90/{{n}}\\\\) degrees",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "At critical angle: n sin(theta_c) = 1 x sin(90) = 1. So theta_c = arcsin(1/n). [2 marks]",
+    "hints": [
+      "At critical angle: n sinθc = 1",
+      "TIR occurs for angles > θc"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_D1_worked_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Escape Velocity Derivation and Calculation",
+    "tags": [
+      "gravitational-field",
+      "escape-velocity",
+      "energy"
+    ],
+    "stem_template": "Derive and calculate the escape velocity from a planet of mass \\\\({{M}}\\\\) x 10\\\\(^{24}\\\\) kg and radius \\\\({{R}}\\\\) x 10\\\\(^6\\\\) m. (G = 6.67 x 10\\\\(^{-11}\\\\) N m\\\\(^2\\\\) kg\\\\(^{-2}\\\\))",
+    "params": {
+      "M": {
+        "type": "float",
+        "min": 1.0,
+        "max": 10.0,
+        "decimals": 1
+      },
+      "R": {
+        "type": "float",
+        "min": 2.0,
+        "max": 8.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "v_esc = sqrt(2GM/R)",
+    "mark_scheme_template": "Set KE = GPE at surface: (1/2)mv^2 = GMm/R. Solve: v_esc = sqrt(2GM/R). Substitute values numerically. [4 marks]",
+    "hints": [
+      "At escape speed: KE gained = gravitational PE lost",
+      "v_esc = sqrt(2GM/R)"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_D2_worked_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Lorentz Force on Moving Charge",
+    "tags": [
+      "lorentz-force",
+      "magnetic-field",
+      "charge",
+      "circular-motion"
+    ],
+    "stem_template": "A proton (charge 1.6 x 10\\\\(^{-19}\\\\) C) moves at \\\\({{v}}\\\\) x 10\\\\(^6\\\\) m s\\\\(^{-1}\\\\) perpendicular to a magnetic field of \\\\({{B}}\\\\) T. (a) Find the magnetic force. (b) Describe the subsequent motion.",
+    "params": {
+      "v": {
+        "type": "float",
+        "min": 1.0,
+        "max": 5.0,
+        "decimals": 1
+      },
+      "B": {
+        "type": "float",
+        "min": 0.1,
+        "max": 2.0,
+        "decimals": 2
+      }
+    },
+    "answer_template": "(a) F = qvB (b) Uniform circular motion",
+    "mark_scheme_template": "(a) F = qvB = 1.6e-19 x {{v}}e6 x {{B}} N [2]. (b) Force always perpendicular to velocity: uniform circular motion [2]. [4 marks]",
+    "hints": [
+      "F = qvB for charge perpendicular to B",
+      "Perpendicular force: constant speed, circular path"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_D3_numerical_001",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.3",
+    "type": "numerical",
+    "difficulty": "extension",
+    "title": "Radius of Electron Path After Acceleration",
+    "tags": [
+      "charged-particles",
+      "circular-motion",
+      "magnetic-field",
+      "acceleration"
+    ],
+    "stem_template": "An electron (m = 9.11 x 10\\\\(^{-31}\\\\) kg, e = 1.6 x 10\\\\(^{-19}\\\\) C) is accelerated through \\\\({{V}}\\\\) V then enters a field B = \\\\({{B}}\\\\) T perpendicular to velocity. Find the radius of its circular path.",
+    "params": {
+      "V": {
+        "type": "int",
+        "min": 100,
+        "max": 5000
+      },
+      "B": {
+        "type": "float",
+        "min": 0.002,
+        "max": 0.1,
+        "decimals": 4
+      }
+    },
+    "answer_template": "r = sqrt(2mV/e) / B",
+    "tolerance": 0.001,
+    "unit": "m",
+    "mark_scheme_template": "KE from acceleration: eV = (1/2)mv^2, so v = sqrt(2eV/m) [1]. Radius: r = mv/(eB) [1]. Combined: r = sqrt(2mV/e)/B [2]. Substitute numerical values. [4 marks]",
+    "hints": [
+      "Step 1: find v from eV = (1/2)mv^2",
+      "Step 2: use r = mv/(eB)"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_D4_numerical_002",
+    "subject": "physics",
+    "topic": "D",
+    "subtopic": "D.4",
+    "type": "numerical",
+    "difficulty": "extension",
+    "title": "Peak EMF of AC Generator",
+    "tags": [
+      "generator",
+      "emf",
+      "induction",
+      "alternating-current"
+    ],
+    "stem_template": "A coil with \\\\({{N}}\\\\) turns, area \\\\({{A}}\\\\) cm\\\\(^2\\\\), rotates at \\\\({{f}}\\\\) Hz in a uniform field of \\\\({{B}}\\\\) T. Calculate the peak EMF.",
+    "params": {
+      "N": {
+        "type": "int",
+        "min": 50,
+        "max": 500
+      },
+      "A": {
+        "type": "int",
+        "min": 10,
+        "max": 100
+      },
+      "f": {
+        "type": "int",
+        "min": 10,
+        "max": 100
+      },
+      "B": {
+        "type": "float",
+        "min": 0.05,
+        "max": 0.5,
+        "decimals": 3
+      }
+    },
+    "answer_template": "{{N * A * 1e-4 * 2 * 3.14159 * f * B}}",
+    "tolerance": 0.1,
+    "unit": "V",
+    "mark_scheme_template": "EMF_0 = NBAomega = N x B x A(m^2) x 2pi x f. Convert A from cm^2: x10^-4. Calculate numerical result. [3 marks]",
+    "hints": [
+      "Peak EMF = NBAomega",
+      "omega = 2*pi*f",
+      "Convert A: cm^2 to m^2 by x 10^-4"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "physics_E1_mcq_002",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Rutherford Scattering Experiment",
+    "tags": [
+      "atomic-models",
+      "rutherford",
+      "nuclear-model"
+    ],
+    "stem_template": "In Rutherford's gold foil experiment, a small fraction of alpha particles were deflected at large angles. What does this indicate?",
+    "params": {},
+    "answer_template": "The atom contains a small, dense, positively charged nucleus",
+    "distractor_templates": [
+      "Electrons are distributed throughout the atom",
+      "The positive charge is spread uniformly",
+      "Alpha particles have no charge"
+    ],
+    "options_template": [
+      {
+        "text": "The atom has a tiny, dense, positively charged nucleus that strongly deflects nearby alpha particles",
+        "correct": true
+      },
+      {
+        "text": "Electrons are distributed throughout the atom in a diffuse cloud",
+        "correct": false
+      },
+      {
+        "text": "The positive charge is spread uniformly (Thomson plum-pudding model)",
+        "correct": false
+      },
+      {
+        "text": "Alpha particles have no charge and deflect randomly",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Rare large-angle deflections show: concentrated positive charge in a tiny nucleus. Most particles pass straight through (empty space). Led to nuclear model. [2 marks]",
+    "hints": [
+      "Undeflected particles: mostly empty space",
+      "Rare deflections back: small, massive, positive nucleus"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "physics_E2_worked_001",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Threshold Frequency and Stopping Potential",
+    "tags": [
+      "photoelectric",
+      "threshold-frequency",
+      "stopping-potential",
+      "work-function"
+    ],
+    "stem_template": "A metal has work function \\\\({{phi}}\\\\) eV. (a) Find the threshold frequency. (b) Find the stopping potential when light of \\\\({{f}}\\\\) x 10\\\\(^{14}\\\\) Hz shines on it. (h = 6.63 x 10\\\\(^{-34}\\\\) J s, e = 1.6 x 10\\\\(^{-19}\\\\) C)",
+    "params": {
+      "phi": {
+        "type": "float",
+        "min": 2.0,
+        "max": 5.0,
+        "decimals": 1
+      },
+      "f": {
+        "type": "float",
+        "min": 6.0,
+        "max": 15.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "(a) f0 = phi/h (b) Vs = (hf - phi)/e",
+    "mark_scheme_template": "(a) hf0 = phi: f0 = phi x 1.6e-19 / 6.63e-34 Hz [2]. (b) eVs = hf - phi. Vs = (6.63e-34 x {{f}}e14 - {{phi}} x 1.6e-19) / 1.6e-19 V [2]. [4 marks]",
+    "hints": [
+      "Threshold: hf0 = phi",
+      "Stopping potential: eVs = KE_max = hf - phi"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "physics_E3_mcq_002",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Beta-Minus Decay Equation",
+    "tags": [
+      "beta",
+      "nuclear-equation",
+      "decay",
+      "neutrino"
+    ],
+    "stem_template": "Carbon-14 undergoes beta-minus decay. Which equation correctly represents this?",
+    "params": {},
+    "answer_template": "14/6 C → 14/7 N + 0/-1 e + antineutrino",
+    "distractor_templates": [
+      "14/6 C → 10/4 Be + 4/2 He",
+      "14/6 C → 14/5 B + 0/+1 e + neutrino",
+      "14/6 C → 13/6 C + 1/0 n"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\(^{14}_6\\\\)C \\\\(\\\\rightarrow\\\\) \\\\(^{14}_7\\\\)N + \\\\(^0_{-1}\\\\)e + \\\\(\\\\bar{\\\\nu}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(^{14}_6\\\\)C \\\\(\\\\rightarrow\\\\) \\\\(^{10}_4\\\\)Be + \\\\(^4_2\\\\)He (alpha decay)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(^{14}_6\\\\)C \\\\(\\\\rightarrow\\\\) \\\\(^{14}_5\\\\)B + \\\\(^0_{+1}\\\\)e (beta-plus, wrong nucleus)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(^{14}_6\\\\)C \\\\(\\\\rightarrow\\\\) \\\\(^{13}_6\\\\)C + \\\\(^1_0\\\\)n (neutron emission)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Beta-minus: neutron → proton + electron + antineutrino. Z: 6→7 (N formed). A unchanged: 14. [1 mark]",
+    "hints": [
+      "Beta-minus: Z increases by 1, A unchanged",
+      "Antineutrino is emitted in beta-minus decay"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "physics_E4_mcq_002",
+    "subject": "physics",
+    "topic": "E",
+    "subtopic": "E.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Binding Energy Curve Implications",
+    "tags": [
+      "binding-energy",
+      "fission",
+      "fusion",
+      "stability"
+    ],
+    "stem_template": "The binding energy per nucleon peaks near iron-56. Which statement follows from this?",
+    "params": {},
+    "answer_template": "Both fusion of light nuclei and fission of heavy nuclei can release energy",
+    "distractor_templates": [
+      "Only fission of heavy nuclei releases energy",
+      "Only fusion of light nuclei releases energy",
+      "Iron-56 releases the most energy in any nuclear reaction"
+    ],
+    "options_template": [
+      {
+        "text": "Both fusion (light → heavier) and fission (heavy → lighter, towards Fe-56) release energy",
+        "correct": true
+      },
+      {
+        "text": "Only fission releases energy; fusion is endothermic",
+        "correct": false
+      },
+      {
+        "text": "Only fusion releases energy; fission is endothermic",
+        "correct": false
+      },
+      {
+        "text": "Iron-56 releases the most energy when it undergoes fission",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Processes moving towards max BE/nucleon (Fe-56) release energy. Fusing light nuclei (H to He) and splitting heavy nuclei (U to medium-mass) both move toward the peak → energy released. [2 marks]",
+    "hints": [
+      "Higher BE/nucleon = more stable = lower energy",
+      "Moving toward Fe-56 peak always releases energy"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "phys_2_1_ms_001",
+    "subject": "physics",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Newton's Laws of Motion",
+    "tags": [
+      "mechanics",
+      "Newton's laws",
+      "forces"
+    ],
+    "stem_template": "Which of the following statements correctly apply Newton's Second Law (\\(F = ma\\))? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "A larger force on the same mass produces greater acceleration",
+        "correct": true
+      },
+      {
+        "text": "An object at rest has no forces acting on it",
+        "correct": false
+      },
+      {
+        "text": "If net force is zero, acceleration is zero",
+        "correct": true
+      },
+      {
+        "text": "Mass and weight are the same quantity",
+        "correct": false
+      },
+      {
+        "text": "The unit of force (Newton) equals kg·m·s⁻²",
+        "correct": true
+      }
+    ],
+    "mark_scheme_template": "TRUE: F∝a for constant m; net F=0 → a=0; N=kg·m·s⁻². FALSE: object at rest has balanced forces (e.g. gravity + normal); weight=mg≠m.",
+    "hints": [
+      "F=ma: net force determines acceleration.",
+      "Objects at rest still have gravity balanced by normal force."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "phys_4_1_ms_001",
+    "subject": "physics",
+    "topic": "4",
+    "subtopic": "4.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Wave Properties",
+    "tags": [
+      "waves",
+      "properties",
+      "SHM"
+    ],
+    "stem_template": "Which of the following correctly describe properties of transverse waves? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "Particle displacement is perpendicular to wave propagation direction",
+        "correct": true
+      },
+      {
+        "text": "Sound waves are transverse",
+        "correct": false
+      },
+      {
+        "text": "Light is an example of a transverse wave",
+        "correct": true
+      },
+      {
+        "text": "Transverse waves require a medium to travel through",
+        "correct": false
+      },
+      {
+        "text": "Amplitude affects the energy carried by the wave",
+        "correct": true
+      }
+    ],
+    "mark_scheme_template": "Transverse: perpendicular displacement; EM waves (light) are transverse; higher amplitude = more energy. FALSE: sound is longitudinal; EM waves (light) travel through vacuum — no medium needed.",
+    "hints": [
+      "Transverse: displacement ⊥ propagation.",
+      "Light is EM wave — it can travel through vacuum."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "phys_5_1_ms_001",
+    "subject": "physics",
+    "topic": "5",
+    "subtopic": "5.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Electrical Circuit Concepts",
+    "tags": [
+      "electricity",
+      "circuits",
+      "Ohm's law"
+    ],
+    "stem_template": "Which of the following are TRUE about components connected in SERIES in a circuit? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "The same current flows through all components",
+        "correct": true
+      },
+      {
+        "text": "The voltage is the same across all components",
+        "correct": false
+      },
+      {
+        "text": "Total resistance = sum of individual resistances",
+        "correct": true
+      },
+      {
+        "text": "If one component fails (open circuit), all components stop",
+        "correct": true
+      },
+      {
+        "text": "Total voltage = sum of individual voltages across each component",
+        "correct": true
+      }
+    ],
+    "mark_scheme_template": "Series: same current everywhere; total R=R₁+R₂+...; total V=V₁+V₂+...; one break stops all. FALSE: voltage DIVIDES (not equal) across components in series.",
+    "hints": [
+      "Series: one path for current → same current everywhere.",
+      "Compare with parallel circuits where voltage is shared equally."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "phys_2_1_calc_001",
+    "subject": "physics",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "calculation",
+    "difficulty": "core",
+    "title": "Projectile Motion Step-by-Step",
+    "tags": [
+      "kinematics",
+      "projectile",
+      "SUVAT",
+      "calculation"
+    ],
+    "stem_template": "A ball is launched horizontally at \\({{v}}\\) m/s from a height of \\({{h}}\\) m. Find the time to reach the ground and the horizontal range.",
+    "params": {
+      "v": {
+        "type": "int",
+        "min": 5,
+        "max": 25
+      },
+      "h": {
+        "type": "int",
+        "min": 5,
+        "max": 40
+      }
+    },
+    "answer_template": "{{v}} * math.sqrt(2 * {{h}} / 9.81)",
+    "steps_template": [
+      {
+        "label": "Step 1: Time to fall",
+        "content": "Vertical: \\(h = \\frac{1}{2}gt^2\\). Rearrange: \\(t = \\sqrt{\\dfrac{2h}{g}}\\).",
+        "type": "info"
+      },
+      {
+        "label": "Calculate time (s)",
+        "content": "\\(t = \\sqrt{\\dfrac{2 \\times {{h}}}{9.81}}\\). Give answer to 3 s.f.",
+        "type": "input",
+        "answer": "math.sqrt(2 * {{h}} / 9.81)",
+        "tolerance": 0.05,
+        "unit": "s"
+      },
+      {
+        "label": "Calculate horizontal range (m)",
+        "content": "Horizontal: \\(R = v \\times t = {{v}} \\times t\\). Give answer to 3 s.f.",
+        "type": "input",
+        "answer": "{{v}} * math.sqrt(2 * {{h}} / 9.81)",
+        "tolerance": 0.5,
+        "unit": "m"
+      }
+    ],
+    "mark_scheme_template": "\\(t = \\sqrt{2h/g} = \\sqrt{2 \\times {{h}} / 9.81} \\approx {{round(math.sqrt(2*h/9.81),2)}}\\) s; Range \\(= {{v}} \\times t \\approx {{round(answer,1)}}\\) m",
+    "hints": [
+      "Horizontal and vertical motion are independent.",
+      "Use g = 9.81 m/s²."
+    ],
+    "marks": 4
+  },
+  {
+    "id": "phys_2_1_ord_001",
+    "subject": "physics",
+    "topic": "2",
+    "subtopic": "2.1",
+    "type": "ordering",
+    "difficulty": "core",
+    "title": "SUVAT Problem-Solving Order",
+    "tags": [
+      "kinematics",
+      "SUVAT",
+      "method"
+    ],
+    "stem_template": "Arrange the following steps for solving a SUVAT kinematics problem in the CORRECT ORDER.",
+    "params": {},
+    "items": [
+      "Identify which SUVAT equation to use (contains the required variable and the known ones)",
+      "List all known quantities: s, u, v, a, t",
+      "Substitute values and calculate the unknown",
+      "Read the problem and define positive direction"
+    ],
+    "correct_order": [
+      3,
+      1,
+      0,
+      2
+    ],
+    "mark_scheme_template": "Correct order: (1) read + define direction; (2) list knowns; (3) select equation; (4) substitute and solve.",
+    "hints": [
+      "Always define positive direction first.",
+      "You need 3 knowns to find the 2 unknowns using one equation."
+    ],
+    "marks": 2
+  }
+]

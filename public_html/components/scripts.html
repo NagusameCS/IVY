@@ -1,0 +1,42 @@
+    <script>
+        // Menu toggle
+        const menuButton = document.getElementById('menuButton');
+        const sidebar = document.getElementById('sidebar');
+
+        if (menuButton && sidebar) {
+            menuButton.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                menuButton.classList.toggle('active');
+            });
+
+            // Close sidebar when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!sidebar.contains(e.target) && !menuButton.contains(e.target) && sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                    menuButton.classList.remove('active');
+                }
+            });
+        }
+
+        // Page view counter with retry logic
+        async function trackPageView() {
+            for (let i = 0; i < 3; i++) {
+                try {
+                    await fetch('/api', { method: 'GET', signal: AbortSignal.timeout(5000) });
+                    break;
+                } catch (error) {
+                    if (i === 2) console.warn('Analytics unavailable');
+                    await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1)));
+                }
+            }
+        }
+        
+        // Track page view when page becomes visible
+        if (document.visibilityState === 'visible') {
+            trackPageView();
+        } else {
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible') trackPageView();
+            }, { once: true });
+        }
+    </script>

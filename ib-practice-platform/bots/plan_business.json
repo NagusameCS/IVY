@@ -1,0 +1,408 @@
+[
+  {
+    "subject": "business",
+    "topic": "1",
+    "topic_name": "Introduction to Business Management",
+    "subtopic": "1.1",
+    "lesson_title": "What Is a Business?",
+    "level": "SL/HL",
+    "tags": [
+      "business-sectors",
+      "inputs-outputs",
+      "value-added"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "1",
+    "topic_name": "Introduction to Business Management",
+    "subtopic": "1.2",
+    "lesson_title": "Types of Business Entities",
+    "level": "SL/HL",
+    "tags": [
+      "sole-trader",
+      "partnership",
+      "corporation",
+      "cooperative"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "1",
+    "topic_name": "Introduction to Business Management",
+    "subtopic": "1.3",
+    "lesson_title": "Business Objectives",
+    "level": "SL/HL",
+    "tags": [
+      "profit",
+      "growth",
+      "social-objectives",
+      "ethical"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "1",
+    "topic_name": "Introduction to Business Management",
+    "subtopic": "1.4",
+    "lesson_title": "Stakeholders",
+    "level": "SL/HL",
+    "tags": [
+      "stakeholder-conflict",
+      "internal",
+      "external"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "1",
+    "topic_name": "Introduction to Business Management",
+    "subtopic": "1.5",
+    "lesson_title": "Growth and Evolution",
+    "level": "SL/HL",
+    "tags": [
+      "organic-growth",
+      "mergers",
+      "acquisitions",
+      "economies-of-scale"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "1",
+    "topic_name": "Introduction to Business Management",
+    "subtopic": "1.6",
+    "lesson_title": "Multinational Companies",
+    "level": "SL/HL",
+    "tags": [
+      "MNCs",
+      "globalization",
+      "FDI"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "2",
+    "topic_name": "Human Resource Management",
+    "subtopic": "2.1",
+    "lesson_title": "Introduction to HRM",
+    "level": "SL/HL",
+    "tags": [
+      "HR-planning",
+      "recruitment",
+      "appraisal"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "2",
+    "topic_name": "Human Resource Management",
+    "subtopic": "2.2",
+    "lesson_title": "Organizational Structure",
+    "level": "SL/HL",
+    "tags": [
+      "hierarchy",
+      "span-of-control",
+      "delegation",
+      "centralization"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "2",
+    "topic_name": "Human Resource Management",
+    "subtopic": "2.3",
+    "lesson_title": "Leadership and Management",
+    "level": "SL/HL",
+    "tags": [
+      "leadership-styles",
+      "autocratic",
+      "democratic",
+      "laissez-faire"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "2",
+    "topic_name": "Human Resource Management",
+    "subtopic": "2.4",
+    "lesson_title": "Motivation",
+    "level": "SL/HL",
+    "tags": [
+      "maslow",
+      "herzberg",
+      "taylor",
+      "motivation-theory"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "3",
+    "topic_name": "Finance and Accounts",
+    "subtopic": "3.1",
+    "lesson_title": "Sources of Finance",
+    "level": "SL/HL",
+    "tags": [
+      "internal-finance",
+      "external-finance",
+      "equity",
+      "debt"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "3",
+    "topic_name": "Finance and Accounts",
+    "subtopic": "3.2",
+    "lesson_title": "Costs and Revenues",
+    "level": "SL/HL",
+    "tags": [
+      "fixed-costs",
+      "variable-costs",
+      "revenue",
+      "break-even"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "3",
+    "topic_name": "Finance and Accounts",
+    "subtopic": "3.3",
+    "lesson_title": "Break-Even Analysis",
+    "level": "SL/HL",
+    "tags": [
+      "break-even-point",
+      "margin-of-safety",
+      "break-even-chart"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "3",
+    "topic_name": "Finance and Accounts",
+    "subtopic": "3.4",
+    "lesson_title": "Final Accounts",
+    "level": "SL/HL",
+    "tags": [
+      "profit-loss",
+      "balance-sheet",
+      "depreciation"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "3",
+    "topic_name": "Finance and Accounts",
+    "subtopic": "3.5",
+    "lesson_title": "Profitability and Liquidity Ratios",
+    "level": "HL",
+    "tags": [
+      "gross-profit-margin",
+      "net-profit-margin",
+      "current-ratio"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "3",
+    "topic_name": "Finance and Accounts",
+    "subtopic": "3.6",
+    "lesson_title": "Efficiency and Gearing Ratios",
+    "level": "HL",
+    "tags": [
+      "stock-turnover",
+      "debtor-days",
+      "gearing"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "3",
+    "topic_name": "Finance and Accounts",
+    "subtopic": "3.7",
+    "lesson_title": "Cash Flow",
+    "level": "SL/HL",
+    "tags": [
+      "cash-flow-forecast",
+      "working-capital"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "3",
+    "topic_name": "Finance and Accounts",
+    "subtopic": "3.8",
+    "lesson_title": "Investment Appraisal",
+    "level": "HL",
+    "tags": [
+      "payback",
+      "ARR",
+      "NPV",
+      "IRR"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "4",
+    "topic_name": "Marketing",
+    "subtopic": "4.1",
+    "lesson_title": "The Role of Marketing",
+    "level": "SL/HL",
+    "tags": [
+      "market-orientation",
+      "product-orientation",
+      "marketing-mix"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "4",
+    "topic_name": "Marketing",
+    "subtopic": "4.2",
+    "lesson_title": "Marketing Planning",
+    "level": "SL/HL",
+    "tags": [
+      "market-research",
+      "SWOT",
+      "segmentation",
+      "targeting",
+      "positioning"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "4",
+    "topic_name": "Marketing",
+    "subtopic": "4.3",
+    "lesson_title": "Sales Forecasting",
+    "level": "HL",
+    "tags": [
+      "moving-averages",
+      "extrapolation",
+      "seasonal-variation"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "4",
+    "topic_name": "Marketing",
+    "subtopic": "4.4",
+    "lesson_title": "The 4 Ps",
+    "level": "SL/HL",
+    "tags": [
+      "product",
+      "price",
+      "place",
+      "promotion",
+      "PLC"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "4",
+    "topic_name": "Marketing",
+    "subtopic": "4.5",
+    "lesson_title": "The Extended Marketing Mix",
+    "level": "SL/HL",
+    "tags": [
+      "people",
+      "process",
+      "physical-evidence",
+      "7Ps"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "5",
+    "topic_name": "Operations Management",
+    "subtopic": "5.1",
+    "lesson_title": "The Role of Operations",
+    "level": "SL/HL",
+    "tags": [
+      "production-methods",
+      "job",
+      "batch",
+      "flow"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "5",
+    "topic_name": "Operations Management",
+    "subtopic": "5.2",
+    "lesson_title": "Production Methods",
+    "level": "SL/HL",
+    "tags": [
+      "lean-production",
+      "JIT",
+      "kaizen",
+      "TQM"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "5",
+    "topic_name": "Operations Management",
+    "subtopic": "5.3",
+    "lesson_title": "Lean Production and QM",
+    "level": "SL/HL",
+    "tags": [
+      "quality-control",
+      "quality-assurance",
+      "benchmarking"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "5",
+    "topic_name": "Operations Management",
+    "subtopic": "5.4",
+    "lesson_title": "Location",
+    "level": "SL/HL",
+    "tags": [
+      "location-decisions",
+      "push-pull-factors"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "business",
+    "topic": "5",
+    "topic_name": "Operations Management",
+    "subtopic": "5.5",
+    "lesson_title": "Break-Even Analysis (Operations)",
+    "level": "SL/HL",
+    "tags": [
+      "capacity-utilization",
+      "outsourcing",
+      "offshoring"
+    ],
+    "practice_integration": true
+  }
+]

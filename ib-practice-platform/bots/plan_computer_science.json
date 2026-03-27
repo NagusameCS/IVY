@@ -1,0 +1,167 @@
+[
+  {
+    "subject": "computer_science",
+    "topic": "1",
+    "topic_name": "System Fundamentals",
+    "subtopic": "1.1",
+    "lesson_title": "Systems in Organizations",
+    "level": "SL/HL",
+    "tags": [
+      "system-planning",
+      "change-management"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "computer_science",
+    "topic": "1",
+    "topic_name": "System Fundamentals",
+    "subtopic": "1.2",
+    "lesson_title": "System Design Basics",
+    "level": "SL/HL",
+    "tags": [
+      "inputs",
+      "outputs",
+      "processes",
+      "feedback"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "computer_science",
+    "topic": "2",
+    "topic_name": "Computer Organization",
+    "subtopic": "2.1",
+    "lesson_title": "Computer Architecture",
+    "level": "SL/HL",
+    "tags": [
+      "CPU",
+      "ALU",
+      "control-unit",
+      "registers",
+      "buses"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "computer_science",
+    "topic": "2",
+    "topic_name": "Computer Organization",
+    "subtopic": "2.2",
+    "lesson_title": "Secondary Memory",
+    "level": "SL/HL",
+    "tags": [
+      "HDD",
+      "SSD",
+      "optical",
+      "RAM",
+      "ROM"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "computer_science",
+    "topic": "3",
+    "topic_name": "Networks",
+    "subtopic": "3.1",
+    "lesson_title": "Network Fundamentals",
+    "level": "SL/HL",
+    "tags": [
+      "LAN",
+      "WAN",
+      "protocols",
+      "TCP-IP",
+      "OSI"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "computer_science",
+    "topic": "3",
+    "topic_name": "Networks",
+    "subtopic": "3.2",
+    "lesson_title": "Data Transmission",
+    "level": "SL/HL",
+    "tags": [
+      "packet-switching",
+      "bandwidth",
+      "encryption"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "computer_science",
+    "topic": "4",
+    "topic_name": "Computational Thinking & Problem Solving",
+    "subtopic": "4.1",
+    "lesson_title": "General Principles",
+    "level": "SL/HL",
+    "tags": [
+      "abstraction",
+      "decomposition",
+      "pattern-recognition",
+      "algorithms"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "computer_science",
+    "topic": "4",
+    "topic_name": "Computational Thinking & Problem Solving",
+    "subtopic": "4.2",
+    "lesson_title": "Connecting Computational Thinking and Program Design",
+    "level": "SL/HL",
+    "tags": [
+      "flowcharts",
+      "pseudocode",
+      "trace-tables"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "computer_science",
+    "topic": "4",
+    "topic_name": "Computational Thinking & Problem Solving",
+    "subtopic": "4.3",
+    "lesson_title": "Introduction to Programming",
+    "level": "SL/HL",
+    "tags": [
+      "variables",
+      "loops",
+      "conditionals",
+      "arrays",
+      "functions"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "computer_science",
+    "topic": "5",
+    "topic_name": "Abstract Data Structures (HL)",
+    "subtopic": "5.1",
+    "lesson_title": "Abstract Data Structures",
+    "level": "HL",
+    "tags": [
+      "stacks",
+      "queues",
+      "linked-lists",
+      "trees",
+      "binary-trees"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "computer_science",
+    "topic": "5",
+    "topic_name": "Abstract Data Structures (HL)",
+    "subtopic": "5.2",
+    "lesson_title": "Recursion",
+    "level": "HL",
+    "tags": [
+      "recursive-thinking",
+      "base-case",
+      "call-stack"
+    ],
+    "practice_integration": true
+  }
+]

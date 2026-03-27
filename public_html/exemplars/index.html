@@ -1,0 +1,1139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVY EXEMPLARS</title>
+    <!-- CDN Router for intelligent resource loading -->
+    <script src="/js/cdn-router.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/themeManager.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/nc_assets/css/style.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <style>
+        :root {
+            --primary: #1a202c;
+            --primary-light: #1a202c;
+            --primary-dark: #f8fafc;
+            --accent: #E4EEE9;
+            --pillbg: #B7D2C0;
+            --pillhover: #9fc2ad;
+        }
+        /* Text color and background for dark/light mode */
+        body {
+            color: #1a202c;
+            background: #f8fafc;
+        }
+        body.dark-mode {
+            color: #f0f0f0;
+            background: #181818;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #f8fafc;
+            color: #1a202c;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main { flex: 1; }
+        /* Elegant Search Bar (from main index.html) */
+        .search-bar {
+            transition: all 0.3s cubic-bezier(.4,0,.2,1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-radius: 14px;
+            border: 2px solid #e5e7eb;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            padding: 0 0.5rem;
+        }
+        .search-bar:focus-within {
+            border-color: var(--pillbg);
+            box-shadow: 0 4px 15px rgba(35,53,45,0.13);
+            transform: translateY(-2px);
+        }
+        .search-icon {
+            color: #9ca3af;
+            font-size: 1.6rem;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .search-input {
+            width: 100%;
+            padding: 0.9rem 0.5rem 0.9rem 0.2rem;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            background: transparent;
+            color: inherit;
+        }
+        .search-input::placeholder {
+            color: #b0b0b0;
+            opacity: 1;
+        }
+        .search-suggestions {
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            background: #fff;
+            border-radius: 0 0 14px 14px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+            z-index: 20;
+            max-height: 260px;
+            overflow-y: auto;
+            animation: fadeInUp 0.25s cubic-bezier(.4,0,.2,1);
+        }
+        .search-suggestions.active { display: block; }
+        .search-suggestion {
+            padding: 1.1rem 1.5rem;
+            cursor: pointer;
+            font-size: 1.05rem;
+            border-bottom: 1px solid #f3f4f6;
+            background: transparent;
+            transition: background 0.18s;
+            opacity: 0;
+            animation: fadeIn 0.3s forwards;
+        }
+        .search-suggestion:last-child { border-bottom: none; }
+        .search-suggestion:hover {
+            background: #f3f4f6;
+        }
+        body.dark-mode .search-suggestions {
+            background: #23272e;
+            color: #f0f0f0;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
+        body.dark-mode .search-suggestion:hover {
+            background: #2c2c2c;
+        }
+        /* Fix for dark background in light mode */
+        body:not(.dark-mode) .search-bar {
+            background: #f8fafc;
+            color: #1a202c;
+        }
+        body:not(.dark-mode) .search-input {
+            background: #f8fafc;
+            color: #1a202c;
+        }
+        body:not(.dark-mode) .search-suggestions {
+            background: #fff;
+            color: #1a202c;
+        }
+        body:not(.dark-mode) .search-suggestion:hover {
+            background: #f3f4f6;
+            color: #1a202c;
+        }
+        .data-table th, .data-table td {
+            padding: 20px 18px;
+            font-size: 1.08rem;
+        }
+        .data-table tbody tr {
+            cursor: pointer;
+            border-bottom: 2.5px solid #e5e7eb;
+            transition: background 0.18s, box-shadow 0.18s, border-color 0.18s, transform 0.18s;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+            animation-delay: 0.1s;
+            padding-top: 0.7rem;
+            padding-bottom: 0.7rem;
+        }
+        .data-table tbody tr:hover {
+            background: #f3f4f6;
+            box-shadow: 0 2px 8px rgba(60,60,60,0.07);
+            border-color: #b7d2c0;
+            transform: scale(1.01);
+        }
+        body.dark-mode .data-table tbody tr {
+            border-bottom: 2.5px solid #333;
+        }
+        body.dark-mode .data-table tbody tr:hover {
+            background: #23272e;
+            border-color: #9fc2ad;
+        }
+        .data-table th, .data-table td {
+            padding-top: 0.7rem;
+            padding-bottom: 0.7rem;
+        }
+
+        /* Dropdown pills */
+        .filter-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .filter-button {
+            background-color: var(--pillbg);
+            transition: all 0.2s;
+            padding: 0.5rem 2.5rem 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            min-width: 120px;
+            text-align: left;
+            border: none;
+            outline: none;
+            position: relative;
+            color: #1a202c;
+            margin-right: 0.5rem;
+        }
+        body.dark-mode .filter-button {
+            background: #333;
+            color: #f0f0f0;
+        }
+        .filter-button:after {
+            content: 'â–¼';
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+        }
+        .filter-button:hover, .filter-button.active {
+            background-color: var(--pillhover);
+            color: #181818;
+        }
+        body.dark-mode .filter-button:hover, body.dark-mode .filter-button.active {
+            background: #9fc2ad;
+            color: #181818;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            z-index: 10;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 0.5rem;
+            left: 0;
+            right: 0;
+            animation: fadeInUp 0.2s;
+        }
+        body.dark-mode .dropdown-content {
+            background: #23272e;
+            color: #f0f0f0;
+        }
+        .dropdown-content.show { display: block; }
+        .dropdown-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background 0.18s, color 0.18s;
+            font-size: 1.01rem;
+        }
+        .dropdown-item:hover {
+            background: #e4eee9;
+            color: #1a202c;
+        }
+        body.dark-mode .dropdown-item:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        /* Tabs visual divider and hover */
+        .tab-button {
+            border: none;
+            background: none;
+            outline: none;
+            cursor: pointer;
+            transition: color 0.18s, border-color 0.18s, background 0.18s;
+            color: #1a202c;
+            border-bottom: 2.5px solid transparent;
+            margin-bottom: -2.5px;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+        .tab-button.active {
+            color: #39a95d;
+            border-bottom: 2.5px solid #39a95d;
+            background: rgba(74,124,114,0.07);
+        }
+        .tab-button:hover {
+            color: #1a202c;
+            background: #e4eee9;
+        }
+        body.dark-mode .tab-button {
+            color: #f0f0f0;
+        }
+        body.dark-mode .tab-button.active {
+            color: #39a95d;
+            border-bottom: 2.5px solid #39a95d;
+            background: #23272e;
+        }
+        body.dark-mode .tab-button:hover {
+            color: #fff;
+            background: #333;
+        }
+        /* --- DARK MODE --- */
+        body.dark-mode {
+            background-color: #181818;
+            color: #f0f0f0;
+        }
+        body.dark-mode .search-bar {
+            background: #23272e;
+            border-color: #333;
+        }
+        body.dark-mode .search-input {
+            color: #f0f0f0;
+        }
+        body.dark-mode .search-input::placeholder {
+            color: #b0b0b0;
+        }
+        body.dark-mode .search-suggestions {
+            background: #23272e;
+            color: #f0f0f0;
+        }
+        body.dark-mode .search-suggestion:hover {
+            background: #2c2c2c;
+        }
+        body.dark-mode .data-table {
+            background: #23272e;
+            color: #f0f0f0;
+        }
+        body.dark-mode .data-table th {
+            background: #23272e;
+            color: #f0f0f0;
+            border-bottom-color: #333;
+        }
+        body.dark-mode .data-table td {
+            border-bottom-color: #333;
+        }
+        body.dark-mode .data-table tbody tr:hover {
+            background: #23272e;
+        }
+        body.dark-mode .dropdown-content {
+            background: #23272e;
+            color: #f0f0f0;
+        }
+        body.dark-mode .dropdown-item:hover {
+            background: #2c2c2c;
+        }
+        body.dark-mode .filter-button {
+            background: #333;
+            color: #f0f0f0;
+        }
+        body.dark-mode .filter-button:hover, body.dark-mode .filter-button.active {
+            background: #444;
+        }
+        /* --- MENU/SIDEBAR --- */
+        .menu-button {
+            position: fixed;
+            top: 18px;
+            left: 18px;
+            z-index: 1000;
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .menu-button .line {
+            width: 20px;
+            height: 2px;
+            background: currentColor;
+            position: absolute;
+            transition: all 0.3s ease;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1001;
+        }
+        .menu-button .line::before,
+        .menu-button .line::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: currentColor;
+            transition: all 0.3s ease;
+            left: 0;
+        }
+        .menu-button .line::before { transform: translateY(-8px); }
+        .menu-button .line::after { transform: translateY(8px); }
+        .menu-button.active .line { background: transparent !important; }
+        .menu-button.active .line::before { transform: rotate(45deg); }
+        .menu-button.active .line::after { transform: rotate(-45deg); }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100%;
+            background: white;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            transition: left 0.3s ease;
+            overflow-y: auto;
+        }
+        
+        .sidebar.active {
+            left: 0;
+        }
+        
+        .sidebar-content {
+            padding: 80px 20px 20px;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-menu-item {
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .nav-menu-item:hover {
+            background-color: rgba(74, 124, 114, 0.1);
+            text-decoration: none; /* Remove underline */
+        }
+        
+        body.dark-mode .nav-menu-item {
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .nav-menu-item:hover {
+            background-color: rgba(74, 124, 114, 0.2);
+            text-decoration: none; /* Remove underline */
+        }
+        
+        .sidebar-footer {
+            padding: 20px;
+            border-top: 2px solid rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+        }
+        
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #181818;
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .menu-button .line,
+        body.dark-mode .menu-button .line::before,
+        body.dark-mode .menu-button .line::after {
+            background: #f0f0f0;
+        }
+        
+        body.dark-mode .sidebar {
+            background: #242424;
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .nav-menu-item {
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .nav-menu-item:hover {
+            background-color: rgba(74, 124, 114, 0.2);
+        }
+        
+        body.dark-mode .sidebar-footer {
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .bg-white {
+            background-color: #242424 !important;
+            color: #f0f0f0 !important;
+        }
+        
+        body.dark-mode .text-gray-600 {
+            color: #a0aec0 !important;
+        }
+        
+        body.dark-mode .border-gray-200 {
+            border-color: #2d3748 !important;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* General padding for main content */
+        main, .max-w-7xl, .max-w-3xl {
+            padding-left: 2.5rem !important;
+            padding-right: 2.5rem !important;
+        }
+        @media (max-width: 640px) {
+            main, .max-w-7xl, .max-w-3xl {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+
+            .dark\:bg-gray-700 {
+                background-color: rgba(188, 209, 193, 0.4) !important;
+            }
+        }
+        /* Hidden container for PDF links */
+        #pdf-container {
+            display: none;
+        }
+    </style>
+</head>
+<body onload="if(typeof ThemeManager!=='undefined')ThemeManager.initialize()">
+    <!-- Hidden container for PDF links -->
+    <div id="pdf-container"></div>
+    
+    <script>
+        /**
+         * Creates and triggers a clean PDF viewer/download for GitHub raw URLs
+         * @param {string} pdfUrl - The GitHub raw URL for the PDF
+         */
+        function viewPDF(pdfUrl) {
+            // Clear any existing links
+            const container = document.getElementById('pdf-container');
+            container.innerHTML = '';
+            
+            // Create new anchor element
+            const link = document.createElement('a');
+            link.href = pdfUrl;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            
+            // Add to container
+            container.appendChild(link);
+            
+            // Trigger click
+            link.click();
+        }
+    </script>
+    
+    <!-- MENU & SIDEBAR -->
+    <button class="menu-button" id="menuButton" aria-label="Toggle Menu">
+        <div class="line"></div>
+    </button>
+
+    
+
+
+
+
+    <div class="sidebar" id="sidebar">
+         <div class="sidebar-content">
+            <nav class="nav-menu">
+                <a href="/info" class="nav-menu-item">
+                    <span class="material-symbols-outlined">planner_review</span>
+                    Stats
+                </a>
+                <a href="/" class="nav-menu-item">
+                    <span class="material-symbols-outlined">search</span>
+                    Search Lessons
+                </a>
+                <a href="/ib-practice-platform/" class="nav-menu-item">
+                    <span class="material-symbols-outlined">quiz</span>
+                    Practice
+                </a>
+                <a href="/exemplars" class="nav-menu-item">
+                    <span class="material-symbols-outlined">library_books</span>
+                    IA/EE Exemplars
+                </a>
+                <a href="/timer" class="nav-menu-item">
+                    <span class="material-symbols-outlined">timer</span>
+                    Exam Timer
+                </a>
+                <a href="https://opennotes.pages.dev/" class="nav-menu-item" target="_blank">
+                    <span class="material-symbols-outlined">note_stack</span>
+                    OpenNotes
+                </a>
+                <a href="https://github.com/NagusameCS/IVY" class="nav-menu-item">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 0C5.37 0 0 5.373 0 12c0 5.303 
+                        3.438 9.8 8.205 11.387.6.113.82-.258.82-.577
+                        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
+                        -.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729
+                        1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998
+                        .108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.933
+                        0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176
+                        0 0 1.005-.322 3.3 1.23a11.52 11.52 0 013.003-.403
+                        c1.02.005 2.045.137 3.003.403 2.28-1.552 3.285-1.23
+                        3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91
+                        1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.21
+                        0 1.595-.015 2.88-.015 3.27 0 .315.21.69.825.57C20.565 
+                        21.795 24 17.295 24 12c0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="/teachers" class="nav-menu-item">
+                    <span class="material-symbols-outlined">school</span>
+                    For Educators
+                </a>
+            </nav>
+        </div>
+        <div class="sidebar-footer">
+            <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-600 dark:text-gray-400">Theme</span>
+                <button id="sidebarDarkModeToggle" onclick="if(typeof ThemeManager!=='undefined')ThemeManager.toggle()" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <span class="material-symbols-outlined text-lg theme-toggle-icon">light_mode</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <main class="p-6 pt-20 flex-grow flex items-center justify-center">
+        <!-- Under Construction Page -->
+        <div class="text-center max-w-2xl px-6">
+            <!-- IVY Logo -->
+            <div class="mb-8 flex justify-center">
+                <img src="/favicon.png" alt="IVY Study" class="w-24 h-24">
+            </div>
+            
+            <!-- Status Code Style -->
+            <h1 class="text-7xl font-bold text-gray-200 dark:text-gray-700 mb-4">474</h1>
+            
+            <!-- Title -->
+            <h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Page Under Construction</h2>
+            
+            <!-- Description -->
+            <p class="text-xl text-gray-600 dark:text-gray-400 mb-2">The IA/EE Exemplars section is currently being developed.</p>
+            <p class="text-lg text-gray-500 dark:text-gray-500 mb-8">We're working hard to bring you a curated collection of student-submitted exemplars for Internal Assessments and Extended Essays.</p>
+            
+            <!-- Call to Action -->
+            <div class="bg-blue-50 dark:bg-gray-800 rounded-lg p-8 mb-8 border border-blue-200 dark:border-gray-700">
+                <p class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Want to contribute?</p>
+                <p class="text-gray-700 dark:text-gray-400 mb-4">If you have an exemplary IA or EE you'd like to share with the community, we'd love to feature it!</p>
+                <p class="text-gray-600 dark:text-gray-500">
+                    Send your submission to: 
+                    <a href="mailto:nagusamecs@gmail.com" class="font-bold text-blue-600 dark:text-blue-400 hover:underline">
+                        nagusamecs@gmail.com
+                    </a>
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-600 mt-4">Please include your name, subject, and a brief description of your work.</p>
+            </div>
+            
+            <!-- Estimated Timeline -->
+            <p class="text-sm text-gray-500 dark:text-gray-500 mb-8">Expected launch: Q3 2026</p>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center mt">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">IVYSTUDY Content © 2025 is licensed under CC BY-NC-SA 4.0</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#terms" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">Terms</a>
+                    <a href="#privacy" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">Privacy</a>
+                    <a href="#contact" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">Contact</a>
+                    <a href="https://github.com/NagusameCS/IVY/tree/main" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.933 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 013.003-.403c1.02.005 2.045.137 3.003.403 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.21 0 1.595-.015 2.88-.015 3.27 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>GitHub
+                    </a>
+                    <a href="/info" id="viewer-count" class="group flex items-center gap-1 text-gray-500 dark:text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12s3.75-6.75 9.75-6.75S21.75 12 21.75 12s-3.75 6.75-9.75 6.75S2.25 12 2.25 12z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <span id="viewer-count-text" class="text-gray-500 dark:text-gray-400">Loading...</span>
+                    </a>
+                    <script>
+                    function formatCount(n) {
+                        if (n < 1000) return n.toString();
+                        if (n < 10000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+                        if (n < 1_000_000) return Math.floor(n / 1000) + 'k';
+                        return (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+                    }
+                    fetch('/api/')
+                        .then(res => res.text())
+                        .then(text => {
+                            const count = parseInt(text, 10);
+                            document.getElementById('viewer-count-text').textContent = formatCount(count);
+                        })
+                        .catch(() => {
+                            document.getElementById('viewer-count-text').textContent = '\u2014';
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- HIDDEN DARK MODE BUTTON (for keyboard accessibility, matches main index.html) -->
+    <button id="dark-mode-toggle" class="fixed bottom-4 right-4 p-3 rounded-full bg-transparent shadow-md -z-50 opacity-0 pointer-events-none">
+        <span class="material-symbols-outlined">dark_mode</span>
+    </button>
+    <script>
+        // Utility functions for search
+        function levenshteinDistance(str1, str2) {
+            const m = str1.length;
+            const n = str2.length;
+            const dp = Array(m + 1).fill(null).map(() => Array(n + 1).fill(0));
+
+            for (let i = 0; i <= m; i++) dp[i][0] = i;
+            for (let j = 0; j <= n; j++) dp[0][j] = j;
+
+            for (let i = 1; i <= m; i++) {
+                for (let j = 1; j <= n; j++) {
+                    const cost = str1[i - 1] === str2[j - 1] ? 0 : 1;
+                    dp[i][j] = Math.min(
+                        dp[i - 1][j] + 1,
+                        dp[i][j - 1] + 1,
+                        dp[i - 1][j - 1] + cost
+                    );
+                }
+            }
+            return dp[m][n];
+        }
+
+        function hungarianAlgorithm(costMatrix) {
+            const n = Math.max(costMatrix.length, costMatrix[0].length);
+            const matrix = Array(n).fill().map(() => Array(n).fill(Infinity));
+            
+            // Copy original matrix and pad if necessary
+            for (let i = 0; i < costMatrix.length; i++) {
+                for (let j = 0; j < costMatrix[0].length; j++) {
+                    matrix[i][j] = costMatrix[i][j];
+                }
+            }
+
+            // Step 1: Subtract row minima
+            for (let i = 0; i < n; i++) {
+                const minVal = Math.min(...matrix[i]);
+                for (let j = 0; j < n; j++) {
+                    if (matrix[i][j] !== Infinity) {
+                        matrix[i][j] -= minVal;
+                    }
+                }
+            }
+
+            // Step 2: Subtract column minima
+            for (let j = 0; j < n; j++) {
+                const minVal = Math.min(...matrix.map(row => row[j]));
+                for (let i = 0; i < n; i++) {
+                    if (matrix[i][j] !== Infinity) {
+                        matrix[i][j] -= minVal;
+                    }
+                }
+            }
+
+            // Find minimum number of lines to cover all zeros
+            const rowCover = Array(n).fill(false);
+            const colCover = Array(n).fill(false);
+            const matches = [];
+            
+            // Simple matching algorithm
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < n; j++) {
+                    if (matrix[i][j] === 0 && !rowCover[i] && !colCover[j]) {
+                        matches.push([i, j]);
+                        rowCover[i] = true;
+                        colCover[j] = true;
+                    }
+                }
+            }
+
+            return matches;
+        }
+
+        function searchExemplars(query, exemplars) {
+            if (!query) return exemplars;
+            
+            query = query.toLowerCase();
+            const queryWords = query.split(/\s+/);
+            
+            // Prepare search data
+            const searchableExemplars = exemplars.map(exemplar => {
+                const titleWords = exemplar.title.toLowerCase().split(/\s+/);
+                const tagWords = exemplar.tags ? exemplar.tags.map(tag => tag.toLowerCase()) : [];
+                return {
+                    ...exemplar,
+                    titleWords,
+                    tagWords,
+                    score: 0
+                };
+            });
+
+            // Calculate Levenshtein distances for all words
+            searchableExemplars.forEach(exemplar => {
+                let minDistances = [];
+                
+                // For each query word, find its best match in title and tags
+                queryWords.forEach(qWord => {
+                    let bestDistance = Infinity;
+                    
+                    // Check title words
+                    exemplar.titleWords.forEach(word => {
+                        const distance = levenshteinDistance(qWord, word);
+                        bestDistance = Math.min(bestDistance, distance);
+                    });
+                    
+                    // Check tags
+                    exemplar.tagWords.forEach(tag => {
+                        const distance = levenshteinDistance(qWord, tag);
+                        bestDistance = Math.min(bestDistance, distance);
+                    });
+                    
+                    minDistances.push(bestDistance);
+                });
+
+                // Create cost matrix for Hungarian algorithm
+                const costMatrix = minDistances.map(distance => [distance]);
+                
+                // Apply Hungarian algorithm
+                const matches = hungarianAlgorithm(costMatrix);
+                
+                // Calculate final score based on matches
+                exemplar.score = matches.reduce((sum, [i, j]) => sum + costMatrix[i][j], 0);
+                
+                // Bonus points for exact matches
+                if (exemplar.title.toLowerCase().includes(query)) {
+                    exemplar.score -= 10;
+                }
+                if (exemplar.tags && exemplar.tags.some(tag => tag.toLowerCase().includes(query))) {
+                    exemplar.score -= 5;
+                }
+            });
+
+            // Sort by score (lower is better)
+            searchableExemplars.sort((a, b) => a.score - b.score);
+            
+            // Filter out very poor matches (threshold can be adjusted)
+            const threshold = queryWords.length * 3;
+            return searchableExemplars
+                .filter(exemplar => exemplar.score <= threshold)
+                .map(exemplar => ({
+                    ...exemplar,
+                    titleWords: undefined,
+                    tagWords: undefined,
+                    score: undefined
+                }));
+        }
+
+        // Menu & Sidebar Logic
+        const menuButton = document.getElementById('menuButton');
+        const sidebar = document.getElementById('sidebar');
+
+        function toggleMenu() {
+            menuButton.classList.toggle('active');
+            sidebar.classList.toggle('active');
+        }
+
+        menuButton.addEventListener('click', toggleMenu);
+
+        document.addEventListener('click', (e) => {
+            if (!menuButton.contains(e.target) && !sidebar.contains(e.target) && sidebar.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+
+        // Dark Mode Logic â€” handled by ThemeManager
+        // ThemeManager.initialize() is called on body onload
+        // Sidebar toggle button uses onclick="ThemeManager.toggle()"
+
+        let exemplarsData = [];
+        let currentFilters = { grade: 'all', year: 'all', level: 'all', type: 'IA' };
+        let gradeTypes = { IA: { type: 'numeric', values: ['7', '6', '5', '4', '3', '2', '1'] }, EE: { type: 'letter', values: ['A', 'B', 'C', 'D', 'E'] } };
+
+        function initializeFilters() {
+            // Initialize year dropdown
+            const years = [...new Set(exemplarsData.map(item => item.year))].sort((a, b) => b - a);
+            const yearDropdown = document.getElementById('year-dropdown');
+            yearDropdown.innerHTML = `
+                <div class="dropdown-item" data-value="all">All Years</div>
+                ${years.map(year => `<div class="dropdown-item" data-value="${year}">${year}</div>`).join('')}
+            `;
+
+            // Initialize grade dropdown based on current type
+            updateGradeDropdown(currentFilters.type);
+
+            // Add click handlers for all dropdowns
+            document.querySelectorAll('.filter-dropdown').forEach(dropdown => {
+                const button = dropdown.querySelector('.filter-button');
+                const content = dropdown.querySelector('.dropdown-content');
+
+                // Clear existing listener if any
+                button.onclick = null;
+                
+                // Add new click listener
+                button.onclick = (e) => {
+                    e.stopPropagation();
+                    // Close other dropdowns
+                    document.querySelectorAll('.dropdown-content').forEach(dc => {
+                        if (dc !== content) {
+                            dc.classList.remove('show');
+                        }
+                    });
+                    content.classList.toggle('show');
+                };
+
+                // Add click handlers for dropdown items
+                content.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.onclick = (e) => {
+                        e.stopPropagation();
+                        const value = item.dataset.value;
+                        const filterType = button.dataset.filter;
+                        currentFilters[filterType] = value;
+                        button.textContent = `${filterType.charAt(0).toUpperCase() + filterType.slice(1)}: ${item.textContent}`;
+                        content.classList.remove('show');
+                        applyFilters();
+                    };
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.filter-dropdown')) {
+                    document.querySelectorAll('.dropdown-content').forEach(content => {
+                        content.classList.remove('show');
+                    });
+                }
+            });
+        }
+
+        function updateGradeDropdown(type) {
+            const gradeDropdown = document.getElementById('grade-dropdown');
+            const grades = gradeTypes[type];
+            
+            gradeDropdown.innerHTML = `
+                <div class="dropdown-item" data-value="all">All Grades</div>
+                ${grades.values.map(grade => `
+                    <div class="dropdown-item" data-value="${grade}">${grade}</div>
+                `).join('')}
+            `;
+
+            // Reset grade filter
+            currentFilters.grade = 'all';
+            const gradeButton = document.querySelector('[data-filter="grade"]');
+            if (gradeButton) {
+                gradeButton.textContent = 'Grade: All';
+            }
+
+            // Reattach click handlers for the grade dropdown items
+            const content = gradeDropdown;
+            content.querySelectorAll('.dropdown-item').forEach(item => {
+                item.onclick = (e) => {
+                    e.stopPropagation();
+                    const value = item.dataset.value;
+                    currentFilters.grade = value;
+                    gradeButton.textContent = `Grade: ${item.textContent}`;
+                    content.classList.remove('show');
+                    applyFilters();
+                };
+            });
+        }
+
+        // --- Tabs Functionality ---
+        const tabButtons = document.querySelectorAll('.tab-button');
+
+        function updateActiveTab() {
+            tabButtons.forEach(btn => {
+                if (btn.dataset.type === currentFilters.type) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                currentFilters.type = this.dataset.type;
+                updateActiveTab();
+                updateGradeDropdown(currentFilters.type);
+                applyFilters();
+            });
+        });
+
+        // Initialize when the page loads
+        async function fetchExemplarsData(retries = 3) {
+            const urls = [
+                '/exemplars/struct.json',
+                'https://raw.githubusercontent.com/NagusameCS/Exemplars/main/struct.json',
+                'https://cdn.jsdelivr.net/gh/NagusameCS/Exemplars@main/struct.json'
+            ];
+            for (let attempt = 0; attempt < retries; attempt++) {
+                for (const url of urls) {
+                    try {
+                        const response = await fetch(url, { cache: attempt > 0 ? 'reload' : 'default' });
+                        if (!response.ok) continue;
+                        exemplarsData = await response.json();
+                        initializeFilters();
+                        updateActiveTab();
+                        displayExemplars(exemplarsData);
+                        return;
+                    } catch (e) {
+                        console.warn(`Fetch attempt ${attempt+1} failed for ${url}:`, e);
+                    }
+                }
+                if (attempt < retries - 1) await new Promise(r => setTimeout(r, 1000 * (attempt + 1)));
+            }
+            console.error('All fetch attempts failed for exemplars data');
+            document.getElementById('exemplars-table-body').innerHTML = `
+                <tr>
+                    <td colspan="6" class="text-center text-red-500 py-4">
+                        Failed to load exemplars. Please try again later.
+                        <br><button onclick="fetchExemplarsData()" class="mt-2 px-4 py-1 bg-green-600 text-white rounded-lg hover:bg-green-700 text-sm">Retry</button>
+                    </td>
+                </tr>
+            `;
+        }
+
+        // --- Update displayExemplars to add more divider and less vertical padding ---
+        function displayExemplars(exemplars) {
+            const tbody = document.getElementById('exemplars-table-body');
+            const noResults = document.getElementById('no-results');
+            if (exemplars.length === 0) {
+                tbody.innerHTML = '';
+                noResults.classList.remove('hidden');
+                return;
+            }
+            noResults.classList.add('hidden');
+            tbody.innerHTML = exemplars.map(exemplar => `
+                <tr tabindex="0" class="group hover:shadow-md transition-all">
+                    <td class="font-medium">${exemplar.title}</td>
+                    <td class="uppercase">${exemplar.level}</td>
+                    <td>${exemplar.year}</td>
+                    <td>
+                        <span class="grade-badge grade-${exemplar.grade.toString().toLowerCase()}">
+                            ${exemplar.type === 'IA' ? `${exemplar.grade}/7` : ` ${exemplar.grade}`}
+                        </span>
+                    </td>
+                    <td>
+                        <div class="flex flex-wrap gap-1">
+                            ${(exemplar.tags||[]).map(tag => `
+                                <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">${tag}</span>
+                            `).join('')}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="action-links">
+                            <a href="https://raw.githubusercontent.com/NagusameCS/Exemplars/main/${exemplar.filename}" download class="action-link">
+                               <span class="material-symbols-outlined">download</span>
+
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // Search input handler
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            applyFilters();
+        });
+
+        // --- Dynamic Search Suggestions ---
+        const searchInput = document.getElementById('search-input');
+        const searchSuggestions = document.getElementById('search-suggestions');
+        let lastSuggestions = [];
+        searchInput.addEventListener('input', (event) => {
+            const query = event.target.value.trim().toLowerCase();
+            if (!query) {
+                searchSuggestions.classList.remove('active');
+                searchSuggestions.innerHTML = '';
+                applyFilters();
+                return;
+            }
+            // Get top 3 results (title/tag match, case-insensitive)
+            let filtered = exemplarsData.filter(item =>
+                item.title.toLowerCase().includes(query) ||
+                (item.tags && item.tags.some(tag => tag.toLowerCase().includes(query)))
+            ).slice(0, 3);
+            // If not enough, add fuzzy matches
+            if (filtered.length < 3) {
+                const more = exemplarsData.filter(item =>
+                    !filtered.includes(item) &&
+                    (item.title.toLowerCase().split(' ').some(word => word.startsWith(query)) ||
+                    (item.tags && item.tags.some(tag => tag.toLowerCase().startsWith(query))))
+                ).slice(0, 3 - filtered.length);
+                filtered = filtered.concat(more);
+            }
+            // Render suggestions
+            if (filtered.length > 0) {
+                searchSuggestions.innerHTML = filtered.map((item, i) => `
+                    <div class="search-suggestion" style="animation-delay:${i*0.07}s" onclick="document.getElementById('search-input').value='${item.title.replace(/'/g, "\'")}';applyFilters();searchSuggestions.classList.remove('active');">
+                        <span class="font-semibold">${item.title}</span>
+                        <span class="ml-2 text-xs text-gray-500">${item.tags ? item.tags.join(', ') : ''}</span>
+                    </div>
+                `).join('');
+                searchSuggestions.classList.add('active');
+            } else {
+                searchSuggestions.innerHTML = `<div class='search-suggestion'>No results</div>`;
+                searchSuggestions.classList.add('active');
+            }
+            applyFilters();
+        });
+        // Hide suggestions on blur
+        searchInput.addEventListener('blur', () => {
+            setTimeout(() => searchSuggestions.classList.remove('active'), 120);
+        });
+
+        // Filter function
+        function applyFilters() {
+            let filtered = [...exemplarsData];
+
+            // Filter by type first (IA or EE)
+            filtered = filtered.filter(item => item.type === currentFilters.type);
+
+            // Apply grade filter
+            if (currentFilters.grade !== 'all') {
+                filtered = filtered.filter(item => item.grade.toString() === currentFilters.grade.toString());
+            }
+
+            // Apply year filter
+            if (currentFilters.year !== 'all') {
+                filtered = filtered.filter(item => item.year.toString() === currentFilters.year.toString());
+            }
+
+            // Apply level filter (HL/SL)
+            if (currentFilters.level !== 'all') {
+                filtered = filtered.filter(item => item.level.toLowerCase() === currentFilters.level.toLowerCase());
+            }
+
+            // Ensure active tab reflects current type
+            updateActiveTab();
+
+            // Apply search if there's a query
+            const searchQuery = document.getElementById('search-input').value.trim();
+            if (searchQuery) {
+                filtered = searchExemplars(searchQuery, filtered);
+            }
+
+            // Display the filtered results
+            displayExemplars(filtered);
+
+            // Update the No Results message
+            const noResults = document.getElementById('no-results');
+            if (filtered.length === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        // Initialize the page
+        fetchExemplarsData();
+    </script>
+</body>
+</html>
+

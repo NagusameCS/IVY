@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IVYSTUDY - For Educators</title>
+    <!--#include virtual="/components/head.html" -->
+    <!--#include virtual="/components/styles.html" -->
+</head>
+<body class="min-h-screen" onload="if(typeof ThemeManager!=='undefined')ThemeManager.initialize()">
+
+    <!--#include virtual="/components/navigation.html" -->
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-20 pb-16">
+
+        <!-- Hero -->
+        <div class="hero-section">
+            <div class="relative z-10">
+                <span class="material-symbols-outlined text-5xl mb-4 block" style="color:#4ade80">school</span>
+                <h1 class="text-4xl font-bold mb-3">For Educators</h1>
+                <p class="text-lg text-gray-300 max-w-2xl">IVYSTUDY is a free, open-source IB resource platform built by students, for students — and designed to work alongside your teaching, not replace it.</p>
+            </div>
+        </div>
+
+        <!-- What is IVY -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6">What is IVYSTUDY?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="feature-card">
+                    <span class="material-symbols-outlined text-3xl mb-3" style="color:#39a95d">auto_stories</span>
+                    <h3 class="font-semibold text-lg mb-2">Free Study Guides</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Over 100 curriculum-aligned guides covering all major IB subjects with diagrams, examples, and practice problems — all completely free.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="material-symbols-outlined text-3xl mb-3" style="color:#39a95d">diversity_3</span>
+                    <h3 class="font-semibold text-lg mb-2">Community-Driven</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Content is contributed and reviewed by IB students and recent graduates. Open-source on GitHub for transparency and collaboration.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="material-symbols-outlined text-3xl mb-3" style="color:#39a95d">devices</span>
+                    <h3 class="font-semibold text-lg mb-2">Works Everywhere</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Web-based with offline support. Students can access content on any device — phones, tablets, Chromebooks, or laptops. No app download required.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Teachers Use It -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6">How Educators Use IVYSTUDY</h2>
+            <div class="space-y-6">
+                <div class="flex gap-4 items-start">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Supplement Classroom Lessons</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Assign specific guides as pre-reading or review material. Each guide is concise and aligned to IB syllabus topics, making them easy to integrate into your lesson plans.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Share Direct Links</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Use deep links to share specific lessons directly with students via Google Classroom, email, or your LMS. Students land right on the content — no searching needed.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Exam Preparation</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Use our <a href="/timer" class="text-green-600 hover:underline">Exam Timer</a> for timed practice sessions in class. Presets for every IB paper with per-question pacing.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3 class="font-semibold text-lg">IA/EE Reference</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Direct students to our <a href="/exemplars" class="text-green-600 hover:underline">IA/EE Exemplars</a> library to see real examples of successful work, scored and categorized by subject and grade.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <div class="step-number">5</div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Contribute Content</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">IVYSTUDY is open-source. Educators can contribute guides, suggest corrections, or help review content through our <a href="https://github.com/NagusameCS/IVY" class="text-green-600 hover:underline" target="_blank">GitHub repository</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+            <div>
+                <details class="faq-item">
+                    <summary>Is IVYSTUDY free to use? <span class="material-symbols-outlined faq-arrow">expand_more</span></summary>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">Yes, completely free. IVYSTUDY is an open-source project. There are no ads, no subscriptions, and no paywalls. All content is licensed under Creative Commons BY-NC-SA 4.0.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is the content aligned to the IB curriculum? <span class="material-symbols-outlined faq-arrow">expand_more</span></summary>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">Content is written by IB students and organized by syllabus topic. While we strive for accuracy, we recommend using IVYSTUDY as a supplement alongside official IB resources and textbooks.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I share content with my students? <span class="material-symbols-outlined faq-arrow">expand_more</span></summary>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">Absolutely! You can share direct links to any lesson. Content is designed to be shared — the Creative Commons license allows it for non-commercial educational use.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How can I contribute or report errors? <span class="material-symbols-outlined faq-arrow">expand_more</span></summary>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">Visit our <a href="https://github.com/NagusameCS/IVY" class="text-green-600 hover:underline" target="_blank">GitHub repository</a> to submit issues, suggest edits, or contribute new content. We welcome educator input to improve accuracy and coverage.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Does IVYSTUDY replace textbooks? <span class="material-symbols-outlined faq-arrow">expand_more</span></summary>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">No. IVYSTUDY is designed as a supplementary resource — concise, accessible study guides that complement textbooks and classroom teaching. We encourage students to use multiple resources.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is student data collected? <span class="material-symbols-outlined faq-arrow">expand_more</span></summary>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">IVYSTUDY collects minimal data — just an anonymous page view counter. We don't track individual users, collect personal information, or use cookies for advertising. Privacy is a priority.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-card">
+            <span class="material-symbols-outlined text-5xl mb-4">handshake</span>
+            <h2 class="text-2xl font-bold mb-3">Partner With Us</h2>
+            <p class="mb-6 text-green-100 max-w-lg mx-auto">Interested in collaborating, contributing curriculum content, or integrating IVYSTUDY into your school? We'd love to hear from you.</p>
+            <a href="https://github.com/NagusameCS/IVY/issues" target="_blank" class="inline-block bg-white text-green-700 font-semibold px-6 py-3 rounded-full hover:bg-green-50 transition">Get in Touch →</a>
+        </div>
+    </main>
+
+    <!--#include virtual="/components/footer.html" -->
+    <!--#include virtual="/components/scripts.html" -->
+
+</body>
+</html>

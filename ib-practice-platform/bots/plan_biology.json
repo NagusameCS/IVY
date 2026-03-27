@@ -1,0 +1,243 @@
+[
+  {
+    "subject": "biology",
+    "topic": "A",
+    "topic_name": "Unity and Diversity",
+    "subtopic": "A.1",
+    "lesson_title": "Water",
+    "level": "SL/HL",
+    "tags": [
+      "hydrogen-bonding",
+      "polarity",
+      "solvent-properties",
+      "thermal-properties"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "A",
+    "topic_name": "Unity and Diversity",
+    "subtopic": "A.2",
+    "lesson_title": "Nucleic Acids",
+    "level": "SL/HL",
+    "tags": [
+      "DNA",
+      "RNA",
+      "nucleotides",
+      "base-pairing",
+      "replication"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "A",
+    "topic_name": "Unity and Diversity",
+    "subtopic": "A.3",
+    "lesson_title": "Origins of Cells",
+    "level": "SL/HL",
+    "tags": [
+      "cell-theory",
+      "endosymbiosis",
+      "prokaryotes",
+      "eukaryotes"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "A",
+    "topic_name": "Unity and Diversity",
+    "subtopic": "A.4",
+    "lesson_title": "Cell Biology",
+    "level": "SL/HL",
+    "tags": [
+      "organelles",
+      "membrane-structure",
+      "transport",
+      "cell-division"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "B",
+    "topic_name": "Form and Function",
+    "subtopic": "B.1",
+    "lesson_title": "Carbohydrates and Lipids",
+    "level": "SL/HL",
+    "tags": [
+      "monosaccharides",
+      "polysaccharides",
+      "fatty-acids",
+      "triglycerides"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "B",
+    "topic_name": "Form and Function",
+    "subtopic": "B.2",
+    "lesson_title": "Proteins",
+    "level": "SL/HL",
+    "tags": [
+      "amino-acids",
+      "protein-structure",
+      "enzymes",
+      "enzyme-kinetics"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "B",
+    "topic_name": "Form and Function",
+    "subtopic": "B.3",
+    "lesson_title": "Cell Specialization",
+    "level": "SL/HL",
+    "tags": [
+      "differentiation",
+      "stem-cells",
+      "tissues",
+      "organs"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "B",
+    "topic_name": "Form and Function",
+    "subtopic": "B.4",
+    "lesson_title": "Gas Exchange",
+    "level": "SL/HL",
+    "tags": [
+      "lungs",
+      "ventilation",
+      "gas-exchange-surfaces",
+      "adaptations"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "C",
+    "topic_name": "Interaction and Interdependence",
+    "subtopic": "C.1",
+    "lesson_title": "Enzymes and Metabolism",
+    "level": "SL/HL",
+    "tags": [
+      "enzymes",
+      "activation-energy",
+      "inhibitors",
+      "metabolic-pathways"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "C",
+    "topic_name": "Interaction and Interdependence",
+    "subtopic": "C.2",
+    "lesson_title": "Cell Respiration",
+    "level": "SL/HL",
+    "tags": [
+      "glycolysis",
+      "krebs",
+      "electron-transport",
+      "ATP"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "C",
+    "topic_name": "Interaction and Interdependence",
+    "subtopic": "C.3",
+    "lesson_title": "Photosynthesis",
+    "level": "SL/HL",
+    "tags": [
+      "light-reactions",
+      "calvin-cycle",
+      "photosystems",
+      "chloroplast"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "C",
+    "topic_name": "Interaction and Interdependence",
+    "subtopic": "C.4",
+    "lesson_title": "Ecology",
+    "level": "SL/HL",
+    "tags": [
+      "ecosystems",
+      "food-chains",
+      "energy-flow",
+      "nutrient-cycling"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "D",
+    "topic_name": "Continuity and Change",
+    "subtopic": "D.1",
+    "lesson_title": "Cell and Nuclear Division",
+    "level": "SL/HL",
+    "tags": [
+      "mitosis",
+      "meiosis",
+      "chromosome-behavior",
+      "karyotypes"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "D",
+    "topic_name": "Continuity and Change",
+    "subtopic": "D.2",
+    "lesson_title": "Gene Expression",
+    "level": "SL/HL",
+    "tags": [
+      "transcription",
+      "translation",
+      "mutations",
+      "gene-regulation"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "D",
+    "topic_name": "Continuity and Change",
+    "subtopic": "D.3",
+    "lesson_title": "Inheritance",
+    "level": "SL/HL",
+    "tags": [
+      "mendelian-genetics",
+      "punnett-squares",
+      "sex-linkage",
+      "codominance"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "biology",
+    "topic": "D",
+    "topic_name": "Continuity and Change",
+    "subtopic": "D.4",
+    "lesson_title": "Natural Selection",
+    "level": "SL/HL",
+    "tags": [
+      "evolution",
+      "natural-selection",
+      "speciation",
+      "evidence-for-evolution"
+    ],
+    "practice_integration": true
+  }
+]

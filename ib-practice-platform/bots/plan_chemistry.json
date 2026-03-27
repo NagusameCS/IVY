@@ -1,0 +1,347 @@
+[
+  {
+    "subject": "chemistry",
+    "topic": "S1",
+    "topic_name": "Structure 1: Models of the Particulate Nature of Matter",
+    "subtopic": "S1.1",
+    "lesson_title": "Introduction to the Particulate Nature of Matter",
+    "level": "SL/HL",
+    "tags": [
+      "atoms",
+      "elements",
+      "compounds",
+      "mixtures"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "S1",
+    "topic_name": "Structure 1: Models of the Particulate Nature of Matter",
+    "subtopic": "S1.2",
+    "lesson_title": "The Nuclear Atom",
+    "level": "SL/HL",
+    "tags": [
+      "protons",
+      "neutrons",
+      "electrons",
+      "isotopes",
+      "mass-spectrometry"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "S1",
+    "topic_name": "Structure 1: Models of the Particulate Nature of Matter",
+    "subtopic": "S1.3",
+    "lesson_title": "Electron Configurations",
+    "level": "SL/HL",
+    "tags": [
+      "electron-config",
+      "orbitals",
+      "aufbau",
+      "hund",
+      "pauli"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "S1",
+    "topic_name": "Structure 1: Models of the Particulate Nature of Matter",
+    "subtopic": "S1.4",
+    "lesson_title": "Counting Particles by Mass",
+    "level": "SL/HL",
+    "tags": [
+      "moles",
+      "molar-mass",
+      "avogadro",
+      "empirical-formula"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "S1",
+    "topic_name": "Structure 1: Models of the Particulate Nature of Matter",
+    "subtopic": "S1.5",
+    "lesson_title": "Ideal Gases",
+    "level": "SL/HL",
+    "tags": [
+      "ideal-gas-law",
+      "molar-volume",
+      "gas-calculations"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "S2",
+    "topic_name": "Structure 2: Models of Bonding and Structure",
+    "subtopic": "S2.1",
+    "lesson_title": "The Ionic Model",
+    "level": "SL/HL",
+    "tags": [
+      "ionic-bonding",
+      "lattice-structure",
+      "properties-of-ionic"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "S2",
+    "topic_name": "Structure 2: Models of Bonding and Structure",
+    "subtopic": "S2.2",
+    "lesson_title": "The Covalent Model",
+    "level": "SL/HL",
+    "tags": [
+      "covalent-bonding",
+      "lewis-structures",
+      "VSEPR",
+      "polarity"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "S2",
+    "topic_name": "Structure 2: Models of Bonding and Structure",
+    "subtopic": "S2.3",
+    "lesson_title": "The Metallic Model",
+    "level": "SL/HL",
+    "tags": [
+      "metallic-bonding",
+      "delocalized-electrons",
+      "alloys"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "S2",
+    "topic_name": "Structure 2: Models of Bonding and Structure",
+    "subtopic": "S2.4",
+    "lesson_title": "From Molecules to Materials",
+    "level": "SL/HL",
+    "tags": [
+      "intermolecular-forces",
+      "hydrogen-bonding",
+      "van-der-waals"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "S3",
+    "topic_name": "Structure 3: Classification of Matter",
+    "subtopic": "S3.1",
+    "lesson_title": "The Periodic Table",
+    "level": "SL/HL",
+    "tags": [
+      "periodic-trends",
+      "groups",
+      "periods",
+      "electronegativity",
+      "ionization-energy"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "S3",
+    "topic_name": "Structure 3: Classification of Matter",
+    "subtopic": "S3.2",
+    "lesson_title": "Functional Groups & Nomenclature",
+    "level": "SL/HL",
+    "tags": [
+      "organic-nomenclature",
+      "functional-groups",
+      "IUPAC",
+      "isomers"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R1",
+    "topic_name": "Reactivity 1: What Drives Chemical Reactions?",
+    "subtopic": "R1.1",
+    "lesson_title": "Measuring Enthalpy Changes",
+    "level": "SL/HL",
+    "tags": [
+      "enthalpy",
+      "calorimetry",
+      "hess-law",
+      "bond-enthalpy"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R1",
+    "topic_name": "Reactivity 1: What Drives Chemical Reactions?",
+    "subtopic": "R1.2",
+    "lesson_title": "Energy Cycles in Reactions",
+    "level": "HL",
+    "tags": [
+      "born-haber",
+      "lattice-enthalpy",
+      "enthalpy-of-solution"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R1",
+    "topic_name": "Reactivity 1: What Drives Chemical Reactions?",
+    "subtopic": "R1.3",
+    "lesson_title": "Energy from Fuels",
+    "level": "SL/HL",
+    "tags": [
+      "combustion",
+      "enthalpy-of-combustion",
+      "fuel-cells"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R1",
+    "topic_name": "Reactivity 1: What Drives Chemical Reactions?",
+    "subtopic": "R1.4",
+    "lesson_title": "Entropy and Spontaneity",
+    "level": "SL/HL",
+    "tags": [
+      "entropy",
+      "gibbs-free-energy",
+      "spontaneity"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R2",
+    "topic_name": "Reactivity 2: How Much, How Fast, and How Far?",
+    "subtopic": "R2.1",
+    "lesson_title": "How Much? The Amount of Chemical Change",
+    "level": "SL/HL",
+    "tags": [
+      "stoichiometry",
+      "limiting-reagent",
+      "percentage-yield",
+      "atom-economy"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R2",
+    "topic_name": "Reactivity 2: How Much, How Fast, and How Far?",
+    "subtopic": "R2.2",
+    "lesson_title": "How Fast? The Rate of Chemical Change",
+    "level": "SL/HL",
+    "tags": [
+      "rate-of-reaction",
+      "collision-theory",
+      "activation-energy",
+      "catalysts"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R2",
+    "topic_name": "Reactivity 2: How Much, How Fast, and How Far?",
+    "subtopic": "R2.3",
+    "lesson_title": "How Far? The Extent of Chemical Change",
+    "level": "SL/HL",
+    "tags": [
+      "equilibrium",
+      "le-chatelier",
+      "equilibrium-constant",
+      "Kc",
+      "Kp"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R2",
+    "topic_name": "Reactivity 2: How Much, How Fast, and How Far?",
+    "subtopic": "R2.4",
+    "lesson_title": "Rate Expressions and Mechanisms",
+    "level": "HL",
+    "tags": [
+      "rate-expression",
+      "order-of-reaction",
+      "rate-constant",
+      "mechanisms"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R3",
+    "topic_name": "Reactivity 3: What Are the Mechanisms of Chemical Change?",
+    "subtopic": "R3.1",
+    "lesson_title": "Proton Transfer Reactions",
+    "level": "SL/HL",
+    "tags": [
+      "acids",
+      "bases",
+      "pH",
+      "Ka",
+      "buffers",
+      "titrations"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R3",
+    "topic_name": "Reactivity 3: What Are the Mechanisms of Chemical Change?",
+    "subtopic": "R3.2",
+    "lesson_title": "Electron Transfer Reactions",
+    "level": "SL/HL",
+    "tags": [
+      "oxidation",
+      "reduction",
+      "redox",
+      "electrochemistry",
+      "electrolysis"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R3",
+    "topic_name": "Reactivity 3: What Are the Mechanisms of Chemical Change?",
+    "subtopic": "R3.3",
+    "lesson_title": "Electron Sharing Reactions",
+    "level": "SL/HL",
+    "tags": [
+      "nucleophilic-substitution",
+      "electrophilic-addition",
+      "free-radical"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "chemistry",
+    "topic": "R3",
+    "topic_name": "Reactivity 3: What Are the Mechanisms of Chemical Change?",
+    "subtopic": "R3.4",
+    "lesson_title": "Electron Pair Sharing Reactions",
+    "level": "HL",
+    "tags": [
+      "SN1",
+      "SN2",
+      "elimination",
+      "addition-polymers",
+      "condensation-polymers"
+    ],
+    "practice_integration": true
+  }
+]

@@ -1,0 +1,1702 @@
+{
+  "biology": [
+    {
+      "file": "A.A.1_water.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\A.A.1_water.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1129
+    },
+    {
+      "file": "A.A.2_nucleic_acids.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\A.A.2_nucleic_acids.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 961
+    },
+    {
+      "file": "A.A.3_origins_of_cells.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\A.A.3_origins_of_cells.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1074
+    },
+    {
+      "file": "A.A.4_cell_biology.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\A.A.4_cell_biology.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 833
+    },
+    {
+      "file": "B.B.1_carbohydrates_and_lipids.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\B.B.1_carbohydrates_and_lipids.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 974
+    },
+    {
+      "file": "B.B.2_proteins.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\B.B.2_proteins.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 920
+    },
+    {
+      "file": "B.B.3_cell_specialization.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\B.B.3_cell_specialization.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 858
+    },
+    {
+      "file": "B.B.4_gas_exchange.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\B.B.4_gas_exchange.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 980
+    },
+    {
+      "file": "C.C.1_enzymes_and_metabolism.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\C.C.1_enzymes_and_metabolism.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 916
+    },
+    {
+      "file": "C.C.2_cell_respiration.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\C.C.2_cell_respiration.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 863
+    },
+    {
+      "file": "C.C.3_photosynthesis.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\C.C.3_photosynthesis.md",
+      "issues": [],
+      "word_count": 1167
+    },
+    {
+      "file": "C.C.4_ecology.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\C.C.4_ecology.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1066
+    },
+    {
+      "file": "D.D.1_cell_and_nuclear_division.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\D.D.1_cell_and_nuclear_division.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 872
+    },
+    {
+      "file": "D.D.2_gene_expression.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\D.D.2_gene_expression.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 931
+    },
+    {
+      "file": "D.D.3_inheritance.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\D.D.3_inheritance.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 999
+    },
+    {
+      "file": "D.D.4_natural_selection.md",
+      "path": "ib-practice-platform/data/lessons\\biology\\D.D.4_natural_selection.md",
+      "issues": [],
+      "word_count": 1118
+    }
+  ],
+  "business": [
+    {
+      "file": "1.1.1_what_is_a_business.md",
+      "path": "ib-practice-platform/data/lessons\\business\\1.1.1_what_is_a_business.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1056
+    },
+    {
+      "file": "1.1.2_types_of_business_entities.md",
+      "path": "ib-practice-platform/data/lessons\\business\\1.1.2_types_of_business_entities.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 873
+    },
+    {
+      "file": "1.1.3_business_objectives.md",
+      "path": "ib-practice-platform/data/lessons\\business\\1.1.3_business_objectives.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 897
+    },
+    {
+      "file": "1.1.4_stakeholders.md",
+      "path": "ib-practice-platform/data/lessons\\business\\1.1.4_stakeholders.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1002
+    },
+    {
+      "file": "1.1.5_growth_and_evolution.md",
+      "path": "ib-practice-platform/data/lessons\\business\\1.1.5_growth_and_evolution.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 920
+    },
+    {
+      "file": "1.1.6_multinational_companies.md",
+      "path": "ib-practice-platform/data/lessons\\business\\1.1.6_multinational_companies.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1183
+    },
+    {
+      "file": "2.2.1_introduction_to_hrm.md",
+      "path": "ib-practice-platform/data/lessons\\business\\2.2.1_introduction_to_hrm.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 979
+    },
+    {
+      "file": "2.2.2_organizational_structure.md",
+      "path": "ib-practice-platform/data/lessons\\business\\2.2.2_organizational_structure.md",
+      "issues": [],
+      "word_count": 1234
+    },
+    {
+      "file": "2.2.3_leadership_and_management.md",
+      "path": "ib-practice-platform/data/lessons\\business\\2.2.3_leadership_and_management.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 991
+    },
+    {
+      "file": "2.2.4_motivation.md",
+      "path": "ib-practice-platform/data/lessons\\business\\2.2.4_motivation.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 852
+    },
+    {
+      "file": "3.3.1_sources_of_finance.md",
+      "path": "ib-practice-platform/data/lessons\\business\\3.3.1_sources_of_finance.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 878
+    },
+    {
+      "file": "3.3.2_costs_and_revenues.md",
+      "path": "ib-practice-platform/data/lessons\\business\\3.3.2_costs_and_revenues.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1109
+    },
+    {
+      "file": "3.3.3_break-even_analysis.md",
+      "path": "ib-practice-platform/data/lessons\\business\\3.3.3_break-even_analysis.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1105
+    },
+    {
+      "file": "3.3.4_final_accounts.md",
+      "path": "ib-practice-platform/data/lessons\\business\\3.3.4_final_accounts.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1035
+    },
+    {
+      "file": "3.3.5_profitability_and_liquidity_ratios.md",
+      "path": "ib-practice-platform/data/lessons\\business\\3.3.5_profitability_and_liquidity_ratios.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 877
+    },
+    {
+      "file": "3.3.6_efficiency_and_gearing_ratios.md",
+      "path": "ib-practice-platform/data/lessons\\business\\3.3.6_efficiency_and_gearing_ratios.md",
+      "issues": [],
+      "word_count": 1147
+    },
+    {
+      "file": "3.3.7_cash_flow.md",
+      "path": "ib-practice-platform/data/lessons\\business\\3.3.7_cash_flow.md",
+      "issues": [],
+      "word_count": 1095
+    },
+    {
+      "file": "3.3.8_investment_appraisal.md",
+      "path": "ib-practice-platform/data/lessons\\business\\3.3.8_investment_appraisal.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 981
+    },
+    {
+      "file": "4.4.1_the_role_of_marketing.md",
+      "path": "ib-practice-platform/data/lessons\\business\\4.4.1_the_role_of_marketing.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 893
+    },
+    {
+      "file": "4.4.2_marketing_planning.md",
+      "path": "ib-practice-platform/data/lessons\\business\\4.4.2_marketing_planning.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1205
+    },
+    {
+      "file": "4.4.3_sales_forecasting.md",
+      "path": "ib-practice-platform/data/lessons\\business\\4.4.3_sales_forecasting.md",
+      "issues": [],
+      "word_count": 1151
+    },
+    {
+      "file": "4.4.4_the_4_ps.md",
+      "path": "ib-practice-platform/data/lessons\\business\\4.4.4_the_4_ps.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1150
+    },
+    {
+      "file": "4.4.5_the_extended_marketing_mix.md",
+      "path": "ib-practice-platform/data/lessons\\business\\4.4.5_the_extended_marketing_mix.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 986
+    },
+    {
+      "file": "5.5.1_the_role_of_operations.md",
+      "path": "ib-practice-platform/data/lessons\\business\\5.5.1_the_role_of_operations.md",
+      "issues": [],
+      "word_count": 959
+    },
+    {
+      "file": "5.5.2_production_methods.md",
+      "path": "ib-practice-platform/data/lessons\\business\\5.5.2_production_methods.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1038
+    },
+    {
+      "file": "5.5.3_lean_production_and_qm.md",
+      "path": "ib-practice-platform/data/lessons\\business\\5.5.3_lean_production_and_qm.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 911
+    },
+    {
+      "file": "5.5.4_location.md",
+      "path": "ib-practice-platform/data/lessons\\business\\5.5.4_location.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 987
+    },
+    {
+      "file": "5.5.5_break-even_analysis_operations.md",
+      "path": "ib-practice-platform/data/lessons\\business\\5.5.5_break-even_analysis_operations.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1037
+    }
+  ],
+  "chemistry": [
+    {
+      "file": "R1.R1.1_measuring_enthalpy_changes.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R1.R1.1_measuring_enthalpy_changes.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 913
+    },
+    {
+      "file": "R1.R1.2_energy_cycles_in_reactions.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R1.R1.2_energy_cycles_in_reactions.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 859
+    },
+    {
+      "file": "R1.R1.3_energy_from_fuels.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R1.R1.3_energy_from_fuels.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 923
+    },
+    {
+      "file": "R1.R1.4_entropy_and_spontaneity.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R1.R1.4_entropy_and_spontaneity.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1019
+    },
+    {
+      "file": "R2.R2.1_how_much_the_amount_of_chemical_change.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R2.R2.1_how_much_the_amount_of_chemical_change.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 994
+    },
+    {
+      "file": "R2.R2.2_how_fast_the_rate_of_chemical_change.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R2.R2.2_how_fast_the_rate_of_chemical_change.md",
+      "issues": [
+        "Unmatched brackets: 15 \\( vs 19 \\)",
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 962
+    },
+    {
+      "file": "R2.R2.3_how_far_the_extent_of_chemical_change.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R2.R2.3_how_far_the_extent_of_chemical_change.md",
+      "issues": [],
+      "word_count": 1281
+    },
+    {
+      "file": "R2.R2.4_rate_expressions_and_mechanisms.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R2.R2.4_rate_expressions_and_mechanisms.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 992
+    },
+    {
+      "file": "R3.R3.1_proton_transfer_reactions.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R3.R3.1_proton_transfer_reactions.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 920
+    },
+    {
+      "file": "R3.R3.2_electron_transfer_reactions.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R3.R3.2_electron_transfer_reactions.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1164
+    },
+    {
+      "file": "R3.R3.3_electron_sharing_reactions.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R3.R3.3_electron_sharing_reactions.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 836
+    },
+    {
+      "file": "R3.R3.4_electron_pair_sharing_reactions.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\R3.R3.4_electron_pair_sharing_reactions.md",
+      "issues": [],
+      "word_count": 1054
+    },
+    {
+      "file": "S1.S1.1_introduction_to_the_particulate_nature_of_matter.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\S1.S1.1_introduction_to_the_particulate_nature_of_matter.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1225
+    },
+    {
+      "file": "S1.S1.2_the_nuclear_atom.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\S1.S1.2_the_nuclear_atom.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 882
+    },
+    {
+      "file": "S1.S1.3_electron_configurations.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\S1.S1.3_electron_configurations.md",
+      "issues": [],
+      "word_count": 1067
+    },
+    {
+      "file": "S1.S1.4_counting_particles_by_mass.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\S1.S1.4_counting_particles_by_mass.md",
+      "issues": [
+        "Unmatched brackets: 23 \\( vs 35 \\)",
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 858
+    },
+    {
+      "file": "S1.S1.5_ideal_gases.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\S1.S1.5_ideal_gases.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1122
+    },
+    {
+      "file": "S2.S2.1_the_ionic_model.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\S2.S2.1_the_ionic_model.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1043
+    },
+    {
+      "file": "S2.S2.2_the_covalent_model.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\S2.S2.2_the_covalent_model.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1020
+    },
+    {
+      "file": "S2.S2.3_the_metallic_model.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\S2.S2.3_the_metallic_model.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 962
+    },
+    {
+      "file": "S2.S2.4_from_molecules_to_materials.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\S2.S2.4_from_molecules_to_materials.md",
+      "issues": [],
+      "word_count": 1170
+    },
+    {
+      "file": "S3.S3.1_the_periodic_table.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\S3.S3.1_the_periodic_table.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 869
+    },
+    {
+      "file": "S3.S3.2_functional_groups__nomenclature.md",
+      "path": "ib-practice-platform/data/lessons\\chemistry\\S3.S3.2_functional_groups__nomenclature.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 906
+    }
+  ],
+  "computer_science": [
+    {
+      "file": "1.1.1_systems_in_organizations.md",
+      "path": "ib-practice-platform/data/lessons\\computer_science\\1.1.1_systems_in_organizations.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1011
+    },
+    {
+      "file": "1.1.2_system_design_basics.md",
+      "path": "ib-practice-platform/data/lessons\\computer_science\\1.1.2_system_design_basics.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 948
+    },
+    {
+      "file": "2.2.1_computer_architecture.md",
+      "path": "ib-practice-platform/data/lessons\\computer_science\\2.2.1_computer_architecture.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1075
+    },
+    {
+      "file": "2.2.2_secondary_memory.md",
+      "path": "ib-practice-platform/data/lessons\\computer_science\\2.2.2_secondary_memory.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1010
+    },
+    {
+      "file": "3.3.1_network_fundamentals.md",
+      "path": "ib-practice-platform/data/lessons\\computer_science\\3.3.1_network_fundamentals.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 857
+    },
+    {
+      "file": "3.3.2_data_transmission.md",
+      "path": "ib-practice-platform/data/lessons\\computer_science\\3.3.2_data_transmission.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 989
+    },
+    {
+      "file": "4.4.1_general_principles.md",
+      "path": "ib-practice-platform/data/lessons\\computer_science\\4.4.1_general_principles.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1323
+    },
+    {
+      "file": "4.4.2_connecting_computational_thinking_and_program_design.md",
+      "path": "ib-practice-platform/data/lessons\\computer_science\\4.4.2_connecting_computational_thinking_and_program_design.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 937
+    },
+    {
+      "file": "4.4.3_introduction_to_programming.md",
+      "path": "ib-practice-platform/data/lessons\\computer_science\\4.4.3_introduction_to_programming.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 928
+    },
+    {
+      "file": "5.5.1_abstract_data_structures.md",
+      "path": "ib-practice-platform/data/lessons\\computer_science\\5.5.1_abstract_data_structures.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1252
+    },
+    {
+      "file": "5.5.2_recursion.md",
+      "path": "ib-practice-platform/data/lessons\\computer_science\\5.5.2_recursion.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1024
+    }
+  ],
+  "economics": [
+    {
+      "file": "1.1.1_what_is_economics.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\1.1.1_what_is_economics.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 947
+    },
+    {
+      "file": "1.1.2_how_do_economists_approach_the_world.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\1.1.2_how_do_economists_approach_the_world.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1054
+    },
+    {
+      "file": "2.2.1_demand.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\2.2.1_demand.md",
+      "issues": [],
+      "word_count": 1046
+    },
+    {
+      "file": "2.2.2_supply.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\2.2.2_supply.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 957
+    },
+    {
+      "file": "2.2.3_competitive_market_equilibrium.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\2.2.3_competitive_market_equilibrium.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1084
+    },
+    {
+      "file": "2.2.4_critique_of_maximizing_behaviour.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\2.2.4_critique_of_maximizing_behaviour.md",
+      "issues": [],
+      "word_count": 1035
+    },
+    {
+      "file": "2.2.5_elasticity_of_demand.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\2.2.5_elasticity_of_demand.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1068
+    },
+    {
+      "file": "2.2.6_elasticity_of_supply.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\2.2.6_elasticity_of_supply.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1240
+    },
+    {
+      "file": "2.2.7_the_role_of_government.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\2.2.7_the_role_of_government.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 997
+    },
+    {
+      "file": "2.2.8_market_failure.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\2.2.8_market_failure.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1083
+    },
+    {
+      "file": "3.3.1_measuring_economic_activity.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\3.3.1_measuring_economic_activity.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 778
+    },
+    {
+      "file": "3.3.2_variations_in_economic_activity.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\3.3.2_variations_in_economic_activity.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1233
+    },
+    {
+      "file": "3.3.3_aggregate_demand_and_supply.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\3.3.3_aggregate_demand_and_supply.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 967
+    },
+    {
+      "file": "3.3.4_macroeconomic_objectives.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\3.3.4_macroeconomic_objectives.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 968
+    },
+    {
+      "file": "3.3.5_fiscal_policy.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\3.3.5_fiscal_policy.md",
+      "issues": [],
+      "word_count": 1086
+    },
+    {
+      "file": "3.3.6_monetary_policy.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\3.3.6_monetary_policy.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1131
+    },
+    {
+      "file": "3.3.7_supply-side_policies.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\3.3.7_supply-side_policies.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 976
+    },
+    {
+      "file": "4.4.1_benefits_of_international_trade.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\4.4.1_benefits_of_international_trade.md",
+      "issues": [],
+      "word_count": 1181
+    },
+    {
+      "file": "4.4.2_types_of_trade_protection.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\4.4.2_types_of_trade_protection.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 997
+    },
+    {
+      "file": "4.4.3_economic_integration.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\4.4.3_economic_integration.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1185
+    },
+    {
+      "file": "4.4.4_exchange_rates.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\4.4.4_exchange_rates.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 988
+    },
+    {
+      "file": "4.4.5_balance_of_payments.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\4.4.5_balance_of_payments.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1003
+    },
+    {
+      "file": "4.4.6_sustainable_development.md",
+      "path": "ib-practice-platform/data/lessons\\economics\\4.4.6_sustainable_development.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1173
+    }
+  ],
+  "math_aa": [
+    {
+      "file": "1.1.1_arithmetic__geometric_series.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\1.1.1_arithmetic__geometric_series.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 829
+    },
+    {
+      "file": "1.1.2_exponents__logarithms.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\1.1.2_exponents__logarithms.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 796
+    },
+    {
+      "file": "1.1.3_counting__binomial_theorem.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\1.1.3_counting__binomial_theorem.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 926
+    },
+    {
+      "file": "1.1.4_proof_by_induction.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\1.1.4_proof_by_induction.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 963
+    },
+    {
+      "file": "1.1.5_complex_numbers_basics.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\1.1.5_complex_numbers_basics.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 794
+    },
+    {
+      "file": "1.1.6_polar_form_of_complex_numbers.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\1.1.6_polar_form_of_complex_numbers.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 815
+    },
+    {
+      "file": "1.1.7_powers__roots_de_moivre.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\1.1.7_powers__roots_de_moivre.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1151
+    },
+    {
+      "file": "1.1.8_conjugate_roots_of_polynomials.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\1.1.8_conjugate_roots_of_polynomials.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 755
+    },
+    {
+      "file": "1.1.9_systems_of_linear_equations.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\1.1.9_systems_of_linear_equations.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1257
+    },
+    {
+      "file": "10.10.10_chinese_postman__tsp.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\10.10.10_chinese_postman__tsp.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 1178
+    },
+    {
+      "file": "10.10.11_recurrence_relations.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\10.10.11_recurrence_relations.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 347 (< 500)"
+      ],
+      "word_count": 347
+    },
+    {
+      "file": "10.10.1_strong_induction__pigeonhole.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\10.10.1_strong_induction__pigeonhole.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 565
+    },
+    {
+      "file": "10.10.2_divisibility_gcd_lcm__primes.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\10.10.2_divisibility_gcd_lcm__primes.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 293 (< 500)"
+      ],
+      "word_count": 293
+    },
+    {
+      "file": "10.10.3_linear_diophantine_equations.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\10.10.3_linear_diophantine_equations.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 384 (< 500)"
+      ],
+      "word_count": 384
+    },
+    {
+      "file": "10.10.4_modular_arithmetic__crt.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\10.10.4_modular_arithmetic__crt.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 34 (< 500)"
+      ],
+      "word_count": 34
+    },
+    {
+      "file": "10.10.5_integer_bases.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\10.10.5_integer_bases.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 195 (< 500)"
+      ],
+      "word_count": 195
+    },
+    {
+      "file": "10.10.6_fermats_little_theorem.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\10.10.6_fermats_little_theorem.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 209 (< 500)"
+      ],
+      "word_count": 209
+    },
+    {
+      "file": "10.10.7_graph_theory_basics.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\10.10.7_graph_theory_basics.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 434 (< 500)"
+      ],
+      "word_count": 434
+    },
+    {
+      "file": "10.10.8_walks_trails__cycles.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\10.10.8_walks_trails__cycles.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 247 (< 500)"
+      ],
+      "word_count": 247
+    },
+    {
+      "file": "10.10.9_graph_algorithms_kruskal__dijkstra.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\10.10.9_graph_algorithms_kruskal__dijkstra.md",
+      "issues": [
+        "Unmatched brackets: 428 \\( vs 873 \\)",
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 19015
+    },
+    {
+      "file": "2.2.1_concept_of_function.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\2.2.1_concept_of_function.md",
+      "issues": [
+        "Unmatched brackets: 1 \\[ vs 0 \\]",
+        "Unmatched brackets: 55 \\( vs 56 \\)",
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 870
+    },
+    {
+      "file": "2.2.2_graph_features.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\2.2.2_graph_features.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1051
+    },
+    {
+      "file": "2.2.3_graph_transformations.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\2.2.3_graph_transformations.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 733
+    },
+    {
+      "file": "2.2.4_basic_function_families.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\2.2.4_basic_function_families.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 791
+    },
+    {
+      "file": "2.2.5_polynomial_functions.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\2.2.5_polynomial_functions.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 997
+    },
+    {
+      "file": "2.2.6_solving_equations.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\2.2.6_solving_equations.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 768
+    },
+    {
+      "file": "2.2.7_inequalities.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\2.2.7_inequalities.md",
+      "issues": [
+        "Unmatched brackets: 3 \\[ vs 2 \\]",
+        "Unmatched brackets: 29 \\( vs 30 \\)",
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1075
+    },
+    {
+      "file": "3.3.1_radian_measure_arc__sector.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\3.3.1_radian_measure_arc__sector.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 651
+    },
+    {
+      "file": "3.3.2_unit_circle__basic_identities.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\3.3.2_unit_circle__basic_identities.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 876
+    },
+    {
+      "file": "3.3.3_compound__double_angles.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\3.3.3_compound__double_angles.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1079
+    },
+    {
+      "file": "3.3.4_sinusoidal_models.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\3.3.4_sinusoidal_models.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 913
+    },
+    {
+      "file": "3.3.5_inverse_trig_functions.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\3.3.5_inverse_trig_functions.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 806
+    },
+    {
+      "file": "3.3.6_solving_trig_equations.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\3.3.6_solving_trig_equations.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 874
+    },
+    {
+      "file": "3.3.7_triangle_rules__applications.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\3.3.7_triangle_rules__applications.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1112
+    },
+    {
+      "file": "4.4.1_vector_basics.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\4.4.1_vector_basics.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 925
+    },
+    {
+      "file": "4.4.2_scalar_dot_product.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\4.4.2_scalar_dot_product.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 876
+    },
+    {
+      "file": "4.4.3_vector_equation_of_a_line.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\4.4.3_vector_equation_of_a_line.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1081
+    },
+    {
+      "file": "4.4.4_line_relationships.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\4.4.4_line_relationships.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 948
+    },
+    {
+      "file": "4.4.5_vector_cross_product.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\4.4.5_vector_cross_product.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 992
+    },
+    {
+      "file": "4.4.6_planes_in_3d.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\4.4.6_planes_in_3d.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1216
+    },
+    {
+      "file": "4.4.7_intersections__angles.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\4.4.7_intersections__angles.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 882
+    },
+    {
+      "file": "5.5.1_data_concepts__descriptive_stats.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\5.5.1_data_concepts__descriptive_stats.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 1188
+    },
+    {
+      "file": "5.5.2_basic_probability.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\5.5.2_basic_probability.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 919
+    },
+    {
+      "file": "5.5.3_combined_events.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\5.5.3_combined_events.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 609
+    },
+    {
+      "file": "5.5.4_conditional_probability__bayes.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\5.5.4_conditional_probability__bayes.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 471 (< 500)"
+      ],
+      "word_count": 471
+    },
+    {
+      "file": "5.5.5_random_variables__distributions.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\5.5.5_random_variables__distributions.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 373 (< 500)"
+      ],
+      "word_count": 373
+    },
+    {
+      "file": "5.5.6_binomial__poisson.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\5.5.6_binomial__poisson.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 179 (< 500)"
+      ],
+      "word_count": 179
+    },
+    {
+      "file": "5.5.7_normal_distribution.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\5.5.7_normal_distribution.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 181 (< 500)"
+      ],
+      "word_count": 181
+    },
+    {
+      "file": "6.6.1_limits__derivative_basics.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\6.6.1_limits__derivative_basics.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 69 (< 500)"
+      ],
+      "word_count": 69
+    },
+    {
+      "file": "6.6.2_differentiation_rules.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\6.6.2_differentiation_rules.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 60 (< 500)"
+      ],
+      "word_count": 60
+    },
+    {
+      "file": "6.6.3_extrema__graph_behaviour.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\6.6.3_extrema__graph_behaviour.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 73 (< 500)"
+      ],
+      "word_count": 73
+    },
+    {
+      "file": "6.6.4_indefinite_integration_basics.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\6.6.4_indefinite_integration_basics.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 416 (< 500)"
+      ],
+      "word_count": 416
+    },
+    {
+      "file": "6.6.5_definite_integrals_area__volume.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\6.6.5_definite_integrals_area__volume.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 255 (< 500)"
+      ],
+      "word_count": 255
+    },
+    {
+      "file": "6.6.6_kinematics__total_distance.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\6.6.6_kinematics__total_distance.md",
+      "issues": [
+        "MISSING_SECTIONS: overview",
+        "LOW_WORD_COUNT: 233 (< 500)"
+      ],
+      "word_count": 233
+    },
+    {
+      "file": "6.6.7_integration_techniques.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\6.6.7_integration_techniques.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 546
+    },
+    {
+      "file": "7.7.1_cdfs_geometric_neg_binomial_pgfs.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\7.7.1_cdfs_geometric_neg_binomial_pgfs.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 770
+    },
+    {
+      "file": "7.7.2_linear_combinations_of_rvs.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\7.7.2_linear_combinations_of_rvs.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 171 (< 500)"
+      ],
+      "word_count": 171
+    },
+    {
+      "file": "7.7.3_unbiased_estimators.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\7.7.3_unbiased_estimators.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 324 (< 500)"
+      ],
+      "word_count": 324
+    },
+    {
+      "file": "7.7.4_normal_combinations__clt.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\7.7.4_normal_combinations__clt.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 259 (< 500)"
+      ],
+      "word_count": 259
+    },
+    {
+      "file": "7.7.5_confidence_intervals_mean.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\7.7.5_confidence_intervals_mean.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 651
+    },
+    {
+      "file": "7.7.6_hypothesis_testing_mean.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\7.7.6_hypothesis_testing_mean.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 77 (< 500)"
+      ],
+      "word_count": 77
+    },
+    {
+      "file": "7.7.7_bivariate_correlation__regression.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\7.7.7_bivariate_correlation__regression.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 391 (< 500)"
+      ],
+      "word_count": 391
+    },
+    {
+      "file": "8.8.10_permutations__cycles.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.10_permutations__cycles.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 33 (< 500)"
+      ],
+      "word_count": 33
+    },
+    {
+      "file": "8.8.11_subgroups_cosets__lagrange.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.11_subgroups_cosets__lagrange.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 434 (< 500)"
+      ],
+      "word_count": 434
+    },
+    {
+      "file": "8.8.12_homomorphisms__isomorphisms.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.12_homomorphisms__isomorphisms.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 321 (< 500)"
+      ],
+      "word_count": 321
+    },
+    {
+      "file": "8.8.1_set_operations__laws.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.1_set_operations__laws.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 4860
+    },
+    {
+      "file": "8.8.2_relations__equivalence.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.2_relations__equivalence.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 79 (< 500)"
+      ],
+      "word_count": 79
+    },
+    {
+      "file": "8.8.3_injections_surjections_bijections.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.3_injections_surjections_bijections.md",
+      "issues": [
+        "Unmatched brackets: 1 \\[ vs 0 \\]",
+        "Unmatched brackets: 21 \\( vs 22 \\)",
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 659
+    },
+    {
+      "file": "8.8.4_binary_operations.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.4_binary_operations.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 546
+    },
+    {
+      "file": "8.8.5_operation_properties.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.5_operation_properties.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 50 (< 500)"
+      ],
+      "word_count": 50
+    },
+    {
+      "file": "8.8.6_identity__inverses.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.6_identity__inverses.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 51950
+    },
+    {
+      "file": "8.8.7_definition_of_a_group.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.7_definition_of_a_group.md",
+      "issues": [
+        "MISSING_SECTIONS: overview",
+        "LOW_WORD_COUNT: 188 (< 500)"
+      ],
+      "word_count": 188
+    },
+    {
+      "file": "8.8.8_group_examples.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.8_group_examples.md",
+      "issues": [
+        "MISSING_SECTIONS: overview",
+        "LOW_WORD_COUNT: 198 (< 500)"
+      ],
+      "word_count": 198
+    },
+    {
+      "file": "8.8.9_cyclic_groups__generators.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\8.8.9_cyclic_groups__generators.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 557
+    },
+    {
+      "file": "9.9.1_infinite_sequences.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\9.9.1_infinite_sequences.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 628
+    },
+    {
+      "file": "9.9.2_infinite_series__tests.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\9.9.2_infinite_series__tests.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 122 (< 500)"
+      ],
+      "word_count": 122
+    },
+    {
+      "file": "9.9.3_continuity__differentiability.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\9.9.3_continuity__differentiability.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 391 (< 500)"
+      ],
+      "word_count": 391
+    },
+    {
+      "file": "9.9.4_riemann_sums__improper_integrals.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\9.9.4_riemann_sums__improper_integrals.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 146 (< 500)"
+      ],
+      "word_count": 146
+    },
+    {
+      "file": "9.9.5_first-order_differential_equations.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\9.9.5_first-order_differential_equations.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 56540
+    },
+    {
+      "file": "9.9.6_taylor__maclaurin_series.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\9.9.6_taylor__maclaurin_series.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 155 (< 500)"
+      ],
+      "word_count": 155
+    },
+    {
+      "file": "9.9.7_limit_evaluation_lhopital__series.md",
+      "path": "ib-practice-platform/data/lessons\\math_aa\\9.9.7_limit_evaluation_lhopital__series.md",
+      "issues": [
+        "Unmatched brackets: 6 \\[ vs 2 \\]",
+        "Unmatched brackets: 61 \\( vs 59 \\)",
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 343 (< 500)"
+      ],
+      "word_count": 343
+    }
+  ],
+  "physics": [
+    {
+      "file": "A.A.1_kinematics.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\A.A.1_kinematics.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 163 (< 500)"
+      ],
+      "word_count": 163
+    },
+    {
+      "file": "A.A.2_forces_and_momentum.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\A.A.2_forces_and_momentum.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 318 (< 500)"
+      ],
+      "word_count": 318
+    },
+    {
+      "file": "A.A.3_work_energy_and_power.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\A.A.3_work_energy_and_power.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 188 (< 500)"
+      ],
+      "word_count": 188
+    },
+    {
+      "file": "A.A.4_rigid_body_mechanics.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\A.A.4_rigid_body_mechanics.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 259 (< 500)"
+      ],
+      "word_count": 259
+    },
+    {
+      "file": "A.A.5_galilean_and_special_relativity.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\A.A.5_galilean_and_special_relativity.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 420 (< 500)"
+      ],
+      "word_count": 420
+    },
+    {
+      "file": "B.B.1_thermal_energy_transfers.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\B.B.1_thermal_energy_transfers.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 238 (< 500)"
+      ],
+      "word_count": 238
+    },
+    {
+      "file": "B.B.2_greenhouse_effect.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\B.B.2_greenhouse_effect.md",
+      "issues": [
+        "MISSING_SECTIONS: overview",
+        "LOW_WORD_COUNT: 106 (< 500)"
+      ],
+      "word_count": 106
+    },
+    {
+      "file": "B.B.3_gas_laws.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\B.B.3_gas_laws.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 49845
+    },
+    {
+      "file": "B.B.4_thermodynamics.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\B.B.4_thermodynamics.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 67 (< 500)"
+      ],
+      "word_count": 67
+    },
+    {
+      "file": "B.B.5_current_and_circuits.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\B.B.5_current_and_circuits.md",
+      "issues": [
+        "Unmatched brackets: 7 \\( vs 6 \\)",
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 465 (< 500)"
+      ],
+      "word_count": 465
+    },
+    {
+      "file": "C.C.1_simple_harmonic_motion.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\C.C.1_simple_harmonic_motion.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 555
+    },
+    {
+      "file": "C.C.2_wave_model.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\C.C.2_wave_model.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 353 (< 500)"
+      ],
+      "word_count": 353
+    },
+    {
+      "file": "C.C.3_wave_phenomena.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\C.C.3_wave_phenomena.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 63369
+    },
+    {
+      "file": "C.C.4_standing_waves_and_resonance.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\C.C.4_standing_waves_and_resonance.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 68 (< 500)"
+      ],
+      "word_count": 68
+    },
+    {
+      "file": "C.C.5_doppler_effect.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\C.C.5_doppler_effect.md",
+      "issues": [
+        "Unclosed code block (odd number of ```)",
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 147 (< 500)"
+      ],
+      "word_count": 147
+    },
+    {
+      "file": "D.D.1_gravitational_fields.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\D.D.1_gravitational_fields.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 280 (< 500)"
+      ],
+      "word_count": 280
+    },
+    {
+      "file": "D.D.2_electric_and_magnetic_fields.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\D.D.2_electric_and_magnetic_fields.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 277 (< 500)"
+      ],
+      "word_count": 277
+    },
+    {
+      "file": "D.D.3_motion_in_em_fields.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\D.D.3_motion_in_em_fields.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 1057
+    },
+    {
+      "file": "D.D.4_induction.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\D.D.4_induction.md",
+      "issues": [
+        "MISSING_SECTIONS: overview",
+        "LOW_WORD_COUNT: 312 (< 500)"
+      ],
+      "word_count": 312
+    },
+    {
+      "file": "E.E.1_structure_of_the_atom.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\E.E.1_structure_of_the_atom.md",
+      "issues": [
+        "Unmatched brackets: 9 \\( vs 29 \\)",
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 391 (< 500)"
+      ],
+      "word_count": 391
+    },
+    {
+      "file": "E.E.2_quantum_physics.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\E.E.2_quantum_physics.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 302 (< 500)"
+      ],
+      "word_count": 302
+    },
+    {
+      "file": "E.E.3_radioactive_decay.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\E.E.3_radioactive_decay.md",
+      "issues": [
+        "MISSING_SECTIONS: overview"
+      ],
+      "word_count": 544
+    },
+    {
+      "file": "E.E.4_fission.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\E.E.4_fission.md",
+      "issues": [
+        "MISSING_SECTIONS: overview,key_concepts",
+        "LOW_WORD_COUNT: 478 (< 500)"
+      ],
+      "word_count": 478
+    },
+    {
+      "file": "E.E.5_fusion_and_stars.md",
+      "path": "ib-practice-platform/data/lessons\\physics\\E.E.5_fusion_and_stars.md",
+      "issues": [
+        "Unmatched brackets: 1442 \\( vs 1445 \\)",
+        "MISSING_SECTIONS: overview,key_concepts"
+      ],
+      "word_count": 7962
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "subject_key": "physics",
+    "source_subject": "Physics",
+    "source_section": "Fundamentals of Physics",
+    "source_section_path": "fundamentals-of-physics",
+    "topic_code": "P1.1",
+    "lesson_title": "Kinematics: Describing Motion",
+    "lesson_file": "kinematics-intro.md",
+    "level": "SL",
+    "time_estimate": 15,
+    "tags": [
+      "motion",
+      "displacement",
+      "velocity",
+      "acceleration"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# Kinematics: Describing Motion\\n\\nTopic: P1.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  }
+]

@@ -1,0 +1,1160 @@
+[
+  {
+    "subject": "math_aa",
+    "topic": "1",
+    "topic_name": "Number and Algebra",
+    "subtopic": "1.1",
+    "lesson_title": "Arithmetic & Geometric Series",
+    "level": "SL/HL",
+    "tags": [
+      "sequences",
+      "series",
+      "sigma-notation",
+      "convergence"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "1",
+    "topic_name": "Number and Algebra",
+    "subtopic": "1.2",
+    "lesson_title": "Exponents & Logarithms",
+    "level": "SL/HL",
+    "tags": [
+      "exponents",
+      "logarithms",
+      "laws-of-logs"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "1",
+    "topic_name": "Number and Algebra",
+    "subtopic": "1.3",
+    "lesson_title": "Counting & Binomial Theorem",
+    "level": "SL/HL",
+    "tags": [
+      "permutations",
+      "combinations",
+      "binomial-expansion"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "1",
+    "topic_name": "Number and Algebra",
+    "subtopic": "1.4",
+    "lesson_title": "Proof by Induction",
+    "level": "HL",
+    "tags": [
+      "proof",
+      "induction",
+      "mathematical-reasoning"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "1",
+    "topic_name": "Number and Algebra",
+    "subtopic": "1.5",
+    "lesson_title": "Complex Numbers Basics",
+    "level": "HL",
+    "tags": [
+      "complex-numbers",
+      "argand-diagram",
+      "modulus-argument"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "1",
+    "topic_name": "Number and Algebra",
+    "subtopic": "1.6",
+    "lesson_title": "Polar Form of Complex Numbers",
+    "level": "HL",
+    "tags": [
+      "polar-form",
+      "euler-form",
+      "cis"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "1",
+    "topic_name": "Number and Algebra",
+    "subtopic": "1.7",
+    "lesson_title": "Powers & Roots (De Moivre)",
+    "level": "HL",
+    "tags": [
+      "de-moivre",
+      "roots-of-unity",
+      "complex-powers"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "1",
+    "topic_name": "Number and Algebra",
+    "subtopic": "1.8",
+    "lesson_title": "Conjugate Roots of Polynomials",
+    "level": "HL",
+    "tags": [
+      "conjugate-roots",
+      "polynomial-equations",
+      "factor-theorem"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "1",
+    "topic_name": "Number and Algebra",
+    "subtopic": "1.9",
+    "lesson_title": "Systems of Linear Equations",
+    "level": "SL/HL",
+    "tags": [
+      "systems",
+      "matrices",
+      "row-reduction",
+      "gaussian-elimination"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "2",
+    "topic_name": "Functions",
+    "subtopic": "2.1",
+    "lesson_title": "Concept of Function",
+    "level": "SL/HL",
+    "tags": [
+      "domain",
+      "range",
+      "injection",
+      "surjection",
+      "bijection"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "2",
+    "topic_name": "Functions",
+    "subtopic": "2.2",
+    "lesson_title": "Graph Features",
+    "level": "SL/HL",
+    "tags": [
+      "asymptotes",
+      "intercepts",
+      "symmetry",
+      "graph-reading"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "2",
+    "topic_name": "Functions",
+    "subtopic": "2.3",
+    "lesson_title": "Graph Transformations",
+    "level": "SL/HL",
+    "tags": [
+      "translations",
+      "reflections",
+      "stretches",
+      "composite-transformations"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "2",
+    "topic_name": "Functions",
+    "subtopic": "2.4",
+    "lesson_title": "Basic Function Families",
+    "level": "SL/HL",
+    "tags": [
+      "linear",
+      "quadratic",
+      "exponential",
+      "logarithmic",
+      "rational"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "2",
+    "topic_name": "Functions",
+    "subtopic": "2.5",
+    "lesson_title": "Polynomial Functions",
+    "level": "SL/HL",
+    "tags": [
+      "factor-theorem",
+      "remainder-theorem",
+      "roots",
+      "polynomial-division"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "2",
+    "topic_name": "Functions",
+    "subtopic": "2.6",
+    "lesson_title": "Solving Equations",
+    "level": "SL/HL",
+    "tags": [
+      "algebraic-equations",
+      "graphical-solutions",
+      "discriminant"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "2",
+    "topic_name": "Functions",
+    "subtopic": "2.7",
+    "lesson_title": "Inequalities",
+    "level": "SL/HL",
+    "tags": [
+      "linear-inequalities",
+      "quadratic-inequalities",
+      "rational-inequalities"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "3",
+    "topic_name": "Geometry and Trigonometry",
+    "subtopic": "3.1",
+    "lesson_title": "Radian Measure, Arc & Sector",
+    "level": "SL/HL",
+    "tags": [
+      "radians",
+      "arc-length",
+      "sector-area"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "3",
+    "topic_name": "Geometry and Trigonometry",
+    "subtopic": "3.2",
+    "lesson_title": "Unit Circle & Basic Identities",
+    "level": "SL/HL",
+    "tags": [
+      "unit-circle",
+      "trig-identities",
+      "pythagorean-identity"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "3",
+    "topic_name": "Geometry and Trigonometry",
+    "subtopic": "3.3",
+    "lesson_title": "Compound & Double Angles",
+    "level": "HL",
+    "tags": [
+      "compound-angle",
+      "double-angle",
+      "half-angle"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "3",
+    "topic_name": "Geometry and Trigonometry",
+    "subtopic": "3.4",
+    "lesson_title": "Sinusoidal Models",
+    "level": "SL/HL",
+    "tags": [
+      "amplitude",
+      "period",
+      "phase-shift",
+      "sinusoidal-modeling"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "3",
+    "topic_name": "Geometry and Trigonometry",
+    "subtopic": "3.5",
+    "lesson_title": "Inverse Trig Functions",
+    "level": "SL/HL",
+    "tags": [
+      "arcsin",
+      "arccos",
+      "arctan",
+      "restricted-domains"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "3",
+    "topic_name": "Geometry and Trigonometry",
+    "subtopic": "3.6",
+    "lesson_title": "Solving Trig Equations",
+    "level": "SL/HL",
+    "tags": [
+      "trig-equations",
+      "general-solutions",
+      "identities"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "3",
+    "topic_name": "Geometry and Trigonometry",
+    "subtopic": "3.7",
+    "lesson_title": "Triangle Rules & Applications",
+    "level": "SL/HL",
+    "tags": [
+      "sine-rule",
+      "cosine-rule",
+      "area-of-triangle"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "4",
+    "topic_name": "Vectors",
+    "subtopic": "4.1",
+    "lesson_title": "Vector Basics",
+    "level": "SL/HL",
+    "tags": [
+      "vectors",
+      "magnitude",
+      "unit-vectors",
+      "position-vectors"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "4",
+    "topic_name": "Vectors",
+    "subtopic": "4.2",
+    "lesson_title": "Scalar (Dot) Product",
+    "level": "SL/HL",
+    "tags": [
+      "dot-product",
+      "angle-between-vectors",
+      "perpendicularity"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "4",
+    "topic_name": "Vectors",
+    "subtopic": "4.3",
+    "lesson_title": "Vector Equation of a Line",
+    "level": "SL/HL",
+    "tags": [
+      "vector-lines",
+      "parametric-equations",
+      "direction-vectors"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "4",
+    "topic_name": "Vectors",
+    "subtopic": "4.4",
+    "lesson_title": "Line Relationships",
+    "level": "HL",
+    "tags": [
+      "parallel-lines",
+      "intersecting-lines",
+      "skew-lines",
+      "shortest-distance"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "4",
+    "topic_name": "Vectors",
+    "subtopic": "4.5",
+    "lesson_title": "Vector (Cross) Product",
+    "level": "HL",
+    "tags": [
+      "cross-product",
+      "area-parallelogram",
+      "normal-vectors"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "4",
+    "topic_name": "Vectors",
+    "subtopic": "4.6",
+    "lesson_title": "Planes in 3D",
+    "level": "HL",
+    "tags": [
+      "equation-of-plane",
+      "normal-form",
+      "cartesian-form"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "4",
+    "topic_name": "Vectors",
+    "subtopic": "4.7",
+    "lesson_title": "Intersections & Angles",
+    "level": "HL",
+    "tags": [
+      "line-plane-intersection",
+      "plane-plane-intersection",
+      "dihedral-angles"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "5",
+    "topic_name": "Statistics and Probability",
+    "subtopic": "5.1",
+    "lesson_title": "Data Concepts & Descriptive Stats",
+    "level": "SL/HL",
+    "tags": [
+      "mean",
+      "median",
+      "mode",
+      "standard-deviation",
+      "variance",
+      "quartiles"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "5",
+    "topic_name": "Statistics and Probability",
+    "subtopic": "5.2",
+    "lesson_title": "Basic Probability",
+    "level": "SL/HL",
+    "tags": [
+      "sample-space",
+      "complementary-events",
+      "venn-diagrams"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "5",
+    "topic_name": "Statistics and Probability",
+    "subtopic": "5.3",
+    "lesson_title": "Combined Events",
+    "level": "SL/HL",
+    "tags": [
+      "addition-rule",
+      "multiplication-rule",
+      "mutually-exclusive",
+      "independent"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "5",
+    "topic_name": "Statistics and Probability",
+    "subtopic": "5.4",
+    "lesson_title": "Conditional Probability & Bayes",
+    "level": "SL/HL",
+    "tags": [
+      "conditional-probability",
+      "bayes-theorem",
+      "tree-diagrams"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "5",
+    "topic_name": "Statistics and Probability",
+    "subtopic": "5.5",
+    "lesson_title": "Random Variables & Distributions",
+    "level": "SL/HL",
+    "tags": [
+      "discrete-rv",
+      "expected-value",
+      "variance-of-rv"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "5",
+    "topic_name": "Statistics and Probability",
+    "subtopic": "5.6",
+    "lesson_title": "Binomial & Poisson",
+    "level": "SL/HL",
+    "tags": [
+      "binomial-distribution",
+      "poisson-distribution"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "5",
+    "topic_name": "Statistics and Probability",
+    "subtopic": "5.7",
+    "lesson_title": "Normal Distribution",
+    "level": "SL/HL",
+    "tags": [
+      "normal-distribution",
+      "z-scores",
+      "inverse-normal"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "6",
+    "topic_name": "Calculus",
+    "subtopic": "6.1",
+    "lesson_title": "Limits & Derivative Basics",
+    "level": "SL/HL",
+    "tags": [
+      "limits",
+      "first-principles",
+      "derivative-definition"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "6",
+    "topic_name": "Calculus",
+    "subtopic": "6.2",
+    "lesson_title": "Differentiation Rules",
+    "level": "SL/HL",
+    "tags": [
+      "power-rule",
+      "chain-rule",
+      "product-rule",
+      "quotient-rule"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "6",
+    "topic_name": "Calculus",
+    "subtopic": "6.3",
+    "lesson_title": "Extrema & Graph Behaviour",
+    "level": "SL/HL",
+    "tags": [
+      "stationary-points",
+      "inflection-points",
+      "optimization"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "6",
+    "topic_name": "Calculus",
+    "subtopic": "6.4",
+    "lesson_title": "Indefinite Integration Basics",
+    "level": "SL/HL",
+    "tags": [
+      "antiderivatives",
+      "integration-rules",
+      "constant-of-integration"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "6",
+    "topic_name": "Calculus",
+    "subtopic": "6.5",
+    "lesson_title": "Definite Integrals, Area & Volume",
+    "level": "SL/HL",
+    "tags": [
+      "definite-integrals",
+      "area-under-curve",
+      "volume-of-revolution"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "6",
+    "topic_name": "Calculus",
+    "subtopic": "6.6",
+    "lesson_title": "Kinematics & Total Distance",
+    "level": "SL/HL",
+    "tags": [
+      "displacement",
+      "velocity",
+      "acceleration",
+      "total-distance"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "6",
+    "topic_name": "Calculus",
+    "subtopic": "6.7",
+    "lesson_title": "Integration Techniques",
+    "level": "HL",
+    "tags": [
+      "integration-by-parts",
+      "substitution",
+      "partial-fractions"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "7",
+    "topic_name": "Statistics & Probability (HL Extension)",
+    "subtopic": "7.1",
+    "lesson_title": "CDFs, Geometric, Neg Binomial, PGFs",
+    "level": "HL",
+    "tags": [
+      "cdf",
+      "geometric-distribution",
+      "negative-binomial",
+      "pgf"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "7",
+    "topic_name": "Statistics & Probability (HL Extension)",
+    "subtopic": "7.2",
+    "lesson_title": "Linear Combinations of RVs",
+    "level": "HL",
+    "tags": [
+      "linear-combinations",
+      "expectation-algebra",
+      "variance-algebra"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "7",
+    "topic_name": "Statistics & Probability (HL Extension)",
+    "subtopic": "7.3",
+    "lesson_title": "Unbiased Estimators",
+    "level": "HL",
+    "tags": [
+      "unbiased-estimators",
+      "sampling-distributions"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "7",
+    "topic_name": "Statistics & Probability (HL Extension)",
+    "subtopic": "7.4",
+    "lesson_title": "Normal Combinations & CLT",
+    "level": "HL",
+    "tags": [
+      "central-limit-theorem",
+      "normal-combinations"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "7",
+    "topic_name": "Statistics & Probability (HL Extension)",
+    "subtopic": "7.5",
+    "lesson_title": "Confidence Intervals (Mean)",
+    "level": "HL",
+    "tags": [
+      "confidence-intervals",
+      "margin-of-error"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "7",
+    "topic_name": "Statistics & Probability (HL Extension)",
+    "subtopic": "7.6",
+    "lesson_title": "Hypothesis Testing (Mean)",
+    "level": "HL",
+    "tags": [
+      "hypothesis-testing",
+      "p-values",
+      "significance-levels"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "7",
+    "topic_name": "Statistics & Probability (HL Extension)",
+    "subtopic": "7.7",
+    "lesson_title": "Bivariate Correlation & Regression",
+    "level": "HL",
+    "tags": [
+      "correlation",
+      "regression",
+      "least-squares"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.1",
+    "lesson_title": "Set Operations & Laws",
+    "level": "HL",
+    "tags": [
+      "sets",
+      "union",
+      "intersection",
+      "complement",
+      "de-morgan"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.2",
+    "lesson_title": "Relations & Equivalence",
+    "level": "HL",
+    "tags": [
+      "relations",
+      "equivalence-relations",
+      "equivalence-classes"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.3",
+    "lesson_title": "Injections, Surjections, Bijections",
+    "level": "HL",
+    "tags": [
+      "injective",
+      "surjective",
+      "bijective",
+      "cardinality"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.4",
+    "lesson_title": "Binary Operations",
+    "level": "HL",
+    "tags": [
+      "binary-operations",
+      "closure",
+      "operation-tables"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.5",
+    "lesson_title": "Operation Properties",
+    "level": "HL",
+    "tags": [
+      "associativity",
+      "commutativity",
+      "distributivity"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.6",
+    "lesson_title": "Identity & Inverses",
+    "level": "HL",
+    "tags": [
+      "identity-element",
+      "inverse-element"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.7",
+    "lesson_title": "Definition of a Group",
+    "level": "HL",
+    "tags": [
+      "group-axioms",
+      "group-definition"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.8",
+    "lesson_title": "Group Examples",
+    "level": "HL",
+    "tags": [
+      "cyclic-groups",
+      "dihedral-groups",
+      "symmetric-groups"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.9",
+    "lesson_title": "Cyclic Groups & Generators",
+    "level": "HL",
+    "tags": [
+      "cyclic-groups",
+      "generators",
+      "order-of-element"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.10",
+    "lesson_title": "Permutations & Cycles",
+    "level": "HL",
+    "tags": [
+      "permutations",
+      "cycle-notation",
+      "transpositions"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.11",
+    "lesson_title": "Subgroups, Cosets & Lagrange",
+    "level": "HL",
+    "tags": [
+      "subgroups",
+      "cosets",
+      "lagrange-theorem"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "8",
+    "topic_name": "Sets, Relations & Groups (HL Option)",
+    "subtopic": "8.12",
+    "lesson_title": "Homomorphisms & Isomorphisms",
+    "level": "HL",
+    "tags": [
+      "homomorphism",
+      "isomorphism",
+      "kernel"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "9",
+    "topic_name": "Calculus (HL Extension)",
+    "subtopic": "9.1",
+    "lesson_title": "Infinite Sequences",
+    "level": "HL",
+    "tags": [
+      "sequences",
+      "convergence",
+      "squeeze-theorem"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "9",
+    "topic_name": "Calculus (HL Extension)",
+    "subtopic": "9.2",
+    "lesson_title": "Infinite Series & Tests",
+    "level": "HL",
+    "tags": [
+      "convergence-tests",
+      "ratio-test",
+      "comparison-test",
+      "integral-test"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "9",
+    "topic_name": "Calculus (HL Extension)",
+    "subtopic": "9.3",
+    "lesson_title": "Continuity & Differentiability",
+    "level": "HL",
+    "tags": [
+      "continuity",
+      "differentiability",
+      "IVT",
+      "MVT"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "9",
+    "topic_name": "Calculus (HL Extension)",
+    "subtopic": "9.4",
+    "lesson_title": "Riemann Sums & Improper Integrals",
+    "level": "HL",
+    "tags": [
+      "riemann-sums",
+      "improper-integrals",
+      "convergence"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "9",
+    "topic_name": "Calculus (HL Extension)",
+    "subtopic": "9.5",
+    "lesson_title": "First-Order Differential Equations",
+    "level": "HL",
+    "tags": [
+      "separable-DE",
+      "linear-DE",
+      "integrating-factor",
+      "euler-method"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "9",
+    "topic_name": "Calculus (HL Extension)",
+    "subtopic": "9.6",
+    "lesson_title": "Taylor & Maclaurin Series",
+    "level": "HL",
+    "tags": [
+      "taylor-series",
+      "maclaurin-series",
+      "radius-of-convergence"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "9",
+    "topic_name": "Calculus (HL Extension)",
+    "subtopic": "9.7",
+    "lesson_title": "Limit Evaluation (l'Hopital & Series)",
+    "level": "HL",
+    "tags": [
+      "lhopital",
+      "indeterminate-forms"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "10",
+    "topic_name": "Discrete Mathematics (HL Option)",
+    "subtopic": "10.1",
+    "lesson_title": "Strong Induction & Pigeonhole",
+    "level": "HL",
+    "tags": [
+      "strong-induction",
+      "pigeonhole-principle"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "10",
+    "topic_name": "Discrete Mathematics (HL Option)",
+    "subtopic": "10.2",
+    "lesson_title": "Divisibility, GCD, LCM & Primes",
+    "level": "HL",
+    "tags": [
+      "divisibility",
+      "gcd",
+      "lcm",
+      "prime-factorization",
+      "euclidean-algorithm"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "10",
+    "topic_name": "Discrete Mathematics (HL Option)",
+    "subtopic": "10.3",
+    "lesson_title": "Linear Diophantine Equations",
+    "level": "HL",
+    "tags": [
+      "diophantine-equations",
+      "integer-solutions"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "10",
+    "topic_name": "Discrete Mathematics (HL Option)",
+    "subtopic": "10.4",
+    "lesson_title": "Modular Arithmetic & CRT",
+    "level": "HL",
+    "tags": [
+      "modular-arithmetic",
+      "congruences",
+      "chinese-remainder-theorem"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "10",
+    "topic_name": "Discrete Mathematics (HL Option)",
+    "subtopic": "10.5",
+    "lesson_title": "Integer Bases",
+    "level": "HL",
+    "tags": [
+      "base-conversion",
+      "binary",
+      "hexadecimal"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "10",
+    "topic_name": "Discrete Mathematics (HL Option)",
+    "subtopic": "10.6",
+    "lesson_title": "Fermat's Little Theorem",
+    "level": "HL",
+    "tags": [
+      "fermat-little-theorem",
+      "euler-theorem"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "10",
+    "topic_name": "Discrete Mathematics (HL Option)",
+    "subtopic": "10.7",
+    "lesson_title": "Graph Theory Basics",
+    "level": "HL",
+    "tags": [
+      "graphs",
+      "vertices",
+      "edges",
+      "degree",
+      "adjacency"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "10",
+    "topic_name": "Discrete Mathematics (HL Option)",
+    "subtopic": "10.8",
+    "lesson_title": "Walks, Trails & Cycles",
+    "level": "HL",
+    "tags": [
+      "walks",
+      "trails",
+      "paths",
+      "euler-circuits",
+      "hamiltonian"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "10",
+    "topic_name": "Discrete Mathematics (HL Option)",
+    "subtopic": "10.9",
+    "lesson_title": "Graph Algorithms (Kruskal & Dijkstra)",
+    "level": "HL",
+    "tags": [
+      "kruskal",
+      "dijkstra",
+      "minimum-spanning-tree",
+      "shortest-path"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "10",
+    "topic_name": "Discrete Mathematics (HL Option)",
+    "subtopic": "10.10",
+    "lesson_title": "Chinese Postman & TSP",
+    "level": "HL",
+    "tags": [
+      "chinese-postman",
+      "travelling-salesman",
+      "optimization"
+    ],
+    "practice_integration": true
+  },
+  {
+    "subject": "math_aa",
+    "topic": "10",
+    "topic_name": "Discrete Mathematics (HL Option)",
+    "subtopic": "10.11",
+    "lesson_title": "Recurrence Relations",
+    "level": "HL",
+    "tags": [
+      "recurrence-relations",
+      "characteristic-equation",
+      "homogeneous",
+      "particular-solution"
+    ],
+    "practice_integration": true
+  }
+]

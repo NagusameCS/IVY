@@ -1,0 +1,3656 @@
+[
+  {
+    "id": "chemistry_S1_1_mcq_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Classifying Matter: Elements, Compounds, Mixtures",
+    "tags": [
+      "atoms",
+      "elements",
+      "compounds",
+      "mixtures",
+      "pure-substances"
+    ],
+    "stem_template": "Which of the following is a pure compound?",
+    "params": {},
+    "answer_template": "Water (H₂O)",
+    "distractor_templates": [
+      "Air",
+      "Brass",
+      "Crude oil"
+    ],
+    "options_template": [
+      {
+        "text": "Water (H\\\\(_2\\\\)O)",
+        "correct": true
+      },
+      {
+        "text": "Air (mixture of gases)",
+        "correct": false
+      },
+      {
+        "text": "Brass (alloy of Cu and Zn)",
+        "correct": false
+      },
+      {
+        "text": "Crude oil (mixture of hydrocarbons)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Water is a pure compound with fixed composition (H:O = 2:1 by atoms). Air, brass, and crude oil are all mixtures with variable composition. [1 mark]",
+    "hints": [
+      "A compound has fixed chemical formula and composition",
+      "Mixtures can be separated by physical means"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S1_1_mcq_002",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "States of Matter and Particle Model",
+    "tags": [
+      "states-of-matter",
+      "particles",
+      "solid",
+      "liquid",
+      "gas"
+    ],
+    "stem_template": "Which statement correctly describes particles in a liquid?",
+    "params": {},
+    "answer_template": "Particles are close together but can move past each other",
+    "distractor_templates": [
+      "Particles are fixed in regular lattice positions",
+      "Particles are widely spaced with negligible intermolecular forces",
+      "Particles move in straight lines only"
+    ],
+    "options_template": [
+      {
+        "text": "Particles are close together but can move past each other",
+        "correct": true
+      },
+      {
+        "text": "Particles are fixed in a regular lattice with only vibrational motion",
+        "correct": false
+      },
+      {
+        "text": "Particles are widely spaced with negligible intermolecular forces",
+        "correct": false
+      },
+      {
+        "text": "Particles move in straight lines only, never changing direction",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "In liquids: particles close together (like solids) but have enough energy to flow past each other (unlike solids). Not widely spaced (that's gases). [1 mark]",
+    "hints": [
+      "Compare with solids (ordered, fixed) and gases (random, sparse)"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S1_1_worked_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.1",
+    "type": "worked",
+    "difficulty": "core",
+    "title": "Separation Techniques",
+    "tags": [
+      "mixtures",
+      "separation",
+      "filtration",
+      "distillation",
+      "chromatography"
+    ],
+    "stem_template": "Suggest a suitable separation technique for each mixture and explain the principle: (a) sand and water (b) ethanol and water (c) ink pigments in water.",
+    "params": {},
+    "answer_template": "Filtration, distillation, paper chromatography",
+    "mark_scheme_template": "(a) Filtration — sand particles too large to pass through filter paper; water passes through [2]. (b) Fractional distillation — ethanol (bp 78°C) has lower boiling point than water (100°C); different volatilities [2]. (c) Paper/thin-layer chromatography — components have different solubilities in solvent/different affinity for stationary phase [2].",
+    "hints": [
+      "Match technique to property difference",
+      "Consider particle size, boiling point, or solubility differences"
+    ],
+    "marks": 6
+  },
+  {
+    "id": "chemistry_S1_2_mcq_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Subatomic Particles",
+    "tags": [
+      "protons",
+      "neutrons",
+      "electrons",
+      "atomic-structure"
+    ],
+    "stem_template": "An atom of \\\\(^{{A}}_{{{Z}}}\\\\)X has how many neutrons?",
+    "params": {
+      "A": {
+        "type": "int",
+        "min": 10,
+        "max": 100
+      },
+      "Z": {
+        "type": "int",
+        "min": 5,
+        "max": 50
+      }
+    },
+    "answer_template": "{{A - Z}}",
+    "distractor_templates": [
+      "{{Z}}",
+      "{{A}}",
+      "{{A + Z}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{A-Z}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{Z}}\\\\) (atomic number)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{A}}\\\\) (mass number)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{A+Z}}\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Number of neutrons = mass number − atomic number = {{A}} − {{Z}} = {{A-Z}}. [1 mark]",
+    "hints": [
+      "Neutrons = A − Z",
+      "A = mass number, Z = atomic number (= number of protons)"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S1_2_mcq_002",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Isotopes",
+    "tags": [
+      "isotopes",
+      "mass-spectrometry",
+      "relative-atomic-mass"
+    ],
+    "stem_template": "Chlorine has two naturally occurring isotopes: \\\\(^{35}\\\\)Cl (abundance {{a35}}%) and \\\\(^{37}\\\\)Cl (abundance {{a37}}%). Calculate the relative atomic mass of chlorine.",
+    "params": {
+      "a35": {
+        "type": "choice",
+        "values": [
+          75
+        ]
+      },
+      "a37": {
+        "type": "choice",
+        "values": [
+          25
+        ]
+      }
+    },
+    "answer_template": "{{(35 * a35 + 37 * a37) / 100}}",
+    "distractor_templates": [
+      "{{(35 + 37) / 2}}",
+      "{{35 * a35 / 100}}",
+      "{{37}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{(35*a35+37*a37)/100}}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{(35+37)/2}} = 36.0\\\\) (simple average)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(35\\\\) (most abundant isotope only)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(37\\\\) (heaviest isotope)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "\\\\(A_r = \\\\frac{(35 \\\\times {{a35}}) + (37 \\\\times {{a37}})}{100} = \\\\frac{{{35*a35}} + {{37*a37}}}{100} = {{(35*a35+37*a37)/100}}\\\\) [2 marks]",
+    "hints": [
+      "Ar = Σ(mass × abundance) / 100 for percentage abundances"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_S1_2_numerical_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.2",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Mass Spectrometry: Relative Atomic Mass from Spectrum",
+    "tags": [
+      "mass-spectrometry",
+      "isotopes",
+      "relative-atomic-mass"
+    ],
+    "stem_template": "A mass spectrum of element X shows peaks at m/z = {{m1}} (relative abundance {{a1}}) and m/z = {{m2}} (relative abundance {{a2}}). Calculate the relative atomic mass.",
+    "params": {
+      "m1": {
+        "type": "choice",
+        "values": [
+          63,
+          107,
+          79
+        ]
+      },
+      "a1": {
+        "type": "choice",
+        "values": [
+          69,
+          51,
+          50
+        ]
+      },
+      "m2": {
+        "type": "choice",
+        "values": [
+          65,
+          109,
+          81
+        ]
+      },
+      "a2": {
+        "type": "choice",
+        "values": [
+          31,
+          49,
+          50
+        ]
+      }
+    },
+    "answer_template": "{{(m1 * a1 + m2 * a2) / (a1 + a2)}}",
+    "tolerance": 0.1,
+    "unit": "",
+    "mark_scheme_template": "\\\\(A_r = \\\\frac{({{m1}} \\\\times {{a1}}) + ({{m2}} \\\\times {{a2}})}{{{a1}} + {{a2}}} = \\\\frac{{{m1*a1 + m2*a2}}}{{{a1+a2}}} = {{round((m1*a1+m2*a2)/(a1+a2),2)}}\\\\) [2 marks]",
+    "hints": [
+      "Ar = Σ(mass × relative abundance) / Σ(relative abundance)",
+      "Divide by total abundance, not 100 (unless percentages)"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_S1_3_mcq_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Electron Configuration Notation",
+    "tags": [
+      "electron-config",
+      "aufbau",
+      "orbital-notation"
+    ],
+    "stem_template": "What is the ground state electron configuration of iron (Z = 26)?",
+    "params": {},
+    "answer_template": "[Ar] 3d⁶ 4s²",
+    "distractor_templates": [
+      "[Ar] 3d⁸",
+      "[Ar] 3d⁵ 4s² 4p¹",
+      "[Ar] 4s² 4p⁶"
+    ],
+    "options_template": [
+      {
+        "text": "[Ar] 3d\\\\(^6\\\\) 4s\\\\(^2\\\\)",
+        "correct": true
+      },
+      {
+        "text": "[Ar] 3d\\\\(^8\\\\)",
+        "correct": false
+      },
+      {
+        "text": "[Ar] 3d\\\\(^5\\\\) 4s\\\\(^2\\\\) 4p\\\\(^1\\\\)",
+        "correct": false
+      },
+      {
+        "text": "[Ar] 4s\\\\(^2\\\\) 4p\\\\(^6\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Fe (Z=26): [Ar] = 18 electrons. Remaining 8: fill 3d then 4s. 3d can hold up to 10 electrons. Config: [Ar] 3d⁶ 4s² [1 mark]",
+    "hints": [
+      "Aufbau principle: fill lowest energy orbitals first",
+      "Order: 1s 2s 2p 3s 3p 4s 3d 4p..."
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S1_3_mcq_002",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Hund's Rule and Orbital Filling",
+    "tags": [
+      "hund",
+      "pauli",
+      "electron-config",
+      "orbitals"
+    ],
+    "stem_template": "How many unpaired electrons does a nitrogen atom (Z = 7) have in its ground state?",
+    "params": {},
+    "answer_template": "3",
+    "distractor_templates": [
+      "1",
+      "2",
+      "0"
+    ],
+    "options_template": [
+      {
+        "text": "3",
+        "correct": true
+      },
+      {
+        "text": "1",
+        "correct": false
+      },
+      {
+        "text": "2",
+        "correct": false
+      },
+      {
+        "text": "0 (all paired)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "N: 1s² 2s² 2p³. The three 2p electrons occupy three separate p orbitals with parallel spins (Hund's rule), giving 3 unpaired electrons. [1 mark]",
+    "hints": [
+      "Hund's rule: half-fill degenerate orbitals before pairing",
+      "N has 3 electrons in 2p: one in each px, py, pz"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S1_3_worked_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Electron Configuration of Transition Metal Ions",
+    "tags": [
+      "electron-config",
+      "transition-metals",
+      "ions"
+    ],
+    "stem_template": "Write the electron configurations of (a) Cu (Z=29) and (b) Cu²⁺, explaining any exceptions to the Aufbau principle.",
+    "params": {},
+    "answer_template": "(a) [Ar] 3d¹⁰ 4s¹ (b) [Ar] 3d⁹",
+    "mark_scheme_template": "(a) Cu is [Ar] 3d¹⁰ 4s¹ (not [Ar] 3d⁹ 4s²) because a completely full d subshell gives extra stability [2]. (b) Cu²⁺: remove 2 electrons from the outermost shell (4s first, then 3d): [Ar] 3d⁹ [2].",
+    "hints": [
+      "Cu and Cr are exceptions: half-full/full d subshells are extra stable",
+      "For ions: remove electrons from highest principal quantum number first"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_S1_4_numerical_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.4",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Molar Mass Calculation",
+    "tags": [
+      "moles",
+      "molar-mass",
+      "formula"
+    ],
+    "stem_template": "Calculate the molar mass of {{compound}} and hence find the number of moles in {{mass}} g.",
+    "params": {
+      "compound": {
+        "type": "choice",
+        "values": [
+          "CaCO₃",
+          "H₂SO₄",
+          "NaOH",
+          "C₆H₁₂O₆",
+          "Fe₂O₃"
+        ]
+      },
+      "mass": {
+        "type": "int",
+        "min": 5,
+        "max": 200
+      }
+    },
+    "answer_template": "n = mass / M_r",
+    "tolerance": 0.01,
+    "unit": "mol",
+    "mark_scheme_template": "Molar masses: CaCO₃=100, H₂SO₄=98, NaOH=40, C₆H₁₂O₆=180, Fe₂O₃=160 g mol⁻¹. n = {{mass}} / M_r [2 marks]",
+    "hints": [
+      "n = m / M_r",
+      "Add up all atomic masses in the formula"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_S1_4_numerical_002",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.4",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Empirical Formula from Percentage Composition",
+    "tags": [
+      "empirical-formula",
+      "percentage-composition",
+      "moles"
+    ],
+    "stem_template": "A compound contains {{pC}}% carbon, {{pH}}% hydrogen, and the rest is oxygen. Determine its empirical formula. (Ar: C=12, H=1, O=16)",
+    "params": {
+      "pC": {
+        "type": "choice",
+        "values": [
+          40.0,
+          52.2,
+          38.7
+        ]
+      },
+      "pH": {
+        "type": "choice",
+        "values": [
+          6.67,
+          13.0,
+          9.68
+        ]
+      }
+    },
+    "answer_template": "Divide % by Ar, find ratio",
+    "mark_scheme_template": "%O = 100 − {{pC}} − {{pH}} = {{100-pC-pH}}%. Mole ratios: C: {{pC}}/12 = {{round(pC/12,3)}}; H: {{pH}}/1 = {{pH}}; O: {{100-pC-pH}}/16 = {{round((100-pC-pH)/16,3)}}. Divide by smallest and round to integers. [3 marks]",
+    "hints": [
+      "Assume 100 g sample → % directly gives grams",
+      "Divide grams by molar mass to get moles",
+      "Divide all mole values by the smallest"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "chemistry_S1_4_worked_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Molecular Formula from Empirical Formula",
+    "tags": [
+      "molecular-formula",
+      "molar-mass",
+      "empirical-formula"
+    ],
+    "stem_template": "A compound has empirical formula CH₂O and molar mass 180 g mol⁻¹. Determine its molecular formula.",
+    "params": {},
+    "answer_template": "C₆H₁₂O₆",
+    "mark_scheme_template": "Empirical formula mass: CH₂O = 12+2+16 = 30 g mol⁻¹ [1]. n = 180/30 = 6 [1]. Molecular formula = (CH₂O)₆ = C₆H₁₂O₆ [1].",
+    "hints": [
+      "n = molar mass / empirical formula mass",
+      "Multiply subscripts in empirical formula by n"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "chemistry_S1_5_numerical_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.5",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Ideal Gas Law Calculation",
+    "tags": [
+      "ideal-gas-law",
+      "molar-volume",
+      "pressure",
+      "temperature"
+    ],
+    "stem_template": "Calculate the volume occupied by \\\\({{n}}\\\\) mol of an ideal gas at \\\\({{T}}\\\\) °C and \\\\({{P}}\\\\) kPa. (R = 8.31 J mol\\\\(^{-1}\\\\) K\\\\(^{-1}\\\\))",
+    "params": {
+      "n": {
+        "type": "float",
+        "min": 0.5,
+        "max": 5.0,
+        "decimals": 2
+      },
+      "T": {
+        "type": "int",
+        "min": 0,
+        "max": 200
+      },
+      "P": {
+        "type": "int",
+        "min": 50,
+        "max": 200
+      }
+    },
+    "answer_template": "{{n * 8.31 * (T + 273) / (P * 1000) * 1000}}",
+    "tolerance": 0.1,
+    "unit": "L",
+    "mark_scheme_template": "\\\\(V = \\\\frac{nRT}{P} = \\\\frac{{{n}} \\\\times 8.31 \\\\times {{T+273}}}{{{P}} \\\\times 10^3} = {{round(n*8.31*(T+273)/(P*1000),3)}}\\\\) m\\\\(^3\\\\) = \\\\({{round(n*8.31*(T+273)/(P*1000)*1000,2)}}\\\\) L [3 marks]",
+    "hints": [
+      "pV = nRT",
+      "T in K = T(°C) + 273",
+      "P in Pa = P(kPa) × 1000"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "chemistry_S1_5_mcq_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.5",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Molar Volume at STP",
+    "tags": [
+      "ideal-gas-law",
+      "molar-volume",
+      "STP"
+    ],
+    "stem_template": "At STP (0 °C, 100 kPa), what volume does 1 mole of any ideal gas occupy?",
+    "params": {},
+    "answer_template": "22.7 L",
+    "distractor_templates": [
+      "22.4 L",
+      "24.0 L",
+      "24.5 L"
+    ],
+    "options_template": [
+      {
+        "text": "22.7 L",
+        "correct": true
+      },
+      {
+        "text": "22.4 L (old STP, 273 K, 101.3 kPa)",
+        "correct": false
+      },
+      {
+        "text": "24.0 L (25 °C, 100 kPa)",
+        "correct": false
+      },
+      {
+        "text": "24.5 L (25 °C, 101.3 kPa)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "At STP (IB 2025: 0 °C = 273 K, 100 kPa): V_m = RT/P = 8.31×273/100000 = 0.02270 m³ = 22.7 L mol⁻¹ [1 mark]",
+    "hints": [
+      "IB uses STP = 0°C (273 K) and 100 kPa (not 101.325 kPa)"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S2_1_mcq_001",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Ionic Bonding: Electron Transfer",
+    "tags": [
+      "ionic-bonding",
+      "electron-transfer",
+      "ions"
+    ],
+    "stem_template": "How many electrons does a {{element}} atom transfer to form its most stable ion?",
+    "params": {
+      "element": {
+        "type": "choice",
+        "values": [
+          "magnesium",
+          "aluminium",
+          "sulfur",
+          "chlorine"
+        ]
+      }
+    },
+    "answer_template": "Depends on element",
+    "distractor_templates": [],
+    "options_template": [
+      {
+        "text": "Magnesium loses 2e⁻ to form Mg²⁺",
+        "correct": true
+      },
+      {
+        "text": "Magnesium gains 2e⁻ to form Mg²⁻",
+        "correct": false
+      },
+      {
+        "text": "Magnesium loses 1e⁻ to form Mg⁺",
+        "correct": false
+      },
+      {
+        "text": "Magnesium shares 2e⁻ to form Mg²⁺",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Magnesium: Group 2 → loses 2 electrons to achieve noble gas configuration → Mg²⁺ [1 mark]",
+    "hints": [
+      "Group number indicates usual oxidation state/electrons lost/gained",
+      "Metals lose electrons, nonmetals gain electrons"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S2_1_worked_001",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.1",
+    "type": "worked",
+    "difficulty": "core",
+    "title": "Ionic Lattice Structure and Properties",
+    "tags": [
+      "ionic-bonding",
+      "lattice-structure",
+      "properties-of-ionic"
+    ],
+    "stem_template": "Explain why ionic compounds: (a) have high melting points, (b) conduct electricity when molten but not when solid, (c) are soluble in water.",
+    "params": {},
+    "answer_template": "Strong electrostatic forces, mobile ions when molten, hydration by polar water",
+    "mark_scheme_template": "(a) Strong electrostatic attractions between oppositely charged ions require large amounts of energy to overcome; giant ionic lattice [2]. (b) In solid: ions fixed in lattice, cannot move, so no current. In molten state: ions free to move and carry charge [2]. (c) Water molecules are polar; they hydrate ions by surrounding them with opposite partial charges, releasing lattice energy ≤ hydration energy [2].",
+    "hints": [
+      "Think about ion mobility for conductivity",
+      "Hydration involves ion-dipole interactions"
+    ],
+    "marks": 6
+  },
+  {
+    "id": "chemistry_S2_1_mcq_002",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Predicting Ionic Formulae",
+    "tags": [
+      "ionic-bonding",
+      "formulae",
+      "charge-balance"
+    ],
+    "stem_template": "What is the correct formula for the ionic compound formed between calcium and phosphate (PO₄³⁻)?",
+    "params": {},
+    "answer_template": "Ca₃(PO₄)₂",
+    "distractor_templates": [
+      "Ca(PO₄)",
+      "Ca₂(PO₄)₃",
+      "CaPO₄"
+    ],
+    "options_template": [
+      {
+        "text": "Ca\\\\(_3\\\\)(PO\\\\(_4\\\\))\\\\(_2\\\\)",
+        "correct": true
+      },
+      {
+        "text": "Ca(PO\\\\(_4\\\\))",
+        "correct": false
+      },
+      {
+        "text": "Ca\\\\(_2\\\\)(PO\\\\(_4\\\\))\\\\(_3\\\\)",
+        "correct": false
+      },
+      {
+        "text": "CaPO\\\\(_4\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Ca²⁺ and PO₄³⁻: LCM of charges = 6. Need 3 Ca²⁺ and 2 PO₄³⁻: 3(+2) + 2(−3) = 0. Formula: Ca₃(PO₄)₂ [2 marks]",
+    "hints": [
+      "Total positive charge must equal total negative charge",
+      "Find LCM of the charges"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_S2_2_mcq_001",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "VSEPR Theory: Molecular Geometry",
+    "tags": [
+      "VSEPR",
+      "molecular-geometry",
+      "covalent-bonding"
+    ],
+    "stem_template": "Using VSEPR theory, predict the shape of a molecule with formula AX₃E₁ (3 bonding pairs, 1 lone pair around central atom).",
+    "params": {},
+    "answer_template": "Trigonal pyramidal",
+    "distractor_templates": [
+      "Trigonal planar",
+      "Tetrahedral",
+      "Bent"
+    ],
+    "options_template": [
+      {
+        "text": "Trigonal pyramidal (e.g. NH\\\\(_3\\\\))",
+        "correct": true
+      },
+      {
+        "text": "Trigonal planar (e.g. BF\\\\(_3\\\\))",
+        "correct": false
+      },
+      {
+        "text": "Tetrahedral (e.g. CH\\\\(_4\\\\))",
+        "correct": false
+      },
+      {
+        "text": "Bent/V-shaped (e.g. H\\\\(_2\\\\)O)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "4 electron pairs (3 bonding + 1 lone pair): based on tetrahedral electron geometry. Lone pair compresses bond angles → trigonal pyramidal shape. Example: NH₃, bond angle ≈ 107°. [1 mark]",
+    "hints": [
+      "VSEPR counts all electron pairs around central atom",
+      "Lone pairs occupy more space than bonding pairs"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S2_2_worked_001",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Lewis Structures and Resonance",
+    "tags": [
+      "lewis-structures",
+      "resonance",
+      "covalent-bonding",
+      "formal-charge"
+    ],
+    "stem_template": "Draw the Lewis structure(s) of SO₂. Explain resonance and calculate the formal charge on the sulfur atom in each structure.",
+    "params": {},
+    "answer_template": "Two resonance structures with S=O and S–O; formal charge varies",
+    "mark_scheme_template": "Structure 1: S=O double bond on one side, S−O single bond with 3 lone pairs on the other; S has 1 lone pair [1]. Structure 2: mirror image [1]. Resonance: actual structure is average of both; S−O bonds intermediate length [1]. Formal charge on S in each structure: F.C. = valence e⁻ − lone pair e⁻ − ½ bonding e⁻ = 6 − 2 − ½(6) = +1 [2]. Modern view: S uses d orbitals, formal charge closer to 0.",
+    "hints": [
+      "Count valence electrons first: S has 6, O has 6 each",
+      "Formal charge = V − LP − ½BP"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_S2_2_mcq_002",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Polarity of Molecules",
+    "tags": [
+      "polarity",
+      "electronegativity",
+      "dipole-moment"
+    ],
+    "stem_template": "Which of the following molecules is non-polar despite having polar bonds?",
+    "params": {},
+    "answer_template": "CO₂ (linear, dipoles cancel)",
+    "distractor_templates": [
+      "H₂O",
+      "NH₃",
+      "HCl"
+    ],
+    "options_template": [
+      {
+        "text": "CO\\\\(_2\\\\) (linear — bond dipoles cancel)",
+        "correct": true
+      },
+      {
+        "text": "H\\\\(_2\\\\)O (bent — dipoles do not cancel)",
+        "correct": false
+      },
+      {
+        "text": "NH\\\\(_3\\\\) (pyramidal — dipoles do not cancel)",
+        "correct": false
+      },
+      {
+        "text": "HCl (diatomic — single bond dipole, polar molecule)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "CO₂ is linear (O=C=O); the two C=O bond dipoles are equal in magnitude but opposite in direction, so they cancel to give a zero net dipole moment. [1 mark]",
+    "hints": [
+      "Symmetrical molecules with identical bonds can be non-polar",
+      "Consider molecular shape, not just bond polarity"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S2_3_mcq_001",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Metallic Bonding and Properties",
+    "tags": [
+      "metallic-bonding",
+      "delocalized-electrons",
+      "conductivity"
+    ],
+    "stem_template": "Which best explains why metals are good electrical conductors?",
+    "params": {},
+    "answer_template": "Delocalized electrons can move freely through the metal lattice",
+    "distractor_templates": [
+      "Metal ions vibrate to transfer energy",
+      "Metals contain free protons that carry charge",
+      "Ionic bonds in metals allow ion movement"
+    ],
+    "options_template": [
+      {
+        "text": "Delocalized (free) electrons move freely through the metal lattice when a potential difference is applied",
+        "correct": true
+      },
+      {
+        "text": "Metal ions vibrate and transfer kinetic energy along the lattice",
+        "correct": false
+      },
+      {
+        "text": "Metals contain free protons that carry positive charge",
+        "correct": false
+      },
+      {
+        "text": "Metal ions can move like in molten ionic compounds",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "In metals: valence electrons leave individual atoms to form a 'sea' of delocalized electrons. Under applied voltage, these electrons drift in one direction → electric current. [1 mark]",
+    "hints": [
+      "Delocalization is the key concept in metallic bonding"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S2_3_worked_001",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Alloys and Their Properties",
+    "tags": [
+      "metallic-bonding",
+      "alloys",
+      "properties"
+    ],
+    "stem_template": "Explain why alloys are generally harder than pure metals. Use steel (iron + carbon) as an example.",
+    "params": {},
+    "answer_template": "Different-sized atoms disrupt regular lattice → harder to deform",
+    "mark_scheme_template": "Pure metal: regular lattice of identical atoms; layers can slide over each other (ductile, malleable) [1]. Alloy: atoms of different size disrupt regular pattern [1]; impurity atoms pin dislocation movement, preventing layer sliding [1]; makes alloy harder and less ductile [1]. Example: steel — carbon atoms fill interstitial spaces in Fe lattice, making it harder than pure iron [1]. [5 marks]",
+    "hints": [
+      "Consider how layers of atoms slide past each other",
+      "Carbon atoms are smaller than iron atoms"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_S2_4_mcq_001",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Hydrogen Bonding",
+    "tags": [
+      "hydrogen-bonding",
+      "intermolecular-forces",
+      "boiling-point"
+    ],
+    "stem_template": "Which pair of molecules forms hydrogen bonds between them?",
+    "params": {},
+    "answer_template": "H₂O and CH₃OH",
+    "distractor_templates": [
+      "CH₄ and HCl",
+      "CCl₄ and H₂O",
+      "CH₄ and NH₃ — wait, NH₃ does form H-bonds"
+    ],
+    "options_template": [
+      {
+        "text": "H\\\\(_2\\\\)O and CH\\\\(_3\\\\)OH (both have O−H groups)",
+        "correct": true
+      },
+      {
+        "text": "CH\\\\(_4\\\\) and C\\\\(_2\\\\)H\\\\(_6\\\\) (only van der Waals forces)",
+        "correct": false
+      },
+      {
+        "text": "CCl\\\\(_4\\\\) and CBr\\\\(_4\\\\) (only London dispersion forces)",
+        "correct": false
+      },
+      {
+        "text": "HCl and HBr (only dipole-dipole forces, not H-bonds)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Hydrogen bonding requires H bonded to highly electronegative atom (F, O, or N) AND a lone pair on F, O, or N in a neighboring molecule. H₂O and CH₃OH both have O−H bonds. [1 mark]",
+    "hints": [
+      "H-bonds form only with N−H, O−H, or F−H groups"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S2_4_worked_001",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Trend in Boiling Points: Intermolecular Forces",
+    "tags": [
+      "intermolecular-forces",
+      "boiling-point",
+      "van-der-waals",
+      "hydrogen-bonding"
+    ],
+    "stem_template": "Arrange these molecules in order of increasing boiling point and explain: CH₄, NH₃, H₂O, HF. Discuss what types of intermolecular forces are present in each.",
+    "params": {},
+    "answer_template": "CH₄ < NH₃ < HF < H₂O",
+    "mark_scheme_template": "CH₄ (−162°C): only London dispersion forces (small, non-polar) [1]. NH₃ (−33°C): N−H hydrogen bonding (but weaker network than H₂O due to only 1 H-bond donor/2 acceptors) [1]. HF (19°C): strong F−H hydrogen bonding (most electronegative F), but only 1 H per molecule limits H-bond network [1]. H₂O (100°C): highest — 2 H-bond donors AND 2 acceptors per molecule → extensive 3D hydrogen-bonding network [2]. [5 marks]",
+    "hints": [
+      "Consider both the strength and number of H-bonds possible",
+      "London forces increase with molecule size"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_S3_1_mcq_001",
+    "subject": "chemistry",
+    "topic": "S3",
+    "subtopic": "S3.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Periodic Trend: Ionization Energy",
+    "tags": [
+      "ionization-energy",
+      "periodic-trends",
+      "groups"
+    ],
+    "stem_template": "Which explains why the first ionization energy of oxygen is lower than that of nitrogen?",
+    "params": {},
+    "answer_template": "Oxygen's 2p⁴ configuration has a paired electron causing extra repulsion",
+    "distractor_templates": [
+      "Oxygen has a larger atomic radius than nitrogen",
+      "Nitrogen has more protons attracting electrons more strongly",
+      "Oxygen is a noble gas with a full outer shell"
+    ],
+    "options_template": [
+      {
+        "text": "Oxygen has a paired electron in 2p; electron-electron repulsion makes it easier to remove one electron",
+        "correct": true
+      },
+      {
+        "text": "Oxygen has a larger atomic radius, so electrons are further from the nucleus",
+        "correct": false
+      },
+      {
+        "text": "Nitrogen has more protons and attracts its electrons more strongly",
+        "correct": false
+      },
+      {
+        "text": "Nitrogen has a completely half-filled 2p subshell which gives extra stability",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "N: 2p³ (half-filled, one electron in each 2p orbital). O: 2p⁴ (one orbital has 2 electrons → repulsion). The extra repulsion in O's paired electron makes it easier to remove one → lower IE₁. [2 marks]",
+    "hints": [
+      "Half-filled subshells (and full subshells) have extra stability",
+      "Paired electrons in same orbital repel each other"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_S3_1_mcq_002",
+    "subject": "chemistry",
+    "topic": "S3",
+    "subtopic": "S3.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Electronegativity Trend",
+    "tags": [
+      "electronegativity",
+      "periodic-trends",
+      "Pauling-scale"
+    ],
+    "stem_template": "Which element has the highest electronegativity?",
+    "params": {},
+    "answer_template": "Fluorine (F)",
+    "distractor_templates": [
+      "Oxygen (O)",
+      "Chlorine (Cl)",
+      "Nitrogen (N)"
+    ],
+    "options_template": [
+      {
+        "text": "Fluorine (F)",
+        "correct": true
+      },
+      {
+        "text": "Oxygen (O)",
+        "correct": false
+      },
+      {
+        "text": "Chlorine (Cl)",
+        "correct": false
+      },
+      {
+        "text": "Nitrogen (N)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Fluorine has the highest electronegativity (Pauling: 3.98) because it has the most protons relative to shielding, smallest atomic radius, so strongest attraction for bonding electrons. [1 mark]",
+    "hints": [
+      "Electronegativity increases across a period and up a group"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S3_1_worked_001",
+    "subject": "chemistry",
+    "topic": "S3",
+    "subtopic": "S3.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Successive Ionization Energies and Group Identification",
+    "tags": [
+      "ionization-energy",
+      "periodic-table",
+      "electron-configuration"
+    ],
+    "stem_template": "The first five successive ionization energies (in kJ mol⁻¹) of element X are: 900, 1760, 14850, 21000, 33600. Identify the group of X and explain your reasoning.",
+    "params": {},
+    "answer_template": "Group 2 (large jump between 2nd and 3rd IE)",
+    "mark_scheme_template": "Large jump between 2nd and 3rd IE [1]. Indicates X has 2 electrons in its outer shell; removing the 3rd requires breaking into an inner shell [1]. Therefore X is in Group 2 [1]. Examples: Mg, Ca, etc. [1 mark for example]. [4 marks]",
+    "hints": [
+      "Look for the large jump — it occurs when moving to a new shell",
+      "Number of electrons before the jump = group number"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_S3_2_chem_structure_001",
+    "subject": "chemistry",
+    "topic": "S3",
+    "subtopic": "S3.2",
+    "type": "chem_structure",
+    "difficulty": "core",
+    "title": "IUPAC Nomenclature: Alkanes",
+    "tags": [
+      "IUPAC",
+      "alkanes",
+      "nomenclature",
+      "organic"
+    ],
+    "stem_template": "Name the following organic compound given its SMILES: {{smiles}}",
+    "params": {
+      "smiles": {
+        "type": "choice",
+        "values": [
+          "CCCC",
+          "CCCCC",
+          "CC(C)CC",
+          "CCC(C)C",
+          "CC(C)(C)C"
+        ]
+      }
+    },
+    "answer_template": "Depends on SMILES",
+    "mark_scheme_template": "CCCC = butane, CCCCC = pentane, CC(C)CC = 2-methylbutane, CCC(C)C = 2-methylbutane, CC(C)(C)C = 2,2-dimethylpropane [1 mark each]",
+    "smiles_template": "{{smiles}}",
+    "hints": [
+      "Find the longest carbon chain (parent chain)",
+      "Number from the end that gives substituents lowest numbers"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_S3_2_matching_001",
+    "subject": "chemistry",
+    "topic": "S3",
+    "subtopic": "S3.2",
+    "type": "matching",
+    "difficulty": "core",
+    "title": "Functional Group Identification",
+    "tags": [
+      "functional-groups",
+      "organic-nomenclature",
+      "IUPAC"
+    ],
+    "stem_template": "Match each functional group to its class of compound.",
+    "params": {},
+    "pairs": [
+      {
+        "term": "−OH (on carbon chain)",
+        "match": "Alcohol"
+      },
+      {
+        "term": "−COOH",
+        "match": "Carboxylic acid"
+      },
+      {
+        "term": "−CHO",
+        "match": "Aldehyde"
+      },
+      {
+        "term": "−CO− (between carbons)",
+        "match": "Ketone"
+      },
+      {
+        "term": "−NH₂",
+        "match": "Amine"
+      },
+      {
+        "term": "−COO−",
+        "match": "Ester"
+      },
+      {
+        "term": "C=C",
+        "match": "Alkene"
+      },
+      {
+        "term": "−X (halogen)",
+        "match": "Halogenoalkane"
+      }
+    ],
+    "mark_scheme_template": "−OH = alcohol [1]; −COOH = carboxylic acid [1]; −CHO = aldehyde [1]; −CO− = ketone [1]; −NH₂ = amine [1]; −COO− = ester [1]; C=C = alkene [1]; −X = halogenoalkane [1]. [8 marks]",
+    "hints": [
+      "Carboxylic acid always has COOH at end of chain",
+      "Aldehyde has CHO at end; ketone has C=O between two carbons"
+    ],
+    "marks": 8
+  },
+  {
+    "id": "chemistry_S3_2_chem_structure_002",
+    "subject": "chemistry",
+    "topic": "S3",
+    "subtopic": "S3.2",
+    "type": "chem_structure",
+    "difficulty": "challenge",
+    "title": "Structural Isomers",
+    "tags": [
+      "isomers",
+      "structural-isomers",
+      "IUPAC",
+      "organic"
+    ],
+    "stem_template": "Draw all structural isomers of {{formula}} and name each one.",
+    "params": {
+      "formula": {
+        "type": "choice",
+        "values": [
+          "C₄H₁₀",
+          "C₄H₈O (alcohols)",
+          "C₃H₇Cl"
+        ]
+      }
+    },
+    "answer_template": "Multiple isomers",
+    "mark_scheme_template": "C₄H₁₀: butane (CCCC) and 2-methylpropane (CC(C)C) [2]. C₃H₇Cl: 1-chloropropane (CCCCl) and 2-chloropropane (CC(Cl)C) [2]. [marks awarded per correct named structure]",
+    "smiles_examples": [
+      "CCCC",
+      "CC(C)C",
+      "CCCCl",
+      "CC(Cl)C"
+    ],
+    "hints": [
+      "Systematically vary positions of branches or functional groups",
+      "Check each isomer has the correct molecular formula"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_R1_1_numerical_001",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Calorimetry: Enthalpy Change",
+    "tags": [
+      "enthalpy",
+      "calorimetry",
+      "specific-heat"
+    ],
+    "stem_template": "In a calorimeter, \\\\({{m}}\\\\) g of water heats from \\\\({{T1}}\\\\) °C to \\\\({{T2}}\\\\) °C. Calculate the heat released. (c_water = 4.18 J g\\\\(^{-1}\\\\) K\\\\(^{-1}\\\\))",
+    "params": {
+      "m": {
+        "type": "int",
+        "min": 50,
+        "max": 200
+      },
+      "T1": {
+        "type": "float",
+        "min": 18.0,
+        "max": 25.0,
+        "decimals": 1
+      },
+      "T2": {
+        "type": "float",
+        "min": 30.0,
+        "max": 65.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{m * 4.18 * (T2 - T1) / 1000}}",
+    "tolerance": 0.1,
+    "unit": "kJ",
+    "mark_scheme_template": "\\\\(q = mc\\\\Delta T = {{m}} \\\\times 4.18 \\\\times ({{T2}} - {{T1}}) = {{round(m*4.18*(T2-T1),1)}}\\\\) J = \\\\({{round(m*4.18*(T2-T1)/1000,3)}}\\\\) kJ [2 marks]",
+    "hints": [
+      "q = mcΔT",
+      "Convert J to kJ by dividing by 1000"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_R1_1_numerical_002",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.1",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Hess's Law Calculation",
+    "tags": [
+      "hess-law",
+      "enthalpy",
+      "thermochemistry"
+    ],
+    "stem_template": "Given: (1) C(s) + O₂(g) → CO₂(g), \\\\(\\\\Delta H_1 = {{dH1}}\\\\) kJ mol\\\\(^{-1}\\\\); (2) H₂(g) + ½O₂(g) → H₂O(l), \\\\(\\\\Delta H_2 = {{dH2}}\\\\) kJ mol\\\\(^{-1}\\\\); (3) C₂H₆(g) + 7/2 O₂(g) → 2CO₂(g) + 3H₂O(l), \\\\(\\\\Delta H_3 = {{dH3}}\\\\) kJ mol\\\\(^{-1}\\\\). Calculate \\\\(\\\\Delta H_f\\\\) for C₂H₆(g).",
+    "params": {
+      "dH1": {
+        "type": "choice",
+        "values": [
+          -394
+        ]
+      },
+      "dH2": {
+        "type": "choice",
+        "values": [
+          -286
+        ]
+      },
+      "dH3": {
+        "type": "choice",
+        "values": [
+          -1560
+        ]
+      }
+    },
+    "answer_template": "{{2*dH1 + 3*dH2 - dH3}}",
+    "tolerance": 2.0,
+    "unit": "kJ/mol",
+    "mark_scheme_template": "Target: 2C(s) + 3H₂(g) → C₂H₆(g). Use: 2×(1) + 3×(2) − (3): \\\\(\\\\Delta H_f = 2({{dH1}}) + 3({{dH2}}) − ({{dH3}}) = {{2*dH1+3*dH2-dH3}}\\\\) kJ mol⁻¹ [3 marks]",
+    "hints": [
+      "Write target equation and manipulate given equations to produce it",
+      "Multiplying equation × n also × n the ΔH; reversing flips the sign"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "chemistry_R1_1_worked_001",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Bond Enthalpy Calculation",
+    "tags": [
+      "bond-enthalpy",
+      "enthalpy",
+      "bond-breaking",
+      "bond-forming"
+    ],
+    "stem_template": "Using bond enthalpy data, calculate ΔH for: CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(g). Bond enthalpies (kJ mol⁻¹): C−H 413, O=O 498, C=O 805, O−H 463.",
+    "params": {},
+    "answer_template": "−803 kJ mol⁻¹",
+    "mark_scheme_template": "Bonds broken (endothermic): 4×C−H + 2×O=O = 4(413) + 2(498) = 1652 + 996 = 2648 kJ [2]. Bonds formed (exothermic): 2×C=O + 4×O−H = 2(805) + 4(463) = 1610 + 1852 = 3462 kJ [2]. ΔH = 2648 − 3462 = −814 kJ mol⁻¹ [1]. (Note: value differs slightly from Hess's law due to average bond enthalpies.) [5 marks]",
+    "hints": [
+      "Bond breaking: endothermic (+ΔH)",
+      "Bond forming: exothermic (−ΔH)",
+      "ΔH = Σ(broken) − Σ(formed)"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_R1_2_worked_001",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.2",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Born-Haber Cycle for NaCl",
+    "tags": [
+      "born-haber",
+      "lattice-enthalpy",
+      "hess-law",
+      "ionic"
+    ],
+    "stem_template": "Using the Born-Haber cycle, calculate the lattice enthalpy of NaCl given: ΔHf(NaCl) = −411 kJ mol⁻¹, atomization energy of Na = +108 kJ mol⁻¹, atomization energy of Cl₂ = +122 kJ mol⁻¹, IE₁(Na) = +496 kJ mol⁻¹, EA(Cl) = −349 kJ mol⁻¹.",
+    "params": {},
+    "answer_template": "ΔH_lattice = −788 kJ mol⁻¹",
+    "mark_scheme_template": "Born-Haber: ΔHf = ΔH_atom(Na) + ΔH_atom(½Cl₂) + IE₁(Na) + EA(Cl) + ΔH_lattice. −411 = +108 + 122 + 496 + (−349) + ΔH_lattice. ΔH_lattice = −411 − (108+122+496−349) = −411 − 377 = −788 kJ mol⁻¹ [4 marks]",
+    "hints": [
+      "Sum all steps around the cycle must equal ΔHf",
+      "Lattice enthalpy is highly negative (exothermic formation of ions from gaseous state)"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_R1_2_mcq_001",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.2",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "Enthalpy of Solution",
+    "tags": [
+      "enthalpy-of-solution",
+      "born-haber",
+      "hydration-enthalpy"
+    ],
+    "stem_template": "The lattice enthalpy of MgCl₂ is −2526 kJ mol⁻¹ and the hydration enthalpy is −2895 kJ mol⁻¹. What is the enthalpy of solution?",
+    "params": {},
+    "answer_template": "−369 kJ mol⁻¹",
+    "distractor_templates": [
+      "+369 kJ mol⁻¹",
+      "+5421 kJ mol⁻¹",
+      "−5421 kJ mol⁻¹"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\(-369\\\\) kJ mol\\\\(^{-1}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\(+369\\\\) kJ mol\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(+5421\\\\) kJ mol\\\\(^{-1}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\(-5421\\\\) kJ mol\\\\(^{-1}\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "ΔH_sol = −ΔH_lattice + ΔH_hydration = +2526 + (−2895) = −369 kJ mol⁻¹. Note: +ΔH_lattice to reverse lattice formation (endothermic dissolution of lattice). [2 marks]",
+    "hints": [
+      "ΔH_sol = −ΔH_lattice + ΔH_hydration",
+      "Breaking the lattice is endothermic; hydration is exothermic"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_R1_3_numerical_001",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.3",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Enthalpy of Combustion Calculation",
+    "tags": [
+      "enthalpy-of-combustion",
+      "calorimetry",
+      "fuels"
+    ],
+    "stem_template": "Burning \\\\({{m}}\\\\) g of ethanol (M_r = 46 g mol\\\\(^{-1}\\\\)) raises the temperature of \\\\({{mw}}\\\\) g of water by \\\\({{deltaT}}\\\\) °C. Calculate the enthalpy of combustion per mole. (c_water = 4.18 J g\\\\(^{-1}\\\\) K\\\\(^{-1}\\\\))",
+    "params": {
+      "m": {
+        "type": "float",
+        "min": 0.5,
+        "max": 2.0,
+        "decimals": 2
+      },
+      "mw": {
+        "type": "int",
+        "min": 100,
+        "max": 300
+      },
+      "deltaT": {
+        "type": "float",
+        "min": 10.0,
+        "max": 40.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{-mw * 4.18 * deltaT / 1000 * 46 / m}}",
+    "tolerance": 5.0,
+    "unit": "kJ/mol",
+    "mark_scheme_template": "q = \\\\(mc\\\\Delta T = {{mw}} \\\\times 4.18 \\\\times {{deltaT}} = {{round(mw*4.18*deltaT,1)}}\\\\) J [1]. n(ethanol) = {{m}}/46 = {{round(m/46,4)}} mol [1]. \\\\(\\\\Delta H_c = -q/n = {{round(-mw*4.18*deltaT/1000*46/m,1)}}\\\\) kJ mol⁻¹ [1]. Negative because exothermic. [3 marks]",
+    "hints": [
+      "ΔHc = −(heat gained by water) / moles of fuel",
+      "The sign is negative for an exothermic combustion"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "chemistry_R1_3_mcq_001",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Fuel Cell vs Combustion Engine",
+    "tags": [
+      "fuel-cells",
+      "hydrogen",
+      "energy",
+      "combustion"
+    ],
+    "stem_template": "Which statement about hydrogen fuel cells is correct?",
+    "params": {},
+    "answer_template": "They convert chemical energy directly to electrical energy with water as the only product",
+    "distractor_templates": [
+      "They produce CO₂ and water as combustion products",
+      "They require ignition and produce heat then electricity",
+      "They store electricity like a battery that can be recharged by plugging in"
+    ],
+    "options_template": [
+      {
+        "text": "They convert chemical energy directly to electrical energy; only by-product is water",
+        "correct": true
+      },
+      {
+        "text": "They combust hydrogen to produce heat, which drives a turbine",
+        "correct": false
+      },
+      {
+        "text": "They produce CO₂ and water like other fossil fuel combustion",
+        "correct": false
+      },
+      {
+        "text": "They are secondary cells that can be recharged by an external power source",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "H₂ fuel cell: H₂ oxidized at anode, O₂ reduced at cathode, producing water and electricity. No combustion, no CO₂. Efficiency higher than combustion engines. [1 mark]",
+    "hints": [
+      "Fuel cells are galvanic cells that use fuel (H₂) rather than metal electrodes"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R1_4_numerical_001",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.4",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Gibbs Free Energy: Spontaneity",
+    "tags": [
+      "gibbs-free-energy",
+      "entropy",
+      "enthalpy",
+      "spontaneity"
+    ],
+    "stem_template": "Calculate ΔG for a reaction at \\\\({{T}}\\\\) °C, given ΔH = \\\\({{dH}}\\\\) kJ mol\\\\(^{-1}\\\\) and ΔS = \\\\({{dS}}\\\\) J mol\\\\(^{-1}\\\\) K\\\\(^{-1}\\\\). Is the reaction spontaneous?",
+    "params": {
+      "T": {
+        "type": "int",
+        "min": 0,
+        "max": 500
+      },
+      "dH": {
+        "type": "int",
+        "min": -200,
+        "max": 200
+      },
+      "dS": {
+        "type": "int",
+        "min": -200,
+        "max": 300
+      }
+    },
+    "answer_template": "{{dH * 1000 - (T + 273) * dS}}",
+    "tolerance": 100.0,
+    "unit": "J/mol",
+    "mark_scheme_template": "\\\\(\\\\Delta G = \\\\Delta H - T\\\\Delta S = {{dH}} \\\\times 10^3 - {{T+273}} \\\\times {{dS}} = {{dH*1000 - (T+273)*dS}}\\\\) J mol⁻¹ [2]. If ΔG < 0: spontaneous; if ΔG > 0: non-spontaneous [1]. [3 marks]",
+    "hints": [
+      "ΔG = ΔH − TΔS (T in Kelvin)",
+      "Must convert ΔH to J mol⁻¹ or ΔS to kJ mol⁻¹ K⁻¹ for consistent units",
+      "Spontaneous if ΔG < 0"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "chemistry_R1_4_mcq_001",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Entropy Change Prediction",
+    "tags": [
+      "entropy",
+      "spontaneity",
+      "states-of-matter"
+    ],
+    "stem_template": "Which process involves an increase in entropy?",
+    "params": {},
+    "answer_template": "CaCO₃(s) → CaO(s) + CO₂(g)",
+    "distractor_templates": [
+      "H₂O(l) → H₂O(s)",
+      "N₂(g) + 3H₂(g) → 2NH₃(g)",
+      "AgNO₃(aq) + NaCl(aq) → AgCl(s) + NaNO₃(aq)"
+    ],
+    "options_template": [
+      {
+        "text": "CaCO\\\\(_3\\\\)(s) → CaO(s) + CO\\\\(_2\\\\)(g) [gas produced]",
+        "correct": true
+      },
+      {
+        "text": "H\\\\(_2\\\\)O(l) → H\\\\(_2\\\\)O(s) [more ordered solid formed]",
+        "correct": false
+      },
+      {
+        "text": "N\\\\(_2\\\\)(g) + 3H\\\\(_2\\\\)(g) → 2NH\\\\(_3\\\\)(g) [4 mol gas → 2 mol gas]",
+        "correct": false
+      },
+      {
+        "text": "AgCl(s) precipitates from solution [ions become ordered solid]",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Entropy increases when: solid → liquid/gas, liquid → gas, or number of gas moles increases. CaCO₃(s) → CaO(s) + CO₂(g): a gas is produced → ΔS > 0. [1 mark]",
+    "hints": [
+      "Gases have much higher entropy than liquids or solids",
+      "Count moles of gas: increase → ΔS > 0"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R2_1_numerical_001",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Stoichiometry: Limiting Reagent",
+    "tags": [
+      "stoichiometry",
+      "limiting-reagent",
+      "moles"
+    ],
+    "stem_template": "In the reaction 2Al + 3Cl₂ → 2AlCl₃, \\\\({{mAl}}\\\\) g of Al reacts with \\\\({{mCl2}}\\\\) g of Cl₂. Which is the limiting reagent and how many moles of AlCl₃ are produced? (M_r: Al = 27, Cl₂ = 71, AlCl₃ = 133.5)",
+    "params": {
+      "mAl": {
+        "type": "int",
+        "min": 5,
+        "max": 30
+      },
+      "mCl2": {
+        "type": "int",
+        "min": 20,
+        "max": 100
+      }
+    },
+    "answer_template": "Compare mole ratios to determine limiting reagent",
+    "mark_scheme_template": "n(Al) = {{mAl}}/27 = {{round(mAl/27,3)}} mol; n(Cl₂) = {{mCl2}}/71 = {{round(mCl2/71,3)}} mol [1]. Ratio required: Al:Cl₂ = 2:3 → for {{round(mAl/27,3)}} mol Al need {{round(mAl/27*1.5,3)}} mol Cl₂ [1]. Compare with available {{round(mCl2/71,3)}} mol Cl₂ to identify limiting reagent [1]. n(AlCl₃) = n(Al limiting) × 1 [1]. [4 marks]",
+    "hints": [
+      "Find moles of each reactant",
+      "Compare actual ratio with stoichiometric ratio",
+      "Limiting reagent is the one that runs out first"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_R2_1_numerical_002",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Percentage Yield",
+    "tags": [
+      "percentage-yield",
+      "stoichiometry",
+      "actual-yield"
+    ],
+    "stem_template": "The theoretical yield of aspirin in a synthesis is \\\\({{theoretical}}\\\\) g. The actual yield obtained is \\\\({{actual}}\\\\) g. Calculate the percentage yield.",
+    "params": {
+      "theoretical": {
+        "type": "float",
+        "min": 2.0,
+        "max": 10.0,
+        "decimals": 2
+      },
+      "actual": {
+        "type": "float",
+        "min": 0.5,
+        "max": 9.0,
+        "decimals": 2
+      }
+    },
+    "answer_template": "{{actual / theoretical * 100}}",
+    "tolerance": 0.5,
+    "unit": "%",
+    "mark_scheme_template": "\\\\(\\\\%\\\\text{ yield} = \\\\frac{\\\\text{actual yield}}{\\\\text{theoretical yield}} \\\\times 100 = \\\\frac{{{actual}}}{{{theoretical}}} \\\\times 100 = {{round(actual/theoretical*100,1)}}\\\\% \\\\) [1 mark]",
+    "hints": [
+      "% yield = (actual/theoretical) × 100%"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R2_2_mcq_001",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Rate of Reaction: Factors",
+    "tags": [
+      "rate-of-reaction",
+      "collision-theory",
+      "activation-energy"
+    ],
+    "stem_template": "Increasing the temperature of a reaction primarily increases the rate by:",
+    "params": {},
+    "answer_template": "Increasing the fraction of particles with energy ≥ activation energy",
+    "distractor_templates": [
+      "Increasing the activation energy of the reaction",
+      "Increasing the frequency of collisions only",
+      "Decreasing the number of particles needed"
+    ],
+    "options_template": [
+      {
+        "text": "Increasing the fraction of particles with energy ≥ Ea AND increasing collision frequency",
+        "correct": true
+      },
+      {
+        "text": "Increasing the activation energy, making reactions more favorable",
+        "correct": false
+      },
+      {
+        "text": "Increasing collision frequency only — no change in fraction of successful collisions",
+        "correct": false
+      },
+      {
+        "text": "Decreasing the activation energy permanently",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Higher temperature: (1) more particles exceed activation energy (major effect — exponential, from Maxwell-Boltzmann distribution) AND (2) more frequent collisions (minor effect). [2 marks]",
+    "hints": [
+      "Maxwell-Boltzmann distribution shifts to higher energies at higher T",
+      "Both collision frequency and fraction of successful collisions increase"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_R2_2_worked_001",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Arrhenius Equation and Activation Energy",
+    "tags": [
+      "activation-energy",
+      "arrhenius",
+      "rate-constant"
+    ],
+    "stem_template": "The rate constant for a reaction is \\\\({{k1}}\\\\) × 10⁻³ s⁻¹ at \\\\({{T1}}\\\\) K and \\\\({{k2}}\\\\) × 10⁻³ s⁻¹ at \\\\({{T2}}\\\\) K. Use the Arrhenius equation to calculate the activation energy. (R = 8.31 J mol⁻¹ K⁻¹)",
+    "params": {
+      "k1": {
+        "type": "float",
+        "min": 1.0,
+        "max": 5.0,
+        "decimals": 2
+      },
+      "T1": {
+        "type": "int",
+        "min": 300,
+        "max": 350
+      },
+      "k2": {
+        "type": "float",
+        "min": 10.0,
+        "max": 50.0,
+        "decimals": 1
+      },
+      "T2": {
+        "type": "int",
+        "min": 350,
+        "max": 400
+      }
+    },
+    "answer_template": "Ea = R × ln(k2/k1) / (1/T1 − 1/T2)",
+    "mark_scheme_template": "\\\\(\\\\ln\\\\frac{k_2}{k_1} = \\\\frac{E_a}{R}\\\\left(\\\\frac{1}{T_1} - \\\\frac{1}{T_2}\\\\right)\\\\) [1]. \\\\(E_a = \\\\frac{R \\\\ln(k_2/k_1)}{1/T_1 - 1/T_2}\\\\) [1]. Substitute values and calculate [2]. [4 marks]",
+    "hints": [
+      "Arrhenius: ln(k2/k1) = Ea/R × (1/T1 − 1/T2)",
+      "Rearrange for Ea"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_R2_3_numerical_001",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.3",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Equilibrium Constant Kc",
+    "tags": [
+      "equilibrium",
+      "equilibrium-constant",
+      "Kc"
+    ],
+    "stem_template": "For the reaction A(aq) + B(aq) ⇌ C(aq), at equilibrium: [A] = \\\\({{A}}\\\\) mol dm⁻³, [B] = \\\\({{B}}\\\\) mol dm⁻³, [C] = \\\\({{C}}\\\\) mol dm⁻³. Calculate Kc.",
+    "params": {
+      "A": {
+        "type": "float",
+        "min": 0.01,
+        "max": 0.5,
+        "decimals": 3
+      },
+      "B": {
+        "type": "float",
+        "min": 0.01,
+        "max": 0.5,
+        "decimals": 3
+      },
+      "C": {
+        "type": "float",
+        "min": 0.01,
+        "max": 1.0,
+        "decimals": 3
+      }
+    },
+    "answer_template": "{{C / (A * B)}}",
+    "tolerance": 1.0,
+    "unit": "dm³ mol⁻¹",
+    "mark_scheme_template": "\\\\(K_c = \\\\frac{[C]}{[A][B]} = \\\\frac{{{C}}}{{{A}} \\\\times {{B}}} = {{round(C/(A*B),2)}}\\\\) dm³ mol⁻¹ [2 marks]",
+    "hints": [
+      "Kc = [products] / [reactants] (each raised to stoichiometric power)",
+      "Only include aqueous and gaseous species"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_R2_3_mcq_001",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Le Chatelier's Principle",
+    "tags": [
+      "le-chatelier",
+      "equilibrium",
+      "stress"
+    ],
+    "stem_template": "For N₂(g) + 3H₂(g) ⇌ 2NH₃(g), ΔH = −92 kJ mol⁻¹. Which change shifts equilibrium to the RIGHT (more NH₃)?",
+    "params": {},
+    "answer_template": "Increase pressure",
+    "distractor_templates": [
+      "Increase temperature",
+      "Remove N₂",
+      "Add an inert gas at constant volume"
+    ],
+    "options_template": [
+      {
+        "text": "Increase pressure (fewer moles of gas on right: 4 → 2)",
+        "correct": true
+      },
+      {
+        "text": "Increase temperature (reaction is exothermic; high T favors reverse)",
+        "correct": false
+      },
+      {
+        "text": "Remove N₂ from the system",
+        "correct": false
+      },
+      {
+        "text": "Add inert gas at constant volume (no change in partial pressures)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Increasing pressure favors the side with fewer moles of gas. Left = 1+3 = 4 mol; Right = 2 mol. Equilibrium shifts RIGHT. [1 mark]",
+    "hints": [
+      "Le Chatelier: equilibrium shifts to oppose the change",
+      "Pressure: shifts to side with fewer moles of gas"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R2_4_worked_001",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.4",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Rate Expression and Reaction Order",
+    "tags": [
+      "rate-expression",
+      "order-of-reaction",
+      "rate-constant"
+    ],
+    "stem_template": "From the following data for A + B → products, determine the rate expression and value of k. Experiment 1: [A]=0.10, [B]=0.10, rate=2.0×10⁻³; Experiment 2: [A]=0.20, [B]=0.10, rate=8.0×10⁻³; Experiment 3: [A]=0.10, [B]=0.30, rate=6.0×10⁻³ (all in mol dm⁻³ s⁻¹ and mol dm⁻³).",
+    "params": {},
+    "answer_template": "rate = k[A]²[B]; k = 2.0 dm⁶ mol⁻² s⁻¹",
+    "mark_scheme_template": "Exp 1→2: [A] doubles, rate ×4 → order w.r.t A = 2 [1]. Exp 1→3: [B] triples, rate ×3 → order w.r.t B = 1 [1]. Rate = k[A]²[B] [1]. k = rate/([A]²[B]) = 2.0×10⁻³/(0.10²×0.10) = 2.0 dm⁶ mol⁻² s⁻¹ [1]. [4 marks]",
+    "hints": [
+      "Compare experiments where only one concentration changes",
+      "If doubling [A] quadruples rate → 2nd order in A"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_R2_4_mcq_001",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.4",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "Half-Life of First-Order Reaction",
+    "tags": [
+      "rate-expressions",
+      "first-order",
+      "half-life",
+      "rate-constant"
+    ],
+    "stem_template": "A first-order reaction has rate constant k = \\\\({{k}}\\\\) × 10⁻³ s⁻¹. What is the half-life?",
+    "params": {
+      "k": {
+        "type": "float",
+        "min": 1.0,
+        "max": 9.0,
+        "decimals": 1
+      }
+    },
+    "answer_template": "{{0.693 / (k * 1e-3)}}",
+    "distractor_templates": [
+      "{{k * 1e-3 / 0.693}}",
+      "{{1 / (k * 1e-3)}}",
+      "{{2 / (k * 1e-3)}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{round(0.693/(k*1e-3),0)}}\\\\) s",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{round(k*1e-3/0.693,6)}}\\\\) s",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(1/(k*1e-3),0)}}\\\\) s",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(2/(k*1e-3),0)}}\\\\) s",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "For first-order reaction: \\\\(t_{1/2} = \\\\frac{\\\\ln 2}{k} = \\\\frac{0.693}{{{k}} \\\\times 10^{-3}} = {{round(0.693/(k*1e-3),0)}}\\\\) s [2 marks]",
+    "hints": [
+      "First-order: t½ = ln2/k = 0.693/k",
+      "Half-life is constant and independent of concentration for first-order"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_R3_1_numerical_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "pH of Strong Acid",
+    "tags": [
+      "pH",
+      "acids",
+      "strong-acid",
+      "concentration"
+    ],
+    "stem_template": "Calculate the pH of a \\\\({{c}}\\\\) mol dm⁻³ solution of hydrochloric acid (assume complete dissociation).",
+    "params": {
+      "c": {
+        "type": "choice",
+        "values": [
+          0.01,
+          0.1,
+          0.5,
+          1.0,
+          0.001
+        ]
+      }
+    },
+    "answer_template": "{{-log10(c)}}",
+    "tolerance": 0.05,
+    "unit": "",
+    "mark_scheme_template": "HCl is strong acid: [H⁺] = {{c}} mol dm⁻³. pH = −log[H⁺] = −log({{c}}) = {{round(-log10(c),2)}} [2 marks]",
+    "hints": [
+      "pH = −log₁₀[H⁺]",
+      "Strong acids fully dissociate: [H⁺] = [acid]"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_R3_1_numerical_002",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.1",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "pH of Weak Acid (Ka)",
+    "tags": [
+      "pH",
+      "weak-acid",
+      "Ka",
+      "equilibrium"
+    ],
+    "stem_template": "Calculate the pH of a \\\\({{c}}\\\\) mol dm⁻³ solution of ethanoic acid (Ka = \\\\({{Ka}}\\\\) × 10⁻⁵ mol dm⁻³).",
+    "params": {
+      "c": {
+        "type": "choice",
+        "values": [
+          0.1,
+          0.5,
+          1.0
+        ]
+      },
+      "Ka": {
+        "type": "choice",
+        "values": [
+          1.8,
+          1.4,
+          2.0
+        ]
+      }
+    },
+    "answer_template": "{{-log10((Ka * 1e-5 * c)**0.5)}}",
+    "tolerance": 0.05,
+    "unit": "",
+    "mark_scheme_template": "Using approximation (weak acid, Ka << c): [H⁺] ≈ \\\\(\\\\sqrt{K_a c} = \\\\sqrt{{{Ka}} \\\\times 10^{-5} \\\\times {{c}}} = {{round((Ka*1e-5*c)**0.5,6)}}\\\\) mol dm⁻³ [2]. pH = −log({{round((Ka*1e-5*c)**0.5,6)}}) = {{round(-log10((Ka*1e-5*c)**0.5),2)}} [1]. [3 marks]",
+    "hints": [
+      "For weak acid: [H⁺] ≈ √(Ka × c) if α << 1",
+      "pH = −log[H⁺]"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "chemistry_R3_1_worked_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Buffer Solution pH Calculation",
+    "tags": [
+      "buffers",
+      "pH",
+      "Henderson-Hasselbalch",
+      "acids",
+      "bases"
+    ],
+    "stem_template": "A buffer is made from \\\\({{nacid}}\\\\) mol of ethanoic acid and \\\\({{nsalt}}\\\\) mol of sodium ethanoate in 1 dm³. Calculate the pH. (Ka = 1.8 × 10⁻⁵ mol dm⁻³)",
+    "params": {
+      "nacid": {
+        "type": "float",
+        "min": 0.1,
+        "max": 1.0,
+        "decimals": 2
+      },
+      "nsalt": {
+        "type": "float",
+        "min": 0.05,
+        "max": 1.0,
+        "decimals": 2
+      }
+    },
+    "answer_template": "pH = pKa + log([salt]/[acid])",
+    "mark_scheme_template": "Henderson-Hasselbalch: \\\\(\\\\text{pH} = \\\\text{p}K_a + \\\\log\\\\frac{[A^-]}{[HA]}\\\\) [1]. pKa = −log(1.8×10⁻⁵) = 4.74 [1]. pH = 4.74 + log({{nsalt}}/{{nacid}}) = {{round(4.74 + log10(nsalt/nacid),2)}} [2]. [4 marks]",
+    "hints": [
+      "Buffer: mixture of weak acid and its conjugate base",
+      "Henderson-Hasselbalch: pH = pKa + log([base]/[acid])"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_R3_2_worked_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.2",
+    "type": "worked",
+    "difficulty": "core",
+    "title": "Oxidation State Assignment",
+    "tags": [
+      "oxidation",
+      "oxidation-state",
+      "redox"
+    ],
+    "stem_template": "Assign oxidation states to all elements in: (a) Cr₂O₇²⁻ (b) KMnO₄ (c) Na₂S₂O₃",
+    "params": {},
+    "answer_template": "Use rules: O = −2, H = +1, sum = overall charge",
+    "mark_scheme_template": "(a) Cr₂O₇²⁻: O = −2, so 2×Cr + 7×(−2) = −2 → 2Cr = +12 → Cr = +6 [1]. (b) KMnO₄: K = +1, O = −2 → +1 + Mn + 4(−2) = 0 → Mn = +7 [1]. (c) Na₂S₂O₃: Na = +1, O = −2 → 2(+1) + 2S + 3(−2) = 0 → 2S = +4 → S = +2 [1]. [3 marks]",
+    "hints": [
+      "Sum of oxidation states = overall charge of species",
+      "O = −2 (usually), H = +1 (in compounds), Group 1 metals = +1"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "chemistry_R3_2_mcq_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Electrolysis: Electrode Products",
+    "tags": [
+      "electrolysis",
+      "electrochemistry",
+      "electrode-reactions"
+    ],
+    "stem_template": "During electrolysis of aqueous copper(II) sulfate using copper electrodes, what happens at the anode?",
+    "params": {},
+    "answer_template": "Copper metal dissolves (Cu → Cu²⁺ + 2e⁻)",
+    "distractor_templates": [
+      "Oxygen gas is produced",
+      "Copper is deposited on the anode",
+      "Hydrogen gas is produced"
+    ],
+    "options_template": [
+      {
+        "text": "Copper dissolves: Cu(s) → Cu²⁺(aq) + 2e⁻ (active anode)",
+        "correct": true
+      },
+      {
+        "text": "Oxygen gas is produced by oxidation of water",
+        "correct": false
+      },
+      {
+        "text": "Copper is deposited at the anode (reduction)",
+        "correct": false
+      },
+      {
+        "text": "Hydrogen gas is produced from H⁺ ions",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Active copper anode: Cu is oxidized preferentially over water → Cu dissolves into solution as Cu²⁺. This replenishes the Cu²⁺ used at the cathode (electroplating). [1 mark]",
+    "hints": [
+      "Active metal electrodes dissolve preferentially at the anode",
+      "Inert electrodes (Pt, graphite): O₂ produced at anode from water"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R3_2_numerical_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.2",
+    "type": "numerical",
+    "difficulty": "challenge",
+    "title": "Electrochemical Cell: EMF Calculation",
+    "tags": [
+      "electrochemistry",
+      "standard-electrode-potential",
+      "EMF"
+    ],
+    "stem_template": "Calculate the standard EMF of a cell made from Zn²⁺/Zn (E° = −0.76 V) and Cu²⁺/Cu (E° = +0.34 V) half-cells.",
+    "params": {},
+    "answer_template": "1.10 V",
+    "mark_scheme_template": "E°cell = E°cathode − E°anode = +0.34 − (−0.76) = +1.10 V [2]. Zn is anode (oxidized, more negative E°), Cu is cathode (reduced, more positive E°) [1]. [3 marks]",
+    "hints": [
+      "E°cell = E°cathode − E°anode",
+      "More negative E° → anode (oxidation)"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "chemistry_R3_3_chem_structure_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.3",
+    "type": "chem_structure",
+    "difficulty": "core",
+    "title": "Electrophilic Addition to Alkenes",
+    "tags": [
+      "electrophilic-addition",
+      "alkenes",
+      "reaction-mechanism",
+      "organic"
+    ],
+    "stem_template": "Write the mechanism for the addition of HBr to {{alkene}}. Include the curly arrow mechanism and identify the major product using Markovnikov's rule.",
+    "params": {
+      "alkene": {
+        "type": "choice",
+        "values": [
+          "propene (CH₃CH=CH₂)",
+          "but-1-ene (CH₃CH₂CH=CH₂)",
+          "2-methylpropene"
+        ]
+      }
+    },
+    "answer_template": "Markovnikov: H adds to less substituted carbon; Br⁻ to more substituted carbocation",
+    "smiles_examples": [
+      "CC=C",
+      "CCCC=C",
+      "CC(=C)C"
+    ],
+    "mark_scheme_template": "Step 1: π electrons of C=C attack H of HBr (electrophile) → most stable (2° or 3°) carbocation intermediate [2]. Step 2: Br⁻ attacks carbocation [1]. Major product: Br on more substituted carbon (Markovnikov) [1]. Minor product noted [1]. [5 marks]",
+    "hints": [
+      "Electrophile attacks first (H⁺ from HBr)",
+      "More stable carbocation forms at more substituted carbon",
+      "Markovnikov: halide adds to carbon with more hydrogens"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_R3_3_mcq_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Free Radical Substitution in Alkanes",
+    "tags": [
+      "free-radical",
+      "substitution",
+      "alkanes",
+      "halogenation"
+    ],
+    "stem_template": "In the free-radical chlorination of methane, which step produces new free radicals?",
+    "params": {},
+    "answer_template": "Propagation",
+    "distractor_templates": [
+      "Initiation",
+      "Termination",
+      "Elimination"
+    ],
+    "options_template": [
+      {
+        "text": "Propagation (chain-carrying steps that produce new radicals)",
+        "correct": true
+      },
+      {
+        "text": "Initiation (generates first radicals from Cl₂, but none of the new C-centered ones)",
+        "correct": false
+      },
+      {
+        "text": "Termination (radicals combine — ends chain)",
+        "correct": false
+      },
+      {
+        "text": "Elimination (not relevant to free radical mechanism)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Propagation steps: CH₄ + Cl• → CH₃• + HCl (radical maintained). Each step regenerates a radical, allowing chain to continue. Initiation only makes Cl•; termination destroys radicals. [1 mark]",
+    "hints": [
+      "Initiation: Cl₂ → 2Cl• (UV)",
+      "Propagation: radicals react but new ones form",
+      "Termination: two radicals combine"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R3_3_worked_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Nucleophilic Substitution of Halogenoalkanes",
+    "tags": [
+      "nucleophilic-substitution",
+      "halogenoalkane",
+      "SN1",
+      "SN2",
+      "organic"
+    ],
+    "stem_template": "Compare the hydrolysis of 1-bromobutane and 2-bromo-2-methylpropane with aqueous NaOH. Discuss the mechanism (SN1 vs SN2), rate dependence, and stereochemistry.",
+    "params": {},
+    "answer_template": "SN2 for primary, SN1 for tertiary",
+    "smiles_examples": [
+      "CCCCBr",
+      "CC(C)(C)Br"
+    ],
+    "mark_scheme_template": "1-Bromobutane (primary): SN2 — bimolecular, rate = k[RBr][OH⁻], backside attack → inversion of configuration [2]. 2-Bromo-2-methylpropane (tertiary): SN1 — unimolecular, rate = k[RBr], carbocation intermediate → racemization [2]. Primary C not stabilized as carbocation; tertiary forms stable 3° carbocation [1]. [5 marks]",
+    "hints": [
+      "SN2: one step, backside attack, inversion (Walden inversion)",
+      "SN1: two steps, planar carbocation, racemic mixture"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_R3_4_chem_structure_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.4",
+    "type": "chem_structure",
+    "difficulty": "extension",
+    "title": "SN2 Reaction: Mechanism and Stereochemistry",
+    "tags": [
+      "SN2",
+      "mechanism",
+      "stereochemistry",
+      "halogenoalkane"
+    ],
+    "stem_template": "Draw the transition state for the SN2 reaction of (R)-2-bromobutane with OH⁻. Predict the product's configuration and explain why inversion occurs.",
+    "params": {},
+    "answer_template": "(S)-butan-2-ol via Walden inversion",
+    "smiles_examples": [
+      "[C@@H](CC)(Br)C",
+      "[C@H](CC)(O)C"
+    ],
+    "mark_scheme_template": "Transition state: trigonal bipyramidal with OH and Br at apices, partially bonded [2]. Backside attack by OH⁻ on the carbon bearing Br [1]. Inversion of configuration (Walden inversion): R → S [1]. Product: (S)-butan-2-ol [1]. [5 marks]",
+    "hints": [
+      "SN2: backside attack required by geometry",
+      "Transition state has 5 groups around central carbon",
+      "Configuration inverts: R → S or S → R"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_R3_4_mcq_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.4",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "Addition Polymers vs Condensation Polymers",
+    "tags": [
+      "addition-polymers",
+      "condensation-polymers",
+      "polymerization"
+    ],
+    "stem_template": "Which statement correctly distinguishes addition from condensation polymerization?",
+    "params": {},
+    "answer_template": "Condensation releases a small molecule (water); addition does not",
+    "distractor_templates": [
+      "Addition uses monomers with two functional groups; condensation uses monomers with one",
+      "Addition always requires a catalyst; condensation does not",
+      "Addition forms branched polymers; condensation forms linear chains"
+    ],
+    "options_template": [
+      {
+        "text": "Condensation releases a small molecule (e.g. H₂O) per bond formed; addition does not",
+        "correct": true
+      },
+      {
+        "text": "Addition uses two different bifunctional monomers; condensation uses one monomer type",
+        "correct": false
+      },
+      {
+        "text": "Addition always requires UV light; condensation requires heat only",
+        "correct": false
+      },
+      {
+        "text": "Addition forms only branched polymers; condensation always linear",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Addition polymerization: alkene monomers add together, all atoms incorporated into polymer chain, no by-product [1]. Condensation polymerization: monomers with 2 functional groups react, eliminating small molecules (H₂O, HCl, etc.) per linkage formed [1]. [2 marks]",
+    "hints": [
+      "Addition: C=C monomers link together",
+      "Condensation: e.g., ester linkages (polyester) or amide linkages (nylon)"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_R3_4_worked_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.4",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Elimination vs Substitution: Competition",
+    "tags": [
+      "elimination",
+      "SN1",
+      "SN2",
+      "E1",
+      "E2",
+      "halogenoalkane"
+    ],
+    "stem_template": "2-Bromopropane reacts with: (i) NaOH(aq) at room temperature, (ii) NaOH in ethanol under reflux. Identify the major products in each case and explain the factors determining the outcome.",
+    "params": {},
+    "answer_template": "(i) SN2: propan-2-ol; (ii) E2: propene",
+    "smiles_examples": [
+      "CC(Br)C",
+      "CC(O)C",
+      "CC=C"
+    ],
+    "mark_scheme_template": "(i) Aqueous NaOH: OH⁻ acts as nucleophile (good in polar protic solvent), SN2 favored → propan-2-ol [2]. (ii) Ethanolic NaOH, heat: OH⁻ acts as base (E2 mechanism), removes β-H → propene [2]. Higher temperature and non-polar solvent favor elimination [1]. [5 marks]",
+    "hints": [
+      "Aqueous = nucleophilic substitution; ethanolic + heat = elimination",
+      "OH⁻ can act as nucleophile or base depending on conditions"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_R3_4_chem_structure_002",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.4",
+    "type": "chem_structure",
+    "difficulty": "extension",
+    "title": "Condensation Polymerization: Nylon Formation",
+    "tags": [
+      "condensation-polymers",
+      "nylon",
+      "amide-bond",
+      "polymerization"
+    ],
+    "stem_template": "Draw the repeating unit of nylon-6,6 formed from 1,6-diaminohexane and hexanedioic acid (adipic acid). Show the amide linkage and the small molecule eliminated.",
+    "params": {},
+    "answer_template": "Repeating unit contains −CO−(CH₂)₄−CO−NH−(CH₂)₆−NH− with H₂O eliminated",
+    "smiles_examples": [
+      "NCCCCCCN",
+      "OC(=O)CCCCC(=O)O",
+      "N(CCCCCC)C(=O)CCCCC(=O)"
+    ],
+    "mark_scheme_template": "Diamine: H₂N−(CH₂)₆−NH₂ + Diacid: HOOC−(CH₂)₄−COOH [1]. Amide bond (−CO−NH−) formed [1]. H₂O eliminated per bond [1]. Repeating unit: −[NH(CH₂)₆NHCO(CH₂)₄CO]_n− [2]. [5 marks]",
+    "hints": [
+      "Amide bond forms between −COOH and −NH₂",
+      "Nylon-6,6 has 6 carbons from each monomer",
+      "H₂O is the condensate"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_S1_1_numerical_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.1",
+    "type": "numerical",
+    "difficulty": "core",
+    "title": "Number of Molecules from Moles",
+    "tags": [
+      "avogadro",
+      "particles",
+      "moles"
+    ],
+    "stem_template": "Calculate the number of molecules in \\\\({{n}}\\\\) mol of water. (N_A = 6.02 x 10\\\\(^{23}\\\\) mol\\\\(^{-1}\\\\))",
+    "params": {
+      "n": {
+        "type": "float",
+        "min": 0.5,
+        "max": 5.0,
+        "decimals": 2
+      }
+    },
+    "answer_template": "{{n * 6.02e23}}",
+    "tolerance": 1e+21,
+    "unit": "molecules",
+    "mark_scheme_template": "N = n x N_A = {{n}} x 6.02 x 10^23 molecules [1 mark]",
+    "hints": [
+      "N = n x NA"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S1_2_worked_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.2",
+    "type": "worked",
+    "difficulty": "core",
+    "title": "Interpreting a Mass Spectrum",
+    "tags": [
+      "mass-spectrometry",
+      "isotopes",
+      "M-plus-1-peak"
+    ],
+    "stem_template": "A mass spectrum shows peaks at m/z = 78 (100%) and m/z = 79 (6.7%). Explain what these peaks represent and estimate the number of carbon atoms.",
+    "params": {},
+    "answer_template": "M+ ion at 78; M+1 peak from 13C; ~6 carbon atoms",
+    "mark_scheme_template": "m/z = 78: molecular ion M+ (most abundant isotope) [1]. m/z = 79: M+1 peak from 13C isotope (1.1% per C) [1]. M+1 intensity ~6.7% → ~6 carbon atoms (6 x 1.1% ≈ 6.6%) [2]. [4 marks]",
+    "hints": [
+      "m/z values correspond to fragment mass",
+      "M+1 peak: (M+1)/M% ≈ 1.1 x number of carbons"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_S1_5_worked_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.5",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Real vs Ideal Gas Deviations",
+    "tags": [
+      "ideal-gas-law",
+      "van-der-waals",
+      "real-gases",
+      "deviations"
+    ],
+    "stem_template": "Explain when real gases deviate most from ideal behavior. Describe the two van der Waals corrections.",
+    "params": {},
+    "answer_template": "High P and low T; volume correction (b) and pressure correction (a/V^2)",
+    "mark_scheme_template": "Deviations greatest at: high pressure (molecules close, intermolecular forces significant) and low temperature (molecules slow, near condensation) [2]. VdW: (1) pressure correction +a/V^2 for intermolecular attractions [1]; (2) volume correction -b for finite molecular volume [1]. Equation: (P + a/V^2)(V - b) = nRT [1]. [5 marks]",
+    "hints": [
+      "Ideal: no volume, no intermolecular forces",
+      "High P: volume correction; low T: pressure correction"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_S2_1_numerical_001",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Lattice Energy Trends",
+    "tags": [
+      "lattice-energy",
+      "ionic-bonding",
+      "coulombs-law"
+    ],
+    "stem_template": "Arrange in order of increasing lattice energy: NaCl, MgO, CaO, NaF. Explain using Coulomb's law.",
+    "params": {},
+    "answer_template": "NaCl < NaF < CaO < MgO",
+    "mark_scheme_template": "Lattice energy proportional to q+q-/r. NaCl (1+1-, larger r) < NaF (1+1-, smaller r) < CaO (2+2-, larger r) < MgO (2+2-, smallest r). Higher charges and smaller radii give larger lattice energies. [4 marks]",
+    "hints": [
+      "E proportional to q1*q2/r",
+      "Higher charges and smaller ions increase lattice energy"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_S2_3_mcq_001_b",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Metallic Bonding: Melting Point Trend",
+    "tags": [
+      "metallic-bonding",
+      "melting-point",
+      "delocalized-electrons"
+    ],
+    "stem_template": "Which metal has the highest melting point and why?",
+    "params": {},
+    "answer_template": "Tungsten (W) — most delocalized d-electrons, strongest metallic bonding",
+    "distractor_templates": [
+      "Iron (Fe)",
+      "Copper (Cu)",
+      "Sodium (Na)"
+    ],
+    "options_template": [
+      {
+        "text": "Tungsten (W) — small radius, many delocalized d-electrons, very strong metallic bond (mp 3422 degrees C)",
+        "correct": true
+      },
+      {
+        "text": "Iron (Fe) — common transition metal, moderate melting point",
+        "correct": false
+      },
+      {
+        "text": "Copper (Cu) — good conductor but mp only 1085 degrees C",
+        "correct": false
+      },
+      {
+        "text": "Sodium (Na) — alkali metal, soft and low melting point (98 degrees C)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "W has highest mp: small atomic radius + high nuclear charge + multiple delocalized d-electrons per atom = very strong metallic bonds. [2 marks]",
+    "hints": [
+      "More delocalized electrons per atom = stronger metallic bond",
+      "Transition metals generally have higher melting points"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_S2_4_worked_002",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.4",
+    "type": "worked",
+    "difficulty": "core",
+    "title": "Identifying Intermolecular Forces in Common Molecules",
+    "tags": [
+      "van-der-waals",
+      "hydrogen-bonding",
+      "dipole-dipole"
+    ],
+    "stem_template": "Identify all intermolecular forces in: (a) CH4 (b) HCl (c) C2H5OH (d) CH3COCH3",
+    "params": {},
+    "answer_template": "London in all; dipole-dipole for polar; H-bond for O-H groups",
+    "mark_scheme_template": "(a) CH4: London dispersion forces only [1]. (b) HCl: London + permanent dipole-dipole (polar H-Cl, no H-bond) [1]. (c) Ethanol: London + dipole-dipole + hydrogen bonding (O-H) [1]. (d) Propanone: London + dipole-dipole (C=O polar, no O-H/N-H) [1]. [4 marks]",
+    "hints": [
+      "All molecules have London forces",
+      "H-bonds need N-H, O-H, or F-H groups"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_S3_1_mcq_003",
+    "subject": "chemistry",
+    "topic": "S3",
+    "subtopic": "S3.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Atomic Radius Periodic Trend",
+    "tags": [
+      "atomic-radius",
+      "shielding",
+      "periodic-trends"
+    ],
+    "stem_template": "Which statement about atomic radius trends is correct?",
+    "params": {},
+    "answer_template": "Decreases across a period due to increasing nuclear charge with constant shielding",
+    "distractor_templates": [
+      "Increases across a period",
+      "Decreases down a group",
+      "Is constant within a period"
+    ],
+    "options_template": [
+      {
+        "text": "Decreases across a period: nuclear charge increases, shielding constant, electrons pulled closer",
+        "correct": true
+      },
+      {
+        "text": "Increases across a period due to more electron-electron repulsion",
+        "correct": false
+      },
+      {
+        "text": "Decreases down a group due to increasing nuclear charge",
+        "correct": false
+      },
+      {
+        "text": "Is constant within a period as the electron count increases",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Across a period: Z increases, shielding roughly constant (same shell) → effective nuclear charge increases → electrons pulled closer → smaller radius. Down a group: new shell added each period → larger radius. [2 marks]",
+    "hints": [
+      "Effective nuclear charge = Z - shielding",
+      "More protons, same shielding → electrons pulled in"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_S3_2_mcq_002",
+    "subject": "chemistry",
+    "topic": "S3",
+    "subtopic": "S3.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "IUPAC Name for a Secondary Alcohol",
+    "tags": [
+      "IUPAC",
+      "alcohols",
+      "nomenclature"
+    ],
+    "stem_template": "What is the IUPAC name for CH3CH(OH)CH2CH3?",
+    "params": {},
+    "answer_template": "Butan-2-ol",
+    "distractor_templates": [
+      "Butan-1-ol",
+      "2-methylpropan-1-ol",
+      "Butanol"
+    ],
+    "options_template": [
+      {
+        "text": "Butan-2-ol",
+        "correct": true
+      },
+      {
+        "text": "Butan-1-ol (OH on C1)",
+        "correct": false
+      },
+      {
+        "text": "2-methylpropan-1-ol (branched)",
+        "correct": false
+      },
+      {
+        "text": "Butanol (ambiguous)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "4-carbon chain (butane), OH on carbon 2 → butan-2-ol. Number from end giving OH lowest number. [1 mark]",
+    "hints": [
+      "Find longest chain containing OH",
+      "Give OH lowest possible number"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R1_1_mcq_001",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Sign Convention for Enthalpy Change",
+    "tags": [
+      "enthalpy",
+      "exothermic",
+      "endothermic"
+    ],
+    "stem_template": "For a reaction with DeltaH = -120 kJ mol^-1, which statement is correct?",
+    "params": {},
+    "answer_template": "Exothermic; products have lower enthalpy than reactants; surroundings warm up",
+    "distractor_templates": [
+      "Endothermic; energy absorbed from surroundings",
+      "Delta H negative means entropy increases",
+      "Products have higher energy than reactants"
+    ],
+    "options_template": [
+      {
+        "text": "Exothermic; products at lower enthalpy than reactants; surroundings warm up",
+        "correct": true
+      },
+      {
+        "text": "Endothermic; energy is absorbed; surroundings cool down",
+        "correct": false
+      },
+      {
+        "text": "Negative DeltaH means entropy is decreasing",
+        "correct": false
+      },
+      {
+        "text": "Products have higher enthalpy than reactants",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "DeltaH < 0 → exothermic. Products are more stable (lower H). Energy released to surroundings → temperature increases. [1 mark]",
+    "hints": [
+      "Negative DeltaH = exothermic = energy released"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R1_3_worked_001",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Energy Density Comparison: H2 vs CH4",
+    "tags": [
+      "enthalpy-of-combustion",
+      "fuels",
+      "energy-density",
+      "hydrogen"
+    ],
+    "stem_template": "Compare the energy density (kJ per g) of hydrogen (DeltaHc = -286 kJ/mol, M=2) and methane (DeltaHc = -890 kJ/mol, M=16). Discuss practical advantages and disadvantages of hydrogen as a fuel.",
+    "params": {},
+    "answer_template": "H2: 143 kJ/g; CH4: 55.6 kJ/g; H2 has higher energy density per gram",
+    "mark_scheme_template": "H2: 286/2 = 143 kJ/g [1]. CH4: 890/16 = 55.6 kJ/g [1]. H2 higher by mass [1]. Advantages: zero CO2; higher energy per gram; fuel cell use [1]. Disadvantages: very low density by volume; storage difficult; currently produced from fossil fuels; flammable [1]. [5 marks]",
+    "hints": [
+      "Energy density = |DeltaHc| / molar mass",
+      "Consider both mass and volumetric density"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_R1_4_worked_001",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.4",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Temperature for Spontaneity from DeltaH and DeltaS",
+    "tags": [
+      "gibbs-free-energy",
+      "entropy",
+      "spontaneity",
+      "temperature"
+    ],
+    "stem_template": "A reaction has DeltaH = +200 kJ/mol and DeltaS = +500 J/(mol K). At what temperature does it become spontaneous?",
+    "params": {},
+    "answer_template": "T > 400 K",
+    "mark_scheme_template": "Spontaneous when DeltaG < 0. DeltaG = DeltaH - TDeltaS < 0. TDeltaS > DeltaH. T > DeltaH/DeltaS = 200000/500 = 400 K [2]. Above 400 K: entropy term drives reaction forward [1]. DeltaS > 0: products are more disordered (e.g. gas produced) [1]. [4 marks]",
+    "hints": [
+      "Set DeltaG = 0 to find crossover T",
+      "T_crossover = DeltaH/DeltaS (consistent units: J throughout)"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_R2_1_worked_001",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Atom Economy: Fermentation of Glucose",
+    "tags": [
+      "atom-economy",
+      "green-chemistry",
+      "stoichiometry"
+    ],
+    "stem_template": "Calculate the atom economy for: C6H12O6 → 2C2H5OH + 2CO2. (Mr: C2H5OH=46, CO2=44, C6H12O6=180)",
+    "params": {},
+    "answer_template": "51.1%",
+    "mark_scheme_template": "Atom economy = (sum Mr of desired products / sum Mr of all products) x 100% [1]. Desired: 2 x 46 = 92. All: 92 + 2x44 = 180. Atom economy = 92/180 x 100 = 51.1% [2]. [3 marks]",
+    "hints": [
+      "Atom economy = (mass of desired products / mass of all products) x 100%",
+      "Higher atom economy = greener chemistry"
+    ],
+    "marks": 3
+  },
+  {
+    "id": "chemistry_R2_2_mcq_002",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "How Catalysts Increase Reaction Rate",
+    "tags": [
+      "catalysts",
+      "activation-energy",
+      "rate"
+    ],
+    "stem_template": "How does a catalyst increase the rate of a chemical reaction?",
+    "params": {},
+    "answer_template": "Provides an alternative pathway with lower activation energy",
+    "distractor_templates": [
+      "Increases temperature",
+      "Shifts equilibrium towards products",
+      "Increases concentration of reactants"
+    ],
+    "options_template": [
+      {
+        "text": "Provides an alternative reaction pathway with lower activation energy Ea",
+        "correct": true
+      },
+      {
+        "text": "Increases the temperature, giving particles more kinetic energy",
+        "correct": false
+      },
+      {
+        "text": "Shifts the equilibrium position to favor products",
+        "correct": false
+      },
+      {
+        "text": "Increases concentrations of reactants",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Catalyst: alternative mechanism with lower Ea → larger fraction of molecules exceed Ea → faster rate. Catalyst unchanged, equilibrium position unaffected. [2 marks]",
+    "hints": [
+      "Catalyst lowers Ea",
+      "Catalyst does not change equilibrium constant Kc"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_R2_3_worked_001",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.3",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Calculating Kp for Haber Process",
+    "tags": [
+      "equilibrium",
+      "Kp",
+      "partial-pressure",
+      "Haber"
+    ],
+    "stem_template": "For N2 + 3H2 ⇌ 2NH3 at 400°C: P(N2)=20 atm, P(H2)=60 atm, P(NH3)=10 atm. Calculate Kp.",
+    "params": {},
+    "answer_template": "Kp = 2.31 x 10^-5 atm^-2",
+    "mark_scheme_template": "Kp = P(NH3)^2 / (P(N2) x P(H2)^3) = 10^2 / (20 x 60^3) = 100 / 4320000 = 2.31 x 10^-5 [3]. Units: atm^(2-1-3) = atm^(-2) [1]. [4 marks]",
+    "hints": [
+      "Kp uses partial pressures raised to stoichiometric powers",
+      "Units from exponents: delta_n(gas) = 2-4 = -2"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_R2_4_worked_002",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.4",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Reaction Mechanism and Rate-Determining Step",
+    "tags": [
+      "mechanism",
+      "rate-determining-step",
+      "intermediates"
+    ],
+    "stem_template": "The reaction 2NO + O2 → 2NO2 has rate = k[NO]^2[O2]. Propose a two-step mechanism consistent with this rate law.",
+    "params": {},
+    "answer_template": "Step 1 (slow): 2NO → N2O2; Step 2 (fast): N2O2 + O2 → 2NO2",
+    "mark_scheme_template": "Step 1 (RDS/slow): 2NO → N2O2 [1]. Step 2 (fast): N2O2 + O2 → 2NO2 [1]. Rate from RDS: rate = k[NO]^2. N2O2 equilibrium: [N2O2] = K[NO]^2. Rate of step 2 = k2[N2O2][O2] = k2K[NO]^2[O2] consistent with observed rate law [2]. [4 marks]",
+    "hints": [
+      "RDS determines rate law",
+      "Intermediates must not appear in final rate expression"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_R3_1_mcq_001",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Conjugate Acid of a Base",
+    "tags": [
+      "bronsted-lowry",
+      "conjugate-pairs",
+      "acids",
+      "bases"
+    ],
+    "stem_template": "In NH3 + H2O ⇌ NH4+ + OH−, what is the conjugate acid of NH3?",
+    "params": {},
+    "answer_template": "NH4+",
+    "distractor_templates": [
+      "NH2-",
+      "OH-",
+      "H2O"
+    ],
+    "options_template": [
+      {
+        "text": "NH\\\\(_4^+\\\\) (NH3 gains H+ to form its conjugate acid)",
+        "correct": true
+      },
+      {
+        "text": "NH\\\\(_2^-\\\\) (this is the conjugate base of NH3)",
+        "correct": false
+      },
+      {
+        "text": "OH\\\\(^-\\\\) (conjugate base of H2O, not NH3)",
+        "correct": false
+      },
+      {
+        "text": "H\\\\(_2\\\\)O (the Bronsted-Lowry acid in this reaction)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "NH3 is the base: accepts H+ from H2O. Conjugate acid = NH3 + H+ = NH4+. [1 mark]",
+    "hints": [
+      "Conjugate acid = base + H+",
+      "Base accepts H+; conjugate acid is the result"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R3_1_worked_002",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.1",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Titration Curve: Weak Acid vs Strong Base",
+    "tags": [
+      "titration",
+      "equivalence-point",
+      "indicators",
+      "buffer"
+    ],
+    "stem_template": "Sketch the pH curve for adding 0.1 mol dm^-3 NaOH to 25 cm^3 of 0.1 mol dm^-3 ethanoic acid. (a) Identify the equivalence point. (b) Suggest a suitable indicator and explain.",
+    "params": {},
+    "answer_template": "Equivalence at 25 cm3 NaOH; pH > 7; phenolphthalein",
+    "mark_scheme_template": "(a) Equivalence at 25 cm3 NaOH. Solution at equivalence = sodium ethanoate (weak base) → pH > 7 (approx 8.7) [2]. (b) Phenolphthalein (range 8.3-10.0) is suitable: changes colour at equivalence point. Methyl orange (3.1-4.4) not suitable: changes before equivalence [2]. Buffer region around 12.5 cm3, pH ≈ pKa = 4.74 [1]. [5 marks]",
+    "hints": [
+      "Weak acid + strong base: equivalence pH > 7",
+      "Indicator range must encompass the equivalence point"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_R3_2_mcq_001_b",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Electrons Transferred in MnO4- Reduction",
+    "tags": [
+      "redox",
+      "oxidation-state",
+      "permanganate"
+    ],
+    "stem_template": "In acidic solution, MnO4- is reduced to Mn2+. How many electrons are transferred per MnO4- ion?",
+    "params": {},
+    "answer_template": "5",
+    "distractor_templates": [
+      "2",
+      "3",
+      "7"
+    ],
+    "options_template": [
+      {
+        "text": "5 (Mn: +7 to +2)",
+        "correct": true
+      },
+      {
+        "text": "2 (typical for some Mn reactions)",
+        "correct": false
+      },
+      {
+        "text": "3 (Mn: +7 to +4 for MnO2 formation)",
+        "correct": false
+      },
+      {
+        "text": "7 (equals the oxidation state of Mn in MnO4-)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Mn in MnO4-: +7. Mn in Mn2+: +2. Change = 5. Electrons transferred = 5 per MnO4-. [1 mark]",
+    "hints": [
+      "Electrons transferred = magnitude of change in oxidation state"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R3_3_mcq_002",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Product of Bromine Addition to Propene",
+    "tags": [
+      "electrophilic-addition",
+      "alkenes",
+      "halogenation"
+    ],
+    "stem_template": "What is the product when propene (CH3CH=CH2) reacts with Br2?",
+    "params": {},
+    "answer_template": "1,2-dibromopropane",
+    "distractor_templates": [
+      "3-bromopropan-1-ol",
+      "Propan-1-ol",
+      "2-bromopropene"
+    ],
+    "options_template": [
+      {
+        "text": "1,2-dibromopropane (CH3CHBrCH2Br)",
+        "correct": true
+      },
+      {
+        "text": "3-bromopropan-1-ol (bromohydrin from Br2 water)",
+        "correct": false
+      },
+      {
+        "text": "Propan-1-ol (water addition, not Br2)",
+        "correct": false
+      },
+      {
+        "text": "2-bromopropene (only one Br added)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Electrophilic addition: Br2 adds across C=C. Both C of double bond each bond to Br → 1,2-dibromopropane. [1 mark]",
+    "hints": [
+      "Both carbons of C=C each acquire one Br atom"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S1_3_mcq_003",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Shapes of Atomic Orbitals",
+    "tags": [
+      "orbitals",
+      "electron-config",
+      "quantum-numbers"
+    ],
+    "stem_template": "What is the shape of a p orbital?",
+    "params": {},
+    "answer_template": "Dumbbell (two lobes)",
+    "distractor_templates": [
+      "Spherical",
+      "Four-lobed (cloverleaf)",
+      "Torus-shaped"
+    ],
+    "options_template": [
+      {
+        "text": "Dumbbell-shaped (two lobes on opposite sides of nucleus)",
+        "correct": true
+      },
+      {
+        "text": "Spherical (like an s orbital)",
+        "correct": false
+      },
+      {
+        "text": "Four-lobed cloverleaf (like a d_xy orbital)",
+        "correct": false
+      },
+      {
+        "text": "Torus (donut) shaped",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "p orbitals have two lobes (dumbbell shape) oriented along one of three axes (px, py, pz). Each p orbital has a nodal plane through the nucleus. [1 mark]",
+    "hints": [
+      "s: sphere, p: dumbbell, d: various complex shapes"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S1_4_mcq_001",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.4",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Avogadro's Number Application",
+    "tags": [
+      "avogadro",
+      "moles",
+      "particles"
+    ],
+    "stem_template": "How many atoms are in 2.5 mol of iron?",
+    "params": {},
+    "answer_template": "1.51 x 10^24",
+    "distractor_templates": [
+      "2.5 x 10^23",
+      "1.51 x 10^23",
+      "6.02 x 10^23"
+    ],
+    "options_template": [
+      {
+        "text": "1.51 \\\\(\\\\times\\\\) 10\\\\(^{24}\\\\) atoms",
+        "correct": true
+      },
+      {
+        "text": "2.5 \\\\(\\\\times\\\\) 10\\\\(^{23}\\\\) atoms",
+        "correct": false
+      },
+      {
+        "text": "1.51 \\\\(\\\\times\\\\) 10\\\\(^{23}\\\\) atoms",
+        "correct": false
+      },
+      {
+        "text": "6.02 \\\\(\\\\times\\\\) 10\\\\(^{23}\\\\) atoms",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "N = n x NA = 2.5 x 6.02 x 10^23 = 1.505 x 10^24 atoms [1 mark]",
+    "hints": [
+      "N = n x 6.02 x 10^23"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_S2_2_mcq_003",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Bond Angle in Water Molecule",
+    "tags": [
+      "VSEPR",
+      "bond-angle",
+      "water",
+      "lone-pairs"
+    ],
+    "stem_template": "The H-O-H bond angle in water is approximately 104.5°. Why is this less than the tetrahedral angle of 109.5°?",
+    "params": {},
+    "answer_template": "Two lone pairs on O repel bonding pairs, reducing bond angle",
+    "distractor_templates": [
+      "H atoms are large and crowd each other",
+      "O-H bonds are longer than in a perfect tetrahedron",
+      "The molecule is linear, not tetrahedral"
+    ],
+    "options_template": [
+      {
+        "text": "Two lone pairs on O exert greater repulsion than bonding pairs, compressing H-O-H angle",
+        "correct": true
+      },
+      {
+        "text": "H atoms are large and crowd each other at smaller angles",
+        "correct": false
+      },
+      {
+        "text": "The O-H bonds are shorter than in ideal tetrahedron",
+        "correct": false
+      },
+      {
+        "text": "The water molecule is linear with 180 degrees",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "VSEPR: lone pair-lone pair repulsion > lone pair-bond pair > bond pair-bond pair. Water has 2 LP + 2 BP: LPs compress the H-O-H angle from 109.5 to 104.5 degrees. [2 marks]",
+    "hints": [
+      "Lone pairs take more space than bonding pairs",
+      "More lone pairs → more compression of bond angles"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_R1_2_worked_001_v2",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.2",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Enthalpy of Hydration and Enthalpy of Solution",
+    "tags": [
+      "enthalpy-of-solution",
+      "hydration-enthalpy",
+      "born-haber"
+    ],
+    "stem_template": "Using lattice enthalpy and hydration enthalpy, explain why some ionic compounds dissolve exothermically while others dissolve endothermically.",
+    "params": {},
+    "answer_template": "DeltaH_sol = -DeltaH_lattice + DeltaH_hydration; sign depends on relative magnitudes",
+    "mark_scheme_template": "DeltaH_sol = -LE + DeltaH_hyd(+ + -) [1]. If |DeltaH_hyd| > LE: exothermic dissolution (e.g. NaOH) [1]. If LE > |DeltaH_hyd|: endothermic dissolution (e.g. NaCl, NH4NO3) [1]. Lattice enthalpy depends on charge and radius of ions; hydration depends on charge density of each ion [1]. [4 marks]",
+    "hints": [
+      "DeltaH_sol = endothermic lattice breaking + exothermic hydration",
+      "Net sign depends on which is larger"
+    ],
+    "marks": 4
+  },
+  {
+    "id": "chemistry_R2_1_mcq_001",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.1",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Concentration Calculation",
+    "tags": [
+      "concentration",
+      "moles",
+      "molarity"
+    ],
+    "stem_template": "\\\\({{n}}\\\\) mol of NaCl is dissolved in \\\\({{V}}\\\\) mL of water. What is the concentration in mol dm\\\\(^{-3}\\\\)?",
+    "params": {
+      "n": {
+        "type": "float",
+        "min": 0.05,
+        "max": 1.0,
+        "decimals": 3
+      },
+      "V": {
+        "type": "int",
+        "min": 50,
+        "max": 500
+      }
+    },
+    "answer_template": "{{n / (V / 1000)}}",
+    "distractor_templates": [
+      "{{n * V}}",
+      "{{n / V}}",
+      "{{n * 1000 / V / 1000}}"
+    ],
+    "options_template": [
+      {
+        "text": "\\\\({{round(n/(V/1000),3)}}\\\\) mol dm\\\\(^{-3}\\\\)",
+        "correct": true
+      },
+      {
+        "text": "\\\\({{round(n*V,3)}}\\\\) mol dm\\\\(^{-3}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(n/V,5)}}\\\\) mol dm\\\\(^{-3}\\\\)",
+        "correct": false
+      },
+      {
+        "text": "\\\\({{round(n/V/1000,6)}}\\\\) mol dm\\\\(^{-3}\\\\)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "c = n/V. Convert V to dm3: {{V}} mL = {{V/1000}} dm3. c = {{n}} / {{V/1000}} = {{round(n/(V/1000),3)}} mol dm-3 [1 mark]",
+    "hints": [
+      "c = n / V (V in dm3)",
+      "1 dm3 = 1 L = 1000 mL"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R3_3_chem_structure_002",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.3",
+    "type": "chem_structure",
+    "difficulty": "challenge",
+    "title": "Nucleophilic Addition to Aldehydes",
+    "tags": [
+      "nucleophilic-addition",
+      "carbonyl",
+      "aldehyde",
+      "HCN"
+    ],
+    "stem_template": "Draw the mechanism for the nucleophilic addition of HCN to ethanal (CH3CHO). Name the product and state its significance.",
+    "params": {},
+    "answer_template": "2-hydroxypropanenitrile (a cyanohydrin); extends carbon chain",
+    "smiles_examples": [
+      "CC=O",
+      "CC(O)C#N"
+    ],
+    "mark_scheme_template": "CN- attacks electrophilic carbonyl carbon (nucleophile) [1]. C=O bond breaks heterolytically, O becomes O- [1]. H+ (from HCN) protonates O- to give OH group [1]. Product: 2-hydroxypropanenitrile (CH3CH(OH)CN) [1]. Significance: adds one carbon to chain (chain extension); can be hydrolyzed to amino acids [1]. [5 marks]",
+    "hints": [
+      "Carbonyl C is electrophilic (delta+)",
+      "CN- is the nucleophile (negative C in C≡N)",
+      "Product is a cyanohydrin: HO-CR-CN"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_S3_1_worked_001_v2",
+    "subject": "chemistry",
+    "topic": "S3",
+    "subtopic": "S3.1",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Diagonal Relationship: Li and Mg",
+    "tags": [
+      "periodic-trends",
+      "diagonal-relationship",
+      "periodic-table"
+    ],
+    "stem_template": "Describe the diagonal relationship between lithium and magnesium, giving three properties they share that differ from their respective group members.",
+    "params": {},
+    "answer_template": "Both form stable oxides (not peroxides), carbonates that decompose on heating, hard lithium salts",
+    "mark_scheme_template": "Diagonal relationship: Li (Group 1) resembles Mg (Group 2) in diagonal position. [1 mark for definition]. Shared properties: (1) Li2CO3 and MgCO3 both decompose on heating (most Group 1 carbonates do not) [1]; (2) Both form normal oxides (Li2O, MgO) not peroxides or superoxides [1]; (3) Both nitrides form on heating in N2 (Li3N, Mg3N2) [1]; (4) Similar small ionic radius and charge density [1]. [5 marks]",
+    "hints": [
+      "Diagonal relationship results from similar charge density (charge/radius ratio)",
+      "Compare properties across vs down periodic table"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_S2_2_worked_002",
+    "subject": "chemistry",
+    "topic": "S2",
+    "subtopic": "S2.2",
+    "type": "worked",
+    "difficulty": "extension",
+    "title": "Hybridization and Molecular Geometry",
+    "tags": [
+      "hybridization",
+      "VSEPR",
+      "sigma-pi-bonds"
+    ],
+    "stem_template": "For each molecule, identify the hybridization of the central atom and the molecular geometry: (a) BF3 (b) SF6 (c) PCl5.",
+    "params": {},
+    "answer_template": "BF3: sp2 trigonal planar; SF6: sp3d2 octahedral; PCl5: sp3d trigonal bipyramidal",
+    "mark_scheme_template": "(a) BF3: B has 3 bonding groups, 0 lone pairs → sp2 hybridization, trigonal planar, bond angle 120° [2]. (b) SF6: S has 6 bonding groups → sp3d2, octahedral, bond angle 90° [2]. (c) PCl5: P has 5 bonding groups → sp3d, trigonal bipyramidal, axial bonds 180°, equatorial 120° [2]. [6 marks]",
+    "hints": [
+      "Count electron domains (bonding + lone pairs)",
+      "sp=2, sp2=3, sp3=4, sp3d=5, sp3d2=6 electron domains"
+    ],
+    "marks": 6
+  },
+  {
+    "id": "chemistry_R3_2_worked_002",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Constructing Half-Equations and Full Redox Equation",
+    "tags": [
+      "redox",
+      "half-equations",
+      "balancing",
+      "acidic-solution"
+    ],
+    "stem_template": "Construct the overall ionic equation for the reaction of Fe2+ with MnO4- in acidic solution (Fe2+ → Fe3+; MnO4- → Mn2+).",
+    "params": {},
+    "answer_template": "5Fe2+ + MnO4- + 8H+ → 5Fe3+ + Mn2+ + 4H2O",
+    "mark_scheme_template": "Oxidation half: Fe2+ → Fe3+ + e- (x5) [1]. Reduction half: MnO4- + 8H+ + 5e- → Mn2+ + 4H2O [2]. Multiply oxidation half by 5 to balance electrons [1]. Overall: 5Fe2+ + MnO4- + 8H+ → 5Fe3+ + Mn2+ + 4H2O [1]. [5 marks]",
+    "hints": [
+      "Balance each half-equation: atoms first, then charge using H+ and H2O in acidic solution",
+      "Multiply to equalize electron counts"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_S1_2_mcq_003",
+    "subject": "chemistry",
+    "topic": "S1",
+    "subtopic": "S1.2",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Isotopes: Same and Different Properties",
+    "tags": [
+      "isotopes",
+      "nuclear-atom"
+    ],
+    "stem_template": "Which property is the SAME for isotopes of the same element?",
+    "params": {},
+    "answer_template": "Chemical properties (same electron configuration)",
+    "distractor_templates": [
+      "Mass number",
+      "Number of neutrons",
+      "Nuclear stability"
+    ],
+    "options_template": [
+      {
+        "text": "Chemical properties (isotopes have identical electron configurations and bonding)",
+        "correct": true
+      },
+      {
+        "text": "Mass number (isotopes have different mass numbers by definition)",
+        "correct": false
+      },
+      {
+        "text": "Number of neutrons (different for each isotope)",
+        "correct": false
+      },
+      {
+        "text": "Nuclear stability (isotopes have different stabilities)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Isotopes: same atomic number Z (same protons, same electrons) → same chemical properties. Different mass numbers (different neutron counts) → different physical properties (density, melting point) and nuclear stability. [1 mark]",
+    "hints": [
+      "Isotopes: same Z, different A",
+      "Chemistry depends on electrons, not neutrons"
+    ],
+    "marks": 1
+  },
+  {
+    "id": "chemistry_R1_3_mcq_002",
+    "subject": "chemistry",
+    "topic": "R1",
+    "subtopic": "R1.3",
+    "type": "mcq",
+    "difficulty": "core",
+    "title": "Standard Enthalpy of Combustion Definition",
+    "tags": [
+      "standard-enthalpy",
+      "combustion",
+      "standard-conditions"
+    ],
+    "stem_template": "Which is the correct definition of standard enthalpy of combustion?",
+    "params": {},
+    "answer_template": "Enthalpy change when 1 mol of substance burns completely in O2 under standard conditions",
+    "distractor_templates": [
+      "Enthalpy change when any amount burns",
+      "Enthalpy change when 1 mol reacts with water",
+      "Enthalpy change for breaking all bonds in 1 mol"
+    ],
+    "options_template": [
+      {
+        "text": "Enthalpy change when 1 mol burns completely in excess O2, all reactants and products in standard state",
+        "correct": true
+      },
+      {
+        "text": "Enthalpy change when any amount of substance burns in air",
+        "correct": false
+      },
+      {
+        "text": "Enthalpy change when 1 mol of substance dissolves in water",
+        "correct": false
+      },
+      {
+        "text": "Enthalpy change for breaking all bonds in 1 mol of substance",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Standard conditions: 298 K, 100 kPa. Exactly 1 mol of substance. Complete combustion in excess O2. All reactants and products in standard state. [2 marks]",
+    "hints": [
+      "Standard: 298 K, 100 kPa",
+      "Must specify 1 mole of FUEL burned"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chemistry_R2_2_worked_002",
+    "subject": "chemistry",
+    "topic": "R2",
+    "subtopic": "R2.2",
+    "type": "worked",
+    "difficulty": "challenge",
+    "title": "Maxwell-Boltzmann Distribution and Catalyst",
+    "tags": [
+      "Maxwell-Boltzmann",
+      "activation-energy",
+      "catalyst",
+      "temperature"
+    ],
+    "stem_template": "Sketch the Maxwell-Boltzmann energy distribution for gas particles at temperature T. On the same diagram, show the effect of: (a) increasing temperature to 2T (b) adding a catalyst. Explain how each increases the rate.",
+    "params": {},
+    "answer_template": "Broader curve at higher T; same curve but lower Ea line for catalyst",
+    "mark_scheme_template": "Initial curve: right-skewed, bell-shaped, starting at origin, no maximum x-axis [1]. Higher T (2T): broader curve, shifted right, lower peak, same area, more particles beyond Ea [1]. Ea shown as vertical line; area to right of Ea = fraction with sufficient energy [1]. Catalyst: same distribution curve (T unchanged), but Ea line moves LEFT (lower Ea) → larger shaded area → greater fraction with E > Ea [1]. Higher T increases both collision frequency and fraction succeeding; catalyst only increases fraction succeeding [1]. [5 marks]",
+    "hints": [
+      "Maxwell-Boltzmann: x-axis = energy, y-axis = number of particles",
+      "Area to right of Ea = particles that can react",
+      "Catalyst shifts Ea, not the distribution"
+    ],
+    "marks": 5
+  },
+  {
+    "id": "chemistry_R3_4_mcq_002",
+    "subject": "chemistry",
+    "topic": "R3",
+    "subtopic": "R3.4",
+    "type": "mcq",
+    "difficulty": "extension",
+    "title": "E1 vs E2 Elimination",
+    "tags": [
+      "E1",
+      "E2",
+      "elimination",
+      "mechanism"
+    ],
+    "stem_template": "Which conditions favour an E2 elimination mechanism over E1?",
+    "params": {},
+    "answer_template": "Strong base (like NaOH in ethanol) and primary halogenoalkane",
+    "distractor_templates": [
+      "Weak base and tertiary halogenoalkane",
+      "Aqueous conditions and polar solvents",
+      "High temperature and strong acid"
+    ],
+    "options_template": [
+      {
+        "text": "Strong base (NaOH/ethanol) and primary or secondary halogenoalkane with heat",
+        "correct": true
+      },
+      {
+        "text": "Weak base and tertiary halogenoalkane (favors E1/SN1)",
+        "correct": false
+      },
+      {
+        "text": "Aqueous polar solvent at room temperature (favors SN2 or SN1)",
+        "correct": false
+      },
+      {
+        "text": "Strong acid catalyst (not relevant to E1/E2 distinction)",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "E2: bimolecular, requires strong base. Rate = k[RX][base]. Anti-periplanar geometry required. Favored by primary/secondary alkyl halides with strong bulky base. E1: unimolecular, slow formation of carbocation, favored by tertiary alkyl halides, polar solvents, weak/no base. [2 marks]",
+    "hints": [
+      "E2: rate = k[substrate][base], needs strong base",
+      "E1: rate = k[substrate] only, forms carbocation"
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chem_1_1_ms_001",
+    "subject": "chemistry",
+    "topic": "1",
+    "subtopic": "1.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Periodic Table Trends",
+    "tags": [
+      "periodic table",
+      "trends",
+      "atomic radius"
+    ],
+    "stem_template": "Which of the following trends across Period 3 (left to right) are CORRECT? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "Atomic radius decreases",
+        "correct": true
+      },
+      {
+        "text": "First ionisation energy generally increases",
+        "correct": true
+      },
+      {
+        "text": "Electronegativity decreases",
+        "correct": false
+      },
+      {
+        "text": "The number of protons increases by 1 each element",
+        "correct": true
+      },
+      {
+        "text": "Metallic character increases",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Left→right across Period 3: atomic radius decreases (more protons attract electrons closer); IE generally increases; proton number increases by 1. FALSE: electronegativity increases; metallic character decreases.",
+    "hints": [
+      "More protons = stronger nuclear attraction = smaller radius.",
+      "Metallic character decreases left to right."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chem_10_1_ms_001",
+    "subject": "chemistry",
+    "topic": "10",
+    "subtopic": "10.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Organic Functional Groups",
+    "tags": [
+      "organic chemistry",
+      "functional groups",
+      "identification"
+    ],
+    "stem_template": "Which of the following functional groups are present in an amino acid? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "Amino group (\\(\\text{—NH}_2\\))",
+        "correct": true
+      },
+      {
+        "text": "Carboxyl group (\\(\\text{—COOH}\\))",
+        "correct": true
+      },
+      {
+        "text": "Hydroxyl group (\\(\\text{—OH}\\))",
+        "correct": false
+      },
+      {
+        "text": "\\(\\alpha\\)-carbon bonded to both groups",
+        "correct": true
+      },
+      {
+        "text": "Carbonyl group (\\(\\text{C=O}\\)) in an aldehyde",
+        "correct": false
+      }
+    ],
+    "mark_scheme_template": "Amino acids contain: —NH₂ (amino), —COOH (carboxyl), and an α-carbon. The —OH in COOH is part of the carboxyl, not a separate hydroxyl. No aldehyde group in standard amino acids.",
+    "hints": [
+      "General amino acid structure: H₂N—CH(R)—COOH.",
+      "The α-carbon is bonded to both —NH₂ and —COOH."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chem_7_1_ms_001",
+    "subject": "chemistry",
+    "topic": "7",
+    "subtopic": "7.1",
+    "type": "multi_select",
+    "difficulty": "core",
+    "title": "Equilibrium Principles",
+    "tags": [
+      "equilibrium",
+      "Le Chatelier",
+      "reversible reactions"
+    ],
+    "stem_template": "For an exothermic reversible reaction in equilibrium, which changes will shift the equilibrium to the RIGHT? Select ALL that apply.",
+    "params": {},
+    "options_template": [
+      {
+        "text": "Decreasing temperature",
+        "correct": true
+      },
+      {
+        "text": "Increasing pressure (if gases are present and products side has fewer moles of gas)",
+        "correct": true
+      },
+      {
+        "text": "Adding a catalyst",
+        "correct": false
+      },
+      {
+        "text": "Increasing concentration of reactants",
+        "correct": true
+      },
+      {
+        "text": "Removing products",
+        "correct": true
+      }
+    ],
+    "mark_scheme_template": "Shifts RIGHT: lower T (exothermic favoured); higher P when products have fewer gas moles; adding reactants; removing products. Catalyst: speeds equilibrium, doesn't shift position.",
+    "hints": [
+      "Le Chatelier: system opposes the change.",
+      "Catalyst: equal effect on forward and reverse."
+    ],
+    "marks": 2
+  },
+  {
+    "id": "chem_1_2_ord_001",
+    "subject": "chemistry",
+    "topic": "1",
+    "subtopic": "1.2",
+    "type": "ordering",
+    "difficulty": "core",
+    "title": "Empirical Formula Determination Steps",
+    "tags": [
+      "stoichiometry",
+      "empirical formula",
+      "method"
+    ],
+    "stem_template": "Arrange the following steps for finding an empirical formula from percentage composition in the CORRECT ORDER.",
+    "params": {},
+    "items": [
+      "Divide each mole value by the smallest mole value",
+      "Write the empirical formula using the resulting ratios",
+      "Assume 100 g sample; convert % to mass in grams",
+      "Divide each mass by the element's molar mass to get moles"
+    ],
+    "correct_order": [
+      2,
+      3,
+      0,
+      1
+    ],
+    "mark_scheme_template": "Correct order: (1) assume 100g sample; (2) convert mass to moles (÷ molar mass); (3) divide by smallest mole value; (4) write empirical formula.",
+    "hints": [
+      "Start with 100g so % = grams directly.",
+      "The final ratio gives the subscripts."
+    ],
+    "marks": 2
+  }
+]

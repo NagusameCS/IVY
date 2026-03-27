@@ -1,0 +1,3899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="generator" content="IVYSTUDY">
+<meta name="author" content="IVYSTUDY">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IB Practice Platform</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Material Icons + Symbols (matches main site) -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/favicon.png">
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<!-- Performance optimization scripts -->
+<script src="js/question-loader.js"></script>
+<script src="js/optimization-adapter.js"></script>
+
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  --surface-0: #ffffff;
+  --surface-1: #f8fafc;
+  /* IVY green-dark palette (matches main site) */
+  --blue-900: #1a202c;
+  --blue-800: #2d3748;
+  --blue-700: #4a5568;
+  --blue-600: #718096;
+  --blue-500: #9fc2ad;
+  --blue-100: #B7D2C0;
+  --blue-50: #E4EEE9;
+
+  /* Neutrals */
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #eeeeee;
+  --gray-300: #e0e0e0;
+  --gray-400: #bdbdbd;
+  --gray-500: #9e9e9e;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+
+  /* Semantic */
+  --success: #2e7d32;
+  --success-bg: #e8f5e9;
+  --error: #c62828;
+  --error-bg: #ffebee;
+  --warning: #f57f17;
+  --warning-bg: #fffde7;
+
+  /* Difficulty */
+  --core-color: #2e7d32;
+  --core-bg: #e8f5e9;
+  --challenge-color: #e65100;
+  --challenge-bg: #fff3e0;
+  --extension-color: #6a1b9a;
+  --extension-bg: #f3e5f5;
+
+  /* Periodic table categories */
+  --cat-nonmetal: #a5d6a7;
+  --cat-noble-gas: #ce93d8;
+  --cat-alkali-metal: #ef9a9a;
+  --cat-alkaline-earth: #ffcc80;
+  --cat-metalloid: #80cbc4;
+  --cat-halogen: #90caf9;
+  --cat-metal: #b0bec5;
+  --cat-transition-metal: #fff59d;
+  --cat-lanthanide: #f48fb1;
+  --cat-actinide: #b39ddb;
+
+  /* Typography */
+  --font-sans: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--gray-900);
+  background: var(--surface-1);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+body.dark-mode {
+  --surface-0: #242424;
+  --surface-1: #181818;
+
+  /* Sync with main site: green accents instead of blue/teal */
+  --blue-900: #f0f0f0;
+  --blue-800: #f0f0f0;
+  --blue-700: #e0e0e0;
+  --blue-600: #d0d0d0;
+  --blue-500: #4caf50;
+  --blue-100: #3a3a3a;
+  --blue-50: #2a2a2a;
+
+  --gray-50: #181818;
+  --gray-100: #242424;
+  --gray-200: #2d2d2d;
+  --gray-300: #3a3a3a;
+  --gray-400: #4a4a4a;
+  --gray-500: #a0a0a0;
+  --gray-600: #b0b0b0;
+  --gray-700: #f0f0f0;
+  --gray-800: #f8f8f8;
+  --gray-900: #f8f8f8;
+}
+
+a { color: var(--blue-900); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: inherit;
+}
+
+input, select, textarea {
+  font-family: var(--font-sans);
+  font-size: inherit;
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+.material-icons-outlined { vertical-align: middle; font-size: 20px; }
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.badge-core { background: var(--core-bg); color: var(--core-color); }
+.badge-challenge { background: var(--challenge-bg); color: var(--challenge-color); }
+.badge-extension { background: var(--extension-bg); color: var(--extension-color); }
+.badge-sl { background: var(--blue-50); color: var(--blue-900); }
+.badge-hl { background: #fce4ec; color: #880e4f; }
+
+/* ============================================================
+   LAYOUT: APP SHELL
+   ============================================================ */
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Top navigation */
+.topbar {
+  height: 56px;
+  background: var(--surface-0);
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-lg);
+  gap: var(--space-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* === MENU BUTTON & SIDEBAR — exact copy from main site === */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menu-button:hover { background: transparent; }
+.menu-button .line {
+    width: 20px;
+    height: 2px;
+    background: #1a202c;
+    position: absolute;
+    transition: all 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+.menu-button .line::before,
+.menu-button .line::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #1a202c;
+    transition: all 0.3s ease;
+    left: 0;
+}
+body.dark-mode .menu-button .line,
+body.dark-mode .menu-button .line::before,
+body.dark-mode .menu-button .line::after { background: #f0f0f0; }
+.menu-button .line::before { transform: translateY(-8px); }
+.menu-button .line::after  { transform: translateY(8px); }
+.menu-button.active .line  { background: transparent !important; }
+.menu-button.active .line::before { transform: rotate(45deg); }
+.menu-button.active .line::after  { transform: rotate(-45deg); }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    z-index: 999;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+.sidebar.active { left: 0; }
+body.dark-mode .sidebar { background: #242424; color: #f0f0f0; }
+
+.sidebar-content { padding: 80px 20px 20px; }
+
+.nav-menu { list-style: none; padding: 0; margin: 0; }
+.nav-menu-item {
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1a202c;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+body.dark-mode .nav-menu-item { color: #f0f0f0; }
+.nav-menu-item:hover { background-color: rgba(74,124,114,0.1); text-decoration: none; }
+body.dark-mode .nav-menu-item:hover { background-color: rgba(74,124,114,0.2); }
+.nav-menu-item.active-link { background-color: rgba(74,124,114,0.15); font-weight: 600; }
+.nav-menu-item span.material-symbols-outlined { font-size: 20px; color: #242424; }
+body.dark-mode .nav-menu-item span.material-symbols-outlined { color: #f0f0f0; }
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 2px solid rgba(0,0,0,0.1);
+    margin-top: auto;
+}
+body.dark-mode .sidebar-footer { border-top: 2px solid rgba(255,255,255,0.1); }
+.sidebar-footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar-footer .footer-label { font-size: 14px; color: #4a5568; }
+body.dark-mode .sidebar-footer .footer-label { color: #f0f0f0; }
+
+#sidebarDarkModeToggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+#sidebarDarkModeToggle .material-symbols-outlined { font-size: 24px; color: #242424; }
+body.dark-mode #sidebarDarkModeToggle .material-symbols-outlined { color: #f0f0f0; }
+
+.topbar-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--gray-600);
+  font-size: 14px;
+}
+
+.topbar-breadcrumb span.sep {
+  color: var(--gray-400);
+}
+
+.topbar-breadcrumb .current {
+  color: var(--gray-900);
+  font-weight: 500;
+}
+
+.topbar-spacer { flex: 1; }
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--gray-600);
+  transition: background 0.15s, color 0.15s;
+}
+.icon-btn:hover {
+  background: var(--gray-100);
+  color: var(--gray-900);
+}
+.icon-btn.active {
+  background: var(--blue-50);
+  color: var(--blue-900);
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   SCREEN: HOME / SUBJECT SELECTION
+   ============================================================ */
+.screen { display: none; }
+.screen.active { display: flex; flex-direction: column; flex: 1; }
+
+.home-screen {
+  padding: var(--space-2xl) var(--space-lg);
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.home-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: var(--space-sm);
+}
+
+.home-header p {
+  font-size: 15px;
+  color: var(--gray-600);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-sm);
+}
+
+.subject-card {
+  background: var(--surface-0);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.subject-card:hover {
+  border-color: var(--blue-500);
+  box-shadow: var(--shadow-sm);
+  background: var(--blue-50);
+}
+
+.subject-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.subject-card-body { display: flex; flex-direction: column; gap: 1px; }
+
+.subject-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.subject-card .subject-full-name {
+  font-size: 11px;
+  color: var(--gray-500);
+}
+
+/* Subject icon colors */
+.icon-math-aa { background: #1a202c; }
+.icon-math-ai { background: #2d3748; }
+.icon-physics { background: #c05621; }
+.icon-chemistry { background: #2e7d32; }
+.icon-biology { background: #00695c; }
+.icon-economics { background: #4a5568; }
+.icon-business { background: #37474f; }
+.icon-cs { background: #6b3a6b; }
+
+/* ============================================================
+   SCREEN: TOPIC BROWSER
+   ============================================================ */
+.topic-screen {
+  display: flex;
+  flex: 1;
+}
+
+.topic-sidebar {
+  width: 360px;
+  border-right: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 56px);
+  position: sticky;
+  top: 56px;
+}
+
+.topic-sidebar-header {
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.topic-sidebar-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.topic-sidebar-header p {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+.topic-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-sm) 0;
+}
+
+.topic-group {
+  margin-bottom: 2px;
+}
+
+.topic-group-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.1s;
+}
+
+.topic-group-header:hover {
+  background: var(--gray-200);
+}
+
+.topic-group-header .material-icons-outlined {
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.topic-group-header.expanded .material-icons-outlined {
+  transform: rotate(90deg);
+}
+
+.topic-group-header .topic-num {
+  color: var(--gray-500);
+  font-weight: 500;
+  min-width: 28px;
+}
+
+.subtopic-list {
+  display: none;
+}
+
+.subtopic-list.visible {
+  display: block;
+}
+
+.subtopic-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 6px var(--space-lg) 6px 52px;
+  font-size: 13px;
+  color: var(--gray-700);
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.subtopic-item:hover {
+  background: var(--gray-200);
+}
+
+.subtopic-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--blue-900);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.subtopic-item .subtopic-num {
+  color: var(--gray-500);
+  font-weight: 500;
+  min-width: 32px;
+  font-size: 12px;
+}
+
+.subtopic-item .subtopic-name {
+  flex: 1;
+}
+
+.subtopic-item .badge {
+  font-size: 9px;
+  padding: 1px 5px;
+}
+
+.topic-sidebar-footer {
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--gray-200);
+  background: var(--surface-0);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.selected-count {
+  font-size: 12px;
+  color: var(--gray-600);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.btn-primary {
+  background: var(--blue-900);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--blue-800); }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+body.dark-mode .btn-primary {
+  background: #4caf50;
+  color: #fff;
+}
+body.dark-mode .btn-primary:hover { background: #43a047; }
+
+.btn-secondary {
+  background: var(--gray-100);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+}
+.btn-secondary:hover { background: var(--gray-200); }
+
+.btn-text {
+  color: var(--blue-900);
+  padding: 6px 12px;
+}
+.btn-text:hover { background: var(--blue-50); }
+
+/* Topic main content area */
+.topic-main {
+  flex: 1;
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--gray-500);
+}
+
+.topic-main .empty-state-icon {
+  font-size: 48px;
+  color: var(--gray-300);
+  margin-bottom: var(--space-md);
+}
+
+.topic-main h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: var(--space-sm);
+}
+
+.topic-main p {
+  font-size: 13px;
+  max-width: 360px;
+}
+
+/* Practice settings in main area */
+.practice-settings {
+  width: 100%;
+  max-width: 480px;
+  text-align: left;
+}
+
+.practice-settings h3 {
+  text-align: left;
+  margin-bottom: var(--space-lg);
+}
+
+.setting-group {
+  margin-bottom: var(--space-lg);
+}
+
+.setting-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-700);
+  margin-bottom: var(--space-sm);
+}
+
+.setting-options {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.setting-chip {
+  padding: 6px 14px;
+  border: 1px solid var(--gray-300);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--gray-700);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.setting-chip:hover { border-color: var(--blue-500); }
+.setting-chip.selected {
+  background: var(--blue-50);
+  border-color: var(--blue-900);
+  color: var(--blue-900);
+  font-weight: 500;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+}
+
+.setting-row label {
+  font-size: 13px;
+  color: var(--gray-700);
+}
+
+/* Toggle switch */
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 22px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-track {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: var(--gray-300);
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+
+.toggle-track::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.2s;
+}
+
+.toggle input:checked + .toggle-track {
+  background: var(--blue-900);
+}
+
+.toggle input:checked + .toggle-track::after {
+  transform: translateX(18px);
+}
+
+.start-practice-btn {
+  width: 100%;
+  margin-top: var(--space-lg);
+}
+
+/* ============================================================
+   SCREEN: PRACTICE SESSION
+   ============================================================ */
+.practice-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.practice-topbar {
+  height: 48px;
+  background: var(--surface-0);
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-lg);
+  gap: var(--space-md);
+  font-size: 13px;
+}
+
+.practice-topbar .subject-label {
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.practice-topbar .progress-text {
+  color: var(--gray-500);
+}
+
+.progress-bar-container {
+  flex: 1;
+  max-width: 300px;
+  height: 4px;
+  background: var(--gray-200);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--blue-900);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.timer-display {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--gray-600);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.practice-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.question-panel {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-xl);
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.question-number {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-500);
+}
+
+.question-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.question-tags {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.question-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: var(--gray-100);
+  color: var(--gray-600);
+  border-radius: var(--radius-sm);
+}
+
+.question-stem {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-800);
+  margin-bottom: var(--space-xl);
+}
+
+.question-stem .katex { font-size: 1em; }
+
+/* MCQ Options */
+.mcq-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.mcq-option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  font-size: 14px;
+}
+
+.mcq-option:hover { border-color: var(--blue-500); background: var(--blue-50); }
+
+.mcq-option.selected {
+  border-color: var(--blue-900);
+  background: var(--blue-50);
+}
+
+.mcq-option.correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+}
+
+.mcq-option.incorrect {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+
+.mcq-option .option-letter {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--gray-500);
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.mcq-option.selected .option-letter {
+  border-color: var(--blue-900);
+  background: var(--blue-900);
+  color: #fff;
+}
+
+.mcq-option.correct .option-letter {
+  border-color: var(--success);
+  background: var(--success);
+  color: #fff;
+}
+
+.mcq-option.incorrect .option-letter {
+  border-color: var(--error);
+  background: var(--error);
+  color: #fff;
+}
+
+.mcq-option .option-text {
+  padding-top: 3px;
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* Multi-select */
+.multi-select-options .mcq-option .option-letter {
+  border-radius: var(--radius-sm);
+}
+
+/* Numerical input */
+.numerical-input-group {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+  max-width: 320px;
+}
+
+.numerical-input {
+  flex: 1;
+  height: 44px;
+  padding: 0 var(--space-md);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.numerical-input:focus { border-color: var(--blue-900); }
+
+.numerical-unit {
+  font-size: 14px;
+  color: var(--gray-600);
+}
+
+/* Worked question */
+.mark-scheme-btn {
+  margin-top: var(--space-md);
+}
+
+.mark-scheme {
+  margin-top: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.8;
+  display: none;
+}
+
+.mark-scheme.visible { display: block; }
+
+.mark-scheme h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-sm);
+}
+
+/* Ordering question */
+.ordering-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 480px;
+}
+
+.ordering-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--surface-0);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  cursor: grab;
+  transition: box-shadow 0.15s;
+  font-size: 14px;
+}
+
+.ordering-item:active { cursor: grabbing; }
+.ordering-item:hover { box-shadow: var(--shadow-md); }
+
+.ordering-item .drag-handle {
+  color: var(--gray-400);
+  cursor: grab;
+}
+
+.ordering-item .order-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-600);
+  flex-shrink: 0;
+}
+
+/* Matching question */
+.matching-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-md);
+  align-items: start;
+  max-width: 600px;
+}
+
+.matching-column h4 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gray-500);
+  margin-bottom: var(--space-sm);
+}
+
+.matching-item {
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  margin-bottom: var(--space-sm);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.matching-item:hover { border-color: var(--blue-500); }
+.matching-item.selected { border-color: var(--blue-900); background: var(--blue-50); }
+.matching-item.matched { border-color: var(--success); background: var(--success-bg); }
+
+.matching-arrows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-top: 24px;
+}
+
+/* Truth table */
+.truth-table {
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.truth-table th, .truth-table td {
+  border: 1px solid var(--gray-300);
+  padding: 6px 12px;
+  text-align: center;
+  min-width: 40px;
+}
+
+.truth-table th {
+  background: var(--gray-100);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.truth-table input {
+  width: 30px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  outline: none;
+}
+
+.truth-table td.editable {
+  background: var(--blue-50);
+  cursor: text;
+}
+
+/* Calculation multi-step */
+.calc-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.calc-step {
+  padding: var(--space-md);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--blue-900);
+}
+
+.calc-step-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-sm);
+}
+
+/* Feedback area */
+.feedback {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  display: none;
+}
+
+.feedback.visible { display: flex; align-items: flex-start; gap: var(--space-sm); }
+.feedback.correct { background: var(--success-bg); color: var(--success); }
+.feedback.incorrect { background: var(--error-bg); color: var(--error); }
+
+.feedback .material-icons-outlined { font-size: 20px; }
+
+/* Hints */
+.hint-section {
+  margin-top: var(--space-lg);
+}
+
+.hint-btn {
+  font-size: 13px;
+  color: var(--blue-900);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hint-content {
+  margin-top: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--warning-bg);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: var(--gray-800);
+  display: none;
+}
+
+.hint-content.visible { display: block; }
+
+/* Practice bottom bar */
+.practice-bottombar {
+  height: 56px;
+  background: var(--surface-0);
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-lg);
+  gap: var(--space-md);
+}
+
+.question-nav-pills {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  overflow-x: auto;
+  padding: 4px 0;
+}
+
+.nav-pill {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid var(--gray-300);
+  color: var(--gray-600);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.nav-pill:hover { border-color: var(--blue-500); }
+.nav-pill.current {
+  background: var(--blue-900);
+  border-color: var(--blue-900);
+  color: #fff;
+}
+.nav-pill.answered {
+  background: var(--gray-100);
+  border-color: var(--gray-400);
+  color: var(--gray-700);
+}
+.nav-pill.flagged {
+  border-color: var(--warning);
+  color: var(--warning);
+}
+.nav-pill.correct-pill {
+  background: var(--success-bg);
+  border-color: var(--success);
+  color: var(--success);
+}
+.nav-pill.incorrect-pill {
+  background: var(--error-bg);
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.nav-btns {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* Flag button */
+.flag-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--gray-600);
+  transition: all 0.15s;
+}
+
+.flag-btn:hover { background: var(--gray-100); }
+.flag-btn.flagged { color: var(--warning); }
+
+/* ============================================================
+   SCREEN: RESULTS
+   ============================================================ */
+.results-screen {
+  padding: var(--space-2xl);
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.results-score {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--blue-900);
+  line-height: 1;
+}
+
+.results-label {
+  font-size: 15px;
+  color: var(--gray-600);
+  margin-top: var(--space-sm);
+}
+
+.results-stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+}
+
+.result-stat {
+  text-align: center;
+}
+
+.result-stat-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.result-stat-label {
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+
+.result-stat.correct-stat .result-stat-value { color: var(--success); }
+.result-stat.incorrect-stat .result-stat-value { color: var(--error); }
+.result-stat.skipped-stat .result-stat-value { color: var(--gray-500); }
+
+.results-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.results-review {
+  margin-top: var(--space-2xl);
+}
+
+.results-review h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.review-item {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+}
+
+.review-item-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.review-item-header:hover { background: var(--gray-50); }
+
+.review-status {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-status.correct { background: var(--success-bg); color: var(--success); }
+.review-status.incorrect { background: var(--error-bg); color: var(--error); }
+.review-status.skipped { background: var(--gray-100); color: var(--gray-500); }
+
+.review-status .material-icons-outlined { font-size: 16px; }
+
+.review-item-header .review-q-title {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.review-item-body {
+  display: none;
+  padding: var(--space-md);
+  border-top: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.review-item.expanded .review-item-body { display: block; }
+
+/* ============================================================
+   PANEL: PERIODIC TABLE
+   ============================================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.visible {
+  display: flex;
+}
+
+.modal {
+  background: var(--surface-0);
+  border-radius: var(--radius-lg);
+  max-width: 95vw;
+  max-height: 92vh;
+  overflow: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky;
+  top: 0;
+  background: var(--surface-0);
+  z-index: 1;
+}
+
+.modal-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: var(--space-lg);
+}
+
+/* Periodic table grid */
+.pt-wrapper {
+  overflow-x: auto;
+}
+
+.pt-grid {
+  display: grid;
+  grid-template-columns: repeat(18, 52px);
+  gap: 2px;
+  min-width: 960px;
+}
+
+.pt-cell {
+  width: 52px;
+  height: 56px;
+  border: 1px solid var(--gray-300);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  position: relative;
+}
+
+.pt-cell:hover {
+  transform: scale(1.15);
+  box-shadow: var(--shadow-lg);
+  z-index: 2;
+}
+
+.pt-cell .pt-z {
+  font-size: 8px;
+  color: var(--gray-600);
+  position: absolute;
+  top: 2px;
+  left: 4px;
+}
+
+.pt-cell .pt-sym {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.pt-cell .pt-mass {
+  font-size: 7px;
+  color: var(--gray-600);
+  margin-top: 1px;
+}
+
+.pt-spacer { visibility: hidden; }
+
+.pt-label {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--gray-500);
+}
+
+.pt-gap { height: 8px; grid-column: 1 / -1; }
+
+.pt-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.pt-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--gray-600);
+}
+
+.pt-legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid var(--gray-300);
+}
+
+/* Element detail */
+.element-detail {
+  display: none;
+  margin-top: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.element-detail.visible { display: block; }
+
+.element-detail-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.element-detail-symbol {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.element-detail-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.element-detail-info p {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+.element-properties {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-md);
+}
+
+.element-prop {
+  display: flex;
+  flex-direction: column;
+}
+
+.element-prop-label {
+  font-size: 11px;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.element-prop-value {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+
+/* ============================================================
+   PANEL: TOOLS
+   ============================================================ */
+.tools-panel {
+  position: fixed;
+  right: 0;
+  top: 56px;
+  width: 400px;
+  height: calc(100vh - 56px);
+  background: var(--surface-0);
+  border-left: 1px solid var(--gray-200);
+  z-index: 150;
+  display: none;
+  flex-direction: column;
+  box-shadow: -4px 0 16px rgba(0,0,0,0.08);
+}
+
+.tools-panel.visible {
+  display: flex;
+}
+
+.tools-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.tools-tab {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-500);
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+}
+
+.tools-tab:hover { color: var(--gray-700); background: var(--gray-50); }
+.tools-tab.active {
+  color: var(--blue-900);
+  border-bottom-color: var(--blue-900);
+}
+
+.tools-content {
+  flex: 1;
+  overflow: auto;
+}
+
+.tool-section { display: none; }
+.tool-section.active { display: block; }
+
+/* Calculator */
+.calc-display {
+  background: var(--gray-900);
+  color: #fff;
+  padding: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 24px;
+  text-align: right;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  word-break: break-all;
+}
+
+.calc-display .calc-expr {
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-bottom: 4px;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--gray-200);
+}
+
+.calc-btn {
+  padding: 14px 8px;
+  background: var(--surface-0);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  text-align: center;
+  transition: background 0.1s;
+}
+
+.calc-btn:hover { background: var(--gray-100); }
+.calc-btn.op { color: var(--blue-900); font-weight: 600; }
+.calc-btn.fn { font-size: 12px; color: var(--gray-600); }
+.calc-btn.eq { background: var(--blue-900); color: #fff; }
+.calc-btn.eq:hover { background: var(--blue-800); }
+.calc-btn.wide { grid-column: span 2; }
+
+/* Desmos embed */
+.desmos-container {
+  width: 100%;
+  height: 400px;
+}
+
+.desmos-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Formula reference */
+.formula-list {
+  padding: var(--space-md);
+}
+
+.formula-category {
+  margin-bottom: var(--space-lg);
+}
+
+.formula-category h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.formula-item {
+  padding: var(--space-sm) 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.formula-item .formula-name {
+  font-size: 12px;
+  color: var(--gray-500);
+  display: block;
+}
+
+/* ============================================================
+   EMPTY / LOADING STATES
+   ============================================================ */
+.no-questions-msg {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--gray-500);
+}
+
+.no-questions-msg .material-icons-outlined {
+  font-size: 48px;
+  color: var(--gray-300);
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.no-questions-msg h3 {
+  font-size: 16px;
+  color: var(--gray-700);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.no-questions-msg code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--gray-100);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.app-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--gray-200);
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--gray-500);
+}
+body.dark-mode .app-footer { background: #1a1a1a; border-top-color: #333; }
+
+.app-footer a {
+  color: var(--gray-500);
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  color: var(--gray-700);
+  text-decoration: underline;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .topic-screen { flex-direction: column; }
+  .topic-sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    position: relative;
+    top: 0;
+  }
+  .subject-grid { grid-template-columns: 1fr; }
+  .pt-grid { transform: scale(0.6); transform-origin: top left; }
+  .tools-panel { width: 100%; }
+  .home-screen { padding: var(--space-lg); }
+  .question-panel { padding: var(--space-md); }
+}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- ====== MENU BUTTON (fixed, like main site) ====== -->
+  <button class="menu-button" id="menuButton" aria-label="Toggle Menu" onclick="toggleMenu()">
+    <div class="line"></div>
+  </button>
+
+  <!-- ====== SIDEBAR (exact structure from main site) ====== -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <nav class="nav-menu">
+        <a href="/info" class="nav-menu-item">
+          <span class="material-symbols-outlined">planner_review</span>Stats
+        </a>
+        <a href="/" class="nav-menu-item">
+          <span class="material-symbols-outlined">search</span>Search Lessons
+        </a>
+        <a href="/ib-practice-platform/" class="nav-menu-item active-link">
+          <span class="material-symbols-outlined">quiz</span>Practice
+        </a>
+        <a href="/exemplars" class="nav-menu-item">
+          <span class="material-symbols-outlined">library_books</span>IA/EE Exemplars
+        </a>
+        <a href="/timer" class="nav-menu-item">
+          <span class="material-symbols-outlined">timer</span>Exam Timer
+        </a>
+        <a href="https://opennotes.pages.dev/" class="nav-menu-item" target="_blank">
+          <span class="material-symbols-outlined">note_stack</span>OpenNotes
+        </a>
+        <a href="https://github.com/NagusameCS/IVY" class="nav-menu-item" target="_blank">
+          <span class="material-symbols-outlined">code</span>GitHub
+        </a>
+        <a href="/teachers" class="nav-menu-item">
+          <span class="material-symbols-outlined">school</span>For Educators
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="sidebar-footer-row">
+          <span class="footer-label">Theme</span>
+          <button id="sidebarDarkModeToggle">
+            <span class="material-symbols-outlined">light_mode</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== TOP BAR ====== -->
+  <header class="topbar">
+    <div class="topbar-breadcrumb" id="breadcrumb"></div>
+    <div class="topbar-spacer"></div>
+    <div class="topbar-actions">
+      <button class="icon-btn" onclick="togglePeriodicTable()" title="Periodic Table">
+        <span class="material-icons-outlined">science</span>
+      </button>
+      <button class="icon-btn" onclick="toggleTools()" title="Tools">
+        <span class="material-icons-outlined">calculate</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="main-content">
+
+    <!-- ====== HOME SCREEN ====== -->
+    <div class="screen active" id="screen-home">
+      <div class="home-screen">
+        <div class="home-header">
+          <h1>IB Practice Platform</h1>
+          <p>Select a subject to begin practicing. Questions are generated from templates covering the full IB curriculum.</p>
+        </div>
+        <div class="subject-grid" id="subject-grid"></div>
+      </div>
+    </div>
+
+    <!-- ====== TOPIC BROWSER ====== -->
+    <div class="screen" id="screen-topics">
+      <div class="topic-screen">
+        <div class="topic-sidebar">
+          <div class="topic-sidebar-header">
+            <h2 id="topic-subject-name"></h2>
+            <p id="topic-subject-desc"></p>
+          </div>
+          <div class="topic-list" id="topic-list"></div>
+          <div class="topic-sidebar-footer">
+            <div class="selected-count" id="selected-count">0 subtopics selected</div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-text" onclick="selectAllSubtopics()" style="flex:1">Select All</button>
+              <button class="btn btn-text" onclick="deselectAllSubtopics()" style="flex:1">Clear</button>
+            </div>
+            <button class="btn btn-secondary" id="full-practice-btn" onclick="startFullPractice()" style="width:100%">
+              <span class="material-icons-outlined" style="font-size:18px">playlist_play</span>
+              Full Practice — All Topics
+            </button>
+            <button class="btn btn-primary" id="start-practice-btn" disabled onclick="showPracticeSettings()">
+              <span class="material-icons-outlined" style="font-size:18px">play_arrow</span>
+              Start Practice
+            </button>
+          </div>
+        </div>
+        <div class="topic-main" id="topic-main">
+          <span class="material-icons-outlined empty-state-icon">checklist</span>
+          <h3>Select subtopics to practice</h3>
+          <p>Check one or more subtopics from the sidebar, then configure your practice session.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== PRACTICE SESSION ====== -->
+    <div class="screen" id="screen-practice">
+      <div class="practice-screen">
+        <div class="practice-topbar">
+          <span class="subject-label" id="practice-subject-label"></span>
+          <span class="progress-text" id="practice-progress-text"></span>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="practice-progress-bar"></div>
+          </div>
+          <div class="timer-display" id="timer-display" style="display:none">
+            <span class="material-icons-outlined" style="font-size:16px">timer</span>
+            <span id="timer-value">00:00</span>
+          </div>
+          <button class="flag-btn" id="flag-btn" onclick="toggleFlag()">
+            <span class="material-icons-outlined" style="font-size:16px">flag</span>
+            Flag
+          </button>
+          <button class="btn btn-text" onclick="finishPractice()" style="font-size:13px">
+            <span class="material-icons-outlined" style="font-size:16px">done_all</span>
+            Finish
+          </button>
+        </div>
+        <div class="practice-body">
+          <div class="question-panel" id="question-panel"></div>
+        </div>
+        <div class="practice-bottombar">
+          <div class="question-nav-pills" id="question-nav-pills"></div>
+          <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevQuestion()" id="prev-btn">
+              <span class="material-icons-outlined" style="font-size:16px">chevron_left</span>
+              Back
+            </button>
+            <button class="btn btn-primary" onclick="nextQuestion()" id="next-btn">
+              Next
+              <span class="material-icons-outlined" style="font-size:16px">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== RESULTS SCREEN ====== -->
+    <div class="screen" id="screen-results">
+      <div class="results-screen" id="results-content"></div>
+    </div>
+
+  </div>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="app-footer" id="app-footer">
+    <span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">IVYSTUDY Content &copy; 2025 is licensed under CC BY-NC-SA 4.0</a></span>
+    <span style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+      <a href="#terms">Terms</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/NagusameCS/IVY/tree/main" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:4px;">
+        <svg style="width:16px;height:16px;" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.933 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 013.003-.403c1.02.005 2.045.137 3.003.403 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.21 0 1.595-.015 2.88-.015 3.27 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.627-5.373-12-12-12z" />
+        </svg>GitHub
+      </a>
+      <a href="/info" id="viewer-count" style="display:inline-flex; align-items:center; gap:4px;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12s3.75-6.75 9.75-6.75S21.75 12 21.75 12s-3.75 6.75-9.75 6.75S2.25 12 2.25 12z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <span id="viewer-count-text">Loading...</span>
+      </a>
+    </span>
+    <script>
+    (function(){
+      function formatCount(n) {
+        if (n < 1000) return n.toString();
+        if (n < 10000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+        if (n < 1_000_000) return Math.floor(n / 1000) + 'k';
+        return (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+      }
+      fetch('/api/')
+        .then(res => res.text())
+        .then(text => {
+          const count = parseInt(text, 10);
+          document.getElementById('viewer-count-text').textContent = formatCount(count);
+        })
+        .catch(() => {
+          document.getElementById('viewer-count-text').textContent = '\u2014';
+        });
+    })();
+    </script>
+  </footer>
+
+</div>
+
+<!-- ====== PERIODIC TABLE MODAL ====== -->
+<div class="modal-overlay" id="pt-modal">
+  <div class="modal" style="width:1060px">
+    <div class="modal-header">
+      <h2>Periodic Table of Elements</h2>
+      <button class="icon-btn" onclick="togglePeriodicTable()">
+        <span class="material-icons-outlined">close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="pt-wrapper">
+        <div class="pt-grid" id="pt-grid"></div>
+      </div>
+      <div class="pt-legend" id="pt-legend"></div>
+      <div class="element-detail" id="element-detail"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== TOOLS PANEL ====== -->
+<div class="tools-panel" id="tools-panel">
+  <div class="tools-tabs">
+    <button class="tools-tab active" onclick="switchTool('calc')">Calculator</button>
+    <button class="tools-tab" onclick="switchTool('graph')">Graphing</button>
+    <button class="tools-tab" onclick="switchTool('formulas')">Formulas</button>
+  </div>
+  <div class="tools-content">
+    <!-- Scientific Calculator -->
+    <div class="tool-section active" id="tool-calc">
+      <div class="calc-display">
+        <div class="calc-expr" id="calc-expr"></div>
+        <div id="calc-result">0</div>
+      </div>
+      <div class="calc-buttons" id="calc-buttons"></div>
+    </div>
+    <!-- Graphing Calculator -->
+    <div class="tool-section" id="tool-graph">
+      <div class="desmos-container" id="desmos-container"></div>
+    </div>
+    <!-- Formula Reference -->
+    <div class="tool-section" id="tool-formulas">
+      <div class="formula-list" id="formula-list"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// INLINE DATA
+// ============================================================
+
+const PERIODIC_TABLE = [{"z":1,"sym":"H","name":"Hydrogen","mass":1.008,"group":1,"period":1,"cat":"nonmetal","electron_config":"1s1","electronegativity":2.2,"ionization_energy":1312,"density":9e-05,"melting_point":-259.16,"boiling_point":-252.87,"block":"s"},{"z":2,"sym":"He","name":"Helium","mass":4.003,"group":18,"period":1,"cat":"noble-gas","electron_config":"1s2","electronegativity":null,"ionization_energy":2372,"density":0.000164,"melting_point":-272.2,"boiling_point":-268.93,"block":"s"},{"z":3,"sym":"Li","name":"Lithium","mass":6.941,"group":1,"period":2,"cat":"alkali-metal","electron_config":"[He] 2s1","electronegativity":0.98,"ionization_energy":520,"density":0.534,"melting_point":180.54,"boiling_point":1342,"block":"s"},{"z":4,"sym":"Be","name":"Beryllium","mass":9.012,"group":2,"period":2,"cat":"alkaline-earth","electron_config":"[He] 2s2","electronegativity":1.57,"ionization_energy":900,"density":1.85,"melting_point":1287,"boiling_point":2470,"block":"s"},{"z":5,"sym":"B","name":"Boron","mass":10.81,"group":13,"period":2,"cat":"metalloid","electron_config":"[He] 2s2 2p1","electronegativity":2.04,"ionization_energy":801,"density":2.34,"melting_point":2075,"boiling_point":4000,"block":"p"},{"z":6,"sym":"C","name":"Carbon","mass":12.01,"group":14,"period":2,"cat":"nonmetal","electron_config":"[He] 2s2 2p2","electronegativity":2.55,"ionization_energy":1086,"density":2.267,"melting_point":3550,"boiling_point":3825,"block":"p"},{"z":7,"sym":"N","name":"Nitrogen","mass":14.01,"group":15,"period":2,"cat":"nonmetal","electron_config":"[He] 2s2 2p3","electronegativity":3.04,"ionization_energy":1402,"density":0.0012506,"melting_point":-210.1,"boiling_point":-195.79,"block":"p"},{"z":8,"sym":"O","name":"Oxygen","mass":16.0,"group":16,"period":2,"cat":"nonmetal","electron_config":"[He] 2s2 2p4","electronegativity":3.44,"ionization_energy":1314,"density":0.001429,"melting_point":-218.79,"boiling_point":-182.96,"block":"p"},{"z":9,"sym":"F","name":"Fluorine","mass":19.0,"group":17,"period":2,"cat":"halogen","electron_config":"[He] 2s2 2p5","electronegativity":3.98,"ionization_energy":1681,"density":0.001696,"melting_point":-219.67,"boiling_point":-188.11,"block":"p"},{"z":10,"sym":"Ne","name":"Neon","mass":20.18,"group":18,"period":2,"cat":"noble-gas","electron_config":"[He] 2s2 2p6","electronegativity":null,"ionization_energy":2081,"density":0.0009,"melting_point":-248.59,"boiling_point":-246.08,"block":"p"},{"z":11,"sym":"Na","name":"Sodium","mass":22.99,"group":1,"period":3,"cat":"alkali-metal","electron_config":"[Ne] 3s1","electronegativity":0.93,"ionization_energy":496,"density":0.971,"melting_point":97.72,"boiling_point":883,"block":"s"},{"z":12,"sym":"Mg","name":"Magnesium","mass":24.31,"group":2,"period":3,"cat":"alkaline-earth","electron_config":"[Ne] 3s2","electronegativity":1.31,"ionization_energy":738,"density":1.738,"melting_point":650,"boiling_point":1090,"block":"s"},{"z":13,"sym":"Al","name":"Aluminium","mass":26.98,"group":13,"period":3,"cat":"metal","electron_config":"[Ne] 3s2 3p1","electronegativity":1.61,"ionization_energy":578,"density":2.698,"melting_point":660.32,"boiling_point":2519,"block":"p"},{"z":14,"sym":"Si","name":"Silicon","mass":28.09,"group":14,"period":3,"cat":"metalloid","electron_config":"[Ne] 3s2 3p2","electronegativity":1.9,"ionization_energy":786,"density":2.3296,"melting_point":1414,"boiling_point":3265,"block":"p"},{"z":15,"sym":"P","name":"Phosphorus","mass":30.97,"group":15,"period":3,"cat":"nonmetal","electron_config":"[Ne] 3s2 3p3","electronegativity":2.19,"ionization_energy":1012,"density":1.82,"melting_point":44.15,"boiling_point":280.5,"block":"p"},{"z":16,"sym":"S","name":"Sulfur","mass":32.07,"group":16,"period":3,"cat":"nonmetal","electron_config":"[Ne] 3s2 3p4","electronegativity":2.58,"ionization_energy":1000,"density":2.067,"melting_point":115.21,"boiling_point":444.6,"block":"p"},{"z":17,"sym":"Cl","name":"Chlorine","mass":35.45,"group":17,"period":3,"cat":"halogen","electron_config":"[Ne] 3s2 3p5","electronegativity":3.16,"ionization_energy":1251,"density":0.003214,"melting_point":-101.5,"boiling_point":-34.04,"block":"p"},{"z":18,"sym":"Ar","name":"Argon","mass":39.95,"group":18,"period":3,"cat":"noble-gas","electron_config":"[Ne] 3s2 3p6","electronegativity":null,"ionization_energy":1521,"density":0.001784,"melting_point":-189.34,"boiling_point":-185.85,"block":"p"},{"z":19,"sym":"K","name":"Potassium","mass":39.1,"group":1,"period":4,"cat":"alkali-metal","electron_config":"[Ar] 4s1","electronegativity":0.82,"ionization_energy":419,"density":0.862,"melting_point":63.38,"boiling_point":759,"block":"s"},{"z":20,"sym":"Ca","name":"Calcium","mass":40.08,"group":2,"period":4,"cat":"alkaline-earth","electron_config":"[Ar] 4s2","electronegativity":1.0,"ionization_energy":590,"density":1.54,"melting_point":842,"boiling_point":1484,"block":"s"},{"z":21,"sym":"Sc","name":"Scandium","mass":44.96,"group":3,"period":4,"cat":"transition-metal","electron_config":"[Ar] 3d1 4s2","electronegativity":1.36,"ionization_energy":633,"density":2.989,"melting_point":1541,"boiling_point":2836,"block":"d"},{"z":22,"sym":"Ti","name":"Titanium","mass":47.87,"group":4,"period":4,"cat":"transition-metal","electron_config":"[Ar] 3d2 4s2","electronegativity":1.54,"ionization_energy":659,"density":4.54,"melting_point":1668,"boiling_point":3287,"block":"d"},{"z":23,"sym":"V","name":"Vanadium","mass":50.94,"group":5,"period":4,"cat":"transition-metal","electron_config":"[Ar] 3d3 4s2","electronegativity":1.63,"ionization_energy":651,"density":6.11,"melting_point":1910,"boiling_point":3407,"block":"d"},{"z":24,"sym":"Cr","name":"Chromium","mass":52.0,"group":6,"period":4,"cat":"transition-metal","electron_config":"[Ar] 3d5 4s1","electronegativity":1.66,"ionization_energy":653,"density":7.15,"melting_point":1907,"boiling_point":2671,"block":"d"},{"z":25,"sym":"Mn","name":"Manganese","mass":54.94,"group":7,"period":4,"cat":"transition-metal","electron_config":"[Ar] 3d5 4s2","electronegativity":1.55,"ionization_energy":717,"density":7.44,"melting_point":1246,"boiling_point":2061,"block":"d"},{"z":26,"sym":"Fe","name":"Iron","mass":55.85,"group":8,"period":4,"cat":"transition-metal","electron_config":"[Ar] 3d6 4s2","electronegativity":1.83,"ionization_energy":762,"density":7.874,"melting_point":1538,"boiling_point":2862,"block":"d"},{"z":27,"sym":"Co","name":"Cobalt","mass":58.93,"group":9,"period":4,"cat":"transition-metal","electron_config":"[Ar] 3d7 4s2","electronegativity":1.88,"ionization_energy":760,"density":8.9,"melting_point":1495,"boiling_point":2927,"block":"d"},{"z":28,"sym":"Ni","name":"Nickel","mass":58.69,"group":10,"period":4,"cat":"transition-metal","electron_config":"[Ar] 3d8 4s2","electronegativity":1.91,"ionization_energy":737,"density":8.912,"melting_point":1455,"boiling_point":2913,"block":"d"},{"z":29,"sym":"Cu","name":"Copper","mass":63.55,"group":11,"period":4,"cat":"transition-metal","electron_config":"[Ar] 3d10 4s1","electronegativity":1.9,"ionization_energy":745,"density":8.96,"melting_point":1084.62,"boiling_point":2562,"block":"d"},{"z":30,"sym":"Zn","name":"Zinc","mass":65.38,"group":12,"period":4,"cat":"transition-metal","electron_config":"[Ar] 3d10 4s2","electronegativity":1.65,"ionization_energy":906,"density":7.134,"melting_point":419.53,"boiling_point":907,"block":"d"},{"z":31,"sym":"Ga","name":"Gallium","mass":69.72,"group":13,"period":4,"cat":"metal","electron_config":"[Ar] 3d10 4s2 4p1","electronegativity":1.81,"ionization_energy":579,"density":5.907,"melting_point":29.76,"boiling_point":2204,"block":"p"},{"z":32,"sym":"Ge","name":"Germanium","mass":72.63,"group":14,"period":4,"cat":"metalloid","electron_config":"[Ar] 3d10 4s2 4p2","electronegativity":2.01,"ionization_energy":762,"density":5.323,"melting_point":938.25,"boiling_point":2833,"block":"p"},{"z":33,"sym":"As","name":"Arsenic","mass":74.92,"group":15,"period":4,"cat":"metalloid","electron_config":"[Ar] 3d10 4s2 4p3","electronegativity":2.18,"ionization_energy":947,"density":5.776,"melting_point":817,"boiling_point":614,"block":"p"},{"z":34,"sym":"Se","name":"Selenium","mass":78.97,"group":16,"period":4,"cat":"nonmetal","electron_config":"[Ar] 3d10 4s2 4p4","electronegativity":2.55,"ionization_energy":941,"density":4.809,"melting_point":221,"boiling_point":685,"block":"p"},{"z":35,"sym":"Br","name":"Bromine","mass":79.9,"group":17,"period":4,"cat":"halogen","electron_config":"[Ar] 3d10 4s2 4p5","electronegativity":2.96,"ionization_energy":1140,"density":3.122,"melting_point":-7.2,"boiling_point":58.8,"block":"p"},{"z":36,"sym":"Kr","name":"Krypton","mass":83.8,"group":18,"period":4,"cat":"noble-gas","electron_config":"[Ar] 3d10 4s2 4p6","electronegativity":3.0,"ionization_energy":1351,"density":0.003749,"melting_point":-157.36,"boiling_point":-153.22,"block":"p"},{"z":37,"sym":"Rb","name":"Rubidium","mass":85.47,"group":1,"period":5,"cat":"alkali-metal","electron_config":"[Kr] 5s1","electronegativity":0.82,"ionization_energy":403,"density":1.532,"melting_point":39.31,"boiling_point":688,"block":"s"},{"z":38,"sym":"Sr","name":"Strontium","mass":87.62,"group":2,"period":5,"cat":"alkaline-earth","electron_config":"[Kr] 5s2","electronegativity":0.95,"ionization_energy":549,"density":2.64,"melting_point":777,"boiling_point":1382,"block":"s"},{"z":39,"sym":"Y","name":"Yttrium","mass":88.91,"group":3,"period":5,"cat":"transition-metal","electron_config":"[Kr] 4d1 5s2","electronegativity":1.22,"ionization_energy":600,"density":4.469,"melting_point":1526,"boiling_point":3345,"block":"d"},{"z":40,"sym":"Zr","name":"Zirconium","mass":91.22,"group":4,"period":5,"cat":"transition-metal","electron_config":"[Kr] 4d2 5s2","electronegativity":1.33,"ionization_energy":640,"density":6.506,"melting_point":1855,"boiling_point":4409,"block":"d"},{"z":41,"sym":"Nb","name":"Niobium","mass":92.91,"group":5,"period":5,"cat":"transition-metal","electron_config":"[Kr] 4d4 5s1","electronegativity":1.6,"ionization_energy":652,"density":8.57,"melting_point":2477,"boiling_point":4744,"block":"d"},{"z":42,"sym":"Mo","name":"Molybdenum","mass":95.95,"group":6,"period":5,"cat":"transition-metal","electron_config":"[Kr] 4d5 5s1","electronegativity":2.16,"ionization_energy":684,"density":10.22,"melting_point":2623,"boiling_point":4639,"block":"d"},{"z":43,"sym":"Tc","name":"Technetium","mass":98,"group":7,"period":5,"cat":"transition-metal","electron_config":"[Kr] 4d5 5s2","electronegativity":1.9,"ionization_energy":702,"density":11.5,"melting_point":2157,"boiling_point":4265,"block":"d"},{"z":44,"sym":"Ru","name":"Ruthenium","mass":101.07,"group":8,"period":5,"cat":"transition-metal","electron_config":"[Kr] 4d7 5s1","electronegativity":2.2,"ionization_energy":710,"density":12.37,"melting_point":2334,"boiling_point":4150,"block":"d"},{"z":45,"sym":"Rh","name":"Rhodium","mass":102.91,"group":9,"period":5,"cat":"transition-metal","electron_config":"[Kr] 4d8 5s1","electronegativity":2.28,"ionization_energy":720,"density":12.41,"melting_point":1964,"boiling_point":3695,"block":"d"},{"z":46,"sym":"Pd","name":"Palladium","mass":106.42,"group":10,"period":5,"cat":"transition-metal","electron_config":"[Kr] 4d10","electronegativity":2.2,"ionization_energy":804,"density":12.02,"melting_point":1554.9,"boiling_point":2963,"block":"d"},{"z":47,"sym":"Ag","name":"Silver","mass":107.87,"group":11,"period":5,"cat":"transition-metal","electron_config":"[Kr] 4d10 5s1","electronegativity":1.93,"ionization_energy":731,"density":10.501,"melting_point":961.78,"boiling_point":2162,"block":"d"},{"z":48,"sym":"Cd","name":"Cadmium","mass":112.41,"group":12,"period":5,"cat":"transition-metal","electron_config":"[Kr] 4d10 5s2","electronegativity":1.69,"ionization_energy":868,"density":8.69,"melting_point":321.07,"boiling_point":767,"block":"d"},{"z":49,"sym":"In","name":"Indium","mass":114.82,"group":13,"period":5,"cat":"metal","electron_config":"[Kr] 4d10 5s2 5p1","electronegativity":1.78,"ionization_energy":558,"density":7.31,"melting_point":156.6,"boiling_point":2072,"block":"p"},{"z":50,"sym":"Sn","name":"Tin","mass":118.71,"group":14,"period":5,"cat":"metal","electron_config":"[Kr] 4d10 5s2 5p2","electronegativity":1.96,"ionization_energy":709,"density":7.287,"melting_point":231.93,"boiling_point":2602,"block":"p"},{"z":51,"sym":"Sb","name":"Antimony","mass":121.76,"group":15,"period":5,"cat":"metalloid","electron_config":"[Kr] 4d10 5s2 5p3","electronegativity":2.05,"ionization_energy":834,"density":6.685,"melting_point":630.63,"boiling_point":1587,"block":"p"},{"z":52,"sym":"Te","name":"Tellurium","mass":127.6,"group":16,"period":5,"cat":"metalloid","electron_config":"[Kr] 4d10 5s2 5p4","electronegativity":2.1,"ionization_energy":869,"density":6.232,"melting_point":449.51,"boiling_point":988,"block":"p"},{"z":53,"sym":"I","name":"Iodine","mass":126.9,"group":17,"period":5,"cat":"halogen","electron_config":"[Kr] 4d10 5s2 5p5","electronegativity":2.66,"ionization_energy":1008,"density":4.93,"melting_point":113.7,"boiling_point":184.4,"block":"p"},{"z":54,"sym":"Xe","name":"Xenon","mass":131.29,"group":18,"period":5,"cat":"noble-gas","electron_config":"[Kr] 4d10 5s2 5p6","electronegativity":2.6,"ionization_energy":1170,"density":0.005887,"melting_point":-111.75,"boiling_point":-108.09,"block":"p"},{"z":55,"sym":"Cs","name":"Caesium","mass":132.91,"group":1,"period":6,"cat":"alkali-metal","electron_config":"[Xe] 6s1","electronegativity":0.79,"ionization_energy":376,"density":1.873,"melting_point":28.44,"boiling_point":671,"block":"s"},{"z":56,"sym":"Ba","name":"Barium","mass":137.33,"group":2,"period":6,"cat":"alkaline-earth","electron_config":"[Xe] 6s2","electronegativity":0.89,"ionization_energy":503,"density":3.594,"melting_point":727,"boiling_point":1845,"block":"s"},{"z":57,"sym":"La","name":"Lanthanum","mass":138.91,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 5d1 6s2","electronegativity":1.1,"ionization_energy":538,"density":6.145,"melting_point":920,"boiling_point":3464,"block":"f"},{"z":58,"sym":"Ce","name":"Cerium","mass":140.12,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f1 5d1 6s2","electronegativity":1.12,"ionization_energy":534,"density":6.77,"melting_point":798,"boiling_point":3443,"block":"f"},{"z":59,"sym":"Pr","name":"Praseodymium","mass":140.91,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f3 6s2","electronegativity":1.13,"ionization_energy":527,"density":6.773,"melting_point":931,"boiling_point":3520,"block":"f"},{"z":60,"sym":"Nd","name":"Neodymium","mass":144.24,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f4 6s2","electronegativity":1.14,"ionization_energy":533,"density":7.007,"melting_point":1021,"boiling_point":3074,"block":"f"},{"z":61,"sym":"Pm","name":"Promethium","mass":145,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f5 6s2","electronegativity":1.13,"ionization_energy":540,"density":7.26,"melting_point":1042,"boiling_point":3000,"block":"f"},{"z":62,"sym":"Sm","name":"Samarium","mass":150.36,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f6 6s2","electronegativity":1.17,"ionization_energy":545,"density":7.52,"melting_point":1074,"boiling_point":1794,"block":"f"},{"z":63,"sym":"Eu","name":"Europium","mass":151.96,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f7 6s2","electronegativity":1.2,"ionization_energy":547,"density":5.243,"melting_point":822,"boiling_point":1529,"block":"f"},{"z":64,"sym":"Gd","name":"Gadolinium","mass":157.25,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f7 5d1 6s2","electronegativity":1.2,"ionization_energy":593,"density":7.895,"melting_point":1313,"boiling_point":3273,"block":"f"},{"z":65,"sym":"Tb","name":"Terbium","mass":158.93,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f9 6s2","electronegativity":1.2,"ionization_energy":566,"density":8.229,"melting_point":1356,"boiling_point":3230,"block":"f"},{"z":66,"sym":"Dy","name":"Dysprosium","mass":162.5,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f10 6s2","electronegativity":1.22,"ionization_energy":573,"density":8.55,"melting_point":1412,"boiling_point":2567,"block":"f"},{"z":67,"sym":"Ho","name":"Holmium","mass":164.93,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f11 6s2","electronegativity":1.23,"ionization_energy":581,"density":8.795,"melting_point":1474,"boiling_point":2700,"block":"f"},{"z":68,"sym":"Er","name":"Erbium","mass":167.26,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f12 6s2","electronegativity":1.24,"ionization_energy":589,"density":9.066,"melting_point":1529,"boiling_point":2868,"block":"f"},{"z":69,"sym":"Tm","name":"Thulium","mass":168.93,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f13 6s2","electronegativity":1.25,"ionization_energy":597,"density":9.321,"melting_point":1545,"boiling_point":1950,"block":"f"},{"z":70,"sym":"Yb","name":"Ytterbium","mass":173.05,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f14 6s2","electronegativity":1.1,"ionization_energy":603,"density":6.965,"melting_point":819,"boiling_point":1196,"block":"f"},{"z":71,"sym":"Lu","name":"Lutetium","mass":174.97,"group":3,"period":6,"cat":"lanthanide","electron_config":"[Xe] 4f14 5d1 6s2","electronegativity":1.27,"ionization_energy":524,"density":9.84,"melting_point":1663,"boiling_point":3402,"block":"d"},{"z":72,"sym":"Hf","name":"Hafnium","mass":178.49,"group":4,"period":6,"cat":"transition-metal","electron_config":"[Xe] 4f14 5d2 6s2","electronegativity":1.3,"ionization_energy":659,"density":13.31,"melting_point":2233,"boiling_point":4603,"block":"d"},{"z":73,"sym":"Ta","name":"Tantalum","mass":180.95,"group":5,"period":6,"cat":"transition-metal","electron_config":"[Xe] 4f14 5d3 6s2","electronegativity":1.5,"ionization_energy":761,"density":16.654,"melting_point":3017,"boiling_point":5458,"block":"d"},{"z":74,"sym":"W","name":"Tungsten","mass":183.84,"group":6,"period":6,"cat":"transition-metal","electron_config":"[Xe] 4f14 5d4 6s2","electronegativity":2.36,"ionization_energy":770,"density":19.25,"melting_point":3422,"boiling_point":5555,"block":"d"},{"z":75,"sym":"Re","name":"Rhenium","mass":186.21,"group":7,"period":6,"cat":"transition-metal","electron_config":"[Xe] 4f14 5d5 6s2","electronegativity":1.9,"ionization_energy":760,"density":21.02,"melting_point":3186,"boiling_point":5596,"block":"d"},{"z":76,"sym":"Os","name":"Osmium","mass":190.23,"group":8,"period":6,"cat":"transition-metal","electron_config":"[Xe] 4f14 5d6 6s2","electronegativity":2.2,"ionization_energy":840,"density":22.61,"melting_point":3033,"boiling_point":5012,"block":"d"},{"z":77,"sym":"Ir","name":"Iridium","mass":192.22,"group":9,"period":6,"cat":"transition-metal","electron_config":"[Xe] 4f14 5d7 6s2","electronegativity":2.2,"ionization_energy":880,"density":22.56,"melting_point":2446,"boiling_point":4428,"block":"d"},{"z":78,"sym":"Pt","name":"Platinum","mass":195.08,"group":10,"period":6,"cat":"transition-metal","electron_config":"[Xe] 4f14 5d9 6s1","electronegativity":2.28,"ionization_energy":870,"density":21.46,"melting_point":1768.3,"boiling_point":3825,"block":"d"},{"z":79,"sym":"Au","name":"Gold","mass":196.97,"group":11,"period":6,"cat":"transition-metal","electron_config":"[Xe] 4f14 5d10 6s1","electronegativity":2.54,"ionization_energy":890,"density":19.282,"melting_point":1064.18,"boiling_point":2856,"block":"d"},{"z":80,"sym":"Hg","name":"Mercury","mass":200.59,"group":12,"period":6,"cat":"transition-metal","electron_config":"[Xe] 4f14 5d10 6s2","electronegativity":2.0,"ionization_energy":1007,"density":13.5336,"melting_point":-38.83,"boiling_point":356.73,"block":"d"},{"z":81,"sym":"Tl","name":"Thallium","mass":204.38,"group":13,"period":6,"cat":"metal","electron_config":"[Xe] 4f14 5d10 6s2 6p1","electronegativity":1.62,"ionization_energy":589,"density":11.85,"melting_point":304,"boiling_point":1473,"block":"p"},{"z":82,"sym":"Pb","name":"Lead","mass":207.2,"group":14,"period":6,"cat":"metal","electron_config":"[Xe] 4f14 5d10 6s2 6p2","electronegativity":1.87,"ionization_energy":716,"density":11.342,"melting_point":327.46,"boiling_point":1749,"block":"p"},{"z":83,"sym":"Bi","name":"Bismuth","mass":208.98,"group":15,"period":6,"cat":"metal","electron_config":"[Xe] 4f14 5d10 6s2 6p3","electronegativity":2.02,"ionization_energy":703,"density":9.807,"melting_point":271.4,"boiling_point":1564,"block":"p"},{"z":84,"sym":"Po","name":"Polonium","mass":209,"group":16,"period":6,"cat":"metalloid","electron_config":"[Xe] 4f14 5d10 6s2 6p4","electronegativity":2.0,"ionization_energy":812,"density":9.32,"melting_point":254,"boiling_point":962,"block":"p"},{"z":85,"sym":"At","name":"Astatine","mass":210,"group":17,"period":6,"cat":"halogen","electron_config":"[Xe] 4f14 5d10 6s2 6p5","electronegativity":2.2,"ionization_energy":920,"density":7,"melting_point":302,"boiling_point":337,"block":"p"},{"z":86,"sym":"Rn","name":"Radon","mass":222,"group":18,"period":6,"cat":"noble-gas","electron_config":"[Xe] 4f14 5d10 6s2 6p6","electronegativity":2.2,"ionization_energy":1037,"density":0.00973,"melting_point":-71,"boiling_point":-61.7,"block":"p"},{"z":87,"sym":"Fr","name":"Francium","mass":223,"group":1,"period":7,"cat":"alkali-metal","electron_config":"[Rn] 7s1","electronegativity":0.7,"ionization_energy":380,"density":1.87,"melting_point":27,"boiling_point":677,"block":"s"},{"z":88,"sym":"Ra","name":"Radium","mass":226,"group":2,"period":7,"cat":"alkaline-earth","electron_config":"[Rn] 7s2","electronegativity":0.9,"ionization_energy":509,"density":5.5,"melting_point":696,"boiling_point":1737,"block":"s"},{"z":89,"sym":"Ac","name":"Actinium","mass":227,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 6d1 7s2","electronegativity":1.1,"ionization_energy":499,"density":10.07,"melting_point":1050,"boiling_point":3198,"block":"f"},{"z":90,"sym":"Th","name":"Thorium","mass":232.04,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 6d2 7s2","electronegativity":1.3,"ionization_energy":587,"density":11.72,"melting_point":1750,"boiling_point":4788,"block":"f"},{"z":91,"sym":"Pa","name":"Protactinium","mass":231.04,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f2 6d1 7s2","electronegativity":1.5,"ionization_energy":568,"density":15.37,"melting_point":1572,"boiling_point":4027,"block":"f"},{"z":92,"sym":"U","name":"Uranium","mass":238.03,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f3 6d1 7s2","electronegativity":1.38,"ionization_energy":598,"density":18.95,"melting_point":1135,"boiling_point":4131,"block":"f"},{"z":93,"sym":"Np","name":"Neptunium","mass":237,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f4 6d1 7s2","electronegativity":1.36,"ionization_energy":605,"density":20.45,"melting_point":644,"boiling_point":3902,"block":"f"},{"z":94,"sym":"Pu","name":"Plutonium","mass":244,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f6 7s2","electronegativity":1.28,"ionization_energy":585,"density":19.84,"melting_point":640,"boiling_point":3228,"block":"f"},{"z":95,"sym":"Am","name":"Americium","mass":243,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f7 7s2","electronegativity":1.13,"ionization_energy":578,"density":13.69,"melting_point":1176,"boiling_point":2011,"block":"f"},{"z":96,"sym":"Cm","name":"Curium","mass":247,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f7 6d1 7s2","electronegativity":1.28,"ionization_energy":581,"density":13.51,"melting_point":1345,"boiling_point":3110,"block":"f"},{"z":97,"sym":"Bk","name":"Berkelium","mass":247,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f9 7s2","electronegativity":1.3,"ionization_energy":601,"density":14.79,"melting_point":1050,"boiling_point":2627,"block":"f"},{"z":98,"sym":"Cf","name":"Californium","mass":251,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f10 7s2","electronegativity":1.3,"ionization_energy":608,"density":15.1,"melting_point":900,"boiling_point":1472,"block":"f"},{"z":99,"sym":"Es","name":"Einsteinium","mass":252,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f11 7s2","electronegativity":1.3,"ionization_energy":619,"density":8.84,"melting_point":860,"boiling_point":996,"block":"f"},{"z":100,"sym":"Fm","name":"Fermium","mass":257,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f12 7s2","electronegativity":1.3,"ionization_energy":627,"density":null,"melting_point":1527,"boiling_point":null,"block":"f"},{"z":101,"sym":"Md","name":"Mendelevium","mass":258,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f13 7s2","electronegativity":1.3,"ionization_energy":635,"density":null,"melting_point":827,"boiling_point":null,"block":"f"},{"z":102,"sym":"No","name":"Nobelium","mass":259,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f14 7s2","electronegativity":1.3,"ionization_energy":642,"density":null,"melting_point":827,"boiling_point":null,"block":"f"},{"z":103,"sym":"Lr","name":"Lawrencium","mass":266,"group":3,"period":7,"cat":"actinide","electron_config":"[Rn] 5f14 7s2 7p1","electronegativity":1.3,"ionization_energy":470,"density":null,"melting_point":1627,"boiling_point":null,"block":"d"},{"z":104,"sym":"Rf","name":"Rutherfordium","mass":267,"group":4,"period":7,"cat":"transition-metal","electron_config":"[Rn] 5f14 6d2 7s2","electronegativity":null,"ionization_energy":580,"density":23.2,"melting_point":null,"boiling_point":null,"block":"d"},{"z":105,"sym":"Db","name":"Dubnium","mass":268,"group":5,"period":7,"cat":"transition-metal","electron_config":"[Rn] 5f14 6d3 7s2","electronegativity":null,"ionization_energy":null,"density":29.3,"melting_point":null,"boiling_point":null,"block":"d"},{"z":106,"sym":"Sg","name":"Seaborgium","mass":269,"group":6,"period":7,"cat":"transition-metal","electron_config":"[Rn] 5f14 6d4 7s2","electronegativity":null,"ionization_energy":null,"density":35,"melting_point":null,"boiling_point":null,"block":"d"},{"z":107,"sym":"Bh","name":"Bohrium","mass":270,"group":7,"period":7,"cat":"transition-metal","electron_config":"[Rn] 5f14 6d5 7s2","electronegativity":null,"ionization_energy":null,"density":37.1,"melting_point":null,"boiling_point":null,"block":"d"},{"z":108,"sym":"Hs","name":"Hassium","mass":277,"group":8,"period":7,"cat":"transition-metal","electron_config":"[Rn] 5f14 6d6 7s2","electronegativity":null,"ionization_energy":null,"density":40.7,"melting_point":null,"boiling_point":null,"block":"d"},{"z":109,"sym":"Mt","name":"Meitnerium","mass":278,"group":9,"period":7,"cat":"transition-metal","electron_config":"[Rn] 5f14 6d7 7s2","electronegativity":null,"ionization_energy":null,"density":37.4,"melting_point":null,"boiling_point":null,"block":"d"},{"z":110,"sym":"Ds","name":"Darmstadtium","mass":281,"group":10,"period":7,"cat":"transition-metal","electron_config":"[Rn] 5f14 6d8 7s2","electronegativity":null,"ionization_energy":null,"density":34.8,"melting_point":null,"boiling_point":null,"block":"d"},{"z":111,"sym":"Rg","name":"Roentgenium","mass":282,"group":11,"period":7,"cat":"transition-metal","electron_config":"[Rn] 5f14 6d9 7s2","electronegativity":null,"ionization_energy":null,"density":28.7,"melting_point":null,"boiling_point":null,"block":"d"},{"z":112,"sym":"Cn","name":"Copernicium","mass":285,"group":12,"period":7,"cat":"transition-metal","electron_config":"[Rn] 5f14 6d10 7s2","electronegativity":null,"ionization_energy":null,"density":23.7,"melting_point":null,"boiling_point":null,"block":"d"},{"z":113,"sym":"Nh","name":"Nihonium","mass":286,"group":13,"period":7,"cat":"metal","electron_config":"[Rn] 5f14 6d10 7s2 7p1","electronegativity":null,"ionization_energy":null,"density":16,"melting_point":null,"boiling_point":null,"block":"p"},{"z":114,"sym":"Fl","name":"Flerovium","mass":289,"group":14,"period":7,"cat":"metal","electron_config":"[Rn] 5f14 6d10 7s2 7p2","electronegativity":null,"ionization_energy":null,"density":14,"melting_point":null,"boiling_point":null,"block":"p"},{"z":115,"sym":"Mc","name":"Moscovium","mass":290,"group":15,"period":7,"cat":"metal","electron_config":"[Rn] 5f14 6d10 7s2 7p3","electronegativity":null,"ionization_energy":null,"density":13.5,"melting_point":null,"boiling_point":null,"block":"p"},{"z":116,"sym":"Lv","name":"Livermorium","mass":293,"group":16,"period":7,"cat":"metal","electron_config":"[Rn] 5f14 6d10 7s2 7p4","electronegativity":null,"ionization_energy":null,"density":12.9,"melting_point":null,"boiling_point":null,"block":"p"},{"z":117,"sym":"Ts","name":"Tennessine","mass":294,"group":17,"period":7,"cat":"halogen","electron_config":"[Rn] 5f14 6d10 7s2 7p5","electronegativity":null,"ionization_energy":null,"density":7.2,"melting_point":null,"boiling_point":null,"block":"p"},{"z":118,"sym":"Og","name":"Oganesson","mass":294,"group":18,"period":7,"cat":"noble-gas","electron_config":"[Rn] 5f14 6d10 7s2 7p6","electronegativity":null,"ionization_energy":null,"density":5.0,"melting_point":null,"boiling_point":null,"block":"p"}];
+
+const CURRICULUM = {"subjects":{"math_aa":{"name":"Mathematics AA","full_name":"Mathematics: Analysis and Approaches","levels":["SL","HL"],"topics":{"1":{"name":"Number and Algebra","subtopics":{"1.1":{"name":"Arithmetic & Geometric Series","level":"SL/HL","tags":["sequences","series","sigma-notation","convergence"]},"1.2":{"name":"Exponents & Logarithms","level":"SL/HL","tags":["exponents","logarithms","laws-of-logs"]},"1.3":{"name":"Counting & Binomial Theorem","level":"SL/HL","tags":["permutations","combinations","binomial-expansion"]},"1.4":{"name":"Proof by Induction","level":"HL","tags":["proof","induction","mathematical-reasoning"]},"1.5":{"name":"Complex Numbers Basics","level":"HL","tags":["complex-numbers","argand-diagram","modulus-argument"]},"1.6":{"name":"Polar Form of Complex Numbers","level":"HL","tags":["polar-form","euler-form","cis"]},"1.7":{"name":"Powers & Roots (De Moivre)","level":"HL","tags":["de-moivre","roots-of-unity","complex-powers"]},"1.8":{"name":"Conjugate Roots of Polynomials","level":"HL","tags":["conjugate-roots","polynomial-equations","factor-theorem"]},"1.9":{"name":"Systems of Linear Equations","level":"SL/HL","tags":["systems","matrices","row-reduction","gaussian-elimination"]}}},"2":{"name":"Functions","subtopics":{"2.1":{"name":"Concept of Function","level":"SL/HL","tags":["domain","range","injection","surjection","bijection"]},"2.2":{"name":"Graph Features","level":"SL/HL","tags":["asymptotes","intercepts","symmetry","graph-reading"]},"2.3":{"name":"Graph Transformations","level":"SL/HL","tags":["translations","reflections","stretches","composite-transformations"]},"2.4":{"name":"Basic Function Families","level":"SL/HL","tags":["linear","quadratic","exponential","logarithmic","rational"]},"2.5":{"name":"Polynomial Functions","level":"SL/HL","tags":["factor-theorem","remainder-theorem","roots","polynomial-division"]},"2.6":{"name":"Solving Equations","level":"SL/HL","tags":["algebraic-equations","graphical-solutions","discriminant"]},"2.7":{"name":"Inequalities","level":"SL/HL","tags":["linear-inequalities","quadratic-inequalities","rational-inequalities"]}}},"3":{"name":"Geometry and Trigonometry","subtopics":{"3.1":{"name":"Radian Measure, Arc & Sector","level":"SL/HL","tags":["radians","arc-length","sector-area"]},"3.2":{"name":"Unit Circle & Basic Identities","level":"SL/HL","tags":["unit-circle","trig-identities","pythagorean-identity"]},"3.3":{"name":"Compound & Double Angles","level":"HL","tags":["compound-angle","double-angle","half-angle"]},"3.4":{"name":"Sinusoidal Models","level":"SL/HL","tags":["amplitude","period","phase-shift","sinusoidal-modeling"]},"3.5":{"name":"Inverse Trig Functions","level":"SL/HL","tags":["arcsin","arccos","arctan","restricted-domains"]},"3.6":{"name":"Solving Trig Equations","level":"SL/HL","tags":["trig-equations","general-solutions","identities"]},"3.7":{"name":"Triangle Rules & Applications","level":"SL/HL","tags":["sine-rule","cosine-rule","area-of-triangle"]}}},"4":{"name":"Vectors","subtopics":{"4.1":{"name":"Vector Basics","level":"SL/HL","tags":["vectors","magnitude","unit-vectors","position-vectors"]},"4.2":{"name":"Scalar (Dot) Product","level":"SL/HL","tags":["dot-product","angle-between-vectors","perpendicularity"]},"4.3":{"name":"Vector Equation of a Line","level":"SL/HL","tags":["vector-lines","parametric-equations","direction-vectors"]},"4.4":{"name":"Line Relationships","level":"HL","tags":["parallel-lines","intersecting-lines","skew-lines","shortest-distance"]},"4.5":{"name":"Vector (Cross) Product","level":"HL","tags":["cross-product","area-parallelogram","normal-vectors"]},"4.6":{"name":"Planes in 3D","level":"HL","tags":["equation-of-plane","normal-form","cartesian-form"]},"4.7":{"name":"Intersections & Angles","level":"HL","tags":["line-plane-intersection","plane-plane-intersection","dihedral-angles"]}}},"5":{"name":"Statistics and Probability","subtopics":{"5.1":{"name":"Data Concepts & Descriptive Stats","level":"SL/HL","tags":["mean","median","mode","standard-deviation","variance","quartiles"]},"5.2":{"name":"Basic Probability","level":"SL/HL","tags":["sample-space","complementary-events","venn-diagrams"]},"5.3":{"name":"Combined Events","level":"SL/HL","tags":["addition-rule","multiplication-rule","mutually-exclusive","independent"]},"5.4":{"name":"Conditional Probability & Bayes","level":"SL/HL","tags":["conditional-probability","bayes-theorem","tree-diagrams"]},"5.5":{"name":"Random Variables & Distributions","level":"SL/HL","tags":["discrete-rv","expected-value","variance-of-rv"]},"5.6":{"name":"Binomial & Poisson","level":"SL/HL","tags":["binomial-distribution","poisson-distribution"]},"5.7":{"name":"Normal Distribution","level":"SL/HL","tags":["normal-distribution","z-scores","inverse-normal"]}}},"6":{"name":"Calculus","subtopics":{"6.1":{"name":"Limits & Derivative Basics","level":"SL/HL","tags":["limits","first-principles","derivative-definition"]},"6.2":{"name":"Differentiation Rules","level":"SL/HL","tags":["power-rule","chain-rule","product-rule","quotient-rule"]},"6.3":{"name":"Extrema & Graph Behaviour","level":"SL/HL","tags":["stationary-points","inflection-points","optimization"]},"6.4":{"name":"Indefinite Integration Basics","level":"SL/HL","tags":["antiderivatives","integration-rules","constant-of-integration"]},"6.5":{"name":"Definite Integrals, Area & Volume","level":"SL/HL","tags":["definite-integrals","area-under-curve","volume-of-revolution"]},"6.6":{"name":"Kinematics & Total Distance","level":"SL/HL","tags":["displacement","velocity","acceleration","total-distance"]},"6.7":{"name":"Integration Techniques","level":"HL","tags":["integration-by-parts","substitution","partial-fractions"]}}},"7":{"name":"Statistics & Probability (HL Extension)","subtopics":{"7.1":{"name":"CDFs, Geometric, Neg Binomial, PGFs","level":"HL","tags":["cdf","geometric-distribution","negative-binomial","pgf"]},"7.2":{"name":"Linear Combinations of RVs","level":"HL","tags":["linear-combinations","expectation-algebra","variance-algebra"]},"7.3":{"name":"Unbiased Estimators","level":"HL","tags":["unbiased-estimators","sampling-distributions"]},"7.4":{"name":"Normal Combinations & CLT","level":"HL","tags":["central-limit-theorem","normal-combinations"]},"7.5":{"name":"Confidence Intervals (Mean)","level":"HL","tags":["confidence-intervals","margin-of-error"]},"7.6":{"name":"Hypothesis Testing (Mean)","level":"HL","tags":["hypothesis-testing","p-values","significance-levels"]},"7.7":{"name":"Bivariate Correlation & Regression","level":"HL","tags":["correlation","regression","least-squares"]}}},"8":{"name":"Sets, Relations & Groups (HL Option)","subtopics":{"8.1":{"name":"Set Operations & Laws","level":"HL","tags":["sets","union","intersection","complement","de-morgan"]},"8.2":{"name":"Relations & Equivalence","level":"HL","tags":["relations","equivalence-relations","equivalence-classes"]},"8.3":{"name":"Injections, Surjections, Bijections","level":"HL","tags":["injective","surjective","bijective","cardinality"]},"8.4":{"name":"Binary Operations","level":"HL","tags":["binary-operations","closure","operation-tables"]},"8.5":{"name":"Operation Properties","level":"HL","tags":["associativity","commutativity","distributivity"]},"8.6":{"name":"Identity & Inverses","level":"HL","tags":["identity-element","inverse-element"]},"8.7":{"name":"Definition of a Group","level":"HL","tags":["group-axioms","group-definition"]},"8.8":{"name":"Group Examples","level":"HL","tags":["cyclic-groups","dihedral-groups","symmetric-groups"]},"8.9":{"name":"Cyclic Groups & Generators","level":"HL","tags":["cyclic-groups","generators","order-of-element"]},"8.10":{"name":"Permutations & Cycles","level":"HL","tags":["permutations","cycle-notation","transpositions"]},"8.11":{"name":"Subgroups, Cosets & Lagrange","level":"HL","tags":["subgroups","cosets","lagrange-theorem"]},"8.12":{"name":"Homomorphisms & Isomorphisms","level":"HL","tags":["homomorphism","isomorphism","kernel"]}}},"9":{"name":"Calculus (HL Extension)","subtopics":{"9.1":{"name":"Infinite Sequences","level":"HL","tags":["sequences","convergence","squeeze-theorem"]},"9.2":{"name":"Infinite Series & Tests","level":"HL","tags":["convergence-tests","ratio-test","comparison-test","integral-test"]},"9.3":{"name":"Continuity & Differentiability","level":"HL","tags":["continuity","differentiability","IVT","MVT"]},"9.4":{"name":"Riemann Sums & Improper Integrals","level":"HL","tags":["riemann-sums","improper-integrals","convergence"]},"9.5":{"name":"First-Order Differential Equations","level":"HL","tags":["separable-DE","linear-DE","integrating-factor","euler-method"]},"9.6":{"name":"Taylor & Maclaurin Series","level":"HL","tags":["taylor-series","maclaurin-series","radius-of-convergence"]},"9.7":{"name":"Limit Evaluation (l'Hopital & Series)","level":"HL","tags":["lhopital","indeterminate-forms"]}}},"10":{"name":"Discrete Mathematics (HL Option)","subtopics":{"10.1":{"name":"Strong Induction & Pigeonhole","level":"HL","tags":["strong-induction","pigeonhole-principle"]},"10.2":{"name":"Divisibility, GCD, LCM & Primes","level":"HL","tags":["divisibility","gcd","lcm","prime-factorization","euclidean-algorithm"]},"10.3":{"name":"Linear Diophantine Equations","level":"HL","tags":["diophantine-equations","integer-solutions"]},"10.4":{"name":"Modular Arithmetic & CRT","level":"HL","tags":["modular-arithmetic","congruences","chinese-remainder-theorem"]},"10.5":{"name":"Integer Bases","level":"HL","tags":["base-conversion","binary","hexadecimal"]},"10.6":{"name":"Fermat's Little Theorem","level":"HL","tags":["fermat-little-theorem","euler-theorem"]},"10.7":{"name":"Graph Theory Basics","level":"HL","tags":["graphs","vertices","edges","degree","adjacency"]},"10.8":{"name":"Walks, Trails & Cycles","level":"HL","tags":["walks","trails","paths","euler-circuits","hamiltonian"]},"10.9":{"name":"Graph Algorithms (Kruskal & Dijkstra)","level":"HL","tags":["kruskal","dijkstra","minimum-spanning-tree","shortest-path"]},"10.10":{"name":"Chinese Postman & TSP","level":"HL","tags":["chinese-postman","travelling-salesman","optimization"]},"10.11":{"name":"Recurrence Relations","level":"HL","tags":["recurrence-relations","characteristic-equation","homogeneous","particular-solution"]}}}}},"math_ai":{"name":"Mathematics AI","full_name":"Mathematics: Applications and Interpretation","levels":["SL","HL"],"note":"Shares many subtopics with Math AA. Uses same template system with different emphasis.","shared_with_aa":["1.1","1.2","1.3","1.9","2.1","2.2","2.3","2.4","2.5","2.6","2.7","3.1","3.2","3.4","3.5","3.6","3.7","4.1","4.2","4.3","5.1","5.2","5.3","5.4","5.5","5.6","5.7","6.1","6.2","6.3","6.4","6.5","6.6","7.1","7.2","7.3","7.4","7.5","7.6","7.7"]},"physics":{"name":"Physics","full_name":"IB Physics","levels":["SL","HL"],"topics":{"A":{"name":"Space, Time and Motion","subtopics":{"A.1":{"name":"Kinematics","level":"SL/HL","tags":["displacement","velocity","acceleration","suvat","projectile-motion"]},"A.2":{"name":"Forces and Momentum","level":"SL/HL","tags":["newtons-laws","free-body-diagrams","momentum","impulse"]},"A.3":{"name":"Work, Energy and Power","level":"SL/HL","tags":["work","kinetic-energy","potential-energy","power","efficiency"]},"A.4":{"name":"Rigid Body Mechanics","level":"HL","tags":["torque","rotational-motion","moment-of-inertia","angular-momentum"]},"A.5":{"name":"Galilean and Special Relativity","level":"HL","tags":["reference-frames","time-dilation","length-contraction","lorentz"]}}},"B":{"name":"The Particulate Nature of Matter","subtopics":{"B.1":{"name":"Thermal Energy Transfers","level":"SL/HL","tags":["specific-heat","latent-heat","conduction","convection","radiation"]},"B.2":{"name":"Greenhouse Effect","level":"SL/HL","tags":["albedo","emissivity","greenhouse-gases","energy-balance"]},"B.3":{"name":"Gas Laws","level":"SL/HL","tags":["ideal-gas-law","kinetic-theory","pressure","temperature"]},"B.4":{"name":"Thermodynamics","level":"HL","tags":["first-law","entropy","second-law","heat-engines","carnot"]},"B.5":{"name":"Current and Circuits","level":"SL/HL","tags":["current","voltage","resistance","ohms-law","kirchhoff","circuits"]}}},"C":{"name":"Wave Behaviour","subtopics":{"C.1":{"name":"Simple Harmonic Motion","level":"SL/HL","tags":["shm","pendulum","spring","oscillations"]},"C.2":{"name":"Wave Model","level":"SL/HL","tags":["transverse","longitudinal","wavelength","frequency","wave-speed"]},"C.3":{"name":"Wave Phenomena","level":"SL/HL","tags":["reflection","refraction","diffraction","interference","standing-waves"]},"C.4":{"name":"Standing Waves and Resonance","level":"HL","tags":["standing-waves","harmonics","resonance"]},"C.5":{"name":"Doppler Effect","level":"HL","tags":["doppler","moving-source","moving-observer"]}}},"D":{"name":"Fields","subtopics":{"D.1":{"name":"Gravitational Fields","level":"SL/HL","tags":["gravitational-field","newtons-law-gravity","orbital-motion"]},"D.2":{"name":"Electric and Magnetic Fields","level":"SL/HL","tags":["electric-field","coulombs-law","magnetic-field","lorentz-force"]},"D.3":{"name":"Motion in EM Fields","level":"HL","tags":["charged-particles","mass-spectrometer","cyclotron"]},"D.4":{"name":"Induction","level":"HL","tags":["faraday","lenz","emf","flux","generators"]}}},"E":{"name":"Nuclear and Quantum Physics","subtopics":{"E.1":{"name":"Structure of the Atom","level":"SL/HL","tags":["atomic-models","emission-spectra","energy-levels"]},"E.2":{"name":"Quantum Physics","level":"SL/HL","tags":["photoelectric","wave-particle-duality","de-broglie"]},"E.3":{"name":"Radioactive Decay","level":"SL/HL","tags":["alpha","beta","gamma","half-life","decay-equations"]},"E.4":{"name":"Fission","level":"SL/HL","tags":["fission","chain-reaction","nuclear-reactor","mass-defect"]},"E.5":{"name":"Fusion and Stars","level":"HL","tags":["fusion","stellar-nucleosynthesis","HR-diagram"]}}}}},"chemistry":{"name":"Chemistry","full_name":"IB Chemistry (2025 Syllabus)","levels":["SL","HL"],"topics":{"S1":{"name":"Structure 1: Models of the Particulate Nature of Matter","subtopics":{"S1.1":{"name":"Introduction to the Particulate Nature of Matter","level":"SL/HL","tags":["atoms","elements","compounds","mixtures"]},"S1.2":{"name":"The Nuclear Atom","level":"SL/HL","tags":["protons","neutrons","electrons","isotopes","mass-spectrometry"]},"S1.3":{"name":"Electron Configurations","level":"SL/HL","tags":["electron-config","orbitals","aufbau","hund","pauli"]},"S1.4":{"name":"Counting Particles by Mass","level":"SL/HL","tags":["moles","molar-mass","avogadro","empirical-formula"]},"S1.5":{"name":"Ideal Gases","level":"SL/HL","tags":["ideal-gas-law","molar-volume","gas-calculations"]}}},"S2":{"name":"Structure 2: Models of Bonding and Structure","subtopics":{"S2.1":{"name":"The Ionic Model","level":"SL/HL","tags":["ionic-bonding","lattice-structure","properties-of-ionic"]},"S2.2":{"name":"The Covalent Model","level":"SL/HL","tags":["covalent-bonding","lewis-structures","VSEPR","polarity"]},"S2.3":{"name":"The Metallic Model","level":"SL/HL","tags":["metallic-bonding","delocalized-electrons","alloys"]},"S2.4":{"name":"From Molecules to Materials","level":"SL/HL","tags":["intermolecular-forces","hydrogen-bonding","van-der-waals"]}}},"S3":{"name":"Structure 3: Classification of Matter","subtopics":{"S3.1":{"name":"The Periodic Table","level":"SL/HL","tags":["periodic-trends","groups","periods","electronegativity","ionization-energy"]},"S3.2":{"name":"Functional Groups & Nomenclature","level":"SL/HL","tags":["organic-nomenclature","functional-groups","IUPAC","isomers"]}}},"R1":{"name":"Reactivity 1: What Drives Chemical Reactions?","subtopics":{"R1.1":{"name":"Measuring Enthalpy Changes","level":"SL/HL","tags":["enthalpy","calorimetry","hess-law","bond-enthalpy"]},"R1.2":{"name":"Energy Cycles in Reactions","level":"HL","tags":["born-haber","lattice-enthalpy","enthalpy-of-solution"]},"R1.3":{"name":"Energy from Fuels","level":"SL/HL","tags":["combustion","enthalpy-of-combustion","fuel-cells"]},"R1.4":{"name":"Entropy and Spontaneity","level":"SL/HL","tags":["entropy","gibbs-free-energy","spontaneity"]}}},"R2":{"name":"Reactivity 2: How Much, How Fast, and How Far?","subtopics":{"R2.1":{"name":"How Much? The Amount of Chemical Change","level":"SL/HL","tags":["stoichiometry","limiting-reagent","percentage-yield","atom-economy"]},"R2.2":{"name":"How Fast? The Rate of Chemical Change","level":"SL/HL","tags":["rate-of-reaction","collision-theory","activation-energy","catalysts"]},"R2.3":{"name":"How Far? The Extent of Chemical Change","level":"SL/HL","tags":["equilibrium","le-chatelier","equilibrium-constant","Kc","Kp"]},"R2.4":{"name":"Rate Expressions and Mechanisms","level":"HL","tags":["rate-expression","order-of-reaction","rate-constant","mechanisms"]}}},"R3":{"name":"Reactivity 3: What Are the Mechanisms of Chemical Change?","subtopics":{"R3.1":{"name":"Proton Transfer Reactions","level":"SL/HL","tags":["acids","bases","pH","Ka","buffers","titrations"]},"R3.2":{"name":"Electron Transfer Reactions","level":"SL/HL","tags":["oxidation","reduction","redox","electrochemistry","electrolysis"]},"R3.3":{"name":"Electron Sharing Reactions","level":"SL/HL","tags":["nucleophilic-substitution","electrophilic-addition","free-radical"]},"R3.4":{"name":"Electron Pair Sharing Reactions","level":"HL","tags":["SN1","SN2","elimination","addition-polymers","condensation-polymers"]}}}}},"biology":{"name":"Biology","full_name":"IB Biology (2025 Syllabus)","levels":["SL","HL"],"topics":{"A":{"name":"Unity and Diversity","subtopics":{"A.1":{"name":"Water","level":"SL/HL","tags":["hydrogen-bonding","polarity","solvent-properties","thermal-properties"]},"A.2":{"name":"Nucleic Acids","level":"SL/HL","tags":["DNA","RNA","nucleotides","base-pairing","replication"]},"A.3":{"name":"Origins of Cells","level":"SL/HL","tags":["cell-theory","endosymbiosis","prokaryotes","eukaryotes"]},"A.4":{"name":"Cell Biology","level":"SL/HL","tags":["organelles","membrane-structure","transport","cell-division"]}}},"B":{"name":"Form and Function","subtopics":{"B.1":{"name":"Carbohydrates and Lipids","level":"SL/HL","tags":["monosaccharides","polysaccharides","fatty-acids","triglycerides"]},"B.2":{"name":"Proteins","level":"SL/HL","tags":["amino-acids","protein-structure","enzymes","enzyme-kinetics"]},"B.3":{"name":"Cell Specialization","level":"SL/HL","tags":["differentiation","stem-cells","tissues","organs"]},"B.4":{"name":"Gas Exchange","level":"SL/HL","tags":["lungs","ventilation","gas-exchange-surfaces","adaptations"]}}},"C":{"name":"Interaction and Interdependence","subtopics":{"C.1":{"name":"Enzymes and Metabolism","level":"SL/HL","tags":["enzymes","activation-energy","inhibitors","metabolic-pathways"]},"C.2":{"name":"Cell Respiration","level":"SL/HL","tags":["glycolysis","krebs","electron-transport","ATP"]},"C.3":{"name":"Photosynthesis","level":"SL/HL","tags":["light-reactions","calvin-cycle","photosystems","chloroplast"]},"C.4":{"name":"Ecology","level":"SL/HL","tags":["ecosystems","food-chains","energy-flow","nutrient-cycling"]}}},"D":{"name":"Continuity and Change","subtopics":{"D.1":{"name":"Cell and Nuclear Division","level":"SL/HL","tags":["mitosis","meiosis","chromosome-behavior","karyotypes"]},"D.2":{"name":"Gene Expression","level":"SL/HL","tags":["transcription","translation","mutations","gene-regulation"]},"D.3":{"name":"Inheritance","level":"SL/HL","tags":["mendelian-genetics","punnett-squares","sex-linkage","codominance"]},"D.4":{"name":"Natural Selection","level":"SL/HL","tags":["evolution","natural-selection","speciation","evidence-for-evolution"]}}}}},"economics":{"name":"Economics","full_name":"IB Economics","levels":["SL","HL"],"topics":{"1":{"name":"Introduction to Economics","subtopics":{"1.1":{"name":"What Is Economics?","level":"SL/HL","tags":["scarcity","opportunity-cost","factors-of-production"]},"1.2":{"name":"How Do Economists Approach the World?","level":"SL/HL","tags":["economic-models","positive-normative","ceteris-paribus"]}}},"2":{"name":"Microeconomics","subtopics":{"2.1":{"name":"Demand","level":"SL/HL","tags":["demand-curve","determinants-of-demand","movement-vs-shift"]},"2.2":{"name":"Supply","level":"SL/HL","tags":["supply-curve","determinants-of-supply"]},"2.3":{"name":"Competitive Market Equilibrium","level":"SL/HL","tags":["equilibrium","surplus","shortage"]},"2.4":{"name":"Critique of Maximizing Behaviour","level":"SL/HL","tags":["bounded-rationality","nudge-theory","bias"]},"2.5":{"name":"Elasticity of Demand","level":"SL/HL","tags":["PED","YED","XED","elastic","inelastic"]},"2.6":{"name":"Elasticity of Supply","level":"SL/HL","tags":["PES","determinants-of-PES"]},"2.7":{"name":"The Role of Government","level":"SL/HL","tags":["price-controls","taxes","subsidies","externalities"]},"2.8":{"name":"Market Failure","level":"SL/HL","tags":["externalities","public-goods","common-resources","asymmetric-info"]}}},"3":{"name":"Macroeconomics","subtopics":{"3.1":{"name":"Measuring Economic Activity","level":"SL/HL","tags":["GDP","GNI","real-vs-nominal"]},"3.2":{"name":"Variations in Economic Activity","level":"SL/HL","tags":["business-cycle","recession","inflation","unemployment"]},"3.3":{"name":"Aggregate Demand and Supply","level":"SL/HL","tags":["AD-AS-model","multiplier","keynesian","monetarist"]},"3.4":{"name":"Macroeconomic Objectives","level":"SL/HL","tags":["low-inflation","full-employment","growth","equity"]},"3.5":{"name":"Fiscal Policy","level":"SL/HL","tags":["government-spending","taxation","budget-deficit"]},"3.6":{"name":"Monetary Policy","level":"SL/HL","tags":["interest-rates","money-supply","central-bank"]},"3.7":{"name":"Supply-Side Policies","level":"SL/HL","tags":["supply-side","deregulation","privatization"]}}},"4":{"name":"The Global Economy","subtopics":{"4.1":{"name":"Benefits of International Trade","level":"SL/HL","tags":["comparative-advantage","trade-gains","specialization"]},"4.2":{"name":"Types of Trade Protection","level":"SL/HL","tags":["tariffs","quotas","subsidies","administrative-barriers"]},"4.3":{"name":"Economic Integration","level":"SL/HL","tags":["trading-blocs","free-trade-areas","customs-unions","EU"]},"4.4":{"name":"Exchange Rates","level":"SL/HL","tags":["fixed","floating","managed","exchange-rate-determination"]},"4.5":{"name":"Balance of Payments","level":"SL/HL","tags":["current-account","capital-account","financial-account"]},"4.6":{"name":"Sustainable Development","level":"SL/HL","tags":["sustainability","poverty","inequality","HDI"]}}}}},"business":{"name":"Business Management","full_name":"IB Business Management","levels":["SL","HL"],"topics":{"1":{"name":"Introduction to Business Management","subtopics":{"1.1":{"name":"What Is a Business?","level":"SL/HL","tags":["business-sectors","inputs-outputs","value-added"]},"1.2":{"name":"Types of Business Entities","level":"SL/HL","tags":["sole-trader","partnership","corporation","cooperative"]},"1.3":{"name":"Business Objectives","level":"SL/HL","tags":["profit","growth","social-objectives","ethical"]},"1.4":{"name":"Stakeholders","level":"SL/HL","tags":["stakeholder-conflict","internal","external"]},"1.5":{"name":"Growth and Evolution","level":"SL/HL","tags":["organic-growth","mergers","acquisitions","economies-of-scale"]},"1.6":{"name":"Multinational Companies","level":"SL/HL","tags":["MNCs","globalization","FDI"]}}},"2":{"name":"Human Resource Management","subtopics":{"2.1":{"name":"Introduction to HRM","level":"SL/HL","tags":["HR-planning","recruitment","appraisal"]},"2.2":{"name":"Organizational Structure","level":"SL/HL","tags":["hierarchy","span-of-control","delegation","centralization"]},"2.3":{"name":"Leadership and Management","level":"SL/HL","tags":["leadership-styles","autocratic","democratic","laissez-faire"]},"2.4":{"name":"Motivation","level":"SL/HL","tags":["maslow","herzberg","taylor","motivation-theory"]}}},"3":{"name":"Finance and Accounts","subtopics":{"3.1":{"name":"Sources of Finance","level":"SL/HL","tags":["internal-finance","external-finance","equity","debt"]},"3.2":{"name":"Costs and Revenues","level":"SL/HL","tags":["fixed-costs","variable-costs","revenue","break-even"]},"3.3":{"name":"Break-Even Analysis","level":"SL/HL","tags":["break-even-point","margin-of-safety","break-even-chart"]},"3.4":{"name":"Final Accounts","level":"SL/HL","tags":["profit-loss","balance-sheet","depreciation"]},"3.5":{"name":"Profitability and Liquidity Ratios","level":"HL","tags":["gross-profit-margin","net-profit-margin","current-ratio"]},"3.6":{"name":"Efficiency and Gearing Ratios","level":"HL","tags":["stock-turnover","debtor-days","gearing"]},"3.7":{"name":"Cash Flow","level":"SL/HL","tags":["cash-flow-forecast","working-capital"]},"3.8":{"name":"Investment Appraisal","level":"HL","tags":["payback","ARR","NPV","IRR"]}}},"4":{"name":"Marketing","subtopics":{"4.1":{"name":"The Role of Marketing","level":"SL/HL","tags":["market-orientation","product-orientation","marketing-mix"]},"4.2":{"name":"Marketing Planning","level":"SL/HL","tags":["market-research","SWOT","segmentation","targeting","positioning"]},"4.3":{"name":"Sales Forecasting","level":"HL","tags":["moving-averages","extrapolation","seasonal-variation"]},"4.4":{"name":"The 4 Ps","level":"SL/HL","tags":["product","price","place","promotion","PLC"]},"4.5":{"name":"The Extended Marketing Mix","level":"SL/HL","tags":["people","process","physical-evidence","7Ps"]}}},"5":{"name":"Operations Management","subtopics":{"5.1":{"name":"The Role of Operations","level":"SL/HL","tags":["production-methods","job","batch","flow"]},"5.2":{"name":"Production Methods","level":"SL/HL","tags":["lean-production","JIT","kaizen","TQM"]},"5.3":{"name":"Lean Production and QM","level":"SL/HL","tags":["quality-control","quality-assurance","benchmarking"]},"5.4":{"name":"Location","level":"SL/HL","tags":["location-decisions","push-pull-factors"]},"5.5":{"name":"Break-Even Analysis (Operations)","level":"SL/HL","tags":["capacity-utilization","outsourcing","offshoring"]}}}}},"computer_science":{"name":"Computer Science","full_name":"IB Computer Science","levels":["SL","HL"],"topics":{"1":{"name":"System Fundamentals","subtopics":{"1.1":{"name":"Systems in Organizations","level":"SL/HL","tags":["system-planning","change-management"]},"1.2":{"name":"System Design Basics","level":"SL/HL","tags":["inputs","outputs","processes","feedback"]}}},"2":{"name":"Computer Organization","subtopics":{"2.1":{"name":"Computer Architecture","level":"SL/HL","tags":["CPU","ALU","control-unit","registers","buses"]},"2.2":{"name":"Secondary Memory","level":"SL/HL","tags":["HDD","SSD","optical","RAM","ROM"]}}},"3":{"name":"Networks","subtopics":{"3.1":{"name":"Network Fundamentals","level":"SL/HL","tags":["LAN","WAN","protocols","TCP-IP","OSI"]},"3.2":{"name":"Data Transmission","level":"SL/HL","tags":["packet-switching","bandwidth","encryption"]}}},"4":{"name":"Computational Thinking & Problem Solving","subtopics":{"4.1":{"name":"General Principles","level":"SL/HL","tags":["abstraction","decomposition","pattern-recognition","algorithms"]},"4.2":{"name":"Connecting Computational Thinking and Program Design","level":"SL/HL","tags":["flowcharts","pseudocode","trace-tables"]},"4.3":{"name":"Introduction to Programming","level":"SL/HL","tags":["variables","loops","conditionals","arrays","functions"]}}},"5":{"name":"Abstract Data Structures (HL)","subtopics":{"5.1":{"name":"Abstract Data Structures","level":"HL","tags":["stacks","queues","linked-lists","trees","binary-trees"]},"5.2":{"name":"Recursion","level":"HL","tags":["recursive-thinking","base-case","call-stack"]}}}}}}};
+
+// Subject display configuration
+const SUBJECT_CONFIG = {
+  math_aa: { icon: 'functions', iconClass: 'icon-math-aa', shortName: 'Math AA' },
+  math_ai: { icon: 'analytics', iconClass: 'icon-math-ai', shortName: 'Math AI' },
+  physics: { icon: 'rocket_launch', iconClass: 'icon-physics', shortName: 'Physics' },
+  chemistry: { icon: 'science', iconClass: 'icon-chemistry', shortName: 'Chemistry' },
+  biology: { icon: 'eco', iconClass: 'icon-biology', shortName: 'Biology' },
+  economics: { icon: 'trending_up', iconClass: 'icon-economics', shortName: 'Economics' },
+  business: { icon: 'business_center', iconClass: 'icon-business', shortName: 'Business' },
+  computer_science: { icon: 'terminal', iconClass: 'icon-cs', shortName: 'Comp Sci' }
+};
+
+// Category colors for periodic table
+const CAT_COLORS = {
+  'nonmetal': 'var(--cat-nonmetal)',
+  'noble-gas': 'var(--cat-noble-gas)',
+  'alkali-metal': 'var(--cat-alkali-metal)',
+  'alkaline-earth': 'var(--cat-alkaline-earth)',
+  'metalloid': 'var(--cat-metalloid)',
+  'halogen': 'var(--cat-halogen)',
+  'metal': 'var(--cat-metal)',
+  'transition-metal': 'var(--cat-transition-metal)',
+  'lanthanide': 'var(--cat-lanthanide)',
+  'actinide': 'var(--cat-actinide)'
+};
+
+const CAT_LABELS = {
+  'nonmetal': 'Nonmetal',
+  'noble-gas': 'Noble Gas',
+  'alkali-metal': 'Alkali Metal',
+  'alkaline-earth': 'Alkaline Earth',
+  'metalloid': 'Metalloid',
+  'halogen': 'Halogen',
+  'metal': 'Post-transition Metal',
+  'transition-metal': 'Transition Metal',
+  'lanthanide': 'Lanthanide',
+  'actinide': 'Actinide'
+};
+
+// ============================================================
+// EXAMPLE QUESTION TEMPLATES (demo content)
+// ============================================================
+const EXAMPLE_QUESTIONS = [
+  {
+    id: "math_aa_1.1_arith_series",
+    subject: "math_aa",
+    topic: "1",
+    subtopic: "1.1",
+    type: "mcq",
+    difficulty: "core",
+    tags: ["arithmetic-sequences", "nth-term"],
+    title: "Arithmetic Sequence: nth Term",
+    stem: "An arithmetic sequence has first term \\(a_1 = 5\\) and common difference \\(d = 3\\). Find \\(a_{12}\\).",
+    options: ["38", "36", "41", "33"],
+    correct: 0,
+    mark_scheme: "Using \\(a_n = a_1 + (n-1)d\\):\n\\(a_{12} = 5 + (12-1)(3) = 5 + 33 = 38\\)",
+    hints: ["Recall the formula for the nth term: a_n = a_1 + (n-1)d", "Substitute a_1 = 5, d = 3, and n = 12"]
+  },
+  {
+    id: "math_aa_6.2_diff_rules",
+    subject: "math_aa",
+    topic: "6",
+    subtopic: "6.2",
+    type: "mcq",
+    difficulty: "core",
+    tags: ["differentiation", "chain-rule"],
+    title: "Differentiation: Chain Rule",
+    stem: "Find \\(\\frac{d}{dx}(3x^2 + 1)^4\\).",
+    options: ["\\(24x(3x^2+1)^3\\)", "\\(4(3x^2+1)^3\\)", "\\(12x(3x^2+1)^3\\)", "\\(24x(3x^2+1)^4\\)"],
+    correct: 0,
+    mark_scheme: "Let \\(u = 3x^2+1\\), so \\(\\frac{du}{dx} = 6x\\).\nBy chain rule: \\(\\frac{d}{dx}u^4 = 4u^3 \\cdot 6x = 24x(3x^2+1)^3\\)",
+    hints: ["Use the chain rule: d/dx [f(g(x))] = f'(g(x)) * g'(x)", "The outer function is u^4, the inner is 3x^2 + 1"]
+  },
+  {
+    id: "physics_A1_kinematics",
+    subject: "physics",
+    topic: "A",
+    subtopic: "A.1",
+    type: "numerical",
+    difficulty: "core",
+    tags: ["kinematics", "suvat"],
+    title: "SUVAT: Free Fall",
+    stem: "An object is dropped from rest from a height of 45 m. Using \\(g = 9.8\\,\\text{m s}^{-2}\\), find the time taken to reach the ground. Give your answer to 2 decimal places.",
+    answer: 3.03,
+    tolerance: 0.05,
+    unit: "s",
+    mark_scheme: "Using \\(s = ut + \\frac{1}{2}at^2\\):\n\\(45 = 0 + \\frac{1}{2}(9.8)t^2\\)\n\\(t^2 = \\frac{45}{4.9} = 9.184\\)\n\\(t = 3.03\\) s",
+    hints: ["Use s = ut + (1/2)at^2 with u = 0", "Rearrange for t"]
+  },
+  {
+    id: "chemistry_S1.4_moles",
+    subject: "chemistry",
+    topic: "S1",
+    subtopic: "S1.4",
+    type: "mcq",
+    difficulty: "core",
+    tags: ["moles", "molar-mass"],
+    title: "Moles Calculation",
+    stem: "Calculate the number of moles in 36.0 g of water (\\(H_2O\\)). \\(M_r = 18.0\\)",
+    options: ["2.00 mol", "0.500 mol", "18.0 mol", "1.00 mol"],
+    correct: 0,
+    mark_scheme: "\\(n = \\frac{m}{M} = \\frac{36.0}{18.0} = 2.00\\) mol",
+    hints: ["Use the formula n = m / M", "M for water = 2(1.008) + 16.00 = 18.0"]
+  },
+  {
+    id: "biology_D3_genetics",
+    subject: "biology",
+    topic: "D",
+    subtopic: "D.3",
+    type: "worked",
+    difficulty: "core",
+    tags: ["mendelian-genetics", "punnett-squares"],
+    title: "Monohybrid Cross",
+    stem: "In pea plants, tall (T) is dominant over dwarf (t). Two heterozygous tall plants (Tt) are crossed. Draw the Punnett square and determine the expected phenotype ratio of the offspring.",
+    mark_scheme: "Punnett square:\n\n|   | T  | t  |\n|---|----|----|\n| T | TT | Tt |\n| t | Tt | tt |\n\nGenotype ratio: 1 TT : 2 Tt : 1 tt\nPhenotype ratio: 3 Tall : 1 Dwarf",
+    hints: ["Set up a 2x2 Punnett square with T and t on each axis", "Count the number of tall (TT + Tt) and dwarf (tt) offspring"]
+  },
+  {
+    id: "econ_2.5_elasticity",
+    subject: "economics",
+    topic: "2",
+    subtopic: "2.5",
+    type: "mcq",
+    difficulty: "challenge",
+    tags: ["PED", "elastic"],
+    title: "Price Elasticity of Demand",
+    stem: "When the price of a good rises from $10 to $12, the quantity demanded falls from 200 to 160 units. Calculate the PED.",
+    options: ["-1.0", "-2.0", "-0.5", "-1.5"],
+    correct: 0,
+    mark_scheme: "PED = % change in Qd / % change in P\n= ((160-200)/200 * 100) / ((12-10)/10 * 100)\n= (-20%) / (20%)\n= -1.0",
+    hints: ["PED = % change in quantity demanded / % change in price", "Calculate each percentage change separately"]
+  },
+  {
+    id: "cs_4.2_trace",
+    subject: "computer_science",
+    topic: "4",
+    subtopic: "4.2",
+    type: "truth_table",
+    difficulty: "core",
+    tags: ["trace-tables", "logic"],
+    title: "Logic Gates Truth Table",
+    stem: "Complete the truth table for the expression \\(Q = (A \\text{ AND } B) \\text{ OR } (\\text{NOT } A)\\).",
+    table_headers: ["A", "B", "A AND B", "NOT A", "Q"],
+    table_inputs: [
+      [0, 0, null, null, null],
+      [0, 1, null, null, null],
+      [1, 0, null, null, null],
+      [1, 1, null, null, null]
+    ],
+    table_answers: [
+      [0, 0, 0, 1, 1],
+      [0, 1, 0, 1, 1],
+      [1, 0, 0, 0, 0],
+      [1, 1, 1, 0, 1]
+    ],
+    mark_scheme: "Row 1: A=0, B=0: A AND B = 0, NOT A = 1, Q = 0 OR 1 = 1\nRow 2: A=0, B=1: A AND B = 0, NOT A = 1, Q = 0 OR 1 = 1\nRow 3: A=1, B=0: A AND B = 0, NOT A = 0, Q = 0 OR 0 = 0\nRow 4: A=1, B=1: A AND B = 1, NOT A = 0, Q = 1 OR 0 = 1",
+    hints: ["AND gives 1 only when both inputs are 1", "NOT flips 0 to 1 and 1 to 0", "OR gives 1 when at least one input is 1"]
+  },
+  {
+    id: "math_aa_5.7_normal",
+    subject: "math_aa",
+    topic: "5",
+    subtopic: "5.7",
+    type: "numerical",
+    difficulty: "challenge",
+    tags: ["normal-distribution", "z-scores"],
+    title: "Normal Distribution: Z-Score",
+    stem: "A dataset is normally distributed with \\(\\mu = 50\\) and \\(\\sigma = 8\\). Find the z-score for a value of \\(x = 62\\).",
+    answer: 1.5,
+    tolerance: 0.01,
+    unit: "",
+    mark_scheme: "\\(z = \\frac{x - \\mu}{\\sigma} = \\frac{62 - 50}{8} = \\frac{12}{8} = 1.5\\)",
+    hints: ["Use z = (x - mean) / standard deviation"]
+  },
+  {
+    id: "business_3.3_breakeven",
+    subject: "business",
+    topic: "3",
+    subtopic: "3.3",
+    type: "numerical",
+    difficulty: "core",
+    tags: ["break-even-point"],
+    title: "Break-Even Analysis",
+    stem: "A company has fixed costs of $60,000, sells a product for $25 each, and has variable costs of $10 per unit. Calculate the break-even quantity.",
+    answer: 4000,
+    tolerance: 1,
+    unit: "units",
+    mark_scheme: "Break-even quantity = Fixed Costs / (Selling Price - Variable Cost)\n= $60,000 / ($25 - $10)\n= $60,000 / $15\n= 4,000 units",
+    hints: ["BEQ = Fixed Costs / Contribution per unit", "Contribution per unit = Price - Variable cost"]
+  },
+  {
+    id: "physics_B5_circuits",
+    subject: "physics",
+    topic: "B",
+    subtopic: "B.5",
+    type: "worked",
+    difficulty: "challenge",
+    tags: ["circuits", "kirchhoff"],
+    title: "Series-Parallel Circuit",
+    stem: "A circuit has a 12 V battery connected to two resistors in series: \\(R_1 = 4\\,\\Omega\\) and a parallel combination of \\(R_2 = 6\\,\\Omega\\) and \\(R_3 = 3\\,\\Omega\\). Find the total current drawn from the battery and the voltage across \\(R_1\\).",
+    mark_scheme: "Step 1: Find the parallel combination\n\\(\\frac{1}{R_{23}} = \\frac{1}{6} + \\frac{1}{3} = \\frac{1}{2}\\)\nSo \\(R_{23} = 2\\,\\Omega\\)\n\nStep 2: Total resistance\n\\(R_T = R_1 + R_{23} = 4 + 2 = 6\\,\\Omega\\)\n\nStep 3: Total current\n\\(I = \\frac{V}{R_T} = \\frac{12}{6} = 2\\) A\n\nStep 4: Voltage across \\(R_1\\)\n\\(V_1 = IR_1 = 2 \\times 4 = 8\\) V",
+    hints: ["First find the equivalent resistance of the parallel combination", "Then add it to R1 for total resistance"]
+  }
+];
+
+// Question JSON Schema (for documentation)
+const QUESTION_SCHEMA = {
+  id: "string - unique identifier: subject_topic_subtopic_description",
+  subject: "string - subject key from curriculum",
+  topic: "string - topic number/letter",
+  subtopic: "string - subtopic number",
+  type: "string - mcq|multi_select|worked|numerical|ordering|matching|graph_sketch|chem_structure|truth_table|calculation",
+  difficulty: "string - core|challenge|extension",
+  tags: ["array of string tags"],
+  title: "string - question title",
+  stem: "string - question text (supports LaTeX via \\(...\\) and \\[...\\])",
+
+  // MCQ specific
+  options: ["array of option strings"],
+  correct: "number - index of correct option (0-based)",
+
+  // Multi-select specific
+  correct_indices: [0, 2],
+
+  // Numerical specific
+  answer: "number - correct numerical answer",
+  tolerance: "number - acceptable tolerance",
+  unit: "string - unit to display",
+
+  // Worked specific (no answer input needed)
+  // mark_scheme is shown on reveal
+
+  // Ordering specific
+  items: ["array of items to order"],
+  correct_order: [0, 2, 1, 3],
+
+  // Matching specific
+  left_items: ["array of left column items"],
+  right_items: ["array of right column items"],
+  correct_matches: {0: 2, 1: 0, 2: 1},
+
+  // Truth table specific
+  table_headers: ["array of column headers"],
+  table_inputs: "2D array with null for editable cells",
+  table_answers: "2D array with all correct values",
+
+  // Calculation specific
+  steps: [
+    { label: "Step 1", prompt: "Find X", answer: 5, tolerance: 0.1 }
+  ],
+
+  // Common
+  mark_scheme: "string - full solution (supports LaTeX)",
+  hints: ["array of hint strings"]
+};
+
+// ============================================================
+// APP STATE
+// ============================================================
+function toggleMenu() {
+  const menuButton = document.getElementById('menuButton');
+  const sidebar = document.getElementById('sidebar');
+  menuButton.classList.toggle('active');
+  sidebar.classList.toggle('active');
+}
+
+// Close sidebar on outside click (mirrors main site)
+document.addEventListener('click', (e) => {
+  const menuButton = document.getElementById('menuButton');
+  const sidebar = document.getElementById('sidebar');
+  if (menuButton && sidebar && !menuButton.contains(e.target) && !sidebar.contains(e.target) && sidebar.classList.contains('active')) {
+    toggleMenu();
+  }
+});
+
+// Wire up sidebar theme toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebarToggle = document.getElementById('sidebarDarkModeToggle');
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener('click', () => {
+      toggleTheme();
+    });
+  }
+});
+
+function applyTheme(theme) {
+  const isDark = theme === 'dark';
+  document.body.classList.toggle('dark-mode', isDark);
+  localStorage.setItem('darkMode', isDark ? 'true' : 'false');
+  const iconName = isDark ? 'dark_mode' : 'light_mode';
+  const sidebarToggle = document.getElementById('sidebarDarkModeToggle');
+  if (sidebarToggle) sidebarToggle.innerHTML = `<span class="material-symbols-outlined">${iconName}</span>`;
+}
+
+function toggleTheme() {
+  const isDark = document.body.classList.contains('dark-mode');
+  applyTheme(isDark ? 'light' : 'dark');
+}
+
+function initializeTheme() {
+  const savedGlobal = localStorage.getItem('darkMode');
+
+  if (savedGlobal === 'true' || savedGlobal === 'false') {
+    applyTheme(savedGlobal === 'true' ? 'dark' : 'light');
+    return;
+  }
+
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(prefersDark ? 'dark' : 'light');
+}
+
+let state = {
+  currentScreen: 'home',
+  selectedSubject: null,
+  selectedSubtopics: new Set(),
+  questions: [],
+  currentQuestionIndex: 0,
+  answers: {},
+  flags: new Set(),
+  timerEnabled: false,
+  timerSeconds: 0,
+  timerInterval: null,
+  questionCount: 10,
+  difficulty: 'all',
+  loadedQuestions: null,
+  reviewMode: false
+};
+
+// ============================================================
+// NAVIGATION
+// ============================================================
+function navigate(screen, data) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+
+  state.currentScreen = screen;
+
+  switch(screen) {
+    case 'home':
+      document.getElementById('screen-home').classList.add('active');
+      updateBreadcrumb([]);
+      state.selectedSubject = null;
+      state.selectedSubtopics.clear();
+      if (state.timerInterval) clearInterval(state.timerInterval);
+      document.getElementById('app-footer').style.display = '';
+      break;
+    case 'topics':
+      document.getElementById('screen-topics').classList.add('active');
+      state.selectedSubject = data;
+      renderTopicBrowser(data);
+      updateBreadcrumb([]);
+      document.getElementById('app-footer').style.display = '';
+      break;
+    case 'practice':
+      document.getElementById('screen-practice').classList.add('active');
+      startPractice();
+      document.getElementById('app-footer').style.display = 'none';
+      break;
+    case 'results':
+      document.getElementById('screen-results').classList.add('active');
+      renderResults();
+      updateBreadcrumb([{ label: getSubjectName(state.selectedSubject), action: () => navigate('topics', state.selectedSubject) }, { label: 'Results' }]);
+      document.getElementById('app-footer').style.display = '';
+      break;
+  }
+}
+
+function updateBreadcrumb(items) {
+  const bc = document.getElementById('breadcrumb');
+  if (items.length === 0) {
+    bc.innerHTML = '';
+    return;
+  }
+  bc.innerHTML = items.map((item, i) => {
+    const isLast = i === items.length - 1;
+    const sep = i > 0 ? '<span class="sep">/</span>' : '';
+    if (isLast) {
+      return sep + `<span class="current">${item.label}</span>`;
+    }
+    if (item.action) {
+      return sep + `<a href="#" onclick="event.preventDefault();__ivyNavigateBreadcrumb(${i})" style="color:var(--gray-600)">${item.label}</a>`;
+    }
+    return sep + `<span>${item.label}</span>`;
+  }).join('');
+}
+
+function getSubjectName(key) {
+  const subj = CURRICULUM.subjects[key];
+  return subj ? subj.name : key;
+}
+
+window.__ivyNavigateBreadcrumb = function(index) {
+  const crumbs = [];
+  if (state.currentScreen === 'topics') {
+    crumbs.push({ label: getSubjectName(state.selectedSubject) });
+  } else if (state.currentScreen === 'practice') {
+    crumbs.push({ label: getSubjectName(state.selectedSubject), action: () => navigate('topics', state.selectedSubject) });
+    crumbs.push({ label: 'Practice' });
+  } else if (state.currentScreen === 'results') {
+    crumbs.push({ label: getSubjectName(state.selectedSubject), action: () => navigate('topics', state.selectedSubject) });
+    crumbs.push({ label: 'Results' });
+  }
+  const target = crumbs[index];
+  if (target && typeof target.action === 'function') {
+    target.action();
+  }
+};
+
+// ============================================================
+// HOME SCREEN
+// ============================================================
+function renderHome() {
+  const grid = document.getElementById('subject-grid');
+  grid.innerHTML = '';
+
+  for (const [key, subj] of Object.entries(CURRICULUM.subjects)) {
+    const config = SUBJECT_CONFIG[key];
+    if (!config) continue;
+
+    // Count topics and subtopics
+    let topicCount = 0;
+    let subtopicCount = 0;
+    if (subj.topics) {
+      topicCount = Object.keys(subj.topics).length;
+      for (const t of Object.values(subj.topics)) {
+        if (t.subtopics) subtopicCount += Object.keys(t.subtopics).length;
+      }
+    } else if (key === 'math_ai') {
+      // Math AI shares topics with AA
+      const aa = CURRICULUM.subjects.math_aa;
+      topicCount = Object.keys(aa.topics).length;
+      for (const t of Object.values(aa.topics)) {
+        if (t.subtopics) subtopicCount += Object.keys(t.subtopics).length;
+      }
+    }
+
+    // Count example questions for this subject
+    // Math AI shares questions with Math AA
+    let qCount = EXAMPLE_QUESTIONS.filter(q => q.subject === key).length;
+    if (key === 'math_ai' && qCount === 0) {
+      qCount = EXAMPLE_QUESTIONS.filter(q => q.subject === 'math_aa').length;
+    }
+
+    const card = document.createElement('div');
+    card.className = 'subject-card';
+    card.onclick = () => navigate('topics', key);
+    card.innerHTML = `
+      <div class="subject-card-icon ${config.iconClass}">
+        <span class="material-icons-outlined">${config.icon}</span>
+      </div>
+      <div class="subject-card-body">
+        <h3>${config.shortName}</h3>
+        <div class="subject-full-name">${subj.name}</div>
+      </div>
+    `;
+    grid.appendChild(card);
+  }
+}
+
+// ============================================================
+// TOPIC BROWSER
+// ============================================================
+function renderTopicBrowser(subjectKey) {
+  const subj = CURRICULUM.subjects[subjectKey];
+  document.getElementById('topic-subject-name').textContent = subj.name;
+  document.getElementById('topic-subject-desc').textContent = subj.full_name;
+
+  const list = document.getElementById('topic-list');
+  list.innerHTML = '';
+
+  state.selectedSubtopics.clear();
+  updateSelectedCount();
+
+  // Get topics - for Math AI, use Math AA topics
+  let topics = subj.topics;
+  if (!topics && subjectKey === 'math_ai') {
+    topics = CURRICULUM.subjects.math_aa.topics;
+  }
+
+  if (!topics) return;
+
+  for (const [topicId, topic] of Object.entries(topics)) {
+    const group = document.createElement('div');
+    group.className = 'topic-group';
+
+    const header = document.createElement('div');
+    header.className = 'topic-group-header';
+    header.innerHTML = `
+      <span class="material-icons-outlined">chevron_right</span>
+      <span class="topic-num">${topicId}.</span>
+      ${topic.name}
+    `;
+    header.onclick = () => {
+      header.classList.toggle('expanded');
+      const subtopicList = header.nextElementSibling;
+      subtopicList.classList.toggle('visible');
+    };
+
+    const subtopicList = document.createElement('div');
+    subtopicList.className = 'subtopic-list';
+
+    if (topic.subtopics) {
+      for (const [stId, st] of Object.entries(topic.subtopics)) {
+        const item = document.createElement('div');
+        item.className = 'subtopic-item';
+        const levelBadge = st.level === 'HL'
+          ? '<span class="badge badge-hl">HL</span>'
+          : '<span class="badge badge-sl">SL/HL</span>';
+        item.innerHTML = `
+          <input type="checkbox" data-subtopic="${stId}" data-topic="${topicId}" onchange="toggleSubtopic('${stId}', '${topicId}', this.checked)">
+          <span class="subtopic-num">${stId}</span>
+          <span class="subtopic-name">${st.name}</span>
+          ${levelBadge}
+        `;
+        subtopicList.appendChild(item);
+      }
+    }
+
+    group.appendChild(header);
+    group.appendChild(subtopicList);
+    list.appendChild(group);
+  }
+
+  // Reset topic main
+  document.getElementById('topic-main').innerHTML = `
+    <span class="material-icons-outlined empty-state-icon">checklist</span>
+    <h3>Select subtopics to practice</h3>
+    <p>Check one or more subtopics from the sidebar, then configure your practice session.</p>
+  `;
+}
+
+function toggleSubtopic(stId, topicId, checked) {
+  const key = topicId + ':' + stId;
+  if (checked) {
+    state.selectedSubtopics.add(key);
+  } else {
+    state.selectedSubtopics.delete(key);
+  }
+  updateSelectedCount();
+
+  if (state.selectedSubtopics.size > 0) {
+    showPracticeSettings();
+  } else {
+    document.getElementById('topic-main').innerHTML = `
+      <span class="material-icons-outlined empty-state-icon">checklist</span>
+      <h3>Select subtopics to practice</h3>
+      <p>Check one or more subtopics from the sidebar, then configure your practice session.</p>
+    `;
+  }
+}
+
+function updateSelectedCount() {
+  const count = state.selectedSubtopics.size;
+  document.getElementById('selected-count').textContent = count + ' subtopic' + (count !== 1 ? 's' : '') + ' selected';
+  document.getElementById('start-practice-btn').disabled = count === 0;
+}
+
+function selectAllSubtopics() {
+  document.querySelectorAll('.subtopic-item input[type="checkbox"]').forEach(cb => {
+    cb.checked = true;
+    const stId = cb.dataset.subtopic;
+    const topicId = cb.dataset.topic;
+    state.selectedSubtopics.add(topicId + ':' + stId);
+  });
+  updateSelectedCount();
+  showPracticeSettings();
+}
+
+function deselectAllSubtopics() {
+  document.querySelectorAll('.subtopic-item input[type="checkbox"]').forEach(cb => {
+    cb.checked = false;
+  });
+  state.selectedSubtopics.clear();
+  updateSelectedCount();
+  document.getElementById('topic-main').innerHTML = `
+    <span class="material-icons-outlined empty-state-icon">checklist</span>
+    <h3>Select subtopics to practice</h3>
+    <p>Check one or more subtopics from the sidebar, then configure your practice session.</p>
+  `;
+}
+
+function startFullPractice() {
+  selectAllSubtopics();
+  navigate('practice');
+}
+
+function showPracticeSettings() {
+  const main = document.getElementById('topic-main');
+  main.innerHTML = `
+    <div class="practice-settings">
+      <h3>Configure Practice</h3>
+
+      <div class="setting-group">
+        <div class="setting-label">Number of Questions</div>
+        <div class="setting-options">
+          ${[5, 10, 15, 20, 30].map(n => `
+            <button class="setting-chip ${n === state.questionCount ? 'selected' : ''}"
+                    onclick="setQuestionCount(${n}, this)">${n}</button>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <div class="setting-label">Difficulty</div>
+        <div class="setting-options">
+          ${[['all', 'All'], ['core', 'Core'], ['challenge', 'Challenge'], ['extension', 'Extension']].map(([val, label]) => `
+            <button class="setting-chip ${val === state.difficulty ? 'selected' : ''}"
+                    onclick="setDifficulty('${val}', this)">${label}</button>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <div class="setting-row">
+          <label>Timer</label>
+          <label class="toggle">
+            <input type="checkbox" ${state.timerEnabled ? 'checked' : ''} onchange="state.timerEnabled = this.checked">
+            <span class="toggle-track"></span>
+          </label>
+        </div>
+      </div>
+
+      <button class="btn btn-primary start-practice-btn" onclick="navigate('practice')" ${state.selectedSubtopics.size === 0 ? 'disabled' : ''}>
+        <span class="material-icons-outlined" style="font-size:18px">play_arrow</span>
+        Start Practice (${state.selectedSubtopics.size} subtopics)
+      </button>
+    </div>
+  `;
+}
+
+function setQuestionCount(n, el) {
+  state.questionCount = n;
+  el.parentElement.querySelectorAll('.setting-chip').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function setDifficulty(val, el) {
+  state.difficulty = val;
+  el.parentElement.querySelectorAll('.setting-chip').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+// ============================================================
+// PRACTICE SESSION
+// ============================================================
+function startPractice() {
+  // Try optimized lazy-loading if available
+  if (typeof startPracticeOptimized !== 'undefined') {
+    startPracticeOptimized().then(() => {
+      // Check if optimized path actually loaded questions
+      if (!state.questions || state.questions.length === 0) {
+        console.warn('Optimized path loaded 0 questions, falling back');
+        startPracticeFallback();
+      }
+    }).catch((e) => {
+      console.warn('Optimized practice start failed, using fallback mode:', e);
+      startPracticeFallback();
+    });
+    return;
+  }
+
+  startPracticeFallback();
+}
+
+function startPracticeFallback() {
+
+  // Fallback to original implementation
+  const subjectKeys = state.selectedSubject === 'math_ai'
+    ? new Set(['math_ai', 'math_aa'])
+    : new Set([state.selectedSubject]);
+
+  // Filter questions for selected subject and subtopics
+  let available = (state.loadedQuestions || EXAMPLE_QUESTIONS).filter(q => {
+    if (!subjectKeys.has(q.subject)) return false;
+    const key = q.topic + ':' + q.subtopic;
+    if (state.selectedSubtopics.size > 0 && !state.selectedSubtopics.has(key)) return false;
+    if (state.difficulty !== 'all' && q.difficulty !== state.difficulty) return false;
+    return true;
+  });
+
+  // If no questions match the exact filter, fall back to selected subject only.
+  if (available.length === 0) {
+    available = (state.loadedQuestions || EXAMPLE_QUESTIONS).filter(q => subjectKeys.has(q.subject));
+  }
+
+  // Shuffle and limit
+  shuffleArray(available);
+  state.questions = available.slice(0, Math.min(state.questionCount, available.length));
+  state.currentQuestionIndex = 0;
+  state.answers = {};
+  state.flags = new Set();
+  state.reviewMode = false;
+
+  // Timer
+  state.timerSeconds = 0;
+  if (state.timerInterval) clearInterval(state.timerInterval);
+  const timerEl = document.getElementById('timer-display');
+  if (state.timerEnabled) {
+    timerEl.style.display = 'flex';
+    state.timerInterval = setInterval(() => {
+      state.timerSeconds++;
+      document.getElementById('timer-value').textContent = formatTime(state.timerSeconds);
+    }, 1000);
+  } else {
+    timerEl.style.display = 'none';
+  }
+
+  // Update subject label
+  document.getElementById('practice-subject-label').textContent = getSubjectName(state.selectedSubject);
+  updateBreadcrumb([
+    { label: getSubjectName(state.selectedSubject), action: () => navigate('topics', state.selectedSubject) },
+    { label: 'Practice' }
+  ]);
+
+  renderQuestion();
+  renderNavPills();
+  updateProgress();
+}
+
+function renderQuestion() {
+  const panel = document.getElementById('question-panel');
+  const q = state.questions[state.currentQuestionIndex];
+
+  if (!q) {
+    panel.innerHTML = `
+      <div class="no-questions-msg">
+        <span class="material-icons-outlined">quiz</span>
+        <h3>No question bank loaded</h3>
+        <p>Generate questions using the template system and place <code>questions.json</code> in the same directory.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const diffBadge = `<span class="badge badge-${q.difficulty}">${q.difficulty}</span>`;
+  const tagHtml = (q.tags || []).map(t => `<span class="question-tag">${t}</span>`).join('');
+
+  let answerArea = '';
+  const answered = state.answers[state.currentQuestionIndex] !== undefined;
+
+  switch(q.type) {
+    case 'mcq':
+      answerArea = renderMCQ(q, answered);
+      break;
+    case 'multi_select':
+      answerArea = renderMultiSelect(q, answered);
+      break;
+    case 'numerical':
+      answerArea = renderNumerical(q, answered);
+      break;
+    case 'worked':
+      answerArea = renderWorked(q);
+      break;
+    case 'ordering':
+      answerArea = renderOrdering(q, answered);
+      break;
+    case 'matching':
+      answerArea = renderMatching(q, answered);
+      break;
+    case 'truth_table':
+      answerArea = renderTruthTable(q, answered);
+      break;
+    case 'calculation':
+      answerArea = renderCalculation(q, answered);
+      break;
+    default:
+      answerArea = renderMCQ(q, answered);
+  }
+
+  // Hints
+  let hintsHtml = '';
+  if (q.hints && q.hints.length > 0) {
+    hintsHtml = `
+      <div class="hint-section">
+        <button class="hint-btn btn-text" onclick="showHint(this, ${q.hints.length})">
+          <span class="material-icons-outlined" style="font-size:16px">lightbulb</span>
+          Show Hint
+        </button>
+        ${q.hints.map((h, i) => `<div class="hint-content" id="hint-${i}">${h}</div>`).join('')}
+      </div>
+    `;
+  }
+
+  panel.innerHTML = `
+    <div class="question-header">
+      <span class="question-number">Q${state.currentQuestionIndex + 1}</span>
+      ${diffBadge}
+      <span class="question-title">${q.title}</span>
+      <div class="question-tags">${tagHtml}</div>
+    </div>
+    <div class="question-stem">${q.stem}</div>
+    ${answerArea}
+    ${hintsHtml}
+  `;
+
+  // Render KaTeX
+  renderMathContent(panel);
+
+  // Update nav pill state
+  updateNavPillState();
+  updateFlagButton();
+}
+
+function renderMCQ(q, answered) {
+  const ans = state.answers[state.currentQuestionIndex];
+  const isChecked = ans && typeof ans === 'object' && ans.checked;
+  const selectedIdx = isChecked ? ans.selected : (typeof ans === 'number' ? ans : -1);
+  return `
+    <div class="mcq-options">
+      ${q.options.map((opt, i) => {
+        const letter = String.fromCharCode(65 + i);
+        let cls = 'mcq-option';
+        if (isChecked) {
+          if (i === q.correct) cls += ' correct';
+          else if (i === selectedIdx) cls += ' incorrect';
+        } else if (selectedIdx === i) {
+          cls += ' selected';
+        }
+        return `
+          <div class="${cls}" onclick="${isChecked ? '' : `selectMCQ(${i})`}" ${isChecked ? '' : 'role="button" tabindex="0"'}>
+            <div class="option-letter">${letter}</div>
+            <div class="option-text">${opt}</div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+    ${isChecked ? renderFeedback(ans.correct, q.mark_scheme) : `
+      <div style="margin-top:var(--space-lg)">
+        <button class="btn btn-primary" onclick="checkMCQ(${q.correct})" ${selectedIdx < 0 ? 'disabled' : ''}>Check Answer</button>
+      </div>
+    `}
+  `;
+}
+
+function selectMCQ(idx) {
+  state.answers[state.currentQuestionIndex] = idx;
+  renderQuestion();
+}
+
+function checkMCQ(correctIdx) {
+  const ans = state.answers[state.currentQuestionIndex];
+  const selected = typeof ans === 'number' ? ans : -1;
+  if (selected < 0) return;
+  const isCorrect = selected === correctIdx;
+  state.answers[state.currentQuestionIndex] = { selected, checked: true, correct: isCorrect };
+  renderQuestion();
+}
+
+function renderMultiSelect(q, answered) {
+  return renderMCQ(q, answered); // Simplified for demo
+}
+
+function renderNumerical(q, answered) {
+  const ans = state.answers[state.currentQuestionIndex];
+  const isChecked = ans && typeof ans === 'object' && ans.checked;
+
+  if (isChecked) {
+    return `
+      <div class="numerical-input-group">
+        <input type="number" class="numerical-input" value="${ans.value}" disabled>
+        ${q.unit ? `<span class="numerical-unit">${q.unit}</span>` : ''}
+      </div>
+      ${renderFeedback(ans.correct, q.mark_scheme)}
+    `;
+  }
+
+  return `
+    <div class="numerical-input-group">
+      <input type="number" class="numerical-input" id="numerical-input"
+             step="any" placeholder="Enter your answer"
+             value="${ans && typeof ans !== 'object' ? ans : ''}">
+      ${q.unit ? `<span class="numerical-unit">${q.unit}</span>` : ''}
+    </div>
+    <div style="margin-top:var(--space-md)">
+      <button class="btn btn-primary" onclick="checkNumerical()">Check Answer</button>
+    </div>
+  `;
+}
+
+function checkNumerical() {
+  const input = document.getElementById('numerical-input');
+  if (!input || input.value === '') return;
+
+  const q = state.questions[state.currentQuestionIndex];
+  const value = parseFloat(input.value);
+  const correct = Math.abs(value - q.answer) <= (q.tolerance || 0.01);
+
+  state.answers[state.currentQuestionIndex] = { value, checked: true, correct };
+  renderQuestion();
+  renderMathContent(document.getElementById('question-panel'));
+  updateNavPillState();
+}
+
+function renderWorked(q) {
+  const revealed = state.answers[state.currentQuestionIndex] === 'revealed';
+  return `
+    <div>
+      <button class="btn btn-secondary mark-scheme-btn" onclick="revealMarkScheme()">
+        <span class="material-icons-outlined" style="font-size:18px">${revealed ? 'visibility_off' : 'visibility'}</span>
+        ${revealed ? 'Hide' : 'Show'} Mark Scheme
+      </button>
+    </div>
+    <div class="mark-scheme ${revealed ? 'visible' : ''}">
+      <h4>Mark Scheme</h4>
+      <div>${formatMarkScheme(q.mark_scheme)}</div>
+    </div>
+  `;
+}
+
+function revealMarkScheme() {
+  const current = state.answers[state.currentQuestionIndex];
+  state.answers[state.currentQuestionIndex] = current === 'revealed' ? undefined : 'revealed';
+  renderQuestion();
+  renderMathContent(document.getElementById('question-panel'));
+}
+
+function renderOrdering(q, answered) {
+  const items = q.items || [];
+  return `
+    <div class="ordering-list">
+      ${items.map((item, i) => `
+        <div class="ordering-item" draggable="true" data-idx="${i}">
+          <span class="material-icons-outlined drag-handle">drag_indicator</span>
+          <span class="order-num">${i + 1}</span>
+          <span>${item}</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderMatching(q, answered) {
+  return `
+    <div class="matching-container">
+      <div class="matching-column">
+        <h4>Terms</h4>
+        ${(q.left_items || []).map((item, i) => `
+          <div class="matching-item" data-idx="${i}">${item}</div>
+        `).join('')}
+      </div>
+      <div class="matching-arrows">
+        <span class="material-icons-outlined" style="color:var(--gray-300)">arrow_forward</span>
+      </div>
+      <div class="matching-column">
+        <h4>Definitions</h4>
+        ${(q.right_items || []).map((item, i) => `
+          <div class="matching-item" data-idx="${i}">${item}</div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderTruthTable(q, answered) {
+  const isChecked = state.answers[state.currentQuestionIndex] && typeof state.answers[state.currentQuestionIndex] === 'object' && state.answers[state.currentQuestionIndex].checked;
+
+  let rows = '';
+  const inputs = q.table_inputs || [];
+  const answers = q.table_answers || [];
+
+  inputs.forEach((row, ri) => {
+    rows += '<tr>';
+    row.forEach((cell, ci) => {
+      if (cell === null) {
+        if (isChecked) {
+          const userVal = state.answers[state.currentQuestionIndex].values?.[ri]?.[ci] ?? '';
+          const correctVal = answers[ri]?.[ci];
+          const isRight = parseInt(userVal) === correctVal;
+          rows += `<td style="background:${isRight ? 'var(--success-bg)' : 'var(--error-bg)'}">${correctVal}</td>`;
+        } else {
+          rows += `<td class="editable"><input type="text" maxlength="1" data-row="${ri}" data-col="${ci}" oninput="this.value=this.value.replace(/[^01]/g,'')"></td>`;
+        }
+      } else {
+        rows += `<td>${cell}</td>`;
+      }
+    });
+    rows += '</tr>';
+  });
+
+  const checkBtn = isChecked ? '' : `
+    <div style="margin-top:var(--space-md)">
+      <button class="btn btn-primary" onclick="checkTruthTable()">Check Answer</button>
+    </div>
+  `;
+
+  const feedback = isChecked ? renderFeedback(state.answers[state.currentQuestionIndex].correct, q.mark_scheme) : '';
+
+  return `
+    <table class="truth-table">
+      <thead><tr>${(q.table_headers || []).map(h => `<th>${h}</th>`).join('')}</tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    ${checkBtn}
+    ${feedback}
+  `;
+}
+
+function checkTruthTable() {
+  const q = state.questions[state.currentQuestionIndex];
+  const answers = q.table_answers || [];
+  const inputs = q.table_inputs || [];
+  let allCorrect = true;
+  const values = [];
+
+  inputs.forEach((row, ri) => {
+    values[ri] = [];
+    row.forEach((cell, ci) => {
+      if (cell === null) {
+        const input = document.querySelector(`input[data-row="${ri}"][data-col="${ci}"]`);
+        const val = input ? input.value : '';
+        values[ri][ci] = val;
+        if (parseInt(val) !== answers[ri][ci]) allCorrect = false;
+      } else {
+        values[ri][ci] = cell;
+      }
+    });
+  });
+
+  state.answers[state.currentQuestionIndex] = { checked: true, correct: allCorrect, values };
+  renderQuestion();
+  renderMathContent(document.getElementById('question-panel'));
+  updateNavPillState();
+}
+
+function renderCalculation(q, answered) {
+  const steps = q.steps || [];
+  return `
+    <div class="calc-steps">
+      ${steps.map((step, i) => `
+        <div class="calc-step">
+          <div class="calc-step-label">${step.label}</div>
+          <div>${step.prompt}</div>
+          <div class="numerical-input-group" style="margin-top:var(--space-sm)">
+            <input type="number" class="numerical-input" step="any" placeholder="Answer">
+          </div>
+        </div>
+      `).join('')}
+    </div>
+    <div style="margin-top:var(--space-md)">
+      <button class="btn btn-primary">Check All Steps</button>
+    </div>
+  `;
+}
+
+function renderFeedback(isCorrect, markScheme) {
+  return `
+    <div class="feedback visible ${isCorrect ? 'correct' : 'incorrect'}">
+      <span class="material-icons-outlined">${isCorrect ? 'check_circle' : 'cancel'}</span>
+      <div>${isCorrect ? 'Correct!' : 'Incorrect'}</div>
+    </div>
+    ${markScheme ? `
+      <div class="mark-scheme visible" style="margin-top:var(--space-md)">
+        <h4>Solution</h4>
+        <div>${formatMarkScheme(markScheme)}</div>
+      </div>
+    ` : ''}
+  `;
+}
+
+function formatMarkScheme(text) {
+  if (!text) return '';
+  return text.replace(/\n/g, '<br>');
+}
+
+function showHint(btn, totalHints) {
+  let shown = 0;
+  for (let i = 0; i < totalHints; i++) {
+    const el = document.getElementById('hint-' + i);
+    if (el && el.classList.contains('visible')) shown++;
+  }
+  if (shown < totalHints) {
+    const el = document.getElementById('hint-' + shown);
+    if (el) {
+      el.classList.add('visible');
+      renderMathContent(el);
+    }
+    if (shown + 1 >= totalHints) {
+      btn.style.display = 'none';
+    }
+  }
+}
+
+// Navigation
+function prevQuestion() {
+  if (state.currentQuestionIndex > 0) {
+    state.currentQuestionIndex--;
+    renderQuestion();
+    updateProgress();
+  }
+}
+
+function nextQuestion() {
+  if (state.currentQuestionIndex < state.questions.length - 1) {
+    state.currentQuestionIndex++;
+    renderQuestion();
+    updateProgress();
+  }
+}
+
+function goToQuestion(idx) {
+  state.currentQuestionIndex = idx;
+  renderQuestion();
+  updateProgress();
+}
+
+function toggleFlag() {
+  const idx = state.currentQuestionIndex;
+  if (state.flags.has(idx)) {
+    state.flags.delete(idx);
+  } else {
+    state.flags.add(idx);
+  }
+  updateFlagButton();
+  updateNavPillState();
+}
+
+function updateFlagButton() {
+  const btn = document.getElementById('flag-btn');
+  if (state.flags.has(state.currentQuestionIndex)) {
+    btn.classList.add('flagged');
+  } else {
+    btn.classList.remove('flagged');
+  }
+}
+
+function updateProgress() {
+  const total = state.questions.length;
+  const current = state.currentQuestionIndex + 1;
+  document.getElementById('practice-progress-text').textContent = `${current} / ${total}`;
+  document.getElementById('practice-progress-bar').style.width = ((current / total) * 100) + '%';
+}
+
+function renderNavPills() {
+  const container = document.getElementById('question-nav-pills');
+  container.innerHTML = state.questions.map((q, i) => `
+    <button class="nav-pill ${i === state.currentQuestionIndex ? 'current' : ''}"
+            onclick="goToQuestion(${i})">${i + 1}</button>
+  `).join('');
+}
+
+function updateNavPillState() {
+  const pills = document.querySelectorAll('.nav-pill');
+  pills.forEach((pill, i) => {
+    pill.className = 'nav-pill';
+    if (i === state.currentQuestionIndex) pill.classList.add('current');
+
+    const ans = state.answers[i];
+    if (ans !== undefined) {
+      if (typeof ans === 'object' && ans.checked) {
+        pill.classList.add(ans.correct ? 'correct-pill' : 'incorrect-pill');
+      } else if (ans === 'revealed') {
+        pill.classList.add('answered');
+      } else {
+        pill.classList.add('answered');
+      }
+    }
+
+    if (state.flags.has(i)) pill.classList.add('flagged');
+  });
+}
+
+function finishPractice() {
+  if (state.timerInterval) clearInterval(state.timerInterval);
+  navigate('results');
+}
+
+// ============================================================
+// RESULTS
+// ============================================================
+function renderResults() {
+  const total = state.questions.length;
+  let correct = 0;
+  let incorrect = 0;
+  let skipped = 0;
+
+  state.questions.forEach((q, i) => {
+    const ans = state.answers[i];
+    if (!ans || ans === undefined) {
+      skipped++;
+    } else if (typeof ans === 'object' && ans.checked) {
+      if (ans.correct) correct++;
+      else incorrect++;
+    } else if (ans === 'revealed') {
+      skipped++; // Worked questions count as "reviewed"
+    } else {
+      skipped++; // Selected but not checked
+    }
+  });
+
+  const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
+
+  const container = document.getElementById('results-content');
+  container.innerHTML = `
+    <div class="results-header">
+      <div class="results-score">${pct}%</div>
+      <div class="results-label">Score on ${getSubjectName(state.selectedSubject)} Practice</div>
+      ${state.timerEnabled ? `<div style="margin-top:var(--space-sm);font-size:13px;color:var(--gray-500)">Time: ${formatTime(state.timerSeconds)}</div>` : ''}
+
+      <div class="results-stats">
+        <div class="result-stat correct-stat">
+          <div class="result-stat-value">${correct}</div>
+          <div class="result-stat-label">Correct</div>
+        </div>
+        <div class="result-stat incorrect-stat">
+          <div class="result-stat-value">${incorrect}</div>
+          <div class="result-stat-label">Incorrect</div>
+        </div>
+        <div class="result-stat skipped-stat">
+          <div class="result-stat-value">${skipped}</div>
+          <div class="result-stat-label">Skipped</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-actions">
+      <button class="btn btn-primary" onclick="navigate('topics', state.selectedSubject)">
+        <span class="material-icons-outlined" style="font-size:18px">replay</span>
+        Practice Again
+      </button>
+      <button class="btn btn-secondary" onclick="navigate('home')">
+        <span class="material-icons-outlined" style="font-size:18px">home</span>
+        Home
+      </button>
+    </div>
+
+    <div class="results-review">
+      <h3>Review Answers</h3>
+      ${state.questions.map((q, i) => {
+        const ans = state.answers[i];
+        let status = 'skipped';
+        let statusIcon = 'remove';
+        if (ans && typeof ans === 'object' && ans.checked) {
+          status = ans.correct ? 'correct' : 'incorrect';
+          statusIcon = ans.correct ? 'check' : 'close';
+        }
+
+        return `
+          <div class="review-item" onclick="this.classList.toggle('expanded')">
+            <div class="review-item-header">
+              <div class="review-status ${status}">
+                <span class="material-icons-outlined">${statusIcon}</span>
+              </div>
+              <span class="review-q-title">Q${i + 1}: ${q.title}</span>
+              <span class="badge badge-${q.difficulty}">${q.difficulty}</span>
+              <span class="material-icons-outlined" style="font-size:18px;color:var(--gray-400)">expand_more</span>
+            </div>
+            <div class="review-item-body">
+              <div style="margin-bottom:var(--space-sm)">${q.stem}</div>
+              ${q.mark_scheme ? `<div class="mark-scheme visible" style="margin-top:var(--space-sm)"><h4>Solution</h4><div>${formatMarkScheme(q.mark_scheme)}</div></div>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+
+  renderMathContent(container);
+}
+
+// ============================================================
+// PERIODIC TABLE
+// ============================================================
+function togglePeriodicTable() {
+  const modal = document.getElementById('pt-modal');
+  modal.classList.toggle('visible');
+}
+
+function renderPeriodicTable() {
+  const grid = document.getElementById('pt-grid');
+  grid.innerHTML = '';
+
+  // Build lookup
+  const lookup = {};
+  PERIODIC_TABLE.forEach(el => {
+    lookup[el.z] = el;
+  });
+
+  // Standard periodic table layout
+  // Row 1: H(1,1) He(1,18)
+  // Row 2: Li-Ne (2,1-2) gap (2,3-12) (2,13-18)
+  // etc.
+  const layout = [
+    // Period 1
+    [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2],
+    // Period 2
+    [3,4,0,0,0,0,0,0,0,0,0,0,5,6,7,8,9,10],
+    // Period 3
+    [11,12,0,0,0,0,0,0,0,0,0,0,13,14,15,16,17,18],
+    // Period 4
+    [19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36],
+    // Period 5
+    [37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54],
+    // Period 6
+    [55,56,'La-Lu',72,73,74,75,76,77,78,79,80,81,82,83,84,85,86],
+    // Period 7
+    [87,88,'Ac-Lr',104,105,106,107,108,109,110,111,112,113,114,115,116,117,118],
+  ];
+
+  // Lanthanides and Actinides rows
+  const lanthanides = [];
+  for (let z = 57; z <= 71; z++) lanthanides.push(z);
+
+  const actinides = [];
+  for (let z = 89; z <= 103; z++) actinides.push(z);
+
+  layout.forEach((row) => {
+    row.forEach((z) => {
+      if (z === 0) {
+        const spacer = document.createElement('div');
+        spacer.className = 'pt-cell pt-spacer';
+        grid.appendChild(spacer);
+      } else if (z === 'La-Lu') {
+        const cell = document.createElement('div');
+        cell.className = 'pt-cell';
+        cell.style.background = 'var(--cat-lanthanide)';
+        cell.style.fontSize = '9px';
+        cell.style.fontWeight = '600';
+        cell.innerHTML = '<span style="font-size:9px">57-71</span>';
+        cell.onclick = () => {
+          // Scroll to lanthanides
+          document.querySelector('.lanthanide-row')?.scrollIntoView({ behavior: 'smooth' });
+        };
+        grid.appendChild(cell);
+      } else if (z === 'Ac-Lr') {
+        const cell = document.createElement('div');
+        cell.className = 'pt-cell';
+        cell.style.background = 'var(--cat-actinide)';
+        cell.style.fontSize = '9px';
+        cell.style.fontWeight = '600';
+        cell.innerHTML = '<span style="font-size:9px">89-103</span>';
+        cell.onclick = () => {
+          document.querySelector('.actinide-row')?.scrollIntoView({ behavior: 'smooth' });
+        };
+        grid.appendChild(cell);
+      } else {
+        const el = lookup[z];
+        if (el) {
+          const cell = document.createElement('div');
+          cell.className = 'pt-cell';
+          cell.style.background = CAT_COLORS[el.cat] || 'var(--gray-100)';
+          cell.innerHTML = `
+            <span class="pt-z">${el.z}</span>
+            <span class="pt-sym">${el.sym}</span>
+            <span class="pt-mass">${typeof el.mass === 'number' ? el.mass.toFixed(el.mass < 10 ? 3 : 2) : el.mass}</span>
+          `;
+          cell.onclick = () => showElementDetail(el);
+          grid.appendChild(cell);
+        }
+      }
+    });
+  });
+
+  // Gap
+  const gap = document.createElement('div');
+  gap.className = 'pt-gap';
+  grid.appendChild(gap);
+
+  // Lanthanide row label + elements
+  const laLabel = document.createElement('div');
+  laLabel.className = 'pt-label lanthanide-row';
+  laLabel.textContent = '';
+  grid.appendChild(laLabel);
+
+  // Empty cells for alignment (positions 3-4)
+  const laSpacer = document.createElement('div');
+  laSpacer.className = 'pt-cell pt-spacer';
+  grid.appendChild(laSpacer);
+
+  lanthanides.forEach(z => {
+    const el = lookup[z];
+    if (el) {
+      const cell = document.createElement('div');
+      cell.className = 'pt-cell';
+      cell.style.background = CAT_COLORS[el.cat] || 'var(--gray-100)';
+      cell.innerHTML = `
+        <span class="pt-z">${el.z}</span>
+        <span class="pt-sym">${el.sym}</span>
+        <span class="pt-mass">${typeof el.mass === 'number' ? el.mass.toFixed(2) : el.mass}</span>
+      `;
+      cell.onclick = () => showElementDetail(el);
+      grid.appendChild(cell);
+    }
+  });
+
+  // Fill remaining cells to complete the row
+  const laRemaining = 18 - 3 - 15; // 0 remaining for lanthanides
+  // Actually we need: 2 (label) + 1 (spacer) + 15 (lanthanides) = 18. That's correct.
+
+  // Actinide row
+  const acLabel = document.createElement('div');
+  acLabel.className = 'pt-label actinide-row';
+  acLabel.textContent = '';
+  grid.appendChild(acLabel);
+
+  const acSpacer = document.createElement('div');
+  acSpacer.className = 'pt-cell pt-spacer';
+  grid.appendChild(acSpacer);
+
+  actinides.forEach(z => {
+    const el = lookup[z];
+    if (el) {
+      const cell = document.createElement('div');
+      cell.className = 'pt-cell';
+      cell.style.background = CAT_COLORS[el.cat] || 'var(--gray-100)';
+      cell.innerHTML = `
+        <span class="pt-z">${el.z}</span>
+        <span class="pt-sym">${el.sym}</span>
+        <span class="pt-mass">${typeof el.mass === 'number' ? el.mass.toFixed(el.mass < 10 ? 3 : 2) : el.mass}</span>
+      `;
+      cell.onclick = () => showElementDetail(el);
+      grid.appendChild(cell);
+    }
+  });
+
+  // Legend
+  const legendEl = document.getElementById('pt-legend');
+  legendEl.innerHTML = Object.entries(CAT_LABELS).map(([cat, label]) => `
+    <div class="pt-legend-item">
+      <div class="pt-legend-swatch" style="background:${CAT_COLORS[cat]}"></div>
+      ${label}
+    </div>
+  `).join('');
+}
+
+function showElementDetail(el) {
+  const detail = document.getElementById('element-detail');
+  detail.className = 'element-detail visible';
+  detail.innerHTML = `
+    <div class="element-detail-header">
+      <div class="element-detail-symbol" style="background:${CAT_COLORS[el.cat] || 'var(--gray-200)'}">
+        ${el.sym}
+      </div>
+      <div class="element-detail-info">
+        <h3>${el.name}</h3>
+        <p>Atomic Number ${el.z} &middot; ${CAT_LABELS[el.cat] || el.cat} &middot; Block ${el.block.toUpperCase()}</p>
+      </div>
+    </div>
+    <div class="element-properties">
+      <div class="element-prop">
+        <span class="element-prop-label">Atomic Mass</span>
+        <span class="element-prop-value">${el.mass} u</span>
+      </div>
+      <div class="element-prop">
+        <span class="element-prop-label">Electron Config</span>
+        <span class="element-prop-value">${el.electron_config}</span>
+      </div>
+      <div class="element-prop">
+        <span class="element-prop-label">Electronegativity</span>
+        <span class="element-prop-value">${el.electronegativity !== null ? el.electronegativity : 'N/A'}</span>
+      </div>
+      <div class="element-prop">
+        <span class="element-prop-label">Ionization Energy</span>
+        <span class="element-prop-value">${el.ionization_energy !== null ? el.ionization_energy + ' kJ/mol' : 'N/A'}</span>
+      </div>
+      <div class="element-prop">
+        <span class="element-prop-label">Density</span>
+        <span class="element-prop-value">${el.density !== null ? el.density + ' g/cm3' : 'N/A'}</span>
+      </div>
+      <div class="element-prop">
+        <span class="element-prop-label">Melting Point</span>
+        <span class="element-prop-value">${el.melting_point !== null ? el.melting_point + ' C' : 'N/A'}</span>
+      </div>
+      <div class="element-prop">
+        <span class="element-prop-label">Boiling Point</span>
+        <span class="element-prop-value">${el.boiling_point !== null ? el.boiling_point + ' C' : 'N/A'}</span>
+      </div>
+      <div class="element-prop">
+        <span class="element-prop-label">Group / Period</span>
+        <span class="element-prop-value">${el.group} / ${el.period}</span>
+      </div>
+    </div>
+  `;
+}
+
+// ============================================================
+// TOOLS PANEL
+// ============================================================
+function toggleTools() {
+  const panel = document.getElementById('tools-panel');
+  panel.classList.toggle('visible');
+  const btn = document.querySelector('.topbar-actions .icon-btn:nth-child(2)');
+  btn.classList.toggle('active');
+
+  // Init Desmos if not done
+  if (panel.classList.contains('visible') && !window.desmosLoaded) {
+    loadDesmos();
+  }
+}
+
+function switchTool(tab) {
+  document.querySelectorAll('.tools-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tool-section').forEach(s => s.classList.remove('active'));
+
+  const tabs = document.querySelectorAll('.tools-tab');
+  const sections = document.querySelectorAll('.tool-section');
+
+  switch(tab) {
+    case 'calc': tabs[0].classList.add('active'); sections[0].classList.add('active'); break;
+    case 'graph': tabs[1].classList.add('active'); sections[1].classList.add('active'); loadDesmos(); break;
+    case 'formulas': tabs[2].classList.add('active'); sections[2].classList.add('active'); break;
+  }
+}
+
+// Scientific Calculator
+function initCalculator() {
+  const buttons = [
+    ['sin', 'cos', 'tan', 'log', 'ln'],
+    ['(', ')', '^', 'sqrt', 'pi'],
+    ['7', '8', '9', '/', 'C'],
+    ['4', '5', '6', '*', 'DEL'],
+    ['1', '2', '3', '-', 'ANS'],
+    ['0', '.', 'E', '+', '='],
+  ];
+
+  const container = document.getElementById('calc-buttons');
+  container.innerHTML = '';
+
+  buttons.forEach(row => {
+    row.forEach(btn => {
+      const el = document.createElement('button');
+      el.className = 'calc-btn';
+      el.textContent = btn;
+
+      if (['+', '-', '*', '/', '^'].includes(btn)) el.classList.add('op');
+      if (['sin', 'cos', 'tan', 'log', 'ln', 'sqrt', 'pi', 'E', 'ANS'].includes(btn)) el.classList.add('fn');
+      if (btn === '=') el.classList.add('eq');
+
+      el.onclick = () => calcPress(btn);
+      container.appendChild(el);
+    });
+  });
+
+  window.calcExpr = '';
+  window.calcAns = 0;
+}
+
+function calcPress(btn) {
+  const display = document.getElementById('calc-result');
+  const exprEl = document.getElementById('calc-expr');
+
+  switch(btn) {
+    case 'C':
+      window.calcExpr = '';
+      display.textContent = '0';
+      exprEl.textContent = '';
+      return;
+    case 'DEL':
+      window.calcExpr = window.calcExpr.slice(0, -1);
+      display.textContent = window.calcExpr || '0';
+      return;
+    case '=':
+      try {
+        let expr = window.calcExpr
+          .replace(/sin/g, 'Math.sin')
+          .replace(/cos/g, 'Math.cos')
+          .replace(/tan/g, 'Math.tan')
+          .replace(/log/g, 'Math.log10')
+          .replace(/ln/g, 'Math.log')
+          .replace(/sqrt/g, 'Math.sqrt')
+          .replace(/pi/g, 'Math.PI')
+          .replace(/\^/g, '**')
+          .replace(/ANS/g, window.calcAns);
+        const result = eval(expr);
+        exprEl.textContent = window.calcExpr + ' =';
+        window.calcAns = result;
+        display.textContent = typeof result === 'number' ? (Number.isInteger(result) ? result : result.toFixed(8).replace(/0+$/, '').replace(/\.$/, '')) : result;
+        window.calcExpr = String(result);
+      } catch(e) {
+        display.textContent = 'Error';
+        window.calcExpr = '';
+      }
+      return;
+    case 'sin': case 'cos': case 'tan': case 'log': case 'ln': case 'sqrt':
+      window.calcExpr += btn + '(';
+      break;
+    case 'pi':
+      window.calcExpr += 'pi';
+      break;
+    case 'ANS':
+      window.calcExpr += 'ANS';
+      break;
+    case 'E':
+      window.calcExpr += 'E';
+      break;
+    default:
+      window.calcExpr += btn;
+  }
+
+  display.textContent = window.calcExpr;
+}
+
+// Desmos
+let desmosLoaded = false;
+function loadDesmos() {
+  if (desmosLoaded) return;
+  desmosLoaded = true;
+
+  const container = document.getElementById('desmos-container');
+  container.innerHTML = `<iframe
+    src="https://www.desmos.com/calculator"
+    style="width:100%;height:100%;border:none;"
+    title="Desmos Graphing Calculator"
+  ></iframe>`;
+}
+
+// Formula Reference
+function initFormulas() {
+  const formulas = {
+    'Algebra': [
+      { name: 'Quadratic Formula', formula: '$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$' },
+      { name: 'Arithmetic Sequence', formula: '$$a_n = a_1 + (n-1)d$$' },
+      { name: 'Geometric Sequence', formula: '$$a_n = a_1 \\cdot r^{n-1}$$' },
+      { name: 'Sum of Arithmetic Series', formula: '$$S_n = \\frac{n}{2}(2a_1 + (n-1)d)$$' },
+      { name: 'Sum of Geometric Series', formula: '$$S_n = a_1 \\cdot \\frac{1 - r^n}{1 - r}$$' },
+      { name: 'Binomial Theorem', formula: '$$\\binom{n}{r} = \\frac{n!}{r!(n-r)!}$$' },
+    ],
+    'Calculus': [
+      { name: 'Power Rule', formula: '$$\\frac{d}{dx} x^n = nx^{n-1}$$' },
+      { name: 'Chain Rule', formula: "$$\\frac{d}{dx} f(g(x)) = f'(g(x)) \\cdot g'(x)$$" },
+      { name: 'Product Rule', formula: "$$\\frac{d}{dx}(uv) = u'v + uv'$$" },
+      { name: 'Integration by Parts', formula: '$$\\int u\\,dv = uv - \\int v\\,du$$' },
+    ],
+    'Trigonometry': [
+      { name: 'Sine Rule', formula: '$$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}$$' },
+      { name: 'Cosine Rule', formula: '$$c^2 = a^2 + b^2 - 2ab\\cos C$$' },
+      { name: 'Area of Triangle', formula: '$$A = \\frac{1}{2}ab\\sin C$$' },
+    ],
+    'Statistics': [
+      { name: 'Mean', formula: '$$\\bar{x} = \\frac{\\sum x}{n}$$' },
+      { name: 'Standard Deviation', formula: '$$\\sigma = \\sqrt{\\frac{\\sum(x - \\bar{x})^2}{n}}$$' },
+      { name: 'Z-Score', formula: '$$z = \\frac{x - \\mu}{\\sigma}$$' },
+      { name: 'Binomial Probability', formula: '$$P(X=k) = \\binom{n}{k} p^k (1-p)^{n-k}$$' },
+      { name: 'Normal PDF', formula: '$$f(x)=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}$$' },
+      { name: 'Confidence Interval (mean)', formula: '$$\\bar{x} \\pm z\\frac{\\sigma}{\\sqrt{n}}$$' },
+    ],
+    'Physics': [
+      { name: 'SUVAT Equations', formula: '$$v = u + at \\quad s = ut + \\frac{1}{2}at^2 \\quad v^2 = u^2 + 2as$$' },
+      { name: 'Newton\'s Second Law', formula: '$$F = ma$$' },
+      { name: 'Work Done', formula: '$$W = Fs\\cos\\theta$$' },
+      { name: 'Kinetic Energy', formula: '$$E_k = \\frac{1}{2}mv^2$$' },
+      { name: 'Gravitational PE', formula: '$$E_p = mgh$$' },
+      { name: "Ohm's Law", formula: '$$V = IR$$' },
+      { name: 'Ideal Gas Law', formula: '$$PV = nRT$$' },
+    ],
+    'Chemistry': [
+      { name: 'Moles', formula: '$$n = \\frac{m}{M}$$' },
+      { name: 'Ideal Gas', formula: '$$PV = nRT$$' },
+      { name: 'pH', formula: '$$\\text{pH} = -\\log[H^+]$$' },
+      { name: "Hess's Law", formula: '$$\\Delta H_{rxn} = \\sum \\Delta H_f (products) - \\sum \\Delta H_f (reactants)$$' },
+    ],
+    'Economics': [
+      { name: 'PED', formula: '$$PED = \\frac{\\%\\Delta Q_d}{\\%\\Delta P}$$' },
+      { name: 'Total Revenue', formula: '$$TR = P \\times Q$$' },
+      { name: 'GDP', formula: '$$GDP = C + I + G + (X - M)$$' },
+    ],
+    'Business': [
+      { name: 'Break-Even', formula: '$$BEQ = \\frac{\\text{Fixed Costs}}{P - VC}$$' },
+      { name: 'Profit', formula: '$$\\text{Profit} = TR - TC$$' },
+      { name: 'Net Profit Margin', formula: '$$NPM = \\frac{\\text{Net Profit}}{\\text{Revenue}} \\times 100$$' },
+    ],
+    'Constants': [
+      { name: 'Speed of Light', formula: '$$c = 3.00 \\times 10^8\\,\\text{m s}^{-1}$$' },
+      { name: 'Gas Constant', formula: '$$R = 8.314\\,\\text{J mol}^{-1}\\text{K}^{-1}$$' },
+      { name: 'Avogadro Constant', formula: '$$N_A = 6.022 \\times 10^{23}\\,\\text{mol}^{-1}$$' },
+      { name: 'Elementary Charge', formula: '$$e = 1.602 \\times 10^{-19}\\,\\text{C}$$' },
+    ]
+  };
+
+  const container = document.getElementById('formula-list');
+  container.innerHTML = Object.entries(formulas).map(([cat, items]) => `
+    <div class="formula-category">
+      <h4>${cat}</h4>
+      ${items.map(f => `
+        <div class="formula-item">
+          <span class="formula-name">${f.name}</span>
+          ${f.formula}
+        </div>
+      `).join('')}
+    </div>
+  `).join('');
+
+  // Render math after a short delay to ensure KaTeX is loaded
+  setTimeout(() => renderMathContent(container), 500);
+}
+
+// ============================================================
+// UTILITIES
+// ============================================================
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function formatTime(seconds) {
+  const m = Math.floor(seconds / 60);
+  const s = seconds % 60;
+  return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+}
+
+function renderMathContent(el) {
+  if (window.renderMathInElement) {
+    window.renderMathInElement(el, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true }
+      ],
+      throwOnError: false
+    });
+  }
+}
+
+// ============================================================
+// QUESTION LOADING
+// ============================================================
+async function loadQuestions() {
+  // Try optimized lazy-loading first if available
+  if (typeof loadQuestionsOptimized !== 'undefined') {
+    const optimized = await loadQuestionsOptimized();
+    if (optimized) return; // Use lazy loading
+  }
+
+  // Fallback to full load for compatibility
+  try {
+    const basePath = window.location.pathname.includes('/ib-practice-platform') ? '/ib-practice-platform/' : './';
+    const response = await fetch(`${basePath}questions.json`);
+    if (response.ok) {
+      const data = await response.json();
+      if (Array.isArray(data) && data.length > 0) {
+        state.loadedQuestions = data;
+        console.log(`Loaded ${data.length} questions from questions.json`);
+      }
+    }
+  } catch(e) {
+    // questions.json not found, using example questions
+    console.log('No questions.json found. Using built-in example questions.');
+  }
+}
+
+// ============================================================
+// INITIALIZATION
+// ============================================================
+document.addEventListener('DOMContentLoaded', async () => {
+  initializeTheme();
+  await loadQuestions();
+  
+  // Initialize performance optimizations
+  if (typeof initOptimizations !== 'undefined') {
+    await initOptimizations();
+  }
+  
+  renderHome();
+  renderPeriodicTable();
+  initCalculator();
+  initFormulas();
+
+  // Wait for KaTeX to load, then render formulas
+  const waitForKatex = setInterval(() => {
+    if (window.renderMathInElement) {
+      clearInterval(waitForKatex);
+      renderMathContent(document.body);
+      // Re-render formulas with KaTeX
+      const formulaList = document.getElementById('formula-list');
+      if (formulaList) renderMathContent(formulaList);
+    }
+  }, 200);
+
+  // Deep link support from lesson pages: /ib-practice-platform/?subject=math_aa&topic=1
+  const params = new URLSearchParams(window.location.search);
+  const linkedSubject = params.get('subject');
+  const linkedTopic = params.get('topic');
+  if (linkedSubject && CURRICULUM.subjects[linkedSubject]) {
+    navigate('topics', linkedSubject);
+    if (linkedTopic) {
+      document.querySelectorAll(`input[data-topic="${linkedTopic}"]`).forEach((cb) => {
+        cb.checked = true;
+        const stId = cb.dataset.subtopic;
+        const topicId = cb.dataset.topic;
+        state.selectedSubtopics.add(topicId + ':' + stId);
+      });
+      updateSelectedCount();
+      showPracticeSettings();
+    }
+  }
+
+  // Close modal on background click
+  const ptModal = document.getElementById('pt-modal');
+  if (ptModal) {
+    ptModal.addEventListener('click', (e) => {
+      if (e.target === ptModal) {
+        togglePeriodicTable();
+      }
+    });
+  }
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', (e) => {
+    if (state.currentScreen === 'practice') {
+      if (e.key === 'ArrowRight' || e.key === 'n') nextQuestion();
+      if (e.key === 'ArrowLeft' || e.key === 'p') prevQuestion();
+      if (e.key === 'f') toggleFlag();
+      if (e.key >= '1' && e.key <= '4' && !e.target.closest('input')) {
+        const q = state.questions[state.currentQuestionIndex];
+        if (q && q.type === 'mcq') {
+          selectMCQ(parseInt(e.key) - 1);
+        }
+      }
+    }
+    if (e.key === 'Escape') {
+      const ptModal = document.getElementById('pt-modal');
+      if (ptModal && ptModal.classList.contains('visible')) togglePeriodicTable();
+      const toolsPanel = document.getElementById('tools-panel');
+      if (toolsPanel && toolsPanel.classList.contains('visible')) toggleTools();
+    }
+  });
+});
+
+</script>
+</body>
+</html>

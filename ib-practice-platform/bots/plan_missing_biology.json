@@ -1,0 +1,24 @@
+[
+  {
+    "subject_key": "biology",
+    "source_subject": "Bio",
+    "source_section": "Cell Biology",
+    "source_section_path": "cell-biology",
+    "topic_code": "B1.1",
+    "lesson_title": "Introduction to Cells",
+    "lesson_file": "cell-structure/intro-cells.md",
+    "level": "SL",
+    "time_estimate": 15,
+    "tags": [
+      "cells",
+      "structure",
+      "biology"
+    ],
+    "integration": {
+      "practice": true,
+      "exemplars": true,
+      "timer": true
+    },
+    "draft_markdown": "# Introduction to Cells\\n\\nTopic: B1.1\\n\\n## Objectives\\n- Define the key concept.\\n- Solve standard IB-style problems.\\n## Guided Explanation\\nAdd curriculum-aligned explanation here.\\n## Worked Examples\\nAdd SL and HL examples here.\\n## Common Mistakes\\nAdd error patterns and fixes here.\\n## Practice Bridge\\nLink this lesson into practice filters.\\n"
+  }
+]

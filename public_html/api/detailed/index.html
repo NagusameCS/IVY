@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>IVY Stats JSON</title>
+</head>
+<body>
+<pre id="json"></pre>
+<script>
+(async () => {
+  const res = await fetch("https://ivystudy.org/api/v.txt");
+  const txt = await res.text();
+
+  const lines = txt.trim().split("\n");
+  const data = lines.map(line => {
+    const [dateStr, viewStr] = line.trim().split(",");
+    return {
+      date: dateStr,
+      views: parseInt(viewStr, 10)
+    };
+  });
+
+  const totalViews = data.reduce((sum, d) => sum + d.views, 0);
+  const numDays = data.length;
+  const avgViews = totalViews / numDays;
+
+  const highest = data.reduce((a, b) => a.views > b.views ? a : b);
+  const lowest = data.reduce((a, b) => a.views < b.views ? a : b);
+
+  const recent = (n) => {
+    const recentData = data.slice(-n);
+    const total = recentData.reduce((sum, d) => sum + d.views, 0);
+    return {
+      total,
+      average: parseFloat((total / recentData.length).toFixed(2))
+    };
+  };
+
+  const last7 = recent(7);
+  const last30 = recent(30);
+
+  const prev7Total = recent(14).total - last7.total;
+  const growth7 = prev7Total ? parseFloat((((last7.total - prev7Total) / prev7Total) * 100).toFixed(2)) : null;
+
+  const prev30Total = recent(60).total - last30.total;
+  const growth30 = prev30Total ? parseFloat((((last30.total - prev30Total) / prev30Total) * 100).toFixed(2)) : null;
+
+  const output = {
+    total_views: totalViews,
+    number_of_days: numDays,
+    average_views_per_day: parseFloat(avgViews.toFixed(2)),
+    highest_day: highest,
+    lowest_day: lowest,
+    last_7_days: last7,
+    last_30_days: last30,
+    growth_rate_7_days_percent: growth7,
+    growth_rate_30_days_percent: growth30,
+    last_updated: data[data.length - 1].date
+  };
+
+  document.getElementById("json").textContent = JSON.stringify(output, null, 2);
+})();
+</script>
+</body>
+</html>

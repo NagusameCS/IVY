@@ -1,0 +1,92 @@
+<IfModule mod_headers.c>
+    # Content Security Policy (CSP)
+    
+
+    # Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # HSTS
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Prevent MIME-type sniffing
+    Header set X-Content-Type-Options "nosniff"
+
+    # Prevent clickjacking
+    Header set X-Frame-Options "SAMEORIGIN"
+
+    # Cross-Origin Resource Policy (optional, only if you want to allow cross-origin)
+    Header set Cross-Origin-Resource-Policy "cross-origin"
+</IfModule>
+
+# Enable Server Side Includes
+Options +Includes
+AddHandler server-parsed .shtml
+DirectoryIndex index.shtml index.html
+
+# Clean URLs - Remove .html extensions
+RewriteEngine On
+
+# If request is not a file and not a directory, try .html then .shtml
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.shtml -f
+RewriteRule ^([^\.]+)$ $1.shtml [NC,L]
+
+# Redirect .html to clean URLs
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1? [NC,L,R=301]
+
+# Redirect .shtml to clean URLs  
+RewriteCond %{THE_REQUEST} /([^.]+)\.shtml [NC]
+RewriteRule ^ /%1? [NC,L,R=301]
+
+# Enable compression for components
+<FilesMatch "\.(html|css|js|shtml)$">
+    SetOutputFilter DEFLATE
+</FilesMatch>
+
+# Cache components for better performance
+<FilesMatch "^(head|styles|navigation|footer|scripts)\.html$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 hour"
+</FilesMatch>
+
+# Cache CSS and JS files
+<FilesMatch "\.(css|js)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 day"
+</FilesMatch>
+
+# Cache images longer
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+</FilesMatch>
+
+# Cache fonts
+<FilesMatch "\.(woff|woff2|eot|ttf|otf)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+</FilesMatch>
+
+# Preload critical resources
+<FilesMatch "\.(shtml|html)$">
+    Header add Link "</js/themeManager.js>; rel=preload; as=script"
+    Header add Link "<https://cdn.tailwindcss.com>; rel=preload; as=script"
+</FilesMatch>
+
+### AutoSSL-Satellite Don't Edit Below This Line ###
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	# Force HTTPS
+	RewriteCond %{HTTPS} off
+	RewriteCond %{HTTP:X-Forwarded-SSL} !on
+	RewriteRule ^(.*)$ "https://%{HTTP_HOST}%{REQUEST_URI}" [R=301,L]
+</IfModule>
+### AutoSSL-Satellite Don't Edit Above This Line ###
+
