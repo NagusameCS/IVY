@@ -2667,16 +2667,6 @@ function showPracticeSettings() {
       <h3>Configure Practice</h3>
 
       <div class="setting-group">
-        <div class="setting-label">Number of Questions</div>
-        <div class="setting-options">
-          ${[5, 10, 15, 20, 30].map(n => `
-            <button class="setting-chip ${n === state.questionCount ? 'selected' : ''}"
-                    onclick="setQuestionCount(${n}, this)">${n}</button>
-          `).join('')}
-        </div>
-      </div>
-
-      <div class="setting-group">
         <div class="setting-label">Difficulty</div>
         <div class="setting-options">
           ${[['all', 'All'], ['core', 'Core'], ['challenge', 'Challenge'], ['extension', 'Extension']].map(([val, label]) => `
@@ -2759,9 +2749,9 @@ function startPracticeFallback() {
     available = (state.loadedQuestions || EXAMPLE_QUESTIONS).filter(q => subjectKeys.has(q.subject));
   }
 
-  // Shuffle and limit
+  // Shuffle and use all available questions
   shuffleArray(available);
-  state.questions = available.slice(0, Math.min(state.questionCount, available.length));
+  state.questions = available;
   state.currentQuestionIndex = 0;
   state.answers = {};
   state.flags = new Set();
@@ -3777,15 +3767,39 @@ function formatTime(seconds) {
 }
 
 function renderMathContent(el) {
-  if (window.renderMathInElement) {
-    window.renderMathInElement(el, {
-      delimiters: [
-        { left: '$$', right: '$$', display: true },
-        { left: '\\(', right: '\\)', display: false },
-        { left: '\\[', right: '\\]', display: true }
-      ],
-      throwOnError: false
+  if (!el) return;
+  function doRender() {
+    if (!window.renderMathInElement) return false;
+    try {
+      window.renderMathInElement(el, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '\\[', right: '\\]', display: true },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '$', right: '$', display: false }
+        ],
+        throwOnError: false,
+        trust: true
+      });
+    } catch (_) {
+      // Fallback: try individual katex.render on text nodes with math delimiters
+      if (window.katex) {
+        el.querySelectorAll('.question-stem, .mark-scheme, .mcq-option, .hint-content').forEach(node => {
+          node.innerHTML = node.innerHTML.replace(/\\\((.+?)\\\)/g, (_, tex) => {
+            try { return katex.renderToString(tex, { throwOnError: false }); } catch (e) { return _; }
+          });
+        });
+      }
+    }
+    return true;
+  }
+  if (!doRender()) {
+    // KaTeX not loaded yet — wait and retry
+    const observer = new MutationObserver(() => {
+      if (window.renderMathInElement) { observer.disconnect(); doRender(); }
     });
+    observer.observe(document.head, { childList: true });
+    setTimeout(() => { observer.disconnect(); doRender(); }, 3000);
   }
 }
 

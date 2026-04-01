@@ -6,9 +6,9 @@
       "mtime_ns": 1774635302074448800
     },
     "public_html/ib-practice-platform/index.html": {
-      "hash": "6f06fdabeb781b4acbfea679697af96214477d23decc7584e36dc4d35eaec3b7",
-      "size": 170486,
-      "mtime_ns": 1775067249496462500
+      "hash": "928472fc7b56c87056782ea103d378891fe75075be55b20cc46e35c76d95e630",
+      "size": 171026,
+      "mtime_ns": 1775072758341152200
     },
     "public_html/ib-practice-platform/OPTIMIZATION.md": {
       "hash": "0cd018b661be31071a05cb146592363db1ef6762cb51f48358a5c6d27bd821a3",
@@ -198,9 +198,9 @@
       "mtime_ns": 1774621862461157500
     },
     "public_html/ib-practice-platform/js/optimization-adapter.js": {
-      "hash": "f8b151af05aa398ddabad36d281e191769fda1c8d7b1e382416337e50e37251d",
-      "size": 6283,
-      "mtime_ns": 1774635302074448800
+      "hash": "f2ffc438d0538d248499c911d140cc2f262b91268bfcf31ebb56315ce77200d6",
+      "size": 6157,
+      "mtime_ns": 1775072758316946800
     },
     "public_html/ib-practice-platform/js/performance-profiler.js": {
       "hash": "5c37bb6e45bee5ac51ac5e219d9f1f86664620b5ac010d50c16f7ab144222e84",

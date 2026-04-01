@@ -107,9 +107,9 @@ async function startPracticeOptimized() {
     filtered = available;
   }
 
-  // Shuffle and paginate (limit to state.questionCount)
+  // Shuffle and use all available questions
   shuffleArray(filtered);
-  state.questions = filtered.slice(0, Math.min(state.questionCount, filtered.length));
+  state.questions = filtered;
   state.currentQuestionIndex = 0;
   state.answers = {};
   state.flags = new Set();
@@ -168,7 +168,7 @@ function applyFiltersDebounced(subject, filters) {
   qLoader.debounceFilter(subject, filters, (filtered) => {
     // Update state and UI with filtered results
     shuffleArray(filtered);
-    state.questions = filtered.slice(0, Math.min(state.questionCount, filtered.length));
+    state.questions = filtered;
     state.currentQuestionIndex = 0;
     renderQuestion();
     updateProgress();
