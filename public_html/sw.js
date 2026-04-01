@@ -1,6 +1,6 @@
 // Service Worker for offline caching and performance
-const STATIC_CACHE = 'ivystudy-static-v1';
-const DYNAMIC_CACHE = 'ivystudy-dynamic-v1';
+const STATIC_CACHE = 'ivystudy-static-v2';
+const DYNAMIC_CACHE = 'ivystudy-dynamic-v2';
 
 const STATIC_ASSETS = [
     '/',
@@ -52,6 +52,9 @@ self.addEventListener('fetch', event => {
     
     // Skip non-GET requests
     if (request.method !== 'GET') return;
+    
+    // Don't intercept practice platform requests (has its own caching)
+    if (url.pathname.startsWith('/ib-practice-platform')) return;
     
     // API requests - network first with cache fallback
     if (url.pathname.startsWith('/api')) {

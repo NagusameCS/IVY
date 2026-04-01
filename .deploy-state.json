@@ -6,9 +6,9 @@
       "mtime_ns": 1774635302074448800
     },
     "public_html/ib-practice-platform/index.html": {
-      "hash": "158d6ec4d3f3d893952c5e4e42e569178753a6eeefb678901eb3b0cafeb464a0",
+      "hash": "6f06fdabeb781b4acbfea679697af96214477d23decc7584e36dc4d35eaec3b7",
       "size": 170486,
-      "mtime_ns": 1774634097763655800
+      "mtime_ns": 1775067249496462500
     },
     "public_html/ib-practice-platform/OPTIMIZATION.md": {
       "hash": "0cd018b661be31071a05cb146592363db1ef6762cb51f48358a5c6d27bd821a3",
@@ -519,9 +519,9 @@
       "mtime_ns": 1774635302077676800
     },
     "public_html/sw.js": {
-      "hash": "e63b30098abb084b1034ea1ae42183a0ce27a7d1a0b0157335d68e703e193ab8",
-      "size": 4215,
-      "mtime_ns": 1774635302077676800
+      "hash": "35b40484dab70b8d471beaa01f488898dca6f6f242991ec795c60dbba94813e6",
+      "size": 4358,
+      "mtime_ns": 1775067284142785800
     },
     "public_html/api/.htaccess": {
       "hash": "95cf7346f5e4ebdccdac817e11056ad4e904481cadc5625e94d541d3f7cbe320",
@@ -531,7 +531,7 @@
     "public_html/api/application.py": {
       "hash": "cbeb9170d05d194526f0f12a452a1891f8dc39c92203f73fd2430fe5bac57e72",
       "size": 4274,
-      "mtime_ns": 1774636247128146800
+      "mtime_ns": 1774636594744000900
     },
     "public_html/api/index.html": {
       "hash": "f04bb97a8530b9ee9273d23745f211a5eec9ab3e756c8305a78269bb8d4614c7",
@@ -560,9 +560,9 @@
       "mtime_ns": 1774576879916951200
     },
     "public_html/components/head.html": {
-      "hash": "7c6170832a7556e707b3a13760d389d5deb4aecc8ad0f91025a5f8fd4fe433d3",
-      "size": 1451,
-      "mtime_ns": 1774588148117359000
+      "hash": "0c50fc5ba16393944b17a6968ecabea7232581f5967377148c4f7518797119a8",
+      "size": 1275,
+      "mtime_ns": 1775067249483091600
     },
     "public_html/components/navigation.html": {
       "hash": "5e2b06ab8800482c3659cda345aadd753f26cdf473ec52ddadacc2f63ca619ac",
@@ -585,9 +585,9 @@
       "mtime_ns": 1774576880484407600
     },
     "public_html/exemplars/index.html": {
-      "hash": "9af9150d9074af42874b811a9c3d1bd65a770c34b7769d272ec87f636ac2efda",
-      "size": 45540,
-      "mtime_ns": 1774632904094954900
+      "hash": "ca7d6c0e239afae81a0b336ade8068a9c82d4e0ca1315520264d36341f7ab202",
+      "size": 45398,
+      "mtime_ns": 1775067249496462500
     },
     "public_html/exemplars/struct.json": {
       "hash": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
