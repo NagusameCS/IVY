@@ -1,0 +1,3294 @@
+[
+  {
+    "subject": "Math AA",
+    "tooltip": "Mathematics: Analysis and Approaches",
+    "basePath": "ib-practice-platform/data/lessons/math_aa",
+    "sections": [
+      {
+        "title": "Number and Algebra",
+        "path": "1",
+        "lessons": [
+          {
+            "file": "1.1.1_arithmetic__geometric_series.md",
+            "title": "Arithmetic & Geometric Series",
+            "topic": "Number and Algebra",
+            "level": "SL/HL",
+            "tags": [
+              "sequences",
+              "series",
+              "sigma-notation",
+              "convergence"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:56:23.962940",
+            "subsection": "Arithmetic & Geometric Series"
+          },
+          {
+            "file": "1.1.2_exponents__logarithms.md",
+            "title": "Exponents & Logarithms",
+            "topic": "Number and Algebra",
+            "level": "SL/HL",
+            "tags": [
+              "exponents",
+              "logarithms",
+              "laws-of-logs"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:56:46.258079",
+            "subsection": "Exponents & Logarithms"
+          },
+          {
+            "file": "1.1.3_counting__binomial_theorem.md",
+            "title": "Counting & Binomial Theorem",
+            "topic": "Number and Algebra",
+            "level": "SL/HL",
+            "tags": [
+              "permutations",
+              "combinations",
+              "binomial-expansion"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:57:08.356121",
+            "subsection": "Counting & Binomial Theorem"
+          },
+          {
+            "file": "1.1.4_proof_by_induction.md",
+            "title": "Proof by Induction",
+            "topic": "Number and Algebra",
+            "level": "HL",
+            "tags": [
+              "proof",
+              "induction",
+              "mathematical-reasoning"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:57:31.996700",
+            "subsection": "Proof by Induction"
+          },
+          {
+            "file": "1.1.5_complex_numbers_basics.md",
+            "title": "Complex Numbers Basics",
+            "topic": "Number and Algebra",
+            "level": "HL",
+            "tags": [
+              "complex-numbers",
+              "argand-diagram",
+              "modulus-argument"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:57:51.512093",
+            "subsection": "Complex Numbers Basics"
+          },
+          {
+            "file": "1.1.6_polar_form_of_complex_numbers.md",
+            "title": "Polar Form of Complex Numbers",
+            "topic": "Number and Algebra",
+            "level": "HL",
+            "tags": [
+              "polar-form",
+              "euler-form",
+              "cis"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:58:10.821290",
+            "subsection": "Polar Form of Complex Numbers"
+          },
+          {
+            "file": "1.1.7_powers__roots_de_moivre.md",
+            "title": "Powers & Roots (De Moivre)",
+            "topic": "Number and Algebra",
+            "level": "HL",
+            "tags": [
+              "de-moivre",
+              "roots-of-unity",
+              "complex-powers"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:58:40.259837",
+            "subsection": "Powers & Roots (De Moivre)"
+          },
+          {
+            "file": "1.1.8_conjugate_roots_of_polynomials.md",
+            "title": "Conjugate Roots of Polynomials",
+            "topic": "Number and Algebra",
+            "level": "HL",
+            "tags": [
+              "conjugate-roots",
+              "polynomial-equations",
+              "factor-theorem"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:58:57.999543",
+            "subsection": "Conjugate Roots of Polynomials"
+          },
+          {
+            "file": "1.1.9_systems_of_linear_equations.md",
+            "title": "Systems of Linear Equations",
+            "topic": "Number and Algebra",
+            "level": "SL/HL",
+            "tags": [
+              "systems",
+              "matrices",
+              "row-reduction",
+              "gaussian-elimination"
+            ],
+            "time_estimate": 7,
+            "timestamp": "2026-03-27T09:59:31.373791",
+            "subsection": "Systems of Linear Equations"
+          }
+        ]
+      },
+      {
+        "title": "Discrete Mathematics (HL Option)",
+        "path": "10",
+        "lessons": [
+          {
+            "file": "10.10.10_chinese_postman__tsp.md",
+            "title": "Chinese Postman & TSP",
+            "topic": "Discrete Mathematics (HL Option)",
+            "level": "HL",
+            "tags": [
+              "chinese-postman",
+              "travelling-salesman",
+              "optimization"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T10:19:03.727376",
+            "subsection": "Chinese Postman & TSP"
+          },
+          {
+            "file": "10.10.11_recurrence_relations.md",
+            "title": "Recurrence Relations",
+            "topic": "Discrete Mathematics (HL Option)",
+            "level": "HL",
+            "tags": [
+              "recurrence-relations",
+              "characteristic-equation",
+              "homogeneous",
+              "particular-solution"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:19:04.953979",
+            "subsection": "Recurrence Relations"
+          },
+          {
+            "file": "10.10.1_strong_induction__pigeonhole.md",
+            "title": "Strong Induction & Pigeonhole",
+            "topic": "Discrete Mathematics (HL Option)",
+            "level": "HL",
+            "tags": [
+              "strong-induction",
+              "pigeonhole-principle"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:17:19.683498",
+            "subsection": "Strong Induction & Pigeonhole"
+          },
+          {
+            "file": "10.10.2_divisibility_gcd_lcm__primes.md",
+            "title": "Divisibility, GCD, LCM & Primes",
+            "topic": "Discrete Mathematics (HL Option)",
+            "level": "HL",
+            "tags": [
+              "divisibility",
+              "gcd",
+              "lcm",
+              "prime-factorization",
+              "euclidean-algorithm"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:17:20.708618",
+            "subsection": "Divisibility, GCD, LCM & Primes"
+          },
+          {
+            "file": "10.10.3_linear_diophantine_equations.md",
+            "title": "Linear Diophantine Equations",
+            "topic": "Discrete Mathematics (HL Option)",
+            "level": "HL",
+            "tags": [
+              "diophantine-equations",
+              "integer-solutions"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:17:21.981688",
+            "subsection": "Linear Diophantine Equations"
+          },
+          {
+            "file": "10.10.4_modular_arithmetic__crt.md",
+            "title": "Modular Arithmetic & CRT",
+            "topic": "Discrete Mathematics (HL Option)",
+            "level": "HL",
+            "tags": [
+              "modular-arithmetic",
+              "congruences",
+              "chinese-remainder-theorem"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:17:22.191019",
+            "subsection": "Modular Arithmetic & CRT"
+          },
+          {
+            "file": "10.10.5_integer_bases.md",
+            "title": "Integer Bases",
+            "topic": "Discrete Mathematics (HL Option)",
+            "level": "HL",
+            "tags": [
+              "base-conversion",
+              "binary",
+              "hexadecimal"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:17:23.459456",
+            "subsection": "Integer Bases"
+          },
+          {
+            "file": "10.10.6_fermats_little_theorem.md",
+            "title": "Fermat's Little Theorem",
+            "topic": "Discrete Mathematics (HL Option)",
+            "level": "HL",
+            "tags": [
+              "fermat-little-theorem",
+              "euler-theorem"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:17:24.204002",
+            "subsection": "Fermat's Little Theorem"
+          },
+          {
+            "file": "10.10.7_graph_theory_basics.md",
+            "title": "Graph Theory Basics",
+            "topic": "Discrete Mathematics (HL Option)",
+            "level": "HL",
+            "tags": [
+              "graphs",
+              "vertices",
+              "edges",
+              "degree",
+              "adjacency"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:17:25.664800",
+            "subsection": "Graph Theory Basics"
+          },
+          {
+            "file": "10.10.8_walks_trails__cycles.md",
+            "title": "Walks, Trails & Cycles",
+            "topic": "Discrete Mathematics (HL Option)",
+            "level": "HL",
+            "tags": [
+              "walks",
+              "trails",
+              "paths",
+              "euler-circuits",
+              "hamiltonian"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:17:26.511909",
+            "subsection": "Walks, Trails & Cycles"
+          },
+          {
+            "file": "10.10.9_graph_algorithms_kruskal__dijkstra.md",
+            "title": "Graph Algorithms (Kruskal & Dijkstra)",
+            "topic": "Discrete Mathematics (HL Option)",
+            "level": "HL",
+            "tags": [
+              "kruskal",
+              "dijkstra",
+              "minimum-spanning-tree",
+              "shortest-path"
+            ],
+            "time_estimate": 89,
+            "timestamp": "2026-03-27T10:18:59.902158",
+            "subsection": "Graph Algorithms (Kruskal & Dijkstra)"
+          }
+        ]
+      },
+      {
+        "title": "Functions",
+        "path": "2",
+        "lessons": [
+          {
+            "file": "2.2.1_concept_of_function.md",
+            "title": "Concept of Function",
+            "topic": "Functions",
+            "level": "SL/HL",
+            "tags": [
+              "domain",
+              "range",
+              "injection",
+              "surjection",
+              "bijection"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:59:51.533796",
+            "subsection": "Concept of Function"
+          },
+          {
+            "file": "2.2.2_graph_features.md",
+            "title": "Graph Features",
+            "topic": "Functions",
+            "level": "SL/HL",
+            "tags": [
+              "asymptotes",
+              "intercepts",
+              "symmetry",
+              "graph-reading"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T10:00:18.595300",
+            "subsection": "Graph Features"
+          },
+          {
+            "file": "2.2.3_graph_transformations.md",
+            "title": "Graph Transformations",
+            "topic": "Functions",
+            "level": "SL/HL",
+            "tags": [
+              "translations",
+              "reflections",
+              "stretches",
+              "composite-transformations"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:00:37.237141",
+            "subsection": "Graph Transformations"
+          },
+          {
+            "file": "2.2.4_basic_function_families.md",
+            "title": "Basic Function Families",
+            "topic": "Functions",
+            "level": "SL/HL",
+            "tags": [
+              "linear",
+              "quadratic",
+              "exponential",
+              "logarithmic",
+              "rational"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:00:54.757123",
+            "subsection": "Basic Function Families"
+          },
+          {
+            "file": "2.2.5_polynomial_functions.md",
+            "title": "Polynomial Functions",
+            "topic": "Functions",
+            "level": "SL/HL",
+            "tags": [
+              "factor-theorem",
+              "remainder-theorem",
+              "roots",
+              "polynomial-division"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:01:18.683723",
+            "subsection": "Polynomial Functions"
+          },
+          {
+            "file": "2.2.6_solving_equations.md",
+            "title": "Solving Equations",
+            "topic": "Functions",
+            "level": "SL/HL",
+            "tags": [
+              "algebraic-equations",
+              "graphical-solutions",
+              "discriminant"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:01:40.067396",
+            "subsection": "Solving Equations"
+          },
+          {
+            "file": "2.2.7_inequalities.md",
+            "title": "Inequalities",
+            "topic": "Functions",
+            "level": "SL/HL",
+            "tags": [
+              "linear-inequalities",
+              "quadratic-inequalities",
+              "rational-inequalities"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T10:02:04.447792",
+            "subsection": "Inequalities"
+          }
+        ]
+      },
+      {
+        "title": "Geometry and Trigonometry",
+        "path": "3",
+        "lessons": [
+          {
+            "file": "3.3.1_radian_measure_arc__sector.md",
+            "title": "Radian Measure, Arc & Sector",
+            "topic": "Geometry and Trigonometry",
+            "level": "SL/HL",
+            "tags": [
+              "radians",
+              "arc-length",
+              "sector-area"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:02:18.690983",
+            "subsection": "Radian Measure, Arc & Sector"
+          },
+          {
+            "file": "3.3.2_unit_circle__basic_identities.md",
+            "title": "Unit Circle & Basic Identities",
+            "topic": "Geometry and Trigonometry",
+            "level": "SL/HL",
+            "tags": [
+              "unit-circle",
+              "trig-identities",
+              "pythagorean-identity"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:02:42.688904",
+            "subsection": "Unit Circle & Basic Identities"
+          },
+          {
+            "file": "3.3.3_compound__double_angles.md",
+            "title": "Compound & Double Angles",
+            "topic": "Geometry and Trigonometry",
+            "level": "HL",
+            "tags": [
+              "compound-angle",
+              "double-angle",
+              "half-angle"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:03:09.839504",
+            "subsection": "Compound & Double Angles"
+          },
+          {
+            "file": "3.3.4_sinusoidal_models.md",
+            "title": "Sinusoidal Models",
+            "topic": "Geometry and Trigonometry",
+            "level": "SL/HL",
+            "tags": [
+              "amplitude",
+              "period",
+              "phase-shift",
+              "sinusoidal-modeling"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:03:30.434072",
+            "subsection": "Sinusoidal Models"
+          },
+          {
+            "file": "3.3.5_inverse_trig_functions.md",
+            "title": "Inverse Trig Functions",
+            "topic": "Geometry and Trigonometry",
+            "level": "SL/HL",
+            "tags": [
+              "arcsin",
+              "arccos",
+              "arctan",
+              "restricted-domains"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:03:49.006699",
+            "subsection": "Inverse Trig Functions"
+          },
+          {
+            "file": "3.3.6_solving_trig_equations.md",
+            "title": "Solving Trig Equations",
+            "topic": "Geometry and Trigonometry",
+            "level": "SL/HL",
+            "tags": [
+              "trig-equations",
+              "general-solutions",
+              "identities"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:04:10.817017",
+            "subsection": "Solving Trig Equations"
+          },
+          {
+            "file": "3.3.7_triangle_rules__applications.md",
+            "title": "Triangle Rules & Applications",
+            "topic": "Geometry and Trigonometry",
+            "level": "SL/HL",
+            "tags": [
+              "sine-rule",
+              "cosine-rule",
+              "area-of-triangle"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:04:39.900960",
+            "subsection": "Triangle Rules & Applications"
+          }
+        ]
+      },
+      {
+        "title": "Vectors",
+        "path": "4",
+        "lessons": [
+          {
+            "file": "4.4.1_vector_basics.md",
+            "title": "Vector Basics",
+            "topic": "Vectors",
+            "level": "SL/HL",
+            "tags": [
+              "vectors",
+              "magnitude",
+              "unit-vectors",
+              "position-vectors"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:05:02.896899",
+            "subsection": "Vector Basics"
+          },
+          {
+            "file": "4.4.2_scalar_dot_product.md",
+            "title": "Scalar (Dot) Product",
+            "topic": "Vectors",
+            "level": "SL/HL",
+            "tags": [
+              "dot-product",
+              "angle-between-vectors",
+              "perpendicularity"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:05:27.420540",
+            "subsection": "Scalar (Dot) Product"
+          },
+          {
+            "file": "4.4.3_vector_equation_of_a_line.md",
+            "title": "Vector Equation of a Line",
+            "topic": "Vectors",
+            "level": "SL/HL",
+            "tags": [
+              "vector-lines",
+              "parametric-equations",
+              "direction-vectors"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T10:05:54.807556",
+            "subsection": "Vector Equation of a Line"
+          },
+          {
+            "file": "4.4.4_line_relationships.md",
+            "title": "Line Relationships",
+            "topic": "Vectors",
+            "level": "HL",
+            "tags": [
+              "parallel-lines",
+              "intersecting-lines",
+              "skew-lines",
+              "shortest-distance"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:06:16.357460",
+            "subsection": "Line Relationships"
+          },
+          {
+            "file": "4.4.5_vector_cross_product.md",
+            "title": "Vector (Cross) Product",
+            "topic": "Vectors",
+            "level": "HL",
+            "tags": [
+              "cross-product",
+              "area-parallelogram",
+              "normal-vectors"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:06:38.703448",
+            "subsection": "Vector (Cross) Product"
+          },
+          {
+            "file": "4.4.6_planes_in_3d.md",
+            "title": "Planes in 3D",
+            "topic": "Vectors",
+            "level": "HL",
+            "tags": [
+              "equation-of-plane",
+              "normal-form",
+              "cartesian-form"
+            ],
+            "time_estimate": 7,
+            "timestamp": "2026-03-27T10:07:10.606009",
+            "subsection": "Planes in 3D"
+          },
+          {
+            "file": "4.4.7_intersections__angles.md",
+            "title": "Intersections & Angles",
+            "topic": "Vectors",
+            "level": "HL",
+            "tags": [
+              "line-plane-intersection",
+              "plane-plane-intersection",
+              "dihedral-angles"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:07:33.203947",
+            "subsection": "Intersections & Angles"
+          }
+        ]
+      },
+      {
+        "title": "Statistics and Probability",
+        "path": "5",
+        "lessons": [
+          {
+            "file": "5.5.1_data_concepts__descriptive_stats.md",
+            "title": "Data Concepts & Descriptive Stats",
+            "topic": "Statistics and Probability",
+            "level": "SL/HL",
+            "tags": [
+              "mean",
+              "median",
+              "mode",
+              "standard-deviation",
+              "variance",
+              "quartiles"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T10:08:00.331425",
+            "subsection": "Data Concepts & Descriptive Stats"
+          },
+          {
+            "file": "5.5.2_basic_probability.md",
+            "title": "Basic Probability",
+            "topic": "Statistics and Probability",
+            "level": "SL/HL",
+            "tags": [
+              "sample-space",
+              "complementary-events",
+              "venn-diagrams"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T16:45:00.000000Z",
+            "subsection": "Basic Probability"
+          },
+          {
+            "file": "5.5.3_combined_events.md",
+            "title": "Combined Events",
+            "topic": "Statistics and Probability",
+            "level": "SL/HL",
+            "tags": [
+              "addition-rule",
+              "multiplication-rule",
+              "mutually-exclusive",
+              "independent"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:27.523281",
+            "subsection": "Combined Events"
+          },
+          {
+            "file": "5.5.4_conditional_probability__bayes.md",
+            "title": "Conditional Probability & Bayes",
+            "topic": "Statistics and Probability",
+            "level": "SL/HL",
+            "tags": [
+              "conditional-probability",
+              "bayes-theorem",
+              "tree-diagrams"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:29.437357",
+            "subsection": "Conditional Probability & Bayes"
+          },
+          {
+            "file": "5.5.5_random_variables__distributions.md",
+            "title": "Random Variables & Distributions",
+            "topic": "Statistics and Probability",
+            "level": "SL/HL",
+            "tags": [
+              "discrete-rv",
+              "expected-value",
+              "variance-of-rv"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:30.665515",
+            "subsection": "Random Variables & Distributions"
+          },
+          {
+            "file": "5.5.6_binomial__poisson.md",
+            "title": "Binomial & Poisson",
+            "topic": "Statistics and Probability",
+            "level": "SL/HL",
+            "tags": [
+              "binomial-distribution",
+              "poisson-distribution"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:31.414021",
+            "subsection": "Binomial & Poisson"
+          },
+          {
+            "file": "5.5.7_normal_distribution.md",
+            "title": "Normal Distribution",
+            "topic": "Statistics and Probability",
+            "level": "SL/HL",
+            "tags": [
+              "normal-distribution",
+              "z-scores",
+              "inverse-normal"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:32.103371",
+            "subsection": "Normal Distribution"
+          }
+        ]
+      },
+      {
+        "title": "Calculus",
+        "path": "6",
+        "lessons": [
+          {
+            "file": "6.6.1_limits__derivative_basics.md",
+            "title": "Limits & Derivative Basics",
+            "topic": "Calculus",
+            "level": "SL/HL",
+            "tags": [
+              "limits",
+              "first-principles",
+              "derivative-definition"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:32.398103",
+            "subsection": "Limits & Derivative Basics"
+          },
+          {
+            "file": "6.6.2_differentiation_rules.md",
+            "title": "Differentiation Rules",
+            "topic": "Calculus",
+            "level": "SL/HL",
+            "tags": [
+              "power-rule",
+              "chain-rule",
+              "product-rule",
+              "quotient-rule"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:32.683499",
+            "subsection": "Differentiation Rules"
+          },
+          {
+            "file": "6.6.3_extrema__graph_behaviour.md",
+            "title": "Extrema & Graph Behaviour",
+            "topic": "Calculus",
+            "level": "SL/HL",
+            "tags": [
+              "stationary-points",
+              "inflection-points",
+              "optimization"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:33.038022",
+            "subsection": "Extrema & Graph Behaviour"
+          },
+          {
+            "file": "6.6.4_indefinite_integration_basics.md",
+            "title": "Indefinite Integration Basics",
+            "topic": "Calculus",
+            "level": "SL/HL",
+            "tags": [
+              "antiderivatives",
+              "integration-rules",
+              "constant-of-integration"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:34.441611",
+            "subsection": "Indefinite Integration Basics"
+          },
+          {
+            "file": "6.6.5_definite_integrals_area__volume.md",
+            "title": "Definite Integrals, Area & Volume",
+            "topic": "Calculus",
+            "level": "SL/HL",
+            "tags": [
+              "definite-integrals",
+              "area-under-curve",
+              "volume-of-revolution"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:35.354285",
+            "subsection": "Definite Integrals, Area & Volume"
+          },
+          {
+            "file": "6.6.6_kinematics__total_distance.md",
+            "title": "Kinematics & Total Distance",
+            "topic": "Calculus",
+            "level": "SL/HL",
+            "tags": [
+              "displacement",
+              "velocity",
+              "acceleration",
+              "total-distance"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:36.321335",
+            "subsection": "Kinematics & Total Distance"
+          },
+          {
+            "file": "6.6.7_integration_techniques.md",
+            "title": "Integration Techniques",
+            "topic": "Calculus",
+            "level": "HL",
+            "tags": [
+              "integration-by-parts",
+              "substitution",
+              "partial-fractions"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:37.938949",
+            "subsection": "Integration Techniques"
+          }
+        ]
+      },
+      {
+        "title": "Statistics & Probability (HL Extension)",
+        "path": "7",
+        "lessons": [
+          {
+            "file": "7.7.1_cdfs_geometric_neg_binomial_pgfs.md",
+            "title": "CDFs, Geometric, Neg Binomial, PGFs",
+            "topic": "Statistics & Probability (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "cdf",
+              "geometric-distribution",
+              "negative-binomial",
+              "pgf"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:40.447753",
+            "subsection": "CDFs, Geometric, Neg Binomial, PGFs"
+          },
+          {
+            "file": "7.7.2_linear_combinations_of_rvs.md",
+            "title": "Linear Combinations of RVs",
+            "topic": "Statistics & Probability (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "linear-combinations",
+              "expectation-algebra",
+              "variance-algebra"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:41.156594",
+            "subsection": "Linear Combinations of RVs"
+          },
+          {
+            "file": "7.7.3_unbiased_estimators.md",
+            "title": "Unbiased Estimators",
+            "topic": "Statistics & Probability (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "unbiased-estimators",
+              "sampling-distributions"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:42.377626",
+            "subsection": "Unbiased Estimators"
+          },
+          {
+            "file": "7.7.4_normal_combinations__clt.md",
+            "title": "Normal Combinations & CLT",
+            "topic": "Statistics & Probability (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "central-limit-theorem",
+              "normal-combinations"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:43.391174",
+            "subsection": "Normal Combinations & CLT"
+          },
+          {
+            "file": "7.7.5_confidence_intervals_mean.md",
+            "title": "Confidence Intervals (Mean)",
+            "topic": "Statistics & Probability (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "confidence-intervals",
+              "margin-of-error"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:45.519077",
+            "subsection": "Confidence Intervals (Mean)"
+          },
+          {
+            "file": "7.7.6_hypothesis_testing_mean.md",
+            "title": "Hypothesis Testing (Mean)",
+            "topic": "Statistics & Probability (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "hypothesis-testing",
+              "p-values",
+              "significance-levels"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:45.874504",
+            "subsection": "Hypothesis Testing (Mean)"
+          },
+          {
+            "file": "7.7.7_bivariate_correlation__regression.md",
+            "title": "Bivariate Correlation & Regression",
+            "topic": "Statistics & Probability (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "correlation",
+              "regression",
+              "least-squares"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:08:47.060562",
+            "subsection": "Bivariate Correlation & Regression"
+          }
+        ]
+      },
+      {
+        "title": "Sets, Relations & Groups (HL Option)",
+        "path": "8",
+        "lessons": [
+          {
+            "file": "8.8.10_permutations__cycles.md",
+            "title": "Permutations & Cycles",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "permutations",
+              "cycle-notation",
+              "transpositions"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:13:16.210126",
+            "subsection": "Permutations & Cycles"
+          },
+          {
+            "file": "8.8.11_subgroups_cosets__lagrange.md",
+            "title": "Subgroups, Cosets & Lagrange",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "subgroups",
+              "cosets",
+              "lagrange-theorem"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:13:17.798840",
+            "subsection": "Subgroups, Cosets & Lagrange"
+          },
+          {
+            "file": "8.8.12_homomorphisms__isomorphisms.md",
+            "title": "Homomorphisms & Isomorphisms",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "homomorphism",
+              "isomorphism",
+              "kernel"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:13:18.942676",
+            "subsection": "Homomorphisms & Isomorphisms"
+          },
+          {
+            "file": "8.8.1_set_operations__laws.md",
+            "title": "Set Operations & Laws",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "sets",
+              "union",
+              "intersection",
+              "complement",
+              "de-morgan"
+            ],
+            "time_estimate": 25,
+            "timestamp": "2026-03-27T10:09:09.253304",
+            "subsection": "Set Operations & Laws"
+          },
+          {
+            "file": "8.8.2_relations__equivalence.md",
+            "title": "Relations & Equivalence",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "relations",
+              "equivalence-relations",
+              "equivalence-classes"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:09:09.564424",
+            "subsection": "Relations & Equivalence"
+          },
+          {
+            "file": "8.8.3_injections_surjections_bijections.md",
+            "title": "Injections, Surjections, Bijections",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "injective",
+              "surjective",
+              "bijective",
+              "cardinality"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:09:11.761475",
+            "subsection": "Injections, Surjections, Bijections"
+          },
+          {
+            "file": "8.8.4_binary_operations.md",
+            "title": "Binary Operations",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "binary-operations",
+              "closure",
+              "operation-tables"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:09:13.540154",
+            "subsection": "Binary Operations"
+          },
+          {
+            "file": "8.8.5_operation_properties.md",
+            "title": "Operation Properties",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "associativity",
+              "commutativity",
+              "distributivity"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:09:13.777304",
+            "subsection": "Operation Properties"
+          },
+          {
+            "file": "8.8.6_identity__inverses.md",
+            "title": "Identity & Inverses",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "identity-element",
+              "inverse-element"
+            ],
+            "time_estimate": 269,
+            "timestamp": "2026-03-27T10:13:12.519426",
+            "subsection": "Identity & Inverses"
+          },
+          {
+            "file": "8.8.7_definition_of_a_group.md",
+            "title": "Definition of a Group",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "group-axioms",
+              "group-definition"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:13:13.173212",
+            "subsection": "Definition of a Group"
+          },
+          {
+            "file": "8.8.8_group_examples.md",
+            "title": "Group Examples",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "cyclic-groups",
+              "dihedral-groups",
+              "symmetric-groups"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:13:14.234573",
+            "subsection": "Group Examples"
+          },
+          {
+            "file": "8.8.9_cyclic_groups__generators.md",
+            "title": "Cyclic Groups & Generators",
+            "topic": "Sets, Relations & Groups (HL Option)",
+            "level": "HL",
+            "tags": [
+              "cyclic-groups",
+              "generators",
+              "order-of-element"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:13:16.012171",
+            "subsection": "Cyclic Groups & Generators"
+          }
+        ]
+      },
+      {
+        "title": "Calculus (HL Extension)",
+        "path": "9",
+        "lessons": [
+          {
+            "file": "9.9.1_infinite_sequences.md",
+            "title": "Infinite Sequences",
+            "topic": "Calculus (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "sequences",
+              "convergence",
+              "squeeze-theorem"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:13:21.323675",
+            "subsection": "Infinite Sequences"
+          },
+          {
+            "file": "9.9.2_infinite_series__tests.md",
+            "title": "Infinite Series & Tests",
+            "topic": "Calculus (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "convergence-tests",
+              "ratio-test",
+              "comparison-test",
+              "integral-test"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:13:21.840551",
+            "subsection": "Infinite Series & Tests"
+          },
+          {
+            "file": "9.9.3_continuity__differentiability.md",
+            "title": "Continuity & Differentiability",
+            "topic": "Calculus (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "continuity",
+              "differentiability",
+              "IVT",
+              "MVT"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:13:23.218517",
+            "subsection": "Continuity & Differentiability"
+          },
+          {
+            "file": "9.9.4_riemann_sums__improper_integrals.md",
+            "title": "Riemann Sums & Improper Integrals",
+            "topic": "Calculus (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "riemann-sums",
+              "improper-integrals",
+              "convergence"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:13:23.873969",
+            "subsection": "Riemann Sums & Improper Integrals"
+          },
+          {
+            "file": "9.9.5_first-order_differential_equations.md",
+            "title": "First-Order Differential Equations",
+            "topic": "Calculus (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "separable-DE",
+              "linear-DE",
+              "integrating-factor",
+              "euler-method"
+            ],
+            "time_estimate": 283,
+            "timestamp": "2026-03-27T10:17:15.900002",
+            "subsection": "First-Order Differential Equations"
+          },
+          {
+            "file": "9.9.6_taylor__maclaurin_series.md",
+            "title": "Taylor & Maclaurin Series",
+            "topic": "Calculus (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "taylor-series",
+              "maclaurin-series",
+              "radius-of-convergence"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:17:16.455051",
+            "subsection": "Taylor & Maclaurin Series"
+          },
+          {
+            "file": "9.9.7_limit_evaluation_lhopital__series.md",
+            "title": "Limit Evaluation (l'Hopital & Series)",
+            "topic": "Calculus (HL Extension)",
+            "level": "HL",
+            "tags": [
+              "lhopital",
+              "indeterminate-forms"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:17:18.051110",
+            "subsection": "Limit Evaluation (l'Hopital & Series)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "Physics",
+    "tooltip": "IB Physics",
+    "basePath": "ib-practice-platform/data/lessons/physics",
+    "sections": [
+      {
+        "title": "Space, Time and Motion",
+        "path": "A",
+        "lessons": [
+          {
+            "file": "A.A.1_kinematics.md",
+            "title": "Kinematics",
+            "topic": "Space, Time and Motion",
+            "level": "SL/HL",
+            "tags": [
+              "displacement",
+              "velocity",
+              "acceleration",
+              "suvat",
+              "projectile-motion"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:19:05.567322",
+            "subsection": "Kinematics"
+          },
+          {
+            "file": "A.A.2_forces_and_momentum.md",
+            "title": "Forces and Momentum",
+            "topic": "Space, Time and Motion",
+            "level": "SL/HL",
+            "tags": [
+              "newtons-laws",
+              "free-body-diagrams",
+              "momentum",
+              "impulse"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:19:06.508577",
+            "subsection": "Forces and Momentum"
+          },
+          {
+            "file": "A.A.3_work_energy_and_power.md",
+            "title": "Work, Energy and Power",
+            "topic": "Space, Time and Motion",
+            "level": "SL/HL",
+            "tags": [
+              "work",
+              "kinetic-energy",
+              "potential-energy",
+              "power",
+              "efficiency"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:19:07.196330",
+            "subsection": "Work, Energy and Power"
+          },
+          {
+            "file": "A.A.4_rigid_body_mechanics.md",
+            "title": "Rigid Body Mechanics",
+            "topic": "Space, Time and Motion",
+            "level": "HL",
+            "tags": [
+              "torque",
+              "rotational-motion",
+              "moment-of-inertia",
+              "angular-momentum"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:19:08.207380",
+            "subsection": "Rigid Body Mechanics"
+          },
+          {
+            "file": "A.A.5_galilean_and_special_relativity.md",
+            "title": "Galilean and Special Relativity",
+            "topic": "Space, Time and Motion",
+            "level": "HL",
+            "tags": [
+              "reference-frames",
+              "time-dilation",
+              "length-contraction",
+              "lorentz"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:19:09.687663",
+            "subsection": "Galilean and Special Relativity"
+          }
+        ]
+      },
+      {
+        "title": "The Particulate Nature of Matter",
+        "path": "B",
+        "lessons": [
+          {
+            "file": "B.B.1_thermal_energy_transfers.md",
+            "title": "Thermal Energy Transfers",
+            "topic": "The Particulate Nature of Matter",
+            "level": "SL/HL",
+            "tags": [
+              "specific-heat",
+              "latent-heat",
+              "conduction",
+              "convection",
+              "radiation"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:19:10.415227",
+            "subsection": "Thermal Energy Transfers"
+          },
+          {
+            "file": "B.B.2_greenhouse_effect.md",
+            "title": "Greenhouse Effect",
+            "topic": "The Particulate Nature of Matter",
+            "level": "SL/HL",
+            "tags": [
+              "albedo",
+              "emissivity",
+              "greenhouse-gases",
+              "energy-balance"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:19:10.807614",
+            "subsection": "Greenhouse Effect"
+          },
+          {
+            "file": "B.B.3_gas_laws.md",
+            "title": "Gas Laws",
+            "topic": "The Particulate Nature of Matter",
+            "level": "SL/HL",
+            "tags": [
+              "ideal-gas-law",
+              "kinetic-theory",
+              "pressure",
+              "temperature"
+            ],
+            "time_estimate": 255,
+            "timestamp": "2026-03-27T10:23:01.643817",
+            "subsection": "Gas Laws"
+          },
+          {
+            "file": "B.B.4_thermodynamics.md",
+            "title": "Thermodynamics",
+            "topic": "The Particulate Nature of Matter",
+            "level": "HL",
+            "tags": [
+              "first-law",
+              "entropy",
+              "second-law",
+              "heat-engines",
+              "carnot"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:23:01.924679",
+            "subsection": "Thermodynamics"
+          },
+          {
+            "file": "B.B.5_current_and_circuits.md",
+            "title": "Current and Circuits",
+            "topic": "The Particulate Nature of Matter",
+            "level": "SL/HL",
+            "tags": [
+              "current",
+              "voltage",
+              "resistance",
+              "ohms-law",
+              "kirchhoff",
+              "circuits"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:23:03.384768",
+            "subsection": "Current and Circuits"
+          }
+        ]
+      },
+      {
+        "title": "Wave Behaviour",
+        "path": "C",
+        "lessons": [
+          {
+            "file": "C.C.1_simple_harmonic_motion.md",
+            "title": "Simple Harmonic Motion",
+            "topic": "Wave Behaviour",
+            "level": "SL/HL",
+            "tags": [
+              "shm",
+              "pendulum",
+              "spring",
+              "oscillations"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:23:05.067599",
+            "subsection": "Simple Harmonic Motion"
+          },
+          {
+            "file": "C.C.2_wave_model.md",
+            "title": "Wave Model",
+            "topic": "Wave Behaviour",
+            "level": "SL/HL",
+            "tags": [
+              "transverse",
+              "longitudinal",
+              "wavelength",
+              "frequency",
+              "wave-speed"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:23:06.378514",
+            "subsection": "Wave Model"
+          },
+          {
+            "file": "C.C.3_wave_phenomena.md",
+            "title": "Wave Phenomena",
+            "topic": "Wave Behaviour",
+            "level": "SL/HL",
+            "tags": [
+              "reflection",
+              "refraction",
+              "diffraction",
+              "interference",
+              "standing-waves"
+            ],
+            "time_estimate": 320,
+            "timestamp": "2026-03-27T10:26:58.141892",
+            "subsection": "Wave Phenomena"
+          },
+          {
+            "file": "C.C.4_standing_waves_and_resonance.md",
+            "title": "Standing Waves and Resonance",
+            "topic": "Wave Behaviour",
+            "level": "HL",
+            "tags": [
+              "standing-waves",
+              "harmonics",
+              "resonance"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:26:58.426137",
+            "subsection": "Standing Waves and Resonance"
+          },
+          {
+            "file": "C.C.5_doppler_effect.md",
+            "title": "Doppler Effect",
+            "topic": "Wave Behaviour",
+            "level": "HL",
+            "tags": [
+              "doppler",
+              "moving-source",
+              "moving-observer"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:26:58.985298",
+            "subsection": "Doppler Effect"
+          }
+        ]
+      },
+      {
+        "title": "Fields",
+        "path": "D",
+        "lessons": [
+          {
+            "file": "D.D.1_gravitational_fields.md",
+            "title": "Gravitational Fields",
+            "topic": "Fields",
+            "level": "SL/HL",
+            "tags": [
+              "gravitational-field",
+              "newtons-law-gravity",
+              "orbital-motion"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:26:59.947728",
+            "subsection": "Gravitational Fields"
+          },
+          {
+            "file": "D.D.2_electric_and_magnetic_fields.md",
+            "title": "Electric and Magnetic Fields",
+            "topic": "Fields",
+            "level": "SL/HL",
+            "tags": [
+              "electric-field",
+              "coulombs-law",
+              "magnetic-field",
+              "lorentz-force"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:27:00.826849",
+            "subsection": "Electric and Magnetic Fields"
+          },
+          {
+            "file": "D.D.3_motion_in_em_fields.md",
+            "title": "Motion in EM Fields",
+            "topic": "Fields",
+            "level": "HL",
+            "tags": [
+              "charged-particles",
+              "mass-spectrometer",
+              "cyclotron"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:27:04.001424",
+            "subsection": "Motion in EM Fields"
+          },
+          {
+            "file": "D.D.4_induction.md",
+            "title": "Induction",
+            "topic": "Fields",
+            "level": "HL",
+            "tags": [
+              "faraday",
+              "lenz",
+              "emf",
+              "flux",
+              "generators"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:27:04.982469",
+            "subsection": "Induction"
+          }
+        ]
+      },
+      {
+        "title": "Nuclear and Quantum Physics",
+        "path": "E",
+        "lessons": [
+          {
+            "file": "E.E.1_structure_of_the_atom.md",
+            "title": "Structure of the Atom",
+            "topic": "Nuclear and Quantum Physics",
+            "level": "SL/HL",
+            "tags": [
+              "atomic-models",
+              "emission-spectra",
+              "energy-levels"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:27:06.397275",
+            "subsection": "Structure of the Atom"
+          },
+          {
+            "file": "E.E.2_quantum_physics.md",
+            "title": "Quantum Physics",
+            "topic": "Nuclear and Quantum Physics",
+            "level": "SL/HL",
+            "tags": [
+              "photoelectric",
+              "wave-particle-duality",
+              "de-broglie"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:27:07.434248",
+            "subsection": "Quantum Physics"
+          },
+          {
+            "file": "E.E.3_radioactive_decay.md",
+            "title": "Radioactive Decay",
+            "topic": "Nuclear and Quantum Physics",
+            "level": "SL/HL",
+            "tags": [
+              "alpha",
+              "beta",
+              "gamma",
+              "half-life",
+              "decay-equations"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:27:09.045003",
+            "subsection": "Radioactive Decay"
+          },
+          {
+            "file": "E.E.4_fission.md",
+            "title": "Fission",
+            "topic": "Nuclear and Quantum Physics",
+            "level": "SL/HL",
+            "tags": [
+              "fission",
+              "chain-reaction",
+              "nuclear-reactor",
+              "mass-defect"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:27:10.541881",
+            "subsection": "Fission"
+          },
+          {
+            "file": "E.E.5_fusion_and_stars.md",
+            "title": "Fusion and Stars",
+            "topic": "Nuclear and Quantum Physics",
+            "level": "HL",
+            "tags": [
+              "fusion",
+              "stellar-nucleosynthesis",
+              "HR-diagram"
+            ],
+            "time_estimate": 45,
+            "timestamp": "2026-03-27T10:27:55.387890",
+            "subsection": "Fusion and Stars"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "tooltip": "IB Chemistry",
+    "basePath": "ib-practice-platform/data/lessons/chemistry",
+    "sections": [
+      {
+        "title": "Reactivity 1: What Drives Chemical Reactions?",
+        "path": "R1",
+        "lessons": [
+          {
+            "file": "R1.R1.1_measuring_enthalpy_changes.md",
+            "title": "Measuring Enthalpy Changes",
+            "topic": "Reactivity 1: What Drives Chemical Reactions?",
+            "level": "SL/HL",
+            "tags": [
+              "enthalpy",
+              "calorimetry",
+              "hess-law",
+              "bond-enthalpy"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:39:39.284297",
+            "subsection": "Measuring Enthalpy Changes"
+          },
+          {
+            "file": "R1.R1.2_energy_cycles_in_reactions.md",
+            "title": "Energy Cycles in Reactions",
+            "topic": "Reactivity 1: What Drives Chemical Reactions?",
+            "level": "HL",
+            "tags": [
+              "born-haber",
+              "lattice-enthalpy",
+              "enthalpy-of-solution"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:39:57.294695",
+            "subsection": "Energy Cycles in Reactions"
+          },
+          {
+            "file": "R1.R1.3_energy_from_fuels.md",
+            "title": "Energy from Fuels",
+            "topic": "Reactivity 1: What Drives Chemical Reactions?",
+            "level": "SL/HL",
+            "tags": [
+              "combustion",
+              "enthalpy-of-combustion",
+              "fuel-cells"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:40:17.100452",
+            "subsection": "Energy from Fuels"
+          },
+          {
+            "file": "R1.R1.4_entropy_and_spontaneity.md",
+            "title": "Entropy and Spontaneity",
+            "topic": "Reactivity 1: What Drives Chemical Reactions?",
+            "level": "SL/HL",
+            "tags": [
+              "entropy",
+              "gibbs-free-energy",
+              "spontaneity"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:40:41.192988",
+            "subsection": "Entropy and Spontaneity"
+          }
+        ]
+      },
+      {
+        "title": "Reactivity 2: How Much, How Fast, and How Far?",
+        "path": "R2",
+        "lessons": [
+          {
+            "file": "R2.R2.1_how_much_the_amount_of_chemical_change.md",
+            "title": "How Much? The Amount of Chemical Change",
+            "topic": "Reactivity 2: How Much, How Fast, and How Far?",
+            "level": "SL/HL",
+            "tags": [
+              "stoichiometry",
+              "limiting-reagent",
+              "percentage-yield",
+              "atom-economy"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:41:05.547897",
+            "subsection": "How Much? The Amount of Chemical Change"
+          },
+          {
+            "file": "R2.R2.2_how_fast_the_rate_of_chemical_change.md",
+            "title": "How Fast? The Rate of Chemical Change",
+            "topic": "Reactivity 2: How Much, How Fast, and How Far?",
+            "level": "SL/HL",
+            "tags": [
+              "rate-of-reaction",
+              "collision-theory",
+              "activation-energy",
+              "catalysts"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:41:25.505168",
+            "subsection": "How Fast? The Rate of Chemical Change"
+          },
+          {
+            "file": "R2.R2.3_how_far_the_extent_of_chemical_change.md",
+            "title": "How Far? The Extent of Chemical Change",
+            "topic": "Reactivity 2: How Much, How Fast, and How Far?",
+            "level": "SL/HL",
+            "tags": [
+              "equilibrium",
+              "le-chatelier",
+              "equilibrium-constant",
+              "Kc",
+              "Kp"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:41:53.653941",
+            "subsection": "How Far? The Extent of Chemical Change"
+          },
+          {
+            "file": "R2.R2.4_rate_expressions_and_mechanisms.md",
+            "title": "Rate Expressions and Mechanisms",
+            "topic": "Reactivity 2: How Much, How Fast, and How Far?",
+            "level": "HL",
+            "tags": [
+              "rate-expression",
+              "order-of-reaction",
+              "rate-constant",
+              "mechanisms"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:42:17.035937",
+            "subsection": "Rate Expressions and Mechanisms"
+          }
+        ]
+      },
+      {
+        "title": "Reactivity 3: What Are the Mechanisms of Chemical Change?",
+        "path": "R3",
+        "lessons": [
+          {
+            "file": "R3.R3.1_proton_transfer_reactions.md",
+            "title": "Proton Transfer Reactions",
+            "topic": "Reactivity 3: What Are the Mechanisms of Chemical Change?",
+            "level": "SL/HL",
+            "tags": [
+              "acids",
+              "bases",
+              "pH",
+              "Ka",
+              "buffers",
+              "titrations"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:42:36.984651",
+            "subsection": "Proton Transfer Reactions"
+          },
+          {
+            "file": "R3.R3.2_electron_transfer_reactions.md",
+            "title": "Electron Transfer Reactions",
+            "topic": "Reactivity 3: What Are the Mechanisms of Chemical Change?",
+            "level": "SL/HL",
+            "tags": [
+              "oxidation",
+              "reduction",
+              "redox",
+              "electrochemistry",
+              "electrolysis"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:43:02.645093",
+            "subsection": "Electron Transfer Reactions"
+          },
+          {
+            "file": "R3.R3.3_electron_sharing_reactions.md",
+            "title": "Electron Sharing Reactions",
+            "topic": "Reactivity 3: What Are the Mechanisms of Chemical Change?",
+            "level": "SL/HL",
+            "tags": [
+              "nucleophilic-substitution",
+              "electrophilic-addition",
+              "free-radical"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:43:20.935870",
+            "subsection": "Electron Sharing Reactions"
+          },
+          {
+            "file": "R3.R3.4_electron_pair_sharing_reactions.md",
+            "title": "Electron Pair Sharing Reactions",
+            "topic": "Reactivity 3: What Are the Mechanisms of Chemical Change?",
+            "level": "HL",
+            "tags": [
+              "SN1",
+              "SN2",
+              "elimination",
+              "addition-polymers",
+              "condensation-polymers"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:43:44.421775",
+            "subsection": "Electron Pair Sharing Reactions"
+          }
+        ]
+      },
+      {
+        "title": "Structure 1: Models of the Particulate Nature of Matter",
+        "path": "S1",
+        "lessons": [
+          {
+            "file": "S1.S1.1_introduction_to_the_particulate_nature_of_matter.md",
+            "title": "Introduction to the Particulate Nature of Matter",
+            "topic": "Structure 1: Models of the Particulate Nature of Matter",
+            "level": "SL/HL",
+            "tags": [
+              "atoms",
+              "elements",
+              "compounds",
+              "mixtures"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:35:27.774091",
+            "subsection": "Introduction to the Particulate Nature of Matter"
+          },
+          {
+            "file": "S1.S1.2_the_nuclear_atom.md",
+            "title": "The Nuclear Atom",
+            "topic": "Structure 1: Models of the Particulate Nature of Matter",
+            "level": "SL/HL",
+            "tags": [
+              "protons",
+              "neutrons",
+              "electrons",
+              "isotopes",
+              "mass-spectrometry"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:35:45.965250",
+            "subsection": "The Nuclear Atom"
+          },
+          {
+            "file": "S1.S1.3_electron_configurations.md",
+            "title": "Electron Configurations",
+            "topic": "Structure 1: Models of the Particulate Nature of Matter",
+            "level": "SL/HL",
+            "tags": [
+              "electron-config",
+              "orbitals",
+              "aufbau",
+              "hund",
+              "pauli"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:36:08.707356",
+            "subsection": "Electron Configurations"
+          },
+          {
+            "file": "S1.S1.4_counting_particles_by_mass.md",
+            "title": "Counting Particles by Mass",
+            "topic": "Structure 1: Models of the Particulate Nature of Matter",
+            "level": "SL/HL",
+            "tags": [
+              "moles",
+              "molar-mass",
+              "avogadro",
+              "empirical-formula"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:36:28.283289",
+            "subsection": "Counting Particles by Mass"
+          },
+          {
+            "file": "S1.S1.5_ideal_gases.md",
+            "title": "Ideal Gases",
+            "topic": "Structure 1: Models of the Particulate Nature of Matter",
+            "level": "SL/HL",
+            "tags": [
+              "ideal-gas-law",
+              "molar-volume",
+              "gas-calculations"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:36:52.126394",
+            "subsection": "Ideal Gases"
+          }
+        ]
+      },
+      {
+        "title": "Structure 2: Models of Bonding and Structure",
+        "path": "S2",
+        "lessons": [
+          {
+            "file": "S2.S2.1_the_ionic_model.md",
+            "title": "The Ionic Model",
+            "topic": "Structure 2: Models of Bonding and Structure",
+            "level": "SL/HL",
+            "tags": [
+              "ionic-bonding",
+              "lattice-structure",
+              "properties-of-ionic"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:37:14.489883",
+            "subsection": "The Ionic Model"
+          },
+          {
+            "file": "S2.S2.2_the_covalent_model.md",
+            "title": "The Covalent Model",
+            "topic": "Structure 2: Models of Bonding and Structure",
+            "level": "SL/HL",
+            "tags": [
+              "covalent-bonding",
+              "lewis-structures",
+              "VSEPR",
+              "polarity"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:37:35.211766",
+            "subsection": "The Covalent Model"
+          },
+          {
+            "file": "S2.S2.3_the_metallic_model.md",
+            "title": "The Metallic Model",
+            "topic": "Structure 2: Models of Bonding and Structure",
+            "level": "SL/HL",
+            "tags": [
+              "metallic-bonding",
+              "delocalized-electrons",
+              "alloys"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:37:53.952436",
+            "subsection": "The Metallic Model"
+          },
+          {
+            "file": "S2.S2.4_from_molecules_to_materials.md",
+            "title": "From Molecules to Materials",
+            "topic": "Structure 2: Models of Bonding and Structure",
+            "level": "SL/HL",
+            "tags": [
+              "intermolecular-forces",
+              "hydrogen-bonding",
+              "van-der-waals"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:38:17.740769",
+            "subsection": "From Molecules to Materials"
+          }
+        ]
+      },
+      {
+        "title": "Structure 3: Classification of Matter",
+        "path": "S3",
+        "lessons": [
+          {
+            "file": "S3.S3.1_the_periodic_table.md",
+            "title": "The Periodic Table",
+            "topic": "Structure 3: Classification of Matter",
+            "level": "SL/HL",
+            "tags": [
+              "periodic-trends",
+              "groups",
+              "periods",
+              "electronegativity",
+              "ionization-energy"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:38:57.881535",
+            "subsection": "The Periodic Table"
+          },
+          {
+            "file": "S3.S3.2_functional_groups__nomenclature.md",
+            "title": "Functional Groups & Nomenclature",
+            "topic": "Structure 3: Classification of Matter",
+            "level": "SL/HL",
+            "tags": [
+              "organic-nomenclature",
+              "functional-groups",
+              "IUPAC",
+              "isomers"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:39:18.651354",
+            "subsection": "Functional Groups & Nomenclature"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "Biology",
+    "tooltip": "IB Biology",
+    "basePath": "ib-practice-platform/data/lessons/biology",
+    "sections": [
+      {
+        "title": "Unity and Diversity",
+        "path": "A",
+        "lessons": [
+          {
+            "file": "A.A.1_water.md",
+            "title": "Water",
+            "topic": "Unity and Diversity",
+            "level": "SL/HL",
+            "tags": [
+              "hydrogen-bonding",
+              "polarity",
+              "solvent-properties",
+              "thermal-properties"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:34:05.497023",
+            "subsection": "Water"
+          },
+          {
+            "file": "A.A.2_nucleic_acids.md",
+            "title": "Nucleic Acids",
+            "topic": "Unity and Diversity",
+            "level": "SL/HL",
+            "tags": [
+              "DNA",
+              "RNA",
+              "nucleotides",
+              "base-pairing",
+              "replication"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:18:49.952138",
+            "subsection": "Nucleic Acids"
+          },
+          {
+            "file": "A.A.3_origins_of_cells.md",
+            "title": "Origins of Cells",
+            "topic": "Unity and Diversity",
+            "level": "SL/HL",
+            "tags": [
+              "cell-theory",
+              "endosymbiosis",
+              "prokaryotes",
+              "eukaryotes"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:19:12.186833",
+            "subsection": "Origins of Cells"
+          },
+          {
+            "file": "A.A.4_cell_biology.md",
+            "title": "Cell Biology",
+            "topic": "Unity and Diversity",
+            "level": "SL/HL",
+            "tags": [
+              "organelles",
+              "membrane-structure",
+              "transport",
+              "cell-division"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:19:30.787076",
+            "subsection": "Cell Biology"
+          }
+        ]
+      },
+      {
+        "title": "Form and Function",
+        "path": "B",
+        "lessons": [
+          {
+            "file": "B.B.1_carbohydrates_and_lipids.md",
+            "title": "Carbohydrates and Lipids",
+            "topic": "Form and Function",
+            "level": "SL/HL",
+            "tags": [
+              "monosaccharides",
+              "polysaccharides",
+              "fatty-acids",
+              "triglycerides"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:19:53.073316",
+            "subsection": "Carbohydrates and Lipids"
+          },
+          {
+            "file": "B.B.2_proteins.md",
+            "title": "Proteins",
+            "topic": "Form and Function",
+            "level": "SL/HL",
+            "tags": [
+              "amino-acids",
+              "protein-structure",
+              "enzymes",
+              "enzyme-kinetics"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:20:12.333063",
+            "subsection": "Proteins"
+          },
+          {
+            "file": "B.B.3_cell_specialization.md",
+            "title": "Cell Specialization",
+            "topic": "Form and Function",
+            "level": "SL/HL",
+            "tags": [
+              "differentiation",
+              "stem-cells",
+              "tissues",
+              "organs"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:20:30.365505",
+            "subsection": "Cell Specialization"
+          },
+          {
+            "file": "B.B.4_gas_exchange.md",
+            "title": "Gas Exchange",
+            "topic": "Form and Function",
+            "level": "SL/HL",
+            "tags": [
+              "lungs",
+              "ventilation",
+              "gas-exchange-surfaces",
+              "adaptations"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:20:48.547395",
+            "subsection": "Gas Exchange"
+          }
+        ]
+      },
+      {
+        "title": "Interaction and Interdependence",
+        "path": "C",
+        "lessons": [
+          {
+            "file": "C.C.1_enzymes_and_metabolism.md",
+            "title": "Enzymes and Metabolism",
+            "topic": "Interaction and Interdependence",
+            "level": "SL/HL",
+            "tags": [
+              "enzymes",
+              "activation-energy",
+              "inhibitors",
+              "metabolic-pathways"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:21:07.697569",
+            "subsection": "Enzymes and Metabolism"
+          },
+          {
+            "file": "C.C.2_cell_respiration.md",
+            "title": "Cell Respiration",
+            "topic": "Interaction and Interdependence",
+            "level": "SL/HL",
+            "tags": [
+              "glycolysis",
+              "krebs",
+              "electron-transport",
+              "ATP"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:21:25.511420",
+            "subsection": "Cell Respiration"
+          },
+          {
+            "file": "C.C.3_photosynthesis.md",
+            "title": "Photosynthesis",
+            "topic": "Interaction and Interdependence",
+            "level": "SL/HL",
+            "tags": [
+              "light-reactions",
+              "calvin-cycle",
+              "photosystems",
+              "chloroplast"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:21:50.749034",
+            "subsection": "Photosynthesis"
+          },
+          {
+            "file": "C.C.4_ecology.md",
+            "title": "Ecology",
+            "topic": "Interaction and Interdependence",
+            "level": "SL/HL",
+            "tags": [
+              "ecosystems",
+              "food-chains",
+              "energy-flow",
+              "nutrient-cycling"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:22:14.023990",
+            "subsection": "Ecology"
+          }
+        ]
+      },
+      {
+        "title": "Continuity and Change",
+        "path": "D",
+        "lessons": [
+          {
+            "file": "D.D.1_cell_and_nuclear_division.md",
+            "title": "Cell and Nuclear Division",
+            "topic": "Continuity and Change",
+            "level": "SL/HL",
+            "tags": [
+              "mitosis",
+              "meiosis",
+              "chromosome-behavior",
+              "karyotypes"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:22:33.483888",
+            "subsection": "Cell and Nuclear Division"
+          },
+          {
+            "file": "D.D.2_gene_expression.md",
+            "title": "Gene Expression",
+            "topic": "Continuity and Change",
+            "level": "SL/HL",
+            "tags": [
+              "transcription",
+              "translation",
+              "mutations",
+              "gene-regulation"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:22:53.138011",
+            "subsection": "Gene Expression"
+          },
+          {
+            "file": "D.D.3_inheritance.md",
+            "title": "Inheritance",
+            "topic": "Continuity and Change",
+            "level": "SL/HL",
+            "tags": [
+              "mendelian-genetics",
+              "punnett-squares",
+              "sex-linkage",
+              "codominance"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:23:14.061703",
+            "subsection": "Inheritance"
+          },
+          {
+            "file": "D.D.4_natural_selection.md",
+            "title": "Natural Selection",
+            "topic": "Continuity and Change",
+            "level": "SL/HL",
+            "tags": [
+              "evolution",
+              "natural-selection",
+              "speciation",
+              "evidence-for-evolution"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:23:36.477976",
+            "subsection": "Natural Selection"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "Economics",
+    "tooltip": "IB Economics",
+    "basePath": "ib-practice-platform/data/lessons/economics",
+    "sections": [
+      {
+        "title": "Introduction to Economics",
+        "path": "1",
+        "lessons": [
+          {
+            "file": "1.1.1_what_is_economics.md",
+            "title": "What Is Economics?",
+            "topic": "Introduction to Economics",
+            "level": "SL/HL",
+            "tags": [
+              "scarcity",
+              "opportunity-cost",
+              "factors-of-production"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:48:12.243609",
+            "subsection": "What Is Economics?"
+          },
+          {
+            "file": "1.1.2_how_do_economists_approach_the_world.md",
+            "title": "How Do Economists Approach the World?",
+            "topic": "Introduction to Economics",
+            "level": "SL/HL",
+            "tags": [
+              "economic-models",
+              "positive-normative",
+              "ceteris-paribus"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:48:34.507976",
+            "subsection": "How Do Economists Approach the World?"
+          }
+        ]
+      },
+      {
+        "title": "Microeconomics",
+        "path": "2",
+        "lessons": [
+          {
+            "file": "2.2.1_demand.md",
+            "title": "Demand",
+            "topic": "Microeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "demand-curve",
+              "determinants-of-demand",
+              "movement-vs-shift"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:48:56.697880",
+            "subsection": "Demand"
+          },
+          {
+            "file": "2.2.2_supply.md",
+            "title": "Supply",
+            "topic": "Microeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "supply-curve",
+              "determinants-of-supply"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:49:16.123088",
+            "subsection": "Supply"
+          },
+          {
+            "file": "2.2.3_competitive_market_equilibrium.md",
+            "title": "Competitive Market Equilibrium",
+            "topic": "Microeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "equilibrium",
+              "surplus",
+              "shortage"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:49:39.833794",
+            "subsection": "Competitive Market Equilibrium"
+          },
+          {
+            "file": "2.2.4_critique_of_maximizing_behaviour.md",
+            "title": "Critique of Maximizing Behaviour",
+            "topic": "Microeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "bounded-rationality",
+              "nudge-theory",
+              "bias"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:50:00.945050",
+            "subsection": "Critique of Maximizing Behaviour"
+          },
+          {
+            "file": "2.2.5_elasticity_of_demand.md",
+            "title": "Elasticity of Demand",
+            "topic": "Microeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "PED",
+              "YED",
+              "XED",
+              "elastic",
+              "inelastic"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:50:23.949646",
+            "subsection": "Elasticity of Demand"
+          },
+          {
+            "file": "2.2.6_elasticity_of_supply.md",
+            "title": "Elasticity of Supply",
+            "topic": "Microeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "PES",
+              "determinants-of-PES"
+            ],
+            "time_estimate": 7,
+            "timestamp": "2026-03-27T09:50:50.870136",
+            "subsection": "Elasticity of Supply"
+          },
+          {
+            "file": "2.2.7_the_role_of_government.md",
+            "title": "The Role of Government",
+            "topic": "Microeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "price-controls",
+              "taxes",
+              "subsidies",
+              "externalities"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:51:11.024069",
+            "subsection": "The Role of Government"
+          },
+          {
+            "file": "2.2.8_market_failure.md",
+            "title": "Market Failure",
+            "topic": "Microeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "externalities",
+              "public-goods",
+              "common-resources",
+              "asymmetric-info"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:51:31.736104",
+            "subsection": "Market Failure"
+          }
+        ]
+      },
+      {
+        "title": "Macroeconomics",
+        "path": "3",
+        "lessons": [
+          {
+            "file": "3.3.1_measuring_economic_activity.md",
+            "title": "Measuring Economic Activity",
+            "topic": "Macroeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "GDP",
+              "GNI",
+              "real-vs-nominal"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:51:49.514798",
+            "subsection": "Measuring Economic Activity"
+          },
+          {
+            "file": "3.3.2_variations_in_economic_activity.md",
+            "title": "Variations in Economic Activity",
+            "topic": "Macroeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "business-cycle",
+              "recession",
+              "inflation",
+              "unemployment"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:52:13.805222",
+            "subsection": "Variations in Economic Activity"
+          },
+          {
+            "file": "3.3.3_aggregate_demand_and_supply.md",
+            "title": "Aggregate Demand and Supply",
+            "topic": "Macroeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "AD-AS-model",
+              "multiplier",
+              "keynesian",
+              "monetarist"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:52:32.255204",
+            "subsection": "Aggregate Demand and Supply"
+          },
+          {
+            "file": "3.3.4_macroeconomic_objectives.md",
+            "title": "Macroeconomic Objectives",
+            "topic": "Macroeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "low-inflation",
+              "full-employment",
+              "growth",
+              "equity"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:52:50.899598",
+            "subsection": "Macroeconomic Objectives"
+          },
+          {
+            "file": "3.3.5_fiscal_policy.md",
+            "title": "Fiscal Policy",
+            "topic": "Macroeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "government-spending",
+              "taxation",
+              "budget-deficit"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:53:13.304202",
+            "subsection": "Fiscal Policy"
+          },
+          {
+            "file": "3.3.6_monetary_policy.md",
+            "title": "Monetary Policy",
+            "topic": "Macroeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "interest-rates",
+              "money-supply",
+              "central-bank"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:53:33.691743",
+            "subsection": "Monetary Policy"
+          },
+          {
+            "file": "3.3.7_supply-side_policies.md",
+            "title": "Supply-Side Policies",
+            "topic": "Macroeconomics",
+            "level": "SL/HL",
+            "tags": [
+              "supply-side",
+              "deregulation",
+              "privatization"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:53:52.708547",
+            "subsection": "Supply-Side Policies"
+          }
+        ]
+      },
+      {
+        "title": "The Global Economy",
+        "path": "4",
+        "lessons": [
+          {
+            "file": "4.4.1_benefits_of_international_trade.md",
+            "title": "Benefits of International Trade",
+            "topic": "The Global Economy",
+            "level": "SL/HL",
+            "tags": [
+              "comparative-advantage",
+              "trade-gains",
+              "specialization"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:54:17.771309",
+            "subsection": "Benefits of International Trade"
+          },
+          {
+            "file": "4.4.2_types_of_trade_protection.md",
+            "title": "Types of Trade Protection",
+            "topic": "The Global Economy",
+            "level": "SL/HL",
+            "tags": [
+              "tariffs",
+              "quotas",
+              "subsidies",
+              "administrative-barriers"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:54:36.311680",
+            "subsection": "Types of Trade Protection"
+          },
+          {
+            "file": "4.4.3_economic_integration.md",
+            "title": "Economic Integration",
+            "topic": "The Global Economy",
+            "level": "SL/HL",
+            "tags": [
+              "trading-blocs",
+              "free-trade-areas",
+              "customs-unions",
+              "EU"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:54:59.666221",
+            "subsection": "Economic Integration"
+          },
+          {
+            "file": "4.4.4_exchange_rates.md",
+            "title": "Exchange Rates",
+            "topic": "The Global Economy",
+            "level": "SL/HL",
+            "tags": [
+              "fixed",
+              "floating",
+              "managed",
+              "exchange-rate-determination"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:55:19.823908",
+            "subsection": "Exchange Rates"
+          },
+          {
+            "file": "4.4.5_balance_of_payments.md",
+            "title": "Balance of Payments",
+            "topic": "The Global Economy",
+            "level": "SL/HL",
+            "tags": [
+              "current-account",
+              "capital-account",
+              "financial-account"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:55:38.321555",
+            "subsection": "Balance of Payments"
+          },
+          {
+            "file": "4.4.6_sustainable_development.md",
+            "title": "Sustainable Development",
+            "topic": "The Global Economy",
+            "level": "SL/HL",
+            "tags": [
+              "sustainability",
+              "poverty",
+              "inequality",
+              "HDI"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:56:01.618012",
+            "subsection": "Sustainable Development"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "Business",
+    "tooltip": "IB Business Management",
+    "basePath": "ib-practice-platform/data/lessons/business",
+    "sections": [
+      {
+        "title": "Introduction to Business Management",
+        "path": "1",
+        "lessons": [
+          {
+            "file": "1.1.1_what_is_a_business.md",
+            "title": "What Is a Business?",
+            "topic": "Introduction to Business Management",
+            "level": "SL/HL",
+            "tags": [
+              "business-sectors",
+              "inputs-outputs",
+              "value-added"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:34:38.610909",
+            "subsection": "What Is a Business?"
+          },
+          {
+            "file": "1.1.2_types_of_business_entities.md",
+            "title": "Types of Business Entities",
+            "topic": "Introduction to Business Management",
+            "level": "SL/HL",
+            "tags": [
+              "sole-trader",
+              "partnership",
+              "corporation",
+              "cooperative"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:24:15.950263",
+            "subsection": "Types of Business Entities"
+          },
+          {
+            "file": "1.1.3_business_objectives.md",
+            "title": "Business Objectives",
+            "topic": "Introduction to Business Management",
+            "level": "SL/HL",
+            "tags": [
+              "profit",
+              "growth",
+              "social-objectives",
+              "ethical"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:24:34.416783",
+            "subsection": "Business Objectives"
+          },
+          {
+            "file": "1.1.4_stakeholders.md",
+            "title": "Stakeholders",
+            "topic": "Introduction to Business Management",
+            "level": "SL/HL",
+            "tags": [
+              "stakeholder-conflict",
+              "internal",
+              "external"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:24:55.886872",
+            "subsection": "Stakeholders"
+          },
+          {
+            "file": "1.1.5_growth_and_evolution.md",
+            "title": "Growth and Evolution",
+            "topic": "Introduction to Business Management",
+            "level": "SL/HL",
+            "tags": [
+              "organic-growth",
+              "mergers",
+              "acquisitions",
+              "economies-of-scale"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:25:15.168957",
+            "subsection": "Growth and Evolution"
+          },
+          {
+            "file": "1.1.6_multinational_companies.md",
+            "title": "Multinational Companies",
+            "topic": "Introduction to Business Management",
+            "level": "SL/HL",
+            "tags": [
+              "MNCs",
+              "globalization",
+              "FDI"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:25:39.104621",
+            "subsection": "Multinational Companies"
+          }
+        ]
+      },
+      {
+        "title": "Human Resource Management",
+        "path": "2",
+        "lessons": [
+          {
+            "file": "2.2.1_introduction_to_hrm.md",
+            "title": "Introduction to HRM",
+            "topic": "Human Resource Management",
+            "level": "SL/HL",
+            "tags": [
+              "HR-planning",
+              "recruitment",
+              "appraisal"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:25:58.691698",
+            "subsection": "Introduction to HRM"
+          },
+          {
+            "file": "2.2.2_organizational_structure.md",
+            "title": "Organizational Structure",
+            "topic": "Human Resource Management",
+            "level": "SL/HL",
+            "tags": [
+              "hierarchy",
+              "span-of-control",
+              "delegation",
+              "centralization"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:26:24.109472",
+            "subsection": "Organizational Structure"
+          },
+          {
+            "file": "2.2.3_leadership_and_management.md",
+            "title": "Leadership and Management",
+            "topic": "Human Resource Management",
+            "level": "SL/HL",
+            "tags": [
+              "leadership-styles",
+              "autocratic",
+              "democratic",
+              "laissez-faire"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:26:44.135378",
+            "subsection": "Leadership and Management"
+          },
+          {
+            "file": "2.2.4_motivation.md",
+            "title": "Motivation",
+            "topic": "Human Resource Management",
+            "level": "SL/HL",
+            "tags": [
+              "maslow",
+              "herzberg",
+              "taylor",
+              "motivation-theory"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:27:01.435239",
+            "subsection": "Motivation"
+          }
+        ]
+      },
+      {
+        "title": "Finance and Accounts",
+        "path": "3",
+        "lessons": [
+          {
+            "file": "3.3.1_sources_of_finance.md",
+            "title": "Sources of Finance",
+            "topic": "Finance and Accounts",
+            "level": "SL/HL",
+            "tags": [
+              "internal-finance",
+              "external-finance",
+              "equity",
+              "debt"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:27:20.206147",
+            "subsection": "Sources of Finance"
+          },
+          {
+            "file": "3.3.2_costs_and_revenues.md",
+            "title": "Costs and Revenues",
+            "topic": "Finance and Accounts",
+            "level": "SL/HL",
+            "tags": [
+              "fixed-costs",
+              "variable-costs",
+              "revenue",
+              "break-even"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:27:45.316959",
+            "subsection": "Costs and Revenues"
+          },
+          {
+            "file": "3.3.3_break-even_analysis.md",
+            "title": "Break-Even Analysis",
+            "topic": "Finance and Accounts",
+            "level": "SL/HL",
+            "tags": [
+              "break-even-point",
+              "margin-of-safety",
+              "break-even-chart"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:28:10.939850",
+            "subsection": "Break-Even Analysis"
+          },
+          {
+            "file": "3.3.4_final_accounts.md",
+            "title": "Final Accounts",
+            "topic": "Finance and Accounts",
+            "level": "SL/HL",
+            "tags": [
+              "profit-loss",
+              "balance-sheet",
+              "depreciation"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:28:34.334909",
+            "subsection": "Final Accounts"
+          },
+          {
+            "file": "3.3.5_profitability_and_liquidity_ratios.md",
+            "title": "Profitability and Liquidity Ratios",
+            "topic": "Finance and Accounts",
+            "level": "HL",
+            "tags": [
+              "gross-profit-margin",
+              "net-profit-margin",
+              "current-ratio"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:28:56.331672",
+            "subsection": "Profitability and Liquidity Ratios"
+          },
+          {
+            "file": "3.3.6_efficiency_and_gearing_ratios.md",
+            "title": "Efficiency and Gearing Ratios",
+            "topic": "Finance and Accounts",
+            "level": "HL",
+            "tags": [
+              "stock-turnover",
+              "debtor-days",
+              "gearing"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:29:21.930189",
+            "subsection": "Efficiency and Gearing Ratios"
+          },
+          {
+            "file": "3.3.7_cash_flow.md",
+            "title": "Cash Flow",
+            "topic": "Finance and Accounts",
+            "level": "SL/HL",
+            "tags": [
+              "cash-flow-forecast",
+              "working-capital"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:29:44.694618",
+            "subsection": "Cash Flow"
+          },
+          {
+            "file": "3.3.8_investment_appraisal.md",
+            "title": "Investment Appraisal",
+            "topic": "Finance and Accounts",
+            "level": "HL",
+            "tags": [
+              "payback",
+              "ARR",
+              "NPV",
+              "IRR"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:30:08.066649",
+            "subsection": "Investment Appraisal"
+          }
+        ]
+      },
+      {
+        "title": "Marketing",
+        "path": "4",
+        "lessons": [
+          {
+            "file": "4.4.1_the_role_of_marketing.md",
+            "title": "The Role of Marketing",
+            "topic": "Marketing",
+            "level": "SL/HL",
+            "tags": [
+              "market-orientation",
+              "product-orientation",
+              "marketing-mix"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:30:26.414456",
+            "subsection": "The Role of Marketing"
+          },
+          {
+            "file": "4.4.2_marketing_planning.md",
+            "title": "Marketing Planning",
+            "topic": "Marketing",
+            "level": "SL/HL",
+            "tags": [
+              "market-research",
+              "SWOT",
+              "segmentation",
+              "targeting",
+              "positioning"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:30:53.215887",
+            "subsection": "Marketing Planning"
+          },
+          {
+            "file": "4.4.3_sales_forecasting.md",
+            "title": "Sales Forecasting",
+            "topic": "Marketing",
+            "level": "HL",
+            "tags": [
+              "moving-averages",
+              "extrapolation",
+              "seasonal-variation"
+            ],
+            "time_estimate": 7,
+            "timestamp": "2026-03-27T09:31:26.922447",
+            "subsection": "Sales Forecasting"
+          },
+          {
+            "file": "4.4.4_the_4_ps.md",
+            "title": "The 4 Ps",
+            "topic": "Marketing",
+            "level": "SL/HL",
+            "tags": [
+              "product",
+              "price",
+              "place",
+              "promotion",
+              "PLC"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:31:50.302157",
+            "subsection": "The 4 Ps"
+          },
+          {
+            "file": "4.4.5_the_extended_marketing_mix.md",
+            "title": "The Extended Marketing Mix",
+            "topic": "Marketing",
+            "level": "SL/HL",
+            "tags": [
+              "people",
+              "process",
+              "physical-evidence",
+              "7Ps"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:32:10.839113",
+            "subsection": "The Extended Marketing Mix"
+          }
+        ]
+      },
+      {
+        "title": "Operations Management",
+        "path": "5",
+        "lessons": [
+          {
+            "file": "5.5.1_the_role_of_operations.md",
+            "title": "The Role of Operations",
+            "topic": "Operations Management",
+            "level": "SL/HL",
+            "tags": [
+              "production-methods",
+              "job",
+              "batch",
+              "flow"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:32:30.489072",
+            "subsection": "The Role of Operations"
+          },
+          {
+            "file": "5.5.2_production_methods.md",
+            "title": "Production Methods",
+            "topic": "Operations Management",
+            "level": "SL/HL",
+            "tags": [
+              "lean-production",
+              "JIT",
+              "kaizen",
+              "TQM"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:32:53.673213",
+            "subsection": "Production Methods"
+          },
+          {
+            "file": "5.5.3_lean_production_and_qm.md",
+            "title": "Lean Production and QM",
+            "topic": "Operations Management",
+            "level": "SL/HL",
+            "tags": [
+              "quality-control",
+              "quality-assurance",
+              "benchmarking"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:33:11.910376",
+            "subsection": "Lean Production and QM"
+          },
+          {
+            "file": "5.5.4_location.md",
+            "title": "Location",
+            "topic": "Operations Management",
+            "level": "SL/HL",
+            "tags": [
+              "location-decisions",
+              "push-pull-factors"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:33:31.314201",
+            "subsection": "Location"
+          },
+          {
+            "file": "5.5.5_break-even_analysis_operations.md",
+            "title": "Break-Even Analysis (Operations)",
+            "topic": "Operations Management",
+            "level": "SL/HL",
+            "tags": [
+              "capacity-utilization",
+              "outsourcing",
+              "offshoring"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:35:00.947377",
+            "subsection": "Break-Even Analysis (Operations)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "tooltip": "IB Computer Science",
+    "basePath": "ib-practice-platform/data/lessons/computer_science",
+    "sections": [
+      {
+        "title": "System Fundamentals",
+        "path": "1",
+        "lessons": [
+          {
+            "file": "1.1.1_systems_in_organizations.md",
+            "title": "Systems in Organizations",
+            "topic": "System Fundamentals",
+            "level": "SL/HL",
+            "tags": [
+              "system-planning",
+              "change-management"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:44:05.740704",
+            "subsection": "Systems in Organizations"
+          },
+          {
+            "file": "1.1.2_system_design_basics.md",
+            "title": "System Design Basics",
+            "topic": "System Fundamentals",
+            "level": "SL/HL",
+            "tags": [
+              "inputs",
+              "outputs",
+              "processes",
+              "feedback"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:44:26.861082",
+            "subsection": "System Design Basics"
+          }
+        ]
+      },
+      {
+        "title": "Computer Organization",
+        "path": "2",
+        "lessons": [
+          {
+            "file": "2.2.1_computer_architecture.md",
+            "title": "Computer Architecture",
+            "topic": "Computer Organization",
+            "level": "SL/HL",
+            "tags": [
+              "CPU",
+              "ALU",
+              "control-unit",
+              "registers",
+              "buses"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:44:50.301716",
+            "subsection": "Computer Architecture"
+          },
+          {
+            "file": "2.2.2_secondary_memory.md",
+            "title": "Secondary Memory",
+            "topic": "Computer Organization",
+            "level": "SL/HL",
+            "tags": [
+              "HDD",
+              "SSD",
+              "optical",
+              "RAM",
+              "ROM"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:45:12.057718",
+            "subsection": "Secondary Memory"
+          }
+        ]
+      },
+      {
+        "title": "Networks",
+        "path": "3",
+        "lessons": [
+          {
+            "file": "3.3.1_network_fundamentals.md",
+            "title": "Network Fundamentals",
+            "topic": "Networks",
+            "level": "SL/HL",
+            "tags": [
+              "LAN",
+              "WAN",
+              "protocols",
+              "TCP-IP",
+              "OSI"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:45:30.181856",
+            "subsection": "Network Fundamentals"
+          },
+          {
+            "file": "3.3.2_data_transmission.md",
+            "title": "Data Transmission",
+            "topic": "Networks",
+            "level": "SL/HL",
+            "tags": [
+              "packet-switching",
+              "bandwidth",
+              "encryption"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:45:51.804238",
+            "subsection": "Data Transmission"
+          }
+        ]
+      },
+      {
+        "title": "Computational Thinking & Problem Solving",
+        "path": "4",
+        "lessons": [
+          {
+            "file": "4.4.1_general_principles.md",
+            "title": "General Principles",
+            "topic": "Computational Thinking & Problem Solving",
+            "level": "SL/HL",
+            "tags": [
+              "abstraction",
+              "decomposition",
+              "pattern-recognition",
+              "algorithms"
+            ],
+            "time_estimate": 7,
+            "timestamp": "2026-03-27T09:46:20.434912",
+            "subsection": "General Principles"
+          },
+          {
+            "file": "4.4.2_connecting_computational_thinking_and_program_design.md",
+            "title": "Connecting Computational Thinking and Program Design",
+            "topic": "Computational Thinking & Problem Solving",
+            "level": "SL/HL",
+            "tags": [
+              "flowcharts",
+              "pseudocode",
+              "trace-tables"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:46:39.925171",
+            "subsection": "Connecting Computational Thinking and Program Design"
+          },
+          {
+            "file": "4.4.3_introduction_to_programming.md",
+            "title": "Introduction to Programming",
+            "topic": "Computational Thinking & Problem Solving",
+            "level": "SL/HL",
+            "tags": [
+              "variables",
+              "loops",
+              "conditionals",
+              "arrays",
+              "functions"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:47:00.262988",
+            "subsection": "Introduction to Programming"
+          }
+        ]
+      },
+      {
+        "title": "Abstract Data Structures (HL)",
+        "path": "5",
+        "lessons": [
+          {
+            "file": "5.5.1_abstract_data_structures.md",
+            "title": "Abstract Data Structures",
+            "topic": "Abstract Data Structures (HL)",
+            "level": "HL",
+            "tags": [
+              "stacks",
+              "queues",
+              "linked-lists",
+              "trees",
+              "binary-trees"
+            ],
+            "time_estimate": 6,
+            "timestamp": "2026-03-27T09:47:29.133342",
+            "subsection": "Abstract Data Structures"
+          },
+          {
+            "file": "5.5.2_recursion.md",
+            "title": "Recursion",
+            "topic": "Abstract Data Structures (HL)",
+            "level": "HL",
+            "tags": [
+              "recursive-thinking",
+              "base-case",
+              "call-stack"
+            ],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T09:47:53.166652",
+            "subsection": "Recursion"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -484,9 +484,9 @@
       "mtime_ns": 1774584106313667200
     },
     "public_html/index.html": {
-      "hash": "765d508333f18b60eef3c34dd115ffd3dcf4596f8f18c6b1f007394b5ad29f53",
-      "size": 136203,
-      "mtime_ns": 1774633345035839500
+      "hash": "f94fb60faaaa91252d265de3ef0e1037ee901398ce47feb1e9681b03f7e1cc6c",
+      "size": 136826,
+      "mtime_ns": 1775073675609256300
     },
     "public_html/manifest.json": {
       "hash": "171337adee027db64690d82560b196c4f6254b4f6c289429ad1998259dd1f689",
@@ -521,7 +521,7 @@
     "public_html/sw.js": {
       "hash": "35b40484dab70b8d471beaa01f488898dca6f6f242991ec795c60dbba94813e6",
       "size": 4358,
-      "mtime_ns": 1775067284142785800
+      "mtime_ns": 1775067401676965800
     },
     "public_html/api/.htaccess": {
       "hash": "95cf7346f5e4ebdccdac817e11056ad4e904481cadc5625e94d541d3f7cbe320",

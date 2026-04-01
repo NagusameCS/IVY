@@ -1478,15 +1478,19 @@
         // Data Objects
         const SUBJECT_ICONS = {
             "math": "functions",
-            "math ai": "calculate",
-            "math aa": "function",
+            "math-ai": "calculate",
+            "math-aa": "function",
             "physics": "orbit",
             "chem": "science",
+            "chemistry": "science",
             "econ": "finance_mode",
+            "economics": "finance_mode",
             "business": "business_center",
             "designtech": "precision_manufacturing",
             "bio": "biotech",
+            "biology": "biotech",
             "compsci": "code",
+            "computer-science": "code",
             "all": "all_inclusive"
         };
         
@@ -1712,13 +1716,20 @@
             curriculumData.forEach(subject => {
                 subject.sections.forEach(section => {
                     section.lessons.forEach(lesson => {
+                        // Build categories for filtering (e.g. "Math AA" -> ["Math AA", "Math"])
+                        const subjectName = subject.subject;
+                        const categories = [subjectName];
+                        const firstWord = subjectName.split(' ')[0];
+                        if (firstWord !== subjectName) categories.push(firstWord);
+
                         const fullLesson = {
                             ...lesson,
-                            subject: subject.subject,
+                            subject: subjectName,
                             subjectTooltip: subject.tooltip,
                             section: section.title,
                             sectionPath: section.path,
-                            fullPath: `${subject.subject}/${section.path}/${lesson.file}`,
+                            categories: categories,
+                            fullPath: subject.basePath ? `${subject.basePath}/${lesson.file}` : `${subjectName}/${section.path}/${lesson.file}`,
                             timestamp: new Date(lesson.timestamp)
                         };
                         allLessons.push(fullLesson);
