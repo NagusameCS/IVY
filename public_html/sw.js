@@ -1,6 +1,6 @@
 // Service Worker for offline caching and performance
-const STATIC_CACHE = 'ivystudy-static-v2';
-const DYNAMIC_CACHE = 'ivystudy-dynamic-v2';
+const STATIC_CACHE = 'ivystudy-static-v3';
+const DYNAMIC_CACHE = 'ivystudy-dynamic-v3';
 
 const STATIC_ASSETS = [
     '/',

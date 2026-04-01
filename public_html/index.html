@@ -1775,27 +1775,6 @@
         });
 
         // --- SUBJECT PILLS & FILTERS ---
-        function loadSubjectPills() {
-            subjectPills.innerHTML = '';
-            const uniqueSubjects = [...new Set(curriculumData.map(item => item.subject))];
-
-            uniqueSubjects.forEach(subject => {
-                const pill = document.createElement('div');
-                pill.className = 'class-pill';
-                pill.textContent = subject;
-                pill.addEventListener('click', () => {
-                    filterByCategory(subject);
-                });
-                subjectPills.appendChild(pill);
-            });
-        }
-
-        function filterByCategory(category) {
-            const filteredLessons = allLessons.filter(lesson => lesson.categories.includes(category));
-            console.log('Filtered Lessons:', filteredLessons);
-            // Update the UI with filtered lessons
-        }
-        
         // Load subject pills based on available subjects
         function loadSubjectPills() {
             subjectPills.innerHTML = '';
@@ -1811,23 +1790,9 @@
 
             allSubjectsButton.addEventListener('click', () => {
                 setActiveClass('all');
-                loadContent('all', currentSearchQuery);
             });
 
             subjectPills.appendChild(allSubjectsButton);
-
-            // Adjust visibility based on search input
-            searchInput.addEventListener('input', () => {
-                if (searchInput.value.trim() === '') {
-                    allSubjectsButton.classList.add('opacity-50', 'pointer-events-none');
-                    setActiveClass('all');
-                    loadContent('all', currentSearchQuery);
-                } else {
-                    allSubjectsButton.classList.remove('opacity-50', 'pointer-events-none');   
-                    setActiveClass('all');
-                    loadContent('all', currentSearchQuery);
-                }
-            });
 
             if (searchInput.value.trim() === '') {
                 allSubjectsButton.classList.add('opacity-50', 'pointer-events-none');
@@ -1874,7 +1839,6 @@
 
                         optionElement.addEventListener('click', () => {
                             setActiveClass(option.filter);
-                            loadContent(option.filter, currentSearchQuery);
                             dropdownContent.classList.add('hidden');
                         });
 
@@ -1928,22 +1892,15 @@
 
                     pill.addEventListener('click', () => {
                         setActiveClass(subjectKey);
-                        loadContent(subjectKey, currentSearchQuery);
                     });
 
                     subjectPills.appendChild(pill);
                 }
             });
-
-
-// Remove updateTopicsDropdown and related event listeners since topicsDropdown and topicsContent are not defined
-// Remove all code referencing topicsDropdown, topicsContent, and updateTopicsDropdown
-// Remove call to initSearchSuggestions since it is not defined
         }
         
         // --- CONTENT LOADING & DISPLAY ---
         // Load content based on filters and search
-        // Update: Ensure Math pill shows all Math-related lessons and dynamic icons are applied
         function loadContent(filter = 'all', searchQuery = '') {
             contentArea.innerHTML = '';
 
@@ -2446,7 +2403,7 @@
                     pill.classList.remove('active');
                 }
             });
-            loadContent(currentFilter === 'all' ? '' : currentFilter, ''); // Reset search query when switching filters
+            loadContent(currentFilter, '');
         }
         
         // Add event listener for sort dropdown functionality
@@ -2581,6 +2538,9 @@
         
         // Render markdown content with LaTeX support
         function renderMarkdown(markdown) {
+            // Strip YAML frontmatter (between --- delimiters at the start)
+            markdown = markdown.replace(/^\ufeff?---\s*\n[\s\S]*?\n---\s*\n?/, '');
+
             // Process interactive elements before markdown rendering
             const processedMarkdown = markdown
                 .replace(/\[reveal\](.*?)\[\/reveal\]/gs, (match, content) => {

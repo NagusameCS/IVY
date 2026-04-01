@@ -297,8 +297,8 @@
               "minimum-spanning-tree",
               "shortest-path"
             ],
-            "time_estimate": 89,
-            "timestamp": "2026-03-27T10:18:59.902158",
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:00:00.000000",
             "subsection": "Graph Algorithms (Kruskal & Dijkstra)"
           }
         ]
@@ -999,8 +999,8 @@
               "complement",
               "de-morgan"
             ],
-            "time_estimate": 25,
-            "timestamp": "2026-03-27T10:09:09.253304",
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:00:00.000000",
             "subsection": "Set Operations & Laws"
           },
           {
@@ -1069,8 +1069,8 @@
               "identity-element",
               "inverse-element"
             ],
-            "time_estimate": 269,
-            "timestamp": "2026-03-27T10:13:12.519426",
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:00:00.000000",
             "subsection": "Identity & Inverses"
           },
           {
@@ -1189,8 +1189,8 @@
               "integrating-factor",
               "euler-method"
             ],
-            "time_estimate": 283,
-            "timestamp": "2026-03-27T10:17:15.900002",
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T10:00:00.000000",
             "subsection": "First-Order Differential Equations"
           },
           {
@@ -1229,6 +1229,39 @@
     "tooltip": "IB Physics",
     "basePath": "ib-practice-platform/data/lessons/physics",
     "sections": [
+      {
+        "title": "Topic ",
+        "path": "",
+        "lessons": [
+          {
+            "file": "B.B.3_gas_laws.md",
+            "title": "B.B.3 Gas Laws",
+            "topic": "Topic ",
+            "level": "SL/HL",
+            "tags": [],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T00:00:00"
+          },
+          {
+            "file": "C.C.3_wave_phenomena.md",
+            "title": "C.C.3 Wave Phenomena",
+            "topic": "Topic ",
+            "level": "SL/HL",
+            "tags": [],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T00:00:00"
+          },
+          {
+            "file": "E.E.5_fusion_and_stars.md",
+            "title": "E.E.5 Fusion And Stars",
+            "topic": "Topic ",
+            "level": "SL/HL",
+            "tags": [],
+            "time_estimate": 5,
+            "timestamp": "2026-03-27T00:00:00"
+          }
+        ]
+      },
       {
         "title": "Space, Time and Motion",
         "path": "A",
@@ -1348,21 +1381,6 @@
             "subsection": "Greenhouse Effect"
           },
           {
-            "file": "B.B.3_gas_laws.md",
-            "title": "Gas Laws",
-            "topic": "The Particulate Nature of Matter",
-            "level": "SL/HL",
-            "tags": [
-              "ideal-gas-law",
-              "kinetic-theory",
-              "pressure",
-              "temperature"
-            ],
-            "time_estimate": 255,
-            "timestamp": "2026-03-27T10:23:01.643817",
-            "subsection": "Gas Laws"
-          },
-          {
             "file": "B.B.4_thermodynamics.md",
             "title": "Thermodynamics",
             "topic": "The Particulate Nature of Matter",
@@ -1431,22 +1449,6 @@
             "time_estimate": 5,
             "timestamp": "2026-03-27T10:23:06.378514",
             "subsection": "Wave Model"
-          },
-          {
-            "file": "C.C.3_wave_phenomena.md",
-            "title": "Wave Phenomena",
-            "topic": "Wave Behaviour",
-            "level": "SL/HL",
-            "tags": [
-              "reflection",
-              "refraction",
-              "diffraction",
-              "interference",
-              "standing-waves"
-            ],
-            "time_estimate": 320,
-            "timestamp": "2026-03-27T10:26:58.141892",
-            "subsection": "Wave Phenomena"
           },
           {
             "file": "C.C.4_standing_waves_and_resonance.md",
@@ -1605,20 +1607,6 @@
             "time_estimate": 5,
             "timestamp": "2026-03-27T10:27:10.541881",
             "subsection": "Fission"
-          },
-          {
-            "file": "E.E.5_fusion_and_stars.md",
-            "title": "Fusion and Stars",
-            "topic": "Nuclear and Quantum Physics",
-            "level": "HL",
-            "tags": [
-              "fusion",
-              "stellar-nucleosynthesis",
-              "HR-diagram"
-            ],
-            "time_estimate": 45,
-            "timestamp": "2026-03-27T10:27:55.387890",
-            "subsection": "Fusion and Stars"
           }
         ]
       }
